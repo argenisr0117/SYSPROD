@@ -1,0 +1,787 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using DevComponents.DotNetBar.Metro;
+using DevComponents.DotNetBar;
+using Intermedia;
+
+namespace Interfaz
+{  
+    public partial class ConsultasGenerales : MetroForm
+    {
+        clsProduccion Pr = new clsProduccion();
+        public DataTable dt1 = new DataTable();
+        public DataTable dt = new DataTable();
+        private clsEmpresa P = new clsEmpresa();
+        public DateTime Fechai { get; set; }
+        public DateTime Fechaf { get; set; }
+        public ConsultasGenerales()
+        {
+            InitializeComponent();
+        }
+
+        private void generalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReporte obj = new frmReporte();
+            dt1 = Pr.TotalProduccion("Acerados");
+            double acerado;
+            double galvanizado;
+            double recocido;
+            double aceradoa;
+            double galvanizadoa;
+            double recocidoa;
+            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
+            {
+                acerado = 0.00;
+            }
+            else
+            {
+                acerado = Convert.ToDouble(dt1.Rows[0]["Total"]);
+            }
+            dt1 = Pr.TotalProduccion("Galvanizados");
+            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
+            {
+                galvanizado = 0.00;
+            }
+            else
+            {
+                galvanizado = Convert.ToDouble(dt1.Rows[0]["Total"]);
+            }
+            dt1 = Pr.TotalProduccion("Recocidos");
+            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
+            {
+                recocido = 0.00;
+            }
+            else
+            {
+                recocido = Convert.ToDouble(dt1.Rows[0]["Total"]);
+            }
+
+            dt = Pr.AnualTotalProduccion("Acerados");
+            if (string.IsNullOrEmpty(dt.Rows[0]["Total"].ToString()))
+            {
+                aceradoa = 0.00;
+            }
+            else
+            {
+                aceradoa = Convert.ToDouble(dt.Rows[0]["Total"]);
+            }
+            dt = Pr.AnualTotalProduccion("Galvanizados");
+            if (string.IsNullOrEmpty(dt.Rows[0]["Total"].ToString()))
+            {
+                galvanizadoa = 0.00;
+            }
+            else
+            {
+                galvanizadoa = Convert.ToDouble(dt.Rows[0]["Total"]);
+            }
+            dt = Pr.AnualTotalProduccion("Recocidos");
+            if (string.IsNullOrEmpty(dt.Rows[0]["Total"].ToString()))
+            {
+                recocidoa = 0.00;
+            }
+            else
+            {
+                recocidoa = Convert.ToDouble(dt.Rows[0]["Total"]);
+            }
+            dt = Pr.FechaCierre();
+            if(string.IsNullOrEmpty(dt.Rows[0]["Fecha"].ToString()))
+            {
+                obj.Fecha =Convert.ToDateTime(DateTime.Now.ToShortDateString());
+            }
+            else
+            {
+                obj.Fecha = Convert.ToDateTime(dt.Rows[0]["Fecha"]);
+            }
+
+            obj.Valor = 1;
+            obj.Acerado = acerado;
+            obj.Galvanizado = galvanizado;
+            obj.Recocido = recocido;
+            obj.Aceradoa = aceradoa;
+            obj.Galvanizadoa = galvanizadoa;
+            obj.Recocidoa = recocidoa;
+            obj.Nombre = "cierre_general.rdlc";
+            obj.Destino = "";
+            obj.Reporte = "CIERRE MENSUAL";
+            obj.ShowDialog();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnmensual_Click(object sender, EventArgs e)
+        {
+            string mensaje = "";
+          DialogResult var=MessageBoxEx.Show("Desea realizar cierre mensual?","Sistema de Producción", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if(var==DialogResult.Yes)
+            {
+                try
+                {
+                    mensaje = Pr.CerrarMes();
+                    MessageBoxEx.Show(mensaje, "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch(Exception ex)
+                {
+                    MessageBoxEx.Show(ex.Message);
+                }
+            
+            }
+        }
+
+        private void intermediosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReporte obj = new frmReporte();
+            dt1 = Pr.TotalProduccion("Acerados");
+            double acerado;
+            double galvanizado;
+            double recocido;
+            double aceradoa;
+            double galvanizadoa;
+            double recocidoa;
+            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
+            {
+                acerado = 0.00;
+            }
+            else
+            {
+                acerado = Convert.ToDouble(dt1.Rows[0]["Total"]);
+            }
+            dt1 = Pr.TotalProduccion("Galvanizados");
+            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
+            {
+                galvanizado = 0.00;
+            }
+            else
+            {
+                galvanizado = Convert.ToDouble(dt1.Rows[0]["Total"]);
+            }
+            dt1 = Pr.TotalProduccion("Recocidos");
+            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
+            {
+                recocido = 0.00;
+            }
+            else
+            {
+                recocido = Convert.ToDouble(dt1.Rows[0]["Total"]);
+            }
+
+            dt = Pr.AnualTotalProduccion("Acerados");
+            if (string.IsNullOrEmpty(dt.Rows[0]["Total"].ToString()))
+            {
+                aceradoa = 0.00;
+            }
+            else
+            {
+                aceradoa = Convert.ToDouble(dt.Rows[0]["Total"]);
+            }
+            dt = Pr.AnualTotalProduccion("Galvanizados");
+            if (string.IsNullOrEmpty(dt.Rows[0]["Total"].ToString()))
+            {
+                galvanizadoa = 0.00;
+            }
+            else
+            {
+                galvanizadoa = Convert.ToDouble(dt.Rows[0]["Total"]);
+            }
+            dt = Pr.AnualTotalProduccion("Recocidos");
+            if (string.IsNullOrEmpty(dt.Rows[0]["Total"].ToString()))
+            {
+                recocidoa = 0.00;
+            }
+            else
+            {
+                recocidoa = Convert.ToDouble(dt.Rows[0]["Total"]);
+            }
+            dt = Pr.FechaCierre();
+            if (string.IsNullOrEmpty(dt.Rows[0]["Fecha"].ToString()))
+            {
+                obj.Fecha = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+            }
+            else
+            {
+                obj.Fecha = Convert.ToDateTime(dt.Rows[0]["Fecha"]);
+            }
+
+            obj.Valor = 1;
+            obj.Acerado = acerado;
+            obj.Galvanizado = galvanizado;
+            obj.Recocido = recocido;
+            obj.Aceradoa = aceradoa;
+            obj.Galvanizadoa = galvanizadoa;
+            obj.Recocidoa = recocidoa;
+            obj.Nombre = "cierre_intermedios.rdlc";
+            obj.Destino = "Intermedios";
+            obj.Reporte = "CIERRE MENSUAL";
+            obj.ShowDialog();
+        }
+
+        private void terminadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReporte obj = new frmReporte();
+            dt1 = Pr.TotalProduccion("Acerados");
+            double acerado;
+            double galvanizado;
+            double recocido;
+            double aceradoa;
+            double galvanizadoa;
+            double recocidoa;
+            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
+            {
+                acerado = 0.00;
+            }
+            else
+            {
+                acerado = Convert.ToDouble(dt1.Rows[0]["Total"]);
+            }
+            dt1 = Pr.TotalProduccion("Galvanizados");
+            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
+            {
+                galvanizado = 0.00;
+            }
+            else
+            {
+                galvanizado = Convert.ToDouble(dt1.Rows[0]["Total"]);
+            }
+            dt1 = Pr.TotalProduccion("Recocidos");
+            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
+            {
+                recocido = 0.00;
+            }
+            else
+            {
+                recocido = Convert.ToDouble(dt1.Rows[0]["Total"]);
+            }
+
+            dt = Pr.AnualTotalProduccion("Acerados");
+            if (string.IsNullOrEmpty(dt.Rows[0]["Total"].ToString()))
+            {
+                aceradoa = 0.00;
+            }
+            else
+            {
+                aceradoa = Convert.ToDouble(dt.Rows[0]["Total"]);
+            }
+            dt = Pr.AnualTotalProduccion("Galvanizados");
+            if (string.IsNullOrEmpty(dt.Rows[0]["Total"].ToString()))
+            {
+                galvanizadoa = 0.00;
+            }
+            else
+            {
+                galvanizadoa = Convert.ToDouble(dt.Rows[0]["Total"]);
+            }
+            dt = Pr.AnualTotalProduccion("Recocidos");
+            if (string.IsNullOrEmpty(dt.Rows[0]["Total"].ToString()))
+            {
+                recocidoa = 0.00;
+            }
+            else
+            {
+                recocidoa = Convert.ToDouble(dt.Rows[0]["Total"]);
+            }
+            dt = Pr.FechaCierre();
+            if (string.IsNullOrEmpty(dt.Rows[0]["Fecha"].ToString()))
+            {
+                obj.Fecha = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+            }
+            else
+            {
+                obj.Fecha = Convert.ToDateTime(dt.Rows[0]["Fecha"]);
+            }
+
+            obj.Valor = 1;
+            obj.Acerado = acerado;
+            obj.Galvanizado = galvanizado;
+            obj.Recocido = recocido;
+            obj.Aceradoa = aceradoa;
+            obj.Galvanizadoa = galvanizadoa;
+            obj.Recocidoa = recocidoa;
+            obj.Nombre = "cierre_terminados.rdlc";
+            obj.Destino = "Terminados";
+            obj.Reporte = "CIERRE MENSUAL";
+            obj.ShowDialog();
+        }
+
+        private void lineaGalvanizadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReporte obj = new frmReporte();
+            dt1 = Pr.TotalProduccion("Acerados");
+            double acerado;
+            double galvanizado;
+            double recocido;
+            double aceradoa;
+            double galvanizadoa;
+            double recocidoa;
+            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
+            {
+                acerado = 0.00;
+            }
+            else
+            {
+                acerado = Convert.ToDouble(dt1.Rows[0]["Total"]);
+            }
+            dt1 = Pr.TotalProduccion("Galvanizados");
+            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
+            {
+                galvanizado = 0.00;
+            }
+            else
+            {
+                galvanizado = Convert.ToDouble(dt1.Rows[0]["Total"]);
+            }
+            dt1 = Pr.TotalProduccion("Recocidos");
+            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
+            {
+                recocido = 0.00;
+            }
+            else
+            {
+                recocido = Convert.ToDouble(dt1.Rows[0]["Total"]);
+            }
+
+            dt = Pr.AnualTotalProduccion("Acerados");
+            if (string.IsNullOrEmpty(dt.Rows[0]["Total"].ToString()))
+            {
+                aceradoa = 0.00;
+            }
+            else
+            {
+                aceradoa = Convert.ToDouble(dt.Rows[0]["Total"]);
+            }
+            dt = Pr.AnualTotalProduccion("Galvanizados");
+            if (string.IsNullOrEmpty(dt.Rows[0]["Total"].ToString()))
+            {
+                galvanizadoa = 0.00;
+            }
+            else
+            {
+                galvanizadoa = Convert.ToDouble(dt.Rows[0]["Total"]);
+            }
+            dt = Pr.AnualTotalProduccion("Recocidos");
+            if (string.IsNullOrEmpty(dt.Rows[0]["Total"].ToString()))
+            {
+                recocidoa = 0.00;
+            }
+            else
+            {
+                recocidoa = Convert.ToDouble(dt.Rows[0]["Total"]);
+            }
+            dt = Pr.FechaCierre();
+            if (string.IsNullOrEmpty(dt.Rows[0]["Fecha"].ToString()))
+            {
+                obj.Fecha = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+            }
+            else
+            {
+                obj.Fecha = Convert.ToDateTime(dt.Rows[0]["Fecha"]);
+            }
+
+            obj.Valor = 1;
+            obj.Acerado = acerado;
+            obj.Galvanizado = galvanizado;
+            obj.Recocido = recocido;
+            obj.Aceradoa = aceradoa;
+            obj.Galvanizadoa = galvanizadoa;
+            obj.Recocidoa = recocidoa;
+            obj.Nombre = "cierre_lineagalv.rdlc";
+            obj.Destino = "Linea Galv";
+            obj.Reporte = "CIERRE MENSUAL";
+            obj.ShowDialog();
+        }
+        private void LlenarComboP()
+        {
+            try
+            {
+                tscbempresa.ComboBox.BindingContext = this.BindingContext;
+                tscbempresa.ComboBox.DataSource = P.Listar(true);
+                tscbempresa.ComboBox.DisplayMember = "DESCRIPCION";
+                tscbempresa.ComboBox.ValueMember = "ID_EMPRESA";
+            }
+            catch (Exception ex)
+            {
+                MessageBoxEx.Show(ex.Message);
+            }
+
+        }
+
+        private void ConsultasGenerales_Load(object sender, EventArgs e)
+        {
+            LlenarComboP();
+            tscbempresa.ComboBox.SelectedValue = "ACERO";
+        }
+
+        private void grapasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReporte obj = new frmReporte();
+            if (tscbempresa.ComboBox.SelectedValue.ToString()=="ACERO")
+            {
+                obj.Destino = "ACERO DEL CIBAO,SRL";
+            }
+            if (tscbempresa.ComboBox.SelectedValue.ToString() == "A&L")
+            {
+                obj.Destino = "A&L WIRE";
+            }
+            if (tscbempresa.ComboBox.SelectedValue.ToString() == "Esprines")
+            {
+                obj.Destino = "FABRICA DE ESPRINES";
+            }
+            dt = Pr.FechaCierre();
+            if (string.IsNullOrEmpty(dt.Rows[0]["Fecha"].ToString()))
+            {
+                obj.Fecha = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+            }
+            else
+            {
+                obj.Fecha = Convert.ToDateTime(dt.Rows[0]["Fecha"]);
+            }
+            obj.Incentivo = "Grapas";
+            obj.Empresa = tscbempresa.ComboBox.SelectedValue.ToString();
+            obj.Nombre = "incentivo_grapas.rdlc";
+            obj.Reporte = "INCENTIVO GRAPAS";
+            obj.Valor = 2;
+            obj.ShowDialog();
+        }
+
+        private void púasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReporte obj = new frmReporte();
+            if (tscbempresa.ComboBox.SelectedValue.ToString() == "ACERO")
+            {
+                obj.Destino = "ACERO DEL CIBAO,SRL";
+            }
+            if (tscbempresa.ComboBox.SelectedValue.ToString() == "A&L")
+            {
+                obj.Destino = "A&L WIRE";
+            }
+            if (tscbempresa.ComboBox.SelectedValue.ToString() == "Esprines")
+            {
+                obj.Destino = "FABRICA DE ESPRINES";
+            }
+            dt = Pr.FechaCierre();
+            if (string.IsNullOrEmpty(dt.Rows[0]["Fecha"].ToString()))
+            {
+                obj.Fecha = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+            }
+            else
+            {
+                obj.Fecha = Convert.ToDateTime(dt.Rows[0]["Fecha"]);
+            }
+            obj.Incentivo = "Puas";
+            obj.Empresa = tscbempresa.ComboBox.SelectedValue.ToString();
+            obj.Nombre = "incentivo_puas.rdlc";
+            obj.Reporte = "INCENTIVO PUAS";
+            obj.Valor = 2;
+            obj.ShowDialog();
+        }
+
+        private void mallasGallineroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReporte obj = new frmReporte();
+            if (tscbempresa.ComboBox.SelectedValue.ToString() == "ACERO")
+            {
+                obj.Destino = "ACERO DEL CIBAO,SRL";
+            }
+            if (tscbempresa.ComboBox.SelectedValue.ToString() == "A&L")
+            {
+                obj.Destino = "A&L WIRE";
+            }
+            if (tscbempresa.ComboBox.SelectedValue.ToString() == "Esprines")
+            {
+                obj.Destino = "FABRICA DE ESPRINES";
+            }
+            dt = Pr.FechaCierre();
+            if (string.IsNullOrEmpty(dt.Rows[0]["Fecha"].ToString()))
+            {
+                obj.Fecha = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+            }
+            else
+            {
+                obj.Fecha = Convert.ToDateTime(dt.Rows[0]["Fecha"]);
+            }
+            obj.Incentivo = "Mallas Gallinero";
+            obj.Empresa = tscbempresa.ComboBox.SelectedValue.ToString();
+            obj.Nombre = "incentivo_mallas_gallinero.rdlc";
+            obj.Reporte = "INCENTIVO MALLAS GALLINERO";
+            obj.Valor = 2;
+            obj.ShowDialog();
+        }
+
+        private void mallasCiclonicasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReporte obj = new frmReporte();
+            if (tscbempresa.ComboBox.SelectedValue.ToString() == "ACERO")
+            {
+                obj.Destino = "ACERO DEL CIBAO,SRL";
+            }
+            if (tscbempresa.ComboBox.SelectedValue.ToString() == "A&L")
+            {
+                obj.Destino = "A&L WIRE";
+            }
+            if (tscbempresa.ComboBox.SelectedValue.ToString() == "Esprines")
+            {
+                obj.Destino = "FABRICA DE ESPRINES";
+            }
+            dt = Pr.FechaCierre();
+            if (string.IsNullOrEmpty(dt.Rows[0]["Fecha"].ToString()))
+            {
+                obj.Fecha = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+            }
+            else
+            {
+                obj.Fecha = Convert.ToDateTime(dt.Rows[0]["Fecha"]);
+            }
+            obj.Incentivo = "Mallas Ciclonicas";
+            obj.Empresa = tscbempresa.ComboBox.SelectedValue.ToString();
+            obj.Nombre = "incentivo_mallas_ciclonicas.rdlc";
+            obj.Reporte = "INCENTIVO MALLAS CICLONICAS";
+            obj.Valor = 2;
+            obj.ShowDialog();
+        }
+
+        private void sunchosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReporte obj = new frmReporte();
+            if (tscbempresa.ComboBox.SelectedValue.ToString() == "ACERO")
+            {
+                obj.Destino = "ACERO DEL CIBAO,SRL";
+            }
+            if (tscbempresa.ComboBox.SelectedValue.ToString() == "A&L")
+            {
+                obj.Destino = "A&L WIRE";
+            }
+            if (tscbempresa.ComboBox.SelectedValue.ToString() == "Esprines")
+            {
+                obj.Destino = "FABRICA DE ESPRINES";
+            }
+            dt = Pr.FechaCierre();
+            if (string.IsNullOrEmpty(dt.Rows[0]["Fecha"].ToString()))
+            {
+                obj.Fecha = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+            }
+            else
+            {
+                obj.Fecha = Convert.ToDateTime(dt.Rows[0]["Fecha"]);
+            }
+            obj.Incentivo = "Sunchos";
+            obj.Empresa = tscbempresa.ComboBox.SelectedValue.ToString();
+            obj.Nombre = "incentivo_sunchos.rdlc";
+            obj.Reporte = "INCENTIVO SUNCHOS";
+            obj.Valor = 2;
+            obj.ShowDialog();
+        }
+
+        private void rollosRollitosCortadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReporte obj = new frmReporte();
+            Consultas.frmcFechas obj1 = new Consultas.frmcFechas();
+            if (tscbempresa.ComboBox.SelectedValue.ToString() == "ACERO")
+            {
+                obj.Destino = "ACERO DEL CIBAO,SRL";
+            }
+            if (tscbempresa.ComboBox.SelectedValue.ToString() == "A&L")
+            {
+                obj.Destino = "A&L WIRE";
+            }
+            if (tscbempresa.ComboBox.SelectedValue.ToString() == "Esprines")
+            {
+                obj.Destino = "FABRICA DE ESPRINES";
+            }
+            dt = Pr.FechaCierre();
+            if (string.IsNullOrEmpty(dt.Rows[0]["Fecha"].ToString()))
+            {
+                obj.Fecha = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+            }
+            else
+            {
+                obj.Fecha = Convert.ToDateTime(dt.Rows[0]["Fecha"]);
+            }
+            obj.Incentivo = "Rollos,Rollitos,Cortado";
+            obj.Empresa = tscbempresa.ComboBox.SelectedValue.ToString();
+            obj.Nombre = "incentivo_rollos_cort.rdlc";
+            obj.Reporte = "INCENTIVO ROLLOS,ROLLITOS,CORTADO";
+            obj.Valor = 3;
+            obj1.ShowDialog();
+            if(Program.Valor2==1)
+            {
+                obj.Fechai = Program.Fechai;
+                obj.Fechaf = Program.Fechaf;
+                obj.ShowDialog();
+            }
+           
+        }
+
+        private void trefiladoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReporte obj = new frmReporte();
+            if (tscbempresa.ComboBox.SelectedValue.ToString() == "ACERO")
+            {
+                obj.Destino = "ACERO DEL CIBAO,SRL";
+            }
+            if (tscbempresa.ComboBox.SelectedValue.ToString() == "A&L")
+            {
+                obj.Destino = "A&L WIRE";
+            }
+            if (tscbempresa.ComboBox.SelectedValue.ToString() == "Esprines")
+            {
+                obj.Destino = "FABRICA DE ESPRINES";
+            }
+            dt = Pr.FechaCierre();
+            if (string.IsNullOrEmpty(dt.Rows[0]["Fecha"].ToString()))
+            {
+                obj.Fecha = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+            }
+            else
+            {
+                obj.Fecha = Convert.ToDateTime(dt.Rows[0]["Fecha"]);
+            }
+            obj.Empresa = tscbempresa.ComboBox.SelectedValue.ToString();
+            obj.Nombre = "incentivo_trefilado.rdlc";
+            obj.Reporte = "INCENTIVO TREFILADO";
+            obj.Valor = 4;
+            obj.ShowDialog();
+        }
+
+        private void flejadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReporte obj = new frmReporte();
+            if (tscbempresa.ComboBox.SelectedValue.ToString() == "ACERO")
+            {
+                obj.Destino = "ACERO DEL CIBAO,SRL";
+            }
+            if (tscbempresa.ComboBox.SelectedValue.ToString() == "A&L")
+            {
+                obj.Destino = "A&L WIRE";
+            }
+            if (tscbempresa.ComboBox.SelectedValue.ToString() == "Esprines")
+            {
+                obj.Destino = "FABRICA DE ESPRINES";
+            }
+            dt = Pr.FechaCierre();
+            if (string.IsNullOrEmpty(dt.Rows[0]["Fecha"].ToString()))
+            {
+                obj.Fecha = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+            }
+            else
+            {
+                obj.Fecha = Convert.ToDateTime(dt.Rows[0]["Fecha"]);
+            }
+            obj.Empresa = tscbempresa.ComboBox.SelectedValue.ToString();
+            obj.Nombre = "incentivo_flejado.rdlc";
+            obj.Reporte = "INCENTIVO FLEJADO";
+            obj.Valor = 5;
+            obj.ShowDialog();
+        }
+
+        private void lineaGalvanizadoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmReporte obj = new frmReporte();
+            if (tscbempresa.ComboBox.SelectedValue.ToString() == "ACERO")
+            {
+                obj.Destino = "ACERO DEL CIBAO,SRL";
+            }
+            if (tscbempresa.ComboBox.SelectedValue.ToString() == "A&L")
+            {
+                obj.Destino = "A&L WIRE";
+            }
+            if (tscbempresa.ComboBox.SelectedValue.ToString() == "Esprines")
+            {
+                obj.Destino = "FABRICA DE ESPRINES";
+            }
+            dt = Pr.FechaCierre();
+            if (string.IsNullOrEmpty(dt.Rows[0]["Fecha"].ToString()))
+            {
+                obj.Fecha = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+            }
+            else
+            {
+                obj.Fecha = Convert.ToDateTime(dt.Rows[0]["Fecha"]);
+            }
+            obj.Empresa = tscbempresa.ComboBox.SelectedValue.ToString();
+            obj.Nombre = "incentivo_galvanizado.rdlc";
+            obj.Reporte = "INCENTIVO GALVANIZADO";
+            obj.Valor = 6;
+            obj.ShowDialog();
+        }
+
+        private void varillasAceradasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReporte obj = new frmReporte();
+            if (tscbempresa.ComboBox.SelectedValue.ToString() == "ACERO")
+            {
+                obj.Destino = "ACERO DEL CIBAO,SRL";
+            }
+            if (tscbempresa.ComboBox.SelectedValue.ToString() == "A&L")
+            {
+                obj.Destino = "A&L WIRE";
+            }
+            if (tscbempresa.ComboBox.SelectedValue.ToString() == "Esprines")
+            {
+                obj.Destino = "FABRICA DE ESPRINES";
+            }
+            dt = Pr.FechaCierre();
+            if (string.IsNullOrEmpty(dt.Rows[0]["Fecha"].ToString()))
+            {
+                obj.Fecha = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+            }
+            else
+            {
+                obj.Fecha = Convert.ToDateTime(dt.Rows[0]["Fecha"]);
+            }
+            obj.Incentivo = "Varillas Aceradas";
+            obj.Empresa = tscbempresa.ComboBox.SelectedValue.ToString();
+            obj.Nombre = "incentivo_varillas_aceradas.rdlc";
+            obj.Reporte = "INCENTIVO VARILLAS ACERADAS";
+            obj.Valor = 2;
+            obj.ShowDialog();
+        }
+
+        private void mecanicoIndustriaMenorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReporte obj = new frmReporte();
+            Consultas.frmcFechas obj1 = new Consultas.frmcFechas();
+            if (tscbempresa.ComboBox.SelectedValue.ToString() == "ACERO")
+            {
+                obj.Destino = "ACERO DEL CIBAO,SRL";
+            }
+            if (tscbempresa.ComboBox.SelectedValue.ToString() == "A&L")
+            {
+                obj.Destino = "A&L WIRE";
+            }
+            if (tscbempresa.ComboBox.SelectedValue.ToString() == "Esprines")
+            {
+                obj.Destino = "FABRICA DE ESPRINES";
+            }
+            dt = Pr.FechaCierre();
+            if (string.IsNullOrEmpty(dt.Rows[0]["Fecha"].ToString()))
+            {
+                obj.Fecha = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+            }
+            else
+            {
+                obj.Fecha = Convert.ToDateTime(dt.Rows[0]["Fecha"]);
+            }
+            //obj.Incentivo = "Mecanico Industria Menor";
+            obj.Empresa = tscbempresa.ComboBox.SelectedValue.ToString();
+            obj.Nombre = "incentivo_mecanico_indm.rdlc";
+            obj.Reporte = "INCENTIVO MECANICO INDUSTRIA MENOR";
+            obj.Valor = 8;
+            obj1.ShowDialog();
+            if (Program.Valor2 == 1)
+            {
+                obj.Fechai = Program.Fechai;
+                obj.Fechaf = Program.Fechaf;
+                obj.ShowDialog();
+            }
+        }
+    }
+    
+}

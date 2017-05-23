@@ -1,0 +1,33 @@
+c:\Users\COMPUTOS\documents\visual studio 2015\Projects\Interfaz\Intermedia\bin\Debug\Intermedia.dll
+c:\Users\COMPUTOS\documents\visual studio 2015\Projects\Interfaz\Intermedia\bin\Debug\Intermedia.pdb
+c:\Users\COMPUTOS\documents\visual studio 2015\Projects\Interfaz\Intermedia\obj\Debug\Intermedia.csprojResolveAssemblyReference.cache
+c:\Users\COMPUTOS\documents\visual studio 2015\Projects\Interfaz\Intermedia\obj\Debug\Intermedia.dll
+c:\Users\COMPUTOS\documents\visual studio 2015\Projects\Interfaz\Intermedia\obj\Debug\Intermedia.pdb
+C:\Users\COMPUTOS\Documents\Visual Studio 2015\Projects\Produccion\Intermedia\bin\Debug\Intermedia.dll
+C:\Users\COMPUTOS\Documents\Visual Studio 2015\Projects\Produccion\Intermedia\bin\Debug\Intermedia.pdb
+C:\Users\COMPUTOS\Documents\Visual Studio 2015\Projects\Produccion\Intermedia\bin\Debug\Datos.dll
+C:\Users\COMPUTOS\Documents\Visual Studio 2015\Projects\Produccion\Intermedia\bin\Debug\Datos.pdb
+C:\Users\COMPUTOS\Documents\Visual Studio 2015\Projects\Produccion\Intermedia\obj\Debug\Intermedia.csprojResolveAssemblyReference.cache
+C:\Users\COMPUTOS\Documents\Visual Studio 2015\Projects\Produccion\Intermedia\obj\Debug\Intermedia.dll
+C:\Users\COMPUTOS\Documents\Visual Studio 2015\Projects\Produccion\Intermedia\obj\Debug\Intermedia.pdb
+C:\Users\COMPUTOS\Documents\Visual Studio 2015\Produccion\Intermedia\bin\Debug\Intermedia.dll
+C:\Users\COMPUTOS\Documents\Visual Studio 2015\Produccion\Intermedia\bin\Debug\Intermedia.pdb
+C:\Users\COMPUTOS\Documents\Visual Studio 2015\Produccion\Intermedia\bin\Debug\Datos.dll
+C:\Users\COMPUTOS\Documents\Visual Studio 2015\Produccion\Intermedia\bin\Debug\Datos.pdb
+C:\Users\COMPUTOS\Documents\Visual Studio 2015\Produccion\Intermedia\obj\Debug\Intermedia.csprojResolveAssemblyReference.cache
+C:\Users\COMPUTOS\Documents\Visual Studio 2015\Produccion\Intermedia\obj\Debug\Intermedia.dll
+C:\Users\COMPUTOS\Documents\Visual Studio 2015\Produccion\Intermedia\obj\Debug\Intermedia.pdb
+C:\Users\COMPUTOS\Desktop\SYSPROD\V7 13-01-2017\Produccion\Intermedia\bin\Debug\Intermedia.dll
+C:\Users\COMPUTOS\Desktop\SYSPROD\V7 13-01-2017\Produccion\Intermedia\bin\Debug\Intermedia.pdb
+C:\Users\COMPUTOS\Desktop\SYSPROD\V7 13-01-2017\Produccion\Intermedia\bin\Debug\Datos.dll
+C:\Users\COMPUTOS\Desktop\SYSPROD\V7 13-01-2017\Produccion\Intermedia\bin\Debug\Datos.pdb
+C:\Users\COMPUTOS\Desktop\SYSPROD\V7 13-01-2017\Produccion\Intermedia\obj\Debug\Intermedia.csprojResolveAssemblyReference.cache
+C:\Users\COMPUTOS\Desktop\SYSPROD\V7 13-01-2017\Produccion\Intermedia\obj\Debug\Intermedia.dll
+C:\Users\COMPUTOS\Desktop\SYSPROD\V7 13-01-2017\Produccion\Intermedia\obj\Debug\Intermedia.pdb
+C:\Users\COMPUTOS\Desktop\SYSPROD\En Proceso\Produccion\Intermedia\bin\Debug\Intermedia.dll
+C:\Users\COMPUTOS\Desktop\SYSPROD\En Proceso\Produccion\Intermedia\bin\Debug\Intermedia.pdb
+C:\Users\COMPUTOS\Desktop\SYSPROD\En Proceso\Produccion\Intermedia\bin\Debug\Datos.dll
+C:\Users\COMPUTOS\Desktop\SYSPROD\En Proceso\Produccion\Intermedia\bin\Debug\Datos.pdb
+C:\Users\COMPUTOS\Desktop\SYSPROD\En Proceso\Produccion\Intermedia\obj\Debug\Intermedia.csprojResolveAssemblyReference.cache
+C:\Users\COMPUTOS\Desktop\SYSPROD\En Proceso\Produccion\Intermedia\obj\Debug\Intermedia.dll
+C:\Users\COMPUTOS\Desktop\SYSPROD\En Proceso\Produccion\Intermedia\obj\Debug\Intermedia.pdb

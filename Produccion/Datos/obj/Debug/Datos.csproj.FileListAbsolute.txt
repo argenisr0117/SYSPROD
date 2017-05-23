@@ -1,0 +1,14 @@
+c:\Users\COMPUTOS\documents\visual studio 2015\Projects\Interfaz\Datos\bin\Debug\Datos.dll
+c:\Users\COMPUTOS\documents\visual studio 2015\Projects\Interfaz\Datos\bin\Debug\Datos.pdb
+c:\Users\COMPUTOS\documents\visual studio 2015\Projects\Interfaz\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
+c:\Users\COMPUTOS\documents\visual studio 2015\Projects\Interfaz\Datos\obj\Debug\Datos.dll
+c:\Users\COMPUTOS\documents\visual studio 2015\Projects\Interfaz\Datos\obj\Debug\Datos.pdb
+C:\Users\COMPUTOS\Documents\Visual Studio 2015\Projects\Produccion\Datos\bin\Debug\Datos.dll
+C:\Users\COMPUTOS\Documents\Visual Studio 2015\Projects\Produccion\Datos\bin\Debug\Datos.pdb
+C:\Users\COMPUTOS\Documents\Visual Studio 2015\Projects\Produccion\Datos\obj\Debug\Datos.dll
+C:\Users\COMPUTOS\Documents\Visual Studio 2015\Projects\Produccion\Datos\obj\Debug\Datos.pdb
+C:\Users\COMPUTOS\Documents\Visual Studio 2015\Projects\Produccion\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
+C:\Users\COMPUTOS\Desktop\SYSPROD\En Proceso\Produccion\Datos\bin\Debug\Datos.dll
+C:\Users\COMPUTOS\Desktop\SYSPROD\En Proceso\Produccion\Datos\bin\Debug\Datos.pdb
+C:\Users\COMPUTOS\Desktop\SYSPROD\En Proceso\Produccion\Datos\obj\Debug\Datos.dll
+C:\Users\COMPUTOS\Desktop\SYSPROD\En Proceso\Produccion\Datos\obj\Debug\Datos.pdb
