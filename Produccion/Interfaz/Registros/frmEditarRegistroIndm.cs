@@ -28,7 +28,7 @@ namespace Interfaz.Registros
         public string Operador;
         public string Maquina;
         public int Tarjeta;
-        public string Peso;
+        public decimal Peso;
         private void ComboP()
         {
             try
@@ -98,7 +98,7 @@ namespace Interfaz.Registros
                 cmbOperador.Text = Operador;
                 cmbMaquina.Text = Maquina;
                 cmbProducto.Text = Producto;
-                txtPeso.Text = Peso;
+                txtPeso.Text = Peso.ToString();
             }
             catch (Exception ex)
             {

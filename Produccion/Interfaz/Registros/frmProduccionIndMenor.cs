@@ -580,7 +580,7 @@ namespace Interfaz.Registros
                 obj.Operador = dtgvProduccion.CurrentRow.Cells[1].Value.ToString();
                 obj.Producto = dtgvProduccion.CurrentRow.Cells[3].Value.ToString();
                 obj.Maquina = dtgvProduccion.CurrentRow.Cells[5].Value.ToString();
-                obj.Peso = dtgvProduccion.CurrentRow.Cells[4].Value.ToString();
+                obj.Peso =Convert.ToDecimal(dtgvProduccion.CurrentRow.Cells[4].Value);
                 obj.Tarjeta = Convert.ToInt32(dtgvProduccion.CurrentRow.Cells[0].Value);
                 obj.ShowDialog();
                 if (Program.Valor == 1)
