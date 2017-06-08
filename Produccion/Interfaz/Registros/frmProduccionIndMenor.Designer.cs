@@ -34,7 +34,6 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.cmbAyudante = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtCantidad = new Interfaz.Controles.textboxN(this.components);
             this.label13 = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.cmbSupervisor = new System.Windows.Forms.ComboBox();
@@ -50,12 +49,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dtgvProduccion = new System.Windows.Forms.DataGridView();
-            this.tarjeta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.operador = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ayudante = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maquina = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.btnBuscar1 = new System.Windows.Forms.Button();
@@ -69,11 +62,6 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnReporte = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.txtCantidad5 = new Interfaz.Controles.textboxN(this.components);
-            this.txtCantidad4 = new Interfaz.Controles.textboxN(this.components);
-            this.txtCantidad3 = new Interfaz.Controles.textboxN(this.components);
-            this.txtCantidad2 = new Interfaz.Controles.textboxN(this.components);
-            this.txtCantidad1 = new Interfaz.Controles.textboxN(this.components);
             this.lbMaq5 = new System.Windows.Forms.Label();
             this.lbMaq4 = new System.Windows.Forms.Label();
             this.lbMaq3 = new System.Windows.Forms.Label();
@@ -86,6 +74,19 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnRegistrar2 = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtCantidad = new Interfaz.Controles.textboxN(this.components);
+            this.txtCantidad5 = new Interfaz.Controles.textboxN(this.components);
+            this.txtCantidad4 = new Interfaz.Controles.textboxN(this.components);
+            this.txtCantidad3 = new Interfaz.Controles.textboxN(this.components);
+            this.txtCantidad2 = new Interfaz.Controles.textboxN(this.components);
+            this.txtCantidad1 = new Interfaz.Controles.textboxN(this.components);
+            this.tarjeta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.operador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ayudante = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maquina = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -162,17 +163,6 @@
             this.label2.Size = new System.Drawing.Size(78, 13);
             this.label2.TabIndex = 153;
             this.label2.Text = "AYUDANTE:";
-            // 
-            // txtCantidad
-            // 
-            this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidad.Location = new System.Drawing.Point(161, 309);
-            this.txtCantidad.Multiline = true;
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(473, 31);
-            this.txtCantidad.TabIndex = 152;
-            this.txtCantidad.Validar = true;
-            this.txtCantidad.Valor = Interfaz.Controles.textboxN.Tipo.Números;
             // 
             // label13
             // 
@@ -392,6 +382,7 @@
             this.dtgvProduccion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvProduccion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.tarjeta,
+            this.fecha,
             this.operador,
             this.ayudante,
             this.producto,
@@ -406,53 +397,6 @@
             this.dtgvProduccion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgvProduccion.Size = new System.Drawing.Size(746, 335);
             this.dtgvProduccion.TabIndex = 117;
-            // 
-            // tarjeta
-            // 
-            this.tarjeta.HeaderText = "TARJETA";
-            this.tarjeta.Name = "tarjeta";
-            this.tarjeta.ReadOnly = true;
-            this.tarjeta.Visible = false;
-            // 
-            // operador
-            // 
-            this.operador.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.operador.HeaderText = "OPERADOR";
-            this.operador.Name = "operador";
-            this.operador.ReadOnly = true;
-            this.operador.Width = 93;
-            // 
-            // ayudante
-            // 
-            this.ayudante.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ayudante.HeaderText = "AYUDANTE";
-            this.ayudante.Name = "ayudante";
-            this.ayudante.ReadOnly = true;
-            this.ayudante.Width = 91;
-            // 
-            // producto
-            // 
-            this.producto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.producto.HeaderText = "PRODUCTO";
-            this.producto.Name = "producto";
-            this.producto.ReadOnly = true;
-            this.producto.Width = 93;
-            // 
-            // cantidad
-            // 
-            this.cantidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.cantidad.HeaderText = "CANTIDAD";
-            this.cantidad.Name = "cantidad";
-            this.cantidad.ReadOnly = true;
-            this.cantidad.Width = 87;
-            // 
-            // maquina
-            // 
-            this.maquina.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.maquina.HeaderText = "MÁQUINA";
-            this.maquina.Name = "maquina";
-            this.maquina.ReadOnly = true;
-            this.maquina.Width = 82;
             // 
             // panel2
             // 
@@ -667,71 +611,6 @@
             this.tabPage3.Text = "INVENTARIO DE PUAS";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // txtCantidad5
-            // 
-            this.txtCantidad5.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.txtCantidad5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidad5.Location = new System.Drawing.Point(190, 367);
-            this.txtCantidad5.Multiline = true;
-            this.txtCantidad5.Name = "txtCantidad5";
-            this.txtCantidad5.Size = new System.Drawing.Size(93, 33);
-            this.txtCantidad5.TabIndex = 163;
-            this.txtCantidad5.Validar = false;
-            this.txtCantidad5.Valor = Interfaz.Controles.textboxN.Tipo.Números;
-            this.txtCantidad5.Visible = false;
-            // 
-            // txtCantidad4
-            // 
-            this.txtCantidad4.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.txtCantidad4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidad4.Location = new System.Drawing.Point(190, 327);
-            this.txtCantidad4.Multiline = true;
-            this.txtCantidad4.Name = "txtCantidad4";
-            this.txtCantidad4.Size = new System.Drawing.Size(93, 34);
-            this.txtCantidad4.TabIndex = 162;
-            this.txtCantidad4.Validar = false;
-            this.txtCantidad4.Valor = Interfaz.Controles.textboxN.Tipo.Números;
-            this.txtCantidad4.Visible = false;
-            // 
-            // txtCantidad3
-            // 
-            this.txtCantidad3.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.txtCantidad3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidad3.Location = new System.Drawing.Point(190, 288);
-            this.txtCantidad3.Multiline = true;
-            this.txtCantidad3.Name = "txtCantidad3";
-            this.txtCantidad3.Size = new System.Drawing.Size(93, 33);
-            this.txtCantidad3.TabIndex = 161;
-            this.txtCantidad3.Validar = false;
-            this.txtCantidad3.Valor = Interfaz.Controles.textboxN.Tipo.Números;
-            this.txtCantidad3.Visible = false;
-            // 
-            // txtCantidad2
-            // 
-            this.txtCantidad2.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.txtCantidad2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidad2.Location = new System.Drawing.Point(190, 251);
-            this.txtCantidad2.Multiline = true;
-            this.txtCantidad2.Name = "txtCantidad2";
-            this.txtCantidad2.Size = new System.Drawing.Size(93, 31);
-            this.txtCantidad2.TabIndex = 160;
-            this.txtCantidad2.Validar = false;
-            this.txtCantidad2.Valor = Interfaz.Controles.textboxN.Tipo.Números;
-            this.txtCantidad2.Visible = false;
-            // 
-            // txtCantidad1
-            // 
-            this.txtCantidad1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.txtCantidad1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidad1.Location = new System.Drawing.Point(190, 211);
-            this.txtCantidad1.Multiline = true;
-            this.txtCantidad1.Name = "txtCantidad1";
-            this.txtCantidad1.Size = new System.Drawing.Size(93, 34);
-            this.txtCantidad1.TabIndex = 159;
-            this.txtCantidad1.Validar = false;
-            this.txtCantidad1.Valor = Interfaz.Controles.textboxN.Tipo.Números;
-            this.txtCantidad1.Visible = false;
-            // 
             // lbMaq5
             // 
             this.lbMaq5.AutoSize = true;
@@ -892,6 +771,136 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // txtCantidad
+            // 
+            this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCantidad.Location = new System.Drawing.Point(161, 309);
+            this.txtCantidad.Multiline = true;
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(473, 31);
+            this.txtCantidad.TabIndex = 152;
+            this.txtCantidad.Validar = true;
+            this.txtCantidad.Valor = Interfaz.Controles.textboxN.Tipo.Números;
+            // 
+            // txtCantidad5
+            // 
+            this.txtCantidad5.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtCantidad5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCantidad5.Location = new System.Drawing.Point(190, 367);
+            this.txtCantidad5.Multiline = true;
+            this.txtCantidad5.Name = "txtCantidad5";
+            this.txtCantidad5.Size = new System.Drawing.Size(93, 33);
+            this.txtCantidad5.TabIndex = 163;
+            this.txtCantidad5.Validar = false;
+            this.txtCantidad5.Valor = Interfaz.Controles.textboxN.Tipo.Números;
+            this.txtCantidad5.Visible = false;
+            // 
+            // txtCantidad4
+            // 
+            this.txtCantidad4.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtCantidad4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCantidad4.Location = new System.Drawing.Point(190, 327);
+            this.txtCantidad4.Multiline = true;
+            this.txtCantidad4.Name = "txtCantidad4";
+            this.txtCantidad4.Size = new System.Drawing.Size(93, 34);
+            this.txtCantidad4.TabIndex = 162;
+            this.txtCantidad4.Validar = false;
+            this.txtCantidad4.Valor = Interfaz.Controles.textboxN.Tipo.Números;
+            this.txtCantidad4.Visible = false;
+            // 
+            // txtCantidad3
+            // 
+            this.txtCantidad3.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtCantidad3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCantidad3.Location = new System.Drawing.Point(190, 288);
+            this.txtCantidad3.Multiline = true;
+            this.txtCantidad3.Name = "txtCantidad3";
+            this.txtCantidad3.Size = new System.Drawing.Size(93, 33);
+            this.txtCantidad3.TabIndex = 161;
+            this.txtCantidad3.Validar = false;
+            this.txtCantidad3.Valor = Interfaz.Controles.textboxN.Tipo.Números;
+            this.txtCantidad3.Visible = false;
+            // 
+            // txtCantidad2
+            // 
+            this.txtCantidad2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtCantidad2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCantidad2.Location = new System.Drawing.Point(190, 251);
+            this.txtCantidad2.Multiline = true;
+            this.txtCantidad2.Name = "txtCantidad2";
+            this.txtCantidad2.Size = new System.Drawing.Size(93, 31);
+            this.txtCantidad2.TabIndex = 160;
+            this.txtCantidad2.Validar = false;
+            this.txtCantidad2.Valor = Interfaz.Controles.textboxN.Tipo.Números;
+            this.txtCantidad2.Visible = false;
+            // 
+            // txtCantidad1
+            // 
+            this.txtCantidad1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtCantidad1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCantidad1.Location = new System.Drawing.Point(190, 211);
+            this.txtCantidad1.Multiline = true;
+            this.txtCantidad1.Name = "txtCantidad1";
+            this.txtCantidad1.Size = new System.Drawing.Size(93, 34);
+            this.txtCantidad1.TabIndex = 159;
+            this.txtCantidad1.Validar = false;
+            this.txtCantidad1.Valor = Interfaz.Controles.textboxN.Tipo.Números;
+            this.txtCantidad1.Visible = false;
+            // 
+            // tarjeta
+            // 
+            this.tarjeta.HeaderText = "TARJETA";
+            this.tarjeta.Name = "tarjeta";
+            this.tarjeta.ReadOnly = true;
+            this.tarjeta.Visible = false;
+            // 
+            // fecha
+            // 
+            this.fecha.HeaderText = "FECHA";
+            this.fecha.Name = "fecha";
+            this.fecha.ReadOnly = true;
+            this.fecha.Width = 65;
+            // 
+            // operador
+            // 
+            this.operador.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.operador.HeaderText = "OPERADOR";
+            this.operador.Name = "operador";
+            this.operador.ReadOnly = true;
+            this.operador.Width = 93;
+            // 
+            // ayudante
+            // 
+            this.ayudante.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ayudante.HeaderText = "AYUDANTE";
+            this.ayudante.Name = "ayudante";
+            this.ayudante.ReadOnly = true;
+            this.ayudante.Width = 91;
+            // 
+            // producto
+            // 
+            this.producto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.producto.HeaderText = "PRODUCTO";
+            this.producto.Name = "producto";
+            this.producto.ReadOnly = true;
+            this.producto.Width = 93;
+            // 
+            // cantidad
+            // 
+            this.cantidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.cantidad.HeaderText = "CANTIDAD";
+            this.cantidad.Name = "cantidad";
+            this.cantidad.ReadOnly = true;
+            this.cantidad.Width = 87;
+            // 
+            // maquina
+            // 
+            this.maquina.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.maquina.HeaderText = "MÁQUINA";
+            this.maquina.Name = "maquina";
+            this.maquina.ReadOnly = true;
+            this.maquina.Width = 82;
+            // 
             // frmProduccionIndMenor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -967,17 +976,18 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnReporte;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tarjeta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn operador;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ayudante;
-        private System.Windows.Forms.DataGridViewTextBoxColumn producto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maquina;
         private System.Windows.Forms.Button btnExportar;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button btnBuscar1;
         private System.Windows.Forms.DateTimePicker dtphasta;
         private System.Windows.Forms.DateTimePicker dtpdesde;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tarjeta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn operador;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ayudante;
+        private System.Windows.Forms.DataGridViewTextBoxColumn producto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maquina;
     }
 }

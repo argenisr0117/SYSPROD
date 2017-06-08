@@ -310,6 +310,7 @@ namespace Interfaz.Registros
                     dtgvProduccion.Rows[x].Cells[5].Value = dt.Rows[x][5].ToString();
                     dtgvProduccion.Rows[x].Cells[6].Value = dt.Rows[x][6].ToString();
                     dtgvProduccion.Rows[x].Cells[7].Value = dt.Rows[x][7].ToString();
+                    dtgvProduccion.Rows[x].Cells[8].Value = dt.Rows[x][8].ToString();
                 }
                 dtgvProduccion.ClearSelection();
             }
@@ -336,6 +337,7 @@ namespace Interfaz.Registros
                     dtgvProduccion.Rows[x].Cells[5].Value = dt.Rows[x][5].ToString();
                     dtgvProduccion.Rows[x].Cells[6].Value = dt.Rows[x][6].ToString();
                     dtgvProduccion.Rows[x].Cells[7].Value = dt.Rows[x][7].ToString();
+                    dtgvProduccion.Rows[x].Cells[8].Value = dt.Rows[x][8].ToString();
                 }
                 dtgvProduccion.ClearSelection();
             }
@@ -667,13 +669,13 @@ namespace Interfaz.Registros
             if (dtgvProduccion.SelectedRows.Count > 0)
             {
                 frmEditarRegistroTref obj = new frmEditarRegistroTref();
-                obj.Supervisor= dtgvProduccion.CurrentRow.Cells[0].Value.ToString();
-                obj.Operador= dtgvProduccion.CurrentRow.Cells[1].Value.ToString();
-                obj.Producto= dtgvProduccion.CurrentRow.Cells[2].Value.ToString();
-                obj.Maquina= dtgvProduccion.CurrentRow.Cells[3].Value.ToString();
-                obj.Peso= dtgvProduccion.CurrentRow.Cells[5].Value.ToString();
-                obj.Cliente = dtgvProduccion.CurrentRow.Cells[6].Value.ToString();
-                obj.Id = Convert.ToInt32(dtgvProduccion.CurrentRow.Cells[7].Value);
+                obj.Supervisor= dtgvProduccion.CurrentRow.Cells[1].Value.ToString();
+                obj.Operador= dtgvProduccion.CurrentRow.Cells[2].Value.ToString();
+                obj.Producto= dtgvProduccion.CurrentRow.Cells[3].Value.ToString();
+                obj.Maquina= dtgvProduccion.CurrentRow.Cells[4].Value.ToString();
+                obj.Peso= dtgvProduccion.CurrentRow.Cells[6].Value.ToString();
+                obj.Cliente = dtgvProduccion.CurrentRow.Cells[7].Value.ToString();
+                obj.Id = Convert.ToInt32(dtgvProduccion.CurrentRow.Cells[8].Value);
                 obj.ShowDialog();
                 if(Program.Valor==1)
                 {
@@ -701,7 +703,7 @@ namespace Interfaz.Registros
                 DialogResult var = MessageBoxEx.Show("¿Desea eliminar el registro?", "Sistema de Producción", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (var == DialogResult.Yes)
                 {
-                    PT.Id= Convert.ToInt32(dtgvProduccion.CurrentRow.Cells[7].Value);
+                    PT.Id= Convert.ToInt32(dtgvProduccion.CurrentRow.Cells[8].Value);
                     PT.Dpto = "Trefilado";
                     mensaje=PT.EliminarRegistro();
                     if(mensaje=="1")

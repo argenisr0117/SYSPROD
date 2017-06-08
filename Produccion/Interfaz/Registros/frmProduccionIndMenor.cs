@@ -211,6 +211,7 @@ namespace Interfaz.Registros
                     dtgvProduccion.Rows[x].Cells[3].Value = dt.Rows[x][3].ToString();
                     dtgvProduccion.Rows[x].Cells[4].Value = dt.Rows[x][4].ToString();
                     dtgvProduccion.Rows[x].Cells[5].Value = dt.Rows[x][5].ToString();
+                    dtgvProduccion.Rows[x].Cells[6].Value = dt.Rows[x][6].ToString();
                 }
                 dtgvProduccion.ClearSelection();
             }
@@ -576,11 +577,11 @@ namespace Interfaz.Registros
             if (dtgvProduccion.SelectedRows.Count > 0)
             {
                 frmEditarRegistroIndm obj = new frmEditarRegistroIndm();
-                obj.Ayudante = dtgvProduccion.CurrentRow.Cells[2].Value.ToString();
-                obj.Operador = dtgvProduccion.CurrentRow.Cells[1].Value.ToString();
-                obj.Producto = dtgvProduccion.CurrentRow.Cells[3].Value.ToString();
-                obj.Maquina = dtgvProduccion.CurrentRow.Cells[5].Value.ToString();
-                obj.Peso =Convert.ToDecimal(dtgvProduccion.CurrentRow.Cells[4].Value);
+                obj.Ayudante = dtgvProduccion.CurrentRow.Cells[3].Value.ToString();
+                obj.Operador = dtgvProduccion.CurrentRow.Cells[2].Value.ToString();
+                obj.Producto = dtgvProduccion.CurrentRow.Cells[4].Value.ToString();
+                obj.Maquina = dtgvProduccion.CurrentRow.Cells[6].Value.ToString();
+                obj.Peso =Convert.ToDecimal(dtgvProduccion.CurrentRow.Cells[5].Value);
                 obj.Tarjeta = Convert.ToInt32(dtgvProduccion.CurrentRow.Cells[0].Value);
                 obj.ShowDialog();
                 if (Program.Valor == 1)

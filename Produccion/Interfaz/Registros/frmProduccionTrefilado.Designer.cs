@@ -92,6 +92,8 @@
             this.lbTotalCanasto = new System.Windows.Forms.Label();
             this.lbTotalProd = new System.Windows.Forms.Label();
             this.dtgvProduccion = new System.Windows.Forms.DataGridView();
+            this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
+            this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.supervisor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.operador = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -100,7 +102,6 @@
             this.peso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabregistro.SuspendLayout();
@@ -942,6 +943,7 @@
             this.dtgvProduccion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgvProduccion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvProduccion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.fecha,
             this.supervisor,
             this.operador,
             this.producto,
@@ -966,6 +968,18 @@
             this.dtgvProduccion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgvProduccion.Size = new System.Drawing.Size(869, 419);
             this.dtgvProduccion.TabIndex = 0;
+            // 
+            // serialPort1
+            // 
+            this.serialPort1.PortName = "COM3";
+            this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
+            // 
+            // fecha
+            // 
+            this.fecha.HeaderText = "FECHA";
+            this.fecha.Name = "fecha";
+            this.fecha.ReadOnly = true;
+            this.fecha.Width = 72;
             // 
             // supervisor
             // 
@@ -1023,11 +1037,6 @@
             this.id.ReadOnly = true;
             this.id.Visible = false;
             this.id.Width = 45;
-            // 
-            // serialPort1
-            // 
-            this.serialPort1.PortName = "COM3";
-            this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
             // 
             // frmProduccionTrefilado
             // 
@@ -1115,14 +1124,6 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnExportar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn supervisor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn operador;
-        private System.Windows.Forms.DataGridViewTextBoxColumn producto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maquina;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tarjeta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn peso;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.Button btnFiltrar;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label16;
@@ -1131,5 +1132,14 @@
         private System.Windows.Forms.DateTimePicker dtphasta;
         private System.Windows.Forms.DateTimePicker dtpdesde;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn supervisor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn operador;
+        private System.Windows.Forms.DataGridViewTextBoxColumn producto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maquina;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tarjeta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn peso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
     }
 }
