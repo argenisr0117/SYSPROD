@@ -496,6 +496,7 @@ namespace Interfaz.Registros
                 cbproducto.SelectedValue = Program.CodigoP;
             }
             Program.Evento = 0;
+            Program.CodigoP = "";
         }
 
         private void cbproducto_SelectedValueChanged(object sender, EventArgs e)
@@ -827,7 +828,7 @@ namespace Interfaz.Registros
             obj.Nombre = "reporte_general.rdlc";
             obj.Destino = "";
             obj.Reporte = "REPORTE GENERAL";
-            obj.ShowDialog();
+            obj.Show();
         }
 
         private void intermediosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -873,7 +874,7 @@ namespace Interfaz.Registros
             obj.Nombre = "reporte_intermedios.rdlc";
             obj.Destino = "Intermedios";
             obj.Reporte = "REPORTE INTERMEDIOS";
-            obj.ShowDialog();
+            obj.Show();
         }
 
         private void terminadosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -919,7 +920,7 @@ namespace Interfaz.Registros
             obj.Nombre = "reporte_terminados.rdlc";
             obj.Destino = "Terminados";
             obj.Reporte = "REPORTE TERMINADOS";
-            obj.ShowDialog();
+            obj.Show();
         }
         private void Limpiar()
         {
@@ -1304,7 +1305,7 @@ namespace Interfaz.Registros
             obj.Nombre = "procesos.rdlc";
             obj.Destino = "Procesos";
             obj.Reporte = "REPORTE PROCESOS";
-            obj.ShowDialog();
+            obj.Show();
         }
 
         private void desperdiciosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1350,7 +1351,7 @@ namespace Interfaz.Registros
             obj.Nombre = "desperdicios.rdlc";
             obj.Destino = "Desperdicios";
             obj.Reporte = "REPORTE DESPERDICIOS";
-            obj.ShowDialog();
+            obj.Show();
         }
 
         private void lineaGalvanizadoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1396,7 +1397,7 @@ namespace Interfaz.Registros
             obj.Nombre = "linea_galv.rdlc";
             obj.Destino = "Linea Galv";
             obj.Reporte = "REPORTE LINEA GALVANIZADO";
-            obj.ShowDialog();
+            obj.Show();
         }
 
         private void listadoIntermediosToolStripMenuItem_Click(object sender, EventArgs e)

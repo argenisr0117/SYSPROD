@@ -110,7 +110,7 @@ namespace Interfaz
             obj.Nombre = "cierre_general.rdlc";
             obj.Destino = "";
             obj.Reporte = "CIERRE MENSUAL";
-            obj.ShowDialog();
+            obj.Show();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -221,7 +221,7 @@ namespace Interfaz
             obj.Nombre = "cierre_intermedios.rdlc";
             obj.Destino = "Intermedios";
             obj.Reporte = "CIERRE MENSUAL";
-            obj.ShowDialog();
+            obj.Show();
         }
 
         private void terminadosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -308,7 +308,7 @@ namespace Interfaz
             obj.Nombre = "cierre_terminados.rdlc";
             obj.Destino = "Terminados";
             obj.Reporte = "CIERRE MENSUAL";
-            obj.ShowDialog();
+            obj.Show();
         }
 
         private void lineaGalvanizadoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -395,7 +395,7 @@ namespace Interfaz
             obj.Nombre = "cierre_lineagalv.rdlc";
             obj.Destino = "Linea Galv";
             obj.Reporte = "CIERRE MENSUAL";
-            obj.ShowDialog();
+            obj.Show();
         }
         private void LlenarComboP()
         {
@@ -448,7 +448,7 @@ namespace Interfaz
             obj.Nombre = "incentivo_grapas.rdlc";
             obj.Reporte = "INCENTIVO GRAPAS";
             obj.Valor = 2;
-            obj.ShowDialog();
+            obj.Show();
         }
 
         private void púasToolStripMenuItem_Click(object sender, EventArgs e)
@@ -480,7 +480,7 @@ namespace Interfaz
             obj.Nombre = "incentivo_puas.rdlc";
             obj.Reporte = "INCENTIVO PUAS";
             obj.Valor = 2;
-            obj.ShowDialog();
+            obj.Show();
         }
 
         private void mallasGallineroToolStripMenuItem_Click(object sender, EventArgs e)
@@ -512,7 +512,7 @@ namespace Interfaz
             obj.Nombre = "incentivo_mallas_gallinero.rdlc";
             obj.Reporte = "INCENTIVO MALLAS GALLINERO";
             obj.Valor = 2;
-            obj.ShowDialog();
+            obj.Show();
         }
 
         private void mallasCiclonicasToolStripMenuItem_Click(object sender, EventArgs e)
@@ -544,7 +544,7 @@ namespace Interfaz
             obj.Nombre = "incentivo_mallas_ciclonicas.rdlc";
             obj.Reporte = "INCENTIVO MALLAS CICLONICAS";
             obj.Valor = 2;
-            obj.ShowDialog();
+            obj.Show();
         }
 
         private void sunchosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -576,7 +576,7 @@ namespace Interfaz
             obj.Nombre = "incentivo_sunchos.rdlc";
             obj.Reporte = "INCENTIVO SUNCHOS";
             obj.Valor = 2;
-            obj.ShowDialog();
+            obj.Show();
         }
 
         private void rollosRollitosCortadoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -614,7 +614,7 @@ namespace Interfaz
             {
                 obj.Fechai = Program.Fechai;
                 obj.Fechaf = Program.Fechaf;
-                obj.ShowDialog();
+                obj.Show();
             }
            
         }
@@ -647,7 +647,7 @@ namespace Interfaz
             obj.Nombre = "incentivo_trefilado.rdlc";
             obj.Reporte = "INCENTIVO TREFILADO";
             obj.Valor = 4;
-            obj.ShowDialog();
+            obj.Show();
         }
 
         private void flejadoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -678,7 +678,7 @@ namespace Interfaz
             obj.Nombre = "incentivo_flejado.rdlc";
             obj.Reporte = "INCENTIVO FLEJADO";
             obj.Valor = 5;
-            obj.ShowDialog();
+            obj.Show();
         }
 
         private void lineaGalvanizadoToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -709,7 +709,7 @@ namespace Interfaz
             obj.Nombre = "incentivo_galvanizado.rdlc";
             obj.Reporte = "INCENTIVO GALVANIZADO";
             obj.Valor = 6;
-            obj.ShowDialog();
+            obj.Show();
         }
 
         private void varillasAceradasToolStripMenuItem_Click(object sender, EventArgs e)
@@ -741,7 +741,7 @@ namespace Interfaz
             obj.Nombre = "incentivo_varillas_aceradas.rdlc";
             obj.Reporte = "INCENTIVO VARILLAS ACERADAS";
             obj.Valor = 2;
-            obj.ShowDialog();
+            obj.Show();
         }
 
         private void mecanicoIndustriaMenorToolStripMenuItem_Click(object sender, EventArgs e)
@@ -779,7 +779,7 @@ namespace Interfaz
             {
                 obj.Fechai = Program.Fechai;
                 obj.Fechaf = Program.Fechaf;
-                obj.ShowDialog();
+                obj.Show();
             }
         }
     }
