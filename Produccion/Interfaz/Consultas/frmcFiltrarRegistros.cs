@@ -19,6 +19,7 @@ namespace Interfaz.Consultas
         {
             InitializeComponent();
         }
+
         clsProducto P = new clsProducto();
         clsEmpleado E = new clsEmpleado();
         clsMaquina M = new clsMaquina();
