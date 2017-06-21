@@ -48,12 +48,13 @@
             this.lineaGalvanizadoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.flejadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.varillasAceradasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mecanicoIndustriaMenorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.empresaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tscbempresa = new System.Windows.Forms.ToolStripComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnFiltros = new System.Windows.Forms.Button();
             this.btnanual = new System.Windows.Forms.Button();
             this.btnmensual = new System.Windows.Forms.Button();
-            this.mecanicoIndustriaMenorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -225,6 +226,13 @@
             this.varillasAceradasToolStripMenuItem.Text = "Varillas Aceradas";
             this.varillasAceradasToolStripMenuItem.Click += new System.EventHandler(this.varillasAceradasToolStripMenuItem_Click);
             // 
+            // mecanicoIndustriaMenorToolStripMenuItem
+            // 
+            this.mecanicoIndustriaMenorToolStripMenuItem.Name = "mecanicoIndustriaMenorToolStripMenuItem";
+            this.mecanicoIndustriaMenorToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.mecanicoIndustriaMenorToolStripMenuItem.Text = "Mecanico Industria Menor";
+            this.mecanicoIndustriaMenorToolStripMenuItem.Click += new System.EventHandler(this.mecanicoIndustriaMenorToolStripMenuItem_Click);
+            // 
             // empresaToolStripMenuItem
             // 
             this.empresaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -242,6 +250,7 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.btnFiltros);
             this.panel2.Controls.Add(this.btnanual);
             this.panel2.Controls.Add(this.btnmensual);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -249,6 +258,30 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(798, 70);
             this.panel2.TabIndex = 6;
+            // 
+            // btnFiltros
+            // 
+            this.btnFiltros.BackColor = System.Drawing.Color.White;
+            this.btnFiltros.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnFiltros.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
+            this.btnFiltros.FlatAppearance.BorderSize = 2;
+            this.btnFiltros.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnFiltros.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnFiltros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFiltros.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFiltros.ForeColor = System.Drawing.Color.Black;
+            this.btnFiltros.Image = global::Interfaz.Properties.Resources.Search_icon1;
+            this.btnFiltros.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnFiltros.Location = new System.Drawing.Point(222, 0);
+            this.btnFiltros.Name = "btnFiltros";
+            this.btnFiltros.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.btnFiltros.Size = new System.Drawing.Size(111, 66);
+            this.btnFiltros.TabIndex = 51;
+            this.btnFiltros.TabStop = false;
+            this.btnFiltros.Text = "Filtros";
+            this.btnFiltros.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnFiltros.UseVisualStyleBackColor = false;
+            this.btnFiltros.Click += new System.EventHandler(this.btnFiltros_Click);
             // 
             // btnanual
             // 
@@ -296,13 +329,6 @@
             this.btnmensual.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnmensual.UseVisualStyleBackColor = false;
             this.btnmensual.Click += new System.EventHandler(this.btnmensual_Click);
-            // 
-            // mecanicoIndustriaMenorToolStripMenuItem
-            // 
-            this.mecanicoIndustriaMenorToolStripMenuItem.Name = "mecanicoIndustriaMenorToolStripMenuItem";
-            this.mecanicoIndustriaMenorToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
-            this.mecanicoIndustriaMenorToolStripMenuItem.Text = "Mecanico Industria Menor";
-            this.mecanicoIndustriaMenorToolStripMenuItem.Click += new System.EventHandler(this.mecanicoIndustriaMenorToolStripMenuItem_Click);
             // 
             // ConsultasGenerales
             // 
@@ -357,5 +383,6 @@
         private System.Windows.Forms.ToolStripMenuItem flejadoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem varillasAceradasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mecanicoIndustriaMenorToolStripMenuItem;
+        private System.Windows.Forms.Button btnFiltros;
     }
 }

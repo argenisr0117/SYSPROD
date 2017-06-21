@@ -782,6 +782,12 @@ namespace Interfaz
                 obj.Show();
             }
         }
+
+        private void btnFiltros_Click(object sender, EventArgs e)
+        {
+            Consultas.frmcFiltros obj = new Consultas.frmcFiltros();
+            obj.ShowDialog();
+        }
     }
     
 }

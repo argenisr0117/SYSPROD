@@ -114,6 +114,12 @@
     <Compile Include="Consultas\frmcFiltrarRegistros.Designer.cs">
       <DependentUpon>frmcFiltrarRegistros.cs</DependentUpon>
     </Compile>
+    <Compile Include="Consultas\frmcFiltros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmcFiltros.Designer.cs">
+      <DependentUpon>frmcFiltros.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consultas\frmcProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     </Compile>
     <Compile Include="Print.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PRODUCCIONDataSet.cs">
+      <DependentUpon>PRODUCCIONDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="PRODUCCIONDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -375,6 +384,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\frmcFiltrarRegistros.resx">
       <DependentUpon>frmcFiltrarRegistros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\frmcFiltros.resx">
+      <DependentUpon>frmcFiltros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\frmcProducto.resx">
       <DependentUpon>frmcProducto.cs</DependentUpon>
