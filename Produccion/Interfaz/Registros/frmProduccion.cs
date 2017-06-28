@@ -191,6 +191,7 @@ namespace Interfaz.Registros
             ContarRegistros();
             Program.Valor = 0;
             dtpdesde.Value = DateTime.Now.AddDays(-1);
+            dtp2.Value = DateTime.Now.AddDays(-1);
             dtgvproduccion.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 7);
             dtgvproduccion.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 8);
 
@@ -343,6 +344,8 @@ namespace Interfaz.Registros
                 dt.Columns[9].ColumnName = "PRODUCTO";
                 dt.Columns[10].ColumnName = "DESTINO";
                 dt.Columns[8].ColumnName = "CANTIDAD";
+                dt.Columns[11].ColumnName = "REPORTE";
+                dt.Columns[12].ColumnName = "CLIENTE";
             }
             else
             {
@@ -654,6 +657,7 @@ namespace Interfaz.Registros
                                     Pr.Destino = dtgvproduccion.Rows[x].Cells[10].Value.ToString();
                                     Pr.Cantidad = Convert.ToDecimal(dtgvproduccion.Rows[x].Cells[8].Value.ToString());
                                     Pr.Reporte = txtreporte.Text;
+                                    Pr.Idcliente = Convert.ToInt32(dtgvproduccion.Rows[x].Cells[12].Value.ToString());
                                     mensaje = Pr.RegistrarProduccion("registrar_produccion1");
                                     //SecuenciaReporte();
                                     if (mensaje == "2627")
@@ -731,6 +735,7 @@ namespace Interfaz.Registros
                                     Pr.Destino = dtgvproduccion.Rows[x].Cells[10].Value.ToString();
                                     Pr.Cantidad = Convert.ToDecimal(dtgvproduccion.Rows[x].Cells[8].Value.ToString());
                                     Pr.Reporte = txtreporte.Text;
+                                    Pr.Idcliente = Convert.ToInt32(dtgvproduccion.Rows[x].Cells[12].Value.ToString());
                                     mensaje = Pr.Actualizar1();
                                     //SecuenciaReporte();
                                     if (mensaje == "2627")
@@ -1056,6 +1061,8 @@ namespace Interfaz.Registros
                         dt.Columns[9].ColumnName = "PRODUCTO";
                         dt.Columns[10].ColumnName = "DESTINO";
                         dt.Columns[8].ColumnName = "CANTIDAD";
+                        dt.Columns[11].ColumnName = "REPORTE";
+                        dt.Columns[12].ColumnName = "CLIENTE";
                         bs.DataSource = dt;
                         tabControl.SelectedTab = tablistado;
                         dtgvproduccion.DataSource = bs;

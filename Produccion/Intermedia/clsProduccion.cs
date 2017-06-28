@@ -186,9 +186,10 @@ namespace Intermedia
             lst.Add(new clsParametros("@destino", Mdestino));
             lst.Add(new clsParametros("@cantidad", Mcantidad));
             lst.Add(new clsParametros("@reporte", Mreporte));
+            lst.Add(new clsParametros("@idcliente", Midcliente));
             lst.Add(new clsParametros("@mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 50));
             M.EjecutarSP(Procedimiento, ref lst);
-            mensaje = lst[12].Valor.ToString();
+            mensaje = lst[13].Valor.ToString();
             return mensaje;
         }
         public string CerrarMes()
@@ -242,9 +243,10 @@ namespace Intermedia
             lst.Add(new clsParametros("@destino", Mdestino));
             lst.Add(new clsParametros("@cantidad", Mcantidad));
             lst.Add(new clsParametros("@reporte", Mreporte));
+            lst.Add(new clsParametros("@idcliente", Midcliente));
             lst.Add(new clsParametros("@mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 50));
             M.EjecutarSP("actualizar_registros1", ref lst);
-            mensaje = lst[12].Valor.ToString();
+            mensaje = lst[13].Valor.ToString();
             return mensaje;
         }
 
