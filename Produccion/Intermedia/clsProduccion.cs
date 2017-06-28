@@ -28,6 +28,7 @@ namespace Intermedia
         string Mdestino;
         decimal Mcantidad;
         string Mreporte;
+        int Midcliente;
 
         public DateTime Fecha
         {
@@ -105,6 +106,12 @@ namespace Intermedia
         {
             get { return Mreporte; }
             set { Mreporte = value; }
+        }
+
+        public int Idcliente
+        {
+            get { return Midcliente; }
+            set { Midcliente= value; }
         }
 
         public int[] SecuenciaTarjeta()

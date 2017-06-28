@@ -55,8 +55,8 @@ namespace Interfaz.Consultas
         {
             try
             {
-                cmbMaquina.DataSource = M.Listado_Maquinas_Tref();
-                cmbMaquina.DisplayMember = "ID_MAQUINA";
+                cmbMaquina.DataSource = M.Listar(true);
+                cmbMaquina.DisplayMember = "DESCRIPCION";
                 cmbMaquina.ValueMember = "ID_MAQUINA";
             }
             catch (Exception ex)
