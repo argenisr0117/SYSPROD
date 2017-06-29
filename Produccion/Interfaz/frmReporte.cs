@@ -38,6 +38,7 @@ namespace Interfaz
         public string Incentivo { get; set; }
 
         //tickets
+        public int Id { get; set; }
         public string Supervisor { get; set; }
         public string Operador { get; set; }
         public string Maquina { get; set; }
@@ -99,7 +100,7 @@ namespace Interfaz
         {
             ReportParameter[] parametros = new ReportParameter[13];
             PRODUCCIONDataSet ds = new PRODUCCIONDataSet();
-            PRODUCCIONDataSetTableAdapters.codigo_barraTableAdapter rgta = new PRODUCCIONDataSetTableAdapters.codigo_barraTableAdapter();
+            PRODUCCIONDataSetTableAdapters.reimprimir_ticketTableAdapter rgta = new PRODUCCIONDataSetTableAdapters.reimprimir_ticketTableAdapter();
             reportViewer1.ProcessingMode = ProcessingMode.Local;
             LocalReport lc = reportViewer1.LocalReport;
             string ruta = "Reportes\\" + Nombre;
@@ -118,11 +119,11 @@ namespace Interfaz
             parametros[11] = new ReportParameter("Sae", Sae.ToString());
             parametros[12] = new ReportParameter("Medio", Medio.ToString());
             //NoReporte = "0000002";
-            rgta.Fill(ds.codigo_barra);
+            rgta.Fill(ds.reimprimir_ticket,Id);
             ReportDataSource rds = new ReportDataSource();
             reportViewer1.LocalReport.DisplayName = Reporte;
             rds.Name = "DataSet1";
-            rds.Value = (ds.Tables["codigo_barra"]);
+            rds.Value = (ds.Tables["reimprimir_ticket"]);
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.SetParameters(parametros);
             lc.DataSources.Add(rds);
@@ -133,6 +134,7 @@ namespace Interfaz
             //{
             //    fs.Write(mybytes, 0, mybytes.Length);
             //}
+            //this.reportViewer1.RefreshReport();
             AutoPrintCls autoprintme = new AutoPrintCls(lc);
             autoprintme.Print();
             cerrar();
