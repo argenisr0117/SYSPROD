@@ -523,6 +523,7 @@
     <EmbeddedResource Include="Reportes\reporte_general.rdlc" />
     <EmbeddedResource Include="Reportes\reporte_intermedios.rdlc" />
     <EmbeddedResource Include="Reportes\reporte_terminados.rdlc" />
+    <EmbeddedResource Include="Reportes\ticket_trefilado2.rdlc" />
     <EmbeddedResource Include="Reportes\ticket_trefilado.rdlc" />
     <EmbeddedResource Include="Splash.resx">
       <DependentUpon>Splash.cs</DependentUpon>
@@ -558,6 +559,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\print.ico" />
     <None Include="Resources\boxes-brown-icon.png" />
     <None Include="Resources\Box-icon.png" />
     <None Include="Resources\search-b-icon.png" />

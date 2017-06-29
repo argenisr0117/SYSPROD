@@ -311,6 +311,7 @@ namespace Interfaz.Registros
                     dtgvProduccion.Rows[x].Cells[6].Value = dt.Rows[x][6].ToString();
                     dtgvProduccion.Rows[x].Cells[7].Value = dt.Rows[x][7].ToString();
                     dtgvProduccion.Rows[x].Cells[8].Value = dt.Rows[x][8].ToString();
+                    dtgvProduccion.Rows[x].Cells[9].Value = dt.Rows[x][9].ToString();
                 }
                 dtgvProduccion.ClearSelection();
             }
@@ -338,6 +339,7 @@ namespace Interfaz.Registros
                     dtgvProduccion.Rows[x].Cells[6].Value = dt.Rows[x][6].ToString();
                     dtgvProduccion.Rows[x].Cells[7].Value = dt.Rows[x][7].ToString();
                     dtgvProduccion.Rows[x].Cells[8].Value = dt.Rows[x][8].ToString();
+                    dtgvProduccion.Rows[x].Cells[9].Value = dt.Rows[x][9].ToString();
                 }
                 dtgvProduccion.ClearSelection();
             }
@@ -669,13 +671,13 @@ namespace Interfaz.Registros
             if (dtgvProduccion.SelectedRows.Count > 0)
             {
                 frmEditarRegistroTref obj = new frmEditarRegistroTref();
-                obj.Supervisor= dtgvProduccion.CurrentRow.Cells[1].Value.ToString();
-                obj.Operador= dtgvProduccion.CurrentRow.Cells[2].Value.ToString();
-                obj.Producto= dtgvProduccion.CurrentRow.Cells[3].Value.ToString();
-                obj.Maquina= dtgvProduccion.CurrentRow.Cells[4].Value.ToString();
-                obj.Peso= dtgvProduccion.CurrentRow.Cells[6].Value.ToString();
-                obj.Cliente = dtgvProduccion.CurrentRow.Cells[7].Value.ToString();
-                obj.Id = Convert.ToInt32(dtgvProduccion.CurrentRow.Cells[8].Value);
+                obj.Supervisor= dtgvProduccion.CurrentRow.Cells[2].Value.ToString();
+                obj.Operador= dtgvProduccion.CurrentRow.Cells[3].Value.ToString();
+                obj.Producto= dtgvProduccion.CurrentRow.Cells[4].Value.ToString();
+                obj.Maquina= dtgvProduccion.CurrentRow.Cells[5].Value.ToString();
+                obj.Peso= dtgvProduccion.CurrentRow.Cells[7].Value.ToString();
+                obj.Cliente = dtgvProduccion.CurrentRow.Cells[8].Value.ToString();
+                obj.Id = Convert.ToInt32(dtgvProduccion.CurrentRow.Cells[9].Value);
                 obj.ShowDialog();
                 if(Program.Valor==1)
                 {
@@ -703,7 +705,7 @@ namespace Interfaz.Registros
                 DialogResult var = MessageBoxEx.Show("¿Desea eliminar el registro?", "Sistema de Producción", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (var == DialogResult.Yes)
                 {
-                    PT.Id= Convert.ToInt32(dtgvProduccion.CurrentRow.Cells[8].Value);
+                    PT.Id= Convert.ToInt32(dtgvProduccion.CurrentRow.Cells[9].Value);
                     PT.Dpto = "Trefilado";
                     mensaje=PT.EliminarRegistro();
                     if(mensaje=="1")
@@ -852,5 +854,94 @@ namespace Interfaz.Registros
             return reporte;
 
         }
+
+        private void btnReimprimir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+              
+                if (dtgvProduccion.SelectedRows.Count > 0)
+                {
+                    DataTable dt;
+                    dt = PT.Reimprimir(Convert.ToInt32(dtgvProduccion.CurrentRow.Cells[9].Value));
+                    SeleccionarDiametro2(dt.Rows[0][10].ToString());
+                    frmReporte obj = new frmReporte();
+                    obj.Id = Convert.ToInt32(dtgvProduccion.CurrentRow.Cells[9].Value);
+                    obj.Valor = 7;
+                    obj.Fecha = Convert.ToDateTime(dt.Rows[0][0]);
+                    obj.Supervisor = dt.Rows[0][1].ToString();
+                    obj.Operador = dt.Rows[0][2].ToString();
+                    obj.Maquina = dt.Rows[0][3].ToString();
+                    obj.Colada = dt.Rows[0][4].ToString();
+                    obj.Peso = dt.Rows[0][5].ToString();
+                    obj.Producto = dt.Rows[0][6].ToString();
+                    obj.Diametro = dt.Rows[0][7].ToString() + " " + "PULG";
+                    obj.Cliente = dt.Rows[0][8].ToString();
+                    obj.Tarjeta=Convert.ToInt32(dt.Rows[0][11]);
+                    obj.Calibre = calibre;
+                    obj.Nombre = "ticket_trefilado2.rdlc";                 
+                    obj.Reporte = "Ticket";
+                    obj.Sae = sae1;
+                    obj.Medio = medio;
+                    obj.ShowDialog();
+                }
+            }
+            catch(Exception ex)
+            {
+                return;
+            }
+        }
+        private void SeleccionarDiametro2(string CodigoProducto)
+        {
+            try
+            {              
+                    DataTable dt = new DataTable();
+                    bool sae;
+                    sae1 = "";
+                    medio = "";
+                    calibre = "";
+                    int p = 0;
+                    dt = PT.Diametro_Producto(CodigoProducto);
+                    string[] words = dt.Rows[0][0].ToString().Split(' ');
+                    foreach (string word in words)
+                    {
+                        if (p == 0)
+                        {
+                            calibre = word;
+                        }
+                        else if (p == 1)
+                        {
+                            medio = word;
+                        }
+                        else
+                        {
+                            medio = "";
+                        }
+                        p++;
+                    }
+                    if (sae = CodigoProducto.Contains("LC"))
+                    {
+
+                        sae1 = "BC";
+                    }
+                    else if (sae = CodigoProducto.Contains("MC"))
+                    {
+
+                        sae1 = "MC";
+                    }
+                    else if (sae = CodigoProducto.Contains("HC"))
+                    {
+
+                        sae1 = "HC";
+                    }               
+             
+            }
+            catch (Exception ex)
+            {
+                return;
+            }
+
+        }
+
     }
 }
