@@ -64,6 +64,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.cbreporteindm = new System.Windows.Forms.CheckBox();
+            this.cbReimprimirTref = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -495,11 +496,24 @@
             this.cbreporteindm.Text = "Reporte";
             this.cbreporteindm.UseVisualStyleBackColor = false;
             // 
+            // cbReimprimirTref
+            // 
+            this.cbReimprimirTref.AutoSize = true;
+            this.cbReimprimirTref.BackColor = System.Drawing.Color.White;
+            this.cbReimprimirTref.ForeColor = System.Drawing.Color.Black;
+            this.cbReimprimirTref.Location = new System.Drawing.Point(255, 383);
+            this.cbReimprimirTref.Name = "cbReimprimirTref";
+            this.cbReimprimirTref.Size = new System.Drawing.Size(74, 17);
+            this.cbReimprimirTref.TabIndex = 158;
+            this.cbReimprimirTref.Text = "Reimprimir";
+            this.cbReimprimirTref.UseVisualStyleBackColor = false;
+            // 
             // frmPermisos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(733, 470);
+            this.Controls.Add(this.cbReimprimirTref);
             this.Controls.Add(this.cbreporteindm);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.cmbUsuario);
@@ -584,5 +598,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.CheckBox cbreporteindm;
+        private System.Windows.Forms.CheckBox cbReimprimirTref;
     }
 }

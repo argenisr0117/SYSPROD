@@ -47,12 +47,12 @@
             this.cmbProducto = new System.Windows.Forms.ComboBox();
             this.cmbCliente = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioResumido = new System.Windows.Forms.RadioButton();
             this.radioDetallado = new System.Windows.Forms.RadioButton();
+            this.radioResumido = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.radioOperador = new System.Windows.Forms.RadioButton();
             this.radioMaquina = new System.Windows.Forms.RadioButton();
             this.radioProducto = new System.Windows.Forms.RadioButton();
-            this.radioOperador = new System.Windows.Forms.RadioButton();
             this.btnBusqueda = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
@@ -63,7 +63,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -76,9 +76,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.DarkRed;
+            this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(253, 3);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(106, 30);
@@ -133,7 +133,7 @@
             // 
             // cmbSupervisor
             // 
-            this.cmbSupervisor.BackColor = System.Drawing.Color.Gainsboro;
+            this.cmbSupervisor.BackColor = System.Drawing.Color.White;
             this.cmbSupervisor.DropDownHeight = 160;
             this.cmbSupervisor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSupervisor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -209,7 +209,7 @@
             // 
             // cmbMaquina
             // 
-            this.cmbMaquina.BackColor = System.Drawing.Color.Gainsboro;
+            this.cmbMaquina.BackColor = System.Drawing.Color.White;
             this.cmbMaquina.DropDownHeight = 160;
             this.cmbMaquina.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMaquina.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -225,7 +225,7 @@
             // 
             // cmbOperador
             // 
-            this.cmbOperador.BackColor = System.Drawing.Color.Gainsboro;
+            this.cmbOperador.BackColor = System.Drawing.Color.White;
             this.cmbOperador.DropDownHeight = 160;
             this.cmbOperador.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbOperador.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -260,7 +260,7 @@
             // 
             // cmbProducto
             // 
-            this.cmbProducto.BackColor = System.Drawing.Color.Gainsboro;
+            this.cmbProducto.BackColor = System.Drawing.Color.White;
             this.cmbProducto.DropDownHeight = 160;
             this.cmbProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbProducto.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -276,7 +276,7 @@
             // 
             // cmbCliente
             // 
-            this.cmbCliente.BackColor = System.Drawing.Color.Gainsboro;
+            this.cmbCliente.BackColor = System.Drawing.Color.White;
             this.cmbCliente.DropDownHeight = 160;
             this.cmbCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -292,9 +292,11 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.White;
             this.groupBox1.Controls.Add(this.radioDetallado);
             this.groupBox1.Controls.Add(this.radioResumido);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(15, 243);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(380, 42);
@@ -302,34 +304,40 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "TIPO DE REPORTE";
             // 
-            // radioResumido
-            // 
-            this.radioResumido.AutoSize = true;
-            this.radioResumido.Location = new System.Drawing.Point(9, 19);
-            this.radioResumido.Name = "radioResumido";
-            this.radioResumido.Size = new System.Drawing.Size(91, 17);
-            this.radioResumido.TabIndex = 0;
-            this.radioResumido.TabStop = true;
-            this.radioResumido.Text = "RESUMIDO";
-            this.radioResumido.UseVisualStyleBackColor = true;
-            // 
             // radioDetallado
             // 
             this.radioDetallado.AutoSize = true;
+            this.radioDetallado.BackColor = System.Drawing.Color.White;
+            this.radioDetallado.ForeColor = System.Drawing.Color.Black;
             this.radioDetallado.Location = new System.Drawing.Point(153, 19);
             this.radioDetallado.Name = "radioDetallado";
             this.radioDetallado.Size = new System.Drawing.Size(98, 17);
             this.radioDetallado.TabIndex = 1;
             this.radioDetallado.TabStop = true;
             this.radioDetallado.Text = "DETALLADO";
-            this.radioDetallado.UseVisualStyleBackColor = true;
+            this.radioDetallado.UseVisualStyleBackColor = false;
+            // 
+            // radioResumido
+            // 
+            this.radioResumido.AutoSize = true;
+            this.radioResumido.BackColor = System.Drawing.Color.White;
+            this.radioResumido.ForeColor = System.Drawing.Color.Black;
+            this.radioResumido.Location = new System.Drawing.Point(9, 19);
+            this.radioResumido.Name = "radioResumido";
+            this.radioResumido.Size = new System.Drawing.Size(91, 17);
+            this.radioResumido.TabIndex = 0;
+            this.radioResumido.TabStop = true;
+            this.radioResumido.Text = "RESUMIDO";
+            this.radioResumido.UseVisualStyleBackColor = false;
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.White;
             this.groupBox2.Controls.Add(this.radioOperador);
             this.groupBox2.Controls.Add(this.radioMaquina);
             this.groupBox2.Controls.Add(this.radioProducto);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.Color.Black;
             this.groupBox2.Location = new System.Drawing.Point(15, 291);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(380, 51);
@@ -337,38 +345,44 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "AGRUPADO POR";
             // 
-            // radioMaquina
-            // 
-            this.radioMaquina.AutoSize = true;
-            this.radioMaquina.Location = new System.Drawing.Point(114, 19);
-            this.radioMaquina.Name = "radioMaquina";
-            this.radioMaquina.Size = new System.Drawing.Size(82, 17);
-            this.radioMaquina.TabIndex = 1;
-            this.radioMaquina.TabStop = true;
-            this.radioMaquina.Text = "MAQUINA";
-            this.radioMaquina.UseVisualStyleBackColor = true;
-            // 
-            // radioProducto
-            // 
-            this.radioProducto.AutoSize = true;
-            this.radioProducto.Location = new System.Drawing.Point(6, 19);
-            this.radioProducto.Name = "radioProducto";
-            this.radioProducto.Size = new System.Drawing.Size(94, 17);
-            this.radioProducto.TabIndex = 0;
-            this.radioProducto.TabStop = true;
-            this.radioProducto.Text = "PRODUCTO";
-            this.radioProducto.UseVisualStyleBackColor = true;
-            // 
             // radioOperador
             // 
             this.radioOperador.AutoSize = true;
+            this.radioOperador.BackColor = System.Drawing.Color.White;
+            this.radioOperador.ForeColor = System.Drawing.Color.Black;
             this.radioOperador.Location = new System.Drawing.Point(210, 19);
             this.radioOperador.Name = "radioOperador";
             this.radioOperador.Size = new System.Drawing.Size(94, 17);
             this.radioOperador.TabIndex = 2;
             this.radioOperador.TabStop = true;
             this.radioOperador.Text = "OPERADOR";
-            this.radioOperador.UseVisualStyleBackColor = true;
+            this.radioOperador.UseVisualStyleBackColor = false;
+            // 
+            // radioMaquina
+            // 
+            this.radioMaquina.AutoSize = true;
+            this.radioMaquina.BackColor = System.Drawing.Color.White;
+            this.radioMaquina.ForeColor = System.Drawing.Color.Black;
+            this.radioMaquina.Location = new System.Drawing.Point(114, 19);
+            this.radioMaquina.Name = "radioMaquina";
+            this.radioMaquina.Size = new System.Drawing.Size(82, 17);
+            this.radioMaquina.TabIndex = 1;
+            this.radioMaquina.TabStop = true;
+            this.radioMaquina.Text = "MAQUINA";
+            this.radioMaquina.UseVisualStyleBackColor = false;
+            // 
+            // radioProducto
+            // 
+            this.radioProducto.AutoSize = true;
+            this.radioProducto.BackColor = System.Drawing.Color.White;
+            this.radioProducto.ForeColor = System.Drawing.Color.Black;
+            this.radioProducto.Location = new System.Drawing.Point(6, 19);
+            this.radioProducto.Name = "radioProducto";
+            this.radioProducto.Size = new System.Drawing.Size(94, 17);
+            this.radioProducto.TabIndex = 0;
+            this.radioProducto.TabStop = true;
+            this.radioProducto.Text = "PRODUCTO";
+            this.radioProducto.UseVisualStyleBackColor = false;
             // 
             // btnBusqueda
             // 

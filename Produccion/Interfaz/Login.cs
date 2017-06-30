@@ -89,6 +89,7 @@ namespace Interfaz
                         Program.exptref = Convert.ToBoolean(dt.Rows[0][17]);
                         Program.fdestref = Convert.ToBoolean(dt.Rows[0][18]);
                         Program.fhastref = Convert.ToBoolean(dt.Rows[0][19]);
+                        Program.reimtref = Convert.ToBoolean(dt.Rows[0][20]);
                         //Program.Usuario = txtUsuario.Text;
                         Splash obj = new Splash();
                         this.Hide();

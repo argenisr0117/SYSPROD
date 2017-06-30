@@ -264,6 +264,7 @@ namespace Interfaz.Registros
             dtphasta.Enabled = Program.fhastref;
             btnFiltrar.Enabled = Program.filtref;
             btnEditar.Enabled = Program.editref;
+            btnReimprimir.Enabled = Program.reimtref;
         }
         private void LlenarGrid()
         {

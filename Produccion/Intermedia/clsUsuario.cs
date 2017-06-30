@@ -38,6 +38,7 @@ namespace Intermedia
         Boolean Mexptref;
         Boolean Mfdestref;
         Boolean Mfhastref;
+        Boolean Mreimtref;
 
 
         public int Idusuario
@@ -173,6 +174,12 @@ namespace Intermedia
             set { Mfdestref = value; }
         }
 
+        public Boolean Reimtref
+        {
+            get { return Mreimtref; }
+            set { Mreimtref = value; }
+        }
+
         public string RegistrarUsuario()
         {
             string mensaje = "";
@@ -209,9 +216,10 @@ namespace Intermedia
             lst.Add(new clsParametros("@exptref", Mexptref));
             lst.Add(new clsParametros("@fdestref", Mfdestref));
             lst.Add(new clsParametros("@fhastref", Mfhastref));
+            lst.Add(new clsParametros("@reimtref", Mreimtref));
             lst.Add(new clsParametros("@mensaje", "", SqlDbType.Int, ParameterDirection.Output, 8));
             M.EjecutarSP("registrar_act_permisos", ref lst);
-            mensaje =Convert.ToInt32(lst[20].Valor);
+            mensaje =Convert.ToInt32(lst[21].Valor);
             return mensaje;
         }
         public string VerificarLogin()

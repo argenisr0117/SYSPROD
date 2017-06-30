@@ -47,6 +47,7 @@ namespace Interfaz
         public static Boolean exptref;
         public static Boolean fdestref;
         public static Boolean fhastref;
+        public static Boolean reimtref;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

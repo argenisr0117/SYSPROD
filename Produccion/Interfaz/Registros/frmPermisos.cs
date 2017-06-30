@@ -65,6 +65,7 @@ namespace Interfaz.Registros
                 U.Filtref = cBfiltartref.Checked;
                 U.Fdestref = cbFechadtref.Checked;
                 U.Fhastref = cBfechahtref.Checked;
+                U.Reimtref = cbReimprimirTref.Checked;
                 mensaje = U.RegistrarActPermisos();
                 if (mensaje == 1)
                 {
@@ -110,6 +111,7 @@ namespace Interfaz.Registros
                 cBexportartref.Checked = Convert.ToBoolean(dt.Rows[0][17]);
                 cbFechadtref.Checked = Convert.ToBoolean(dt.Rows[0][18]);
                 cBfechahtref.Checked = Convert.ToBoolean(dt.Rows[0][19]);
+                cbReimprimirTref.Checked= Convert.ToBoolean(dt.Rows[0][20]);
             }
             catch(Exception ex)
             {
