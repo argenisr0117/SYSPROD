@@ -15,6 +15,12 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_0003DB3E4D54465D983D0D2F79114C21"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_06E601A19F130AE0FD012EEE34041F8E"
         "OwnerKey" = "8:_AC8F81798BFE411F8B149F404424B183"
         "MsmSig" = "8:_UNDEFINED"
@@ -528,6 +534,26 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0003DB3E4D54465D983D0D2F79114C21"
+            {
+            "SourcePath" = "8:..\\Interfaz\\bin\\Debug\\Reportes\\filtrar_prod_detalle.rdlc"
+            "TargetName" = "8:filtrar_prod_detalle.rdlc"
+            "Tag" = "8:"
+            "Folder" = "8:_00DD0B03E441403CB4D3297F2511FE1C"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_06E601A19F130AE0FD012EEE34041F8E"
             {
             "AssemblyRegister" = "3:1"
