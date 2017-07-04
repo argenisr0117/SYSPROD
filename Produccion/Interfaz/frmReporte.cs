@@ -21,6 +21,7 @@ namespace Interfaz
             InitializeComponent();
         }
         public string NoReporte { get; set; }
+        public string Order1 { get; set; }
         public DateTime Fecha { get; set; }
         public DateTime Fechai { get; set; }
         public DateTime Fechaf { get; set; }
@@ -93,6 +94,10 @@ namespace Interfaz
             else if(Valor==9)
             {
                 ReporteIndm();
+            }
+            else if(Valor==10)
+            {
+                FiltrarProduccion();
             }
         }
 
@@ -171,7 +176,6 @@ namespace Interfaz
             lc.DataSources.Add(rds);
             this.reportViewer1.RefreshReport();
         }
-
         private void CierreMensual()
         {
             ReportParameter[] parametros = new ReportParameter[7];
@@ -200,7 +204,6 @@ namespace Interfaz
       
             this.reportViewer1.RefreshReport();
         }
-
         private void Incentivos()
         {
             ReportParameter[] parametros = new ReportParameter[2];
@@ -245,8 +248,6 @@ namespace Interfaz
             lc.DataSources.Add(rds);
             this.reportViewer1.RefreshReport();
         }
-
-
         private void Incentivo_Rollos()
         {
             ReportParameter[] parametros = new ReportParameter[4];
@@ -276,7 +277,6 @@ namespace Interfaz
             lc.DataSources.Add(rds1);
             this.reportViewer1.RefreshReport();
         }
-
         private void Incentivo_Trefilado()
         {
             ReportParameter[] parametros = new ReportParameter[2];
@@ -370,7 +370,6 @@ namespace Interfaz
             lc.DataSources.Add(rds4);
             this.reportViewer1.RefreshReport();
         }
-
         private void ReporteIndm()
         {
             PRODUCCIONDataSet ds = new PRODUCCIONDataSet();
@@ -390,5 +389,30 @@ namespace Interfaz
 
             this.reportViewer1.RefreshReport();
         }
+        private void FiltrarProduccion()
+        {
+            ReportParameter[] parametros = new ReportParameter[3];
+            this.Text = Reporte;
+            PRODUCCIONDataSet ds = new PRODUCCIONDataSet();
+            PRODUCCIONDataSetTableAdapters.filtrar_produccionTableAdapter rgta = new PRODUCCIONDataSetTableAdapters.filtrar_produccionTableAdapter();
+            reportViewer1.ProcessingMode = ProcessingMode.Local;
+            LocalReport lc = reportViewer1.LocalReport;
+            string ruta = "Reportes\\" + Nombre;
+            lc.ReportPath = ruta;
+            parametros[0] = new ReportParameter("Fechai", Fechai.ToShortDateString());
+            parametros[1] = new ReportParameter("Fechaf", Fechaf.ToShortDateString());
+            parametros[2] = new ReportParameter("Orden1", Order1.ToString());
+            rgta.Fill(ds.filtrar_produccion, Supervisor,int.Parse(Cliente),Maquina,Producto,Operador,Fechai,Fechaf,1);
+            ReportDataSource rds = new ReportDataSource();
+            reportViewer1.LocalReport.DisplayName = Reporte;
+            rds.Name = "DataSet1";
+            rds.Value = (ds.Tables["filtrar_produccion"]);
+            reportViewer1.LocalReport.DataSources.Clear();
+            reportViewer1.LocalReport.SetParameters(parametros);
+            lc.DataSources.Add(rds);
+            this.reportViewer1.RefreshReport();
+        }
+
+
     }
 }

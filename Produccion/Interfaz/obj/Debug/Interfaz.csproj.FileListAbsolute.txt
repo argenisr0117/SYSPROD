@@ -271,20 +271,12 @@ C:\Users\COMPUTOS\Desktop\SYSPROD\En Proceso\Produccion\Interfaz\obj\Debug\Inter
 C:\Users\COMPUTOS\Desktop\SYSPROD\En Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmMaquinaPuas.resources
 C:\Users\COMPUTOS\Desktop\SYSPROD\En Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmEditarInvPuas.resources
 C:\Users\COMPUTOS\Desktop\SYSPROD\En Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmEditarInvPuas1.resources
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Interfaz.exe.config
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Interfaz.exe
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Interfaz.pdb
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\DocumentFormat.OpenXml.dll
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Intermedia.dll
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Microsoft.ReportViewer.WinForms.dll
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Datos.dll
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Intermedia.pdb
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Datos.pdb
 C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.csprojResolveAssemblyReference.cache
 C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.ConsultasGenerales.resources
 C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcBuscarRegistros.resources
 C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcFechas.resources
 C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcFiltrarRegistros.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcFiltros.resources
 C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcProducto.resources
 C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcProductosDpto.resources
 C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Controles.textboxceros.resources
@@ -325,7 +317,15 @@ C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz
 C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.csproj.GenerateResource.Cache
 C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\RdlCompile.cache
 C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\RdlCompile.compiled
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Interfaz.exe.config
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Interfaz.exe
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Interfaz.pdb
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Intermedia.dll
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Datos.dll
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Intermedia.pdb
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Datos.pdb
 C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.exe
 C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.pdb
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcFiltros.resources
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\DocumentFormat.OpenXml.xml

@@ -91,73 +91,73 @@ namespace Interfaz.Consultas
             }
         }
 
-        private void btnFiltrar_Click(object sender, EventArgs e)
-        {
-            int diferencia = 0;
-            TimeSpan fechas = new TimeSpan();
-            DateTime fechaft = dtphasta.Value.AddDays(-1);
-            if (dtpdesde.Value.Date < dtphasta.Value.Date)
-            {
-                fechas = dtphasta.Value.Date - dtpdesde.Value.Date;
-                diferencia = fechas.Days;
-                if (diferencia > 1)
-                {
-                    Program.Fechai = dtpdesde.Value;
-                    Program.Fechaft = fechaft;
-                    Program.Fechaf = dtphasta.Value;
-                    //Limpiar();   
-                }
-                else
-                {
-                    Program.Fechai = dtpdesde.Value;
-                    Program.Fechaf = dtphasta.Value;
-                    Program.Fechaft = Convert.ToDateTime("1/1/1753 12:00:00 AM");
-                    //Limpiar();
+        //private void btnFiltrar_Click(object sender, EventArgs e)
+        //{
+        //    int diferencia = 0;
+        //    TimeSpan fechas = new TimeSpan();
+        //    DateTime fechaft = dtphasta.Value.AddDays(-1);
+        //    if (dtpdesde.Value.Date < dtphasta.Value.Date)
+        //    {
+        //        fechas = dtphasta.Value.Date - dtpdesde.Value.Date;
+        //        diferencia = fechas.Days;
+        //        if (diferencia > 1)
+        //        {
+        //            Program.Fechai = dtpdesde.Value;
+        //            Program.Fechaft = fechaft;
+        //            Program.Fechaf = dtphasta.Value;
+        //            //Limpiar();   
+        //        }
+        //        else
+        //        {
+        //            Program.Fechai = dtpdesde.Value;
+        //            Program.Fechaf = dtphasta.Value;
+        //            Program.Fechaft = Convert.ToDateTime("1/1/1753 12:00:00 AM");
+        //            //Limpiar();
 
-                }
-                try
-                {
-                    if (cmbSupervisor.SelectedIndex > -1)
-                    {
-                        Program.Supervisor = cmbSupervisor.SelectedValue.ToString().Trim();
-                    }
-                    else
-                    {
-                        PT.Supervisor = "";
-                    }
-                    if (cmbMaquina.SelectedIndex > -1)
-                    {
-                        Program.Maquina = cmbMaquina.SelectedValue.ToString().Trim();
-                    }
-                    else
-                    {
-                        PT.Maquina = "";
-                    }
+        //        }
+        //        try
+        //        {
+        //            if (cmbSupervisor.SelectedIndex > -1)
+        //            {
+        //                Program.Supervisor = cmbSupervisor.SelectedValue.ToString().Trim();
+        //            }
+        //            else
+        //            {
+        //                PT.Supervisor = "";
+        //            }
+        //            if (cmbMaquina.SelectedIndex > -1)
+        //            {
+        //                Program.Maquina = cmbMaquina.SelectedValue.ToString().Trim();
+        //            }
+        //            else
+        //            {
+        //                PT.Maquina = "";
+        //            }
 
-                    Program.Cliente = Convert.ToInt32(cmbCliente.SelectedValue);
-                    if (cmbProducto.SelectedIndex > -1)
-                    {
-                        Program.Producto = cmbProducto.SelectedValue.ToString().Trim();
-                    }
-                    else
-                    {
-                        PT.Producto = "";
-                    }
+        //            Program.Cliente = Convert.ToInt32(cmbCliente.SelectedValue);
+        //            if (cmbProducto.SelectedIndex > -1)
+        //            {
+        //                Program.Producto = cmbProducto.SelectedValue.ToString().Trim();
+        //            }
+        //            else
+        //            {
+        //                PT.Producto = "";
+        //            }
 
-                    Program.Valor = 1;
-                    this.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBoxEx.Show(ex.Message, "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-            }
-            else
-            {
-                MessageBoxEx.Show("Fecha inicial mayor que Fecha final", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+        //            Program.Valor = 1;
+        //            this.Close();
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            MessageBoxEx.Show(ex.Message, "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        //        }
+        //    }
+        //    else
+        //    {
+        //        MessageBoxEx.Show("Fecha inicial mayor que Fecha final", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
 
-        }
+        //}
 
         private void frmcFiltros_Load(object sender, EventArgs e)
         {
@@ -220,7 +220,67 @@ namespace Interfaz.Consultas
 
         private void btnBusqueda_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (dtpdesde.Value.Date <= dtphasta.Value.Date)
+                {
+                    frmReporte obj = new frmReporte();
+                    obj.Fechai = dtpdesde.Value;
+                    obj.Fechaf = dtphasta.Value;
 
+                    if (cmbSupervisor.SelectedIndex != -1) //(cmbSupervisor.SelectedValue != null)
+                    {
+                        obj.Supervisor = cmbSupervisor.SelectedValue.ToString();
+                    }
+                    else
+                       obj.Supervisor ="0";
+
+                    if (cmbOperador.SelectedIndex != -1) //(cmbOperador.SelectedValue != null)
+                    {
+                        obj.Operador = cmbOperador.SelectedValue.ToString();
+                    }
+                    else
+                        obj.Operador ="0";
+
+                    if (cmbMaquina.SelectedIndex != -1)// (cmbMaquina.SelectedValue != null)
+                    {
+                        obj.Maquina = cmbMaquina.SelectedValue.ToString();
+                    }
+                    else
+                        obj.Maquina = "0";
+
+                    if (cmbProducto.SelectedIndex != -1) //(cmbProducto.SelectedValue != null)
+                    {
+                        obj.Producto = cmbProducto.SelectedValue.ToString();
+                    }
+                    else
+                        obj.Producto = "0";
+
+                    if (cmbCliente.SelectedIndex != -1 ) //(cmbCliente.SelectedValue != null)
+                    {
+                        obj.Cliente = cmbCliente.SelectedValue.ToString();
+                    }
+                    else
+                        obj.Cliente = "0";
+
+                    obj.Valor = 10;
+                    obj.Nombre = "filtrar_prod_detalle.rdlc";
+                    obj.Order1 = "1";
+                    obj.Show();
+                    //obj.Operador = cmbOperador.SelectedValue.ToString();
+                    //obj.Maquina = cmbMaquina.SelectedValue.ToString();
+                    //obj.Producto =cmbProducto.SelectedValue.ToString();
+                    //obj.Cliente =cmbCliente.SelectedValue.ToString();
+                }
+                else
+                {
+                    MessageBoxEx.Show("Fecha inicial mayor que Fecha final", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBoxEx.Show(ex.Message, "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
     }
 }

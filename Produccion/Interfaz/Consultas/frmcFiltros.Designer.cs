@@ -56,6 +56,7 @@
             this.btnBusqueda = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
+            this.radioSupervisor = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -63,7 +64,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -76,9 +77,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.BackColor = System.Drawing.Color.DarkRed;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(253, 3);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(106, 30);
@@ -133,7 +134,7 @@
             // 
             // cmbSupervisor
             // 
-            this.cmbSupervisor.BackColor = System.Drawing.Color.White;
+            this.cmbSupervisor.BackColor = System.Drawing.Color.LightGray;
             this.cmbSupervisor.DropDownHeight = 160;
             this.cmbSupervisor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSupervisor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -209,7 +210,7 @@
             // 
             // cmbMaquina
             // 
-            this.cmbMaquina.BackColor = System.Drawing.Color.White;
+            this.cmbMaquina.BackColor = System.Drawing.Color.LightGray;
             this.cmbMaquina.DropDownHeight = 160;
             this.cmbMaquina.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMaquina.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -225,7 +226,7 @@
             // 
             // cmbOperador
             // 
-            this.cmbOperador.BackColor = System.Drawing.Color.White;
+            this.cmbOperador.BackColor = System.Drawing.Color.LightGray;
             this.cmbOperador.DropDownHeight = 160;
             this.cmbOperador.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbOperador.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -260,7 +261,7 @@
             // 
             // cmbProducto
             // 
-            this.cmbProducto.BackColor = System.Drawing.Color.White;
+            this.cmbProducto.BackColor = System.Drawing.Color.LightGray;
             this.cmbProducto.DropDownHeight = 160;
             this.cmbProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbProducto.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -276,7 +277,7 @@
             // 
             // cmbCliente
             // 
-            this.cmbCliente.BackColor = System.Drawing.Color.White;
+            this.cmbCliente.BackColor = System.Drawing.Color.LightGray;
             this.cmbCliente.DropDownHeight = 160;
             this.cmbCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -333,6 +334,7 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.White;
+            this.groupBox2.Controls.Add(this.radioSupervisor);
             this.groupBox2.Controls.Add(this.radioOperador);
             this.groupBox2.Controls.Add(this.radioMaquina);
             this.groupBox2.Controls.Add(this.radioProducto);
@@ -340,7 +342,7 @@
             this.groupBox2.ForeColor = System.Drawing.Color.Black;
             this.groupBox2.Location = new System.Drawing.Point(15, 291);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(380, 51);
+            this.groupBox2.Size = new System.Drawing.Size(453, 51);
             this.groupBox2.TabIndex = 137;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "AGRUPADO POR";
@@ -447,6 +449,19 @@
             this.btnLimpiar.UseVisualStyleBackColor = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
+            // radioSupervisor
+            // 
+            this.radioSupervisor.AutoSize = true;
+            this.radioSupervisor.BackColor = System.Drawing.Color.White;
+            this.radioSupervisor.ForeColor = System.Drawing.Color.Black;
+            this.radioSupervisor.Location = new System.Drawing.Point(309, 19);
+            this.radioSupervisor.Name = "radioSupervisor";
+            this.radioSupervisor.Size = new System.Drawing.Size(105, 17);
+            this.radioSupervisor.TabIndex = 3;
+            this.radioSupervisor.TabStop = true;
+            this.radioSupervisor.Text = "SUPERVISOR";
+            this.radioSupervisor.UseVisualStyleBackColor = false;
+            // 
             // frmcFiltros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -520,5 +535,6 @@
         private System.Windows.Forms.Button btnBusqueda;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.RadioButton radioSupervisor;
     }
 }

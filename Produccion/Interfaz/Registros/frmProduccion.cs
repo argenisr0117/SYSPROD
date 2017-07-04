@@ -299,6 +299,7 @@ namespace Interfaz.Registros
                         Pr.Producto = dtgvproduccion.Rows[x].Cells[8].Value.ToString();
                         Pr.Destino = dtgvproduccion.Rows[x].Cells[9].Value.ToString();
                         Pr.Cantidad = Convert.ToDecimal(dtgvproduccion.Rows[x].Cells[10].Value.ToString());
+                        Pr.Idcliente = Convert.ToInt32(dtgvproduccion.Rows[x].Cells[11].Value.ToString());
                         Pr.Reporte = txtreporte.Text;
                         Pr.RegistrarProduccion("registrar_produccion");
                     }

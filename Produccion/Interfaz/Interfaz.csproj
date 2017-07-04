@@ -519,6 +519,7 @@
     <EmbeddedResource Include="Reportes\incentivo_trefilado.rdlc" />
     <EmbeddedResource Include="Reportes\incentivo_varillas_aceradas.rdlc" />
     <EmbeddedResource Include="Reportes\linea_galv.rdlc" />
+    <EmbeddedResource Include="Reportes\filtrar_prod_detalle.rdlc" />
     <EmbeddedResource Include="Reportes\procesos.rdlc" />
     <EmbeddedResource Include="Reportes\reporte_general.rdlc" />
     <EmbeddedResource Include="Reportes\reporte_intermedios.rdlc" />
