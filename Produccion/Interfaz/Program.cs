@@ -48,6 +48,12 @@ namespace Interfaz
         public static Boolean fdestref;
         public static Boolean fhastref;
         public static Boolean reimtref;
+        public static Boolean acucong;
+        public static Boolean inccong;
+        public static Boolean empcong;
+        public static Boolean ciecong;
+        public static Boolean cieacong;
+        public static Boolean filcong;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

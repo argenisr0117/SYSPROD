@@ -66,6 +66,13 @@ namespace Interfaz.Registros
                 U.Fdestref = cbFechadtref.Checked;
                 U.Fhastref = cBfechahtref.Checked;
                 U.Reimtref = cbReimprimirTref.Checked;
+                U.Acucong = cBacumuladoM.Checked;
+                U.Inccong = cBincentivos.Checked;
+                U.Empcong = cBEmpresa.Checked;
+                U.Ciecong = cbCierreM.Checked;
+                U.Cieacong = cBcierreA.Checked;
+                U.Filcong = cBFiltros.Checked;
+
                 mensaje = U.RegistrarActPermisos();
                 if (mensaje == 1)
                 {
@@ -112,6 +119,12 @@ namespace Interfaz.Registros
                 cbFechadtref.Checked = Convert.ToBoolean(dt.Rows[0][18]);
                 cBfechahtref.Checked = Convert.ToBoolean(dt.Rows[0][19]);
                 cbReimprimirTref.Checked= Convert.ToBoolean(dt.Rows[0][20]);
+                cBacumuladoM.Checked= Convert.ToBoolean(dt.Rows[0][21]);
+                cBincentivos.Checked= Convert.ToBoolean(dt.Rows[0][22]);
+                cBEmpresa.Checked= Convert.ToBoolean(dt.Rows[0][23]);
+                cbCierreM.Checked= Convert.ToBoolean(dt.Rows[0][24]);
+                cBcierreA.Checked= Convert.ToBoolean(dt.Rows[0][25]);
+                cBFiltros.Checked= Convert.ToBoolean(dt.Rows[0][26]);
             }
             catch(Exception ex)
             {

@@ -412,11 +412,20 @@ namespace Interfaz
             }
 
         }
-
+        private void Permisos()
+        {
+            btnmensual.Enabled = Program.ciecong;
+            btnanual.Enabled = Program.cieacong;
+            btnFiltros.Enabled = Program.filcong;
+            acumuladoMensualToolStripMenuItem.Enabled = Program.acucong;
+            incentivosToolStripMenuItem.Enabled = Program.inccong;
+            empresaToolStripMenuItem.Enabled = Program.empcong;
+        }
         private void ConsultasGenerales_Load(object sender, EventArgs e)
         {
             LlenarComboP();
             tscbempresa.ComboBox.SelectedValue = "ACERO";
+            Permisos();
         }
 
         private void grapasToolStripMenuItem_Click(object sender, EventArgs e)

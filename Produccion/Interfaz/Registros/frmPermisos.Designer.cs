@@ -65,6 +65,13 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.cbreporteindm = new System.Windows.Forms.CheckBox();
             this.cbReimprimirTref = new System.Windows.Forms.CheckBox();
+            this.cBcierreA = new System.Windows.Forms.CheckBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cBFiltros = new System.Windows.Forms.CheckBox();
+            this.cbCierreM = new System.Windows.Forms.CheckBox();
+            this.cBincentivos = new System.Windows.Forms.CheckBox();
+            this.cBacumuladoM = new System.Windows.Forms.CheckBox();
+            this.cBEmpresa = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -508,11 +515,102 @@
             this.cbReimprimirTref.Text = "Reimprimir";
             this.cbReimprimirTref.UseVisualStyleBackColor = false;
             // 
+            // cBcierreA
+            // 
+            this.cBcierreA.AutoSize = true;
+            this.cBcierreA.BackColor = System.Drawing.Color.White;
+            this.cBcierreA.ForeColor = System.Drawing.Color.Black;
+            this.cBcierreA.Location = new System.Drawing.Point(8, 491);
+            this.cBcierreA.Name = "cBcierreA";
+            this.cBcierreA.Size = new System.Drawing.Size(63, 17);
+            this.cBcierreA.TabIndex = 166;
+            this.cBcierreA.Text = "Cierre A";
+            this.cBcierreA.UseVisualStyleBackColor = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.White;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.DarkRed;
+            this.label7.Location = new System.Drawing.Point(4, 399);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(203, 24);
+            this.label7.TabIndex = 165;
+            this.label7.Text = "Consultas Generales";
+            // 
+            // cBFiltros
+            // 
+            this.cBFiltros.AutoSize = true;
+            this.cBFiltros.BackColor = System.Drawing.Color.White;
+            this.cBFiltros.ForeColor = System.Drawing.Color.Black;
+            this.cBFiltros.Location = new System.Drawing.Point(93, 426);
+            this.cBFiltros.Name = "cBFiltros";
+            this.cBFiltros.Size = new System.Drawing.Size(53, 17);
+            this.cBFiltros.TabIndex = 164;
+            this.cBFiltros.Text = "Filtros";
+            this.cBFiltros.UseVisualStyleBackColor = false;
+            // 
+            // cbCierreM
+            // 
+            this.cbCierreM.AutoSize = true;
+            this.cbCierreM.BackColor = System.Drawing.Color.White;
+            this.cbCierreM.ForeColor = System.Drawing.Color.Black;
+            this.cbCierreM.Location = new System.Drawing.Point(8, 475);
+            this.cbCierreM.Name = "cbCierreM";
+            this.cbCierreM.Size = new System.Drawing.Size(65, 17);
+            this.cbCierreM.TabIndex = 162;
+            this.cbCierreM.Text = "Cierre M";
+            this.cbCierreM.UseVisualStyleBackColor = false;
+            // 
+            // cBincentivos
+            // 
+            this.cBincentivos.AutoSize = true;
+            this.cBincentivos.BackColor = System.Drawing.Color.White;
+            this.cBincentivos.ForeColor = System.Drawing.Color.Black;
+            this.cBincentivos.Location = new System.Drawing.Point(8, 443);
+            this.cBincentivos.Name = "cBincentivos";
+            this.cBincentivos.Size = new System.Drawing.Size(75, 17);
+            this.cBincentivos.TabIndex = 161;
+            this.cBincentivos.Text = "Incentivos";
+            this.cBincentivos.UseVisualStyleBackColor = false;
+            // 
+            // cBacumuladoM
+            // 
+            this.cBacumuladoM.AutoSize = true;
+            this.cBacumuladoM.BackColor = System.Drawing.Color.White;
+            this.cBacumuladoM.ForeColor = System.Drawing.Color.Black;
+            this.cBacumuladoM.Location = new System.Drawing.Point(8, 426);
+            this.cBacumuladoM.Name = "cBacumuladoM";
+            this.cBacumuladoM.Size = new System.Drawing.Size(79, 17);
+            this.cBacumuladoM.TabIndex = 160;
+            this.cBacumuladoM.Text = "A. Mensual";
+            this.cBacumuladoM.UseVisualStyleBackColor = false;
+            // 
+            // cBEmpresa
+            // 
+            this.cBEmpresa.AutoSize = true;
+            this.cBEmpresa.BackColor = System.Drawing.Color.White;
+            this.cBEmpresa.ForeColor = System.Drawing.Color.Black;
+            this.cBEmpresa.Location = new System.Drawing.Point(8, 459);
+            this.cBEmpresa.Name = "cBEmpresa";
+            this.cBEmpresa.Size = new System.Drawing.Size(72, 17);
+            this.cBEmpresa.TabIndex = 159;
+            this.cBEmpresa.Text = "Empresas";
+            this.cBEmpresa.UseVisualStyleBackColor = false;
+            // 
             // frmPermisos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(733, 470);
+            this.ClientSize = new System.Drawing.Size(733, 539);
+            this.Controls.Add(this.cBcierreA);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.cBFiltros);
+            this.Controls.Add(this.cbCierreM);
+            this.Controls.Add(this.cBincentivos);
+            this.Controls.Add(this.cBacumuladoM);
+            this.Controls.Add(this.cBEmpresa);
             this.Controls.Add(this.cbReimprimirTref);
             this.Controls.Add(this.cbreporteindm);
             this.Controls.Add(this.btnGuardar);
@@ -599,5 +697,12 @@
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.CheckBox cbreporteindm;
         private System.Windows.Forms.CheckBox cbReimprimirTref;
+        private System.Windows.Forms.CheckBox cBcierreA;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.CheckBox cBFiltros;
+        private System.Windows.Forms.CheckBox cbCierreM;
+        private System.Windows.Forms.CheckBox cBincentivos;
+        private System.Windows.Forms.CheckBox cBacumuladoM;
+        private System.Windows.Forms.CheckBox cBEmpresa;
     }
 }

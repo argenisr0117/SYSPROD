@@ -90,6 +90,12 @@ namespace Interfaz
                         Program.fdestref = Convert.ToBoolean(dt.Rows[0][18]);
                         Program.fhastref = Convert.ToBoolean(dt.Rows[0][19]);
                         Program.reimtref = Convert.ToBoolean(dt.Rows[0][20]);
+                        Program.acucong = Convert.ToBoolean(dt.Rows[0][21]);
+                        Program.inccong = Convert.ToBoolean(dt.Rows[0][22]);
+                        Program.empcong = Convert.ToBoolean(dt.Rows[0][23]);
+                        Program.ciecong = Convert.ToBoolean(dt.Rows[0][24]);
+                        Program.cieacong = Convert.ToBoolean(dt.Rows[0][25]);
+                        Program.filcong = Convert.ToBoolean(dt.Rows[0][26]);
                         //Program.Usuario = txtUsuario.Text;
                         Splash obj = new Splash();
                         this.Hide();

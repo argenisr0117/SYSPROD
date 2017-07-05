@@ -39,6 +39,12 @@ namespace Intermedia
         Boolean Mfdestref;
         Boolean Mfhastref;
         Boolean Mreimtref;
+        Boolean Macucong;
+        Boolean Minccong;
+        Boolean Mempcong;
+        Boolean Mciecong;
+        Boolean Mcieacong;
+        Boolean Mfilcong;
 
 
         public int Idusuario
@@ -179,6 +185,37 @@ namespace Intermedia
             get { return Mreimtref; }
             set { Mreimtref = value; }
         }
+        public Boolean Acucong
+        {
+            get { return Macucong; }
+            set { Macucong = value; }
+        }
+        public Boolean Inccong
+        {
+            get { return Minccong; }
+            set { Minccong = value; }
+        }
+        public Boolean Empcong
+        {
+            get { return Mempcong; }
+            set { Mempcong = value; }
+        }
+        public Boolean Ciecong
+        {
+            get { return Mciecong; }
+            set { Mciecong = value; }
+        }
+        public Boolean Cieacong
+        {
+            get { return Mcieacong; }
+            set { Mcieacong = value; }
+        }
+        public Boolean Filcong
+        {
+            get { return Mfilcong; }
+            set { Mfilcong = value; }
+        }
+
 
         public string RegistrarUsuario()
         {
@@ -217,9 +254,15 @@ namespace Intermedia
             lst.Add(new clsParametros("@fdestref", Mfdestref));
             lst.Add(new clsParametros("@fhastref", Mfhastref));
             lst.Add(new clsParametros("@reimtref", Mreimtref));
+            lst.Add(new clsParametros("@acucong", Macucong));
+            lst.Add(new clsParametros("@inccong", Minccong));
+            lst.Add(new clsParametros("@empcong", Mempcong));
+            lst.Add(new clsParametros("@ciecong", Mciecong));
+            lst.Add(new clsParametros("@cieacong", Mcieacong));
+            lst.Add(new clsParametros("@filcong",Mfilcong));
             lst.Add(new clsParametros("@mensaje", "", SqlDbType.Int, ParameterDirection.Output, 8));
             M.EjecutarSP("registrar_act_permisos", ref lst);
-            mensaje =Convert.ToInt32(lst[21].Valor);
+            mensaje =Convert.ToInt32(lst[27].Valor);
             return mensaje;
         }
         public string VerificarLogin()
