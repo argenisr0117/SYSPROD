@@ -501,31 +501,81 @@
     <EmbeddedResource Include="Registros\frmUnidad.resx">
       <DependentUpon>frmUnidad.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\cierre_general.rdlc" />
-    <EmbeddedResource Include="Reportes\diario_indm.rdlc" />
-    <EmbeddedResource Include="Reportes\cierre_intermedios.rdlc" />
-    <EmbeddedResource Include="Reportes\cierre_lineagalv.rdlc" />
-    <EmbeddedResource Include="Reportes\cierre_terminados.rdlc" />
-    <EmbeddedResource Include="Reportes\desperdicios.rdlc" />
-    <EmbeddedResource Include="Reportes\incentivo_flejado.rdlc" />
-    <EmbeddedResource Include="Reportes\incentivo_galvanizado.rdlc" />
-    <EmbeddedResource Include="Reportes\incentivo_grapas.rdlc" />
-    <EmbeddedResource Include="Reportes\incentivo_mallas_ciclonicas.rdlc" />
-    <EmbeddedResource Include="Reportes\incentivo_mallas_gallinero.rdlc" />
-    <EmbeddedResource Include="Reportes\incentivo_mecanico_indm.rdlc" />
-    <EmbeddedResource Include="Reportes\incentivo_puas.rdlc" />
-    <EmbeddedResource Include="Reportes\incentivo_rollos_cort.rdlc" />
-    <EmbeddedResource Include="Reportes\incentivo_sunchos.rdlc" />
-    <EmbeddedResource Include="Reportes\incentivo_trefilado.rdlc" />
-    <EmbeddedResource Include="Reportes\incentivo_varillas_aceradas.rdlc" />
-    <EmbeddedResource Include="Reportes\linea_galv.rdlc" />
-    <EmbeddedResource Include="Reportes\filtrar_prod_detalle.rdlc" />
-    <EmbeddedResource Include="Reportes\procesos.rdlc" />
-    <EmbeddedResource Include="Reportes\reporte_general.rdlc" />
-    <EmbeddedResource Include="Reportes\reporte_intermedios.rdlc" />
-    <EmbeddedResource Include="Reportes\reporte_terminados.rdlc" />
-    <EmbeddedResource Include="Reportes\ticket_trefilado2.rdlc" />
-    <EmbeddedResource Include="Reportes\ticket_trefilado.rdlc" />
+    <EmbeddedResource Include="Reportes\cierre_general.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\diario_indm.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\cierre_intermedios.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\cierre_lineagalv.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\cierre_terminados.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\desperdicios.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\incentivo_flejado.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\incentivo_galvanizado.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\incentivo_grapas.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\incentivo_mallas_ciclonicas.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\incentivo_mallas_gallinero.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\incentivo_mecanico_indm.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\incentivo_puas.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\incentivo_rollos_cort.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\incentivo_sunchos.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\incentivo_trefilado.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\incentivo_varillas_aceradas.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\linea_galv.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\filtrar_prod_detalle.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\procesos.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\reporte_general.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\reporte_intermedios.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\reporte_terminados.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ticket_trefilado2.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ticket_trefilado.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Splash.resx">
       <DependentUpon>Splash.cs</DependentUpon>
     </EmbeddedResource>

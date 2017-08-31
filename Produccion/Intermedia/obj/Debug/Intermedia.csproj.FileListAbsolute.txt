@@ -38,3 +38,10 @@ C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Intermedia\bin\Debug\Datos.
 C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Intermedia\obj\Debug\Intermedia.csprojResolveAssemblyReference.cache
 C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Intermedia\obj\Debug\Intermedia.dll
 C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Intermedia\obj\Debug\Intermedia.pdb
+C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Intermedia\bin\Debug\Intermedia.dll
+C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Intermedia\bin\Debug\Intermedia.pdb
+C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Intermedia\bin\Debug\Datos.dll
+C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Intermedia\bin\Debug\Datos.pdb
+C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Intermedia\obj\Debug\Intermedia.csprojResolveAssemblyReference.cache
+C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Intermedia\obj\Debug\Intermedia.dll
+C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Intermedia\obj\Debug\Intermedia.pdb

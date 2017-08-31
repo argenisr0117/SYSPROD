@@ -868,7 +868,7 @@ namespace Interfaz.Registros
                     SeleccionarDiametro2(dt.Rows[0][10].ToString());
                     frmReporte obj = new frmReporte();
                     obj.Id = Convert.ToInt32(dtgvProduccion.CurrentRow.Cells[9].Value);
-                    obj.Valor = 7;
+                    obj.Valor = 11;
                     obj.Fecha = Convert.ToDateTime(dt.Rows[0][0]);
                     obj.Supervisor = dt.Rows[0][1].ToString();
                     obj.Operador = dt.Rows[0][2].ToString();

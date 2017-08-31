@@ -99,9 +99,13 @@ namespace Interfaz
             {
                 FiltrarProduccion();
             }
+            else if (Valor == 11)
+            {
+                TicketTrefilado2();
+            }
         }
 
-        private void TicketTrefilado()
+        private void TicketTrefilado2()
         {
             ReportParameter[] parametros = new ReportParameter[13];
             PRODUCCIONDataSet ds = new PRODUCCIONDataSet();
@@ -129,6 +133,49 @@ namespace Interfaz
             reportViewer1.LocalReport.DisplayName = Reporte;
             rds.Name = "DataSet1";
             rds.Value = (ds.Tables["reimprimir_ticket"]);
+            reportViewer1.LocalReport.DataSources.Clear();
+            reportViewer1.LocalReport.SetParameters(parametros);
+            lc.DataSources.Add(rds);
+            //this.reportViewer1.RefreshReport();
+            //lc.PrintToPrinter();
+            //Byte[] mybytes = lc.Render("PDF"); //PDF //EXCEL
+            //using (FileStream fs = File.Create(@"C:\Users\COMPUTOS\Documents\Visual Studio 2010\prueba.pdf"))
+            //{
+            //    fs.Write(mybytes, 0, mybytes.Length);
+            //}
+            //this.reportViewer1.RefreshReport();
+            AutoPrintCls autoprintme = new AutoPrintCls(lc);
+            autoprintme.Print();
+            cerrar();
+        }
+        private void TicketTrefilado()
+        {
+            ReportParameter[] parametros = new ReportParameter[13];
+            PRODUCCIONDataSet ds = new PRODUCCIONDataSet();
+            PRODUCCIONDataSetTableAdapters.codigo_barraTableAdapter rgta = new PRODUCCIONDataSetTableAdapters.codigo_barraTableAdapter();
+            reportViewer1.ProcessingMode = ProcessingMode.Local;
+            LocalReport lc = reportViewer1.LocalReport;
+            string ruta = "Reportes\\" + Nombre;
+            lc.ReportPath = ruta;
+            parametros[0] = new ReportParameter("Fecha", Fecha.ToShortDateString());
+            parametros[1] = new ReportParameter("Supervisor", Supervisor.ToString());
+            parametros[2] = new ReportParameter("Operador", Operador.ToString());
+            parametros[3] = new ReportParameter("Maquina", Maquina.ToString());
+            parametros[4] = new ReportParameter("Producto", Producto.ToString());
+            parametros[5] = new ReportParameter("Calibre", Calibre.ToString());
+            parametros[6] = new ReportParameter("Cliente", Cliente.ToString());
+            parametros[7] = new ReportParameter("Tarjeta", Tarjeta.ToString());
+            parametros[8] = new ReportParameter("Peso", Peso.ToString());
+            parametros[9] = new ReportParameter("Colada", Colada.ToString());
+            parametros[10] = new ReportParameter("Diametro", Diametro.ToString());
+            parametros[11] = new ReportParameter("Sae", Sae.ToString());
+            parametros[12] = new ReportParameter("Medio", Medio.ToString());
+            //NoReporte = "0000002";
+            rgta.Fill(ds.codigo_barra);
+            ReportDataSource rds = new ReportDataSource();
+            reportViewer1.LocalReport.DisplayName = Reporte;
+            rds.Name = "DataSet1";
+            rds.Value = (ds.Tables["codigo_barra"]);
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.SetParameters(parametros);
             lc.DataSources.Add(rds);
@@ -254,6 +301,7 @@ namespace Interfaz
             PRODUCCIONDataSet ds = new PRODUCCIONDataSet();
             PRODUCCIONDataSetTableAdapters.incentivo_rollos_cortTableAdapter rgta = new PRODUCCIONDataSetTableAdapters.incentivo_rollos_cortTableAdapter();
             PRODUCCIONDataSetTableAdapters.incentivo_rollos_cort1TableAdapter rgta1 = new PRODUCCIONDataSetTableAdapters.incentivo_rollos_cort1TableAdapter();
+            PRODUCCIONDataSetTableAdapters.incentivo_rollos_cort2TableAdapter rgta2 = new PRODUCCIONDataSetTableAdapters.incentivo_rollos_cort2TableAdapter();
             reportViewer1.ProcessingMode = ProcessingMode.Local;
             LocalReport lc = reportViewer1.LocalReport;
             string ruta = "Reportes\\" + Nombre;
@@ -264,17 +312,22 @@ namespace Interfaz
             parametros[3] = new ReportParameter("Fechaf", Fechaf.ToShortDateString());
             rgta.Fill(ds.incentivo_rollos_cort, Incentivo, Empresa, Fechai, Fechaf);
             rgta1.Fill(ds.incentivo_rollos_cort1, Incentivo, Empresa, Fechai, Fechaf);
+            rgta2.Fill(ds.incentivo_rollos_cort2, Incentivo, Empresa, Fechai, Fechaf);
             ReportDataSource rds = new ReportDataSource();
             ReportDataSource rds1 = new ReportDataSource();
+            ReportDataSource rds2 = new ReportDataSource();
             reportViewer1.LocalReport.DisplayName = Reporte;
             rds.Name = "DataSet1";
             rds.Value = (ds.Tables["incentivo_rollos_cort"]);
             rds1.Name = "DataSet2";
             rds1.Value = (ds.Tables["incentivo_rollos_cort1"]);
+            rds2.Name = "DataSet3";
+            rds2.Value = (ds.Tables["incentivo_rollos_cort2"]);
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.SetParameters(parametros);
             lc.DataSources.Add(rds);
             lc.DataSources.Add(rds1);
+            lc.DataSources.Add(rds2);
             this.reportViewer1.RefreshReport();
         }
         private void Incentivo_Trefilado()

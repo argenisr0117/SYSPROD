@@ -116,7 +116,7 @@ namespace Interfaz.Registros
             try
             {
                 cbproducto.DataSource = P.Listar(true);
-                cbproducto.DisplayMember = "CODIGO";
+                cbproducto.DisplayMember = "DESCRIPCION";
                 cbproducto.ValueMember = "CODIGO";
             }
             catch (Exception ex)
@@ -660,6 +660,10 @@ namespace Interfaz.Registros
                                     Pr.Reporte = txtreporte.Text;
                                     Pr.Idcliente = Convert.ToInt32(dtgvproduccion.Rows[x].Cells[12].Value.ToString());
                                     mensaje = Pr.RegistrarProduccion("registrar_produccion1");
+                                    if(mensaje== "Producción registrada!")
+                                    {
+                                        mensaje = Pr.RegistrarProduccion("registrar_produccion12");
+                                    }
                                     //SecuenciaReporte();
                                     if (mensaje == "2627")
                                     {
