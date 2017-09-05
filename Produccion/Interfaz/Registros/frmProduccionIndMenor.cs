@@ -150,8 +150,8 @@ namespace Interfaz.Registros
             //cmbOperador2.MouseWheel += new MouseEventHandler(cmbOperador2_MouseWheel);
             //cmbMaquina.MouseWheel += new MouseEventHandler(cmbMaquina_MouseWheel);
             //cmbAyudante.MouseWheel += new MouseEventHandler(cmbAyudante_MouseWheel);
-            dtgvProduccion.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 7);
-            dtgvProduccion.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 7);
+            //dtgvProduccion.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 7);
+            //dtgvProduccion.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 7, FontStyle.Bold);
             ComboO();
             ComboA();
             ComboP();
@@ -193,7 +193,7 @@ namespace Interfaz.Registros
         }
         private void LlenarGrid()
         {
-            dtgvProduccion.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 7);
+            dtgvProduccion.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 7,FontStyle.Bold);
             dtgvProduccion.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 7);
             DataTable dt = new DataTable();
             Pi.Fecha1 = dtpdesde.Value;
@@ -201,18 +201,21 @@ namespace Interfaz.Registros
             dt = Pi.MostrarRegistros();
             try
             {
-                dtgvProduccion.Rows.Clear();
-                for (int x = 0; x < dt.Rows.Count; x++)
-                {
-                    dtgvProduccion.Rows.Add(dt.Rows[x][0]);
-                    dtgvProduccion.Rows[x].Cells[0].Value = dt.Rows[x][0].ToString();
-                    dtgvProduccion.Rows[x].Cells[1].Value = dt.Rows[x][1].ToString();
-                    dtgvProduccion.Rows[x].Cells[2].Value = dt.Rows[x][2].ToString();
-                    dtgvProduccion.Rows[x].Cells[3].Value = dt.Rows[x][3].ToString();
-                    dtgvProduccion.Rows[x].Cells[4].Value = dt.Rows[x][4].ToString();
-                    dtgvProduccion.Rows[x].Cells[5].Value = dt.Rows[x][5].ToString();
-                    dtgvProduccion.Rows[x].Cells[6].Value = dt.Rows[x][6].ToString();
-                }
+                dtgvProduccion.DataSource = null;
+                dtgvProduccion.DataSource = dt;
+                //dtgvProduccion.Rows.Clear();
+                //for (int x = 0; x < dt.Rows.Count; x++)
+                //{
+                //    dtgvProduccion.Rows.Add(dt.Rows[x][0]);
+                //    dtgvProduccion.Rows[x].Cells[0].Value = dt.Rows[x][0].ToString();
+                //    dtgvProduccion.Rows[x].Cells[1].Value = dt.Rows[x][1].ToString();
+                //    dtgvProduccion.Rows[x].Cells[2].Value = dt.Rows[x][2].ToString();
+                //    dtgvProduccion.Rows[x].Cells[3].Value = dt.Rows[x][3].ToString();
+                //    dtgvProduccion.Rows[x].Cells[4].Value = dt.Rows[x][4].ToString();
+                //    dtgvProduccion.Rows[x].Cells[5].Value = dt.Rows[x][5].ToString();
+                //    dtgvProduccion.Rows[x].Cells[6].Value = dt.Rows[x][6].ToString();
+                //}
+                dtgvProduccion.Columns[0].Visible = false;
                 dtgvProduccion.ClearSelection();
             }
             catch (Exception ex)

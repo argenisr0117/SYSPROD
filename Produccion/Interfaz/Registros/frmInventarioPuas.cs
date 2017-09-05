@@ -165,11 +165,16 @@ namespace Interfaz.Registros
                     {
                         cant = Convert.ToInt32(txtCantidad1.Text);
                         disp = Convert.ToInt32(txtDisp1.Text);
-                        total = total + cant;
                         if (cant > disp)
                         {
-                            MessageBoxEx.Show("Cantidad en MAQ.1 excede inventario!", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            //MessageBoxEx.Show("Cantidad en MAQ.1 excede inventario!", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            txtCantidad1.Text = "0";
                             txtCantidad1.Focus();
+                        }
+                        else
+                        {
+                            total = total + cant;
+
                         }
                     }
                     else
@@ -180,11 +185,17 @@ namespace Interfaz.Registros
                     {
                         cant = Convert.ToInt32(txtCantidad2.Text);
                         disp = Convert.ToInt32(txtDisp2.Text);
-                        total = total + cant;
+                        //total = total + cant;
                         if (cant > disp)
                         {
-                            MessageBoxEx.Show("Cantidad en MAQ.2 excede inventario!", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            //MessageBoxEx.Show("Cantidad en MAQ.2 excede inventario!", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            txtCantidad2.Text = "0";
                             txtCantidad2.Focus();
+                        }
+                        else
+                        {
+                            total = total + cant;
+
                         }
                     }
                     else
@@ -195,11 +206,17 @@ namespace Interfaz.Registros
                     {
                         cant = Convert.ToInt32(txtCantidad3.Text);
                         disp = Convert.ToInt32(txtDisp3.Text);
-                        total = total + cant;
+                        //total = total + cant;
                         if (cant > disp)
                         {
-                            MessageBoxEx.Show("Cantidad en MAQ.3 excede inventario!", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            //MessageBoxEx.Show("Cantidad en MAQ.3 excede inventario!", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            txtCantidad3.Text = "0";
                             txtCantidad3.Focus();
+                        }
+                        else
+                        {
+                            total = total + cant;
+
                         }
                     }
                     else
@@ -210,11 +227,17 @@ namespace Interfaz.Registros
                     {
                         cant = Convert.ToInt32(txtCantidad4.Text);
                         disp = Convert.ToInt32(txtDisp4.Text);
-                        total = total + cant;
+                        //total = total + cant;
                         if (cant > disp)
                         {
-                            MessageBoxEx.Show("Cantidad en MAQ.4 excede inventario!", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            //MessageBoxEx.Show("Cantidad en MAQ.4 excede inventario!", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            txtCantidad4.Text = "0";
                             txtCantidad4.Focus();
+                        }
+                        else
+                        {
+                            total = total + cant;
+
                         }
                     }
                     else
@@ -225,11 +248,17 @@ namespace Interfaz.Registros
                     {
                         cant = Convert.ToInt32(txtCantidad5.Text);
                         disp = Convert.ToInt32(txtDisp5.Text);
-                        total = total + cant;
+                        //total = total + cant;
                         if (cant > disp)
                         {
-                            MessageBoxEx.Show("Cantidad en MAQ.5 excede inventario!", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            //MessageBoxEx.Show("Cantidad en MAQ.5 excede inventario!", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            txtCantidad5.Text = "0";
                             txtCantidad5.Focus();
+                        }
+                        else
+                        {
+                            total = total + cant;
+
                         }
 
                     }
@@ -283,13 +312,19 @@ namespace Interfaz.Registros
                     {
                         cant = Convert.ToInt32(txtCantidad1.Text);
                         disp = Convert.ToInt32(txtDisp1.Text);
-                        total = total + cant;
+                        //total = total + cant;
                         if (cant > disp)
                         {
-                            MessageBoxEx.Show("Cantidad en MAQ.1 excede inventario!", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            //MessageBoxEx.Show("Cantidad en MAQ.1 excede inventario!", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            txtCantidad1.Text = "0";
                             txtCantidad1.Focus();
-                            txtCantidadD.Text = total.ToString();
-                            txtCantidadF.Text = Convert.ToInt32((Program.Cantidad - total)).ToString();
+                            //txtCantidadD.Text = total.ToString();
+                            //txtCantidadF.Text = Convert.ToInt32((Program.Cantidad - total)).ToString();
+                        }
+                        else
+                        {
+                            total = total + cant;
+
                         }
                     }
                     else
@@ -300,11 +335,17 @@ namespace Interfaz.Registros
                     {
                         cant = Convert.ToInt32(txtCantidad2.Text);
                         disp = Convert.ToInt32(txtDisp2.Text);
-                        total = total + cant;
+                        //total = total + cant;
                         if (cant > disp)
                         {
-                            MessageBoxEx.Show("Cantidad en MAQ.2 excede inventario!", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            //MessageBoxEx.Show("Cantidad en MAQ.2 excede inventario!", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            txtCantidad2.Text = "0";
                             txtCantidad2.Focus();
+                        }
+                        else
+                        {
+                            total = total + cant;
+
                         }
                     }
                     else

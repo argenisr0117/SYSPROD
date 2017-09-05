@@ -22,7 +22,9 @@ namespace Interfaz
 
         private void Login_Load(object sender, EventArgs e)
         {
+            //this.TitleText = "SysPROD";
             txtUsuario.Focus();
+            
         }
 
         private void label1_Click(object sender, EventArgs e)

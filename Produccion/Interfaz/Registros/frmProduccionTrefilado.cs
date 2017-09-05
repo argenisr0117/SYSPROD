@@ -299,22 +299,24 @@ namespace Interfaz.Registros
             dt = PT.Produccion_Diaria();
             try
             {
-                dtgvProduccion.Rows.Clear();
-                for (int x = 0; x < dt.Rows.Count; x++)
-                {
-                    dtgvProduccion.Rows.Add(dt.Rows[x][0]);
-                    dtgvProduccion.Rows[x].Cells[0].Value = dt.Rows[x][0].ToString();
-                    dtgvProduccion.Rows[x].Cells[1].Value = dt.Rows[x][1].ToString();
-                    dtgvProduccion.Rows[x].Cells[2].Value = dt.Rows[x][2].ToString();
-                    dtgvProduccion.Rows[x].Cells[3].Value = dt.Rows[x][3].ToString();
-                    dtgvProduccion.Rows[x].Cells[4].Value = dt.Rows[x][4].ToString();
-                    dtgvProduccion.Rows[x].Cells[5].Value = dt.Rows[x][5].ToString();
-                    dtgvProduccion.Rows[x].Cells[6].Value = dt.Rows[x][6].ToString();
-                    dtgvProduccion.Rows[x].Cells[7].Value = dt.Rows[x][7].ToString();
-                    dtgvProduccion.Rows[x].Cells[8].Value = dt.Rows[x][8].ToString();
-                    dtgvProduccion.Rows[x].Cells[9].Value = dt.Rows[x][9].ToString();
-                }
+                dtgvProduccion.DataSource = null;
+                dtgvProduccion.DataSource = dt;
+                //for (int x = 0; x < dt.Rows.Count; x++)
+                //{
+                //    dtgvProduccion.Rows.Add(dt.Rows[x][0]);
+                //    dtgvProduccion.Rows[x].Cells[0].Value = dt.Rows[x][0].ToString();
+                //    dtgvProduccion.Rows[x].Cells[1].Value = dt.Rows[x][1].ToString();
+                //    dtgvProduccion.Rows[x].Cells[2].Value = dt.Rows[x][2].ToString();
+                //    dtgvProduccion.Rows[x].Cells[3].Value = dt.Rows[x][3].ToString();
+                //    dtgvProduccion.Rows[x].Cells[4].Value = dt.Rows[x][4].ToString();
+                //    dtgvProduccion.Rows[x].Cells[5].Value = dt.Rows[x][5].ToString();
+                //    dtgvProduccion.Rows[x].Cells[6].Value = dt.Rows[x][6].ToString();
+                //    dtgvProduccion.Rows[x].Cells[7].Value = dt.Rows[x][7].ToString();
+                //    dtgvProduccion.Rows[x].Cells[8].Value = dt.Rows[x][8].ToString();
+                //    dtgvProduccion.Rows[x].Cells[9].Value = dt.Rows[x][9].ToString();
+                //}
                 dtgvProduccion.ClearSelection();
+                dtgvProduccion.Columns[9].Visible = false;
             }
             catch (Exception ex)
             {
@@ -327,22 +329,26 @@ namespace Interfaz.Registros
             dt = PT.Produccion_Diaria();
             try
             {
-                dtgvProduccion.Rows.Clear();
-                for (int x = 0; x < dt.Rows.Count; x++)
-                {
-                    dtgvProduccion.Rows.Add(dt.Rows[x][0]);
-                    dtgvProduccion.Rows[x].Cells[0].Value = dt.Rows[x][0].ToString();
-                    dtgvProduccion.Rows[x].Cells[1].Value = dt.Rows[x][1].ToString();
-                    dtgvProduccion.Rows[x].Cells[2].Value = dt.Rows[x][2].ToString();
-                    dtgvProduccion.Rows[x].Cells[3].Value = dt.Rows[x][3].ToString();
-                    dtgvProduccion.Rows[x].Cells[4].Value = dt.Rows[x][4].ToString();
-                    dtgvProduccion.Rows[x].Cells[5].Value = dt.Rows[x][5].ToString();
-                    dtgvProduccion.Rows[x].Cells[6].Value = dt.Rows[x][6].ToString();
-                    dtgvProduccion.Rows[x].Cells[7].Value = dt.Rows[x][7].ToString();
-                    dtgvProduccion.Rows[x].Cells[8].Value = dt.Rows[x][8].ToString();
-                    dtgvProduccion.Rows[x].Cells[9].Value = dt.Rows[x][9].ToString();
-                }
+                dtgvProduccion.DataSource = null;
+                dtgvProduccion.DataSource = dt;
+                //dtgvProduccion.Rows.Clear();
+                //for (int x = 0; x < dt.Rows.Count; x++)
+                //{
+                //    dtgvProduccion.Rows.Add(dt.Rows[x][0]);
+                //    dtgvProduccion.Rows[x].Cells[0].Value = dt.Rows[x][0].ToString();
+                //    dtgvProduccion.Rows[x].Cells[1].Value = dt.Rows[x][1].ToString();
+                //    dtgvProduccion.Rows[x].Cells[2].Value = dt.Rows[x][2].ToString();
+                //    dtgvProduccion.Rows[x].Cells[3].Value = dt.Rows[x][3].ToString();
+                //    dtgvProduccion.Rows[x].Cells[4].Value = dt.Rows[x][4].ToString();
+                //    dtgvProduccion.Rows[x].Cells[5].Value = dt.Rows[x][5].ToString();
+                //    dtgvProduccion.Rows[x].Cells[6].Value = dt.Rows[x][6].ToString();
+                //    dtgvProduccion.Rows[x].Cells[7].Value = dt.Rows[x][7].ToString();
+                //    dtgvProduccion.Rows[x].Cells[8].Value = dt.Rows[x][8].ToString();
+                //    dtgvProduccion.Rows[x].Cells[9].Value = dt.Rows[x][9].ToString();
+                //}
                 dtgvProduccion.ClearSelection();
+                dtgvProduccion.Columns[9].Visible = false;
+
             }
             catch (Exception ex)
             {

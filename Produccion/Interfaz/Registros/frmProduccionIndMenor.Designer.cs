@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProduccionIndMenor));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -80,13 +81,6 @@
             this.txtCantidad3 = new Interfaz.Controles.textboxN(this.components);
             this.txtCantidad2 = new Interfaz.Controles.textboxN(this.components);
             this.txtCantidad1 = new Interfaz.Controles.textboxN(this.components);
-            this.tarjeta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.operador = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ayudante = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maquina = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -379,15 +373,17 @@
             // 
             this.dtgvProduccion.AllowUserToAddRows = false;
             this.dtgvProduccion.AllowUserToDeleteRows = false;
+            this.dtgvProduccion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dtgvProduccion.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvProduccion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgvProduccion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvProduccion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.tarjeta,
-            this.fecha,
-            this.operador,
-            this.ayudante,
-            this.producto,
-            this.cantidad,
-            this.maquina});
             this.dtgvProduccion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgvProduccion.Location = new System.Drawing.Point(3, 72);
             this.dtgvProduccion.MultiSelect = false;
@@ -847,60 +843,6 @@
             this.txtCantidad1.Valor = Interfaz.Controles.textboxN.Tipo.Números;
             this.txtCantidad1.Visible = false;
             // 
-            // tarjeta
-            // 
-            this.tarjeta.HeaderText = "TARJETA";
-            this.tarjeta.Name = "tarjeta";
-            this.tarjeta.ReadOnly = true;
-            this.tarjeta.Visible = false;
-            // 
-            // fecha
-            // 
-            this.fecha.HeaderText = "FECHA";
-            this.fecha.Name = "fecha";
-            this.fecha.ReadOnly = true;
-            this.fecha.Width = 65;
-            // 
-            // operador
-            // 
-            this.operador.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.operador.HeaderText = "OPERADOR";
-            this.operador.Name = "operador";
-            this.operador.ReadOnly = true;
-            this.operador.Width = 93;
-            // 
-            // ayudante
-            // 
-            this.ayudante.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ayudante.HeaderText = "AYUDANTE";
-            this.ayudante.Name = "ayudante";
-            this.ayudante.ReadOnly = true;
-            this.ayudante.Width = 91;
-            // 
-            // producto
-            // 
-            this.producto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.producto.HeaderText = "PRODUCTO";
-            this.producto.Name = "producto";
-            this.producto.ReadOnly = true;
-            this.producto.Width = 93;
-            // 
-            // cantidad
-            // 
-            this.cantidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.cantidad.HeaderText = "CANTIDAD";
-            this.cantidad.Name = "cantidad";
-            this.cantidad.ReadOnly = true;
-            this.cantidad.Width = 87;
-            // 
-            // maquina
-            // 
-            this.maquina.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.maquina.HeaderText = "MÁQUINA";
-            this.maquina.Name = "maquina";
-            this.maquina.ReadOnly = true;
-            this.maquina.Width = 82;
-            // 
             // frmProduccionIndMenor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -982,12 +924,5 @@
         private System.Windows.Forms.DateTimePicker dtphasta;
         private System.Windows.Forms.DateTimePicker dtpdesde;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tarjeta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn operador;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ayudante;
-        private System.Windows.Forms.DataGridViewTextBoxColumn producto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maquina;
     }
 }
