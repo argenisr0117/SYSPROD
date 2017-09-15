@@ -219,7 +219,7 @@ namespace Interfaz.Registros
                 if (dtgvProducto.SelectedRows.Count > 0)
                 {
                     P.Codigo = "'" + dtgvProducto.CurrentRow.Cells[0].Value.ToString() + "'";
-                    P.Estado = Convert.ToBoolean(dtgvProducto.CurrentRow.Cells[6].Value);
+                    P.Estado = Convert.ToBoolean(dtgvProducto.CurrentRow.Cells[7].Value);
                     mensaje = P.ActivarProducto();
                     if (mensaje == "Desactivado!")
                     {

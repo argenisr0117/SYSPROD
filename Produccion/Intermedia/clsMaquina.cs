@@ -63,6 +63,13 @@ namespace Intermedia
             return dt = M.Listado("listado_maquinas_trefilado", lst);
 
         }
+        public DataTable Listado_Maquinas_Galv()
+        {
+            DataTable dt = new DataTable();
+            List<clsParametros> lst = new List<clsParametros>();
+            return dt = M.Listado("listado_maquinas_galv", lst);
+
+        }
         public DataTable Listado_Maquinas_IndMenor()
         {
             DataTable dt = new DataTable();

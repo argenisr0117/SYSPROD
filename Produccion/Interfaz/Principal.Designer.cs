@@ -46,9 +46,16 @@
             this.btnIndustriaMenor = new System.Windows.Forms.Button();
             this.btnGalvanizado = new System.Windows.Forms.Button();
             this.btnTrefilado = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnOrden = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -60,9 +67,9 @@
             this.panel1.Controls.Add(this.lbfecha);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.ForeColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(0, 472);
+            this.panel1.Location = new System.Drawing.Point(0, 433);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(726, 38);
+            this.panel1.Size = new System.Drawing.Size(922, 38);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -112,7 +119,7 @@
             this.label2.BackColor = System.Drawing.Color.DarkRed;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(266, 18);
+            this.label2.Location = new System.Drawing.Point(358, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(206, 30);
             this.label2.TabIndex = 2;
@@ -124,14 +131,14 @@
             this.btnproduccion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnproduccion.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnproduccion.FlatAppearance.BorderSize = 0;
-            this.btnproduccion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnproduccion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnproduccion.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnproduccion.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnproduccion.Image = global::Interfaz.Properties.Resources.proddiaria_converted;
             this.btnproduccion.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnproduccion.Location = new System.Drawing.Point(0, 0);
             this.btnproduccion.Name = "btnproduccion";
-            this.btnproduccion.Size = new System.Drawing.Size(153, 112);
+            this.btnproduccion.Size = new System.Drawing.Size(200, 112);
             this.btnproduccion.TabIndex = 0;
             this.btnproduccion.Text = "Producción Diaria";
             this.btnproduccion.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -144,14 +151,14 @@
             this.btnregistros.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnregistros.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnregistros.FlatAppearance.BorderSize = 0;
-            this.btnregistros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnregistros.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnregistros.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnregistros.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnregistros.Image = global::Interfaz.Properties.Resources.icono_registro_converted1;
             this.btnregistros.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnregistros.Location = new System.Drawing.Point(153, 0);
+            this.btnregistros.Location = new System.Drawing.Point(200, 0);
             this.btnregistros.Name = "btnregistros";
-            this.btnregistros.Size = new System.Drawing.Size(153, 112);
+            this.btnregistros.Size = new System.Drawing.Size(200, 112);
             this.btnregistros.TabIndex = 1;
             this.btnregistros.Text = "Registros Generales";
             this.btnregistros.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -164,14 +171,14 @@
             this.btnconsultas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnconsultas.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnconsultas.FlatAppearance.BorderSize = 0;
-            this.btnconsultas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnconsultas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnconsultas.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnconsultas.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnconsultas.Image = global::Interfaz.Properties.Resources.printer3_converted1;
             this.btnconsultas.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnconsultas.Location = new System.Drawing.Point(306, 0);
+            this.btnconsultas.Location = new System.Drawing.Point(400, 0);
             this.btnconsultas.Name = "btnconsultas";
-            this.btnconsultas.Size = new System.Drawing.Size(153, 112);
+            this.btnconsultas.Size = new System.Drawing.Size(200, 112);
             this.btnconsultas.TabIndex = 2;
             this.btnconsultas.Text = "Consultas Generales";
             this.btnconsultas.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -184,10 +191,11 @@
             this.panel2.Controls.Add(this.btnconsultas);
             this.panel2.Controls.Add(this.btnregistros);
             this.panel2.Controls.Add(this.btnproduccion);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.ForeColor = System.Drawing.Color.Black;
-            this.panel2.Location = new System.Drawing.Point(133, 141);
+            this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(461, 112);
+            this.panel2.Size = new System.Drawing.Size(600, 112);
             this.panel2.TabIndex = 1;
             // 
             // styleManager1
@@ -201,10 +209,11 @@
             this.panel3.Controls.Add(this.btnIndustriaMenor);
             this.panel3.Controls.Add(this.btnGalvanizado);
             this.panel3.Controls.Add(this.btnTrefilado);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.ForeColor = System.Drawing.Color.Black;
-            this.panel3.Location = new System.Drawing.Point(133, 259);
+            this.panel3.Location = new System.Drawing.Point(0, 112);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(461, 112);
+            this.panel3.Size = new System.Drawing.Size(600, 112);
             this.panel3.TabIndex = 3;
             // 
             // btnIndustriaMenor
@@ -213,14 +222,14 @@
             this.btnIndustriaMenor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnIndustriaMenor.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnIndustriaMenor.FlatAppearance.BorderSize = 0;
-            this.btnIndustriaMenor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIndustriaMenor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnIndustriaMenor.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIndustriaMenor.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnIndustriaMenor.Image = global::Interfaz.Properties.Resources.printer3_converted1;
             this.btnIndustriaMenor.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnIndustriaMenor.Location = new System.Drawing.Point(306, 0);
+            this.btnIndustriaMenor.Location = new System.Drawing.Point(400, 0);
             this.btnIndustriaMenor.Name = "btnIndustriaMenor";
-            this.btnIndustriaMenor.Size = new System.Drawing.Size(153, 112);
+            this.btnIndustriaMenor.Size = new System.Drawing.Size(200, 112);
             this.btnIndustriaMenor.TabIndex = 2;
             this.btnIndustriaMenor.Text = "Industria Menor";
             this.btnIndustriaMenor.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -233,18 +242,19 @@
             this.btnGalvanizado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnGalvanizado.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnGalvanizado.FlatAppearance.BorderSize = 0;
-            this.btnGalvanizado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGalvanizado.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGalvanizado.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGalvanizado.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnGalvanizado.Image = global::Interfaz.Properties.Resources.icono_registro_converted1;
             this.btnGalvanizado.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnGalvanizado.Location = new System.Drawing.Point(153, 0);
+            this.btnGalvanizado.Location = new System.Drawing.Point(200, 0);
             this.btnGalvanizado.Name = "btnGalvanizado";
-            this.btnGalvanizado.Size = new System.Drawing.Size(153, 112);
+            this.btnGalvanizado.Size = new System.Drawing.Size(200, 112);
             this.btnGalvanizado.TabIndex = 1;
             this.btnGalvanizado.Text = "Galvanizado";
             this.btnGalvanizado.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnGalvanizado.UseVisualStyleBackColor = false;
+            this.btnGalvanizado.Click += new System.EventHandler(this.btnGalvanizado_Click);
             // 
             // btnTrefilado
             // 
@@ -252,40 +262,120 @@
             this.btnTrefilado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnTrefilado.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnTrefilado.FlatAppearance.BorderSize = 0;
-            this.btnTrefilado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTrefilado.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnTrefilado.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTrefilado.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnTrefilado.Image = global::Interfaz.Properties.Resources.proddiaria_converted;
             this.btnTrefilado.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnTrefilado.Location = new System.Drawing.Point(0, 0);
             this.btnTrefilado.Name = "btnTrefilado";
-            this.btnTrefilado.Size = new System.Drawing.Size(153, 112);
+            this.btnTrefilado.Size = new System.Drawing.Size(200, 112);
             this.btnTrefilado.TabIndex = 0;
             this.btnTrefilado.Text = "Trefilado";
             this.btnTrefilado.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnTrefilado.UseVisualStyleBackColor = false;
             this.btnTrefilado.Click += new System.EventHandler(this.btnTrefilado_Click);
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
+            this.panel4.Controls.Add(this.button1);
+            this.panel4.Controls.Add(this.button2);
+            this.panel4.Controls.Add(this.btnOrden);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.ForeColor = System.Drawing.Color.Black;
+            this.panel4.Location = new System.Drawing.Point(0, 224);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(600, 112);
+            this.panel4.TabIndex = 4;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button1.Image = global::Interfaz.Properties.Resources.printer3_converted1;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.Location = new System.Drawing.Point(400, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(200, 112);
+            this.button1.TabIndex = 2;
+            this.button1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.DarkRed;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button2.Image = global::Interfaz.Properties.Resources.icono_registro_converted1;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button2.Location = new System.Drawing.Point(200, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(200, 112);
+            this.button2.TabIndex = 1;
+            this.button2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // btnOrden
+            // 
+            this.btnOrden.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnOrden.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnOrden.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnOrden.FlatAppearance.BorderSize = 0;
+            this.btnOrden.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnOrden.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrden.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnOrden.Image = global::Interfaz.Properties.Resources.proddiaria_converted;
+            this.btnOrden.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnOrden.Location = new System.Drawing.Point(0, 0);
+            this.btnOrden.Name = "btnOrden";
+            this.btnOrden.Size = new System.Drawing.Size(200, 112);
+            this.btnOrden.TabIndex = 0;
+            this.btnOrden.Text = "Orden Producción";
+            this.btnOrden.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnOrden.UseVisualStyleBackColor = false;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.panel4);
+            this.panel5.Controls.Add(this.panel3);
+            this.panel5.Controls.Add(this.panel2);
+            this.panel5.Location = new System.Drawing.Point(145, 71);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(600, 336);
+            this.panel5.TabIndex = 5;
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(726, 510);
-            this.Controls.Add(this.panel3);
+            this.ClientSize = new System.Drawing.Size(922, 471);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
             this.Name = "Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "SISTEMA DE PRODUCCIÓN";
             this.Load += new System.EventHandler(this.Principal_Load);
+            this.Resize += new System.EventHandler(this.Principal_Resize);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -308,5 +398,10 @@
         private System.Windows.Forms.Button btnIndustriaMenor;
         private System.Windows.Forms.Button btnGalvanizado;
         private System.Windows.Forms.Button btnTrefilado;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnOrden;
+        private System.Windows.Forms.Panel panel5;
     }
 }

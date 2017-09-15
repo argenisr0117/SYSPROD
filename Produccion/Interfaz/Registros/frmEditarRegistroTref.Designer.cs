@@ -55,7 +55,7 @@
             this.label2.BackColor = System.Drawing.Color.DarkRed;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Location = new System.Drawing.Point(121, 9);
+            this.label2.Location = new System.Drawing.Point(110, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(194, 26);
             this.label2.TabIndex = 139;
@@ -66,7 +66,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(33, 209);
+            this.label11.Location = new System.Drawing.Point(22, 209);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(45, 16);
             this.label11.TabIndex = 138;
@@ -77,7 +77,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(33, 180);
+            this.label12.Location = new System.Drawing.Point(22, 180);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(64, 16);
             this.label12.TabIndex = 137;
@@ -88,7 +88,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(33, 150);
+            this.label9.Location = new System.Drawing.Point(22, 150);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(70, 16);
             this.label9.TabIndex = 136;
@@ -99,7 +99,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(33, 121);
+            this.label10.Location = new System.Drawing.Point(22, 121);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(85, 16);
             this.label10.TabIndex = 135;
@@ -110,7 +110,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(33, 95);
+            this.label6.Location = new System.Drawing.Point(22, 95);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(85, 16);
             this.label6.TabIndex = 134;
@@ -121,7 +121,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(33, 64);
+            this.label3.Location = new System.Drawing.Point(22, 64);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(96, 16);
             this.label3.TabIndex = 133;
@@ -138,7 +138,7 @@
             this.btnGuardar.ForeColor = System.Drawing.Color.Black;
             this.btnGuardar.Image = global::Interfaz.Properties.Resources.save_icon;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnGuardar.Location = new System.Drawing.Point(117, 259);
+            this.btnGuardar.Location = new System.Drawing.Point(106, 259);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(103, 55);
             this.btnGuardar.TabIndex = 140;
@@ -159,7 +159,7 @@
             this.btnSalir.ForeColor = System.Drawing.Color.Black;
             this.btnSalir.Image = global::Interfaz.Properties.Resources.salir_icon;
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSalir.Location = new System.Drawing.Point(256, 259);
+            this.btnSalir.Location = new System.Drawing.Point(245, 259);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(103, 55);
             this.btnSalir.TabIndex = 141;
@@ -181,9 +181,9 @@
             this.cmbCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbCliente.FormattingEnabled = true;
             this.cmbCliente.IntegralHeight = false;
-            this.cmbCliente.Location = new System.Drawing.Point(135, 180);
+            this.cmbCliente.Location = new System.Drawing.Point(124, 180);
             this.cmbCliente.Name = "cmbCliente";
-            this.cmbCliente.Size = new System.Drawing.Size(215, 21);
+            this.cmbCliente.Size = new System.Drawing.Size(272, 21);
             this.cmbCliente.TabIndex = 131;
             this.cmbCliente.Validar = true;
             // 
@@ -195,9 +195,9 @@
             this.cmbMaquina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbMaquina.FormattingEnabled = true;
             this.cmbMaquina.IntegralHeight = false;
-            this.cmbMaquina.Location = new System.Drawing.Point(135, 150);
+            this.cmbMaquina.Location = new System.Drawing.Point(124, 150);
             this.cmbMaquina.Name = "cmbMaquina";
-            this.cmbMaquina.Size = new System.Drawing.Size(215, 21);
+            this.cmbMaquina.Size = new System.Drawing.Size(272, 21);
             this.cmbMaquina.TabIndex = 130;
             this.cmbMaquina.Validar = true;
             // 
@@ -209,9 +209,9 @@
             this.cmbProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbProducto.FormattingEnabled = true;
             this.cmbProducto.IntegralHeight = false;
-            this.cmbProducto.Location = new System.Drawing.Point(135, 123);
+            this.cmbProducto.Location = new System.Drawing.Point(124, 123);
             this.cmbProducto.Name = "cmbProducto";
-            this.cmbProducto.Size = new System.Drawing.Size(215, 21);
+            this.cmbProducto.Size = new System.Drawing.Size(272, 21);
             this.cmbProducto.TabIndex = 129;
             this.cmbProducto.Validar = true;
             // 
@@ -223,9 +223,9 @@
             this.cmbOperador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbOperador.FormattingEnabled = true;
             this.cmbOperador.IntegralHeight = false;
-            this.cmbOperador.Location = new System.Drawing.Point(135, 94);
+            this.cmbOperador.Location = new System.Drawing.Point(124, 94);
             this.cmbOperador.Name = "cmbOperador";
-            this.cmbOperador.Size = new System.Drawing.Size(215, 21);
+            this.cmbOperador.Size = new System.Drawing.Size(272, 21);
             this.cmbOperador.TabIndex = 128;
             this.cmbOperador.Validar = true;
             // 
@@ -237,9 +237,9 @@
             this.cmbSupervisor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbSupervisor.FormattingEnabled = true;
             this.cmbSupervisor.IntegralHeight = false;
-            this.cmbSupervisor.Location = new System.Drawing.Point(135, 63);
+            this.cmbSupervisor.Location = new System.Drawing.Point(124, 63);
             this.cmbSupervisor.Name = "cmbSupervisor";
-            this.cmbSupervisor.Size = new System.Drawing.Size(215, 21);
+            this.cmbSupervisor.Size = new System.Drawing.Size(272, 21);
             this.cmbSupervisor.TabIndex = 127;
             this.cmbSupervisor.Validar = true;
             // 
@@ -247,10 +247,10 @@
             // 
             this.txtPeso.BackColor = System.Drawing.Color.White;
             this.txtPeso.ForeColor = System.Drawing.Color.Black;
-            this.txtPeso.Location = new System.Drawing.Point(135, 209);
+            this.txtPeso.Location = new System.Drawing.Point(124, 209);
             this.txtPeso.Multiline = true;
             this.txtPeso.Name = "txtPeso";
-            this.txtPeso.Size = new System.Drawing.Size(215, 20);
+            this.txtPeso.Size = new System.Drawing.Size(272, 20);
             this.txtPeso.TabIndex = 132;
             this.txtPeso.Validar = true;
             this.txtPeso.Valor = Interfaz.Controles.textboxN.Tipo.Números;
@@ -279,6 +279,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmEditarRegistroTref";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Load += new System.EventHandler(this.frmEditarRegistroTref_Load);

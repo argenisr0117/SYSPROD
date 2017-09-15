@@ -59,6 +59,8 @@
             this.cboperador = new Interfaz.Controles.comboboxar(this.components);
             this.cbsupervisor = new Interfaz.Controles.comboboxar(this.components);
             this.txtcantidad = new Interfaz.Controles.textboxN(this.components);
+            this.cmbCliente = new Interfaz.Controles.comboboxar(this.components);
+            this.label13 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -81,7 +83,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(5, 318);
+            this.label11.Location = new System.Drawing.Point(5, 342);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(62, 16);
             this.label11.TabIndex = 113;
@@ -197,7 +199,7 @@
             this.btnbuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnbuscar.ForeColor = System.Drawing.Color.Black;
             this.btnbuscar.Image = global::Interfaz.Properties.Resources.Search_icon;
-            this.btnbuscar.Location = new System.Drawing.Point(253, 228);
+            this.btnbuscar.Location = new System.Drawing.Point(378, 229);
             this.btnbuscar.Name = "btnbuscar";
             this.btnbuscar.Size = new System.Drawing.Size(37, 21);
             this.btnbuscar.TabIndex = 124;
@@ -211,7 +213,7 @@
             this.panel2.Controls.Add(this.btnlimpiar);
             this.panel2.Controls.Add(this.btnagregar);
             this.panel2.ForeColor = System.Drawing.Color.Black;
-            this.panel2.Location = new System.Drawing.Point(19, 355);
+            this.panel2.Location = new System.Drawing.Point(102, 377);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(242, 53);
             this.panel2.TabIndex = 125;
@@ -288,7 +290,7 @@
             this.label2.BackColor = System.Drawing.Color.DarkRed;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Location = new System.Drawing.Point(65, 25);
+            this.label2.Location = new System.Drawing.Point(143, 25);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(169, 21);
             this.label2.TabIndex = 126;
@@ -297,11 +299,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(-8, 46);
+            this.label5.Location = new System.Drawing.Point(-5, 46);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(307, 13);
+            this.label5.Size = new System.Drawing.Size(457, 13);
             this.label5.TabIndex = 127;
-            this.label5.Text = "__________________________________________________";
+            this.label5.Text = "___________________________________________________________________________";
             // 
             // errorProvider1
             // 
@@ -356,7 +358,7 @@
             this.cbproducto.IntegralHeight = false;
             this.cbproducto.Location = new System.Drawing.Point(81, 229);
             this.cbproducto.Name = "cbproducto";
-            this.cbproducto.Size = new System.Drawing.Size(153, 21);
+            this.cbproducto.Size = new System.Drawing.Size(291, 21);
             this.cbproducto.TabIndex = 6;
             this.cbproducto.Validar = true;
             // 
@@ -420,7 +422,7 @@
             // 
             this.txtcantidad.BackColor = System.Drawing.Color.White;
             this.txtcantidad.ForeColor = System.Drawing.Color.Black;
-            this.txtcantidad.Location = new System.Drawing.Point(82, 318);
+            this.txtcantidad.Location = new System.Drawing.Point(82, 342);
             this.txtcantidad.Multiline = true;
             this.txtcantidad.Name = "txtcantidad";
             this.txtcantidad.Size = new System.Drawing.Size(110, 20);
@@ -428,12 +430,39 @@
             this.txtcantidad.Validar = true;
             this.txtcantidad.Valor = Interfaz.Controles.textboxN.Tipo.Números;
             // 
+            // cmbCliente
+            // 
+            this.cmbCliente.BackColor = System.Drawing.Color.Gainsboro;
+            this.cmbCliente.DropDownHeight = 60;
+            this.cmbCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbCliente.FormattingEnabled = true;
+            this.cmbCliente.IntegralHeight = false;
+            this.cmbCliente.Location = new System.Drawing.Point(81, 315);
+            this.cmbCliente.Name = "cmbCliente";
+            this.cmbCliente.Size = new System.Drawing.Size(111, 21);
+            this.cmbCliente.TabIndex = 128;
+            this.cmbCliente.Validar = true;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Black;
+            this.label13.Location = new System.Drawing.Point(4, 316);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(49, 16);
+            this.label13.TabIndex = 129;
+            this.label13.Text = "Cliente";
+            // 
             // frmAgregarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(301, 417);
+            this.ClientSize = new System.Drawing.Size(447, 446);
             this.ControlBox = false;
+            this.Controls.Add(this.cmbCliente);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.txttarjeta);
             this.Controls.Add(this.cbdestino);
             this.Controls.Add(this.cbmaquina);
@@ -504,5 +533,7 @@
         private Controles.comboboxar cbayudante;
         private Controles.comboboxar cboperador;
         private Controles.textboxceros txttarjeta;
+        private Controles.comboboxar cmbCliente;
+        private System.Windows.Forms.Label label13;
     }
 }

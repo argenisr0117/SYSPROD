@@ -237,11 +237,23 @@
     <Compile Include="Registros\frmMaquinaPuas.Designer.cs">
       <DependentUpon>frmMaquinaPuas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Registros\frmOrdenProduccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\frmOrdenProduccion.Designer.cs">
+      <DependentUpon>frmOrdenProduccion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Registros\frmPermisos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Registros\frmPermisos.Designer.cs">
       <DependentUpon>frmPermisos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\frmProduccionGalv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\frmProduccionGalv.Designer.cs">
+      <DependentUpon>frmProduccionGalv.cs</DependentUpon>
     </Compile>
     <Compile Include="Registros\frmUsuario.cs">
       <SubType>Form</SubType>
@@ -326,12 +338,6 @@
     </Compile>
     <Compile Include="Registros\frmProduccion.Designer.cs">
       <DependentUpon>frmProduccion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Registros\frmProduccionGalvanizado.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Registros\frmProduccionGalvanizado.Designer.cs">
-      <DependentUpon>frmProduccionGalvanizado.cs</DependentUpon>
     </Compile>
     <Compile Include="Registros\frmProduccionIndMenor.cs">
       <SubType>Form</SubType>
@@ -435,8 +441,14 @@
     <EmbeddedResource Include="Registros\frmMaquinaPuas.resx">
       <DependentUpon>frmMaquinaPuas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Registros\frmOrdenProduccion.resx">
+      <DependentUpon>frmOrdenProduccion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Registros\frmPermisos.resx">
       <DependentUpon>frmPermisos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros\frmProduccionGalv.resx">
+      <DependentUpon>frmProduccionGalv.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registros\frmUsuario.resx">
       <DependentUpon>frmUsuario.cs</DependentUpon>
@@ -479,9 +491,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registros\frmProduccion.resx">
       <DependentUpon>frmProduccion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Registros\frmProduccionGalvanizado.resx">
-      <DependentUpon>frmProduccionGalvanizado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registros\frmProduccionIndMenor.resx">
       <DependentUpon>frmProduccionIndMenor.cs</DependentUpon>
@@ -601,7 +610,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Intermedia\Intermedia.csproj">
@@ -610,6 +621,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\imagen.jpg" />
+    <None Include="Resources\images %281%29.jpg" />
     <None Include="Resources\print.ico" />
     <None Include="Resources\boxes-brown-icon.png" />
     <None Include="Resources\Box-icon.png" />

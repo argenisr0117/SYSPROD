@@ -53,7 +53,7 @@
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkRed;
-            this.label1.Location = new System.Drawing.Point(196, -4);
+            this.label1.Location = new System.Drawing.Point(204, -4);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 24);
             this.label1.TabIndex = 114;
@@ -66,7 +66,7 @@
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(36, 124);
+            this.label2.Location = new System.Drawing.Point(68, 123);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(134, 20);
             this.label2.TabIndex = 115;
@@ -78,7 +78,7 @@
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(36, 67);
+            this.label3.Location = new System.Drawing.Point(68, 66);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(96, 20);
             this.label3.TabIndex = 116;
@@ -87,26 +87,24 @@
             // txtUsuario
             // 
             this.txtUsuario.BackColor = System.Drawing.Color.White;
-            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.ForeColor = System.Drawing.Color.Black;
-            this.txtUsuario.Location = new System.Drawing.Point(173, 63);
-            this.txtUsuario.Multiline = true;
+            this.txtUsuario.Location = new System.Drawing.Point(205, 63);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(207, 29);
+            this.txtUsuario.Size = new System.Drawing.Size(207, 26);
             this.txtUsuario.TabIndex = 0;
             this.txtUsuario.Validar = false;
             // 
             // txtClave
             // 
             this.txtClave.BackColor = System.Drawing.Color.White;
-            this.txtClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtClave.ForeColor = System.Drawing.Color.Black;
-            this.txtClave.Location = new System.Drawing.Point(173, 120);
-            this.txtClave.Multiline = true;
+            this.txtClave.Location = new System.Drawing.Point(205, 120);
             this.txtClave.Name = "txtClave";
-            this.txtClave.PasswordChar = '*';
-            this.txtClave.Size = new System.Drawing.Size(207, 29);
+            this.txtClave.Size = new System.Drawing.Size(207, 26);
             this.txtClave.TabIndex = 1;
+            this.txtClave.UseSystemPasswordChar = true;
             this.txtClave.Validar = false;
             this.txtClave.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtClave_KeyPress);
             // 
@@ -122,7 +120,7 @@
             this.btnAcceder.ForeColor = System.Drawing.Color.Black;
             this.btnAcceder.Image = global::Interfaz.Properties.Resources.forward__2_;
             this.btnAcceder.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAcceder.Location = new System.Drawing.Point(95, 178);
+            this.btnAcceder.Location = new System.Drawing.Point(103, 178);
             this.btnAcceder.Name = "btnAcceder";
             this.btnAcceder.Size = new System.Drawing.Size(128, 67);
             this.btnAcceder.TabIndex = 138;
@@ -144,7 +142,7 @@
             this.btnSalir.ForeColor = System.Drawing.Color.Black;
             this.btnSalir.Image = global::Interfaz.Properties.Resources.logout_icon;
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSalir.Location = new System.Drawing.Point(242, 178);
+            this.btnSalir.Location = new System.Drawing.Point(250, 178);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(128, 67);
             this.btnSalir.TabIndex = 137;
@@ -177,6 +175,7 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Tag = "";
+            this.Text = "SISTEMA DE PRODUCCIÓN";
             this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);

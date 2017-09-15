@@ -22,6 +22,7 @@ namespace Interfaz.Registros
         clsTurno T = new clsTurno();
         clsProduccion Pr = new clsProduccion();
         public DataTable dt = new DataTable();
+        clsCliente C = new clsCliente();
         public string reporte
         {
             get;set;
@@ -116,8 +117,21 @@ namespace Interfaz.Registros
             try
             {
                 cbproducto.DataSource = P.Listar(true);
-                cbproducto.DisplayMember = "CODIGO";
+                cbproducto.DisplayMember = "DESCRIPCION";
                 cbproducto.ValueMember = "CODIGO";
+            }
+            catch (Exception ex)
+            {
+                MessageBoxEx.Show(ex.Message);
+            }
+        }
+        private void ComboC()
+        {
+            try
+            {
+                cmbCliente.DataSource = C.Listar(true);
+                cmbCliente.DisplayMember = "DESCRIPCION";
+                cmbCliente.ValueMember = "ID_CLIENTE";
             }
             catch (Exception ex)
             {
@@ -188,6 +202,8 @@ namespace Interfaz.Registros
             cbturno.SelectedValue = "";
             ComboP();
             cbproducto.SelectedValue = "";
+            ComboC();
+            cmbCliente.SelectedIndex = -1;
             Program.Evento = 0;
             dt.Columns.Add("Fecha");
             dt.Columns.Add("Supervisor");
@@ -199,6 +215,7 @@ namespace Interfaz.Registros
             dt.Columns.Add("Producto");
             dt.Columns.Add("Destino");
             dt.Columns.Add("Cantidad");
+            dt.Columns.Add("Cliente");
             dtpfecha.Value = DateTime.Now;
             txttarjeta.Focus();
         }
@@ -222,6 +239,7 @@ namespace Interfaz.Registros
             cbmaquina.SelectedValue = "";
             cbproducto.SelectedValue = "";
             cbdestino.SelectedValue = "";
+            cmbCliente.SelectedIndex = -1;
             txtcantidad.Clear();
         }
 
@@ -273,6 +291,7 @@ namespace Interfaz.Registros
                 Pr.Destino = cbdestino.SelectedValue.ToString();
                 Pr.Cantidad = Convert.ToDecimal(txtcantidad.Text);
                 Pr.Reporte = reporte;
+                Pr.Idcliente = Convert.ToInt32(cmbCliente.SelectedValue);
                 Pr.RegistrarProduccion("registrar_produccion");
                 MessageBoxEx.Show("Registro Agregado", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtcantidad.Clear();

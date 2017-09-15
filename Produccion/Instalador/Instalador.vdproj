@@ -1669,7 +1669,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SYSPROD"
         "ProductCode" = "8:{2CB45D38-C354-4202-8422-0D07EAB10E80}"
-        "PackageCode" = "8:{654AC0BF-1719-4F3B-A082-92F4D9F15934}"
+        "PackageCode" = "8:{8CFB749B-7490-45BE-888D-709998FC6DFE}"
         "UpgradeCode" = "8:{1F2619E1-0BC5-42FB-88F1-DDD754EAF1D1}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -1803,6 +1803,20 @@
             "Icon" = "8:_7A6EE9AC100E4200957C1CE327047A5E"
             "Feature" = "8:"
             }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_4C58DD6F2E9A497FB8030761448C9D64"
+            {
+            "Name" = "8:SYSPROD"
+            "Arguments" = "8:sysprod"
+            "Description" = "8:SYSPROD"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_AC8F81798BFE411F8B149F404424B183"
+            "Folder" = "8:_2C4FF5305C374AB3BEAD902C54996373"
+            "WorkingFolder" = "8:_2C4FF5305C374AB3BEAD902C54996373"
+            "Icon" = "8:_7A6EE9AC100E4200957C1CE327047A5E"
+            "Feature" = "8:"
+            }
         }
         "UserInterface"
         {
@@ -1917,7 +1931,8 @@
                             "Type" = "3:8"
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:4"
-                            "Setting" = "3:1"
+                            "Setting" = "3:2"
+                            "Value" = "8:_7A6EE9AC100E4200957C1CE327047A5E"
                             "UsePlugInResources" = "11:TRUE"
                             }
                             "CopyrightWarning"
@@ -2062,7 +2077,8 @@
                             "Type" = "3:8"
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:4"
-                            "Setting" = "3:1"
+                            "Setting" = "3:2"
+                            "Value" = "8:_7A6EE9AC100E4200957C1CE327047A5E"
                             "UsePlugInResources" = "11:TRUE"
                             }
                             "CopyrightWarning"

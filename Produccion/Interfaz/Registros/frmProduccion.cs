@@ -284,6 +284,18 @@ namespace Interfaz.Registros
                 {  
                     btnimportar.Enabled = false;
                     lbdescripcion.Visible = true;
+                    dtgvproduccion.DataSource = null;
+                    dtpfecha.DataBindings.Clear();
+                    cbsupervisor.DataBindings.Clear();
+                    cboperador.DataBindings.Clear();
+                    cbayudante.DataBindings.Clear();
+                    cbturno.DataBindings.Clear();
+                    txttarjeta.DataBindings.Clear();
+                    cbmaquina.DataBindings.Clear();
+                    cbproducto.DataBindings.Clear();
+                    cbdestino.DataBindings.Clear();
+                    txtcantidad.DataBindings.Clear();
+                    bs.DataSource = null;
                     bs.DataSource = dt;
                     dtgvproduccion.DataSource = bs;
                     for (int x = 0; x < dtgvproduccion.Rows.Count; x++)
@@ -660,10 +672,11 @@ namespace Interfaz.Registros
                                     Pr.Reporte = txtreporte.Text;
                                     Pr.Idcliente = Convert.ToInt32(dtgvproduccion.Rows[x].Cells[12].Value.ToString());
                                     mensaje = Pr.RegistrarProduccion("registrar_produccion1");
-                                    if(mensaje== "Producción registrada!")
-                                    {
-                                        mensaje = Pr.RegistrarProduccion("registrar_produccion12");
-                                    }
+                                    Pr.RegistrarProduccion("registrar_produccion12");
+                                    //if(mensaje== "Producción registrada!")
+                                    //{
+                                    //    MessageBoxEx.Show(mensaje, "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    //}
                                     //SecuenciaReporte();
                                     if (mensaje == "2627")
                                     {
@@ -982,6 +995,7 @@ namespace Interfaz.Registros
                         Pr.Producto = dtgvproduccion.Rows[x].Cells[9].Value.ToString();
                         Pr.Destino = dtgvproduccion.Rows[x].Cells[10].Value.ToString();
                         Pr.Cantidad = Convert.ToDecimal(dtgvproduccion.Rows[x].Cells[8].Value.ToString());
+                        Pr.Idcliente= Convert.ToInt32(dtgvproduccion.Rows[x].Cells[12].Value.ToString());
                         Pr.ActualizaRegistros();
                     }
                  

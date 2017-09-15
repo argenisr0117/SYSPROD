@@ -97,6 +97,27 @@ namespace Intermedia
             return dt = M.Listado("listado_supervisores_trefilado", lst);
 
         }
+        public DataTable Listado_Supervisores_Galv()
+        {
+            DataTable dt = new DataTable();
+            List<clsParametros> lst = new List<clsParametros>();
+            return dt = M.Listado("listado_supervisores_galv", lst);
+
+        }
+        public DataTable Listado_Operadores_Galv()
+        {
+            DataTable dt = new DataTable();
+            List<clsParametros> lst = new List<clsParametros>();
+            return dt = M.Listado("listado_operadores_galv", lst);
+
+        }
+        public DataTable Listado_Ayudantes_Galv()
+        {
+            DataTable dt = new DataTable();
+            List<clsParametros> lst = new List<clsParametros>();
+            return dt = M.Listado("listado_ayudantes_galv", lst);
+
+        }
         public DataTable ListarS(Boolean objEstado,Boolean objSupervisor)
         {
             DataTable dt = new DataTable();

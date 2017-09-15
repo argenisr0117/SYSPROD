@@ -366,12 +366,14 @@ namespace Interfaz.Registros
 
                     for (int x = 0; x < 5; x++)
                     {
-                        Pi.Idempleado = cmbOperador2.SelectedValue.ToString();
-                        Pi.Idmaquina = dt.Rows[x][2].ToString();
-                        Pi.Idproducto = cmbProducto2.SelectedValue.ToString();
-                        Pi.Cantidad1 = array[x];
-                        mensaje = Pi.RegistrarInvPuas();
-
+                        if (array[x] != 0)
+                        {
+                            Pi.Idempleado = cmbOperador2.SelectedValue.ToString();
+                            Pi.Idmaquina = dt.Rows[x][2].ToString();
+                            Pi.Idproducto = cmbProducto2.SelectedValue.ToString();
+                            Pi.Cantidad1 = array[x];
+                            mensaje = Pi.RegistrarInvPuas();
+                        }
                     }
                     MessageBoxEx.Show(mensaje, "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }               

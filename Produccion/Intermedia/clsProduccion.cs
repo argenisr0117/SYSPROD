@@ -223,6 +223,7 @@ namespace Intermedia
             lst.Add(new clsParametros("@idmaquina", Mmaquina));
             lst.Add(new clsParametros("@destino", Mdestino));
             lst.Add(new clsParametros("@cantidad", Mcantidad));
+            lst.Add(new clsParametros("@idcliente", Midcliente));
             M.EjecutarSP("actualizar_registros", ref lst);
             return mensaje;
         }

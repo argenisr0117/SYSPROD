@@ -949,6 +949,5 @@ namespace Interfaz.Registros
             }
 
         }
-
     }
 }

@@ -24,7 +24,11 @@ namespace Interfaz
             Permisos();
             ObtenerHora();
             timer1.Start();
-           
+            this.WindowState = FormWindowState.Maximized;
+            panel5.Location = new Point(this.ClientSize.Width / 2 - panel5.Size.Width / 2, this.ClientSize.Height / 2 - panel5.ClientSize.Height / 2);
+            label2.Location = new Point(this.ClientSize.Width / 2 - label2.Size.Width / 2, 18);
+            this.MaximizeBox = false;
+
         }
         private void ObtenerHora()
         {
@@ -91,6 +95,11 @@ namespace Interfaz
                     frmProduccionIndMenor obj = new frmProduccionIndMenor();
                     obj.Show();
                 }
+                if (form == "frmProduccionGalv")
+                {
+                    frmProduccionGalv obj = new frmProduccionGalv();
+                    obj.Show();
+                }
             }
         }
 
@@ -116,6 +125,25 @@ namespace Interfaz
         {
             form = "frmProduccionIndMenor";
             AbrirForm(form);
+        }
+
+        private void btnGalvanizado_Click(object sender, EventArgs e)
+        {
+            form = "frmProduccionGalv";
+            AbrirForm(form);
+        }
+
+        private void Principal_Resize(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Minimized)
+            {
+                this.MaximizeBox = true;
+            }
+            else if (WindowState == FormWindowState.Maximized)
+            {
+                this.MaximizeBox = false;
+            }
+
         }
     }
 }
