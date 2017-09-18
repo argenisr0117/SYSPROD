@@ -72,6 +72,9 @@
             this.cBincentivos = new System.Windows.Forms.CheckBox();
             this.cBacumuladoM = new System.Windows.Forms.CheckBox();
             this.cBEmpresa = new System.Windows.Forms.CheckBox();
+            this.cbOrdenProd = new System.Windows.Forms.CheckBox();
+            this.cbControlCal = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -599,11 +602,50 @@
             this.cBEmpresa.Text = "Empresas";
             this.cBEmpresa.UseVisualStyleBackColor = false;
             // 
+            // cbOrdenProd
+            // 
+            this.cbOrdenProd.AutoSize = true;
+            this.cbOrdenProd.BackColor = System.Drawing.Color.White;
+            this.cbOrdenProd.ForeColor = System.Drawing.Color.Black;
+            this.cbOrdenProd.Location = new System.Drawing.Point(134, 136);
+            this.cbOrdenProd.Name = "cbOrdenProd";
+            this.cbOrdenProd.Size = new System.Drawing.Size(83, 17);
+            this.cbOrdenProd.TabIndex = 167;
+            this.cbOrdenProd.Text = "Orden Prod.";
+            this.cbOrdenProd.UseVisualStyleBackColor = false;
+            // 
+            // cbControlCal
+            // 
+            this.cbControlCal.AutoSize = true;
+            this.cbControlCal.BackColor = System.Drawing.Color.White;
+            this.cbControlCal.ForeColor = System.Drawing.Color.Black;
+            this.cbControlCal.Location = new System.Drawing.Point(134, 159);
+            this.cbControlCal.Name = "cbControlCal";
+            this.cbControlCal.Size = new System.Drawing.Size(86, 17);
+            this.cbControlCal.TabIndex = 168;
+            this.cbControlCal.Text = "Control Cald.";
+            this.cbControlCal.UseVisualStyleBackColor = false;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.BackColor = System.Drawing.Color.White;
+            this.checkBox3.ForeColor = System.Drawing.Color.Black;
+            this.checkBox3.Location = new System.Drawing.Point(134, 182);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(81, 17);
+            this.checkBox3.TabIndex = 169;
+            this.checkBox3.Text = "Prod. Diaria";
+            this.checkBox3.UseVisualStyleBackColor = false;
+            // 
             // frmPermisos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(733, 539);
+            this.Controls.Add(this.checkBox3);
+            this.Controls.Add(this.cbControlCal);
+            this.Controls.Add(this.cbOrdenProd);
             this.Controls.Add(this.cBcierreA);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.cBFiltros);
@@ -704,5 +746,8 @@
         private System.Windows.Forms.CheckBox cBincentivos;
         private System.Windows.Forms.CheckBox cBacumuladoM;
         private System.Windows.Forms.CheckBox cBEmpresa;
+        private System.Windows.Forms.CheckBox cbOrdenProd;
+        private System.Windows.Forms.CheckBox cbControlCal;
+        private System.Windows.Forms.CheckBox checkBox3;
     }
 }

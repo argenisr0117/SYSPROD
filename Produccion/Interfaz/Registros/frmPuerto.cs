@@ -17,11 +17,25 @@ namespace Interfaz.Registros
     public partial class frmPuerto : MetroForm
     {
         clsProduccionTref PT = new clsProduccionTref();
+        clsDepartamento D = new clsDepartamento();
         public frmPuerto()
         {
             InitializeComponent();
         }
+        private void LlenarCombo()
+        {
+            try
+            {
+                cmbDpto.DataSource = D.Listar(true);
+                cmbDpto.DisplayMember = "DEPARTAMENTO";
+                cmbDpto.ValueMember = "ID_DPTO";
+            }
+            catch (Exception ex)
+            {
+                MessageBoxEx.Show(ex.Message);
+            }
 
+        }
         public string PortName;
         private void btnregistrar_Click(object sender, EventArgs e)
         {
@@ -29,8 +43,9 @@ namespace Interfaz.Registros
             {
             string mensaje = "";
             PT.Puerto = cmbPuerto.Text;
-            PT.Id = 1;
+            PT.Id = Program.Idpuerto;
             PT.Baud = Convert.ToInt32(cmbSpeed.SelectedItem);
+            PT.Iddpto = cmbDpto.SelectedValue.ToString();
             try
             {
                 mensaje = PT.ActualizarPuerto();
@@ -61,17 +76,23 @@ namespace Interfaz.Registros
                 cmbPuerto.Items.Add(port);
 
             }
-            ConfiguracionActual();
-           
+            LlenarCombo();
+            cmbDpto.SelectedValue = "Tref";
+            ConfiguracionActual();           
+            //cmbDpto.Enabled = false;
         }
         private void ConfiguracionActual()
         {
             DataTable dt = new DataTable();
-            dt=PT.Configuracion_Puerto();
+            dt=PT.Configuracion_Puerto(cmbDpto.SelectedValue.ToString());
+            Program.Idpuerto = 0;
+            lbPort.Text = "";
+            lbBaud.Text = "";
             try
             {
                 for (int x = 0; x < dt.Rows.Count; x++)
                 {
+                    Program.Idpuerto = Convert.ToInt16(dt.Rows[x][0]);
                     lbPort.Text = dt.Rows[x][1].ToString();
                     lbBaud.Text = dt.Rows[x][2].ToString();
                 }
@@ -81,6 +102,11 @@ namespace Interfaz.Registros
             {
                 MessageBoxEx.Show(ex.Message, "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void cmbDpto_SelectedValueChanged(object sender, EventArgs e)
+        {
+            ConfiguracionActual();
         }
     }
 }

@@ -39,6 +39,8 @@
             this.lbPort = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lbBaud = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cmbDpto = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -48,7 +50,7 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(57, 77);
+            this.label1.Location = new System.Drawing.Point(72, 77);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 16);
             this.label1.TabIndex = 66;
@@ -64,7 +66,7 @@
             this.cmbPuerto.FormattingEnabled = true;
             this.cmbPuerto.IntegralHeight = false;
             this.cmbPuerto.ItemHeight = 13;
-            this.cmbPuerto.Location = new System.Drawing.Point(181, 76);
+            this.cmbPuerto.Location = new System.Drawing.Point(196, 76);
             this.cmbPuerto.Name = "cmbPuerto";
             this.cmbPuerto.Size = new System.Drawing.Size(182, 21);
             this.cmbPuerto.TabIndex = 65;
@@ -76,7 +78,7 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(57, 125);
+            this.label2.Location = new System.Drawing.Point(72, 125);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(98, 16);
             this.label2.TabIndex = 68;
@@ -100,7 +102,7 @@
             "9600",
             "19200",
             "38400"});
-            this.cmbSpeed.Location = new System.Drawing.Point(181, 124);
+            this.cmbSpeed.Location = new System.Drawing.Point(196, 124);
             this.cmbSpeed.Name = "cmbSpeed";
             this.cmbSpeed.Size = new System.Drawing.Size(182, 21);
             this.cmbSpeed.TabIndex = 67;
@@ -111,7 +113,7 @@
             this.label4.BackColor = System.Drawing.Color.DarkRed;
             this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label4.Location = new System.Drawing.Point(73, 9);
+            this.label4.Location = new System.Drawing.Point(88, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(394, 26);
             this.label4.TabIndex = 69;
@@ -127,7 +129,7 @@
             this.btnregistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnregistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnregistrar.ForeColor = System.Drawing.Color.Black;
-            this.btnregistrar.Location = new System.Drawing.Point(228, 170);
+            this.btnregistrar.Location = new System.Drawing.Point(244, 222);
             this.btnregistrar.Name = "btnregistrar";
             this.btnregistrar.Size = new System.Drawing.Size(89, 32);
             this.btnregistrar.TabIndex = 70;
@@ -142,7 +144,7 @@
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(369, 77);
+            this.label3.Location = new System.Drawing.Point(384, 77);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 16);
             this.label3.TabIndex = 71;
@@ -155,7 +157,7 @@
             this.lbPort.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbPort.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPort.ForeColor = System.Drawing.Color.Black;
-            this.lbPort.Location = new System.Drawing.Point(446, 76);
+            this.lbPort.Location = new System.Drawing.Point(461, 76);
             this.lbPort.Name = "lbPort";
             this.lbPort.Size = new System.Drawing.Size(0, 16);
             this.lbPort.TabIndex = 72;
@@ -167,7 +169,7 @@
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(369, 125);
+            this.label5.Location = new System.Drawing.Point(384, 125);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(71, 16);
             this.label5.TabIndex = 73;
@@ -180,16 +182,55 @@
             this.lbBaud.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbBaud.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBaud.ForeColor = System.Drawing.Color.Black;
-            this.lbBaud.Location = new System.Drawing.Point(446, 124);
+            this.lbBaud.Location = new System.Drawing.Point(461, 124);
             this.lbBaud.Name = "lbBaud";
             this.lbBaud.Size = new System.Drawing.Size(0, 16);
             this.lbBaud.TabIndex = 74;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.White;
+            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(72, 170);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(110, 16);
+            this.label6.TabIndex = 76;
+            this.label6.Text = "Departamento:";
+            // 
+            // cmbDpto
+            // 
+            this.cmbDpto.BackColor = System.Drawing.Color.Gainsboro;
+            this.cmbDpto.DropDownHeight = 80;
+            this.cmbDpto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDpto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbDpto.ForeColor = System.Drawing.Color.Black;
+            this.cmbDpto.FormattingEnabled = true;
+            this.cmbDpto.IntegralHeight = false;
+            this.cmbDpto.ItemHeight = 13;
+            this.cmbDpto.Items.AddRange(new object[] {
+            "300",
+            "1200",
+            "2400 ",
+            "4800",
+            "9600",
+            "19200",
+            "38400"});
+            this.cmbDpto.Location = new System.Drawing.Point(196, 169);
+            this.cmbDpto.Name = "cmbDpto";
+            this.cmbDpto.Size = new System.Drawing.Size(182, 21);
+            this.cmbDpto.TabIndex = 75;
+            this.cmbDpto.SelectedValueChanged += new System.EventHandler(this.cmbDpto_SelectedValueChanged);
             // 
             // frmPuerto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(555, 223);
+            this.ClientSize = new System.Drawing.Size(555, 276);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.cmbDpto);
             this.Controls.Add(this.lbBaud);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lbPort);
@@ -224,5 +265,7 @@
         private System.Windows.Forms.Label lbPort;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lbBaud;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cmbDpto;
     }
 }

@@ -343,6 +343,7 @@
             this.btnOrden.Text = "Orden Producción";
             this.btnOrden.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnOrden.UseVisualStyleBackColor = false;
+            this.btnOrden.Click += new System.EventHandler(this.btnOrden_Click);
             // 
             // panel5
             // 

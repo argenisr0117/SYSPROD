@@ -18,6 +18,7 @@ namespace Interfaz.Registros
         clsProducto P = new clsProducto();
         clsCliente C = new clsCliente();
         clsDepartamento D = new clsDepartamento();
+        clsOrdenProduccion O = new clsOrdenProduccion();
         public string dpto = "";
         public int dpt = 0;
         public frmOrdenProduccion()
@@ -70,10 +71,11 @@ namespace Interfaz.Registros
             ComboC();
             ComboP();
             ComboD();
-            cmbCliente.Enabled = false;
+            //cmbCliente.Enabled = false;
             cmbCliente.SelectedIndex = -1;
-            cmbDpto.SelectedValue = "";
+            cmbDpto.SelectedValue = "Galv";
             cmbProducto.SelectedValue = "";
+            
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -101,6 +103,62 @@ namespace Interfaz.Registros
             }
             Program.Evento = 0;
             Program.Valor3 = 0;
+        }
+
+        private void cmbDpto_SelectedValueChanged(object sender, EventArgs e)
+        {
+            dpto = cmbDpto.SelectedValue.ToString();
+            ComboC();
+            cmbCliente.SelectedIndex = -1;
+        }
+
+        private void Limpiar()
+        {
+            txtCantidad.Clear();
+            txtNumOrden.Clear();
+            cmbCliente.SelectedIndex = -1;
+            cmbProducto.SelectedValue = "";
+            cmbDpto.SelectedValue = "Galv";
+        }
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+            if (Utilidades.ValidarForm(this, errorProvider1) == false)
+            {
+                return;
+            }
+            bool mensaje;
+            try
+            {
+                if(cmbCliente.SelectedIndex!=-1 && cmbProducto.SelectedValue.ToString() != "")
+                {
+                    O.Numorden = txtNumOrden.Text;
+                    O.Idusuario = Program.Idusuario;
+                    O.Cliente = Convert.ToInt16(cmbCliente.SelectedValue);
+                    O.Dpto = cmbDpto.SelectedValue.ToString();
+                    O.Producto = cmbProducto.SelectedValue.ToString();
+                    O.Cantidad = Convert.ToDouble(txtCantidad.Text);
+                    mensaje = O.RegistrarOrdenProduccion();
+                    if (mensaje == true)
+                    {
+                        MessageBoxEx.Show("Ordén registrada", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Limpiar();
+                    }
+                    else
+                    {
+                        MessageBoxEx.Show("Error\nNúmero de ordén ya existe\n o Hay una ordén activa para este cliente, verifique", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBoxEx.Show(ex.Message);
+            }
         }
     }
 }

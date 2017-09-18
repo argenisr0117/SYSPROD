@@ -123,6 +123,12 @@
     <Compile Include="Consultas\frmcFiltros.Designer.cs">
       <DependentUpon>frmcFiltros.cs</DependentUpon>
     </Compile>
+    <Compile Include="Consultas\frmcOrdenProduccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmcOrdenProduccion.Designer.cs">
+      <DependentUpon>frmcOrdenProduccion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consultas\frmcProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -397,6 +403,9 @@
     <EmbeddedResource Include="Consultas\frmcFiltros.resx">
       <DependentUpon>frmcFiltros.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\frmcOrdenProduccion.resx">
+      <DependentUpon>frmcOrdenProduccion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consultas\frmcProducto.resx">
       <DependentUpon>frmcProducto.cs</DependentUpon>
     </EmbeddedResource>
@@ -621,6 +630,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\page_edit.png" />
+    <None Include="Resources\edit.ico" />
     <None Include="Resources\imagen.jpg" />
     <None Include="Resources\images %281%29.jpg" />
     <None Include="Resources\print.ico" />

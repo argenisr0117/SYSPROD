@@ -98,8 +98,12 @@ namespace Interfaz
                         Program.ciecong = Convert.ToBoolean(dt.Rows[0][24]);
                         Program.cieacong = Convert.ToBoolean(dt.Rows[0][25]);
                         Program.filcong = Convert.ToBoolean(dt.Rows[0][26]);
+                        Program.ordenprod = Convert.ToBoolean(dt.Rows[0][27]);
+                        Program.controlcald = Convert.ToBoolean(dt.Rows[0][28]);
+                        Program.Idusuario = Convert.ToInt16(dt.Rows[0][0]);
                         //Program.Usuario = txtUsuario.Text;
-                        Splash obj = new Splash();
+                        //Splash obj = new Splash();
+                        Principal obj = new Principal();
                         this.Hide();
                         obj.ShowDialog();
                         this.Close();

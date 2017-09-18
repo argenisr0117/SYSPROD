@@ -450,3 +450,4 @@ C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Reportes
 C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmProduccionGalv.resources
 C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmOrdenProduccion.resources
 C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmProduccionGalv.resources
+C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcOrdenProduccion.resources

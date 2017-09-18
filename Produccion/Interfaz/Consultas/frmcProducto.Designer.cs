@@ -236,6 +236,7 @@
             this.MaximizeBox = false;
             this.Name = "frmcProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "SISTEMA DE PRODUCCIÓN";
             this.Load += new System.EventHandler(this.frmcProducto_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

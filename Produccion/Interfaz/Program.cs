@@ -9,6 +9,8 @@ namespace Interfaz
 {
     static class Program
     {
+        public static int Idpuerto;
+        public static int Idusuario;
         public static int Valor3;
         public static int Evento;
         public static int Valor;
@@ -54,6 +56,8 @@ namespace Interfaz
         public static Boolean ciecong;
         public static Boolean cieacong;
         public static Boolean filcong;
+        public static Boolean ordenprod;
+        public static Boolean controlcald;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

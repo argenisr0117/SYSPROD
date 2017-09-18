@@ -54,6 +54,7 @@
     <Compile Include="clsProduccion.cs" />
     <Compile Include="clsProduccionIndM.cs" />
     <Compile Include="clsProduccionGalv.cs" />
+    <Compile Include="clsOrdenProduccion.cs" />
     <Compile Include="clsProduccionTref.cs" />
     <Compile Include="clsProducto.cs" />
     <Compile Include="clsTurno.cs" />

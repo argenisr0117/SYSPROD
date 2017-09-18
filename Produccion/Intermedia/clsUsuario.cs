@@ -45,6 +45,8 @@ namespace Intermedia
         Boolean Mciecong;
         Boolean Mcieacong;
         Boolean Mfilcong;
+        Boolean Mordenprod;
+        Boolean Mcontrolcald;
 
 
         public int Idusuario
@@ -128,6 +130,16 @@ namespace Intermedia
         {
             get { return Meliindm; }
             set { Meliindm = value; }
+        }
+        public Boolean OrdenProd
+        {
+            get { return Mordenprod; }
+            set { Mordenprod = value; }
+        }
+        public Boolean ControlCald
+        {
+            get { return Mcontrolcald; }
+            set { Mcontrolcald = value; }
         }
         public Boolean Ediindm
         {
@@ -260,9 +272,11 @@ namespace Intermedia
             lst.Add(new clsParametros("@ciecong", Mciecong));
             lst.Add(new clsParametros("@cieacong", Mcieacong));
             lst.Add(new clsParametros("@filcong",Mfilcong));
+            lst.Add(new clsParametros("@ordenprod",Mordenprod));
+            lst.Add(new clsParametros("@controlcald",Mcontrolcald));
             lst.Add(new clsParametros("@mensaje", "", SqlDbType.Int, ParameterDirection.Output, 8));
             M.EjecutarSP("registrar_act_permisos", ref lst);
-            mensaje =Convert.ToInt32(lst[27].Valor);
+            mensaje =Convert.ToInt32(lst[29].Valor);
             return mensaje;
         }
         public string VerificarLogin()

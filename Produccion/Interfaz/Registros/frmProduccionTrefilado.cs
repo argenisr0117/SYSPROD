@@ -87,7 +87,7 @@ namespace Interfaz.Registros
                 serialPort1.Close();
             }
             DataTable dt = new DataTable();
-            dt = PT.Configuracion_Puerto();
+            dt = PT.Configuracion_Puerto("Tref");
             try
             {
                 for (int x = 0; x < dt.Rows.Count; x++)

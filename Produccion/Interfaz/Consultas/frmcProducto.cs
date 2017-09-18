@@ -97,7 +97,7 @@ namespace Interfaz.Consultas
         {
             txtbuscar.Focus();
             cbestado.SelectedIndex = 0;
-            rbCodigo.Checked = true;
+            rbDescripcion.Checked = true;
             LlenarGrid();
         }
 

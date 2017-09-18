@@ -57,6 +57,7 @@ namespace Interfaz
             btnregistros.Enabled = Program.reggen;
             btnTrefilado.Enabled = Program.prodtref;
             btnIndustriaMenor.Enabled = Program.prodindm;
+            btnOrden.Enabled = Program.ordenprod;
         }
         private void AbrirForm(string form)
         {
@@ -98,6 +99,11 @@ namespace Interfaz
                 if (form == "frmProduccionGalv")
                 {
                     frmProduccionGalv obj = new frmProduccionGalv();
+                    obj.Show();
+                }
+                if (form == "frmcOrdenProduccion")
+                {
+                    Consultas.frmcOrdenProduccion obj = new Consultas.frmcOrdenProduccion();
                     obj.Show();
                 }
             }
@@ -144,6 +150,12 @@ namespace Interfaz
                 this.MaximizeBox = false;
             }
 
+        }
+
+        private void btnOrden_Click(object sender, EventArgs e)
+        {
+            form = "frmcOrdenProduccion";
+            AbrirForm(form);
         }
     }
 }

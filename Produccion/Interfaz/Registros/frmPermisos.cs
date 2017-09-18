@@ -72,6 +72,8 @@ namespace Interfaz.Registros
                 U.Ciecong = cbCierreM.Checked;
                 U.Cieacong = cBcierreA.Checked;
                 U.Filcong = cBFiltros.Checked;
+                U.OrdenProd = cbOrdenProd.Checked;
+                U.ControlCald = cbControlCal.Checked;
 
                 mensaje = U.RegistrarActPermisos();
                 if (mensaje == 1)
@@ -125,6 +127,8 @@ namespace Interfaz.Registros
                 cbCierreM.Checked= Convert.ToBoolean(dt.Rows[0][24]);
                 cBcierreA.Checked= Convert.ToBoolean(dt.Rows[0][25]);
                 cBFiltros.Checked= Convert.ToBoolean(dt.Rows[0][26]);
+                cbOrdenProd.Checked= Convert.ToBoolean(dt.Rows[0][27]);
+                cbControlCal.Checked= Convert.ToBoolean(dt.Rows[0][28]);
             }
             catch(Exception ex)
             {

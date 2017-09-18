@@ -37,14 +37,16 @@
             this.cmbCliente = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textbox1 = new Interfaz.Controles.textbox(this.components);
-            this.cmbDpto = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textboxN1 = new Interfaz.Controles.textboxN(this.components);
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtCantidad = new Interfaz.Controles.textboxN(this.components);
+            this.txtNumOrden = new Interfaz.Controles.textbox(this.components);
+            this.cmbDpto = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -92,7 +94,7 @@
             this.cmbProducto.MaxDropDownItems = 30;
             this.cmbProducto.Name = "cmbProducto";
             this.cmbProducto.Size = new System.Drawing.Size(369, 26);
-            this.cmbProducto.TabIndex = 136;
+            this.cmbProducto.TabIndex = 1;
             // 
             // label9
             // 
@@ -120,7 +122,7 @@
             this.cmbCliente.MaxDropDownItems = 30;
             this.cmbCliente.Name = "cmbCliente";
             this.cmbCliente.Size = new System.Drawing.Size(369, 26);
-            this.cmbCliente.TabIndex = 134;
+            this.cmbCliente.TabIndex = 2;
             // 
             // label6
             // 
@@ -146,31 +148,6 @@
             this.label1.TabIndex = 138;
             this.label1.Text = "# ORDEN:";
             // 
-            // textbox1
-            // 
-            this.textbox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textbox1.Location = new System.Drawing.Point(151, 89);
-            this.textbox1.Name = "textbox1";
-            this.textbox1.Size = new System.Drawing.Size(100, 22);
-            this.textbox1.TabIndex = 139;
-            this.textbox1.Validar = true;
-            // 
-            // cmbDpto
-            // 
-            this.cmbDpto.BackColor = System.Drawing.Color.Gainsboro;
-            this.cmbDpto.DropDownHeight = 160;
-            this.cmbDpto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbDpto.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmbDpto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbDpto.ForeColor = System.Drawing.Color.Black;
-            this.cmbDpto.FormattingEnabled = true;
-            this.cmbDpto.IntegralHeight = false;
-            this.cmbDpto.Location = new System.Drawing.Point(151, 117);
-            this.cmbDpto.MaxDropDownItems = 30;
-            this.cmbDpto.Name = "cmbDpto";
-            this.cmbDpto.Size = new System.Drawing.Size(369, 26);
-            this.cmbDpto.TabIndex = 141;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -195,16 +172,6 @@
             this.label4.TabIndex = 142;
             this.label4.Text = "CANTIDAD:";
             // 
-            // textboxN1
-            // 
-            this.textboxN1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textboxN1.Location = new System.Drawing.Point(151, 211);
-            this.textboxN1.Name = "textboxN1";
-            this.textboxN1.Size = new System.Drawing.Size(100, 22);
-            this.textboxN1.TabIndex = 143;
-            this.textboxN1.Validar = false;
-            this.textboxN1.Valor = Interfaz.Controles.textboxN.Tipo.Números;
-            // 
             // btnLimpiar
             // 
             this.btnLimpiar.BackColor = System.Drawing.Color.White;
@@ -224,6 +191,7 @@
             this.btnLimpiar.Text = "LIMPIAR";
             this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnRegistrar
             // 
@@ -244,6 +212,7 @@
             this.btnRegistrar.Text = "REGISTRAR";
             this.btnRegistrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // btnSalir
             // 
@@ -266,6 +235,46 @@
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // txtCantidad
+            // 
+            this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCantidad.Location = new System.Drawing.Point(151, 211);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(100, 22);
+            this.txtCantidad.TabIndex = 3;
+            this.txtCantidad.Validar = false;
+            this.txtCantidad.Valor = Interfaz.Controles.textboxN.Tipo.Números;
+            // 
+            // txtNumOrden
+            // 
+            this.txtNumOrden.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumOrden.Location = new System.Drawing.Point(151, 89);
+            this.txtNumOrden.Name = "txtNumOrden";
+            this.txtNumOrden.Size = new System.Drawing.Size(100, 22);
+            this.txtNumOrden.TabIndex = 0;
+            this.txtNumOrden.Validar = true;
+            // 
+            // cmbDpto
+            // 
+            this.cmbDpto.BackColor = System.Drawing.Color.Gainsboro;
+            this.cmbDpto.DropDownHeight = 160;
+            this.cmbDpto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDpto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbDpto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbDpto.ForeColor = System.Drawing.Color.Black;
+            this.cmbDpto.FormattingEnabled = true;
+            this.cmbDpto.IntegralHeight = false;
+            this.cmbDpto.Location = new System.Drawing.Point(151, 117);
+            this.cmbDpto.MaxDropDownItems = 30;
+            this.cmbDpto.Name = "cmbDpto";
+            this.cmbDpto.Size = new System.Drawing.Size(369, 26);
+            this.cmbDpto.TabIndex = 141;
+            this.cmbDpto.SelectedValueChanged += new System.EventHandler(this.cmbDpto_SelectedValueChanged);
+            // 
             // frmOrdenProduccion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -274,11 +283,11 @@
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnRegistrar);
-            this.Controls.Add(this.textboxN1);
+            this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.cmbDpto);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textbox1);
+            this.Controls.Add(this.txtNumOrden);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.cmbProducto);
@@ -292,7 +301,9 @@
             this.MaximizeBox = false;
             this.Name = "frmOrdenProduccion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "SISTEMA DE PRODUCCIÓN";
             this.Load += new System.EventHandler(this.frmOrdenProduccion_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -307,13 +318,14 @@
         private System.Windows.Forms.ComboBox cmbCliente;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
-        private Controles.textbox textbox1;
-        private System.Windows.Forms.ComboBox cmbDpto;
+        private Controles.textbox txtNumOrden;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private Controles.textboxN textboxN1;
+        private Controles.textboxN txtCantidad;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ComboBox cmbDpto;
     }
 }
