@@ -85,6 +85,17 @@ namespace Intermedia
             mensaje =Convert.ToBoolean(lst[0].Valor);
             return mensaje;
         }
+        public bool ActualizarOrdenProduccion()
+        {
+            bool mensaje = false;
+            List<clsParametros> lst = new List<clsParametros>();
+            lst.Add(new clsParametros("@mensaje", "", SqlDbType.Bit, ParameterDirection.Output, 1));
+            lst.Add(new clsParametros("@numorden", Mnumorden));
+            lst.Add(new clsParametros("@cantidad", Mcantidad));
+            M.EjecutarSP("actualizar_orden", ref lst);
+            mensaje = Convert.ToBoolean(lst[0].Valor);
+            return mensaje;
+        }
         public DataTable ListadoOrdenes(bool estado)
         {
             DataTable dt = new DataTable();

@@ -52,6 +52,36 @@ namespace Interfaz.Consultas
         {
             LlenarGrid();
         }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            Registros.frmOrdenProduccion obj = new Registros.frmOrdenProduccion();
+            obj.ShowDialog();
+            LlenarGrid();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dtgOrdenes.SelectedRows.Count > 0)
+                {
+                    Program.Orden = dtgOrdenes.CurrentRow.Cells[1].Value.ToString();
+                    Program.Producto = dtgOrdenes.CurrentRow.Cells[2].Value.ToString();
+                    Program.Cliente1 = dtgOrdenes.CurrentRow.Cells[3].Value.ToString();
+                    Program.Dpto = dtgOrdenes.CurrentRow.Cells[6].Value.ToString();
+                    Program.Cantidad = Convert.ToInt16(dtgOrdenes.CurrentRow.Cells[4].Value);
+                    Program.Valor = 5;
+                    Registros.frmOrdenProduccion obj = new Registros.frmOrdenProduccion();
+                    obj.ShowDialog();
+                    LlenarGrid();
+                }
+            }
+            catch(Exception ex)
+            {
+
+            }
+        }
     }
 
    

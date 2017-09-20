@@ -118,6 +118,7 @@
             this.btnEditar.Text = "EDITAR";
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnRegistrar
             // 
@@ -138,6 +139,7 @@
             this.btnRegistrar.Text = "NUEVA";
             this.btnRegistrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // btnPacking
             // 

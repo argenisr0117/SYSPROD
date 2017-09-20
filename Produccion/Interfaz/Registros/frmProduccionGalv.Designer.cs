@@ -40,6 +40,8 @@
             this.pUERTOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabregistro = new System.Windows.Forms.TabPage();
+            this.cmbAyudante = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.txtPesoBruto = new Interfaz.Controles.textboxN(this.components);
             this.label14 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -77,6 +79,8 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnExportar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbProdT3 = new System.Windows.Forms.Label();
+            this.lbTurno3 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -94,10 +98,7 @@
             this.lbTotalProd = new System.Windows.Forms.Label();
             this.dtgvProduccion = new System.Windows.Forms.DataGridView();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
-            this.cmbAyudante = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lbProdT3 = new System.Windows.Forms.Label();
-            this.lbTurno3 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabregistro.SuspendLayout();
@@ -154,7 +155,7 @@
             // pUERTOSToolStripMenuItem
             // 
             this.pUERTOSToolStripMenuItem.Name = "pUERTOSToolStripMenuItem";
-            this.pUERTOSToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pUERTOSToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.pUERTOSToolStripMenuItem.Text = "PUERTOS";
             this.pUERTOSToolStripMenuItem.Click += new System.EventHandler(this.pUERTOSToolStripMenuItem_Click);
             // 
@@ -214,6 +215,34 @@
             this.tabregistro.TabIndex = 0;
             this.tabregistro.Text = "REGISTRAR";
             this.tabregistro.UseVisualStyleBackColor = true;
+            // 
+            // cmbAyudante
+            // 
+            this.cmbAyudante.BackColor = System.Drawing.Color.Gainsboro;
+            this.cmbAyudante.DropDownHeight = 160;
+            this.cmbAyudante.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbAyudante.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbAyudante.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbAyudante.ForeColor = System.Drawing.Color.Black;
+            this.cmbAyudante.FormattingEnabled = true;
+            this.cmbAyudante.IntegralHeight = false;
+            this.cmbAyudante.Location = new System.Drawing.Point(279, 196);
+            this.cmbAyudante.MaxDropDownItems = 30;
+            this.cmbAyudante.Name = "cmbAyudante";
+            this.cmbAyudante.Size = new System.Drawing.Size(410, 26);
+            this.cmbAyudante.TabIndex = 143;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(117, 203);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(78, 13);
+            this.label2.TabIndex = 142;
+            this.label2.Text = "AYUDANTE:";
             // 
             // txtPesoBruto
             // 
@@ -778,6 +807,27 @@
             this.panel1.Size = new System.Drawing.Size(869, 85);
             this.panel1.TabIndex = 1;
             // 
+            // lbProdT3
+            // 
+            this.lbProdT3.AutoSize = true;
+            this.lbProdT3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbProdT3.ForeColor = System.Drawing.Color.Maroon;
+            this.lbProdT3.Location = new System.Drawing.Point(317, 56);
+            this.lbProdT3.Name = "lbProdT3";
+            this.lbProdT3.Size = new System.Drawing.Size(32, 13);
+            this.lbProdT3.TabIndex = 69;
+            this.lbProdT3.Text = "0.00";
+            // 
+            // lbTurno3
+            // 
+            this.lbTurno3.AutoSize = true;
+            this.lbTurno3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTurno3.Location = new System.Drawing.Point(257, 56);
+            this.lbTurno3.Name = "lbTurno3";
+            this.lbTurno3.Size = new System.Drawing.Size(11, 13);
+            this.lbTurno3.TabIndex = 68;
+            this.lbTurno3.Text = ".";
+            // 
             // label18
             // 
             this.label18.AutoSize = true;
@@ -986,54 +1036,10 @@
             this.serialPort1.PortName = "COM3";
             this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
             // 
-            // cmbAyudante
+            // timer1
             // 
-            this.cmbAyudante.BackColor = System.Drawing.Color.Gainsboro;
-            this.cmbAyudante.DropDownHeight = 160;
-            this.cmbAyudante.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbAyudante.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmbAyudante.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbAyudante.ForeColor = System.Drawing.Color.Black;
-            this.cmbAyudante.FormattingEnabled = true;
-            this.cmbAyudante.IntegralHeight = false;
-            this.cmbAyudante.Location = new System.Drawing.Point(279, 196);
-            this.cmbAyudante.MaxDropDownItems = 30;
-            this.cmbAyudante.Name = "cmbAyudante";
-            this.cmbAyudante.Size = new System.Drawing.Size(410, 26);
-            this.cmbAyudante.TabIndex = 143;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(117, 203);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 13);
-            this.label2.TabIndex = 142;
-            this.label2.Text = "AYUDANTE:";
-            // 
-            // lbProdT3
-            // 
-            this.lbProdT3.AutoSize = true;
-            this.lbProdT3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbProdT3.ForeColor = System.Drawing.Color.Maroon;
-            this.lbProdT3.Location = new System.Drawing.Point(317, 56);
-            this.lbProdT3.Name = "lbProdT3";
-            this.lbProdT3.Size = new System.Drawing.Size(32, 13);
-            this.lbProdT3.TabIndex = 69;
-            this.lbProdT3.Text = "0.00";
-            // 
-            // lbTurno3
-            // 
-            this.lbTurno3.AutoSize = true;
-            this.lbTurno3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTurno3.Location = new System.Drawing.Point(257, 56);
-            this.lbTurno3.Name = "lbTurno3";
-            this.lbTurno3.Size = new System.Drawing.Size(11, 13);
-            this.lbTurno3.TabIndex = 68;
-            this.lbTurno3.Text = ".";
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // frmProduccionGalv
             // 
@@ -1134,5 +1140,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbProdT3;
         private System.Windows.Forms.Label lbTurno3;
+        private System.Windows.Forms.Timer timer1;
     }
 }

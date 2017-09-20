@@ -29,6 +29,7 @@ namespace Interfaz.Registros
         public string sae1;
         public string calibre;
         public string medio;
+        public string ind = "";
 
 
         public frmProduccionGalv()
@@ -55,11 +56,11 @@ namespace Interfaz.Registros
                 //string result = Regex.Replace(text, @"^[0-9]*\.?[0-9]*$", "");
                 //text =(text.Trim(new Char[] { 'G', 'S', 'U', '+', 'l','b','.', ' ' }));
                 //double var = Convert.ToDouble(result);
-               // MessageBox.Show(result);
-               // int num = (int)Convert.ToInt32(result);
-               // MessageBox.Show(num.ToString());
-                decimal res =decimal.Truncate(Convert.ToDecimal(result));
-                this.txtPesoBruto.Text = res.ToString(); 
+                // MessageBox.Show(result);
+                // int num = (int)Convert.ToInt32(result);
+                // MessageBox.Show(num.ToString());
+                //decimal res =decimal.Truncate(Convert.ToDecimal(result));
+                this.txtPesoBruto.Text = result;
             }
         }
         private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
@@ -67,9 +68,16 @@ namespace Interfaz.Registros
             try
             {
                 SerialPort sp = (SerialPort)sender;
+                //while (sp.ReadExisting() != "CZ")
+                //{
                 string indata = sp.ReadLine();
-                //MessageBox.Show(indata);
+                //ind = ind + indata;
+                //}
                 SetText(indata);
+                //Console.Write(indata);
+                //MessageBox.Show(indata);
+               
+                //ind = "";
                 //ClosePuertoSerial();
             }
             catch(Exception ex)
@@ -87,7 +95,7 @@ namespace Interfaz.Registros
                 serialPort1.Close();
             }
             DataTable dt = new DataTable();
-            dt = PG.Configuracion_Puerto();
+            dt = PG.Configuracion_Puerto("Galv");
             try
             {
                 for (int x = 0; x < dt.Rows.Count; x++)
@@ -96,6 +104,8 @@ namespace Interfaz.Registros
                     serialPort1.BaudRate = Convert.ToInt32(dt.Rows[x][2]);
                 }
                 serialPort1.Open();
+                serialPort1.NewLine = "\r";  //para que termine la linea;
+                
 
             }
             catch (Exception ex)
@@ -267,7 +277,10 @@ namespace Interfaz.Registros
             Limpiar();
             PG.Valor = 2; //valor para filtrar total produccion
             LlenarGrid();
-            Produccion_Total();    
+            Produccion_Total();
+           // timer1.Enabled = true;
+            timer1.Start();
+                
         }
         private void Permisos()
         {
@@ -604,7 +617,7 @@ namespace Interfaz.Registros
                         string mensaje = "";
                         int tarjeta = PG.SecuenciaTarjeta();
                         DateTime hora = Convert.ToDateTime(DateTime.Now.ToShortTimeString());
-                        TimeSpan hora1 = TimeSpan.Parse(hora.ToString("H\\:mm"));
+                        TimeSpan hora1 = TimeSpan.Parse(hora.ToString("H\\:mm:ss"));
                         PG.Supervisor = cmbSupervisor.SelectedValue.ToString();
                         PG.Operador = cmbOperador.SelectedValue.ToString();
                         PG.Ayudante = "DESC-01";
@@ -976,5 +989,24 @@ namespace Interfaz.Registros
             }
 
         }
+
+        private void timer1_Tick(object sender, EventArgs e) //timer para enviar peso de la balanza cada 1 segundo
+        {
+            SerialPort sp = new SerialPort();
+            if (!serialPort1.IsOpen)
+            {
+                serialPort1.Open();
+            }
+            else
+            {
+                byte[] code = { 0x05 }; //codigo para que la balanza envie el peso
+                //string code1 = code.ToString("X2");
+                //code1 = "0" + code1;
+                serialPort1.Write(code,0,code.Length);
+                //Console.WriteLine(code1);
+            }
+            
+        }
+
     }
 }

@@ -75,6 +75,19 @@ namespace Interfaz.Registros
             cmbCliente.SelectedIndex = -1;
             cmbDpto.SelectedValue = "Galv";
             cmbProducto.SelectedValue = "";
+            if (Program.Valor == 5)
+            {
+                txtNumOrden.Text = Program.Orden;
+                txtCantidad.Text = Program.Cantidad.ToString();
+                cmbCliente.Text = Program.Cliente1;
+                cmbDpto.Text = Program.Dpto;
+                cmbProducto.Text = Program.Producto;
+                txtNumOrden.Enabled = false;
+                cmbProducto.Enabled = false;
+                cmbDpto.Enabled = false;
+                cmbCliente.Enabled = false;
+                txtCantidad.Focus();
+            }
             
         }
 
@@ -134,7 +147,7 @@ namespace Interfaz.Registros
             }
             bool mensaje;
             try
-            {
+            {               
                 if(cmbCliente.SelectedIndex!=-1 && cmbProducto.SelectedValue.ToString() != "")
                 {
                     O.Numorden = txtNumOrden.Text;
@@ -143,16 +156,37 @@ namespace Interfaz.Registros
                     O.Dpto = cmbDpto.SelectedValue.ToString();
                     O.Producto = cmbProducto.SelectedValue.ToString();
                     O.Cantidad = Convert.ToDouble(txtCantidad.Text);
-                    mensaje = O.RegistrarOrdenProduccion();
-                    if (mensaje == true)
+                    if (Program.Valor == 5)
                     {
-                        MessageBoxEx.Show("Ordén registrada", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Limpiar();
+                        mensaje = O.ActualizarOrdenProduccion();
+                        if (mensaje == true)
+                        {
+
+                            MessageBoxEx.Show("Ordén actualizada", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Limpiar();
+                            Program.Valor = 0;
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBoxEx.Show("Cantidad no puede ser menor a lo ya producido", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
                     }
                     else
                     {
-                        MessageBoxEx.Show("Error\nNúmero de ordén ya existe\n o Hay una ordén activa para este cliente, verifique", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        mensaje = O.RegistrarOrdenProduccion();
+                        if (mensaje == true)
+                        {
+
+                            MessageBoxEx.Show("Ordén registrada", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Limpiar();
+                        }
+                        else
+                        {
+                            MessageBoxEx.Show("Error\nNúmero de ordén ya existe", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
+                    
                 }
             }
             catch(Exception ex)

@@ -37,10 +37,16 @@ namespace Intermedia
         int Mvalor;
         double Mpesoneto;
         byte[] Mbarcode;
+        string Middpto;
         public DateTime Fecha
         {
             get { return Mfecha; }
             set { Mfecha = value; }
+        }
+        public string Dpto
+        {
+            get { return Mdpto; }
+            set { Mdpto = value; }
         }
         public DateTime Fecha1
         {
@@ -67,10 +73,10 @@ namespace Intermedia
             get { return Msupervisor; }
             set { Msupervisor = value; }
         }
-        public string Dpto
+        public string Iddpto
         {
-            get { return Mdpto; }
-            set { Mdpto = value; }
+            get { return Middpto; }
+            set { Middpto = value; }
         }
         public byte[] Barcode
         {
@@ -202,10 +208,11 @@ namespace Intermedia
             lst.Add(new clsParametros("@valor", Mvalor));
             return dt = M.Listado("produccion_diaria_galv", lst);
         }
-        public DataTable Configuracion_Puerto()
+        public DataTable Configuracion_Puerto(string Dpto)
         {
             DataTable dt = new DataTable();
             List<clsParametros> lst = new List<clsParametros>();
+            lst.Add(new clsParametros("@dpto", Dpto));
             return dt = M.Listado("configuracion_puerto", lst);
         }
         public int SecuenciaTarjeta()
@@ -247,9 +254,10 @@ namespace Intermedia
             lst.Add(new clsParametros("@id", Mid));
             lst.Add(new clsParametros("@puerto", Mpuerto));
             lst.Add(new clsParametros("@baudrate", Mbaud));
+            lst.Add(new clsParametros("@dpto", Middpto));
             lst.Add(new clsParametros("@mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 50));
             M.EjecutarSP("actualizar_puerto", ref lst);
-            mensaje = lst[3].Valor.ToString();
+            mensaje = lst[4].Valor.ToString();
             return mensaje;
         }
         public string ActualizarRegistroDpto()
