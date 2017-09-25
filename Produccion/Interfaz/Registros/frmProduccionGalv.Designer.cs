@@ -42,7 +42,6 @@
             this.tabregistro = new System.Windows.Forms.TabPage();
             this.cmbAyudante = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtPesoBruto = new Interfaz.Controles.textboxN(this.components);
             this.label14 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtCalibre = new System.Windows.Forms.TextBox();
@@ -99,6 +98,7 @@
             this.dtgvProduccion = new System.Windows.Forms.DataGridView();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.txtPesoBruto = new Interfaz.Controles.textboxN(this.components);
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabregistro.SuspendLayout();
@@ -243,17 +243,6 @@
             this.label2.Size = new System.Drawing.Size(78, 13);
             this.label2.TabIndex = 142;
             this.label2.Text = "AYUDANTE:";
-            // 
-            // txtPesoBruto
-            // 
-            this.txtPesoBruto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPesoBruto.Location = new System.Drawing.Point(279, 444);
-            this.txtPesoBruto.Name = "txtPesoBruto";
-            this.txtPesoBruto.ReadOnly = true;
-            this.txtPesoBruto.Size = new System.Drawing.Size(407, 21);
-            this.txtPesoBruto.TabIndex = 141;
-            this.txtPesoBruto.Validar = false;
-            this.txtPesoBruto.Valor = Interfaz.Controles.textboxN.Tipo.Números;
             // 
             // label14
             // 
@@ -1041,6 +1030,16 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // txtPesoBruto
+            // 
+            this.txtPesoBruto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPesoBruto.Location = new System.Drawing.Point(279, 444);
+            this.txtPesoBruto.Name = "txtPesoBruto";
+            this.txtPesoBruto.Size = new System.Drawing.Size(407, 21);
+            this.txtPesoBruto.TabIndex = 141;
+            this.txtPesoBruto.Validar = false;
+            this.txtPesoBruto.Valor = Interfaz.Controles.textboxN.Tipo.Números;
+            // 
             // frmProduccionGalv
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -1055,7 +1054,7 @@
             this.MaximizeBox = false;
             this.Name = "frmProduccionGalv";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TREFILADO- IDENTIFICACION DE ALAMBRE";
+            this.Text = "GALVANIZADO- IDENTIFICACION DE ALAMBRE";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmProduccionTrefilado_FormClosing);
             this.Load += new System.EventHandler(this.frmProduccionTrefilado_Load);
             this.menuStrip1.ResumeLayout(false);

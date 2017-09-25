@@ -45,14 +45,17 @@ namespace Interfaz
         {
             // Set the page settings to the default defined in the report
             ReportPageSettings reportPageSettings = report.GetDefaultPageSettings();
+            
 
             // The page settings object will use the default printer unless
             // PageSettings.PrinterSettings is changed.  This assumes there
             // is a default printer.
             m_pageSettings = new PageSettings();
+            
             m_pageSettings.PaperSize = reportPageSettings.PaperSize;
             m_pageSettings.Margins = reportPageSettings.Margins;
             m_pageSettings.Landscape = reportPageSettings.IsLandscape;
+           
         }
 
         protected override void Dispose(bool disposing)

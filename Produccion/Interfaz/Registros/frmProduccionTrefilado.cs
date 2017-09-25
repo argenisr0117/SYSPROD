@@ -621,7 +621,7 @@ namespace Interfaz.Registros
                         frmReporte obj = new frmReporte();
                         obj.Fecha = Convert.ToDateTime(DateTime.Now.ToShortDateString());
                         obj.Valor = 7;
-                        obj.Supervisor = cmbSupervisor.Text;
+                        obj.Supervisor = cmbSupervisor.SelectedValue.ToString();
                         obj.Maquina = cmbMaquina.Text;
                         obj.Cliente = cmbCliente.Text;
                         obj.Colada = cmbColada.Text;
@@ -870,7 +870,7 @@ namespace Interfaz.Registros
                 if (dtgvProduccion.SelectedRows.Count > 0)
                 {
                     DataTable dt;
-                    dt = PT.Reimprimir(Convert.ToInt32(dtgvProduccion.CurrentRow.Cells[9].Value));
+                    dt = PT.Reimprimir(Convert.ToInt32(dtgvProduccion.CurrentRow.Cells[9].Value),0);
                     SeleccionarDiametro2(dt.Rows[0][10].ToString());
                     frmReporte obj = new frmReporte();
                     obj.Id = Convert.ToInt32(dtgvProduccion.CurrentRow.Cells[9].Value);

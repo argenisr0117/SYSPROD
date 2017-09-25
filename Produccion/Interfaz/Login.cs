@@ -23,7 +23,17 @@ namespace Interfaz
         private void Login_Load(object sender, EventArgs e)
         {
             //this.TitleText = "SysPROD";
-            txtUsuario.Focus();
+            txtUsuario.Text = Properties.Settings.Default.Usuario;
+            if (!string.IsNullOrEmpty(txtUsuario.Text))
+            {
+                txtUsuario.TabIndex = 1;
+                txtClave.TabIndex = 0;
+                txtClave.Focus();
+            }
+            else
+            {
+                txtUsuario.Focus();
+            }
             
         }
 
@@ -68,6 +78,8 @@ namespace Interfaz
                     }
                     else
                     {
+                        Properties.Settings.Default.Usuario = txtUsuario.Text;
+                        Properties.Settings.Default.Save();
                         DataTable dt = new DataTable();
                         U.Idusuario = 0;
                         U.Usuario = txtUsuario.Text;

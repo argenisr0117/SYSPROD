@@ -451,3 +451,6 @@ C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz
 C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmOrdenProduccion.resources
 C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmProduccionGalv.resources
 C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcOrdenProduccion.resources
+C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Interfaz\bin\Debug\Reportes\ticket_galvanizado.rdlc
+C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Interfaz\bin\Debug\Reportes\ticket_galvanizado2.rdlc
+C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Interfaz\bin\Debug\Reportes\ticket_galvanizado3.rdlc

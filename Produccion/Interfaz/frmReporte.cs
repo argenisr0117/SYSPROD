@@ -42,13 +42,16 @@ namespace Interfaz
         public int Id { get; set; }
         public string Supervisor { get; set; }
         public string Operador { get; set; }
+        public string Ayudante { get; set; }
         public string Maquina { get; set; }
         public string Producto { get; set; }
         public string Calibre { get; set; }
         public string Cliente { get; set; }
         public string Colada { get; set; }
         public int Tarjeta { get; set; }
+        public string Orden { get; set; }
         public string Peso { get; set; }
+        public string Pesokg { get; set; }
         public string Diametro { get; set; }
         public string Sae { get; set; }
         public string Medio { get; set; }
@@ -103,6 +106,14 @@ namespace Interfaz
             {
                 TicketTrefilado2();
             }
+            else if (Valor == 12)
+            {
+                TicketGalvanizado();
+            }
+            else if (Valor == 13)
+            {
+                TicketGalvanizado2();
+            }
         }
 
         private void TicketTrefilado2()
@@ -128,7 +139,7 @@ namespace Interfaz
             parametros[11] = new ReportParameter("Sae", Sae.ToString());
             parametros[12] = new ReportParameter("Medio", Medio.ToString());
             //NoReporte = "0000002";
-            rgta.Fill(ds.reimprimir_ticket,Id);
+            rgta.Fill(ds.reimprimir_ticket,Id,0);
             ReportDataSource rds = new ReportDataSource();
             reportViewer1.LocalReport.DisplayName = Reporte;
             rds.Name = "DataSet1";
@@ -189,6 +200,101 @@ namespace Interfaz
             //this.reportViewer1.RefreshReport();
             AutoPrintCls autoprintme = new AutoPrintCls(lc);
             autoprintme.Print();
+            cerrar();
+        }
+        private void TicketGalvanizado()
+        {
+            ReportParameter[] parametros = new ReportParameter[16];
+            PRODUCCIONDataSet ds = new PRODUCCIONDataSet();
+            PRODUCCIONDataSetTableAdapters.codigo_barraTableAdapter rgta = new PRODUCCIONDataSetTableAdapters.codigo_barraTableAdapter();
+            reportViewer1.ProcessingMode = ProcessingMode.Local;
+            LocalReport lc = reportViewer1.LocalReport;
+            string ruta = "Reportes\\" + Nombre;
+            lc.ReportPath = ruta;
+            parametros[0] = new ReportParameter("Fecha", Fecha.ToShortDateString());
+            parametros[1] = new ReportParameter("Supervisor", Supervisor.ToString());
+            parametros[2] = new ReportParameter("Operador", Operador.ToString());
+            parametros[3] = new ReportParameter("Maquina", Maquina.ToString());
+            parametros[4] = new ReportParameter("Producto", Producto.ToString());
+            parametros[5] = new ReportParameter("Calibre", Calibre.ToString());
+            parametros[6] = new ReportParameter("Cliente", Cliente.ToString());
+            parametros[7] = new ReportParameter("Tarjeta", Tarjeta.ToString());
+            parametros[8] = new ReportParameter("Peso", Peso.ToString());
+            parametros[9] = new ReportParameter("Colada", Colada.ToString());
+            parametros[10] = new ReportParameter("Diametro", Diametro.ToString());
+            parametros[11] = new ReportParameter("Sae", Sae.ToString());
+            parametros[12] = new ReportParameter("Medio", Medio.ToString());
+            parametros[13] = new ReportParameter("Ayudante", Ayudante.ToString());
+            parametros[14] = new ReportParameter("Orden", Orden.ToString());
+            parametros[15] = new ReportParameter("Peso1", Pesokg.ToString());
+            //NoReporte = "0000002";
+            rgta.Fill(ds.codigo_barra);
+            ReportDataSource rds = new ReportDataSource();
+            reportViewer1.LocalReport.DisplayName = Reporte;
+            rds.Name = "DataSet1";
+            rds.Value = (ds.Tables["codigo_barra"]);
+            reportViewer1.LocalReport.DataSources.Clear();
+            reportViewer1.LocalReport.SetParameters(parametros);
+            lc.DataSources.Add(rds);
+            //this.reportViewer1.RefreshReport();
+            //lc.PrintToPrinter();
+            //Byte[] mybytes = lc.Render("PDF"); //PDF //EXCEL
+            //using (FileStream fs = File.Create(@"C:\Users\COMPUTOS\Documents\Visual Studio 2010\prueba.pdf"))
+            //{
+            //    fs.Write(mybytes, 0, mybytes.Length);
+            //}
+            //this.reportViewer1.RefreshReport();
+            //AutoPrintCls autoprintme = new AutoPrintCls(lc); **OTRA CLASE PARA IMPRIMIR AUTOMATICAMENTE 
+            //autoprintme.Print();
+            //cerrar();
+            lc.PrintToPrinter();
+            cerrar();
+        }
+        private void TicketGalvanizado2()
+        {
+            ReportParameter[] parametros = new ReportParameter[16];
+            PRODUCCIONDataSet ds = new PRODUCCIONDataSet();
+            PRODUCCIONDataSetTableAdapters.reimprimir_ticketTableAdapter rgta = new PRODUCCIONDataSetTableAdapters.reimprimir_ticketTableAdapter();
+            reportViewer1.ProcessingMode = ProcessingMode.Local;
+            LocalReport lc = reportViewer1.LocalReport;
+            string ruta = "Reportes\\" + Nombre;
+            lc.ReportPath = ruta;
+            parametros[0] = new ReportParameter("Fecha", Fecha.ToShortDateString());
+            parametros[1] = new ReportParameter("Supervisor", Supervisor.ToString());
+            parametros[2] = new ReportParameter("Operador", Operador.ToString());
+            parametros[3] = new ReportParameter("Maquina", Maquina.ToString());
+            parametros[4] = new ReportParameter("Producto", Producto.ToString());
+            parametros[5] = new ReportParameter("Calibre", Calibre.ToString());
+            parametros[6] = new ReportParameter("Cliente", Cliente.ToString());
+            parametros[7] = new ReportParameter("Tarjeta", Tarjeta.ToString());
+            parametros[8] = new ReportParameter("Peso", Peso.ToString());
+            parametros[9] = new ReportParameter("Colada", Colada.ToString());
+            parametros[10] = new ReportParameter("Diametro", Diametro.ToString());
+            parametros[11] = new ReportParameter("Sae", Sae.ToString());
+            parametros[12] = new ReportParameter("Medio", Medio.ToString());
+            parametros[13] = new ReportParameter("Ayudante", Ayudante.ToString());
+            parametros[14] = new ReportParameter("Orden", Orden.ToString());
+            parametros[15] = new ReportParameter("Peso1", Pesokg.ToString());
+            //NoReporte = "0000002";
+            rgta.Fill(ds.reimprimir_ticket, Id,1);
+            ReportDataSource rds = new ReportDataSource();
+            reportViewer1.LocalReport.DisplayName = Reporte;
+            rds.Name = "DataSet1";
+            rds.Value = (ds.Tables["reimprimir_ticket"]);
+            reportViewer1.LocalReport.DataSources.Clear();
+            reportViewer1.LocalReport.SetParameters(parametros);
+            lc.DataSources.Add(rds);
+            //this.reportViewer1.RefreshReport();
+            //lc.PrintToPrinter();
+            //Byte[] mybytes = lc.Render("PDF"); //PDF //EXCEL
+            //using (FileStream fs = File.Create(@"C:\Users\COMPUTOS\Documents\Visual Studio 2010\prueba.pdf"))
+            //{
+            //    fs.Write(mybytes, 0, mybytes.Length);
+            //}
+            //this.reportViewer1.RefreshReport();
+            //AutoPrintCls autoprintme = new AutoPrintCls(lc);
+            //autoprintme.Print();
+            lc.PrintToPrinter();
             cerrar();
         }
         private void cerrar()

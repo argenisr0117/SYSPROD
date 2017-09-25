@@ -31,8 +31,8 @@ namespace Interfaz
             string deviceInfo =
               @"<DeviceInfo>
                 <OutputFormat>EMF</OutputFormat>
-                <PageWidth>6.2in</PageWidth>
-                <PageHeight>8.3in</PageHeight>
+                <PageWidth>3in</PageWidth>
+                <PageHeight>4in</PageHeight>
                 <MarginTop>0.1in</MarginTop>
                 <MarginLeft>0.1in</MarginLeft>
                 <MarginRight>0.1in</MarginRight>
@@ -89,6 +89,9 @@ namespace Interfaz
             {
                 printDoc.PrintPage += new PrintPageEventHandler(PrintPage);
                 m_currentPageIndex = 0;
+                //printDoc.PrinterSettings.Copies = 2;
+                //printDoc.PrinterSettings.DefaultPageSettings.Landscape = true;
+                
                 printDoc.Print();
             }
         }

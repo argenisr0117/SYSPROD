@@ -89,15 +89,15 @@ namespace Interfaz.Registros
         }
 
         private void puertoSerial()
-        {
-            if(serialPort1.IsOpen)
-            {
-                serialPort1.Close();
-            }
-            DataTable dt = new DataTable();
-            dt = PG.Configuracion_Puerto("Galv");
+        {   
             try
             {
+                if (serialPort1.IsOpen)
+                {
+                    serialPort1.Close();
+                }
+                DataTable dt = new DataTable();
+                dt = PG.Configuracion_Puerto("Galv");
                 for (int x = 0; x < dt.Rows.Count; x++)
                 {
                     serialPort1.PortName = dt.Rows[x][1].ToString();
@@ -105,6 +105,10 @@ namespace Interfaz.Registros
                 }
                 serialPort1.Open();
                 serialPort1.NewLine = "\r";  //para que termine la linea;
+                if (timer1.Enabled == false)
+                {
+                    timer1.Enabled = true;
+                }
                 
 
             }
@@ -279,7 +283,7 @@ namespace Interfaz.Registros
             LlenarGrid();
             Produccion_Total();
            // timer1.Enabled = true;
-            timer1.Start();
+            //timer1.Start();
                 
         }
         private void Permisos()
@@ -343,7 +347,7 @@ namespace Interfaz.Registros
                 //    dtgvProduccion.Rows[x].Cells[9].Value = dt.Rows[x][9].ToString();
                 //}
                 dtgvProduccion.ClearSelection();
-                dtgvProduccion.Columns[9].Visible = false;
+                dtgvProduccion.Columns[10].Visible = false;
             }
             catch (Exception ex)
             {
@@ -521,8 +525,8 @@ namespace Interfaz.Registros
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             Consultas.frmcProductosDpto obj = new Consultas.frmcProductosDpto();
-            Program.Valor3 = 1;
-            Program.Valor2 = 1;
+            Program.Valor3 = 5;
+            Program.Valor2 = 2;
             obj.ShowDialog();
             if (string.IsNullOrEmpty(Program.CodigoP))
             {
@@ -554,6 +558,7 @@ namespace Interfaz.Registros
             int canasto = 0;
             int a = 0;
             int b = 0;
+            int c = 0;
             dt = PG.Total_Produccion();
             try
             {
@@ -579,14 +584,13 @@ namespace Interfaz.Registros
                     {
                         lbProdT2.Text = "";
                     }
-                    b = 0;
                     if (dt.Rows[x][0].ToString() == "10PM06AM")
                     {
                         lbTurno3.Text = "TURNO3";
                         lbProdT3.Text = (Convert.ToDouble(dt.Rows[x][1]) / 100).ToString() + " QQS";
-                        b = 1;
+                        c = 1;
                     }
-                    if (b == 0)
+                    if (c == 0)
                     {
                         lbProdT3.Text = "";
                     }
@@ -606,6 +610,9 @@ namespace Interfaz.Registros
             try
             {
                 int h = DateTime.Now.Hour;
+                DataTable dt = new DataTable();
+                string Orden = "";
+                double qqs = 0;
                 if (cmbProducto.SelectedIndex > -1 && cmbPesocanasto.SelectedIndex > -1 && cmbSupervisor.SelectedIndex > -1 && cmbOperador.SelectedIndex > -1 && cmbMaquina.SelectedIndex > -1 && cmbProducto.SelectedIndex > -1 && cmbColada.SelectedIndex > -1 && txtPesoBruto.Text!="")
                 {
                     if(Convert.ToDouble(cmbPesocanasto.Text)>Convert.ToDouble(txtPesoBruto.Text))
@@ -620,7 +627,7 @@ namespace Interfaz.Registros
                         TimeSpan hora1 = TimeSpan.Parse(hora.ToString("H\\:mm:ss"));
                         PG.Supervisor = cmbSupervisor.SelectedValue.ToString();
                         PG.Operador = cmbOperador.SelectedValue.ToString();
-                        PG.Ayudante = "DESC-01";
+                        PG.Ayudante = cmbAyudante.SelectedValue.ToString();
                         PG.Fecha = Convert.ToDateTime(DateTime.Now.ToShortDateString());
                         PG.Hora = hora1;
                         PG.Cliente = Convert.ToInt32(cmbCliente.SelectedValue);
@@ -628,6 +635,50 @@ namespace Interfaz.Registros
                         PG.Producto = cmbProducto.SelectedValue.ToString();
                         PG.Maquina = cmbMaquina.SelectedValue.ToString();
                         PG.Tarjeta = tarjeta;
+                        PG.Dpto = "Galv";
+                        double peso = Convert.ToDouble(txtPesoBruto.Text) - Convert.ToDouble(cmbPesocanasto.SelectedValue);
+                        qqs = peso / 100;
+                        PG.PesoNeto = peso;
+
+                        ///IDENTIFICAR ORDEN DEL CANASTO Y ACTUALIZAR DICHA ORDEN//
+                        dt = PG.ObtenerOrdenCanasto();
+                        for(int x = 0; x < dt.Rows.Count; x++)
+                        {
+                            Double cantidad = Convert.ToDouble(dt.Rows[x][2]);
+                            Double cant_prod= Convert.ToDouble(dt.Rows[x][3]);
+                            if (cantidad==0) //IDENTIFICAR SI EXISTE ALGUNA ORDEN PARA ESTE CLIENTE Y ESTE PRODUCTO, SI ES CERO, ASIGNAR S/N
+                            {
+                                PG.Idorden = Convert.ToInt16(dt.Rows[x][0]);
+                                Orden = dt.Rows[x][1].ToString();
+                                break; 
+                            }
+                            else
+                            {
+                                cant_prod = cant_prod + qqs;
+                                cantidad = cantidad + 10;
+                                if (cant_prod > cantidad) //COMPLETAR ORDEN
+                                {
+                                    PG.Idorden = Convert.ToInt16(dt.Rows[x][0]);
+                                    PG.CompletarOrdenProduccion();
+                                    if (dt.Rows.Count == 1)
+                                    {
+                                        Orden = "S/N";
+                                        PG.Idorden = 0;
+                                        break;
+                                    }
+                                }
+                                else  //ACTUALIZAR ORDEN 
+                                {
+                                    PG.Idorden= Convert.ToInt16(dt.Rows[x][0]);
+                                    PG.PesoNeto = qqs;
+                                    PG.ActCantOrdenProduccion();
+                                    PG.PesoNeto = peso;
+                                    Orden = dt.Rows[x][1].ToString();
+                                    break;
+                                }
+                            }
+                        }
+                        ///IDENTIFICAR ORDEN DEL CANASTO Y ACTUALIZAR DICHA ORDEN//
                         if (h > 5 && h < 14)
                         {
                             PG.Turno = "06AM02PM";
@@ -640,8 +691,7 @@ namespace Interfaz.Registros
                         {
                             PG.Turno = "10PM06AM";
                         }
-                        double peso = Convert.ToDouble(txtPesoBruto.Text) - Convert.ToDouble(cmbPesocanasto.SelectedValue);
-                        PG.PesoNeto = peso;
+                        
                         Zen.Barcode.Code128BarcodeDraw barcode = Zen.Barcode.BarcodeDrawFactory.Code128WithChecksum;
                         pictureBox1.Image = barcode.Draw(tarjeta.ToString() + "P" + peso.ToString(), 25);
                         MemoryStream ms = new MemoryStream();
@@ -659,23 +709,26 @@ namespace Interfaz.Registros
                         }
                         frmReporte obj = new frmReporte();
                         obj.Fecha = Convert.ToDateTime(DateTime.Now.ToShortDateString());
-                        obj.Valor = 7;
-                        obj.Supervisor = cmbSupervisor.Text;
+                        obj.Valor = 12;
+                        obj.Supervisor = cmbSupervisor.SelectedValue.ToString();
                         obj.Maquina = cmbMaquina.Text;
                         obj.Cliente = cmbCliente.Text;
                         obj.Colada = cmbColada.Text;
                         obj.Calibre = calibre;
                         obj.Operador = cmbOperador.SelectedValue.ToString();
+                        obj.Ayudante = cmbAyudante.SelectedValue.ToString();
                         obj.Peso = peso.ToString();
                         obj.Tarjeta = tarjeta;
                         obj.Diametro = txtDiametro.Text + " " + cmbDiametro.Text;
-                        obj.Nombre = "ticket_trefilado.rdlc";
+                        obj.Nombre = "ticket_galvanizado.rdlc";
                         obj.Producto = cmbProducto.Text;
-                        obj.Reporte = "Rollo "+tarjeta +" "+ txtCalibre.Text+" "+ sae1;
+                        obj.Reporte = "Rollo " + tarjeta + " " + txtCalibre.Text + " " + sae1;
                         obj.Sae = sae1;
                         obj.Medio = medio;
+                        obj.Orden = Orden;
+                        obj.Pesokg = (peso * 0.4536).ToString("N0");
                         obj.ShowDialog();
-                        Limpiar();
+                        //Limpiar();
                         PG.Valor = 2; //VALOR PARA FILTRAR TOTAL PROD
                         LlenarGrid();
                         Produccion_Total();
@@ -752,7 +805,7 @@ namespace Interfaz.Registros
                 DialogResult var = MessageBoxEx.Show("¿Desea eliminar el registro?", "Sistema de Producción", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (var == DialogResult.Yes)
                 {
-                    PG.Id= Convert.ToInt32(dtgvProduccion.CurrentRow.Cells[9].Value);
+                    PG.Id= Convert.ToInt32(dtgvProduccion.CurrentRow.Cells[10].Value);
                     PG.Dpto = "Galvanizado";
                     mensaje=PG.EliminarRegistro();
                     if(mensaje=="1")
@@ -843,7 +896,7 @@ namespace Interfaz.Registros
                     }
                     reporte = SecuenciaReporte();
                     PG.Reporte = reporte;
-                    PG.Valor = 1;
+                    PG.Valor = 3;
                     mensaje = PG.ExportarRegistroDpto();
                     if (mensaje == "1")
                     {
@@ -910,26 +963,29 @@ namespace Interfaz.Registros
                 if (dtgvProduccion.SelectedRows.Count > 0)
                 {
                     DataTable dt;
-                    dt = PG.Reimprimir(Convert.ToInt32(dtgvProduccion.CurrentRow.Cells[9].Value));
+                    dt = PG.Reimprimir(Convert.ToInt32(dtgvProduccion.CurrentRow.Cells[10].Value),1);
                     SeleccionarDiametro2(dt.Rows[0][10].ToString());
                     frmReporte obj = new frmReporte();
-                    obj.Id = Convert.ToInt32(dtgvProduccion.CurrentRow.Cells[9].Value);
-                    obj.Valor = 11;
+                    obj.Id = Convert.ToInt32(dtgvProduccion.CurrentRow.Cells[10].Value);
+                    obj.Valor = 13;
                     obj.Fecha = Convert.ToDateTime(dt.Rows[0][0]);
                     obj.Supervisor = dt.Rows[0][1].ToString();
                     obj.Operador = dt.Rows[0][2].ToString();
                     obj.Maquina = dt.Rows[0][3].ToString();
                     obj.Colada = dt.Rows[0][4].ToString();
                     obj.Peso = dt.Rows[0][5].ToString();
+                    obj.Pesokg= (Convert.ToDouble(dt.Rows[0][5]) * 0.4536).ToString("N0");
                     obj.Producto = dt.Rows[0][6].ToString();
                     obj.Diametro = dt.Rows[0][7].ToString() + " " + "PULG";
                     obj.Cliente = dt.Rows[0][8].ToString();
                     obj.Tarjeta=Convert.ToInt32(dt.Rows[0][11]);
                     obj.Calibre = calibre;
-                    obj.Nombre = "ticket_trefilado2.rdlc";                 
+                    obj.Nombre = "ticket_galvanizado2.rdlc";                 
                     obj.Reporte = "Ticket";
                     obj.Sae = sae1;
                     obj.Medio = medio;
+                    obj.Ayudante= dt.Rows[0][12].ToString();
+                    obj.Orden= dt.Rows[0][13].ToString();
                     obj.ShowDialog();
                 }
             }
@@ -992,21 +1048,28 @@ namespace Interfaz.Registros
 
         private void timer1_Tick(object sender, EventArgs e) //timer para enviar peso de la balanza cada 1 segundo
         {
-            SerialPort sp = new SerialPort();
-            if (!serialPort1.IsOpen)
+            try
             {
-                serialPort1.Open();
+                SerialPort sp = new SerialPort();
+                if (!serialPort1.IsOpen)
+                {
+                    serialPort1.Open();
+                }
+                else
+                {
+                    byte[] code = { 0x05 }; //codigo para que la balanza envie el peso
+                                            //string code1 = code.ToString("X2");
+                                            //code1 = "0" + code1;
+                    serialPort1.Write(code, 0, code.Length);
+                    //Console.WriteLine(code1);
+                }
             }
-            else
+            catch(Exception ex)
             {
-                byte[] code = { 0x05 }; //codigo para que la balanza envie el peso
-                //string code1 = code.ToString("X2");
-                //code1 = "0" + code1;
-                serialPort1.Write(code,0,code.Length);
-                //Console.WriteLine(code1);
+                timer1.Enabled = false;
             }
+           
             
         }
-
     }
 }

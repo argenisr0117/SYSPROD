@@ -173,11 +173,12 @@ namespace Intermedia
             lst.Add(new clsParametros("@codigo", objCodigo));
             return dt = M.Listado("diametro_producto", lst);
         }
-        public DataTable Reimprimir(int Id)
+        public DataTable Reimprimir(int Id,int valor)
         {
             DataTable dt = new DataTable();
             List<clsParametros> lst = new List<clsParametros>();
             lst.Add(new clsParametros("@id", Id));
+            lst.Add(new clsParametros("@valor", valor));
             return dt = M.Listado("reimprimir_ticket", lst);
         }
         public DataTable Total_Produccion()
