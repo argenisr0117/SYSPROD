@@ -32,10 +32,10 @@
             this.dtgOrdenes = new System.Windows.Forms.DataGridView();
             this.cmbEstado = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnPacking = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnRegistrar = new System.Windows.Forms.Button();
-            this.btnPacking = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgOrdenes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,6 +78,27 @@
             this.label2.Size = new System.Drawing.Size(283, 26);
             this.label2.TabIndex = 65;
             this.label2.Text = "ORDENES DE PRODUCCIÓN";
+            // 
+            // btnPacking
+            // 
+            this.btnPacking.BackColor = System.Drawing.Color.White;
+            this.btnPacking.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
+            this.btnPacking.FlatAppearance.BorderSize = 2;
+            this.btnPacking.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnPacking.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnPacking.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPacking.ForeColor = System.Drawing.Color.Black;
+            this.btnPacking.Image = global::Interfaz.Properties.Resources.boxes_brown_icon;
+            this.btnPacking.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnPacking.Location = new System.Drawing.Point(397, 368);
+            this.btnPacking.Name = "btnPacking";
+            this.btnPacking.Size = new System.Drawing.Size(103, 55);
+            this.btnPacking.TabIndex = 150;
+            this.btnPacking.TabStop = false;
+            this.btnPacking.Text = "PACKING";
+            this.btnPacking.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnPacking.UseVisualStyleBackColor = false;
+            this.btnPacking.Click += new System.EventHandler(this.btnPacking_Click);
             // 
             // btnSalir
             // 
@@ -141,26 +162,6 @@
             this.btnRegistrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnRegistrar.UseVisualStyleBackColor = false;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
-            // 
-            // btnPacking
-            // 
-            this.btnPacking.BackColor = System.Drawing.Color.White;
-            this.btnPacking.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
-            this.btnPacking.FlatAppearance.BorderSize = 2;
-            this.btnPacking.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btnPacking.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnPacking.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPacking.ForeColor = System.Drawing.Color.Black;
-            this.btnPacking.Image = global::Interfaz.Properties.Resources.boxes_brown_icon;
-            this.btnPacking.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnPacking.Location = new System.Drawing.Point(397, 368);
-            this.btnPacking.Name = "btnPacking";
-            this.btnPacking.Size = new System.Drawing.Size(103, 55);
-            this.btnPacking.TabIndex = 150;
-            this.btnPacking.TabStop = false;
-            this.btnPacking.Text = "PACKING";
-            this.btnPacking.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnPacking.UseVisualStyleBackColor = false;
             // 
             // frmcOrdenProduccion
             // 

@@ -333,5 +333,13 @@ namespace Intermedia
             mensaje = lst[2].Valor.ToString();
             return mensaje;
         }
+        public DataTable ObtenerProductoLongitudConversion()
+        {
+            DataTable dt = new DataTable();
+            List<clsParametros> lst = new List<clsParametros>();
+            lst.Add(new clsParametros("@idproducto", Mproducto));
+            lst.Add(new clsParametros("@idcliente", Mcliente));
+            return dt = M.Listado("obtener_producto_longitud_conversion", lst);
+        }
     }
 }

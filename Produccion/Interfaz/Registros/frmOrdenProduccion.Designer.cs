@@ -46,6 +46,8 @@
             this.txtCantidad = new Interfaz.Controles.textboxN(this.components);
             this.txtNumOrden = new Interfaz.Controles.textbox(this.components);
             this.cmbDpto = new System.Windows.Forms.ComboBox();
+            this.txtNumeroPedido = new Interfaz.Controles.textbox(this.components);
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -275,11 +277,35 @@
             this.cmbDpto.TabIndex = 141;
             this.cmbDpto.SelectedValueChanged += new System.EventHandler(this.cmbDpto_SelectedValueChanged);
             // 
+            // txtNumeroPedido
+            // 
+            this.txtNumeroPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumeroPedido.Location = new System.Drawing.Point(151, 61);
+            this.txtNumeroPedido.Name = "txtNumeroPedido";
+            this.txtNumeroPedido.ReadOnly = true;
+            this.txtNumeroPedido.Size = new System.Drawing.Size(100, 22);
+            this.txtNumeroPedido.TabIndex = 147;
+            this.txtNumeroPedido.Validar = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(49, 66);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(61, 13);
+            this.label5.TabIndex = 148;
+            this.label5.Text = "# PEDIDO:";
+            // 
             // frmOrdenProduccion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(612, 329);
+            this.Controls.Add(this.txtNumeroPedido);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnRegistrar);
@@ -327,5 +353,7 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ComboBox cmbDpto;
+        private Controles.textbox txtNumeroPedido;
+        private System.Windows.Forms.Label label5;
     }
 }

@@ -450,7 +450,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Chocolate;
+            this.button1.BackColor = System.Drawing.Color.CadetBlue;
             this.button1.Dock = System.Windows.Forms.DockStyle.Left;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -460,7 +460,9 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(151, 72);
             this.button1.TabIndex = 2;
+            this.button1.Text = "Relación Producto/Cliente";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 

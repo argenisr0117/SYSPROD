@@ -123,6 +123,12 @@
     <Compile Include="Consultas\frmcFiltros.Designer.cs">
       <DependentUpon>frmcFiltros.cs</DependentUpon>
     </Compile>
+    <Compile Include="Consultas\frmcPruebasCalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmcPruebasCalidad.Designer.cs">
+      <DependentUpon>frmcPruebasCalidad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consultas\frmcOrdenProduccion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +231,12 @@
     <Compile Include="Registros\frmCategoria.Designer.cs">
       <DependentUpon>frmCategoria.cs</DependentUpon>
     </Compile>
+    <Compile Include="Registros\frmControlCalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\frmControlCalidad.Designer.cs">
+      <DependentUpon>frmControlCalidad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Registros\frmEditarInvPuas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -249,6 +261,12 @@
     <Compile Include="Registros\frmOrdenProduccion.Designer.cs">
       <DependentUpon>frmOrdenProduccion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Registros\frmPackingList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\frmPackingList.Designer.cs">
+      <DependentUpon>frmPackingList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Registros\frmPermisos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -260,6 +278,12 @@
     </Compile>
     <Compile Include="Registros\frmProduccionGalv.Designer.cs">
       <DependentUpon>frmProduccionGalv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\frmProductoClienteLongitud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\frmProductoClienteLongitud.Designer.cs">
+      <DependentUpon>frmProductoClienteLongitud.cs</DependentUpon>
     </Compile>
     <Compile Include="Registros\frmUsuario.cs">
       <SubType>Form</SubType>
@@ -403,6 +427,9 @@
     <EmbeddedResource Include="Consultas\frmcFiltros.resx">
       <DependentUpon>frmcFiltros.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\frmcPruebasCalidad.resx">
+      <DependentUpon>frmcPruebasCalidad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consultas\frmcOrdenProduccion.resx">
       <DependentUpon>frmcOrdenProduccion.cs</DependentUpon>
     </EmbeddedResource>
@@ -441,6 +468,9 @@
     <EmbeddedResource Include="Registros\frmCategoria.resx">
       <DependentUpon>frmCategoria.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Registros\frmControlCalidad.resx">
+      <DependentUpon>frmControlCalidad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Registros\frmEditarInvPuas.resx">
       <DependentUpon>frmEditarInvPuas.cs</DependentUpon>
     </EmbeddedResource>
@@ -453,11 +483,17 @@
     <EmbeddedResource Include="Registros\frmOrdenProduccion.resx">
       <DependentUpon>frmOrdenProduccion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Registros\frmPackingList.resx">
+      <DependentUpon>frmPackingList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Registros\frmPermisos.resx">
       <DependentUpon>frmPermisos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registros\frmProduccionGalv.resx">
       <DependentUpon>frmProduccionGalv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros\frmProductoClienteLongitud.resx">
+      <DependentUpon>frmProductoClienteLongitud.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registros\frmUsuario.resx">
       <DependentUpon>frmUsuario.cs</DependentUpon>
@@ -519,6 +555,9 @@
     <EmbeddedResource Include="Registros\frmUnidad.resx">
       <DependentUpon>frmUnidad.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\certificado_calidad.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\cierre_general.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -574,6 +613,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\filtrar_prod_detalle.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\packing_list.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\procesos.rdlc">

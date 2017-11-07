@@ -50,13 +50,13 @@
             this.radioDetallado = new System.Windows.Forms.RadioButton();
             this.radioResumido = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.radioSupervisor = new System.Windows.Forms.RadioButton();
             this.radioOperador = new System.Windows.Forms.RadioButton();
             this.radioMaquina = new System.Windows.Forms.RadioButton();
             this.radioProducto = new System.Windows.Forms.RadioButton();
             this.btnBusqueda = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
-            this.radioSupervisor = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -80,7 +80,7 @@
             this.label2.BackColor = System.Drawing.Color.DarkRed;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(253, 3);
+            this.label2.Location = new System.Drawing.Point(250, 3);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(106, 30);
             this.label2.TabIndex = 3;
@@ -92,7 +92,7 @@
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(12, 62);
+            this.label3.Location = new System.Drawing.Point(12, 60);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 13);
             this.label3.TabIndex = 114;
@@ -126,7 +126,7 @@
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(328, 63);
+            this.label1.Location = new System.Drawing.Point(328, 61);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 13);
             this.label1.TabIndex = 116;
@@ -142,7 +142,7 @@
             this.cmbSupervisor.ForeColor = System.Drawing.Color.Black;
             this.cmbSupervisor.FormattingEnabled = true;
             this.cmbSupervisor.IntegralHeight = false;
-            this.cmbSupervisor.Location = new System.Drawing.Point(127, 93);
+            this.cmbSupervisor.Location = new System.Drawing.Point(127, 99);
             this.cmbSupervisor.MaxDropDownItems = 30;
             this.cmbSupervisor.Name = "cmbSupervisor";
             this.cmbSupervisor.Size = new System.Drawing.Size(410, 26);
@@ -202,7 +202,7 @@
             this.label8.BackColor = System.Drawing.Color.White;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(12, 190);
+            this.label8.Location = new System.Drawing.Point(12, 191);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(80, 13);
             this.label8.TabIndex = 123;
@@ -234,7 +234,7 @@
             this.cmbOperador.ForeColor = System.Drawing.Color.Black;
             this.cmbOperador.FormattingEnabled = true;
             this.cmbOperador.IntegralHeight = false;
-            this.cmbOperador.Location = new System.Drawing.Point(127, 124);
+            this.cmbOperador.Location = new System.Drawing.Point(127, 127);
             this.cmbOperador.MaxDropDownItems = 30;
             this.cmbOperador.Name = "cmbOperador";
             this.cmbOperador.Size = new System.Drawing.Size(410, 26);
@@ -251,7 +251,7 @@
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.Black;
             this.btnBuscar.Image = global::Interfaz.Properties.Resources.Search_icon;
-            this.btnBuscar.Location = new System.Drawing.Point(500, 182);
+            this.btnBuscar.Location = new System.Drawing.Point(500, 185);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(37, 24);
             this.btnBuscar.TabIndex = 134;
@@ -269,7 +269,7 @@
             this.cmbProducto.ForeColor = System.Drawing.Color.Black;
             this.cmbProducto.FormattingEnabled = true;
             this.cmbProducto.IntegralHeight = false;
-            this.cmbProducto.Location = new System.Drawing.Point(127, 183);
+            this.cmbProducto.Location = new System.Drawing.Point(127, 184);
             this.cmbProducto.MaxDropDownItems = 30;
             this.cmbProducto.Name = "cmbProducto";
             this.cmbProducto.Size = new System.Drawing.Size(369, 26);
@@ -346,6 +346,19 @@
             this.groupBox2.TabIndex = 137;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "AGRUPADO POR";
+            // 
+            // radioSupervisor
+            // 
+            this.radioSupervisor.AutoSize = true;
+            this.radioSupervisor.BackColor = System.Drawing.Color.White;
+            this.radioSupervisor.ForeColor = System.Drawing.Color.Black;
+            this.radioSupervisor.Location = new System.Drawing.Point(309, 19);
+            this.radioSupervisor.Name = "radioSupervisor";
+            this.radioSupervisor.Size = new System.Drawing.Size(105, 17);
+            this.radioSupervisor.TabIndex = 3;
+            this.radioSupervisor.TabStop = true;
+            this.radioSupervisor.Text = "SUPERVISOR";
+            this.radioSupervisor.UseVisualStyleBackColor = false;
             // 
             // radioOperador
             // 
@@ -448,19 +461,6 @@
             this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnLimpiar.UseVisualStyleBackColor = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
-            // 
-            // radioSupervisor
-            // 
-            this.radioSupervisor.AutoSize = true;
-            this.radioSupervisor.BackColor = System.Drawing.Color.White;
-            this.radioSupervisor.ForeColor = System.Drawing.Color.Black;
-            this.radioSupervisor.Location = new System.Drawing.Point(309, 19);
-            this.radioSupervisor.Name = "radioSupervisor";
-            this.radioSupervisor.Size = new System.Drawing.Size(105, 17);
-            this.radioSupervisor.TabIndex = 3;
-            this.radioSupervisor.TabStop = true;
-            this.radioSupervisor.Text = "SUPERVISOR";
-            this.radioSupervisor.UseVisualStyleBackColor = false;
             // 
             // frmcFiltros
             // 

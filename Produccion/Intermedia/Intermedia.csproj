@@ -52,6 +52,7 @@
     <Compile Include="clsMaquina.cs" />
     <Compile Include="clsPeso_Canasto.cs" />
     <Compile Include="clsProduccion.cs" />
+    <Compile Include="clsPruebasCald.cs" />
     <Compile Include="clsProduccionIndM.cs" />
     <Compile Include="clsProduccionGalv.cs" />
     <Compile Include="clsOrdenProduccion.cs" />

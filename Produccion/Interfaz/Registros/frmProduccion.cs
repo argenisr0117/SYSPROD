@@ -90,7 +90,7 @@ namespace Interfaz.Registros
             try
             { 
             cbmaquina.DataSource = M.Listar(true);
-            cbmaquina.DisplayMember = "ID_MAQUINA";
+            cbmaquina.DisplayMember = "DESCRIPCION";
             cbmaquina.ValueMember = "ID_MAQUINA";
             }
             catch(Exception ex)

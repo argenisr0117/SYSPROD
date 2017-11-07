@@ -35,8 +35,14 @@ namespace Interfaz
         public double Galvanizadoa { get; set; }
         public double Recocidoa { get; set; }
         public int Valor { get; set; }
+        public int Idpacking { get; set; }
+        public int Idrepcalidad { get; set; }
         public string Empresa { get; set; }
         public string Incentivo { get; set; }
+        public int Inicio { get; set; }
+        public int Inicio1 { get; set; }
+        public int Final { get; set; }
+        public int Final1 { get; set; }
 
         //tickets
         public int Id { get; set; }
@@ -55,7 +61,10 @@ namespace Interfaz
         public string Diametro { get; set; }
         public string Sae { get; set; }
         public string Medio { get; set; }
-
+        public string Longft { get; set; }
+        public string Longmt { get; set; }
+        public string VerLong { get; set; }
+ 
         private void frmReporte_Load(object sender, EventArgs e)
         {
             if(Valor==1)
@@ -113,6 +122,14 @@ namespace Interfaz
             else if (Valor == 13)
             {
                 TicketGalvanizado2();
+            }
+            else if (Valor == 14)
+            {
+                PackingList();
+            }
+            else if (Valor == 15)
+            {
+                CertificadoCalidad();
             }
         }
 
@@ -204,7 +221,7 @@ namespace Interfaz
         }
         private void TicketGalvanizado()
         {
-            ReportParameter[] parametros = new ReportParameter[16];
+            ReportParameter[] parametros = new ReportParameter[19];
             PRODUCCIONDataSet ds = new PRODUCCIONDataSet();
             PRODUCCIONDataSetTableAdapters.codigo_barraTableAdapter rgta = new PRODUCCIONDataSetTableAdapters.codigo_barraTableAdapter();
             reportViewer1.ProcessingMode = ProcessingMode.Local;
@@ -227,6 +244,9 @@ namespace Interfaz
             parametros[13] = new ReportParameter("Ayudante", Ayudante.ToString());
             parametros[14] = new ReportParameter("Orden", Orden.ToString());
             parametros[15] = new ReportParameter("Peso1", Pesokg.ToString());
+            parametros[16] = new ReportParameter("Longft", Longft.ToString());
+            parametros[17] = new ReportParameter("Longmt", Longmt.ToString());
+            parametros[18] = new ReportParameter("Verlong", VerLong.ToString());
             //NoReporte = "0000002";
             rgta.Fill(ds.codigo_barra);
             ReportDataSource rds = new ReportDataSource();
@@ -327,6 +347,78 @@ namespace Interfaz
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.SetParameters(parametros);
             lc.DataSources.Add(rds);
+            this.reportViewer1.RefreshReport();
+        }
+        private void PackingList()
+        {
+            PRODUCCIONDataSet ds = new PRODUCCIONDataSet();
+            PRODUCCIONDataSetTableAdapters.obtener_packing_listTableAdapter rgta = new PRODUCCIONDataSetTableAdapters.obtener_packing_listTableAdapter();
+            PRODUCCIONDataSetTableAdapters.obtener_detalle_packing_listTableAdapter rgta1 = new PRODUCCIONDataSetTableAdapters.obtener_detalle_packing_listTableAdapter();
+            PRODUCCIONDataSetTableAdapters.obtener_detalle_packing_list2TableAdapter rgta2 = new PRODUCCIONDataSetTableAdapters.obtener_detalle_packing_list2TableAdapter();
+            reportViewer1.ProcessingMode = ProcessingMode.Local;
+            LocalReport lc = reportViewer1.LocalReport;
+            string ruta = "Reportes\\" + Nombre;
+            lc.ReportPath = ruta;
+            rgta.Fill(ds.obtener_packing_list, Idpacking);
+            rgta1.Fill(ds.obtener_detalle_packing_list, Idpacking,Inicio,Final);
+            rgta2.Fill(ds.obtener_detalle_packing_list2, Idpacking,Inicio1,Final1);
+            ReportDataSource rds = new ReportDataSource();
+            ReportDataSource rds1 = new ReportDataSource();
+            ReportDataSource rds2 = new ReportDataSource();
+            reportViewer1.LocalReport.DisplayName = Reporte;
+            rds.Name = "DataSet1";
+            rds.Value = (ds.Tables["obtener_packing_list"]);
+            rds1.Name = "DataSet2";
+            rds1.Value = (ds.Tables["obtener_detalle_packing_list"]);
+            rds2.Name = "DataSet3";
+            rds2.Value = (ds.Tables["obtener_detalle_packing_list2"]);
+            reportViewer1.LocalReport.DataSources.Clear();
+            lc.DataSources.Add(rds);
+            lc.DataSources.Add(rds1);
+            lc.DataSources.Add(rds2);
+
+            this.reportViewer1.RefreshReport();
+        }
+        private void CertificadoCalidad()
+        {
+            PRODUCCIONDataSet ds = new PRODUCCIONDataSet();
+            PRODUCCIONDataSetTableAdapters.obtener_header_certificado_calidadTableAdapter rtga = new PRODUCCIONDataSetTableAdapters.obtener_header_certificado_calidadTableAdapter();
+            PRODUCCIONDataSetTableAdapters.obtener_detalle_certificado_calidadTableAdapter rtga1 = new PRODUCCIONDataSetTableAdapters.obtener_detalle_certificado_calidadTableAdapter();
+            PRODUCCIONDataSetTableAdapters.obtener_temp_grafico_diametroTableAdapter rtga2 = new PRODUCCIONDataSetTableAdapters.obtener_temp_grafico_diametroTableAdapter();
+            PRODUCCIONDataSetTableAdapters.obtener_temp_grafico_recubrimientoTableAdapter rtga3 = new PRODUCCIONDataSetTableAdapters.obtener_temp_grafico_recubrimientoTableAdapter();
+            PRODUCCIONDataSetTableAdapters.obtener_temp_grafico_resistenciaTableAdapter rtga4 = new PRODUCCIONDataSetTableAdapters.obtener_temp_grafico_resistenciaTableAdapter();
+            reportViewer1.ProcessingMode = ProcessingMode.Local;
+            LocalReport lc = reportViewer1.LocalReport;
+            string ruta = "Reportes\\" + Nombre;
+            lc.ReportPath = ruta;
+            rtga.Fill(ds.obtener_header_certificado_calidad,Idrepcalidad);
+            rtga1.Fill(ds.obtener_detalle_certificado_calidad,Idrepcalidad);
+            rtga2.Fill(ds.obtener_temp_grafico_diametro);
+            rtga3.Fill(ds.obtener_temp_grafico_recubrimiento);
+            rtga4.Fill(ds.obtener_temp_grafico_resistencia);
+            ReportDataSource rds = new ReportDataSource();
+            ReportDataSource rds1 = new ReportDataSource();
+            ReportDataSource rds2 = new ReportDataSource();
+            ReportDataSource rds3 = new ReportDataSource();
+            ReportDataSource rds4 = new ReportDataSource();
+            reportViewer1.LocalReport.DisplayName = Reporte;
+            rds.Name = "DataSet1";
+            rds.Value = (ds.Tables["obtener_header_certificado_calidad"]);
+            rds1.Name = "DataSet2";
+            rds1.Value = (ds.Tables["obtener_detalle_certificado_calidad"]);
+            rds2.Name = "DataSet3";
+            rds2.Value = (ds.Tables["obtener_temp_grafico_diametro"]);
+            rds3.Name = "DataSet4";
+            rds3.Value = (ds.Tables["obtener_temp_grafico_recubrimiento"]);
+            rds4.Name = "DataSet5";
+            rds4.Value = (ds.Tables["obtener_temp_grafico_resistencia"]);
+            reportViewer1.LocalReport.DataSources.Clear();
+            lc.DataSources.Add(rds);
+            lc.DataSources.Add(rds1);
+            lc.DataSources.Add(rds2);
+            lc.DataSources.Add(rds3);
+            lc.DataSources.Add(rds4);
+
             this.reportViewer1.RefreshReport();
         }
         private void CierreMensual()

@@ -27,6 +27,13 @@ namespace Interfaz
         public static string Supervisor;
         public static string Ayudante;
         public static string Maquina;
+        public static string Colada;
+        public static string Pesozinc;
+        public static string Pesoszinc;
+        public static string Muestra2;
+        public static string Sae;
+        public static string Resistenia;
+        public static int Idprueba;
         public static string Cliente1;
         public static string Dpto;
         public static string Orden;

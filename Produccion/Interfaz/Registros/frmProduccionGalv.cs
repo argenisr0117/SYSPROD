@@ -611,6 +611,7 @@ namespace Interfaz.Registros
             {
                 int h = DateTime.Now.Hour;
                 DataTable dt = new DataTable();
+                DataTable dt2 = new DataTable();
                 string Orden = "";
                 double qqs = 0;
                 if (cmbProducto.SelectedIndex > -1 && cmbPesocanasto.SelectedIndex > -1 && cmbSupervisor.SelectedIndex > -1 && cmbOperador.SelectedIndex > -1 && cmbMaquina.SelectedIndex > -1 && cmbProducto.SelectedIndex > -1 && cmbColada.SelectedIndex > -1 && txtPesoBruto.Text!="")
@@ -638,8 +639,9 @@ namespace Interfaz.Registros
                         PG.Dpto = "Galv";
                         double peso = Convert.ToDouble(txtPesoBruto.Text) - Convert.ToDouble(cmbPesocanasto.SelectedValue);
                         qqs = peso / 100;
+                        qqs = Math.Round(qqs, 2);
                         PG.PesoNeto = peso;
-
+                        dt2 = PG.ObtenerProductoLongitudConversion();
                         ///IDENTIFICAR ORDEN DEL CANASTO Y ACTUALIZAR DICHA ORDEN//
                         dt = PG.ObtenerOrdenCanasto();
                         for(int x = 0; x < dt.Rows.Count; x++)
@@ -708,6 +710,18 @@ namespace Interfaz.Registros
                             MessageBoxEx.Show("Error,no se ha podido registrar! ", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                         frmReporte obj = new frmReporte();
+                        if (dt2.Rows.Count > 0)
+                        {
+                            obj.VerLong = "1";
+                            obj.Longft = (peso * Convert.ToDouble(dt2.Rows[0][0])).ToString("N2");                        
+                            obj.Longmt = (peso * Convert.ToDouble(dt2.Rows[0][1])).ToString("N2");
+                        }
+                        else
+                        {
+                            obj.VerLong = "0";
+                            obj.Longft = "0.00";
+                            obj.Longmt = "0.00";
+                        }
                         obj.Fecha = Convert.ToDateTime(DateTime.Now.ToShortDateString());
                         obj.Valor = 12;
                         obj.Supervisor = cmbSupervisor.SelectedValue.ToString();
@@ -727,7 +741,7 @@ namespace Interfaz.Registros
                         obj.Medio = medio;
                         obj.Orden = Orden;
                         obj.Pesokg = (peso * 0.4536).ToString("N0");
-                        obj.ShowDialog();
+                        //obj.ShowDialog();
                         //Limpiar();
                         PG.Valor = 2; //VALOR PARA FILTRAR TOTAL PROD
                         LlenarGrid();
@@ -777,7 +791,7 @@ namespace Interfaz.Registros
                 obj.Maquina= dtgvProduccion.CurrentRow.Cells[5].Value.ToString();
                 obj.Peso= dtgvProduccion.CurrentRow.Cells[7].Value.ToString();
                 obj.Cliente = dtgvProduccion.CurrentRow.Cells[8].Value.ToString();
-                obj.Id = Convert.ToInt32(dtgvProduccion.CurrentRow.Cells[9].Value);
+                obj.Id = Convert.ToInt32(dtgvProduccion.CurrentRow.Cells[10].Value);
                 obj.ShowDialog();
                 if(Program.Valor==1)
                 {

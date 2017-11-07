@@ -503,7 +503,7 @@
             this.cbdestino.IntegralHeight = false;
             this.cbdestino.Location = new System.Drawing.Point(81, 291);
             this.cbdestino.Name = "cbdestino";
-            this.cbdestino.Size = new System.Drawing.Size(111, 21);
+            this.cbdestino.Size = new System.Drawing.Size(197, 21);
             this.cbdestino.TabIndex = 102;
             this.cbdestino.TabStop = false;
             this.cbdestino.Validar = false;
@@ -521,7 +521,7 @@
             this.cbmaquina.IntegralHeight = false;
             this.cbmaquina.Location = new System.Drawing.Point(82, 258);
             this.cbmaquina.Name = "cbmaquina";
-            this.cbmaquina.Size = new System.Drawing.Size(53, 21);
+            this.cbmaquina.Size = new System.Drawing.Size(196, 21);
             this.cbmaquina.TabIndex = 101;
             this.cbmaquina.TabStop = false;
             this.cbmaquina.Validar = false;
@@ -557,7 +557,7 @@
             this.cbturno.IntegralHeight = false;
             this.cbturno.Location = new System.Drawing.Point(81, 175);
             this.cbturno.Name = "cbturno";
-            this.cbturno.Size = new System.Drawing.Size(91, 21);
+            this.cbturno.Size = new System.Drawing.Size(121, 21);
             this.cbturno.TabIndex = 99;
             this.cbturno.TabStop = false;
             this.cbturno.Validar = false;

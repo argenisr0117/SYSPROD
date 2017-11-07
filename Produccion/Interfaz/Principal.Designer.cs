@@ -47,8 +47,8 @@
             this.btnGalvanizado = new System.Windows.Forms.Button();
             this.btnTrefilado = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnVerPruebasCald = new System.Windows.Forms.Button();
+            this.btnPruebasCalidad = new System.Windows.Forms.Button();
             this.btnOrden = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
@@ -279,8 +279,8 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
-            this.panel4.Controls.Add(this.button1);
-            this.panel4.Controls.Add(this.button2);
+            this.panel4.Controls.Add(this.btnVerPruebasCald);
+            this.panel4.Controls.Add(this.btnPruebasCalidad);
             this.panel4.Controls.Add(this.btnOrden);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.ForeColor = System.Drawing.Color.Black;
@@ -289,41 +289,45 @@
             this.panel4.Size = new System.Drawing.Size(600, 112);
             this.panel4.TabIndex = 4;
             // 
-            // button1
+            // btnVerPruebasCald
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button1.Image = global::Interfaz.Properties.Resources.printer3_converted1;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.Location = new System.Drawing.Point(400, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 112);
-            this.button1.TabIndex = 2;
-            this.button1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnVerPruebasCald.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.btnVerPruebasCald.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnVerPruebasCald.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnVerPruebasCald.FlatAppearance.BorderSize = 0;
+            this.btnVerPruebasCald.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnVerPruebasCald.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerPruebasCald.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnVerPruebasCald.Image = global::Interfaz.Properties.Resources.printer3_converted1;
+            this.btnVerPruebasCald.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnVerPruebasCald.Location = new System.Drawing.Point(400, 0);
+            this.btnVerPruebasCald.Name = "btnVerPruebasCald";
+            this.btnVerPruebasCald.Size = new System.Drawing.Size(200, 112);
+            this.btnVerPruebasCald.TabIndex = 2;
+            this.btnVerPruebasCald.Text = "Visualizar Pruebas Calidad";
+            this.btnVerPruebasCald.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnVerPruebasCald.UseVisualStyleBackColor = false;
+            this.btnVerPruebasCald.Click += new System.EventHandler(this.btnVerPruebasCald_Click);
             // 
-            // button2
+            // btnPruebasCalidad
             // 
-            this.button2.BackColor = System.Drawing.Color.DarkRed;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button2.Image = global::Interfaz.Properties.Resources.icono_registro_converted1;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.Location = new System.Drawing.Point(200, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(200, 112);
-            this.button2.TabIndex = 1;
-            this.button2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnPruebasCalidad.BackColor = System.Drawing.Color.DarkRed;
+            this.btnPruebasCalidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPruebasCalidad.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnPruebasCalidad.FlatAppearance.BorderSize = 0;
+            this.btnPruebasCalidad.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPruebasCalidad.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPruebasCalidad.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnPruebasCalidad.Image = global::Interfaz.Properties.Resources.icono_registro_converted1;
+            this.btnPruebasCalidad.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnPruebasCalidad.Location = new System.Drawing.Point(200, 0);
+            this.btnPruebasCalidad.Name = "btnPruebasCalidad";
+            this.btnPruebasCalidad.Size = new System.Drawing.Size(200, 112);
+            this.btnPruebasCalidad.TabIndex = 1;
+            this.btnPruebasCalidad.Text = "Registro Pruebas Calidad";
+            this.btnPruebasCalidad.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnPruebasCalidad.UseVisualStyleBackColor = false;
+            this.btnPruebasCalidad.Click += new System.EventHandler(this.btnPruebasCalidad_Click);
             // 
             // btnOrden
             // 
@@ -400,8 +404,8 @@
         private System.Windows.Forms.Button btnGalvanizado;
         private System.Windows.Forms.Button btnTrefilado;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnVerPruebasCald;
+        private System.Windows.Forms.Button btnPruebasCalidad;
         private System.Windows.Forms.Button btnOrden;
         private System.Windows.Forms.Panel panel5;
     }

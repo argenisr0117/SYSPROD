@@ -106,6 +106,16 @@ namespace Interfaz
                     Consultas.frmcOrdenProduccion obj = new Consultas.frmcOrdenProduccion();
                     obj.Show();
                 }
+                if (form == "frmControlCalidad")
+                {
+                    frmControlCalidad obj = new frmControlCalidad();
+                    obj.Show();
+                }
+                if (form == "frmcPruebasCalidad")
+                {
+                    Consultas.frmcPruebasCalidad obj = new Consultas.frmcPruebasCalidad();
+                    obj.Show();
+                }
             }
         }
 
@@ -155,6 +165,18 @@ namespace Interfaz
         private void btnOrden_Click(object sender, EventArgs e)
         {
             form = "frmcOrdenProduccion";
+            AbrirForm(form);
+        }
+
+        private void btnPruebasCalidad_Click(object sender, EventArgs e)
+        {
+            form = "frmControlCalidad";
+            AbrirForm(form);
+        }
+
+        private void btnVerPruebasCald_Click(object sender, EventArgs e)
+        {
+            form = "frmcPruebasCalidad";
             AbrirForm(form);
         }
     }

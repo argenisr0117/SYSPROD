@@ -66,11 +66,17 @@ namespace Interfaz.Registros
             }
 
         }
+        private void NumeroPedido()
+        {
+            string pedido = O.ObtenerNumeroPedido();
+            txtNumeroPedido.Text = pedido;
+        }
         private void frmOrdenProduccion_Load(object sender, EventArgs e)
         {
             ComboC();
             ComboP();
             ComboD();
+            NumeroPedido();
             //cmbCliente.Enabled = false;
             cmbCliente.SelectedIndex = -1;
             cmbDpto.SelectedValue = "Galv";
@@ -86,6 +92,7 @@ namespace Interfaz.Registros
                 cmbProducto.Enabled = false;
                 cmbDpto.Enabled = false;
                 cmbCliente.Enabled = false;
+                btnBuscar.Enabled = false;
                 txtCantidad.Focus();
             }
             
@@ -103,6 +110,8 @@ namespace Interfaz.Registros
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             Consultas.frmcProducto obj = new Consultas.frmcProducto();
+            obj.lbinf.Text = "Doble click para seleccinar";
+            obj.lbinf.Visible = true;
             Program.Valor3 = 1;
             Program.Valor2 = 1;
             obj.ShowDialog();
@@ -156,6 +165,7 @@ namespace Interfaz.Registros
                     O.Dpto = cmbDpto.SelectedValue.ToString();
                     O.Producto = cmbProducto.SelectedValue.ToString();
                     O.Cantidad = Convert.ToDouble(txtCantidad.Text);
+                    O.Pedido = txtNumeroPedido.Text;
                     if (Program.Valor == 5)
                     {
                         mensaje = O.ActualizarOrdenProduccion();
@@ -180,6 +190,7 @@ namespace Interfaz.Registros
 
                             MessageBoxEx.Show("Ordén registrada", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             Limpiar();
+                            NumeroPedido();
                         }
                         else
                         {

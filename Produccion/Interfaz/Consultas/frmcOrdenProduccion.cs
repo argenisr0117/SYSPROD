@@ -35,6 +35,9 @@ namespace Interfaz.Consultas
                 }
                 dtgOrdenes.DataSource = null;
                 dtgOrdenes.DataSource = dt;
+                dtgOrdenes.ClearSelection();
+                dtgOrdenes.Columns[9].Visible = false;
+                dtgOrdenes.Columns[10].Visible = false;
             }
             catch (Exception ex)
             {
@@ -55,7 +58,7 @@ namespace Interfaz.Consultas
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            Registros.frmOrdenProduccion obj = new Registros.frmOrdenProduccion();
+            Registros.frmOrdenProduccion obj = new Registros.frmOrdenProduccion();  //crear nueva orden de produccion
             obj.ShowDialog();
             LlenarGrid();
         }
@@ -67,10 +70,10 @@ namespace Interfaz.Consultas
                 if (dtgOrdenes.SelectedRows.Count > 0)
                 {
                     Program.Orden = dtgOrdenes.CurrentRow.Cells[1].Value.ToString();
-                    Program.Producto = dtgOrdenes.CurrentRow.Cells[2].Value.ToString();
-                    Program.Cliente1 = dtgOrdenes.CurrentRow.Cells[3].Value.ToString();
-                    Program.Dpto = dtgOrdenes.CurrentRow.Cells[6].Value.ToString();
-                    Program.Cantidad = Convert.ToInt16(dtgOrdenes.CurrentRow.Cells[4].Value);
+                    Program.Producto = dtgOrdenes.CurrentRow.Cells[3].Value.ToString();
+                    Program.Cliente1 = dtgOrdenes.CurrentRow.Cells[4].Value.ToString();
+                    Program.Dpto = dtgOrdenes.CurrentRow.Cells[7].Value.ToString();
+                    Program.Cantidad = Convert.ToInt16(dtgOrdenes.CurrentRow.Cells[5].Value);
                     Program.Valor = 5;
                     Registros.frmOrdenProduccion obj = new Registros.frmOrdenProduccion();
                     obj.ShowDialog();
@@ -89,6 +92,23 @@ namespace Interfaz.Consultas
             {
                 this.Dispose();
                 this.Close();
+            }
+        }
+
+        private void btnPacking_Click(object sender, EventArgs e)
+        {
+            if (dtgOrdenes.SelectedRows.Count > 0)
+            {
+                Program.Orden = dtgOrdenes.CurrentRow.Cells[1].Value.ToString();
+                Program.Producto = dtgOrdenes.CurrentRow.Cells[9].Value.ToString();
+                Program.Cliente =Convert.ToInt16(dtgOrdenes.CurrentRow.Cells[10].Value);
+                Registros.frmPackingList obj = new Registros.frmPackingList();
+                obj.ShowDialog();
+
+            }
+            else
+            {
+                MessageBoxEx.Show("Debe seleccionar una orden", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }
