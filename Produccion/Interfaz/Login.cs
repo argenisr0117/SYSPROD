@@ -113,6 +113,16 @@ namespace Interfaz
                         Program.ordenprod = Convert.ToBoolean(dt.Rows[0][27]);
                         Program.controlcald = Convert.ToBoolean(dt.Rows[0][28]);
                         Program.Idusuario = Convert.ToInt16(dt.Rows[0][0]);
+                        Program.vcontrolcald= Convert.ToBoolean(dt.Rows[0][29]);
+                        Program.vccfecha= Convert.ToBoolean(dt.Rows[0][30]);
+                        Program.edigalv= Convert.ToBoolean(dt.Rows[0][31]);
+                        Program.eligalv= Convert.ToBoolean(dt.Rows[0][32]);
+                        Program.mosgalv= Convert.ToBoolean(dt.Rows[0][33]);
+                        Program.filgalv= Convert.ToBoolean(dt.Rows[0][34]);
+                        Program.expgalv= Convert.ToBoolean(dt.Rows[0][35]);
+                        Program.fdesgalv= Convert.ToBoolean(dt.Rows[0][36]);
+                        Program.fhasgalv=Convert.ToBoolean(dt.Rows[0][37]);
+                        Program.reimgalv= Convert.ToBoolean(dt.Rows[0][38]);
                         //Program.Usuario = txtUsuario.Text;
                         //Splash obj = new Splash();
                         Principal obj = new Principal();

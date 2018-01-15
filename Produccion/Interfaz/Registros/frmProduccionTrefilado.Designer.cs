@@ -112,7 +112,7 @@
             this.cONFIGURACIONToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(3, 3);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1019, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1006, 24);
             this.menuStrip1.TabIndex = 111;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -164,7 +164,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1033, 621);
+            this.tabControl1.Size = new System.Drawing.Size(1020, 621);
             this.tabControl1.TabIndex = 112;
             // 
             // tabregistro
@@ -204,7 +204,7 @@
             this.tabregistro.Location = new System.Drawing.Point(4, 22);
             this.tabregistro.Name = "tabregistro";
             this.tabregistro.Padding = new System.Windows.Forms.Padding(3);
-            this.tabregistro.Size = new System.Drawing.Size(1025, 595);
+            this.tabregistro.Size = new System.Drawing.Size(1012, 595);
             this.tabregistro.TabIndex = 0;
             this.tabregistro.Text = "REGISTRAR";
             this.tabregistro.UseVisualStyleBackColor = true;
@@ -622,7 +622,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1025, 595);
+            this.tabPage2.Size = new System.Drawing.Size(1012, 595);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "PRODUCCIÓN DEL DIA";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -638,7 +638,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(3, 510);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1019, 82);
+            this.panel2.Size = new System.Drawing.Size(1006, 82);
             this.panel2.TabIndex = 2;
             // 
             // btnReimprimir
@@ -767,7 +767,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1019, 85);
+            this.panel1.Size = new System.Drawing.Size(1006, 85);
             this.panel1.TabIndex = 1;
             // 
             // label18
@@ -970,7 +970,7 @@
             this.dtgvProduccion.ReadOnly = true;
             this.dtgvProduccion.RowHeadersWidth = 20;
             this.dtgvProduccion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvProduccion.Size = new System.Drawing.Size(1014, 419);
+            this.dtgvProduccion.Size = new System.Drawing.Size(1009, 419);
             this.dtgvProduccion.TabIndex = 0;
             // 
             // serialPort1
@@ -982,7 +982,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1033, 621);
+            this.ClientSize = new System.Drawing.Size(1020, 621);
             this.Controls.Add(this.tabControl1);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

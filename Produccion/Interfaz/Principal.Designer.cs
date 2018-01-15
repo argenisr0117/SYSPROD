@@ -238,7 +238,7 @@
             // 
             // btnGalvanizado
             // 
-            this.btnGalvanizado.BackColor = System.Drawing.Color.Indigo;
+            this.btnGalvanizado.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnGalvanizado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnGalvanizado.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnGalvanizado.FlatAppearance.BorderSize = 0;

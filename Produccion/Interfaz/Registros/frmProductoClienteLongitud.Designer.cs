@@ -40,6 +40,11 @@
             this.btnActivar = new System.Windows.Forms.Button();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.cbestado = new System.Windows.Forms.ComboBox();
+            this.cbTicket = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbempresa = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvProducto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -136,13 +141,14 @@
             this.dtgvProducto.AllowUserToDeleteRows = false;
             this.dtgvProducto.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dtgvProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvProducto.Location = new System.Drawing.Point(12, 156);
+            this.dtgvProducto.Location = new System.Drawing.Point(12, 204);
             this.dtgvProducto.MultiSelect = false;
             this.dtgvProducto.Name = "dtgvProducto";
             this.dtgvProducto.ReadOnly = true;
             this.dtgvProducto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgvProducto.Size = new System.Drawing.Size(464, 177);
             this.dtgvProducto.TabIndex = 146;
+            this.dtgvProducto.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvProducto_CellDoubleClick);
             // 
             // btnSalir
             // 
@@ -155,7 +161,7 @@
             this.btnSalir.ForeColor = System.Drawing.Color.Black;
             this.btnSalir.Image = global::Interfaz.Properties.Resources.logout_icon;
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSalir.Location = new System.Drawing.Point(493, 278);
+            this.btnSalir.Location = new System.Drawing.Point(493, 326);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(103, 55);
             this.btnSalir.TabIndex = 149;
@@ -176,7 +182,7 @@
             this.btnActivar.ForeColor = System.Drawing.Color.Black;
             this.btnActivar.Image = global::Interfaz.Properties.Resources.forward__2_;
             this.btnActivar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnActivar.Location = new System.Drawing.Point(493, 217);
+            this.btnActivar.Location = new System.Drawing.Point(493, 265);
             this.btnActivar.Name = "btnActivar";
             this.btnActivar.Size = new System.Drawing.Size(103, 55);
             this.btnActivar.TabIndex = 148;
@@ -197,7 +203,7 @@
             this.btnRegistrar.ForeColor = System.Drawing.Color.Black;
             this.btnRegistrar.Image = global::Interfaz.Properties.Resources.save_icon;
             this.btnRegistrar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnRegistrar.Location = new System.Drawing.Point(493, 156);
+            this.btnRegistrar.Location = new System.Drawing.Point(493, 204);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(103, 55);
             this.btnRegistrar.TabIndex = 147;
@@ -217,17 +223,82 @@
             this.cbestado.Items.AddRange(new object[] {
             "ACTIVOS",
             "INACTIVOS"});
-            this.cbestado.Location = new System.Drawing.Point(493, 116);
+            this.cbestado.Location = new System.Drawing.Point(493, 172);
             this.cbestado.Name = "cbestado";
             this.cbestado.Size = new System.Drawing.Size(103, 21);
             this.cbestado.TabIndex = 150;
             this.cbestado.SelectedIndexChanged += new System.EventHandler(this.cbestado_SelectedIndexChanged);
             // 
+            // cbTicket
+            // 
+            this.cbTicket.AutoSize = true;
+            this.cbTicket.Location = new System.Drawing.Point(152, 162);
+            this.cbTicket.Name = "cbTicket";
+            this.cbTicket.Size = new System.Drawing.Size(15, 14);
+            this.cbTicket.TabIndex = 151;
+            this.cbTicket.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(6, 162);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(126, 13);
+            this.label1.TabIndex = 152;
+            this.label1.Text = "TICKET ALTERNATIVO:";
+            // 
+            // cbempresa
+            // 
+            this.cbempresa.BackColor = System.Drawing.Color.Gainsboro;
+            this.cbempresa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbempresa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbempresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbempresa.ForeColor = System.Drawing.Color.Black;
+            this.cbempresa.FormattingEnabled = true;
+            this.cbempresa.ItemHeight = 18;
+            this.cbempresa.Location = new System.Drawing.Point(107, 126);
+            this.cbempresa.Name = "cbempresa";
+            this.cbempresa.Size = new System.Drawing.Size(369, 26);
+            this.cbempresa.TabIndex = 154;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.White;
+            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(6, 132);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(69, 15);
+            this.label7.TabIndex = 153;
+            this.label7.Text = "EMPRESA:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(9, 401);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(210, 13);
+            this.label4.TabIndex = 155;
+            this.label4.Text = "Doble click en registro para editarlo";
+            // 
             // frmProductoClienteLongitud
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(608, 357);
+            this.ClientSize = new System.Drawing.Size(608, 421);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.cbempresa);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cbTicket);
             this.Controls.Add(this.cbestado);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnActivar);
@@ -266,5 +337,10 @@
         private System.Windows.Forms.Button btnActivar;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.ComboBox cbestado;
+        private System.Windows.Forms.CheckBox cbTicket;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cbempresa;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label4;
     }
 }

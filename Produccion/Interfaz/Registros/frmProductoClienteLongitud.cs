@@ -17,6 +17,8 @@ namespace Interfaz.Registros
         clsProducto P = new clsProducto();
         clsCliente C = new clsCliente();
         clsOrdenProduccion O = new clsOrdenProduccion();
+        clsEmpresa E = new clsEmpresa();
+        int Id = 0;
         public frmProductoClienteLongitud()
         {
             InitializeComponent();
@@ -47,13 +49,29 @@ namespace Interfaz.Registros
                 MessageBoxEx.Show(ex.Message);
             }
         }
+        private void LlenarComboE()
+        {
+            try
+            {
+                cbempresa.DataSource = E.Listar(true);
+                cbempresa.DisplayMember = "DESCRIPCION";
+                cbempresa.ValueMember = "ID_EMPRESA";
+            }
+            catch (Exception ex)
+            {
+                MessageBoxEx.Show(ex.Message);
+            }
+
+        }
 
         private void frmProductoClienteLongitud_Load(object sender, EventArgs e)
         {
             ComboC();
             ComboP();
+            LlenarComboE();
             cbestado.SelectedIndex = 0;
             LlenarGrid();
+            Limpiar();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -83,11 +101,20 @@ namespace Interfaz.Registros
                 dtgvProducto.DataSource = null;
                 dtgvProducto.DataSource = dt;
                 //dtgvProducto.ClearSelection();
+                dtgvProducto.Columns[0].Visible = false;
+                dtgvProducto.Columns[3].Visible = false;
             }
             catch (Exception ex)
             {
                 MessageBoxEx.Show(ex.Message, "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+        private void Limpiar()
+        {
+            cmbCliente.SelectedIndex = -1;
+            cmbProducto.SelectedIndex = -1;
+            cbempresa.SelectedIndex = -1;
+            cbTicket.Checked = false;
         }
         private void btnBuscar_Click(object sender, EventArgs e)
         {
@@ -111,14 +138,24 @@ namespace Interfaz.Registros
         {
             try
             {
+                if (cmbProducto.Text == "" || cmbCliente.Text == "" || cbempresa.Text == "")
+                {
+                    MessageBoxEx.Show("Campos vacios, llenelos.", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
                 string mensaje = "";
+                O.Id = Id;
                 O.Producto = cmbProducto.SelectedValue.ToString();
                 O.Cliente = Convert.ToInt16(cmbCliente.SelectedValue);
+                O.Ticket = cbTicket.Checked;
+                O.Idempresa = cbempresa.SelectedValue.ToString();
                 mensaje = O.RelacionProductoClienteLongitud();
                 if (mensaje == "1")
                 {
                     MessageBoxEx.Show("Relacionado", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LlenarGrid();
+                    Limpiar();
 
                 }
                 else if(mensaje=="2")
@@ -126,9 +163,18 @@ namespace Interfaz.Registros
                     MessageBoxEx.Show("Ha ocurrido un error", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
+                else if (mensaje == "3")
+                {
+                    MessageBoxEx.Show("Actualizado", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LlenarGrid();
+                    Limpiar();
+                }
+                Id = 0;
+                }
+
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBoxEx.Show(ex.Message);
             }
@@ -177,6 +223,16 @@ namespace Interfaz.Registros
                 btnActivar.Text = "ACTIVAR";
 
             }
+        }
+
+        private void dtgvProducto_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+           cmbProducto.Text=dtgvProducto.CurrentRow.Cells[1].Value.ToString();
+           cmbCliente.Text= dtgvProducto.CurrentRow.Cells[2].Value.ToString();
+           cbempresa.Text= dtgvProducto.CurrentRow.Cells[5].Value.ToString();
+           cbTicket.Checked = Convert.ToBoolean(dtgvProducto.CurrentRow.Cells[4].Value);
+           Id= Convert.ToInt16(dtgvProducto.CurrentRow.Cells[0].Value);
+
         }
     }
 }

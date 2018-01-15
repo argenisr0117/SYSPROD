@@ -14,9 +14,12 @@ namespace Intermedia
         private clsManejador M = new clsManejador();
 
         DateTime Mfecha;
+        DateTime Mfechaf;
         string Mnumorden;
         string Mdpto;
         int Mid;
+        Boolean Mticket;
+        int Midtipo;
         string Midd;
         string Mproducto;
         string Mmaquina;
@@ -32,15 +35,55 @@ namespace Intermedia
         double Mdesresislbs;
         string Mpedido;
         double Mdiampulg;
+        string Mcontenedor;
+        string Midempresa;
+        int Mtamano;
+        int Miduso;
+        string Mconduce;
         public DateTime Fecha
         {
             get { return Mfecha; }
             set { Mfecha = value; }
         }
+        public DateTime Fechaf
+        {
+            get { return Mfechaf; }
+            set { Mfechaf = value; }
+        }
         public string Numorden
         {
             get { return Mnumorden; }
             set { Mnumorden = value; }
+        }
+        public string Conduce
+        {
+            get { return Mconduce; }
+            set { Mconduce = value; }
+        }
+        public string Contenedor
+        {
+            get { return Mcontenedor; }
+            set { Mcontenedor = value; }
+        }
+        public string Idempresa
+        {
+            get { return Midempresa; }
+            set { Midempresa = value; }
+        }
+        public int Tamano
+        {
+            get { return Mtamano; }
+            set { Mtamano = value; }
+        }
+        public int Iduso
+        {
+            get { return Miduso; }
+            set { Miduso = value; }
+        }
+        public Boolean Ticket
+        {
+            get { return Mticket; }
+            set { Mticket = value; }
         }
         public string Dpto
         {
@@ -76,6 +119,11 @@ namespace Intermedia
         {
             get { return Mid; }
             set { Mid = value; }
+        }
+        public int Idtipo
+        {
+            get { return Midtipo; }
+            set { Midtipo = value; }
         }
         public string Idd
         {
@@ -128,6 +176,18 @@ namespace Intermedia
             set { Midusuario = value; }
         }
 
+        public DataTable SecuenciaConduce()
+        {
+            DataTable dt = new DataTable();
+            List<clsParametros> lst = new List<clsParametros>();
+            return dt = M.Listado("secuencia_conduce", lst);
+        }
+        public DataTable ListadoUsoAlambre()
+        {
+            DataTable dt = new DataTable();
+            List<clsParametros> lst = new List<clsParametros>();
+            return dt = M.Listado("listado_uso_alambre", lst);
+        }
         public bool RegistrarOrdenProduccion()
         {
             bool mensaje = false;
@@ -140,6 +200,7 @@ namespace Intermedia
             lst.Add(new clsParametros("@idusuario", Midusuario));
             lst.Add(new clsParametros("@cantidad", Mcantidad));
             lst.Add(new clsParametros("@pedido", Mpedido));
+            lst.Add(new clsParametros("@idtipo", Midtipo));
             M.EjecutarSP("registrar_orden_produccion", ref lst);
             mensaje =Convert.ToBoolean(lst[0].Valor);
             return mensaje;
@@ -155,6 +216,16 @@ namespace Intermedia
             mensaje = Convert.ToBoolean(lst[0].Valor);
             return mensaje;
         }
+        public bool EliminarOrdenProduccion()
+        {
+            bool mensaje = false;
+            List<clsParametros> lst = new List<clsParametros>();
+            lst.Add(new clsParametros("@msj", "", SqlDbType.Bit, ParameterDirection.Output, 1));
+            lst.Add(new clsParametros("@idorden", Mid));
+            M.EjecutarSP("eliminar_orden_produccion", ref lst);
+            mensaje = Convert.ToBoolean(lst[0].Valor);
+            return mensaje;
+        }
         public string RelacionProductoClienteLongitud()
         {
             string mensaje = "";
@@ -162,6 +233,9 @@ namespace Intermedia
             lst.Add(new clsParametros("@mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 1));
             lst.Add(new clsParametros("@idproducto", Mproducto));
             lst.Add(new clsParametros("@idcliente", Mcliente));
+            lst.Add(new clsParametros("@ticket", Mticket));
+            lst.Add(new clsParametros("@idempresa", Midempresa));
+            lst.Add(new clsParametros("@id", Mid));
             M.EjecutarSP("relacion_producto_cliente_longitud", ref lst);
             mensaje = lst[0].Valor.ToString();
             return mensaje;
@@ -175,14 +249,30 @@ namespace Intermedia
             mensaje = lst[0].Valor.ToString();
             return mensaje;
         }
+        public DataTable BuscarPakingList()
+        {
+            DataTable dt = new DataTable();
+            List<clsParametros> lst = new List<clsParametros>();
+            lst.Add(new clsParametros("@desde", Mfecha));
+            lst.Add(new clsParametros("@hasta", Mfechaf));
+            lst.Add(new clsParametros("@idproducto", Mproducto));
+            lst.Add(new clsParametros("@idcliente", Mcliente));
+            return dt = M.Listado("buscar_packing_list", lst);
+        }
         public string RegistrarPackingList()
         {
             string mensaje = "";
             List<clsParametros> lst = new List<clsParametros>();
             lst.Add(new clsParametros("@mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 1));
             lst.Add(new clsParametros("@idproducto", Mproducto));
+            lst.Add(new clsParametros("@idpacking", Mid));
             lst.Add(new clsParametros("@idcliente", Mcliente));
             lst.Add(new clsParametros("@numorden", Mnumorden));
+            lst.Add(new clsParametros("@contenedor", Mcontenedor));
+            lst.Add(new clsParametros("@idempresa", Midempresa));
+            lst.Add(new clsParametros("@tamano", Mtamano));
+            lst.Add(new clsParametros("@iduso", Miduso));
+            lst.Add(new clsParametros("@conduce", Mconduce));
             M.EjecutarSP("registrar_packing_list", ref lst);
             mensaje = lst[0].Valor.ToString();
             return mensaje;
@@ -195,6 +285,7 @@ namespace Intermedia
             lst.Add(new clsParametros("@tarjeta", Mtarjeta));
             lst.Add(new clsParametros("@fecha", Mfecha));
             lst.Add(new clsParametros("@peso", Mcantidad));
+            lst.Add(new clsParametros("@idpacking", Mid));
             M.EjecutarSP("registrar_detalle_packing_list", ref lst);
             //mensaje = lst[0].Valor.ToString();
             //return mensaje;
@@ -212,13 +303,30 @@ namespace Intermedia
             //mensaje = lst[0].Valor.ToString();
             //return mensaje;
         }
-        
+        public void EliminarBobinaPacking()
+        {
+            //string mensaje = "";
+            List<clsParametros> lst = new List<clsParametros>();
+            // lst.Add(new clsParametros("@mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 1));
+            lst.Add(new clsParametros("@tarjeta", Mtarjeta));
+            M.EjecutarSP("eliminar_bobina_packing", ref lst);
+            //mensaje = lst[0].Valor.ToString();
+            //return mensaje;
+        }
+
         public DataTable ObtenerProductoClienteLongitud(bool estado)
         {
             DataTable dt = new DataTable();
             List<clsParametros> lst = new List<clsParametros>();
             lst.Add(new clsParametros("@estado", estado));
             return dt = M.Listado("obtener_producto_cliente_longitud", lst);
+        }
+        public DataTable ObtenerBobinasSeleccionadas()
+        {
+            DataTable dt = new DataTable();
+            List<clsParametros> lst = new List<clsParametros>();
+            lst.Add(new clsParametros("@idpacking", Mid));
+            return dt = M.Listado("obtener_bobinas_seleccionadas_packing", lst);
         }
         public DataTable ObtenerRegistrosCalidadBobinaPacking()
         {
@@ -230,12 +338,20 @@ namespace Intermedia
             lst.Add(new clsParametros("@idmaquina", Mmaquina));
             return dt = M.Listado("obtener_registros_calidad_bobinas_packing", lst);
         }
-        public DataTable ListadoOrdenes(bool estado)
+        public DataTable ListadoOrdenes(bool estado, int idtipo)
         {
             DataTable dt = new DataTable();
             List<clsParametros> lst = new List<clsParametros>();
             lst.Add(new clsParametros("@estado", estado));
+            lst.Add(new clsParametros("@idtipo", idtipo));
             return dt = M.Listado("buscar_ordenes", lst);
+        }
+        public DataTable ListadoTipoOrden(bool estado)
+        {
+            DataTable dt = new DataTable();
+            List<clsParametros> lst = new List<clsParametros>();
+            lst.Add(new clsParametros("@estado", estado));
+            return dt = M.Listado("listado_tipo_orden", lst);
         }
         public DataTable ObtenerBobinasOrdenPacking()
         {

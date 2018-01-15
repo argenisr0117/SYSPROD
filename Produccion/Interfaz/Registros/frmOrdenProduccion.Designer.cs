@@ -43,11 +43,13 @@
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.cmbDpto = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtNumeroPedido = new Interfaz.Controles.textbox(this.components);
             this.txtCantidad = new Interfaz.Controles.textboxN(this.components);
             this.txtNumOrden = new Interfaz.Controles.textbox(this.components);
-            this.cmbDpto = new System.Windows.Forms.ComboBox();
-            this.txtNumeroPedido = new Interfaz.Controles.textbox(this.components);
-            this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cmbTipo = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -168,7 +170,7 @@
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(50, 216);
+            this.label4.Location = new System.Drawing.Point(50, 250);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 13);
             this.label4.TabIndex = 142;
@@ -185,7 +187,7 @@
             this.btnLimpiar.ForeColor = System.Drawing.Color.Black;
             this.btnLimpiar.Image = global::Interfaz.Properties.Resources.Clear_icon;
             this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnLimpiar.Location = new System.Drawing.Point(272, 262);
+            this.btnLimpiar.Location = new System.Drawing.Point(272, 288);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(103, 55);
             this.btnLimpiar.TabIndex = 145;
@@ -206,7 +208,7 @@
             this.btnRegistrar.ForeColor = System.Drawing.Color.Black;
             this.btnRegistrar.Image = global::Interfaz.Properties.Resources.save_icon;
             this.btnRegistrar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnRegistrar.Location = new System.Drawing.Point(163, 262);
+            this.btnRegistrar.Location = new System.Drawing.Point(163, 288);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(103, 55);
             this.btnRegistrar.TabIndex = 144;
@@ -227,7 +229,7 @@
             this.btnSalir.ForeColor = System.Drawing.Color.Black;
             this.btnSalir.Image = global::Interfaz.Properties.Resources.logout_icon;
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSalir.Location = new System.Drawing.Point(381, 262);
+            this.btnSalir.Location = new System.Drawing.Point(381, 288);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(103, 55);
             this.btnSalir.TabIndex = 146;
@@ -240,25 +242,6 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // txtCantidad
-            // 
-            this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidad.Location = new System.Drawing.Point(151, 211);
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(100, 22);
-            this.txtCantidad.TabIndex = 3;
-            this.txtCantidad.Validar = false;
-            this.txtCantidad.Valor = Interfaz.Controles.textboxN.Tipo.Números;
-            // 
-            // txtNumOrden
-            // 
-            this.txtNumOrden.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumOrden.Location = new System.Drawing.Point(151, 89);
-            this.txtNumOrden.Name = "txtNumOrden";
-            this.txtNumOrden.Size = new System.Drawing.Size(100, 22);
-            this.txtNumOrden.TabIndex = 0;
-            this.txtNumOrden.Validar = true;
             // 
             // cmbDpto
             // 
@@ -277,16 +260,6 @@
             this.cmbDpto.TabIndex = 141;
             this.cmbDpto.SelectedValueChanged += new System.EventHandler(this.cmbDpto_SelectedValueChanged);
             // 
-            // txtNumeroPedido
-            // 
-            this.txtNumeroPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumeroPedido.Location = new System.Drawing.Point(151, 61);
-            this.txtNumeroPedido.Name = "txtNumeroPedido";
-            this.txtNumeroPedido.ReadOnly = true;
-            this.txtNumeroPedido.Size = new System.Drawing.Size(100, 22);
-            this.txtNumeroPedido.TabIndex = 147;
-            this.txtNumeroPedido.Validar = true;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -299,11 +272,70 @@
             this.label5.TabIndex = 148;
             this.label5.Text = "# PEDIDO:";
             // 
+            // txtNumeroPedido
+            // 
+            this.txtNumeroPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumeroPedido.Location = new System.Drawing.Point(151, 61);
+            this.txtNumeroPedido.Name = "txtNumeroPedido";
+            this.txtNumeroPedido.ReadOnly = true;
+            this.txtNumeroPedido.Size = new System.Drawing.Size(100, 22);
+            this.txtNumeroPedido.TabIndex = 147;
+            this.txtNumeroPedido.Validar = true;
+            // 
+            // txtCantidad
+            // 
+            this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCantidad.Location = new System.Drawing.Point(151, 245);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(100, 22);
+            this.txtCantidad.TabIndex = 3;
+            this.txtCantidad.Validar = false;
+            this.txtCantidad.Valor = Interfaz.Controles.textboxN.Tipo.Números;
+            // 
+            // txtNumOrden
+            // 
+            this.txtNumOrden.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumOrden.Location = new System.Drawing.Point(151, 89);
+            this.txtNumOrden.Name = "txtNumOrden";
+            this.txtNumOrden.Size = new System.Drawing.Size(100, 22);
+            this.txtNumOrden.TabIndex = 0;
+            this.txtNumOrden.Validar = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.White;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(50, 218);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(35, 13);
+            this.label7.TabIndex = 150;
+            this.label7.Text = "TIPO:";
+            // 
+            // cmbTipo
+            // 
+            this.cmbTipo.BackColor = System.Drawing.Color.Gainsboro;
+            this.cmbTipo.DropDownHeight = 160;
+            this.cmbTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTipo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTipo.ForeColor = System.Drawing.Color.Black;
+            this.cmbTipo.FormattingEnabled = true;
+            this.cmbTipo.IntegralHeight = false;
+            this.cmbTipo.Location = new System.Drawing.Point(151, 211);
+            this.cmbTipo.MaxDropDownItems = 30;
+            this.cmbTipo.Name = "cmbTipo";
+            this.cmbTipo.Size = new System.Drawing.Size(369, 26);
+            this.cmbTipo.TabIndex = 149;
+            // 
             // frmOrdenProduccion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(612, 329);
+            this.ClientSize = new System.Drawing.Size(612, 364);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.cmbTipo);
             this.Controls.Add(this.txtNumeroPedido);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnSalir);
@@ -355,5 +387,7 @@
         private System.Windows.Forms.ComboBox cmbDpto;
         private Controles.textbox txtNumeroPedido;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cmbTipo;
     }
 }

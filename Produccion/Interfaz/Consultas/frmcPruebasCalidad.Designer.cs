@@ -33,7 +33,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.btnPacking = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnBusqueda = new System.Windows.Forms.Button();
             this.cmbCliente = new System.Windows.Forms.ComboBox();
@@ -87,7 +86,7 @@
             this.btnSalir.ForeColor = System.Drawing.Color.Black;
             this.btnSalir.Image = global::Interfaz.Properties.Resources.logout_icon;
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSalir.Location = new System.Drawing.Point(568, 411);
+            this.btnSalir.Location = new System.Drawing.Point(513, 410);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(103, 55);
             this.btnSalir.TabIndex = 149;
@@ -108,7 +107,7 @@
             this.btnEditar.ForeColor = System.Drawing.Color.Black;
             this.btnEditar.Image = global::Interfaz.Properties.Resources.save_icon;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEditar.Location = new System.Drawing.Point(350, 410);
+            this.btnEditar.Location = new System.Drawing.Point(404, 410);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(103, 55);
             this.btnEditar.TabIndex = 148;
@@ -117,26 +116,6 @@
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // btnPacking
-            // 
-            this.btnPacking.BackColor = System.Drawing.Color.White;
-            this.btnPacking.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
-            this.btnPacking.FlatAppearance.BorderSize = 2;
-            this.btnPacking.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btnPacking.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnPacking.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPacking.ForeColor = System.Drawing.Color.Black;
-            this.btnPacking.Image = global::Interfaz.Properties.Resources.boxes_brown_icon;
-            this.btnPacking.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnPacking.Location = new System.Drawing.Point(459, 410);
-            this.btnPacking.Name = "btnPacking";
-            this.btnPacking.Size = new System.Drawing.Size(103, 55);
-            this.btnPacking.TabIndex = 150;
-            this.btnPacking.TabStop = false;
-            this.btnPacking.Text = "PACKING";
-            this.btnPacking.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnPacking.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
@@ -305,7 +284,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1020, 482);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnPacking);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.label2);
@@ -332,7 +310,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.Button btnPacking;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DateTimePicker dtpHasta;
         private System.Windows.Forms.Label label1;

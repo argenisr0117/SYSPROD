@@ -210,6 +210,7 @@ namespace Intermedia
             List<clsParametros> lst = new List<clsParametros>();
             lst.Add(new clsParametros("@mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 50));
             lst.Add(new clsParametros("@idproducto", Mproducto));
+            lst.Add(new clsParametros("@fecha", Mfecha));
             lst.Add(new clsParametros("@idcliente", Mcliente));
             lst.Add(new clsParametros("@idmaquina", Mmaquina));
             lst.Add(new clsParametros("@idcolada", Mcolada));
@@ -225,6 +226,7 @@ namespace Intermedia
             lst.Add(new clsParametros("@resistenciapsi", Mresistenciapsi));
             lst.Add(new clsParametros("@diametropulg", Mdiametro));
             lst.Add(new clsParametros("@idprueba", Midprueba));
+            lst.Add(new clsParametros("@valor", Mvalor));
             M.EjecutarSP("registrar_prueba_calidad", ref lst);
             mensaje = lst[0].Valor.ToString();
             return mensaje;

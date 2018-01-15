@@ -29,7 +29,7 @@ namespace Interfaz.Registros
         {
             try
             {
-                cmbProducto.DataSource = P.Listar(true);
+                cmbProducto.DataSource = P.Listado_Productos_Dpto(dpt);
                 cmbProducto.DisplayMember = "DESCRIPCION";
                 cmbProducto.ValueMember = "CODIGO";
             }
@@ -38,7 +38,19 @@ namespace Interfaz.Registros
                 MessageBoxEx.Show(ex.Message);
             }
         }
-
+        private void ComboT()
+        {
+            try
+            {
+                cmbTipo.DataSource = O.ListadoTipoOrden(true);
+                cmbTipo.DisplayMember = "DESCRIPCION";
+                cmbTipo.ValueMember = "ID_TIPO";
+            }
+            catch (Exception ex)
+            {
+                MessageBoxEx.Show(ex.Message);
+            }
+        }
         private void ComboC()
         {
             try
@@ -73,27 +85,36 @@ namespace Interfaz.Registros
         }
         private void frmOrdenProduccion_Load(object sender, EventArgs e)
         {
+            dpt = 5;
+            ComboD();
             ComboC();
             ComboP();
-            ComboD();
-            NumeroPedido();
-            //cmbCliente.Enabled = false;
-            cmbCliente.SelectedIndex = -1;
-            cmbDpto.SelectedValue = "Galv";
-            cmbProducto.SelectedValue = "";
+            ComboT();
             if (Program.Valor == 5)
             {
                 txtNumOrden.Text = Program.Orden;
                 txtCantidad.Text = Program.Cantidad.ToString();
+                txtNumeroPedido.Text = Program.Pedido;
+                //Console.Write(Program.Cliente1);
                 cmbCliente.Text = Program.Cliente1;
                 cmbDpto.Text = Program.Dpto;
                 cmbProducto.Text = Program.Producto;
+                cmbTipo.SelectedValue = Program.Idtipoorden;
                 txtNumOrden.Enabled = false;
                 cmbProducto.Enabled = false;
                 cmbDpto.Enabled = false;
                 cmbCliente.Enabled = false;
                 btnBuscar.Enabled = false;
                 txtCantidad.Focus();
+            }
+            else
+            {
+                NumeroPedido();
+                //cmbCliente.Enabled = false;
+                cmbCliente.SelectedIndex = -1;
+                cmbDpto.SelectedValue = "Galv";
+                cmbProducto.SelectedValue = "";
+                cmbTipo.SelectedIndex = -1;
             }
             
         }
@@ -131,7 +152,24 @@ namespace Interfaz.Registros
         {
             dpto = cmbDpto.SelectedValue.ToString();
             ComboC();
-            cmbCliente.SelectedIndex = -1;
+            if (Program.Valor == 5)
+            {
+                cmbCliente.Text = Program.Cliente1;
+            }
+            else
+            {
+                cmbCliente.SelectedIndex = -1;
+            }
+            if (dpto == "Tref")
+            {
+                dpt = 1;
+                ComboP();
+            }
+            else if(dpto == "Galv")
+            {
+                dpt = 5;
+                ComboP();
+            }
         }
 
         private void Limpiar()
@@ -141,6 +179,7 @@ namespace Interfaz.Registros
             cmbCliente.SelectedIndex = -1;
             cmbProducto.SelectedValue = "";
             cmbDpto.SelectedValue = "Galv";
+            cmbTipo.SelectedIndex = -1;
         }
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
@@ -157,7 +196,7 @@ namespace Interfaz.Registros
             bool mensaje;
             try
             {               
-                if(cmbCliente.SelectedIndex!=-1 && cmbProducto.SelectedValue.ToString() != "")
+                if(cmbCliente.SelectedIndex!=-1 && cmbProducto.SelectedValue.ToString() != "" && cmbTipo.SelectedIndex!=-1)
                 {
                     O.Numorden = txtNumOrden.Text;
                     O.Idusuario = Program.Idusuario;
@@ -166,6 +205,7 @@ namespace Interfaz.Registros
                     O.Producto = cmbProducto.SelectedValue.ToString();
                     O.Cantidad = Convert.ToDouble(txtCantidad.Text);
                     O.Pedido = txtNumeroPedido.Text;
+                    O.Idtipo= Convert.ToInt16(cmbTipo.SelectedValue);
                     if (Program.Valor == 5)
                     {
                         mensaje = O.ActualizarOrdenProduccion();

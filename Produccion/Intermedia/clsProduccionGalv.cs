@@ -296,6 +296,7 @@ namespace Intermedia
             List<clsParametros> lst = new List<clsParametros>();
             lst.Add(new clsParametros("@id", Mid));
             lst.Add(new clsParametros("@supervisor", Msupervisor));
+            lst.Add(new clsParametros("@ayudante", Mayudante));
             lst.Add(new clsParametros("@operador", Moperador));
             lst.Add(new clsParametros("@maquina", Mmaquina));
             lst.Add(new clsParametros("@producto", Mproducto));
@@ -304,7 +305,7 @@ namespace Intermedia
             lst.Add(new clsParametros("@dpto", Mdpto));
             lst.Add(new clsParametros("@mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 50));
             M.EjecutarSP("actualizar_registro_dpto", ref lst);
-            mensaje = lst[8].Valor.ToString();
+            mensaje = lst[9].Valor.ToString();
             return mensaje;
         }
         public string  ExportarRegistroDpto()

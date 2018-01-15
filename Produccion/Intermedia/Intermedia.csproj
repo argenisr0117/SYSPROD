@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsMonitoreoMaq.cs" />
     <Compile Include="clsCargo.cs" />
     <Compile Include="clsCategoria.cs" />
     <Compile Include="clsCliente.cs" />

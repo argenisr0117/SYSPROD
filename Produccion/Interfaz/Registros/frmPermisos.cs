@@ -74,6 +74,16 @@ namespace Interfaz.Registros
                 U.Filcong = cBFiltros.Checked;
                 U.OrdenProd = cbOrdenProd.Checked;
                 U.ControlCald = cbControlCal.Checked;
+                U.VControlCald = cbVControlCald.Checked;
+                U.Vccfecha = cBFechaVC.Checked;
+                U.Edigalv = cBEditarG.Checked;
+                U.Eligalv = cBEliminarG.Checked;
+                U.Mosgalv = cBMostrarG.Checked;
+                U.Expgalv = cbExportarG.Checked;
+                U.Filgalv = cBFiltrarG.Checked;
+                U.Fdesgalv = cBFechadG.Checked;
+                U.Fhasgalv = cBFechahG.Checked;
+                U.Reimgalv = cbReimprimirGalv.Checked;
 
                 mensaje = U.RegistrarActPermisos();
                 if (mensaje == 1)
@@ -129,6 +139,16 @@ namespace Interfaz.Registros
                 cBFiltros.Checked= Convert.ToBoolean(dt.Rows[0][26]);
                 cbOrdenProd.Checked= Convert.ToBoolean(dt.Rows[0][27]);
                 cbControlCal.Checked= Convert.ToBoolean(dt.Rows[0][28]);
+                cbVControlCald.Checked = Convert.ToBoolean(dt.Rows[0][29]);
+                cBFechaVC.Checked = Convert.ToBoolean(dt.Rows[0][30]);
+                cBEditarG.Checked = Convert.ToBoolean(dt.Rows[0][31]);
+                cBEliminarG.Checked = Convert.ToBoolean(dt.Rows[0][32]);
+                cBMostrarG.Checked = Convert.ToBoolean(dt.Rows[0][33]);
+                cBFiltrarG.Checked = Convert.ToBoolean(dt.Rows[0][34]);
+                cbExportarG.Checked = Convert.ToBoolean(dt.Rows[0][35]);
+                cBFechadG.Checked = Convert.ToBoolean(dt.Rows[0][36]);
+                cBFechahG.Checked = Convert.ToBoolean(dt.Rows[0][37]);
+                cbReimprimirGalv.Checked = Convert.ToBoolean(dt.Rows[0][38]);
             }
             catch(Exception ex)
             {

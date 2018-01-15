@@ -30,6 +30,7 @@ namespace Interfaz.Registros
         public string calibre;
         public string medio;
         public string ind = "";
+        frmReporte reporte = new frmReporte();
 
 
         public frmProduccionGalv()
@@ -268,7 +269,7 @@ namespace Interfaz.Registros
             //cmbPesocanasto.MouseWheel += new MouseEventHandler(cmbPesocanasto_MouseWheel);
             dtphasta.Value = DateTime.Now.AddDays(1);
             puertoSerial();
-            cmbDiametro.SelectedIndex = 0;
+            cmbDiametro.SelectedIndex = 1;
             ComboP();
             ComboM();
             ComboO();
@@ -288,14 +289,14 @@ namespace Interfaz.Registros
         }
         private void Permisos()
         {
-            btnEliminar.Enabled = Program.elitref;
-            btnExportar.Enabled = Program.exptref;
-            btnbuscar1.Enabled = Program.mostref;
-            dtpdesde.Enabled = Program.fdestref;
-            dtphasta.Enabled = Program.fhastref;
-            btnFiltrar.Enabled = Program.filtref;
-            btnEditar.Enabled = Program.editref;
-            btnReimprimir.Enabled = Program.reimtref;
+            btnEliminar.Enabled = Program.eligalv;
+            btnExportar.Enabled = Program.expgalv;
+            btnbuscar1.Enabled = Program.mosgalv;
+            dtpdesde.Enabled = Program.fdesgalv;
+            dtphasta.Enabled = Program.fhasgalv;
+            btnFiltrar.Enabled = Program.filgalv;
+            btnEditar.Enabled = Program.edigalv;
+            btnReimprimir.Enabled = Program.reimgalv;
         }
         private void LlenarGrid()
         {
@@ -348,6 +349,8 @@ namespace Interfaz.Registros
                 //}
                 dtgvProduccion.ClearSelection();
                 dtgvProduccion.Columns[10].Visible = false;
+                dtgvProduccion.Columns[11].Visible = false;
+                dtgvProduccion.Columns[12].Visible = false;
             }
             catch (Exception ex)
             {
@@ -378,7 +381,7 @@ namespace Interfaz.Registros
                 //    dtgvProduccion.Rows[x].Cells[9].Value = dt.Rows[x][9].ToString();
                 //}
                 dtgvProduccion.ClearSelection();
-                dtgvProduccion.Columns[9].Visible = false;
+                dtgvProduccion.Columns[10].Visible = false;
 
             }
             catch (Exception ex)
@@ -610,8 +613,7 @@ namespace Interfaz.Registros
             try
             {
                 int h = DateTime.Now.Hour;
-                DataTable dt = new DataTable();
-                DataTable dt2 = new DataTable();
+                DataTable dt = new DataTable();             
                 string Orden = "";
                 double qqs = 0;
                 if (cmbProducto.SelectedIndex > -1 && cmbPesocanasto.SelectedIndex > -1 && cmbSupervisor.SelectedIndex > -1 && cmbOperador.SelectedIndex > -1 && cmbMaquina.SelectedIndex > -1 && cmbProducto.SelectedIndex > -1 && cmbColada.SelectedIndex > -1 && txtPesoBruto.Text!="")
@@ -641,7 +643,8 @@ namespace Interfaz.Registros
                         qqs = peso / 100;
                         qqs = Math.Round(qqs, 2);
                         PG.PesoNeto = peso;
-                        dt2 = PG.ObtenerProductoLongitudConversion();
+                        //////FUNCION PARA IDENTIFICAR LA EMPRESA Y EL TIPO DE TICKET///////
+                        IdentificarTicket_Longitud(peso);
                         ///IDENTIFICAR ORDEN DEL CANASTO Y ACTUALIZAR DICHA ORDEN//
                         dt = PG.ObtenerOrdenCanasto();
                         for(int x = 0; x < dt.Rows.Count; x++)
@@ -709,40 +712,27 @@ namespace Interfaz.Registros
                         {
                             MessageBoxEx.Show("Error,no se ha podido registrar! ", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
-                        frmReporte obj = new frmReporte();
-                        if (dt2.Rows.Count > 0)
-                        {
-                            obj.VerLong = "1";
-                            obj.Longft = (peso * Convert.ToDouble(dt2.Rows[0][0])).ToString("N2");                        
-                            obj.Longmt = (peso * Convert.ToDouble(dt2.Rows[0][1])).ToString("N2");
-                        }
-                        else
-                        {
-                            obj.VerLong = "0";
-                            obj.Longft = "0.00";
-                            obj.Longmt = "0.00";
-                        }
-                        obj.Fecha = Convert.ToDateTime(DateTime.Now.ToShortDateString());
-                        obj.Valor = 12;
-                        obj.Supervisor = cmbSupervisor.SelectedValue.ToString();
-                        obj.Maquina = cmbMaquina.Text;
-                        obj.Cliente = cmbCliente.Text;
-                        obj.Colada = cmbColada.Text;
-                        obj.Calibre = calibre;
-                        obj.Operador = cmbOperador.SelectedValue.ToString();
-                        obj.Ayudante = cmbAyudante.SelectedValue.ToString();
-                        obj.Peso = peso.ToString();
-                        obj.Tarjeta = tarjeta;
-                        obj.Diametro = txtDiametro.Text + " " + cmbDiametro.Text;
-                        obj.Nombre = "ticket_galvanizado.rdlc";
-                        obj.Producto = cmbProducto.Text;
-                        obj.Reporte = "Rollo " + tarjeta + " " + txtCalibre.Text + " " + sae1;
-                        obj.Sae = sae1;
-                        obj.Medio = medio;
-                        obj.Orden = Orden;
-                        obj.Pesokg = (peso * 0.4536).ToString("N0");
-                        //obj.ShowDialog();
-                        //Limpiar();
+                       
+                        reporte.Fecha = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+                        reporte.Valor = 12;
+                        reporte.Supervisor = cmbSupervisor.SelectedValue.ToString();
+                        reporte.Maquina = cmbMaquina.Text;
+                        reporte.Cliente = cmbCliente.Text;
+                        reporte.Colada = cmbColada.Text;
+                        reporte.Calibre = calibre;
+                        reporte.Operador = cmbOperador.SelectedValue.ToString();
+                        reporte.Ayudante = cmbAyudante.SelectedValue.ToString();
+                        reporte.Peso = peso.ToString();
+                        reporte.Tarjeta = tarjeta;
+                        reporte.Diametro = txtDiametro.Text + " " + cmbDiametro.Text;                      
+                        reporte.Producto = cmbProducto.Text;
+                        reporte.Reporte = "Rollo " + tarjeta + " " + txtCalibre.Text + " " + sae1;
+                        reporte.Sae = sae1;
+                        reporte.Medio = medio;
+                        reporte.Orden = Orden;
+                        reporte.Pesokg = (peso * 0.4536).ToString("N0");
+                        reporte.ShowDialog();
+                        Limpiar();
                         PG.Valor = 2; //VALOR PARA FILTRAR TOTAL PROD
                         LlenarGrid();
                         Produccion_Total();
@@ -759,8 +749,33 @@ namespace Interfaz.Registros
             {
                 MessageBoxEx.Show(ex.ToString(), "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            }
+       }
 
+        private void IdentificarTicket_Longitud(double peso)
+        {
+            DataTable dt2 = new DataTable();
+            dt2 = PG.ObtenerProductoLongitudConversion();
+            reporte.Nombre = "ticket_galvanizado.rdlc";
+            reporte.Empresa = "ACERO DEL CIBAO,SRL.";
+            if (dt2.Rows.Count > 0)
+            {
+                reporte.VerLong = "1";
+                reporte.Longft = (peso * Convert.ToDouble(dt2.Rows[0][0])).ToString("N2");
+                reporte.Longmt = (peso * Convert.ToDouble(dt2.Rows[0][1])).ToString("N2");
+                reporte.Empresa = dt2.Rows[0][3].ToString();
+                if (Convert.ToBoolean(dt2.Rows[0][2]))
+                {
+                    reporte.Nombre = "ticket_galvanizado_steel.rdlc";
+                }
+            }
+            else
+            {
+                reporte.VerLong = "0";
+                reporte.Longft = "0.00";
+                reporte.Longmt = "0.00";
+            }
+           
+        }
         private void frmProduccionTrefilado_FormClosing(object sender, FormClosingEventArgs e)
         {
             ClosePuertoSerial();
@@ -785,12 +800,14 @@ namespace Interfaz.Registros
             if (dtgvProduccion.SelectedRows.Count > 0)
             {
                 frmEditarRegistroTref obj = new frmEditarRegistroTref();
+                Program.Editar = 1;
                 obj.Supervisor= dtgvProduccion.CurrentRow.Cells[2].Value.ToString();
                 obj.Operador= dtgvProduccion.CurrentRow.Cells[3].Value.ToString();
-                obj.Producto= dtgvProduccion.CurrentRow.Cells[4].Value.ToString();
-                obj.Maquina= dtgvProduccion.CurrentRow.Cells[5].Value.ToString();
-                obj.Peso= dtgvProduccion.CurrentRow.Cells[7].Value.ToString();
-                obj.Cliente = dtgvProduccion.CurrentRow.Cells[8].Value.ToString();
+                obj.Ayudante= dtgvProduccion.CurrentRow.Cells[4].Value.ToString();
+                obj.Producto= dtgvProduccion.CurrentRow.Cells[5].Value.ToString();
+                obj.Maquina= dtgvProduccion.CurrentRow.Cells[6].Value.ToString();
+                obj.Peso= dtgvProduccion.CurrentRow.Cells[8].Value.ToString();
+                obj.Cliente = dtgvProduccion.CurrentRow.Cells[9].Value.ToString();
                 obj.Id = Convert.ToInt32(dtgvProduccion.CurrentRow.Cells[10].Value);
                 obj.ShowDialog();
                 if(Program.Valor==1)
@@ -809,6 +826,8 @@ namespace Interfaz.Registros
             {
                 MessageBoxEx.Show("Seleccione un registro!", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+            Program.Editar = 2;
+
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -845,6 +864,7 @@ namespace Interfaz.Registros
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
             Consultas.frmcFiltrarRegistros obj = new Consultas.frmcFiltrarRegistros();
+            Program.Filtrar = 1;
             obj.ShowDialog();
             if(Program.Valor==1)
             {
@@ -868,6 +888,7 @@ namespace Interfaz.Registros
             Program.Maquina = "";
             Program.Producto = "";
             Program.Cliente = 0;
+            Program.Filtrar = 2;
         }
 
         private void btnExportar_Click(object sender, EventArgs e)
@@ -979,28 +1000,30 @@ namespace Interfaz.Registros
                     DataTable dt;
                     dt = PG.Reimprimir(Convert.ToInt32(dtgvProduccion.CurrentRow.Cells[10].Value),1);
                     SeleccionarDiametro2(dt.Rows[0][10].ToString());
-                    frmReporte obj = new frmReporte();
-                    obj.Id = Convert.ToInt32(dtgvProduccion.CurrentRow.Cells[10].Value);
-                    obj.Valor = 13;
-                    obj.Fecha = Convert.ToDateTime(dt.Rows[0][0]);
-                    obj.Supervisor = dt.Rows[0][1].ToString();
-                    obj.Operador = dt.Rows[0][2].ToString();
-                    obj.Maquina = dt.Rows[0][3].ToString();
-                    obj.Colada = dt.Rows[0][4].ToString();
-                    obj.Peso = dt.Rows[0][5].ToString();
-                    obj.Pesokg= (Convert.ToDouble(dt.Rows[0][5]) * 0.4536).ToString("N0");
-                    obj.Producto = dt.Rows[0][6].ToString();
-                    obj.Diametro = dt.Rows[0][7].ToString() + " " + "PULG";
-                    obj.Cliente = dt.Rows[0][8].ToString();
-                    obj.Tarjeta=Convert.ToInt32(dt.Rows[0][11]);
-                    obj.Calibre = calibre;
-                    obj.Nombre = "ticket_galvanizado2.rdlc";                 
-                    obj.Reporte = "Ticket";
-                    obj.Sae = sae1;
-                    obj.Medio = medio;
-                    obj.Ayudante= dt.Rows[0][12].ToString();
-                    obj.Orden= dt.Rows[0][13].ToString();
-                    obj.ShowDialog();
+                    reporte.Id = Convert.ToInt32(dtgvProduccion.CurrentRow.Cells[10].Value);
+                    reporte.Valor = 13;
+                    reporte.Fecha = Convert.ToDateTime(dt.Rows[0][0]);
+                    reporte.Supervisor = dt.Rows[0][1].ToString();
+                    reporte.Operador = dt.Rows[0][2].ToString();
+                    reporte.Maquina = dt.Rows[0][3].ToString();
+                    reporte.Colada = dt.Rows[0][4].ToString();
+                    reporte.Peso = dt.Rows[0][5].ToString();
+                    reporte.Pesokg= (Convert.ToDouble(dt.Rows[0][5]) * 0.4536).ToString("N0");
+                    reporte.Producto = dt.Rows[0][6].ToString();
+                    reporte.Diametro = dt.Rows[0][7].ToString() + " " + "MM";
+                    reporte.Cliente = dt.Rows[0][8].ToString();
+                    reporte.Tarjeta=Convert.ToInt32(dt.Rows[0][11]);
+                    reporte.Calibre = calibre;
+                    //reporte.Nombre = "ticket_galvanizado2.rdlc";
+                    reporte.Reporte = "Ticket";
+                    reporte.Sae = sae1;
+                    reporte.Medio = medio;
+                    reporte.Ayudante= dt.Rows[0][12].ToString();
+                    reporte.Orden= dt.Rows[0][13].ToString();
+                    PG.Producto = dtgvProduccion.CurrentRow.Cells[12].Value.ToString();
+                    PG.Cliente = Convert.ToInt32(dtgvProduccion.CurrentRow.Cells[11].Value);
+                    IdentificarTicket_Longitud(Convert.ToDouble(dt.Rows[0][5]));
+                    reporte.ShowDialog();
                 }
             }
             catch(Exception ex)

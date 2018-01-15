@@ -64,6 +64,7 @@
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -105,6 +106,12 @@
     <Compile Include="Consultas\frmcBuscarRegistros.Designer.cs">
       <DependentUpon>frmcBuscarRegistros.cs</DependentUpon>
     </Compile>
+    <Compile Include="Consultas\frmcDetalleProduccionMaquinas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmcDetalleProduccionMaquinas.Designer.cs">
+      <DependentUpon>frmcDetalleProduccionMaquinas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consultas\frmcFechas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +129,24 @@
     </Compile>
     <Compile Include="Consultas\frmcFiltros.Designer.cs">
       <DependentUpon>frmcFiltros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmcHistorialMonitoreo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmcHistorialMonitoreo.Designer.cs">
+      <DependentUpon>frmcHistorialMonitoreo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmcHistorialPacking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmcHistorialPacking.Designer.cs">
+      <DependentUpon>frmcHistorialPacking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmcMonitoreoMaquinas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmcMonitoreoMaquinas.Designer.cs">
+      <DependentUpon>frmcMonitoreoMaquinas.cs</DependentUpon>
     </Compile>
     <Compile Include="Consultas\frmcPruebasCalidad.cs">
       <SubType>Form</SubType>
@@ -418,6 +443,9 @@
     <EmbeddedResource Include="Consultas\frmcBuscarRegistros.resx">
       <DependentUpon>frmcBuscarRegistros.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\frmcDetalleProduccionMaquinas.resx">
+      <DependentUpon>frmcDetalleProduccionMaquinas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consultas\frmcFechas.resx">
       <DependentUpon>frmcFechas.cs</DependentUpon>
     </EmbeddedResource>
@@ -426,6 +454,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\frmcFiltros.resx">
       <DependentUpon>frmcFiltros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\frmcHistorialMonitoreo.resx">
+      <DependentUpon>frmcHistorialMonitoreo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\frmcHistorialPacking.resx">
+      <DependentUpon>frmcHistorialPacking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\frmcMonitoreoMaquinas.resx">
+      <DependentUpon>frmcMonitoreoMaquinas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\frmcPruebasCalidad.resx">
       <DependentUpon>frmcPruebasCalidad.cs</DependentUpon>
@@ -555,6 +592,15 @@
     <EmbeddedResource Include="Registros\frmUnidad.resx">
       <DependentUpon>frmUnidad.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\certificado_calidad - Copy.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\historial_produccion.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\graficos_certificado_cald.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\certificado_calidad.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -615,6 +661,9 @@
     <EmbeddedResource Include="Reportes\filtrar_prod_detalle.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\packing_list_local.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\packing_list.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -628,6 +677,18 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\reporte_terminados.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ticket_galvanizado - Copy.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ticket_galvanizado4.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ticket_galvanizado_steel - Copy.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ticket_galvanizado_steel.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\ticket_galvanizado.rdlc">
@@ -681,6 +742,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\persona-que-utiliza-una-impresora-3d-en-monitor-de-ordenador.png" />
+    <None Include="Resources\analytics-grafico-en-pantalla.png" />
+    <None Include="Resources\circle_ok.png" />
+    <None Include="Resources\circle_error.png" />
     <None Include="Resources\page_edit.png" />
     <None Include="Resources\edit.ico" />
     <None Include="Resources\imagen.jpg" />

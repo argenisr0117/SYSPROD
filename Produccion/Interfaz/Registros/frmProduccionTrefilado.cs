@@ -567,6 +567,9 @@ namespace Interfaz.Registros
             try
             {
                 int h = DateTime.Now.Hour;
+                DataTable dt = new DataTable();
+                string Orden = "";
+                double qqs = 0;
                 if (cmbProducto.SelectedIndex > -1 && cmbPesocanasto.SelectedIndex > -1 && cmbSupervisor.SelectedIndex > -1 && cmbOperador.SelectedIndex > -1 && cmbMaquina.SelectedIndex > -1 && cmbProducto.SelectedIndex > -1 && cmbColada.SelectedIndex > -1 && txtPesoBruto.Text!="")
                 {
                     if(Convert.ToDouble(cmbPesocanasto.Text)>Convert.ToDouble(txtPesoBruto.Text))
@@ -589,6 +592,47 @@ namespace Interfaz.Registros
                         PT.Producto = cmbProducto.SelectedValue.ToString();
                         PT.Maquina = cmbMaquina.SelectedValue.ToString();
                         PT.Tarjeta = tarjeta;
+                        PT.Dpto = "Tref";
+                        double peso = Convert.ToDouble(txtPesoBruto.Text) - Convert.ToDouble(cmbPesocanasto.SelectedValue);
+                        qqs = peso / 100;
+                        qqs = Math.Round(qqs, 2);
+                        dt = PT.ObtenerOrdenCanasto();
+                        for (int x = 0; x < dt.Rows.Count; x++)
+                        {
+                            Double cantidad = Convert.ToDouble(dt.Rows[x][2]);
+                            Double cant_prod = Convert.ToDouble(dt.Rows[x][3]);
+                            if (cantidad == 0) //IDENTIFICAR SI EXISTE ALGUNA ORDEN PARA ESTE CLIENTE Y ESTE PRODUCTO, SI ES CERO, ASIGNAR S/N
+                            {
+                                PT.Idorden = Convert.ToInt16(dt.Rows[x][0]);
+                                Orden = dt.Rows[x][1].ToString();
+                                break;
+                            }
+                            else
+                            {
+                                cant_prod = cant_prod + qqs;
+                                cantidad = cantidad + 10;
+                                if (cant_prod > cantidad) //COMPLETAR ORDEN
+                                {
+                                    PT.Idorden = Convert.ToInt16(dt.Rows[x][0]);
+                                    PT.CompletarOrdenProduccion();
+                                    if (dt.Rows.Count == 1)
+                                    {
+                                        Orden = "S/N";
+                                        PT.Idorden = 0;
+                                        break;
+                                    }
+                                }
+                                else  //ACTUALIZAR ORDEN 
+                                {
+                                    PT.Idorden = Convert.ToInt16(dt.Rows[x][0]);
+                                    PT.PesoNeto = qqs;
+                                    PT.ActCantOrdenProduccion();
+                                    PT.PesoNeto = peso;
+                                    Orden = dt.Rows[x][1].ToString();
+                                    break;
+                                }
+                            }
+                        }
                         if (h > 5 && h < 14)
                         {
                             PT.Turno = "06AM02PM";
@@ -601,7 +645,6 @@ namespace Interfaz.Registros
                         {
                             PT.Turno = "10PM06AM";
                         }
-                        double peso = Convert.ToDouble(txtPesoBruto.Text) - Convert.ToDouble(cmbPesocanasto.SelectedValue);
                         PT.PesoNeto = peso;
                         Zen.Barcode.Code128BarcodeDraw barcode = Zen.Barcode.BarcodeDrawFactory.Code128WithChecksum;
                         pictureBox1.Image = barcode.Draw(tarjeta.ToString() + "P" + peso.ToString(), 25);
@@ -678,6 +721,7 @@ namespace Interfaz.Registros
             if (dtgvProduccion.SelectedRows.Count > 0)
             {
                 frmEditarRegistroTref obj = new frmEditarRegistroTref();
+                Program.Editar = 0;
                 obj.Supervisor= dtgvProduccion.CurrentRow.Cells[2].Value.ToString();
                 obj.Operador= dtgvProduccion.CurrentRow.Cells[3].Value.ToString();
                 obj.Producto= dtgvProduccion.CurrentRow.Cells[4].Value.ToString();
@@ -702,6 +746,7 @@ namespace Interfaz.Registros
             {
                 MessageBoxEx.Show("Seleccione un registro!", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+            Program.Editar = 2;
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -738,6 +783,7 @@ namespace Interfaz.Registros
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
             Consultas.frmcFiltrarRegistros obj = new Consultas.frmcFiltrarRegistros();
+            Program.Filtrar = 0;
             obj.ShowDialog();
             if(Program.Valor==1)
             {
@@ -761,6 +807,7 @@ namespace Interfaz.Registros
             Program.Maquina = "";
             Program.Producto = "";
             Program.Cliente = 0;
+            Program.Filtrar = 2;
         }
 
         private void btnExportar_Click(object sender, EventArgs e)

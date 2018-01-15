@@ -38,6 +38,7 @@ namespace Intermedia
         double Mpesoneto;
         byte[] Mbarcode;
         string Middpto;
+        int Midorden;
         public DateTime Fecha
         {
             get { return Mfecha; }
@@ -114,6 +115,11 @@ namespace Intermedia
         {
             get { return Mbaud; }
             set { Mbaud = value; }
+        }
+        public int Idorden
+        {
+            get { return Midorden; }
+            set { Midorden = value; }
         }
         public int Valor
         {
@@ -225,6 +231,28 @@ namespace Intermedia
             tarjeta = Convert.ToInt32(lst[0].Valor);
             return tarjeta;
         }
+        public DataTable ObtenerOrdenCanasto()
+        {
+            DataTable dt = new DataTable();
+            List<clsParametros> lst = new List<clsParametros>();
+            lst.Add(new clsParametros("@iddpto", Mdpto));
+            lst.Add(new clsParametros("@idcliente", Mcliente));
+            lst.Add(new clsParametros("@idproducto", Mproducto));
+            return dt = M.Listado("obtener_orden_canasto", lst);
+        }
+        public void CompletarOrdenProduccion()
+        {
+            List<clsParametros> lst = new List<clsParametros>();
+            lst.Add(new clsParametros("@idorden", Midorden));
+            M.EjecutarSP("completar_orden_produccion", ref lst);
+        }
+        public void ActCantOrdenProduccion()
+        {
+            List<clsParametros> lst = new List<clsParametros>();
+            lst.Add(new clsParametros("@idorden", Midorden));
+            lst.Add(new clsParametros("@peso", Mpesoneto));
+            M.EjecutarSP("act_cant_orden_produccion", ref lst);
+        }
         public string RegistrarProduccion()
         {
             string mensaje = "";
@@ -243,6 +271,7 @@ namespace Intermedia
             lst.Add(new clsParametros("@idcliente", Mcliente));
             lst.Add(new clsParametros("@mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 50));
             lst.Add(new clsParametros("@barcode", Mbarcode));
+            lst.Add(new clsParametros("@idorden", Midorden));
             M.EjecutarSP("registrar_produccion_trefilado", ref lst);
             mensaje = lst[12].Valor.ToString();
             return mensaje;

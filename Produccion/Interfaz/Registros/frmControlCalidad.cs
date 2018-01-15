@@ -81,6 +81,8 @@ namespace Interfaz.Registros
         }
         private void frmControlCalidad_Load(object sender, EventArgs e)
         {
+            lbFecha.Visible = Program.vccfecha;
+            dtpFecha.Visible = Program.vccfecha;
             ComboC();
             ComboCo();
             ComboP();
@@ -152,6 +154,15 @@ namespace Interfaz.Registros
                     int elongacion = 0;
                     double area = 0;
                     string mensaje = "";
+                    if (Program.vccfecha) // saber si se obtiene la fecha actual o una fecha modificada
+                    {
+                        PC.Valor = 0;
+                    }
+                    else
+                    {
+                        PC.Valor = 1;
+                    }
+                    PC.Fecha = dtpFecha.Value;
                     PC.Producto = cmbProducto.SelectedValue.ToString();
                     PC.Cliente = Convert.ToInt16(cmbCliente.SelectedValue);
                     PC.Colada = Convert.ToInt16(cmbColada.SelectedValue);
@@ -187,8 +198,18 @@ namespace Interfaz.Registros
                         mensaje = PC.RegistrarPruebaCalidad();
                         if (mensaje == "1")
                         {
-                            //MessageBoxEx.Show("Prueba registrada", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            //Limpiar();
+                            if (btnImprimir.Text == "ACTUALIZAR")
+                            {
+                                MessageBoxEx.Show("Prueba actualizada", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Close();
+
+                            }
+                            else
+                            {
+                                MessageBoxEx.Show("Prueba registrada", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                Limpiar();
+                            }
+                            
 
                         }
                     }

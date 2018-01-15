@@ -431,18 +431,19 @@ namespace Interfaz
         private void grapasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmReporte obj = new frmReporte();
-            if (tscbempresa.ComboBox.SelectedValue.ToString()=="ACERO")
-            {
-                obj.Destino = "ACERO DEL CIBAO,SRL";
-            }
-            if (tscbempresa.ComboBox.SelectedValue.ToString() == "A&L")
-            {
-                obj.Destino = "A&L WIRE";
-            }
-            if (tscbempresa.ComboBox.SelectedValue.ToString() == "Esprines")
-            {
-                obj.Destino = "FABRICA DE ESPRINES";
-            }
+            //if (tscbempresa.ComboBox.SelectedValue.ToString()=="ACERO")
+            //{
+            //    obj.Destino = "ACERO DEL CIBAO,SRL";
+            //}
+            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "A&L")
+            //{
+            //    obj.Destino = "A&L WIRE";
+            //}
+            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "Esprines")
+            //{
+            //    obj.Destino = "FABRICA DE ESPRINES";
+            //}
+            obj.Destino = tscbempresa.ComboBox.Text;
             dt = Pr.FechaCierre();
             if (string.IsNullOrEmpty(dt.Rows[0]["Fecha"].ToString()))
             {
@@ -463,18 +464,19 @@ namespace Interfaz
         private void púasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmReporte obj = new frmReporte();
-            if (tscbempresa.ComboBox.SelectedValue.ToString() == "ACERO")
-            {
-                obj.Destino = "ACERO DEL CIBAO,SRL";
-            }
-            if (tscbempresa.ComboBox.SelectedValue.ToString() == "A&L")
-            {
-                obj.Destino = "A&L WIRE";
-            }
-            if (tscbempresa.ComboBox.SelectedValue.ToString() == "Esprines")
-            {
-                obj.Destino = "FABRICA DE ESPRINES";
-            }
+            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "ACERO")
+            //{
+            //    obj.Destino = "ACERO DEL CIBAO,SRL";
+            //}
+            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "A&L")
+            //{
+            //    obj.Destino = "A&L WIRE";
+            //}
+            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "Esprines")
+            //{
+            //    obj.Destino = "FABRICA DE ESPRINES";
+            //}
+            obj.Destino = tscbempresa.ComboBox.Text;
             dt = Pr.FechaCierre();
             if (string.IsNullOrEmpty(dt.Rows[0]["Fecha"].ToString()))
             {
@@ -495,18 +497,19 @@ namespace Interfaz
         private void mallasGallineroToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmReporte obj = new frmReporte();
-            if (tscbempresa.ComboBox.SelectedValue.ToString() == "ACERO")
-            {
-                obj.Destino = "ACERO DEL CIBAO,SRL";
-            }
-            if (tscbempresa.ComboBox.SelectedValue.ToString() == "A&L")
-            {
-                obj.Destino = "A&L WIRE";
-            }
-            if (tscbempresa.ComboBox.SelectedValue.ToString() == "Esprines")
-            {
-                obj.Destino = "FABRICA DE ESPRINES";
-            }
+            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "ACERO")
+            //{
+            //    obj.Destino = "ACERO DEL CIBAO,SRL";
+            //}
+            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "A&L")
+            //{
+            //    obj.Destino = "A&L WIRE";
+            //}
+            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "Esprines")
+            //{
+            //    obj.Destino = "FABRICA DE ESPRINES";
+            //}
+            obj.Destino = tscbempresa.ComboBox.Text;
             dt = Pr.FechaCierre();
             if (string.IsNullOrEmpty(dt.Rows[0]["Fecha"].ToString()))
             {
@@ -527,18 +530,19 @@ namespace Interfaz
         private void mallasCiclonicasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmReporte obj = new frmReporte();
-            if (tscbempresa.ComboBox.SelectedValue.ToString() == "ACERO")
-            {
-                obj.Destino = "ACERO DEL CIBAO,SRL";
-            }
-            if (tscbempresa.ComboBox.SelectedValue.ToString() == "A&L")
-            {
-                obj.Destino = "A&L WIRE";
-            }
-            if (tscbempresa.ComboBox.SelectedValue.ToString() == "Esprines")
-            {
-                obj.Destino = "FABRICA DE ESPRINES";
-            }
+            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "ACERO")
+            //{
+            //    obj.Destino = "ACERO DEL CIBAO,SRL";
+            //}
+            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "A&L")
+            //{
+            //    obj.Destino = "A&L WIRE";
+            //}
+            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "Esprines")
+            //{
+            //    obj.Destino = "FABRICA DE ESPRINES";
+            //}
+            obj.Destino = tscbempresa.ComboBox.Text;
             dt = Pr.FechaCierre();
             if (string.IsNullOrEmpty(dt.Rows[0]["Fecha"].ToString()))
             {
@@ -559,18 +563,19 @@ namespace Interfaz
         private void sunchosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmReporte obj = new frmReporte();
-            if (tscbempresa.ComboBox.SelectedValue.ToString() == "ACERO")
-            {
-                obj.Destino = "ACERO DEL CIBAO,SRL";
-            }
-            if (tscbempresa.ComboBox.SelectedValue.ToString() == "A&L")
-            {
-                obj.Destino = "A&L WIRE";
-            }
-            if (tscbempresa.ComboBox.SelectedValue.ToString() == "Esprines")
-            {
-                obj.Destino = "FABRICA DE ESPRINES";
-            }
+            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "ACERO")
+            //{
+            //    obj.Destino = "ACERO DEL CIBAO,SRL";
+            //}
+            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "A&L")
+            //{
+            //    obj.Destino = "A&L WIRE";
+            //}
+            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "Esprines")
+            //{
+            //    obj.Destino = "FABRICA DE ESPRINES";
+            //}
+            obj.Destino = tscbempresa.ComboBox.Text;
             dt = Pr.FechaCierre();
             if (string.IsNullOrEmpty(dt.Rows[0]["Fecha"].ToString()))
             {
@@ -592,18 +597,19 @@ namespace Interfaz
         {
             frmReporte obj = new frmReporte();
             Consultas.frmcFechas obj1 = new Consultas.frmcFechas();
-            if (tscbempresa.ComboBox.SelectedValue.ToString() == "ACERO")
-            {
-                obj.Destino = "ACERO DEL CIBAO,SRL";
-            }
-            if (tscbempresa.ComboBox.SelectedValue.ToString() == "A&L")
-            {
-                obj.Destino = "A&L WIRE";
-            }
-            if (tscbempresa.ComboBox.SelectedValue.ToString() == "Esprines")
-            {
-                obj.Destino = "FABRICA DE ESPRINES";
-            }
+            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "ACERO")
+            //{
+            //    obj.Destino = "ACERO DEL CIBAO,SRL";
+            //}
+            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "A&L")
+            //{
+            //    obj.Destino = "A&L WIRE";
+            //}
+            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "Esprines")
+            //{
+            //    obj.Destino = "FABRICA DE ESPRINES";
+            //}
+            obj.Destino = tscbempresa.ComboBox.Text;
             dt = Pr.FechaCierre();
             if (string.IsNullOrEmpty(dt.Rows[0]["Fecha"].ToString()))
             {
@@ -631,18 +637,19 @@ namespace Interfaz
         private void trefiladoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmReporte obj = new frmReporte();
-            if (tscbempresa.ComboBox.SelectedValue.ToString() == "ACERO")
-            {
-                obj.Destino = "ACERO DEL CIBAO,SRL";
-            }
-            if (tscbempresa.ComboBox.SelectedValue.ToString() == "A&L")
-            {
-                obj.Destino = "A&L WIRE";
-            }
-            if (tscbempresa.ComboBox.SelectedValue.ToString() == "Esprines")
-            {
-                obj.Destino = "FABRICA DE ESPRINES";
-            }
+            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "ACERO")
+            //{
+            //    obj.Destino = "ACERO DEL CIBAO,SRL";
+            //}
+            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "A&L")
+            //{
+            //    obj.Destino = "A&L WIRE";
+            //}
+            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "Esprines")
+            //{
+            //    obj.Destino = "FABRICA DE ESPRINES";
+            //}
+            obj.Destino = tscbempresa.ComboBox.Text;
             dt = Pr.FechaCierre();
             if (string.IsNullOrEmpty(dt.Rows[0]["Fecha"].ToString()))
             {
@@ -662,18 +669,19 @@ namespace Interfaz
         private void flejadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmReporte obj = new frmReporte();
-            if (tscbempresa.ComboBox.SelectedValue.ToString() == "ACERO")
-            {
-                obj.Destino = "ACERO DEL CIBAO,SRL";
-            }
-            if (tscbempresa.ComboBox.SelectedValue.ToString() == "A&L")
-            {
-                obj.Destino = "A&L WIRE";
-            }
-            if (tscbempresa.ComboBox.SelectedValue.ToString() == "Esprines")
-            {
-                obj.Destino = "FABRICA DE ESPRINES";
-            }
+            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "ACERO")
+            //{
+            //    obj.Destino = "ACERO DEL CIBAO,SRL";
+            //}
+            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "A&L")
+            //{
+            //    obj.Destino = "A&L WIRE";
+            //}
+            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "Esprines")
+            //{
+            //    obj.Destino = "FABRICA DE ESPRINES";
+            //}
+            obj.Destino = tscbempresa.ComboBox.Text;
             dt = Pr.FechaCierre();
             if (string.IsNullOrEmpty(dt.Rows[0]["Fecha"].ToString()))
             {
@@ -693,18 +701,19 @@ namespace Interfaz
         private void lineaGalvanizadoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             frmReporte obj = new frmReporte();
-            if (tscbempresa.ComboBox.SelectedValue.ToString() == "ACERO")
-            {
-                obj.Destino = "ACERO DEL CIBAO,SRL";
-            }
-            if (tscbempresa.ComboBox.SelectedValue.ToString() == "A&L")
-            {
-                obj.Destino = "A&L WIRE";
-            }
-            if (tscbempresa.ComboBox.SelectedValue.ToString() == "Esprines")
-            {
-                obj.Destino = "FABRICA DE ESPRINES";
-            }
+            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "ACERO")
+            //{
+            //    obj.Destino = "ACERO DEL CIBAO,SRL";
+            //}
+            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "A&L")
+            //{
+            //    obj.Destino = "A&L WIRE";
+            //}
+            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "Esprines")
+            //{
+            //    obj.Destino = "FABRICA DE ESPRINES";
+            //}
+            obj.Destino = tscbempresa.ComboBox.Text;
             dt = Pr.FechaCierre();
             if (string.IsNullOrEmpty(dt.Rows[0]["Fecha"].ToString()))
             {
@@ -724,18 +733,19 @@ namespace Interfaz
         private void varillasAceradasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmReporte obj = new frmReporte();
-            if (tscbempresa.ComboBox.SelectedValue.ToString() == "ACERO")
-            {
-                obj.Destino = "ACERO DEL CIBAO,SRL";
-            }
-            if (tscbempresa.ComboBox.SelectedValue.ToString() == "A&L")
-            {
-                obj.Destino = "A&L WIRE";
-            }
-            if (tscbempresa.ComboBox.SelectedValue.ToString() == "Esprines")
-            {
-                obj.Destino = "FABRICA DE ESPRINES";
-            }
+            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "ACERO")
+            //{
+            //    obj.Destino = "ACERO DEL CIBAO,SRL";
+            //}
+            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "A&L")
+            //{
+            //    obj.Destino = "A&L WIRE";
+            //}
+            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "Esprines")
+            //{
+            //    obj.Destino = "FABRICA DE ESPRINES";
+            //}
+            obj.Destino = tscbempresa.ComboBox.Text;
             dt = Pr.FechaCierre();
             if (string.IsNullOrEmpty(dt.Rows[0]["Fecha"].ToString()))
             {
@@ -757,18 +767,19 @@ namespace Interfaz
         {
             frmReporte obj = new frmReporte();
             Consultas.frmcFechas obj1 = new Consultas.frmcFechas();
-            if (tscbempresa.ComboBox.SelectedValue.ToString() == "ACERO")
-            {
-                obj.Destino = "ACERO DEL CIBAO,SRL";
-            }
-            if (tscbempresa.ComboBox.SelectedValue.ToString() == "A&L")
-            {
-                obj.Destino = "A&L WIRE";
-            }
-            if (tscbempresa.ComboBox.SelectedValue.ToString() == "Esprines")
-            {
-                obj.Destino = "FABRICA DE ESPRINES";
-            }
+            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "ACERO")
+            //{
+            //    obj.Destino = "ACERO DEL CIBAO,SRL";
+            //}
+            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "A&L")
+            //{
+            //    obj.Destino = "A&L WIRE";
+            //}
+            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "Esprines")
+            //{
+            //    obj.Destino = "FABRICA DE ESPRINES";
+            //}
+            obj.Destino = tscbempresa.ComboBox.Text;
             dt = Pr.FechaCierre();
             if (string.IsNullOrEmpty(dt.Rows[0]["Fecha"].ToString()))
             {
@@ -795,6 +806,18 @@ namespace Interfaz
         private void btnFiltros_Click(object sender, EventArgs e)
         {
             Consultas.frmcFiltros obj = new Consultas.frmcFiltros();
+            obj.ShowDialog();
+        }
+
+        private void btnHistorial_Click(object sender, EventArgs e)
+        {
+            Consultas.frmcDetalleProduccionMaquinas obj = new Consultas.frmcDetalleProduccionMaquinas();
+            obj.ShowDialog();
+        }
+
+        private void btnMonitoreo_Click(object sender, EventArgs e)
+        {
+            Consultas.frmcMonitoreoMaquinas obj = new Consultas.frmcMonitoreoMaquinas();
             obj.ShowDialog();
         }
     }

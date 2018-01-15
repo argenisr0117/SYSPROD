@@ -58,6 +58,8 @@ namespace Interfaz
             btnTrefilado.Enabled = Program.prodtref;
             btnIndustriaMenor.Enabled = Program.prodindm;
             btnOrden.Enabled = Program.ordenprod;
+            btnPruebasCalidad.Enabled = Program.controlcald;
+            btnVerPruebasCald.Enabled = Program.vcontrolcald;
         }
         private void AbrirForm(string form)
         {

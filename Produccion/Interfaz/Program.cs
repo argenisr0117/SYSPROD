@@ -9,16 +9,24 @@ namespace Interfaz
 {
     static class Program
     {
+        public static int Filtrar; //variable para filtrar prod tref - galv
+        public static int Editar; //variable para editar prod tref - galv
         public static int Idpuerto;
         public static int Idusuario;
         public static int Valor3;
         public static int Evento;
         public static int Valor;
         public static int Valor2;
+        public static int Idpacking;
+        public static int Idrptcald;
         public static string CodigoP;
+        public static string Contenedor;
+        public static string Empresa;
+        public static int Tamano;
         public static string Empleado;
         public static string DescripcionP;
         public static string UnidadP;
+        public static string Pedido;
         public static string CategoriaP;
         public static double CalibreP;
         public static DateTime Fechai;
@@ -34,6 +42,7 @@ namespace Interfaz
         public static string Sae;
         public static string Resistenia;
         public static int Idprueba;
+        public static int Idtipoorden;
         public static string Cliente1;
         public static string Dpto;
         public static string Orden;
@@ -68,6 +77,16 @@ namespace Interfaz
         public static Boolean filcong;
         public static Boolean ordenprod;
         public static Boolean controlcald;
+        public static Boolean vcontrolcald;
+        public static Boolean vccfecha;
+        public static Boolean edigalv;
+        public static Boolean eligalv;
+        public static Boolean mosgalv;
+        public static Boolean filgalv;
+        public static Boolean expgalv;
+        public static Boolean fdesgalv;
+        public static Boolean fhasgalv;
+        public static Boolean reimgalv;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

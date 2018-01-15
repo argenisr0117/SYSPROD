@@ -1571,5 +1571,10 @@ namespace Interfaz.Registros
                 MessageBoxEx.Show("Fecha inicial mayor que Fecha final", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void lISTADOLINEAGALVToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CrearExcel("LINEA GALV", "LISTADO LINEA GALVANIZADO");
+        }
     }
 }

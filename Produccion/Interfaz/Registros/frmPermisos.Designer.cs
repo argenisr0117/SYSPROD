@@ -53,13 +53,13 @@
             this.cBfiltartref = new System.Windows.Forms.CheckBox();
             this.cbMostrartref = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.checkBox21 = new System.Windows.Forms.CheckBox();
-            this.checkBox22 = new System.Windows.Forms.CheckBox();
-            this.checkBox23 = new System.Windows.Forms.CheckBox();
-            this.checkBox24 = new System.Windows.Forms.CheckBox();
-            this.checkBox25 = new System.Windows.Forms.CheckBox();
-            this.checkBox26 = new System.Windows.Forms.CheckBox();
-            this.checkBox27 = new System.Windows.Forms.CheckBox();
+            this.cBFechadG = new System.Windows.Forms.CheckBox();
+            this.cBFechahG = new System.Windows.Forms.CheckBox();
+            this.cBEliminarG = new System.Windows.Forms.CheckBox();
+            this.cbExportarG = new System.Windows.Forms.CheckBox();
+            this.cBEditarG = new System.Windows.Forms.CheckBox();
+            this.cBFiltrarG = new System.Windows.Forms.CheckBox();
+            this.cBMostrarG = new System.Windows.Forms.CheckBox();
             this.cmbUsuario = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
@@ -74,7 +74,9 @@
             this.cBEmpresa = new System.Windows.Forms.CheckBox();
             this.cbOrdenProd = new System.Windows.Forms.CheckBox();
             this.cbControlCal = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.cbVControlCald = new System.Windows.Forms.CheckBox();
+            this.cBFechaVC = new System.Windows.Forms.CheckBox();
+            this.cbReimprimirGalv = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -83,7 +85,7 @@
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkRed;
-            this.label1.Location = new System.Drawing.Point(291, 9);
+            this.label1.Location = new System.Drawing.Point(312, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(108, 24);
             this.label1.TabIndex = 115;
@@ -336,9 +338,9 @@
             this.cBfiltartref.ForeColor = System.Drawing.Color.Black;
             this.cBfiltartref.Location = new System.Drawing.Point(255, 335);
             this.cBfiltartref.Name = "cBfiltartref";
-            this.cBfiltartref.Size = new System.Drawing.Size(48, 17);
+            this.cBfiltartref.Size = new System.Drawing.Size(51, 17);
             this.cBfiltartref.TabIndex = 139;
-            this.cBfiltartref.Text = "Filtar";
+            this.cBfiltartref.Text = "Filtrar";
             this.cBfiltartref.UseVisualStyleBackColor = false;
             // 
             // cbMostrartref
@@ -365,89 +367,89 @@
             this.label5.TabIndex = 153;
             this.label5.Text = "Prod. Galvanizado";
             // 
-            // checkBox21
+            // cBFechadG
             // 
-            this.checkBox21.AutoSize = true;
-            this.checkBox21.BackColor = System.Drawing.Color.White;
-            this.checkBox21.ForeColor = System.Drawing.Color.Black;
-            this.checkBox21.Location = new System.Drawing.Point(573, 302);
-            this.checkBox21.Name = "checkBox21";
-            this.checkBox21.Size = new System.Drawing.Size(90, 17);
-            this.checkBox21.TabIndex = 152;
-            this.checkBox21.Text = "Fecha-Desde";
-            this.checkBox21.UseVisualStyleBackColor = false;
+            this.cBFechadG.AutoSize = true;
+            this.cBFechadG.BackColor = System.Drawing.Color.White;
+            this.cBFechadG.ForeColor = System.Drawing.Color.Black;
+            this.cBFechadG.Location = new System.Drawing.Point(573, 302);
+            this.cBFechadG.Name = "cBFechadG";
+            this.cBFechadG.Size = new System.Drawing.Size(90, 17);
+            this.cBFechadG.TabIndex = 152;
+            this.cBFechadG.Text = "Fecha-Desde";
+            this.cBFechadG.UseVisualStyleBackColor = false;
             // 
-            // checkBox22
+            // cBFechahG
             // 
-            this.checkBox22.AutoSize = true;
-            this.checkBox22.BackColor = System.Drawing.Color.White;
-            this.checkBox22.ForeColor = System.Drawing.Color.Black;
-            this.checkBox22.Location = new System.Drawing.Point(573, 319);
-            this.checkBox22.Name = "checkBox22";
-            this.checkBox22.Size = new System.Drawing.Size(87, 17);
-            this.checkBox22.TabIndex = 151;
-            this.checkBox22.Text = "Fecha-Hasta";
-            this.checkBox22.UseVisualStyleBackColor = false;
+            this.cBFechahG.AutoSize = true;
+            this.cBFechahG.BackColor = System.Drawing.Color.White;
+            this.cBFechahG.ForeColor = System.Drawing.Color.Black;
+            this.cBFechahG.Location = new System.Drawing.Point(573, 319);
+            this.cBFechahG.Name = "cBFechahG";
+            this.cBFechahG.Size = new System.Drawing.Size(87, 17);
+            this.cBFechahG.TabIndex = 151;
+            this.cBFechahG.Text = "Fecha-Hasta";
+            this.cBFechahG.UseVisualStyleBackColor = false;
             // 
-            // checkBox23
+            // cBEliminarG
             // 
-            this.checkBox23.AutoSize = true;
-            this.checkBox23.BackColor = System.Drawing.Color.White;
-            this.checkBox23.ForeColor = System.Drawing.Color.Black;
-            this.checkBox23.Location = new System.Drawing.Point(488, 351);
-            this.checkBox23.Name = "checkBox23";
-            this.checkBox23.Size = new System.Drawing.Size(62, 17);
-            this.checkBox23.TabIndex = 150;
-            this.checkBox23.Text = "Eliminar";
-            this.checkBox23.UseVisualStyleBackColor = false;
+            this.cBEliminarG.AutoSize = true;
+            this.cBEliminarG.BackColor = System.Drawing.Color.White;
+            this.cBEliminarG.ForeColor = System.Drawing.Color.Black;
+            this.cBEliminarG.Location = new System.Drawing.Point(488, 351);
+            this.cBEliminarG.Name = "cBEliminarG";
+            this.cBEliminarG.Size = new System.Drawing.Size(62, 17);
+            this.cBEliminarG.TabIndex = 150;
+            this.cBEliminarG.Text = "Eliminar";
+            this.cBEliminarG.UseVisualStyleBackColor = false;
             // 
-            // checkBox24
+            // cbExportarG
             // 
-            this.checkBox24.AutoSize = true;
-            this.checkBox24.BackColor = System.Drawing.Color.White;
-            this.checkBox24.ForeColor = System.Drawing.Color.Black;
-            this.checkBox24.Location = new System.Drawing.Point(488, 319);
-            this.checkBox24.Name = "checkBox24";
-            this.checkBox24.Size = new System.Drawing.Size(65, 17);
-            this.checkBox24.TabIndex = 149;
-            this.checkBox24.Text = "Exportar";
-            this.checkBox24.UseVisualStyleBackColor = false;
+            this.cbExportarG.AutoSize = true;
+            this.cbExportarG.BackColor = System.Drawing.Color.White;
+            this.cbExportarG.ForeColor = System.Drawing.Color.Black;
+            this.cbExportarG.Location = new System.Drawing.Point(488, 319);
+            this.cbExportarG.Name = "cbExportarG";
+            this.cbExportarG.Size = new System.Drawing.Size(65, 17);
+            this.cbExportarG.TabIndex = 149;
+            this.cbExportarG.Text = "Exportar";
+            this.cbExportarG.UseVisualStyleBackColor = false;
             // 
-            // checkBox25
+            // cBEditarG
             // 
-            this.checkBox25.AutoSize = true;
-            this.checkBox25.BackColor = System.Drawing.Color.White;
-            this.checkBox25.ForeColor = System.Drawing.Color.Black;
-            this.checkBox25.Location = new System.Drawing.Point(488, 302);
-            this.checkBox25.Name = "checkBox25";
-            this.checkBox25.Size = new System.Drawing.Size(53, 17);
-            this.checkBox25.TabIndex = 148;
-            this.checkBox25.Text = "Editar";
-            this.checkBox25.UseVisualStyleBackColor = false;
+            this.cBEditarG.AutoSize = true;
+            this.cBEditarG.BackColor = System.Drawing.Color.White;
+            this.cBEditarG.ForeColor = System.Drawing.Color.Black;
+            this.cBEditarG.Location = new System.Drawing.Point(488, 302);
+            this.cBEditarG.Name = "cBEditarG";
+            this.cBEditarG.Size = new System.Drawing.Size(53, 17);
+            this.cBEditarG.TabIndex = 148;
+            this.cBEditarG.Text = "Editar";
+            this.cBEditarG.UseVisualStyleBackColor = false;
             // 
-            // checkBox26
+            // cBFiltrarG
             // 
-            this.checkBox26.AutoSize = true;
-            this.checkBox26.BackColor = System.Drawing.Color.White;
-            this.checkBox26.ForeColor = System.Drawing.Color.Black;
-            this.checkBox26.Location = new System.Drawing.Point(488, 335);
-            this.checkBox26.Name = "checkBox26";
-            this.checkBox26.Size = new System.Drawing.Size(48, 17);
-            this.checkBox26.TabIndex = 147;
-            this.checkBox26.Text = "Filtar";
-            this.checkBox26.UseVisualStyleBackColor = false;
+            this.cBFiltrarG.AutoSize = true;
+            this.cBFiltrarG.BackColor = System.Drawing.Color.White;
+            this.cBFiltrarG.ForeColor = System.Drawing.Color.Black;
+            this.cBFiltrarG.Location = new System.Drawing.Point(488, 335);
+            this.cBFiltrarG.Name = "cBFiltrarG";
+            this.cBFiltrarG.Size = new System.Drawing.Size(51, 17);
+            this.cBFiltrarG.TabIndex = 147;
+            this.cBFiltrarG.Text = "Filtrar";
+            this.cBFiltrarG.UseVisualStyleBackColor = false;
             // 
-            // checkBox27
+            // cBMostrarG
             // 
-            this.checkBox27.AutoSize = true;
-            this.checkBox27.BackColor = System.Drawing.Color.White;
-            this.checkBox27.ForeColor = System.Drawing.Color.Black;
-            this.checkBox27.Location = new System.Drawing.Point(488, 367);
-            this.checkBox27.Name = "checkBox27";
-            this.checkBox27.Size = new System.Drawing.Size(61, 17);
-            this.checkBox27.TabIndex = 146;
-            this.checkBox27.Text = "Mostrar";
-            this.checkBox27.UseVisualStyleBackColor = false;
+            this.cBMostrarG.AutoSize = true;
+            this.cBMostrarG.BackColor = System.Drawing.Color.White;
+            this.cBMostrarG.ForeColor = System.Drawing.Color.Black;
+            this.cBMostrarG.Location = new System.Drawing.Point(488, 367);
+            this.cBMostrarG.Name = "cBMostrarG";
+            this.cBMostrarG.Size = new System.Drawing.Size(61, 17);
+            this.cBMostrarG.TabIndex = 146;
+            this.cBMostrarG.Text = "Mostrar";
+            this.cBMostrarG.UseVisualStyleBackColor = false;
             // 
             // cmbUsuario
             // 
@@ -459,7 +461,7 @@
             this.cmbUsuario.ForeColor = System.Drawing.Color.Black;
             this.cmbUsuario.FormattingEnabled = true;
             this.cmbUsuario.IntegralHeight = false;
-            this.cmbUsuario.Location = new System.Drawing.Point(229, 49);
+            this.cmbUsuario.Location = new System.Drawing.Point(241, 48);
             this.cmbUsuario.Name = "cmbUsuario";
             this.cmbUsuario.Size = new System.Drawing.Size(225, 24);
             this.cmbUsuario.TabIndex = 155;
@@ -471,7 +473,7 @@
             this.label6.BackColor = System.Drawing.Color.White;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DarkRed;
-            this.label6.Location = new System.Drawing.Point(139, 54);
+            this.label6.Location = new System.Drawing.Point(151, 54);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(67, 13);
             this.label6.TabIndex = 154;
@@ -486,7 +488,7 @@
             this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.Color.Black;
-            this.btnGuardar.Location = new System.Drawing.Point(502, 44);
+            this.btnGuardar.Location = new System.Drawing.Point(514, 44);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(68, 32);
             this.btnGuardar.TabIndex = 156;
@@ -626,24 +628,50 @@
             this.cbControlCal.Text = "Control Cald.";
             this.cbControlCal.UseVisualStyleBackColor = false;
             // 
-            // checkBox3
+            // cbVControlCald
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.BackColor = System.Drawing.Color.White;
-            this.checkBox3.ForeColor = System.Drawing.Color.Black;
-            this.checkBox3.Location = new System.Drawing.Point(134, 182);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(81, 17);
-            this.checkBox3.TabIndex = 169;
-            this.checkBox3.Text = "Prod. Diaria";
-            this.checkBox3.UseVisualStyleBackColor = false;
+            this.cbVControlCald.AutoSize = true;
+            this.cbVControlCald.BackColor = System.Drawing.Color.White;
+            this.cbVControlCald.ForeColor = System.Drawing.Color.Black;
+            this.cbVControlCald.Location = new System.Drawing.Point(134, 182);
+            this.cbVControlCald.Name = "cbVControlCald";
+            this.cbVControlCald.Size = new System.Drawing.Size(133, 17);
+            this.cbVControlCald.TabIndex = 169;
+            this.cbVControlCald.Text = "Visualizar Control Cald.";
+            this.cbVControlCald.UseVisualStyleBackColor = false;
+            // 
+            // cBFechaVC
+            // 
+            this.cBFechaVC.AutoSize = true;
+            this.cBFechaVC.BackColor = System.Drawing.Color.White;
+            this.cBFechaVC.ForeColor = System.Drawing.Color.Black;
+            this.cBFechaVC.Location = new System.Drawing.Point(154, 205);
+            this.cBFechaVC.Name = "cBFechaVC";
+            this.cBFechaVC.Size = new System.Drawing.Size(132, 17);
+            this.cBFechaVC.TabIndex = 170;
+            this.cBFechaVC.Text = "Fecha V. Control Cald.";
+            this.cBFechaVC.UseVisualStyleBackColor = false;
+            // 
+            // cbReimprimirGalv
+            // 
+            this.cbReimprimirGalv.AutoSize = true;
+            this.cbReimprimirGalv.BackColor = System.Drawing.Color.White;
+            this.cbReimprimirGalv.ForeColor = System.Drawing.Color.Black;
+            this.cbReimprimirGalv.Location = new System.Drawing.Point(573, 335);
+            this.cbReimprimirGalv.Name = "cbReimprimirGalv";
+            this.cbReimprimirGalv.Size = new System.Drawing.Size(74, 17);
+            this.cbReimprimirGalv.TabIndex = 171;
+            this.cbReimprimirGalv.Text = "Reimprimir";
+            this.cbReimprimirGalv.UseVisualStyleBackColor = false;
             // 
             // frmPermisos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(733, 539);
-            this.Controls.Add(this.checkBox3);
+            this.Controls.Add(this.cbReimprimirGalv);
+            this.Controls.Add(this.cBFechaVC);
+            this.Controls.Add(this.cbVControlCald);
             this.Controls.Add(this.cbControlCal);
             this.Controls.Add(this.cbOrdenProd);
             this.Controls.Add(this.cBcierreA);
@@ -659,13 +687,13 @@
             this.Controls.Add(this.cmbUsuario);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.checkBox21);
-            this.Controls.Add(this.checkBox22);
-            this.Controls.Add(this.checkBox23);
-            this.Controls.Add(this.checkBox24);
-            this.Controls.Add(this.checkBox25);
-            this.Controls.Add(this.checkBox26);
-            this.Controls.Add(this.checkBox27);
+            this.Controls.Add(this.cBFechadG);
+            this.Controls.Add(this.cBFechahG);
+            this.Controls.Add(this.cBEliminarG);
+            this.Controls.Add(this.cbExportarG);
+            this.Controls.Add(this.cBEditarG);
+            this.Controls.Add(this.cBFiltrarG);
+            this.Controls.Add(this.cBMostrarG);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.cbFechadtref);
             this.Controls.Add(this.cBfechahtref);
@@ -727,13 +755,13 @@
         private System.Windows.Forms.CheckBox cBfiltartref;
         private System.Windows.Forms.CheckBox cbMostrartref;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.CheckBox checkBox21;
-        private System.Windows.Forms.CheckBox checkBox22;
-        private System.Windows.Forms.CheckBox checkBox23;
-        private System.Windows.Forms.CheckBox checkBox24;
-        private System.Windows.Forms.CheckBox checkBox25;
-        private System.Windows.Forms.CheckBox checkBox26;
-        private System.Windows.Forms.CheckBox checkBox27;
+        private System.Windows.Forms.CheckBox cBFechadG;
+        private System.Windows.Forms.CheckBox cBFechahG;
+        private System.Windows.Forms.CheckBox cBEliminarG;
+        private System.Windows.Forms.CheckBox cbExportarG;
+        private System.Windows.Forms.CheckBox cBEditarG;
+        private System.Windows.Forms.CheckBox cBFiltrarG;
+        private System.Windows.Forms.CheckBox cBMostrarG;
         private System.Windows.Forms.ComboBox cmbUsuario;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnGuardar;
@@ -748,6 +776,8 @@
         private System.Windows.Forms.CheckBox cBEmpresa;
         private System.Windows.Forms.CheckBox cbOrdenProd;
         private System.Windows.Forms.CheckBox cbControlCal;
-        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox cbVControlCald;
+        private System.Windows.Forms.CheckBox cBFechaVC;
+        private System.Windows.Forms.CheckBox cbReimprimirGalv;
     }
 }

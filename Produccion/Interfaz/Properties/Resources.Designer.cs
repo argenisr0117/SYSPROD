@@ -93,6 +93,16 @@ namespace Interfaz.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap analytics_grafico_en_pantalla {
+            get {
+                object obj = ResourceManager.GetObject("analytics-grafico-en-pantalla", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Bollino_rosso_converted {
             get {
                 object obj = ResourceManager.GetObject("Bollino_rosso_converted", resourceCulture);
@@ -116,6 +126,26 @@ namespace Interfaz.Properties {
         internal static System.Drawing.Bitmap boxes_brown_icon {
             get {
                 object obj = ResourceManager.GetObject("boxes-brown-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap circle_error {
+            get {
+                object obj = ResourceManager.GetObject("circle_error", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap circle_ok {
+            get {
+                object obj = ResourceManager.GetObject("circle_ok", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -296,6 +326,16 @@ namespace Interfaz.Properties {
         internal static System.Drawing.Bitmap page_edit {
             get {
                 object obj = ResourceManager.GetObject("page_edit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap persona_que_utiliza_una_impresora_3d_en_monitor_de_ordenador {
+            get {
+                object obj = ResourceManager.GetObject("persona-que-utiliza-una-impresora-3d-en-monitor-de-ordenador", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
