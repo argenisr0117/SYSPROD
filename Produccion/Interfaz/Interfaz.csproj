@@ -256,6 +256,12 @@
     <Compile Include="Registros\frmCategoria.Designer.cs">
       <DependentUpon>frmCategoria.cs</DependentUpon>
     </Compile>
+    <Compile Include="Registros\frmControlAlm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\frmControlAlm.Designer.cs">
+      <DependentUpon>frmControlAlm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Registros\frmControlCalidad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -505,6 +511,9 @@
     <EmbeddedResource Include="Registros\frmCategoria.resx">
       <DependentUpon>frmCategoria.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Registros\frmControlAlm.resx">
+      <DependentUpon>frmControlAlm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Registros\frmControlCalidad.resx">
       <DependentUpon>frmControlCalidad.cs</DependentUpon>
     </EmbeddedResource>
@@ -593,6 +602,18 @@
       <DependentUpon>frmUnidad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\certificado_calidad - Copy.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\salida_inventario.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\entrada_inventario.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\inventario_resumido.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\inventario_detallado.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\historial_produccion.rdlc">
@@ -742,6 +763,20 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\exportar %281%29.png" />
+    <None Include="Resources\exportar.png" />
+    <None Include="Resources\visualizacion.png" />
+    <None Include="Resources\la-busqueda-de-empleo.png" />
+    <None Include="Resources\soporte-de-red-de-trabajo.png" />
+    <None Include="Resources\trabajador-de-ordenador-en-vista-posterior.png" />
+    <None Include="Resources\almacen %281%29.png" />
+    <None Include="Resources\almacen.png" />
+    <None Include="Resources\disquete %282%29.png" />
+    <None Include="Resources\disquete %281%29.png" />
+    <None Include="Resources\trade_report_reports_documents_2351.png" />
+    <None Include="Resources\business_ordering_pencil_table_2333.png" />
+    <None Include="Resources\texto-de-periodico.png" />
+    <None Include="Resources\buscar-en-carpeta.png" />
     <None Include="Resources\persona-que-utiliza-una-impresora-3d-en-monitor-de-ordenador.png" />
     <None Include="Resources\analytics-grafico-en-pantalla.png" />
     <None Include="Resources\circle_ok.png" />

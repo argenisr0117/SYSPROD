@@ -77,6 +77,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+            this.label15 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgSeleccionadas)).BeginInit();
             this.panel1.SuspendLayout();
@@ -122,7 +124,7 @@
             this.groupBox1.Controls.Add(this.panel1);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.dtgDisponibles);
-            this.groupBox1.Location = new System.Drawing.Point(30, 151);
+            this.groupBox1.Location = new System.Drawing.Point(30, 176);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(637, 410);
             this.groupBox1.TabIndex = 68;
@@ -421,7 +423,7 @@
             this.btnGenerar.ForeColor = System.Drawing.Color.Black;
             this.btnGenerar.Image = global::Interfaz.Properties.Resources.Box_icon;
             this.btnGenerar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnGenerar.Location = new System.Drawing.Point(297, 571);
+            this.btnGenerar.Location = new System.Drawing.Point(297, 596);
             this.btnGenerar.Name = "btnGenerar";
             this.btnGenerar.Size = new System.Drawing.Size(103, 55);
             this.btnGenerar.TabIndex = 69;
@@ -433,6 +435,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label15);
+            this.groupBox2.Controls.Add(this.dtpFecha);
             this.groupBox2.Controls.Add(this.txtConduce);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.cmbUso);
@@ -448,7 +452,7 @@
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Location = new System.Drawing.Point(30, 38);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(637, 107);
+            this.groupBox2.Size = new System.Drawing.Size(637, 139);
             this.groupBox2.TabIndex = 72;
             this.groupBox2.TabStop = false;
             // 
@@ -613,11 +617,32 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // dtpFecha
+            // 
+            this.dtpFecha.BackColor = System.Drawing.Color.White;
+            this.dtpFecha.CustomFormat = "dd/MM/yyyy";
+            this.dtpFecha.ForeColor = System.Drawing.Color.Black;
+            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFecha.Location = new System.Drawing.Point(120, 107);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(103, 20);
+            this.dtpFecha.TabIndex = 148;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(16, 111);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(51, 13);
+            this.label15.TabIndex = 149;
+            this.label15.Text = "FECHA:";
+            // 
             // frmPackingList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(697, 639);
+            this.ClientSize = new System.Drawing.Size(697, 660);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnGenerar);
             this.Controls.Add(this.groupBox1);
@@ -692,5 +717,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox cmbUso;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.DateTimePicker dtpFecha;
     }
 }

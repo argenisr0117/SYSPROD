@@ -57,6 +57,9 @@ namespace Intermedia
         Boolean Mfdesgalv;
         Boolean Mfhasgalv;
         Boolean Mreimgalv;
+        Boolean Malmintermedios;
+        Boolean Malmterminados;
+        Boolean Malmlg;
 
 
         public int Idusuario
@@ -288,6 +291,21 @@ namespace Intermedia
             get { return Mreimgalv; }
             set { Mreimgalv = value; }
         }
+        public Boolean Almintermedios
+        {
+            get { return Malmintermedios; }
+            set { Malmintermedios = value; }
+        }
+        public Boolean Almterminados
+        {
+            get { return Malmterminados; }
+            set { Malmterminados = value; }
+        }
+        public Boolean Almlg
+        {
+            get { return Malmlg; }
+            set { Malmlg = value; }
+        }
 
         public string RegistrarUsuario()
         {
@@ -345,6 +363,9 @@ namespace Intermedia
             lst.Add(new clsParametros("@fdesgalv", Mfdesgalv));
             lst.Add(new clsParametros("@fhasgalv", Mfhasgalv));
             lst.Add(new clsParametros("@reimgalv", Mreimgalv));
+            lst.Add(new clsParametros("almintermedios", Malmintermedios));
+            lst.Add(new clsParametros("@almterminados", Malmterminados));
+            lst.Add(new clsParametros("@almlg", Malmlg));
             M.EjecutarSP("registrar_act_permisos", ref lst);
             mensaje =Convert.ToInt32(lst[0].Valor);
             return mensaje;

@@ -759,6 +759,8 @@ namespace Interfaz.Registros
                 {
                     PT.Id= Convert.ToInt32(dtgvProduccion.CurrentRow.Cells[9].Value);
                     PT.Dpto = "Trefilado";
+                    PT.Pcname = Environment.MachineName;
+                    PT.Idusuario = Program.Idusuario;
                     mensaje=PT.EliminarRegistro();
                     if(mensaje=="1")
                     {
@@ -784,6 +786,8 @@ namespace Interfaz.Registros
         {
             Consultas.frmcFiltrarRegistros obj = new Consultas.frmcFiltrarRegistros();
             Program.Filtrar = 0;
+            Program.Fechai = dtpdesde.Value;
+            Program.Fechaf = dtphasta.Value;
             obj.ShowDialog();
             if(Program.Valor==1)
             {

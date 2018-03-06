@@ -28,6 +28,18 @@ namespace Intermedia
         string Midproducto;
         int Mcantidad1;
         int Mvalor;
+        int Midusuario;
+        string Mpcname;
+        public string Pcname
+        {
+            get { return Mpcname; }
+            set { Mpcname = value; }
+        }
+        public int Idusuario
+        {
+            get { return Midusuario; }
+            set { Midusuario = value; }
+        }
         public DateTime Fecha
         {
             get { return Mfecha; }
@@ -153,6 +165,8 @@ namespace Intermedia
         public void EliminarRegistro(int objTarjeta)
         {
             List<clsParametros> lst = new List<clsParametros>();
+            lst.Add(new clsParametros("@idusuario", Midusuario));
+            lst.Add(new clsParametros("@pcname", Mpcname));
             lst.Add(new clsParametros("@tarjeta", objTarjeta));
             M.EjecutarSP("eliminar_registro_indm", ref lst);
         }

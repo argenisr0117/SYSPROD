@@ -77,6 +77,9 @@
             this.cbVControlCald = new System.Windows.Forms.CheckBox();
             this.cBFechaVC = new System.Windows.Forms.CheckBox();
             this.cbReimprimirGalv = new System.Windows.Forms.CheckBox();
+            this.cbAlmTerminados = new System.Windows.Forms.CheckBox();
+            this.cbAlmIntermedios = new System.Windows.Forms.CheckBox();
+            this.cbAlmacenLineagalv = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -664,11 +667,50 @@
             this.cbReimprimirGalv.Text = "Reimprimir";
             this.cbReimprimirGalv.UseVisualStyleBackColor = false;
             // 
+            // cbAlmTerminados
+            // 
+            this.cbAlmTerminados.AutoSize = true;
+            this.cbAlmTerminados.BackColor = System.Drawing.Color.White;
+            this.cbAlmTerminados.ForeColor = System.Drawing.Color.Black;
+            this.cbAlmTerminados.Location = new System.Drawing.Point(132, 251);
+            this.cbAlmTerminados.Name = "cbAlmTerminados";
+            this.cbAlmTerminados.Size = new System.Drawing.Size(104, 17);
+            this.cbAlmTerminados.TabIndex = 173;
+            this.cbAlmTerminados.Text = "Alm. Terminados";
+            this.cbAlmTerminados.UseVisualStyleBackColor = false;
+            // 
+            // cbAlmIntermedios
+            // 
+            this.cbAlmIntermedios.AutoSize = true;
+            this.cbAlmIntermedios.BackColor = System.Drawing.Color.White;
+            this.cbAlmIntermedios.ForeColor = System.Drawing.Color.Black;
+            this.cbAlmIntermedios.Location = new System.Drawing.Point(132, 228);
+            this.cbAlmIntermedios.Name = "cbAlmIntermedios";
+            this.cbAlmIntermedios.Size = new System.Drawing.Size(103, 17);
+            this.cbAlmIntermedios.TabIndex = 172;
+            this.cbAlmIntermedios.Text = "Alm. Intermedios";
+            this.cbAlmIntermedios.UseVisualStyleBackColor = false;
+            // 
+            // cbAlmacenLineagalv
+            // 
+            this.cbAlmacenLineagalv.AutoSize = true;
+            this.cbAlmacenLineagalv.BackColor = System.Drawing.Color.White;
+            this.cbAlmacenLineagalv.ForeColor = System.Drawing.Color.Black;
+            this.cbAlmacenLineagalv.Location = new System.Drawing.Point(277, 136);
+            this.cbAlmacenLineagalv.Name = "cbAlmacenLineagalv";
+            this.cbAlmacenLineagalv.Size = new System.Drawing.Size(100, 17);
+            this.cbAlmacenLineagalv.TabIndex = 174;
+            this.cbAlmacenLineagalv.Text = "Alm. Linea Galv";
+            this.cbAlmacenLineagalv.UseVisualStyleBackColor = false;
+            // 
             // frmPermisos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(733, 539);
+            this.Controls.Add(this.cbAlmacenLineagalv);
+            this.Controls.Add(this.cbAlmTerminados);
+            this.Controls.Add(this.cbAlmIntermedios);
             this.Controls.Add(this.cbReimprimirGalv);
             this.Controls.Add(this.cBFechaVC);
             this.Controls.Add(this.cbVControlCald);
@@ -779,5 +821,8 @@
         private System.Windows.Forms.CheckBox cbVControlCald;
         private System.Windows.Forms.CheckBox cBFechaVC;
         private System.Windows.Forms.CheckBox cbReimprimirGalv;
+        private System.Windows.Forms.CheckBox cbAlmTerminados;
+        private System.Windows.Forms.CheckBox cbAlmIntermedios;
+        private System.Windows.Forms.CheckBox cbAlmacenLineagalv;
     }
 }

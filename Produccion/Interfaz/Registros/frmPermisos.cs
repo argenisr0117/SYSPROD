@@ -84,7 +84,9 @@ namespace Interfaz.Registros
                 U.Fdesgalv = cBFechadG.Checked;
                 U.Fhasgalv = cBFechahG.Checked;
                 U.Reimgalv = cbReimprimirGalv.Checked;
-
+                U.Almintermedios = cbAlmIntermedios.Checked;
+                U.Almterminados = cbAlmTerminados.Checked;
+                U.Almlg = cbAlmacenLineagalv.Checked;
                 mensaje = U.RegistrarActPermisos();
                 if (mensaje == 1)
                 {
@@ -149,6 +151,9 @@ namespace Interfaz.Registros
                 cBFechadG.Checked = Convert.ToBoolean(dt.Rows[0][36]);
                 cBFechahG.Checked = Convert.ToBoolean(dt.Rows[0][37]);
                 cbReimprimirGalv.Checked = Convert.ToBoolean(dt.Rows[0][38]);
+                cbAlmIntermedios.Checked = Convert.ToBoolean(dt.Rows[0][39]);
+                cbAlmTerminados.Checked = Convert.ToBoolean(dt.Rows[0][40]);
+                cbAlmacenLineagalv.Checked= Convert.ToBoolean(dt.Rows[0][41]);
             }
             catch(Exception ex)
             {

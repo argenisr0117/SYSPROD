@@ -93,7 +93,7 @@ namespace Interfaz.Registros
         {
             try
             {
-                cmbUso.DataSource = O.ListadoUsoAlambre();
+                cmbUso.DataSource = O.ListadoUsoAlambre(1);
                 cmbUso.DisplayMember = "DESCRIPCION";
                 cmbUso.ValueMember = "ID_USO";
             }
@@ -123,10 +123,12 @@ namespace Interfaz.Registros
 
             if (Program.Valor==6)
             {
+                DateTime mydate = DateTime.ParseExact(Program.FechaS,"dd-MM-yyyy",null);
                 txtContenedor.Text = Program.Contenedor;
                 cmbTamano.Text = Program.Tamano.ToString();
                 cmbCliente.SelectedValue = Program.Cliente;
                 cmbEmpresa.SelectedValue = Program.Empresa;
+                dtpFecha.Value = mydate;
                 LlenarGridSeleccionadas();
                 //btnGenerar.Text = "ACTUALIZAR";
             }
@@ -149,7 +151,7 @@ namespace Interfaz.Registros
             {
                 cmbUso.Enabled = false;
             }
-
+            cmbCliente.SelectedValue = Program.Cliente;
         }
         private void SecuenciaConduce()
         {
@@ -329,6 +331,7 @@ namespace Interfaz.Registros
                         O.Tamano = Convert.ToInt16(cmbTamano.SelectedItem);
                         O.Idempresa = cmbEmpresa.SelectedValue.ToString();
                         O.Iduso = Convert.ToInt16(cmbUso.SelectedValue);
+                        O.Fecha = dtpFecha.Value;
                         if(Program.Idtipoorden==1)
                         {
                             O.Conduce = txtConduce.Text;

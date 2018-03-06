@@ -23,6 +23,7 @@ namespace Interfaz.Registros
         clsProducto P = new clsProducto();
         clsTurno T = new clsTurno();
         clsProduccion Pr = new clsProduccion();
+        clsControlAlmacen Ca = new clsControlAlmacen();
         public BindingSource bs = new BindingSource();
         public DataTable dt = new DataTable();
         public DataTable dt1 = new DataTable();
@@ -706,6 +707,19 @@ namespace Interfaz.Registros
                             {
                                 MessageBoxEx.Show(mensaje, "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 Program.Evento = 0;
+
+                                //////////REGISTRAR PRODUCCION EN ALMACENES//////////
+                                DataTable ca_dt = new DataTable();
+                                ca_dt = Ca.Listar(true);
+                                Ca.Fecha = dtp2.Value;
+                                Ca.Reporte = txtreporte.Text;
+                                Ca.Identrada = 0;
+                                for (int a=0; a <ca_dt.Rows.Count; a++)
+                                {
+                                    Ca.Idalmacen = Convert.ToInt16(ca_dt.Rows[a][0]);
+                                    Ca.RegistrarEntradaAlmacen();
+                                }
+                                //////////FIN REGISTRAR PRODUCCION EN ALMACENES//////////
                                 //Limpiar();
                             }
 

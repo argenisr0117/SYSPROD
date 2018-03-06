@@ -123,6 +123,9 @@ namespace Interfaz
                         Program.fdesgalv= Convert.ToBoolean(dt.Rows[0][36]);
                         Program.fhasgalv=Convert.ToBoolean(dt.Rows[0][37]);
                         Program.reimgalv= Convert.ToBoolean(dt.Rows[0][38]);
+                        Program.almintermedios= Convert.ToBoolean(dt.Rows[0][39]);
+                        Program.almterminados= Convert.ToBoolean(dt.Rows[0][40]);
+                        Program.almlg= Convert.ToBoolean(dt.Rows[0][41]);
                         //Program.Usuario = txtUsuario.Text;
                         //Splash obj = new Splash();
                         Principal obj = new Principal();

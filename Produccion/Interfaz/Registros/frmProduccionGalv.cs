@@ -280,12 +280,14 @@ namespace Interfaz.Registros
             ComboA();
             cmbSupervisor.SelectedValue = "";
             Limpiar();
-            PG.Valor = 2; //valor para filtrar total produccion
+            PG.Valor = 1; //valor para filtrar total produccion
             LlenarGrid();
             Produccion_Total();
-           // timer1.Enabled = true;
+            cmbOperador.SelectedValue = "";
+            cmbAyudante.SelectedValue = "";
+            // timer1.Enabled = true;
             //timer1.Start();
-                
+
         }
         private void Permisos()
         {
@@ -300,34 +302,22 @@ namespace Interfaz.Registros
         }
         private void LlenarGrid()
         {
-            int diferencia = 0;
-            TimeSpan fechas = new TimeSpan();
+            //int diferencia = 0;
+            //TimeSpan fechas = new TimeSpan();
             DateTime fechaft = dtphasta.Value.AddDays(-1);
             if (dtpdesde.Value.Date < dtphasta.Value.Date)
             {
-                fechas = dtphasta.Value.Date - dtpdesde.Value.Date;
-                diferencia = fechas.Days;
-                if (diferencia > 1)
-                {
-                    PG.Fecha1 = dtpdesde.Value;
-                    PG.Fechaft = fechaft;
-                    PG.Fechaf = dtphasta.Value;
-                    //Limpiar();   
-                }
-                else
-                {
-                    PG.Fecha1 = dtpdesde.Value;
-                    PG.Fechaf = dtphasta.Value;
-                    PG.Fechaft = Convert.ToDateTime("1/1/1753 12:00:00 AM");
-                    //Limpiar();
- 
-                }
-            }
-            else
-            {
-                MessageBoxEx.Show("Fecha inicial mayor que Fecha final", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            DataTable dt = new DataTable();
+                lbProdT1.Text = "0.00";
+                lbProdT2.Text = "0.00";
+                lbProdT3.Text = "0.00";
+                //fechas = dtphasta.Value.Date - dtpdesde.Value.Date;
+                //diferencia = fechas.Days;
+                //if (diferencia > 1)
+                //{
+                PG.Fecha1 = dtpdesde.Value;
+                PG.Fechaft = fechaft;
+                PG.Fechaf = dtphasta.Value;
+                DataTable dt = new DataTable();
             dt = PG.Produccion_Diaria();
             try
             {
@@ -356,6 +346,22 @@ namespace Interfaz.Registros
             {
                 MessageBoxEx.Show(ex.Message, "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+                //    //Limpiar();   
+                //}
+                //else
+                //{
+                //    PG.Fecha1 = dtpdesde.Value;
+                //    PG.Fechaf = dtphasta.Value;
+                //    PG.Fechaft = Convert.ToDateTime("1/1/1753 12:00:00 AM");
+                //    //Limpiar();
+
+                //}
+            }
+            else
+            {
+                MessageBoxEx.Show("Fecha inicial mayor que Fecha final", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
         private void LlenarGrid2()
         {
@@ -398,8 +404,8 @@ namespace Interfaz.Registros
         {
             cmbProducto.SelectedValue = "";
             cmbMaquina.SelectedValue = "";
-            cmbOperador.SelectedValue = "";
-            cmbAyudante.SelectedValue = "";
+            //cmbOperador.SelectedValue = "";
+            //cmbAyudante.SelectedValue = "";
             cmbCliente.SelectedValue = 0;
             cmbPesocanasto.SelectedValue = -1;
             cmbColada.SelectedValue = 0;
@@ -562,46 +568,50 @@ namespace Interfaz.Registros
             int a = 0;
             int b = 0;
             int c = 0;
-            dt = PG.Total_Produccion();
             try
             {
-                for (int x = 0; x < dt.Rows.Count; x++)
+                if (dtpdesde.Value.Date < dtphasta.Value.Date)
                 {
-                    if(dt.Rows[x][0].ToString()== "06AM02PM")
+                    dt = PG.Total_Produccion();
+                    for (int x = 0; x < dt.Rows.Count; x++)
                     {
-                        lbTurno1.Text = "TURNO1";
-                        lbProdT1.Text =(Convert.ToDouble(dt.Rows[x][1])/100).ToString()+" QQS";
-                        a = 1;
+                        if (dt.Rows[x][0].ToString() == "06AM02PM")
+                        {
+                            lbTurno1.Text = "TURNO1";
+                            lbProdT1.Text = (Convert.ToDouble(dt.Rows[x][1]) / 100).ToString() + " QQS";
+                            a = 1;
+                        }
+                        if (a == 0)
+                        {
+                            lbProdT1.Text = "";
+                        }
+                        if (dt.Rows[x][0].ToString() == "02PM10PM")
+                        {
+                            lbTurno2.Text = "TURNO2";
+                            lbProdT2.Text = (Convert.ToDouble(dt.Rows[x][1]) / 100).ToString() + " QQS";
+                            b = 1;
+                        }
+                        if (b == 0)
+                        {
+                            lbProdT2.Text = "";
+                        }
+                        if (dt.Rows[x][0].ToString() == "10PM06AM")
+                        {
+                            lbTurno3.Text = "TURNO3";
+                            lbProdT3.Text = (Convert.ToDouble(dt.Rows[x][1]) / 100).ToString() + " QQS";
+                            c = 1;
+                        }
+                        if (c == 0)
+                        {
+                            lbProdT3.Text = "";
+                        }
+                        total = total + (Convert.ToDouble(dt.Rows[x][1]) / 100);
+                        canasto = canasto + (Convert.ToInt32(dt.Rows[x][2]));
                     }
-                    if(a==0)
-                    {
-                        lbProdT1.Text = "";
-                    }
-                    if (dt.Rows[x][0].ToString() == "02PM10PM")
-                    {
-                        lbTurno2.Text = "TURNO2";
-                        lbProdT2.Text = (Convert.ToDouble(dt.Rows[x][1]) / 100).ToString() + " QQS";
-                        b = 1;
-                    }
-                    if(b==0)
-                    {
-                        lbProdT2.Text = "";
-                    }
-                    if (dt.Rows[x][0].ToString() == "10PM06AM")
-                    {
-                        lbTurno3.Text = "TURNO3";
-                        lbProdT3.Text = (Convert.ToDouble(dt.Rows[x][1]) / 100).ToString() + " QQS";
-                        c = 1;
-                    }
-                    if (c == 0)
-                    {
-                        lbProdT3.Text = "";
-                    }
-                    total = total + (Convert.ToDouble(dt.Rows[x][1]) / 100);
-                    canasto=canasto+ (Convert.ToInt32(dt.Rows[x][2]));
+                    lbTotalP.Text = total.ToString() + " QQS";
+                    lbTotalC.Text = canasto.ToString();
+
                 }
-                lbTotalP.Text = total.ToString() + " QQS";
-                lbTotalC.Text = canasto.ToString();
             }
             catch (Exception ex)
             {
@@ -651,6 +661,7 @@ namespace Interfaz.Registros
                         {
                             Double cantidad = Convert.ToDouble(dt.Rows[x][2]);
                             Double cant_prod= Convert.ToDouble(dt.Rows[x][3]);
+                            Double cantidad2 = cantidad;
                             if (cantidad==0) //IDENTIFICAR SI EXISTE ALGUNA ORDEN PARA ESTE CLIENTE Y ESTE PRODUCTO, SI ES CERO, ASIGNAR S/N
                             {
                                 PG.Idorden = Convert.ToInt16(dt.Rows[x][0]);
@@ -660,7 +671,7 @@ namespace Interfaz.Registros
                             else
                             {
                                 cant_prod = cant_prod + qqs;
-                                cantidad = cantidad + 10;
+                                cantidad = cantidad +10;
                                 if (cant_prod > cantidad) //COMPLETAR ORDEN
                                 {
                                     PG.Idorden = Convert.ToInt16(dt.Rows[x][0]);
@@ -733,7 +744,7 @@ namespace Interfaz.Registros
                         reporte.Pesokg = (peso * 0.4536).ToString("N0");
                         reporte.ShowDialog();
                         Limpiar();
-                        PG.Valor = 2; //VALOR PARA FILTRAR TOTAL PROD
+                        PG.Valor = 1; //VALOR PARA FILTRAR TOTAL PROD
                         LlenarGrid();
                         Produccion_Total();
                     }
@@ -788,9 +799,7 @@ namespace Interfaz.Registros
             PG.Maquina = "";
             PG.Cliente = 0;
             PG.Producto = "";
-            lbProdT1.Text = "0.00";
-            lbProdT2.Text = "0.00";
-            lbProdT3.Text = "0.00";
+           
             LlenarGrid();
             Produccion_Total();
         }
@@ -840,6 +849,8 @@ namespace Interfaz.Registros
                 {
                     PG.Id= Convert.ToInt32(dtgvProduccion.CurrentRow.Cells[10].Value);
                     PG.Dpto = "Galvanizado";
+                    PG.Idusuario = Program.Idusuario;
+                    PG.Pcname = Environment.MachineName;
                     mensaje=PG.EliminarRegistro();
                     if(mensaje=="1")
                     {
@@ -865,6 +876,8 @@ namespace Interfaz.Registros
         {
             Consultas.frmcFiltrarRegistros obj = new Consultas.frmcFiltrarRegistros();
             Program.Filtrar = 1;
+            Program.Fechai = dtpdesde.Value;
+            Program.Fechaf = dtphasta.Value;
             obj.ShowDialog();
             if(Program.Valor==1)
             {

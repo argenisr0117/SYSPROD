@@ -60,6 +60,9 @@ namespace Interfaz
             btnOrden.Enabled = Program.ordenprod;
             btnPruebasCalidad.Enabled = Program.controlcald;
             btnVerPruebasCald.Enabled = Program.vcontrolcald;
+            btnAlmacenIntermedios.Enabled = Program.almintermedios;
+            btnAlmacenTerminados.Enabled = Program.almterminados;
+            btnAlmacenLineaGalv.Enabled = Program.almlg;
         }
         private void AbrirForm(string form)
         {
@@ -116,6 +119,11 @@ namespace Interfaz
                 if (form == "frmcPruebasCalidad")
                 {
                     Consultas.frmcPruebasCalidad obj = new Consultas.frmcPruebasCalidad();
+                    obj.Show();
+                }
+                if (form == "frmControlAlm")
+                {
+                    frmControlAlm obj = new frmControlAlm();
                     obj.Show();
                 }
             }
@@ -179,6 +187,27 @@ namespace Interfaz
         private void btnVerPruebasCald_Click(object sender, EventArgs e)
         {
             form = "frmcPruebasCalidad";
+            AbrirForm(form);
+        }
+
+        private void btnAlmacenIntermedios_Click(object sender, EventArgs e)
+        {
+            Program.Almacen = "INTERMEDIOS";
+            form = "frmControlAlm";
+            AbrirForm(form);
+        }
+
+        private void btnAlmacenTerminados_Click(object sender, EventArgs e)
+        {
+            Program.Almacen = "TERMINADOS";
+            form = "frmControlAlm";
+            AbrirForm(form);
+        }
+
+        private void btnAlmacenLineaGalv_Click(object sender, EventArgs e)
+        {
+            Program.Almacen = "LINEA GALV";
+            form = "frmControlAlm";
             AbrirForm(form);
         }
     }

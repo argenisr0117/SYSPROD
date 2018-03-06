@@ -759,7 +759,7 @@
             this.btnExportar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExportar.ForeColor = System.Drawing.Color.Black;
-            this.btnExportar.Image = global::Interfaz.Properties.Resources.Excel_icon;
+            this.btnExportar.Image = global::Interfaz.Properties.Resources.exportar__1_;
             this.btnExportar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnExportar.Location = new System.Drawing.Point(238, 8);
             this.btnExportar.Name = "btnExportar";

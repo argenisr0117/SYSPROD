@@ -136,6 +136,7 @@ namespace Interfaz.Consultas
             {
                 if (dtgPackingList.SelectedRows.Count > 0)
                 {
+                    Program.FechaS =(dtgPackingList.CurrentRow.Cells[1].Value.ToString());
                     Program.Idpacking= Convert.ToInt16(dtgPackingList.CurrentRow.Cells[0].Value);
                     Program.Idrptcald= Convert.ToInt16(dtgPackingList.CurrentRow.Cells["ID_REPORTE"].Value);
                     Program.Cliente=Convert.ToInt16(dtgPackingList.CurrentRow.Cells[8].Value);

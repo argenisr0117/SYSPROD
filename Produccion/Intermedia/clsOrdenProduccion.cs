@@ -19,6 +19,7 @@ namespace Intermedia
         string Mdpto;
         int Mid;
         Boolean Mticket;
+        Boolean Mlongitud;
         int Midtipo;
         string Midd;
         string Mproducto;
@@ -84,6 +85,11 @@ namespace Intermedia
         {
             get { return Mticket; }
             set { Mticket = value; }
+        }
+        public Boolean Longitud
+        {
+            get { return Mlongitud; }
+            set { Mlongitud = value; }
         }
         public string Dpto
         {
@@ -182,10 +188,11 @@ namespace Intermedia
             List<clsParametros> lst = new List<clsParametros>();
             return dt = M.Listado("secuencia_conduce", lst);
         }
-        public DataTable ListadoUsoAlambre()
+        public DataTable ListadoUsoAlambre(int tipo)
         {
             DataTable dt = new DataTable();
             List<clsParametros> lst = new List<clsParametros>();
+            lst.Add(new clsParametros("@tipo", tipo));
             return dt = M.Listado("listado_uso_alambre", lst);
         }
         public bool RegistrarOrdenProduccion()
@@ -265,6 +272,7 @@ namespace Intermedia
             List<clsParametros> lst = new List<clsParametros>();
             lst.Add(new clsParametros("@mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 1));
             lst.Add(new clsParametros("@idproducto", Mproducto));
+            lst.Add(new clsParametros("@fecha", Mfecha));
             lst.Add(new clsParametros("@idpacking", Mid));
             lst.Add(new clsParametros("@idcliente", Mcliente));
             lst.Add(new clsParametros("@numorden", Mnumorden));

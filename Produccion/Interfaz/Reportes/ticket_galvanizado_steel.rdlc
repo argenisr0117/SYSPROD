@@ -288,7 +288,7 @@
                 </Style>
               </TextRun>
               <TextRun>
-                <Value>(</Value>
+                <Value> (</Value>
                 <Style>
                   <FontSize>9pt</FontSize>
                   <FontWeight>Bold</FontWeight>

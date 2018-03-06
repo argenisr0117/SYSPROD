@@ -123,6 +123,8 @@ namespace Interfaz.Consultas
             ComboM();
             ComboP();
             Limpiar();
+            dtpdesde.Value = Program.Fechai;
+            dtphasta.Value = Program.Fechaf;
         }
         private void Limpiar()
         {

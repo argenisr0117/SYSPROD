@@ -39,6 +39,18 @@ namespace Intermedia
         double Mpesoneto;
         byte[] Mbarcode;
         string Middpto;
+        int Midusuario;
+        string Mpcname;
+        public string Pcname
+        {
+            get { return Mpcname; }
+            set { Mpcname = value; }
+        }
+        public int Idusuario
+        {
+            get { return Midusuario; }
+            set { Midusuario = value; }
+        }
         public DateTime Fecha
         {
             get { return Mfecha; }
@@ -294,6 +306,9 @@ namespace Intermedia
         {
             string mensaje = "";
             List<clsParametros> lst = new List<clsParametros>();
+            lst.Add(new clsParametros("@mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 50));
+            lst.Add(new clsParametros("@idusuario", Midusuario));
+            lst.Add(new clsParametros("@pcname", Mpcname));
             lst.Add(new clsParametros("@id", Mid));
             lst.Add(new clsParametros("@supervisor", Msupervisor));
             lst.Add(new clsParametros("@ayudante", Mayudante));
@@ -303,9 +318,8 @@ namespace Intermedia
             lst.Add(new clsParametros("@cliente", Mcliente));
             lst.Add(new clsParametros("@peso", Mpesoneto));
             lst.Add(new clsParametros("@dpto", Mdpto));
-            lst.Add(new clsParametros("@mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 50));
             M.EjecutarSP("actualizar_registro_dpto", ref lst);
-            mensaje = lst[9].Valor.ToString();
+            mensaje = lst[0].Valor.ToString();
             return mensaje;
         }
         public string  ExportarRegistroDpto()
@@ -329,6 +343,8 @@ namespace Intermedia
             List<clsParametros> lst = new List<clsParametros>();
             lst.Add(new clsParametros("@id", Mid));
             lst.Add(new clsParametros("@dpto", Mdpto));
+            lst.Add(new clsParametros("@idusuario", Midusuario));
+            lst.Add(new clsParametros("@pcname", Mpcname));
             lst.Add(new clsParametros("@mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 50));
             M.EjecutarSP("eliminar_registro_dpto", ref lst);
             mensaje = lst[2].Valor.ToString();

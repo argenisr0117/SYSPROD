@@ -565,6 +565,8 @@ namespace Interfaz.Registros
                 {
                     //dtgvproduccion.Rows.RemoveAt(dtgvproduccion.CurrentRow.Index);
                     int tarjeta = Convert.ToInt32(dtgvProduccion.CurrentRow.Cells[0].Value);
+                    Pi.Idusuario = Program.Idusuario;
+                    Pi.Pcname = Environment.MachineName;
                     Pi.EliminarRegistro(tarjeta);
                     MessageBoxEx.Show("Registro eliminado!", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LlenarGrid();

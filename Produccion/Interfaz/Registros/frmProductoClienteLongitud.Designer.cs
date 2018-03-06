@@ -45,6 +45,8 @@
             this.cbempresa = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cbLongitud = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvProducto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -244,7 +246,7 @@
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(6, 162);
+            this.label1.Location = new System.Drawing.Point(6, 163);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(126, 13);
             this.label1.TabIndex = 152;
@@ -289,11 +291,34 @@
             this.label4.TabIndex = 155;
             this.label4.Text = "Doble click en registro para editarlo";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(237, 163);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(66, 13);
+            this.label5.TabIndex = 157;
+            this.label5.Text = "LONGITUD:";
+            // 
+            // cbLongitud
+            // 
+            this.cbLongitud.AutoSize = true;
+            this.cbLongitud.Location = new System.Drawing.Point(334, 162);
+            this.cbLongitud.Name = "cbLongitud";
+            this.cbLongitud.Size = new System.Drawing.Size(15, 14);
+            this.cbLongitud.TabIndex = 156;
+            this.cbLongitud.UseVisualStyleBackColor = true;
+            // 
             // frmProductoClienteLongitud
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(608, 421);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.cbLongitud);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.cbempresa);
             this.Controls.Add(this.label7);
@@ -342,5 +367,7 @@
         private System.Windows.Forms.ComboBox cbempresa;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.CheckBox cbLongitud;
     }
 }

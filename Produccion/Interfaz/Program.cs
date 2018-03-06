@@ -9,6 +9,8 @@ namespace Interfaz
 {
     static class Program
     {
+        public static string Almacen;
+        public static string FechaS;
         public static int Filtrar; //variable para filtrar prod tref - galv
         public static int Editar; //variable para editar prod tref - galv
         public static int Idpuerto;
@@ -87,6 +89,9 @@ namespace Interfaz
         public static Boolean fdesgalv;
         public static Boolean fhasgalv;
         public static Boolean reimgalv;
+        public static Boolean almintermedios;
+        public static Boolean almterminados;
+        public static Boolean almlg;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

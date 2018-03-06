@@ -44,6 +44,11 @@ namespace Interfaz
         public int Inicio1 { get; set; }
         public int Final { get; set; }
         public int Final1 { get; set; }
+        public int Idalmacen { get; set; }
+        public int Iduso { get; set; }
+        public string Almacen { get; set; }
+
+
 
         //tickets
         public int Id { get; set; }
@@ -140,8 +145,18 @@ namespace Interfaz
             {
                 HistorialProduccion();
             }
-
-
+            else if (Valor == 18)
+            {
+                InventarioDetallado();
+            }
+            else if (Valor == 19)
+            {
+                EntradaInventario();
+            }
+            else if (Valor == 20)
+            {
+                SalidaInventario();
+            }
         }
 
         private void TicketTrefilado2()
@@ -682,6 +697,8 @@ namespace Interfaz
         }
         private void ReporteIndm()
         {
+            ReportParameter[] parametros = new ReportParameter[1];
+            parametros[0] = new ReportParameter("Fecha", Fecha.ToShortDateString());
             PRODUCCIONDataSet ds = new PRODUCCIONDataSet();
             PRODUCCIONDataSetTableAdapters.reporte_diario_indmTableAdapter rgta = new PRODUCCIONDataSetTableAdapters.reporte_diario_indmTableAdapter();
             reportViewer1.ProcessingMode = ProcessingMode.Local;
@@ -695,6 +712,7 @@ namespace Interfaz
             rds.Name = "DataSet1";
             rds.Value = (ds.Tables["reporte_diario_indm"]);
             reportViewer1.LocalReport.DataSources.Clear();
+            reportViewer1.LocalReport.SetParameters(parametros);
             lc.DataSources.Add(rds);
 
             this.reportViewer1.RefreshReport();
@@ -745,6 +763,74 @@ namespace Interfaz
             lc.DataSources.Add(rds);
             this.reportViewer1.RefreshReport();
         }
+        private void InventarioDetallado()
+        {
+            ReportParameter[] parametros = new ReportParameter[1];
+            this.Text = Reporte;
+            PRODUCCIONDataSet ds = new PRODUCCIONDataSet();
+            PRODUCCIONDataSetTableAdapters.rpt_inv_alm_detTableAdapter rgta = new PRODUCCIONDataSetTableAdapters.rpt_inv_alm_detTableAdapter();
+            reportViewer1.ProcessingMode = ProcessingMode.Local;
+            LocalReport lc = reportViewer1.LocalReport;
+            string ruta = "Reportes\\" + Nombre;
+            lc.ReportPath = ruta;
+            parametros[0] = new ReportParameter("Almacen", Almacen.ToString());
+            //parametros[2] = new ReportParameter("Orden1", Order1.ToString());
+            rgta.Fill(ds.rpt_inv_alm_det, Idalmacen);
+            ReportDataSource rds = new ReportDataSource();
+            reportViewer1.LocalReport.DisplayName = Reporte;
+            rds.Name = "DataSet1";
+            rds.Value = (ds.Tables["rpt_inv_alm_det"]);
+            reportViewer1.LocalReport.DataSources.Clear();
+            reportViewer1.LocalReport.SetParameters(parametros);
+            lc.DataSources.Add(rds);
+            this.reportViewer1.RefreshReport();
+        }
 
+        private void EntradaInventario()
+        {
+            ReportParameter[] parametros = new ReportParameter[3];
+            this.Text = Reporte;
+            PRODUCCIONDataSet ds = new PRODUCCIONDataSet();
+            PRODUCCIONDataSetTableAdapters.obt_ent_almTableAdapter rgta = new PRODUCCIONDataSetTableAdapters.obt_ent_almTableAdapter();
+            reportViewer1.ProcessingMode = ProcessingMode.Local;
+            LocalReport lc = reportViewer1.LocalReport;
+            string ruta = "Reportes\\" + Nombre;
+            lc.ReportPath = ruta;
+            parametros[0] = new ReportParameter("Fechai", Fechai.ToShortDateString());
+            parametros[1] = new ReportParameter("Fechaf", Fechaf.ToShortDateString());
+            parametros[2] = new ReportParameter("Almacen", Almacen.ToString());
+            rgta.Fill(ds.obt_ent_alm, Fechai, Fechaf,Idalmacen,NoReporte);
+            ReportDataSource rds = new ReportDataSource();
+            reportViewer1.LocalReport.DisplayName = Reporte;
+            rds.Name = "DataSet1";
+            rds.Value = (ds.Tables["obt_ent_alm"]);
+            reportViewer1.LocalReport.DataSources.Clear();
+            reportViewer1.LocalReport.SetParameters(parametros);
+            lc.DataSources.Add(rds);
+            this.reportViewer1.RefreshReport();
+        }
+        private void SalidaInventario()
+        {
+            ReportParameter[] parametros = new ReportParameter[3];
+            this.Text = Reporte;
+            PRODUCCIONDataSet ds = new PRODUCCIONDataSet();
+            PRODUCCIONDataSetTableAdapters.obt_sal_almTableAdapter rgta = new PRODUCCIONDataSetTableAdapters.obt_sal_almTableAdapter();
+            reportViewer1.ProcessingMode = ProcessingMode.Local;
+            LocalReport lc = reportViewer1.LocalReport;
+            string ruta = "Reportes\\" + Nombre;
+            lc.ReportPath = ruta;
+            parametros[0] = new ReportParameter("Fechai", Fechai.ToShortDateString());
+            parametros[1] = new ReportParameter("Fechaf", Fechaf.ToShortDateString());
+            parametros[2] = new ReportParameter("Almacen", Almacen.ToString());
+            rgta.Fill(ds.obt_sal_alm, Idalmacen,Iduso,Producto, Fechai, Fechaf);
+            ReportDataSource rds = new ReportDataSource();
+            reportViewer1.LocalReport.DisplayName = Reporte;
+            rds.Name = "DataSet1";
+            rds.Value = (ds.Tables["obt_sal_alm"]);
+            reportViewer1.LocalReport.DataSources.Clear();
+            reportViewer1.LocalReport.SetParameters(parametros);
+            lc.DataSources.Add(rds);
+            this.reportViewer1.RefreshReport();
+        }
     }
 }

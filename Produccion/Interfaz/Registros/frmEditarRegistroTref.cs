@@ -214,6 +214,8 @@ namespace Interfaz.Registros
                     PT.Cliente = Convert.ToInt32(cmbCliente.SelectedValue);
                     PT.PesoNeto = Convert.ToDouble(txtPeso.Text.Trim());
                     PT.Dpto = "Trefilado";
+                    PT.Idusuario = Program.Idusuario;
+                    PT.Pcname = Environment.MachineName;
                     mensaje = PT.ActualizarRegistroDpto();
                 }
                 else if (Program.Editar == 1)
@@ -227,6 +229,8 @@ namespace Interfaz.Registros
                     PG.Cliente = Convert.ToInt32(cmbCliente.SelectedValue);
                     PG.PesoNeto = Convert.ToDouble(txtPeso.Text.Trim());
                     PG.Dpto = "Galvanizado";
+                    PG.Idusuario = Program.Idusuario;
+                    PG.Pcname = Environment.MachineName;
                     mensaje = PG.ActualizarRegistroDpto();
                     PG.Id = 0;
                     PG.Supervisor = "";
