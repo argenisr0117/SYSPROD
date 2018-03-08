@@ -342,13 +342,13 @@ namespace Intermedia
         {
             string mensaje = "";
             List<clsParametros> lst = new List<clsParametros>();
+            lst.Add(new clsParametros("@mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 50));
             lst.Add(new clsParametros("@id", Mid));
             lst.Add(new clsParametros("@dpto", Mdpto));
             lst.Add(new clsParametros("@idusuario", Midusuario));
             lst.Add(new clsParametros("@pcname", Mpcname));
-            lst.Add(new clsParametros("@mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 50));
             M.EjecutarSP("eliminar_registro_dpto", ref lst);
-            mensaje = lst[2].Valor.ToString();
+            mensaje = lst[0].Valor.ToString();
             return mensaje;
         }
     }
