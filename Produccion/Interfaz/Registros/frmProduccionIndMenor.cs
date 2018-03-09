@@ -132,6 +132,19 @@ namespace Interfaz.Registros
                 MessageBoxEx.Show(ex.Message);
             }
         }
+        private void ComboCli()
+        {
+            try
+            {
+                cmbCliente.DataSource = Pi.ListadoCliente2();
+                cmbCliente.DisplayMember = "DESCRIPCION";
+                cmbCliente.ValueMember = "ID_CLIENTE";
+            }
+            catch (Exception ex)
+            {
+                MessageBoxEx.Show(ex.Message);
+            }
+        }
         private void Limpiar()
         {
             cmbProducto.SelectedValue = "";
@@ -158,9 +171,11 @@ namespace Interfaz.Registros
             ComboS();
             ComboM();
             ComboP2();
+            ComboCli();
             cmbSupervisor.SelectedValue = "";
             cmbOperador2.SelectedValue = "";
             cmbAyudante.SelectedValue = "DESC-01";
+            cmbCliente.SelectedText = "DESPACHO-T";
             cmbAyudante.Enabled = false;
             Limpiar();
             LlenarGrid();
