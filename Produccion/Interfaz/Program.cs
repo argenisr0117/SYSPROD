@@ -17,6 +17,7 @@ namespace Interfaz
         public static int Idusuario;
         public static int Valor3;
         public static int Evento;
+        public static int Idorden;
         public static int Valor;
         public static int Valor2;
         public static int Idpacking;

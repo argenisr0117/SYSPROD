@@ -32,10 +32,17 @@ namespace Intermedia
         int Midorden;
         int Midusuario;
         string Mpcname;
+        string Mdpto;
+
         public string Pcname
         {
             get { return Mpcname; }
             set { Mpcname = value; }
+        }
+        public string Dpto
+        {
+            get { return Mdpto; }
+            set { Mdpto = value; }
         }
         public int Idusuario
         {
@@ -151,7 +158,6 @@ namespace Intermedia
             lst.Add(new clsParametros("@ayudante", Mayudante));
             lst.Add(new clsParametros("@codigoprod", Midproducto));
             lst.Add(new clsParametros("@idmaquina", Midmaquina));
-            lst.Add(new clsParametros("@destino", Mdestino));
             lst.Add(new clsParametros("@cantidad", Mcantidad));
             lst.Add(new clsParametros("@idorden", Midorden));
             lst.Add(new clsParametros("@idcliente", Midcliente));
@@ -175,7 +181,28 @@ namespace Intermedia
             mensaje = lst[6].Valor.ToString();
             return mensaje;
         }
-
+        public DataTable ObtenerOrden()
+        {
+            DataTable dt = new DataTable();
+            List<clsParametros> lst = new List<clsParametros>();
+            lst.Add(new clsParametros("@iddpto", Mdpto));
+            lst.Add(new clsParametros("@idcliente", Midcliente));
+            lst.Add(new clsParametros("@idproducto", Midproducto));
+            return dt = M.Listado("obtener_orden_canasto", lst);
+        }
+        public void CompletarOrdenProduccion()
+        {
+            List<clsParametros> lst = new List<clsParametros>();
+            lst.Add(new clsParametros("@idorden", Midorden));
+            M.EjecutarSP("completar_orden_produccion", ref lst);
+        }
+        public void ActCantOrdenProduccion()
+        {
+            List<clsParametros> lst = new List<clsParametros>();
+            lst.Add(new clsParametros("@idorden", Midorden));
+            lst.Add(new clsParametros("@peso", Mcantidad));
+            M.EjecutarSP("act_cant_orden_produccion", ref lst);
+        }
         public void EliminarRegistro(int objTarjeta)
         {
             List<clsParametros> lst = new List<clsParametros>();
