@@ -431,150 +431,146 @@ namespace Interfaz
         private void grapasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmReporte obj = new frmReporte();
-            //if (tscbempresa.ComboBox.SelectedValue.ToString()=="ACERO")
-            //{
-            //    obj.Destino = "ACERO DEL CIBAO,SRL";
-            //}
-            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "A&L")
-            //{
-            //    obj.Destino = "A&L WIRE";
-            //}
-            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "Esprines")
-            //{
-            //    obj.Destino = "FABRICA DE ESPRINES";
-            //}
+            frmReporte obj1 = new frmReporte();
             obj.Destino = tscbempresa.ComboBox.Text;
+            obj1.Destino = tscbempresa.ComboBox.Text;
             dt = Pr.FechaCierre();
             if (string.IsNullOrEmpty(dt.Rows[0]["Fecha"].ToString()))
             {
                 obj.Fecha = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+                obj1.Fecha = Convert.ToDateTime(DateTime.Now.ToShortDateString());
             }
             else
             {
                 obj.Fecha = Convert.ToDateTime(dt.Rows[0]["Fecha"]);
+                obj1.Fecha = Convert.ToDateTime(dt.Rows[0]["Fecha"]);
             }
             obj.Incentivo = "Grapas";
             obj.Empresa = tscbempresa.ComboBox.SelectedValue.ToString();
             obj.Nombre = "incentivo_grapas.rdlc";
             obj.Reporte = "INCENTIVO GRAPAS";
+            obj.Idcliente = 0;
             obj.Valor = 2;
             obj.Show();
+
+            /////INCENTIVO PUAS KINNOX///////
+            obj1.Incentivo = "Grapas";
+            obj1.Empresa = tscbempresa.ComboBox.SelectedValue.ToString();
+            obj1.Nombre = "incentivo_grapas.rdlc";
+            obj1.Reporte = "INCENTIVO GRAPAS";
+            obj1.Valor = 2;
+            obj1.Idcliente = 43;
+            obj1.Show();
         }
 
         private void púasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmReporte obj = new frmReporte();
-            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "ACERO")
-            //{
-            //    obj.Destino = "ACERO DEL CIBAO,SRL";
-            //}
-            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "A&L")
-            //{
-            //    obj.Destino = "A&L WIRE";
-            //}
-            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "Esprines")
-            //{
-            //    obj.Destino = "FABRICA DE ESPRINES";
-            //}
+            frmReporte obj1 = new frmReporte();
             obj.Destino = tscbempresa.ComboBox.Text;
+            obj1.Destino = tscbempresa.ComboBox.Text;
             dt = Pr.FechaCierre();
             if (string.IsNullOrEmpty(dt.Rows[0]["Fecha"].ToString()))
             {
                 obj.Fecha = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+                obj1.Fecha = Convert.ToDateTime(DateTime.Now.ToShortDateString());
             }
             else
             {
                 obj.Fecha = Convert.ToDateTime(dt.Rows[0]["Fecha"]);
+                obj1.Fecha = Convert.ToDateTime(dt.Rows[0]["Fecha"]);
             }
             obj.Incentivo = "Puas";
             obj.Empresa = tscbempresa.ComboBox.SelectedValue.ToString();
             obj.Nombre = "incentivo_puas.rdlc";
             obj.Reporte = "INCENTIVO PUAS";
             obj.Valor = 2;
+            obj.Idcliente = 0;
             obj.Show();
+
+            /////INCENTIVO PUAS KINNOX///////
+            obj1.Incentivo = "Puas";
+            obj1.Empresa = tscbempresa.ComboBox.SelectedValue.ToString();
+            obj1.Nombre = "incentivo_puas.rdlc";
+            obj1.Reporte = "INCENTIVO PUAS";
+            obj1.Valor = 2;
+            obj1.Idcliente = 43;
+            obj1.Show();
         }
 
         private void mallasGallineroToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmReporte obj = new frmReporte();
-            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "ACERO")
-            //{
-            //    obj.Destino = "ACERO DEL CIBAO,SRL";
-            //}
-            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "A&L")
-            //{
-            //    obj.Destino = "A&L WIRE";
-            //}
-            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "Esprines")
-            //{
-            //    obj.Destino = "FABRICA DE ESPRINES";
-            //}
+            frmReporte obj1 = new frmReporte();
             obj.Destino = tscbempresa.ComboBox.Text;
+            obj1.Destino = tscbempresa.ComboBox.Text;
             dt = Pr.FechaCierre();
             if (string.IsNullOrEmpty(dt.Rows[0]["Fecha"].ToString()))
             {
                 obj.Fecha = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+                obj1.Fecha = Convert.ToDateTime(DateTime.Now.ToShortDateString());
             }
             else
             {
                 obj.Fecha = Convert.ToDateTime(dt.Rows[0]["Fecha"]);
+                obj1.Fecha = Convert.ToDateTime(dt.Rows[0]["Fecha"]);
             }
             obj.Incentivo = "Mallas Gallinero";
             obj.Empresa = tscbempresa.ComboBox.SelectedValue.ToString();
             obj.Nombre = "incentivo_mallas_gallinero.rdlc";
             obj.Reporte = "INCENTIVO MALLAS GALLINERO";
             obj.Valor = 2;
+            obj.Idcliente = 0;
             obj.Show();
+
+            /////INCENTIVO MALLAS KINNOX///////
+            obj1.Incentivo = "Mallas Gallinero";
+            obj1.Empresa = tscbempresa.ComboBox.SelectedValue.ToString();
+            obj1.Nombre = "incentivo_mallas_gallinero.rdlc";
+            obj1.Reporte = "INCENTIVO MALLAS GALLINERO";
+            obj1.Valor = 2;
+            obj1.Idcliente = 43;
+            obj1.Show();
         }
 
         private void mallasCiclonicasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmReporte obj = new frmReporte();
-            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "ACERO")
-            //{
-            //    obj.Destino = "ACERO DEL CIBAO,SRL";
-            //}
-            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "A&L")
-            //{
-            //    obj.Destino = "A&L WIRE";
-            //}
-            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "Esprines")
-            //{
-            //    obj.Destino = "FABRICA DE ESPRINES";
-            //}
+            frmReporte obj1 = new frmReporte();
             obj.Destino = tscbempresa.ComboBox.Text;
+            obj1.Destino = tscbempresa.ComboBox.Text;
             dt = Pr.FechaCierre();
             if (string.IsNullOrEmpty(dt.Rows[0]["Fecha"].ToString()))
             {
                 obj.Fecha = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+                obj1.Fecha = Convert.ToDateTime(DateTime.Now.ToShortDateString());
             }
             else
             {
                 obj.Fecha = Convert.ToDateTime(dt.Rows[0]["Fecha"]);
+                obj1.Fecha = Convert.ToDateTime(dt.Rows[0]["Fecha"]);
             }
             obj.Incentivo = "Mallas Ciclonicas";
             obj.Empresa = tscbempresa.ComboBox.SelectedValue.ToString();
             obj.Nombre = "incentivo_mallas_ciclonicas.rdlc";
             obj.Reporte = "INCENTIVO MALLAS CICLONICAS";
+            obj.Idcliente = 0;
             obj.Valor = 2;
             obj.Show();
+
+            /////INCENTIVO MALLAS KINNOX///////
+            obj1.Incentivo = "Mallas Ciclonicas";
+            obj1.Empresa = tscbempresa.ComboBox.SelectedValue.ToString();
+            obj1.Nombre = "incentivo_mallas_ciclonicas.rdlc";
+            obj1.Reporte = "INCENTIVO MALLAS CICLONICAS";
+            obj1.Valor = 2;
+            obj1.Idcliente = 43;
+            obj1.Show();
         }
 
         private void sunchosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmReporte obj = new frmReporte();
-            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "ACERO")
-            //{
-            //    obj.Destino = "ACERO DEL CIBAO,SRL";
-            //}
-            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "A&L")
-            //{
-            //    obj.Destino = "A&L WIRE";
-            //}
-            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "Esprines")
-            //{
-            //    obj.Destino = "FABRICA DE ESPRINES";
-            //}
             obj.Destino = tscbempresa.ComboBox.Text;
             dt = Pr.FechaCierre();
             if (string.IsNullOrEmpty(dt.Rows[0]["Fecha"].ToString()))
@@ -597,18 +593,6 @@ namespace Interfaz
         {
             frmReporte obj = new frmReporte();
             Consultas.frmcFechas obj1 = new Consultas.frmcFechas();
-            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "ACERO")
-            //{
-            //    obj.Destino = "ACERO DEL CIBAO,SRL";
-            //}
-            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "A&L")
-            //{
-            //    obj.Destino = "A&L WIRE";
-            //}
-            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "Esprines")
-            //{
-            //    obj.Destino = "FABRICA DE ESPRINES";
-            //}
             obj.Destino = tscbempresa.ComboBox.Text;
             dt = Pr.FechaCierre();
             if (string.IsNullOrEmpty(dt.Rows[0]["Fecha"].ToString()))
@@ -637,18 +621,6 @@ namespace Interfaz
         private void trefiladoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmReporte obj = new frmReporte();
-            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "ACERO")
-            //{
-            //    obj.Destino = "ACERO DEL CIBAO,SRL";
-            //}
-            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "A&L")
-            //{
-            //    obj.Destino = "A&L WIRE";
-            //}
-            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "Esprines")
-            //{
-            //    obj.Destino = "FABRICA DE ESPRINES";
-            //}
             obj.Destino = tscbempresa.ComboBox.Text;
             dt = Pr.FechaCierre();
             if (string.IsNullOrEmpty(dt.Rows[0]["Fecha"].ToString()))
@@ -669,18 +641,6 @@ namespace Interfaz
         private void flejadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmReporte obj = new frmReporte();
-            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "ACERO")
-            //{
-            //    obj.Destino = "ACERO DEL CIBAO,SRL";
-            //}
-            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "A&L")
-            //{
-            //    obj.Destino = "A&L WIRE";
-            //}
-            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "Esprines")
-            //{
-            //    obj.Destino = "FABRICA DE ESPRINES";
-            //}
             obj.Destino = tscbempresa.ComboBox.Text;
             dt = Pr.FechaCierre();
             if (string.IsNullOrEmpty(dt.Rows[0]["Fecha"].ToString()))
@@ -701,18 +661,6 @@ namespace Interfaz
         private void lineaGalvanizadoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             frmReporte obj = new frmReporte();
-            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "ACERO")
-            //{
-            //    obj.Destino = "ACERO DEL CIBAO,SRL";
-            //}
-            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "A&L")
-            //{
-            //    obj.Destino = "A&L WIRE";
-            //}
-            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "Esprines")
-            //{
-            //    obj.Destino = "FABRICA DE ESPRINES";
-            //}
             obj.Destino = tscbempresa.ComboBox.Text;
             dt = Pr.FechaCierre();
             if (string.IsNullOrEmpty(dt.Rows[0]["Fecha"].ToString()))
@@ -733,18 +681,6 @@ namespace Interfaz
         private void varillasAceradasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmReporte obj = new frmReporte();
-            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "ACERO")
-            //{
-            //    obj.Destino = "ACERO DEL CIBAO,SRL";
-            //}
-            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "A&L")
-            //{
-            //    obj.Destino = "A&L WIRE";
-            //}
-            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "Esprines")
-            //{
-            //    obj.Destino = "FABRICA DE ESPRINES";
-            //}
             obj.Destino = tscbempresa.ComboBox.Text;
             dt = Pr.FechaCierre();
             if (string.IsNullOrEmpty(dt.Rows[0]["Fecha"].ToString()))
@@ -766,40 +702,43 @@ namespace Interfaz
         private void mecanicoIndustriaMenorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmReporte obj = new frmReporte();
+            frmReporte obj2 = new frmReporte();
             Consultas.frmcFechas obj1 = new Consultas.frmcFechas();
-            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "ACERO")
-            //{
-            //    obj.Destino = "ACERO DEL CIBAO,SRL";
-            //}
-            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "A&L")
-            //{
-            //    obj.Destino = "A&L WIRE";
-            //}
-            //if (tscbempresa.ComboBox.SelectedValue.ToString() == "Esprines")
-            //{
-            //    obj.Destino = "FABRICA DE ESPRINES";
-            //}
             obj.Destino = tscbempresa.ComboBox.Text;
+            obj2.Destino = tscbempresa.ComboBox.Text;
             dt = Pr.FechaCierre();
             if (string.IsNullOrEmpty(dt.Rows[0]["Fecha"].ToString()))
             {
                 obj.Fecha = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+                obj2.Fecha = Convert.ToDateTime(DateTime.Now.ToShortDateString());
             }
             else
             {
                 obj.Fecha = Convert.ToDateTime(dt.Rows[0]["Fecha"]);
+                obj2.Fecha = Convert.ToDateTime(dt.Rows[0]["Fecha"]);
             }
             //obj.Incentivo = "Mecanico Industria Menor";
             obj.Empresa = tscbempresa.ComboBox.SelectedValue.ToString();
             obj.Nombre = "incentivo_mecanico_indm.rdlc";
             obj.Reporte = "INCENTIVO MECANICO INDUSTRIA MENOR";
             obj.Valor = 8;
+            obj.Idcliente = 0;
+
+            ///INCENTIVO KINNOX/////
+            obj2.Empresa = tscbempresa.ComboBox.SelectedValue.ToString();
+            obj2.Nombre = "incentivo_mecanico_indm.rdlc";
+            obj2.Reporte = "INCENTIVO MECANICO INDUSTRIA MENOR";
+            obj2.Valor = 8;
+            obj2.Idcliente = 43;
             obj1.ShowDialog();
             if (Program.Valor2 == 1)
             {
                 obj.Fechai = Program.Fechai;
                 obj.Fechaf = Program.Fechaf;
                 obj.Show();
+                obj2.Fechai = Program.Fechai;
+                obj2.Fechaf = Program.Fechaf;
+                obj2.Show();
             }
         }
 

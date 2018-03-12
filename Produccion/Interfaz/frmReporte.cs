@@ -52,6 +52,7 @@ namespace Interfaz
 
         //tickets
         public int Id { get; set; }
+        public int Idcliente { get; set; }
         public string Supervisor { get; set; }
         public string Operador { get; set; }
         public string Ayudante { get; set; }
@@ -525,7 +526,7 @@ namespace Interfaz
         }
         private void Incentivos()
         {
-            ReportParameter[] parametros = new ReportParameter[2];
+            ReportParameter[] parametros = new ReportParameter[3];
             PRODUCCIONDataSet ds = new PRODUCCIONDataSet();            
             PRODUCCIONDataSetTableAdapters.generar_incentivoTableAdapter rgta = new PRODUCCIONDataSetTableAdapters.generar_incentivoTableAdapter();
             reportViewer1.ProcessingMode = ProcessingMode.Local;
@@ -534,7 +535,8 @@ namespace Interfaz
             lc.ReportPath = ruta;
             parametros[0] = new ReportParameter("Fecha", Fecha.ToShortDateString());
             parametros[1] = new ReportParameter("Empresa", Destino.ToString());
-            rgta.Fill(ds.generar_incentivo, Incentivo,Empresa,Fechai,Fechaf);
+            parametros[2] = new ReportParameter("Idcliente", Idcliente.ToString());
+            rgta.Fill(ds.generar_incentivo, Incentivo,Empresa,Fechai,Fechaf,Idcliente);
             ReportDataSource rds = new ReportDataSource();
             reportViewer1.LocalReport.DisplayName = Reporte;
             rds.Name = "DataSet1";
@@ -546,7 +548,7 @@ namespace Interfaz
         }
         private void IncentivoMecanicoIndm()
         {
-            ReportParameter[] parametros = new ReportParameter[4];
+            ReportParameter[] parametros = new ReportParameter[5];
             PRODUCCIONDataSet ds = new PRODUCCIONDataSet();
             PRODUCCIONDataSetTableAdapters.incentivo_mecanicoTableAdapter rgta = new PRODUCCIONDataSetTableAdapters.incentivo_mecanicoTableAdapter();
             reportViewer1.ProcessingMode = ProcessingMode.Local;
@@ -557,7 +559,8 @@ namespace Interfaz
             parametros[1] = new ReportParameter("Empresa", Destino.ToString());
             parametros[2] = new ReportParameter("Fechai", Fechai.ToShortDateString());
             parametros[3] = new ReportParameter("Fechaf", Fechaf.ToShortDateString());
-            rgta.Fill(ds.incentivo_mecanico, Empresa, Fechai,Fechaf);
+            parametros[4] = new ReportParameter("Idcliente", Idcliente.ToString());
+            rgta.Fill(ds.incentivo_mecanico, Empresa, Fechai,Fechaf,Idcliente);
             ReportDataSource rds = new ReportDataSource();
             reportViewer1.LocalReport.DisplayName = Reporte;
             rds.Name = "DataSet1";
