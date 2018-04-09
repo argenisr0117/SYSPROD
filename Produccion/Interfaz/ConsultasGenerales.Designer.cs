@@ -37,6 +37,7 @@
             this.intermediosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lineaGalvanizadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kINNOXToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.incentivosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grapasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.púasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -107,7 +108,8 @@
             this.generalToolStripMenuItem,
             this.intermediosToolStripMenuItem,
             this.terminadosToolStripMenuItem,
-            this.lineaGalvanizadoToolStripMenuItem});
+            this.lineaGalvanizadoToolStripMenuItem,
+            this.kINNOXToolStripMenuItem});
             this.acumuladoMensualToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.acumuladoMensualToolStripMenuItem.Name = "acumuladoMensualToolStripMenuItem";
             this.acumuladoMensualToolStripMenuItem.Size = new System.Drawing.Size(185, 20);
@@ -116,30 +118,37 @@
             // generalToolStripMenuItem
             // 
             this.generalToolStripMenuItem.Name = "generalToolStripMenuItem";
-            this.generalToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.generalToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.generalToolStripMenuItem.Text = "GENERAL";
             this.generalToolStripMenuItem.Click += new System.EventHandler(this.generalToolStripMenuItem_Click);
             // 
             // intermediosToolStripMenuItem
             // 
             this.intermediosToolStripMenuItem.Name = "intermediosToolStripMenuItem";
-            this.intermediosToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.intermediosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.intermediosToolStripMenuItem.Text = "INTERMEDIOS";
             this.intermediosToolStripMenuItem.Click += new System.EventHandler(this.intermediosToolStripMenuItem_Click);
             // 
             // terminadosToolStripMenuItem
             // 
             this.terminadosToolStripMenuItem.Name = "terminadosToolStripMenuItem";
-            this.terminadosToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.terminadosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.terminadosToolStripMenuItem.Text = "TERMINADOS";
             this.terminadosToolStripMenuItem.Click += new System.EventHandler(this.terminadosToolStripMenuItem_Click);
             // 
             // lineaGalvanizadoToolStripMenuItem
             // 
             this.lineaGalvanizadoToolStripMenuItem.Name = "lineaGalvanizadoToolStripMenuItem";
-            this.lineaGalvanizadoToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.lineaGalvanizadoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.lineaGalvanizadoToolStripMenuItem.Text = "LINEA GALV.";
             this.lineaGalvanizadoToolStripMenuItem.Click += new System.EventHandler(this.lineaGalvanizadoToolStripMenuItem_Click);
+            // 
+            // kINNOXToolStripMenuItem
+            // 
+            this.kINNOXToolStripMenuItem.Name = "kINNOXToolStripMenuItem";
+            this.kINNOXToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.kINNOXToolStripMenuItem.Text = "KINNOX";
+            this.kINNOXToolStripMenuItem.Click += new System.EventHandler(this.kINNOXToolStripMenuItem_Click);
             // 
             // incentivosToolStripMenuItem
             // 
@@ -360,6 +369,7 @@
             this.btnanual.Text = "CIERRE ANUAL";
             this.btnanual.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnanual.UseVisualStyleBackColor = false;
+            this.btnanual.Click += new System.EventHandler(this.btnanual_Click);
             // 
             // btnmensual
             // 
@@ -441,5 +451,6 @@
         private System.Windows.Forms.Button btnFiltros;
         private System.Windows.Forms.Button btnMonitoreo;
         private System.Windows.Forms.Button btnHistorial;
+        private System.Windows.Forms.ToolStripMenuItem kINNOXToolStripMenuItem;
     }
 }

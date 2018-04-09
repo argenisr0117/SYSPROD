@@ -233,7 +233,6 @@
         </Paragraphs>
         <rd:DefaultName>Textbox32</rd:DefaultName>
         <Top>0.63889in</Top>
-        <Left>1.4127in</Left>
         <Height>0.25in</Height>
         <Width>1.35417in</Width>
         <ZIndex>2</ZIndex>
@@ -266,13 +265,13 @@
               </TextRun>
             </TextRuns>
             <Style>
-              <TextAlign>Center</TextAlign>
+              <TextAlign>Left</TextAlign>
             </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>FECHA1</rd:DefaultName>
-        <Top>0.63889in</Top>
-        <Left>2.81872in</Left>
+        <Top>0.63541in</Top>
+        <Left>1.35417in</Left>
         <Height>0.25in</Height>
         <Width>1.08333in</Width>
         <ZIndex>3</ZIndex>
@@ -491,6 +490,150 @@
           </Border>
         </Style>
       </Tablix>
+      <Textbox Name="FECHA12">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Variables!total_kg.Value</Value>
+                <Style>
+                  <FontSize>11pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <Format>n3</Format>
+                  <TextDecoration>None</TextDecoration>
+                  <Language>es-DO</Language>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>FECHA1</rd:DefaultName>
+        <Top>0.64237in</Top>
+        <Left>3.49559in</Left>
+        <Height>0.25in</Height>
+        <Width>1.08333in</Width>
+        <ZIndex>5</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox34">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>TOTAL KG:</Value>
+                <Style>
+                  <FontSize>11pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox32</rd:DefaultName>
+        <Top>0.63889in</Top>
+        <Left>6.61273cm</Left>
+        <Height>0.25in</Height>
+        <Width>0.89584in</Width>
+        <ZIndex>6</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <BackgroundColor>LightGrey</BackgroundColor>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="FECHA13">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Variables!total_tm.Value</Value>
+                <Style>
+                  <FontSize>11pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <Format>n4</Format>
+                  <TextDecoration>None</TextDecoration>
+                  <Language>es-DO</Language>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>FECHA1</rd:DefaultName>
+        <Top>0.63889in</Top>
+        <Left>5.66045in</Left>
+        <Height>0.25in</Height>
+        <Width>1.08333in</Width>
+        <ZIndex>7</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox35">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>TOTALTM:</Value>
+                <Style>
+                  <FontSize>11pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox32</rd:DefaultName>
+        <Top>0.63541in</Top>
+        <Left>12.11148cm</Left>
+        <Height>0.25in</Height>
+        <Width>0.89584in</Width>
+        <ZIndex>8</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <BackgroundColor>LightGrey</BackgroundColor>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
     <Height>0.96181in</Height>
     <Style />
@@ -543,7 +686,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=First(Fields!PRODUCTO.Value, "DataSet1")</Value>
+                  <Value>=IIf(First(Fields!PRODUCTO.Value, "DataSet1")="ALAMBRE DE PUAS EL TORO 17 X 17 (250 MTS)","ALAMBRE DE PUAS 17 X 17 (250 MTS)",First(Fields!PRODUCTO.Value, "DataSet1"))</Value>
                   <Style>
                     <FontSize>18pt</FontSize>
                     <FontWeight>Bold</FontWeight>
@@ -1144,10 +1287,14 @@
           <DataField>METRO</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
+        <Field Name="KG">
+          <DataField>KG</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>PRODUCCIONDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Interfaz\PRODUCCIONDataSet.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\PRODUCCIONDataSet.xsd</rd:SchemaPath>
         <rd:TableName>obtener_detalle_packing_list</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -1174,6 +1321,10 @@
         </Field>
         <Field Name="METRO">
           <DataField>METRO</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="KG">
+          <DataField>KG</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
       </Fields>
@@ -1246,6 +1397,12 @@ z+9f5BT+lvxTGrKp9Tw3vW2hUT02u/a62P56/Cv/AARy/bG07wVqGn6b4N1vS9H1QZu9NTxXY20d9j/n
     </Variable>
     <Variable Name="total1">
       <Value>=Sum(Fields!PESOLBS.Value, "DataSet3")/100</Value>
+    </Variable>
+    <Variable Name="total_kg">
+      <Value>=(Variables!total.Value+Variables!total1.Value)*Max(Fields!KG.Value, "DataSet2")</Value>
+    </Variable>
+    <Variable Name="total_tm">
+      <Value>=Variables!total_kg.Value*.001</Value>
     </Variable>
   </Variables>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>

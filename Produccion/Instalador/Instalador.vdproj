@@ -357,6 +357,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_BC50457F870C42689AD2D424A9493E9F"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_BCFB603125C08F759D949E2D8673135F"
         "OwnerKey" = "8:_AC8F81798BFE411F8B149F404424B183"
         "MsmSig" = "8:_UNDEFINED"
@@ -1731,6 +1737,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BC50457F870C42689AD2D424A9493E9F"
+            {
+            "SourcePath" = "8:..\\Interfaz\\Reportes\\packing_list_kinnox.rdlc"
+            "TargetName" = "8:packing_list_kinnox.rdlc"
+            "Tag" = "8:"
+            "Folder" = "8:_00DD0B03E441403CB4D3297F2511FE1C"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_BCFB603125C08F759D949E2D8673135F"
             {
             "AssemblyRegister" = "3:1"
@@ -1981,7 +2007,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SYSPROD"
         "ProductCode" = "8:{2CB45D38-C354-4202-8422-0D07EAB10E80}"
-        "PackageCode" = "8:{9CFD2E8C-49EE-410A-A7C1-5327EDB091AD}"
+        "PackageCode" = "8:{57E2B9D8-CD73-4AA3-A176-E563E2086E14}"
         "UpgradeCode" = "8:{1F2619E1-0BC5-42FB-88F1-DDD754EAF1D1}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

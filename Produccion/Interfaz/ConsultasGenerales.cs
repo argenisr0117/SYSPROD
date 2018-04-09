@@ -759,6 +759,112 @@ namespace Interfaz
             Consultas.frmcMonitoreoMaquinas obj = new Consultas.frmcMonitoreoMaquinas();
             obj.ShowDialog();
         }
+
+        private void kINNOXToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReporte obj = new frmReporte();
+            dt1 = Pr.TotalProduccion("Acerados");
+            double acerado;
+            double galvanizado;
+            double recocido;
+            double aceradoa;
+            double galvanizadoa;
+            double recocidoa;
+            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
+            {
+                acerado = 0.00;
+            }
+            else
+            {
+                acerado = Convert.ToDouble(dt1.Rows[0]["Total"]);
+            }
+            dt1 = Pr.TotalProduccion("Galvanizados");
+            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
+            {
+                galvanizado = 0.00;
+            }
+            else
+            {
+                galvanizado = Convert.ToDouble(dt1.Rows[0]["Total"]);
+            }
+            dt1 = Pr.TotalProduccion("Recocidos");
+            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
+            {
+                recocido = 0.00;
+            }
+            else
+            {
+                recocido = Convert.ToDouble(dt1.Rows[0]["Total"]);
+            }
+
+            dt = Pr.AnualTotalProduccion("Acerados");
+            if (string.IsNullOrEmpty(dt.Rows[0]["Total"].ToString()))
+            {
+                aceradoa = 0.00;
+            }
+            else
+            {
+                aceradoa = Convert.ToDouble(dt.Rows[0]["Total"]);
+            }
+            dt = Pr.AnualTotalProduccion("Galvanizados");
+            if (string.IsNullOrEmpty(dt.Rows[0]["Total"].ToString()))
+            {
+                galvanizadoa = 0.00;
+            }
+            else
+            {
+                galvanizadoa = Convert.ToDouble(dt.Rows[0]["Total"]);
+            }
+            dt = Pr.AnualTotalProduccion("Recocidos");
+            if (string.IsNullOrEmpty(dt.Rows[0]["Total"].ToString()))
+            {
+                recocidoa = 0.00;
+            }
+            else
+            {
+                recocidoa = Convert.ToDouble(dt.Rows[0]["Total"]);
+            }
+            dt = Pr.FechaCierre();
+            if (string.IsNullOrEmpty(dt.Rows[0]["Fecha"].ToString()))
+            {
+                obj.Fecha = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+            }
+            else
+            {
+                obj.Fecha = Convert.ToDateTime(dt.Rows[0]["Fecha"]);
+            }
+
+            obj.Valor = 1;
+            obj.Acerado = acerado;
+            obj.Galvanizado = galvanizado;
+            obj.Recocido = recocido;
+            obj.Aceradoa = aceradoa;
+            obj.Galvanizadoa = galvanizadoa;
+            obj.Recocidoa = recocidoa;
+            obj.Nombre = "cierre_general_kinnox.rdlc";
+            obj.Destino = "KINNOX";
+            obj.Reporte = "CIERRE MENSUAL";
+            obj.Show();
+        }
+
+        private void btnanual_Click(object sender, EventArgs e)
+        {
+            string mensaje = "";
+            DialogResult var = MessageBoxEx.Show("Desea realizar cierre anual?", "Sistema de Producción", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (var == DialogResult.Yes)
+            {
+                try
+                {
+                    mensaje = Pr.CerrarAno();
+                    MessageBoxEx.Show(mensaje, "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBoxEx.Show(ex.Message);
+                }
+
+            }
+        }
     }
     
 }

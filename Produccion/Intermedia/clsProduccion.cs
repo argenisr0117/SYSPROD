@@ -201,6 +201,15 @@ namespace Intermedia
             mensaje = lst[0].Valor.ToString();
             return mensaje;
         }
+        public string CerrarAno()
+        {
+            string mensaje = "";
+            List<clsParametros> lst = new List<clsParametros>();
+            lst.Add(new clsParametros("@mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 100));
+            M.EjecutarSP("cerrar_ano", ref lst);
+            mensaje = lst[0].Valor.ToString();
+            return mensaje;
+        }
         public DataTable MostrarRegistros()
         {
             DataTable dt = new DataTable();

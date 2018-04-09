@@ -92,7 +92,7 @@
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(12, 60);
+            this.label3.Location = new System.Drawing.Point(43, 60);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 13);
             this.label3.TabIndex = 114;
@@ -104,7 +104,7 @@
             this.dtpdesde.CustomFormat = "dd/MM/yyyy";
             this.dtpdesde.ForeColor = System.Drawing.Color.Black;
             this.dtpdesde.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpdesde.Location = new System.Drawing.Point(120, 56);
+            this.dtpdesde.Location = new System.Drawing.Point(151, 56);
             this.dtpdesde.Name = "dtpdesde";
             this.dtpdesde.Size = new System.Drawing.Size(103, 20);
             this.dtpdesde.TabIndex = 115;
@@ -115,7 +115,7 @@
             this.dtphasta.CustomFormat = "dd/MM/yyyy";
             this.dtphasta.ForeColor = System.Drawing.Color.Black;
             this.dtphasta.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtphasta.Location = new System.Drawing.Point(434, 57);
+            this.dtphasta.Location = new System.Drawing.Point(465, 57);
             this.dtphasta.Name = "dtphasta";
             this.dtphasta.Size = new System.Drawing.Size(103, 20);
             this.dtphasta.TabIndex = 117;
@@ -126,7 +126,7 @@
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(328, 61);
+            this.label1.Location = new System.Drawing.Point(359, 61);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 13);
             this.label1.TabIndex = 116;
@@ -145,7 +145,7 @@
             this.cmbSupervisor.Location = new System.Drawing.Point(127, 99);
             this.cmbSupervisor.MaxDropDownItems = 30;
             this.cmbSupervisor.Name = "cmbSupervisor";
-            this.cmbSupervisor.Size = new System.Drawing.Size(410, 26);
+            this.cmbSupervisor.Size = new System.Drawing.Size(451, 26);
             this.cmbSupervisor.TabIndex = 118;
             // 
             // label4
@@ -221,7 +221,7 @@
             this.cmbMaquina.Location = new System.Drawing.Point(127, 155);
             this.cmbMaquina.MaxDropDownItems = 30;
             this.cmbMaquina.Name = "cmbMaquina";
-            this.cmbMaquina.Size = new System.Drawing.Size(410, 26);
+            this.cmbMaquina.Size = new System.Drawing.Size(451, 26);
             this.cmbMaquina.TabIndex = 124;
             // 
             // cmbOperador
@@ -237,7 +237,7 @@
             this.cmbOperador.Location = new System.Drawing.Point(127, 127);
             this.cmbOperador.MaxDropDownItems = 30;
             this.cmbOperador.Name = "cmbOperador";
-            this.cmbOperador.Size = new System.Drawing.Size(410, 26);
+            this.cmbOperador.Size = new System.Drawing.Size(451, 26);
             this.cmbOperador.TabIndex = 125;
             // 
             // btnBuscar
@@ -251,7 +251,7 @@
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.Black;
             this.btnBuscar.Image = global::Interfaz.Properties.Resources.Search_icon;
-            this.btnBuscar.Location = new System.Drawing.Point(500, 185);
+            this.btnBuscar.Location = new System.Drawing.Point(541, 185);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(37, 24);
             this.btnBuscar.TabIndex = 134;
@@ -272,7 +272,7 @@
             this.cmbProducto.Location = new System.Drawing.Point(127, 184);
             this.cmbProducto.MaxDropDownItems = 30;
             this.cmbProducto.Name = "cmbProducto";
-            this.cmbProducto.Size = new System.Drawing.Size(369, 26);
+            this.cmbProducto.Size = new System.Drawing.Size(412, 26);
             this.cmbProducto.TabIndex = 133;
             // 
             // cmbCliente
@@ -288,7 +288,7 @@
             this.cmbCliente.Location = new System.Drawing.Point(127, 211);
             this.cmbCliente.MaxDropDownItems = 30;
             this.cmbCliente.Name = "cmbCliente";
-            this.cmbCliente.Size = new System.Drawing.Size(410, 26);
+            this.cmbCliente.Size = new System.Drawing.Size(451, 26);
             this.cmbCliente.TabIndex = 135;
             // 
             // groupBox1
