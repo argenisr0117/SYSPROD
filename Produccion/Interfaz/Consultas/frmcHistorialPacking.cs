@@ -77,6 +77,7 @@ namespace Interfaz.Consultas
                 dtgPackingList.Columns["ID_REPORTE"].Visible = false;
                 dtgPackingList.Columns["ID_CLIENTE"].Visible = false;
                 dtgPackingList.Columns["ID_TIPO"].Visible = false;
+                dtgPackingList.Columns["ID_DPTO"].Visible = false;
                 dtgPackingList.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 7, FontStyle.Bold);
                 //dtgPruebasCald.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 6);
                 dtgPackingList.ClearSelection();
@@ -146,6 +147,7 @@ namespace Interfaz.Consultas
                     Program.Tamano= Convert.ToInt16(dtgPackingList.CurrentRow.Cells[7].Value);
                     Program.Orden= dtgPackingList.CurrentRow.Cells[2].Value.ToString();
                     Program.Idtipoorden= Convert.ToInt16(dtgPackingList.CurrentRow.Cells["ID_TIPO"].Value);
+                    Program.Dpto= dtgPackingList.CurrentRow.Cells["ID_DPTO"].Value.ToString();
                     Program.Valor = 6;
                     Registros.frmPackingList obj = new Registros.frmPackingList();
                     obj.ShowDialog();

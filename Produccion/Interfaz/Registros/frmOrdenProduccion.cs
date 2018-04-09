@@ -170,6 +170,11 @@ namespace Interfaz.Registros
                 dpt = 5;
                 ComboP();
             }
+            else if (dpto == "IndM")
+            {
+                dpt = 2;
+                ComboP();
+            }
         }
 
         private void Limpiar()

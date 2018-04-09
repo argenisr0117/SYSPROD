@@ -309,13 +309,13 @@ namespace Interfaz.Registros
                 List<double> diametros = new List<double>();
                 List <double> recubrimientos = new List<double>();
                 List<double> resis_lbs = new List<double>();
-               
-                    if (dtgSeleccionadas.Rows.Count > 0)
-                    {
+
+                if (dtgSeleccionadas.Rows.Count > 0)
+                {
                     if (btnGenerar.Text == "GENERAR")
                     {
                         ////REGISTRAR PACKING LIST
-                        if(Program.Valor==6)
+                        if (Program.Valor == 6)
                         {
                             O.Id = Program.Idpacking;
 
@@ -332,7 +332,7 @@ namespace Interfaz.Registros
                         O.Idempresa = cmbEmpresa.SelectedValue.ToString();
                         O.Iduso = Convert.ToInt16(cmbUso.SelectedValue);
                         O.Fecha = dtpFecha.Value;
-                        if(Program.Idtipoorden==1)
+                        if (Program.Idtipoorden == 1)
                         {
                             O.Conduce = txtConduce.Text;
 
@@ -352,7 +352,7 @@ namespace Interfaz.Registros
                                 O.Cantidad = Convert.ToDouble(dtgSeleccionadas.Rows[x].Cells[2].Value);
                                 O.RegistrarDetallePackingList(); //REGISTRAR DETALLE DEL PACKING LIST
                             }
-                            if(Program.Valor==6)
+                            if (Program.Valor == 6)
                             {
                                 O.Id = Program.Idrptcald;
                             }
@@ -504,17 +504,17 @@ namespace Interfaz.Registros
                             }
                         }
 
-                    }                 
-                        total = dtgSeleccionadas.Rows.Count;
-                        mitad = Math.Ceiling((double) total / 2);  //primera tabla de 0 a la mitad de registros
-                        final =Convert.ToInt16(mitad);
-                        frmReporte obj = new frmReporte();
+                    }
+                    total = dtgSeleccionadas.Rows.Count;
+                    mitad = Math.Ceiling((double)total / 2);  //primera tabla de 0 a la mitad de registros
+                    final = Convert.ToInt16(mitad);
+                    frmReporte obj = new frmReporte();
                     if (Program.Idtipoorden == 2)
                     {
                         obj.Inicio = inicio;
                         obj.Final = final;
                         obj.Inicio1 = final;
-                        obj.Final1 =Convert.ToInt16(total);
+                        obj.Final1 = Convert.ToInt16(total);
                         obj.Valor = 14;
                         obj.Nombre = "packing_list.rdlc";
                         if (Program.Valor == 6)
@@ -530,31 +530,31 @@ namespace Interfaz.Registros
                         frmReporte obj2 = new frmReporte();
                         if (Program.Valor == 6)
                         {
-                        obj2.Idrepcalidad = Program.Idrptcald;
+                            obj2.Idrepcalidad = Program.Idrptcald;
                         }
                         else
                         {
                             obj2.Idrepcalidad = 0;
 
                         }
-                      
-                            obj2.Nombre = "certificado_calidad.rdlc";
-                            obj2.Valor = 15;
-                            obj2.Show();
-                            frmReporte obj3 = new frmReporte();
-                            if (Program.Valor == 6)
-                            {
-                                obj3.Idrepcalidad = Program.Idrptcald;
-                            }
-                            else
-                            {
-                                obj3.Idrepcalidad = 0;
 
-                            }
-                            obj3.Nombre = "graficos_certificado_cald.rdlc";
-                            obj3.Valor = 16;
-                            obj3.Show();
+                        obj2.Nombre = "certificado_calidad.rdlc";
+                        obj2.Valor = 15;
+                        obj2.Show();
+                        frmReporte obj3 = new frmReporte();
+                        if (Program.Valor == 6)
+                        {
+                            obj3.Idrepcalidad = Program.Idrptcald;
                         }
+                        else
+                        {
+                            obj3.Idrepcalidad = 0;
+
+                        }
+                        obj3.Nombre = "graficos_certificado_cald.rdlc";
+                        obj3.Valor = 16;
+                        obj3.Show();
+                    }
                     else if (Program.Idtipoorden == 1)
                     {
                         obj.Inicio = inicio;
@@ -562,7 +562,15 @@ namespace Interfaz.Registros
                         obj.Inicio1 = final;
                         obj.Final1 = Convert.ToInt16(total);
                         obj.Valor = 14;
-                        obj.Nombre = "packing_list_local.rdlc";
+                        if (Program.Dpto == "INDUSTRIA MENOR" || Program.Dpto == "IndM")
+                        {
+                            obj.Nombre = "packing_list_kinnox.rdlc";
+                        }
+                        else
+                        {
+                            obj.Nombre = "packing_list_local.rdlc";
+                        }
+                    
                         if (Program.Valor == 6)
                         {
                             obj.Idpacking = Program.Idpacking;

@@ -81,6 +81,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnRegistrar2 = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.cmbCliente = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -101,11 +103,13 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(760, 514);
+            this.tabControl1.Size = new System.Drawing.Size(760, 533);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.cmbCliente);
+            this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Controls.Add(this.cmbAyudante);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.txtCantidad);
@@ -125,7 +129,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 27);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(752, 483);
+            this.tabPage1.Size = new System.Drawing.Size(752, 502);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "REGISTRO DE PRODUCCION";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -152,7 +156,7 @@
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(67, 231);
+            this.label2.Location = new System.Drawing.Point(67, 234);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 13);
             this.label2.TabIndex = 153;
@@ -175,7 +179,7 @@
             this.label13.BackColor = System.Drawing.Color.White;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(67, 314);
+            this.label13.Location = new System.Drawing.Point(67, 318);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(74, 13);
             this.label13.TabIndex = 151;
@@ -219,11 +223,11 @@
             this.label12.BackColor = System.Drawing.Color.White;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(67, 106);
+            this.label12.Location = new System.Drawing.Point(67, 108);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(87, 13);
+            this.label12.Size = new System.Drawing.Size(91, 13);
             this.label12.TabIndex = 148;
-            this.label12.Text = "SUPERVISOR";
+            this.label12.Text = "SUPERVISOR:";
             // 
             // cmbProducto
             // 
@@ -235,7 +239,7 @@
             this.cmbProducto.ForeColor = System.Drawing.Color.Black;
             this.cmbProducto.FormattingEnabled = true;
             this.cmbProducto.IntegralHeight = false;
-            this.cmbProducto.Location = new System.Drawing.Point(161, 143);
+            this.cmbProducto.Location = new System.Drawing.Point(161, 141);
             this.cmbProducto.MaxDropDownItems = 30;
             this.cmbProducto.Name = "cmbProducto";
             this.cmbProducto.Size = new System.Drawing.Size(431, 28);
@@ -248,7 +252,7 @@
             this.label9.BackColor = System.Drawing.Color.White;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(67, 148);
+            this.label9.Location = new System.Drawing.Point(67, 149);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(80, 13);
             this.label9.TabIndex = 146;
@@ -276,7 +280,7 @@
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(67, 189);
+            this.label5.Location = new System.Drawing.Point(67, 192);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(80, 13);
             this.label5.TabIndex = 144;
@@ -304,7 +308,7 @@
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(67, 269);
+            this.label4.Location = new System.Drawing.Point(67, 272);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 13);
             this.label4.TabIndex = 142;
@@ -322,7 +326,7 @@
             this.btnImprimir.ForeColor = System.Drawing.Color.Black;
             this.btnImprimir.Image = global::Interfaz.Properties.Resources.save_icon;
             this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnImprimir.Location = new System.Drawing.Point(241, 378);
+            this.btnImprimir.Location = new System.Drawing.Point(239, 413);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(128, 67);
             this.btnImprimir.TabIndex = 136;
@@ -344,7 +348,7 @@
             this.btnBorrar.ForeColor = System.Drawing.Color.Black;
             this.btnBorrar.Image = global::Interfaz.Properties.Resources.delete_file_icon;
             this.btnBorrar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnBorrar.Location = new System.Drawing.Point(388, 378);
+            this.btnBorrar.Location = new System.Drawing.Point(386, 413);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(128, 67);
             this.btnBorrar.TabIndex = 135;
@@ -843,11 +847,39 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // cmbCliente
+            // 
+            this.cmbCliente.BackColor = System.Drawing.Color.Gainsboro;
+            this.cmbCliente.DropDownHeight = 160;
+            this.cmbCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCliente.ForeColor = System.Drawing.Color.Black;
+            this.cmbCliente.FormattingEnabled = true;
+            this.cmbCliente.IntegralHeight = false;
+            this.cmbCliente.Location = new System.Drawing.Point(161, 355);
+            this.cmbCliente.MaxDropDownItems = 30;
+            this.cmbCliente.Name = "cmbCliente";
+            this.cmbCliente.Size = new System.Drawing.Size(473, 28);
+            this.cmbCliente.TabIndex = 156;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.White;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(67, 363);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(66, 13);
+            this.label10.TabIndex = 155;
+            this.label10.Text = "DESTINO:";
+            // 
             // frmProduccionIndMenor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(760, 514);
+            this.ClientSize = new System.Drawing.Size(760, 533);
             this.Controls.Add(this.tabControl1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -924,5 +956,7 @@
         private System.Windows.Forms.DateTimePicker dtphasta;
         private System.Windows.Forms.DateTimePicker dtpdesde;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox cmbCliente;
+        private System.Windows.Forms.Label label10;
     }
 }

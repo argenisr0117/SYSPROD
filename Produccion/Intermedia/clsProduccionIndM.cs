@@ -28,17 +28,36 @@ namespace Intermedia
         string Midproducto;
         int Mcantidad1;
         int Mvalor;
+        int Midcliente;
+        int Midorden;
         int Midusuario;
         string Mpcname;
+        string Mdpto;
+
         public string Pcname
         {
             get { return Mpcname; }
             set { Mpcname = value; }
         }
+        public string Dpto
+        {
+            get { return Mdpto; }
+            set { Mdpto = value; }
+        }
         public int Idusuario
         {
             get { return Midusuario; }
             set { Midusuario = value; }
+        }
+        public int Idorden
+        {
+            get { return Midorden; }
+            set { Midorden = value; }
+        }
+        public int Idcliente
+        {
+            get { return Midcliente; }
+            set { Midcliente = value; }
         }
         public DateTime Fecha
         {
@@ -133,16 +152,17 @@ namespace Intermedia
         {
             string mensaje = "";
             List<clsParametros> lst = new List<clsParametros>();
+            lst.Add(new clsParametros("@mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 50));
             lst.Add(new clsParametros("@supervisor", Msupervisor));
             lst.Add(new clsParametros("@operador", Moperador));
             lst.Add(new clsParametros("@ayudante", Mayudante));
             lst.Add(new clsParametros("@codigoprod", Midproducto));
             lst.Add(new clsParametros("@idmaquina", Midmaquina));
-            lst.Add(new clsParametros("@destino", Mdestino));
             lst.Add(new clsParametros("@cantidad", Mcantidad));
-            lst.Add(new clsParametros("@mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 50));
+            lst.Add(new clsParametros("@idorden", Midorden));
+            lst.Add(new clsParametros("@idcliente", Midcliente));
             M.EjecutarSP("registrar_produccion_indm", ref lst);
-            mensaje = lst[7].Valor.ToString();
+            mensaje = lst[0].Valor.ToString();
             return mensaje;
         }
 
@@ -161,7 +181,28 @@ namespace Intermedia
             mensaje = lst[6].Valor.ToString();
             return mensaje;
         }
-
+        public DataTable ObtenerOrden()
+        {
+            DataTable dt = new DataTable();
+            List<clsParametros> lst = new List<clsParametros>();
+            lst.Add(new clsParametros("@iddpto", Mdpto));
+            lst.Add(new clsParametros("@idcliente", Midcliente));
+            lst.Add(new clsParametros("@idproducto", Midproducto));
+            return dt = M.Listado("obtener_orden_canasto", lst);
+        }
+        public void CompletarOrdenProduccion()
+        {
+            List<clsParametros> lst = new List<clsParametros>();
+            lst.Add(new clsParametros("@idorden", Midorden));
+            M.EjecutarSP("completar_orden_produccion", ref lst);
+        }
+        public void ActCantOrdenProduccion()
+        {
+            List<clsParametros> lst = new List<clsParametros>();
+            lst.Add(new clsParametros("@idorden", Midorden));
+            lst.Add(new clsParametros("@peso", Mcantidad));
+            M.EjecutarSP("act_cant_orden_produccion", ref lst);
+        }
         public void EliminarRegistro(int objTarjeta)
         {
             List<clsParametros> lst = new List<clsParametros>();
@@ -223,6 +264,12 @@ namespace Intermedia
             lst.Add(new clsParametros("@fechai", Mfecha1));
             lst.Add(new clsParametros("@fechaf", Mfechaf));
             return dt = M.Listado("produccion_diaria_indm", lst);
+        }
+        public DataTable ListadoCliente2()
+        {
+            DataTable dt = new DataTable();
+            List<clsParametros> lst = new List<clsParametros>();
+            return dt = M.Listado("listado_cliente2", lst);
         }
 
         public DataTable ObtenerInvPuas()

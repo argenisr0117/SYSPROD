@@ -367,20 +367,7 @@ namespace Interfaz.Registros
             }
             
         }
-        //private string[,] LlenarArray()
-        //{
-        //    int tamf = dtgvproduccion.Rows.Count;
-        //    int tamc = dtgvproduccion.ColumnCount;
-        //    string[,] datos = new string[tamf, tamc];
-        //    for (int f = 0; f < tamf; f++)
-        //    {
-        //        for (int c = 0; c < tamc; c++)
-        //        {
-        //            datos[f, c] = dtgvproduccion.Rows[f].Cells[c].Value.ToString();
-        //        }
-        //    }
-        //    return datos;
-        //}
+  
         private void btneliminar1_Click(object sender, EventArgs e)
         {
             if (dtgvproduccion.SelectedRows.Count > 0)
@@ -824,7 +811,7 @@ namespace Interfaz.Registros
 
         private void generalToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Actualizar();
+            //Actualizar();
             frmReporte obj = new frmReporte();
             dt1 = Pr.TotalProduccion("Acerados");
             double acerado;
@@ -870,7 +857,7 @@ namespace Interfaz.Registros
 
         private void intermediosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Actualizar();
+            //Actualizar();
             frmReporte obj = new frmReporte();
             dt1 = Pr.TotalProduccion("Acerados");
             double acerado;
@@ -1134,130 +1121,7 @@ namespace Interfaz.Registros
         {
            label20.Text=dtgvproduccion.Rows.Count.ToString();
         }
-        //private void BuscarRegistros()
-        //{
-        //    try
-        //    {
-        //        DataTable dt3 = new DataTable();
-        //        if (dtpfecha.Value != DateTimePicker.MinimumDateTime)
-        //        {
-        //            Pr.Fecha1 = dtpfecha.Value.ToShortDateString();
-        //        }
-        //        else
-        //        {
-        //            Pr.Fecha1 = "";
-        //        }
-        //        if (Convert.ToBoolean(cbsupervisor.SelectedIndex == -1))
-        //        {
-        //            Pr.Supervisor = "";
-        //        }
-        //        else
-        //        {
-        //            Pr.Supervisor = cbsupervisor.SelectedValue.ToString();
-        //        }
-  
-        //        if(Convert.ToBoolean(cboperador.SelectedIndex==-1))
-        //        {
-        //            Pr.Operador = "";
-        //        }
-        //        else
-        //        {
-        //            Pr.Operador = cboperador.SelectedValue.ToString();
-        //        }
-        //        if (Convert.ToBoolean(cbayudante.SelectedIndex == -1))
-        //        {
-        //            Pr.Ayudante = "";
-        //        }
-        //        else
-        //        {
-        //            Pr.Ayudante = cbayudante.SelectedValue.ToString();
-        //        }
-        //        if (Convert.ToBoolean(cbturno.SelectedIndex == -1))
-        //        {
-        //            Pr.Turno = "";
-        //        }
-        //        else
-        //        {
-        //            Pr.Turno = cbturno.SelectedValue.ToString();
-        //        }
-        //        if (Convert.ToBoolean(cbmaquina.SelectedIndex == -1))
-        //        {
-        //            Pr.Maquina = "";
-        //        }
-        //        else
-        //        {
-        //            Pr.Maquina = cbmaquina.SelectedValue.ToString();
-        //        }
-        //        if (Convert.ToBoolean(cbproducto.SelectedIndex == -1))
-        //        {
-        //            Pr.Producto = "";
-        //        }
-        //        else
-        //        {
-        //            Pr.Producto = cbproducto.SelectedValue.ToString();
-        //        }
-        //        if (Convert.ToBoolean(cbdestino.SelectedIndex == -1))
-        //        {
-        //            Pr.Destino = "";
-        //        }
-        //        else
-        //        {
-        //            Pr.Destino = cbdestino.SelectedValue.ToString();
-        //        }
-
-        //        if (string.IsNullOrEmpty(txttarjeta.Text))
-        //        {
-        //            Pr.Tarjeta = "";
-        //        }
-        //        else
-        //        {
-        //            Pr.Tarjeta = txttarjeta.Text;
-        //        }
-        //        Pr.Reporte = txtreporte.Text;
-        //        dt3=Pr.BuscarRegistro();
-        //        if(dt3.Rows.Count>0)
-        //        {
-        //            dt3.Columns[0].ColumnName = "FECHA";
-        //            dt3.Columns[1].ColumnName = "HORA";
-        //            dt3.Columns[2].ColumnName = "SUPERVISOR";
-        //            dt3.Columns[3].ColumnName = "OPERADOR";
-        //            dt3.Columns[4].ColumnName = "AYUDANTE";
-        //            dt3.Columns[5].ColumnName = "TURNO";
-        //            dt3.Columns[7].ColumnName = "TARJETA";
-        //            dt3.Columns[6].ColumnName = "MÁQUINA";
-        //            dt3.Columns[9].ColumnName = "PRODUCTO";
-        //            dt3.Columns[10].ColumnName = "DESTINO";
-        //            dt3.Columns[8].ColumnName = "CANTIDAD";
-        //            dt = dt3;
-        //            bs.DataSource = dt;
-        //            dtgvproduccion.DataSource = bs;
-        //            dtpfecha.DataBindings.Add("Text", bs, "FECHA");
-        //            cbsupervisor.DataBindings.Add("SelectedValue", bs, "SUPERVISOR", true);
-        //            cboperador.DataBindings.Add("selectedvalue", bs, "OPERADOR");
-        //            cbayudante.DataBindings.Add("selectedvalue", bs, "AYUDANTE");
-        //            cbturno.DataBindings.Add("selectedvalue", bs, "TURNO");
-        //            txttarjeta.DataBindings.Add("Text", bs, "TARJETA");
-        //            cbmaquina.DataBindings.Add("selectedvalue", bs, "MÁQUINA");
-        //            cbproducto.DataBindings.Add("selectedvalue", bs, "PRODUCTO");
-        //            cbdestino.DataBindings.Add("selectedvalue", bs, "DESTINO");
-        //            txtcantidad.DataBindings.Add("Text", bs, "CANTIDAD");
-        //            lbdescripcion.Visible = true;
-        //        }
-        //        else
-        //        {
-        //            Program.Valor = 0;
-        //            MessageBoxEx.Show("");
-        //            MessageBoxEx.Show("No se han encontrado registros!", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //            MessageBoxEx.Show("Se mostraran todos.", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //            MostrarTodos();
-        //        }            
-        //    }
-        //    catch(Exception ex)
-        //    {
-        //        MessageBoxEx.Show(ex.Message);
-        //    }
-        //    Program.Valor = 0;
-        //}
+       
         private void btnmostrar_Click(object sender, EventArgs e)
         {
             MostrarTodos();

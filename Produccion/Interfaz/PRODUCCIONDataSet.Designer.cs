@@ -13105,6 +13105,8 @@ namespace Interfaz {
             
             private global::System.Data.DataColumn columnMETRO;
             
+            private global::System.Data.DataColumn columnKG;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public obtener_detalle_packing_listDataTable() {
@@ -13172,6 +13174,14 @@ namespace Interfaz {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn KGColumn {
+                get {
+                    return this.columnKG;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -13207,13 +13217,14 @@ namespace Interfaz {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public obtener_detalle_packing_listRow Addobtener_detalle_packing_listRow(string TARJETA, double PESOLBS, double PESOKG, double METRO) {
+            public obtener_detalle_packing_listRow Addobtener_detalle_packing_listRow(string TARJETA, double PESOLBS, double PESOKG, double METRO, double KG) {
                 obtener_detalle_packing_listRow rowobtener_detalle_packing_listRow = ((obtener_detalle_packing_listRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         TARJETA,
                         PESOLBS,
                         PESOKG,
-                        METRO};
+                        METRO,
+                        KG};
                 rowobtener_detalle_packing_listRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowobtener_detalle_packing_listRow);
                 return rowobtener_detalle_packing_listRow;
@@ -13240,6 +13251,7 @@ namespace Interfaz {
                 this.columnPESOLBS = base.Columns["PESOLBS"];
                 this.columnPESOKG = base.Columns["PESOKG"];
                 this.columnMETRO = base.Columns["METRO"];
+                this.columnKG = base.Columns["KG"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13253,6 +13265,8 @@ namespace Interfaz {
                 base.Columns.Add(this.columnPESOKG);
                 this.columnMETRO = new global::System.Data.DataColumn("METRO", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMETRO);
+                this.columnKG = new global::System.Data.DataColumn("KG", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKG);
                 this.columnTARJETA.MaxLength = 15;
                 this.columnPESOLBS.ReadOnly = true;
                 this.columnPESOKG.ReadOnly = true;
@@ -13808,6 +13822,8 @@ namespace Interfaz {
             
             private global::System.Data.DataColumn columnMETRO;
             
+            private global::System.Data.DataColumn columnKG;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public obtener_detalle_packing_list2DataTable() {
@@ -13875,6 +13891,14 @@ namespace Interfaz {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn KGColumn {
+                get {
+                    return this.columnKG;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -13910,13 +13934,14 @@ namespace Interfaz {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public obtener_detalle_packing_list2Row Addobtener_detalle_packing_list2Row(string TARJETA, double PESOLBS, double PESOKG, double METRO) {
+            public obtener_detalle_packing_list2Row Addobtener_detalle_packing_list2Row(string TARJETA, double PESOLBS, double PESOKG, double METRO, double KG) {
                 obtener_detalle_packing_list2Row rowobtener_detalle_packing_list2Row = ((obtener_detalle_packing_list2Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         TARJETA,
                         PESOLBS,
                         PESOKG,
-                        METRO};
+                        METRO,
+                        KG};
                 rowobtener_detalle_packing_list2Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowobtener_detalle_packing_list2Row);
                 return rowobtener_detalle_packing_list2Row;
@@ -13943,6 +13968,7 @@ namespace Interfaz {
                 this.columnPESOLBS = base.Columns["PESOLBS"];
                 this.columnPESOKG = base.Columns["PESOKG"];
                 this.columnMETRO = base.Columns["METRO"];
+                this.columnKG = base.Columns["KG"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13956,6 +13982,8 @@ namespace Interfaz {
                 base.Columns.Add(this.columnPESOKG);
                 this.columnMETRO = new global::System.Data.DataColumn("METRO", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMETRO);
+                this.columnKG = new global::System.Data.DataColumn("KG", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKG);
                 this.columnTARJETA.MaxLength = 15;
                 this.columnPESOLBS.ReadOnly = true;
                 this.columnPESOKG.ReadOnly = true;
@@ -21804,6 +21832,22 @@ namespace Interfaz {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double KG {
+                get {
+                    try {
+                        return ((double)(this[this.tableobtener_detalle_packing_list.KGColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'KG\' in table \'obtener_detalle_packing_list\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableobtener_detalle_packing_list.KGColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsTARJETANull() {
                 return this.IsNull(this.tableobtener_detalle_packing_list.TARJETAColumn);
             }
@@ -21848,6 +21892,18 @@ namespace Interfaz {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetMETRONull() {
                 this[this.tableobtener_detalle_packing_list.METROColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsKGNull() {
+                return this.IsNull(this.tableobtener_detalle_packing_list.KGColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetKGNull() {
+                this[this.tableobtener_detalle_packing_list.KGColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -22268,6 +22324,22 @@ namespace Interfaz {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double KG {
+                get {
+                    try {
+                        return ((double)(this[this.tableobtener_detalle_packing_list2.KGColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'KG\' in table \'obtener_detalle_packing_list2\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableobtener_detalle_packing_list2.KGColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsTARJETANull() {
                 return this.IsNull(this.tableobtener_detalle_packing_list2.TARJETAColumn);
             }
@@ -22312,6 +22384,18 @@ namespace Interfaz {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetMETRONull() {
                 this[this.tableobtener_detalle_packing_list2.METROColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsKGNull() {
+                return this.IsNull(this.tableobtener_detalle_packing_list2.KGColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetKGNull() {
+                this[this.tableobtener_detalle_packing_list2.KGColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -28998,13 +29082,14 @@ namespace Interfaz.PRODUCCIONDataSetTableAdapters {
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@empresa", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechai", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaf", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idcliente", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(PRODUCCIONDataSet.generar_incentivoDataTable dataTable, string incentivo, string empresa, global::System.Nullable<global::System.DateTime> fechai, global::System.Nullable<global::System.DateTime> fechaf) {
+        public virtual int Fill(PRODUCCIONDataSet.generar_incentivoDataTable dataTable, string incentivo, string empresa, global::System.Nullable<global::System.DateTime> fechai, global::System.Nullable<global::System.DateTime> fechaf, global::System.Nullable<int> idcliente) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((incentivo == null)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -29029,6 +29114,12 @@ namespace Interfaz.PRODUCCIONDataSetTableAdapters {
             }
             else {
                 this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((idcliente.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[5].Value = ((int)(idcliente.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -29041,7 +29132,7 @@ namespace Interfaz.PRODUCCIONDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual PRODUCCIONDataSet.generar_incentivoDataTable GetData(string incentivo, string empresa, global::System.Nullable<global::System.DateTime> fechai, global::System.Nullable<global::System.DateTime> fechaf) {
+        public virtual PRODUCCIONDataSet.generar_incentivoDataTable GetData(string incentivo, string empresa, global::System.Nullable<global::System.DateTime> fechai, global::System.Nullable<global::System.DateTime> fechaf, global::System.Nullable<int> idcliente) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((incentivo == null)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -29066,6 +29157,12 @@ namespace Interfaz.PRODUCCIONDataSetTableAdapters {
             }
             else {
                 this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((idcliente.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[5].Value = ((int)(idcliente.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             PRODUCCIONDataSet.generar_incentivoDataTable dataTable = new PRODUCCIONDataSet.generar_incentivoDataTable();
             this.Adapter.Fill(dataTable);
@@ -31485,13 +31582,14 @@ namespace Interfaz.PRODUCCIONDataSetTableAdapters {
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@empresa", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechai", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaf", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idcliente", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(PRODUCCIONDataSet.incentivo_mecanicoDataTable dataTable, string empresa, global::System.Nullable<global::System.DateTime> fechai, global::System.Nullable<global::System.DateTime> fechaf) {
+        public virtual int Fill(PRODUCCIONDataSet.incentivo_mecanicoDataTable dataTable, string empresa, global::System.Nullable<global::System.DateTime> fechai, global::System.Nullable<global::System.DateTime> fechaf, global::System.Nullable<int> idcliente) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((empresa == null)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -31510,6 +31608,12 @@ namespace Interfaz.PRODUCCIONDataSetTableAdapters {
             }
             else {
                 this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((idcliente.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((int)(idcliente.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -31522,7 +31626,7 @@ namespace Interfaz.PRODUCCIONDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual PRODUCCIONDataSet.incentivo_mecanicoDataTable GetData(string empresa, global::System.Nullable<global::System.DateTime> fechai, global::System.Nullable<global::System.DateTime> fechaf) {
+        public virtual PRODUCCIONDataSet.incentivo_mecanicoDataTable GetData(string empresa, global::System.Nullable<global::System.DateTime> fechai, global::System.Nullable<global::System.DateTime> fechaf, global::System.Nullable<int> idcliente) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((empresa == null)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -31541,6 +31645,12 @@ namespace Interfaz.PRODUCCIONDataSetTableAdapters {
             }
             else {
                 this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((idcliente.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((int)(idcliente.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             PRODUCCIONDataSet.incentivo_mecanicoDataTable dataTable = new PRODUCCIONDataSet.incentivo_mecanicoDataTable();
             this.Adapter.Fill(dataTable);
@@ -32745,6 +32855,7 @@ namespace Interfaz.PRODUCCIONDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("PESOLBS", "PESOLBS");
             tableMapping.ColumnMappings.Add("PESOKG", "PESOKG");
             tableMapping.ColumnMappings.Add("METRO", "METRO");
+            tableMapping.ColumnMappings.Add("KG", "KG");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -33147,6 +33258,7 @@ namespace Interfaz.PRODUCCIONDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("PESOLBS", "PESOLBS");
             tableMapping.ColumnMappings.Add("PESOKG", "PESOKG");
             tableMapping.ColumnMappings.Add("METRO", "METRO");
+            tableMapping.ColumnMappings.Add("KG", "KG");
             this._adapter.TableMappings.Add(tableMapping);
         }
         

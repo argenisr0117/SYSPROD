@@ -157,6 +157,8 @@ namespace Interfaz.Registros
             DataTable dt1 = new DataTable();
             M.Idproducto = cmbProducto.SelectedValue.ToString();
             dt1 = M.ObtenerProductoMaquina();
+            Pi.Idcliente = Program.Cliente;
+            Pi.Idorden = Program.Idorden;
             try
             {
                 if (dt1.Rows.Count == 5)
@@ -290,7 +292,6 @@ namespace Interfaz.Registros
                             Pi.Operador = cmbOperador.SelectedValue.ToString();
                             Pi.Ayudante = Program.Ayudante;
                             Pi.Idproducto = cmbProducto.SelectedValue.ToString();
-                            Pi.Destino = "TERMINADOS";
                             Pi.Idmaquina = dt.Rows[x][0].ToString();
                             Pi.Cantidad = Convert.ToDecimal(array[x]);
                             Pi.Cantidad1 = Convert.ToInt32(array[x]);
@@ -372,7 +373,6 @@ namespace Interfaz.Registros
                             Pi.Operador = cmbOperador.SelectedValue.ToString();
                             Pi.Ayudante = Program.Ayudante;
                             Pi.Idproducto = cmbProducto.SelectedValue.ToString();
-                            Pi.Destino = "TERMINADOS";
                             Pi.Idmaquina = dt.Rows[x][0].ToString();
                             Pi.Cantidad = Convert.ToDecimal(array[x]);
                             Pi.Cantidad1 = Convert.ToInt32(array[x]);

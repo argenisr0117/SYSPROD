@@ -132,6 +132,19 @@ namespace Interfaz.Registros
                 MessageBoxEx.Show(ex.Message);
             }
         }
+        private void ComboCli()
+        {
+            try
+            {
+                cmbCliente.DataSource = Pi.ListadoCliente2();
+                cmbCliente.DisplayMember = "DESCRIPCION";
+                cmbCliente.ValueMember = "ID_CLIENTE";
+            }
+            catch (Exception ex)
+            {
+                MessageBoxEx.Show(ex.Message);
+            }
+        }
         private void Limpiar()
         {
             cmbProducto.SelectedValue = "";
@@ -158,9 +171,11 @@ namespace Interfaz.Registros
             ComboS();
             ComboM();
             ComboP2();
+            ComboCli();
             cmbSupervisor.SelectedValue = "";
             cmbOperador2.SelectedValue = "";
             cmbAyudante.SelectedValue = "DESC-01";
+            cmbCliente.SelectedText = "DESPACHO-T";
             cmbAyudante.Enabled = false;
             Limpiar();
             LlenarGrid();
@@ -468,12 +483,51 @@ namespace Interfaz.Registros
             string mensaje = "";
             errorProvider1.Clear();
             DataTable dt = new DataTable();
+            DataTable dt2 = new DataTable();
+            double cant = Convert.ToDouble(txtCantidad.Text);
             if (Utilidades.ValidarForm2(tabPage1, errorProvider1) == false)
             {
                 return;
             }
             try
             {
+                Pi.Idproducto = cmbProducto.SelectedValue.ToString();
+                Pi.Idcliente = Convert.ToInt16(cmbCliente.SelectedValue);
+                Program.Cliente = Convert.ToInt16(cmbCliente.SelectedValue);
+                Pi.Dpto = "IndM";
+                dt2 = Pi.ObtenerOrden();
+                for (int x = 0; x < dt2.Rows.Count; x++)
+                {
+                    Double cantidad = Convert.ToDouble(dt2.Rows[x][2]);
+                    Double cant_prod = Convert.ToDouble(dt2.Rows[x][3]);
+                    Program.Idorden= Convert.ToInt16(dt2.Rows[x][0]);
+                    if (cantidad == 0) //IDENTIFICAR SI EXISTE ALGUNA ORDEN PARA ESTE CLIENTE Y ESTE PRODUCTO, SI ES CERO, ASIGNAR S/N
+                    {
+                        Pi.Idorden = 0;
+                        break;
+                    }
+                    else
+                    {
+                        cant_prod = cant_prod + cant;
+                        if (cant_prod > cantidad) //COMPLETAR ORDEN
+                        {                            
+                            Pi.Idorden = Convert.ToInt16(dt2.Rows[x][0]);
+                            Pi.CompletarOrdenProduccion();
+                            if (dt2.Rows.Count == 1)
+                            {
+                                Pi.Idorden = 0;
+                                break;
+                            }
+                        }
+                        else  //ACTUALIZAR ORDEN 
+                        {
+                            Pi.Idorden = Convert.ToInt16(dt2.Rows[x][0]);
+                            Pi.Cantidad =Convert.ToDecimal(cant);
+                            Pi.ActCantOrdenProduccion();
+                            break;
+                        }
+                    }
+                }
                 M.Idproducto = cmbProducto.SelectedValue.ToString();
                 dt = M.ObtenerProductoMaquina();
                 if(dt.Rows.Count>0)
@@ -524,9 +578,7 @@ namespace Interfaz.Registros
                 {
                     Pi.Supervisor = cmbSupervisor.SelectedValue.ToString();
                     Pi.Operador = cmbOperador.SelectedValue.ToString();
-                    Pi.Ayudante = cmbAyudante.SelectedValue.ToString();
-                    Pi.Idproducto = cmbProducto.SelectedValue.ToString();
-                    Pi.Destino = "TERMINADOS";
+                    Pi.Ayudante = cmbAyudante.SelectedValue.ToString();                   
                     Pi.Idmaquina = cmbMaquina.SelectedValue.ToString();
                     Pi.Cantidad = Convert.ToDecimal(txtCantidad.Text);
                     mensaje = Pi.RegistrarProduccionIndM();
