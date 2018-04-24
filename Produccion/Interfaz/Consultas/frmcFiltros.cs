@@ -42,7 +42,7 @@ namespace Interfaz.Consultas
         {
             try
             {
-                cmbCliente.DataSource = C.Listado_Cliente_Combo(true, "Tref");
+                cmbCliente.DataSource = C.Listar(true);
                 cmbCliente.DisplayMember = "DESCRIPCION";
                 cmbCliente.ValueMember = "ID_CLIENTE";
             }
@@ -243,10 +243,16 @@ namespace Interfaz.Consultas
                     frmReporte obj = new frmReporte();
                     obj.Fechai = dtpdesde.Value;
                     obj.Fechaf = dtphasta.Value;
-
+                    obj._Producto = "";
+                    obj._Cliente = "";
+                    obj._Maquina = "";
+                    obj._Supervisor = "";
+                    obj._Operador = "";
+                    obj._Ayudante = "";
                     if (cmbSupervisor.SelectedIndex != -1) //(cmbSupervisor.SelectedValue != null)
                     {
                         obj.Supervisor = cmbSupervisor.SelectedValue.ToString();
+                        obj._Supervisor = cmbSupervisor.Text;
                     }
                     else
                        obj.Supervisor ="0";
@@ -254,6 +260,7 @@ namespace Interfaz.Consultas
                     if (cmbOperador.SelectedIndex != -1) //(cmbOperador.SelectedValue != null)
                     {
                         obj.Operador = cmbOperador.SelectedValue.ToString();
+                        obj._Operador = cmbOperador.Text;
                     }
                     else
                         obj.Operador ="0";
@@ -261,6 +268,7 @@ namespace Interfaz.Consultas
                     if (cmbMaquina.SelectedIndex != -1)// (cmbMaquina.SelectedValue != null)
                     {
                         obj.Maquina = cmbMaquina.SelectedValue.ToString();
+                        obj._Maquina = cmbMaquina.Text;
                     }
                     else
                         obj.Maquina = "0";
@@ -268,6 +276,7 @@ namespace Interfaz.Consultas
                     if (cmbProducto.SelectedIndex != -1) //(cmbProducto.SelectedValue != null)
                     {
                         obj.Producto = cmbProducto.SelectedValue.ToString();
+                        obj._Producto = cmbProducto.Text;
                     }
                     else
                         obj.Producto = "0";
@@ -275,12 +284,14 @@ namespace Interfaz.Consultas
                     if (cmbCliente.SelectedIndex != -1 ) //(cmbCliente.SelectedValue != null)
                     {
                         obj.Cliente = cmbCliente.SelectedValue.ToString();
+                        obj._Cliente = cmbCliente.Text;
                     }
                     else
                         obj.Cliente = "0";
                     if (cmbAyudante.SelectedIndex != -1) //(cmbProducto.SelectedValue != null)
                     {
                         obj.Ayudante = cmbAyudante.SelectedValue.ToString();
+                        obj._Ayudante = cmbAyudante.Text;
                     }
                     else
                         obj.Ayudante = "0";
@@ -300,6 +311,8 @@ namespace Interfaz.Consultas
                         obj.gMaquina = "0";
                         obj.gSupervisor = "0";
                         obj.gOperador = "0";
+                        obj.gAyudante = "0";
+                  
                         if (radioCliente.Checked)
                         {
                             obj.gCliente = "1";
@@ -319,6 +332,7 @@ namespace Interfaz.Consultas
                         else if (radioProducto.Checked)
                         {
                             obj.gProducto = "1";
+                            obj.gAyudante = "1";
                         }
                     }
                     obj.Show();

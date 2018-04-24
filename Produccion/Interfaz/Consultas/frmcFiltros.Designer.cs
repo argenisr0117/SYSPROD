@@ -410,10 +410,10 @@
             this.radioProducto.ForeColor = System.Drawing.Color.Black;
             this.radioProducto.Location = new System.Drawing.Point(6, 19);
             this.radioProducto.Name = "radioProducto";
-            this.radioProducto.Size = new System.Drawing.Size(94, 17);
+            this.radioProducto.Size = new System.Drawing.Size(92, 17);
             this.radioProducto.TabIndex = 0;
             this.radioProducto.TabStop = true;
-            this.radioProducto.Text = "PRODUCTO";
+            this.radioProducto.Text = "AYUDANTE";
             this.radioProducto.UseVisualStyleBackColor = false;
             // 
             // btnBusqueda

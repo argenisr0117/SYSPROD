@@ -1,15 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using DevComponents.DotNetBar.Metro;
 using Microsoft.Reporting.WinForms;
-using System.IO;
 
 
 namespace Interfaz
@@ -53,6 +44,13 @@ namespace Interfaz
         public string gCliente { get; set; }
         public string gMaquina { get; set; }
         public string gProducto { get; set; }
+        public string gAyudante { get; set; }
+        public string _Supervisor { get; set; }
+        public string _Operador { get; set; }
+        public string _Cliente { get; set; }
+        public string _Maquina { get; set; }
+        public string _Producto { get; set; }
+        public string _Ayudante { get; set; }
 
         //tickets
         public int Id { get; set; }
@@ -753,7 +751,7 @@ namespace Interfaz
         }
         private void FiltrarProduccionResumido()
         {
-            ReportParameter[] parametros = new ReportParameter[7];
+            ReportParameter[] parametros = new ReportParameter[14];
             this.Text = Reporte;
             PRODUCCIONDataSet ds = new PRODUCCIONDataSet();
             PRODUCCIONDataSetTableAdapters.filtrar_produccionTableAdapter rgta = new PRODUCCIONDataSetTableAdapters.filtrar_produccionTableAdapter();
@@ -768,6 +766,13 @@ namespace Interfaz
             parametros[4] = new ReportParameter("Gsupervisor", gSupervisor.ToString());
             parametros[5] = new ReportParameter("Gproducto", gProducto.ToString());
             parametros[6] = new ReportParameter("Gmaquina", gMaquina.ToString());
+            parametros[7] = new ReportParameter("Gayudante", gAyudante.ToString());
+            parametros[8] = new ReportParameter("Operador", _Operador.ToString());
+            parametros[9] = new ReportParameter("Cliente", _Cliente.ToString());
+            parametros[10] = new ReportParameter("Supervisor", _Supervisor.ToString());
+            parametros[11] = new ReportParameter("Producto", _Producto.ToString());
+            parametros[12] = new ReportParameter("Maquina", _Maquina.ToString());
+            parametros[13] = new ReportParameter("Ayudante", _Ayudante.ToString());
             rgta.Fill(ds.filtrar_produccion, Supervisor, int.Parse(Cliente), Maquina, Producto, Operador,Ayudante, Fechai, Fechaf, 1);
             ReportDataSource rds = new ReportDataSource();
             reportViewer1.LocalReport.DisplayName = Reporte;
