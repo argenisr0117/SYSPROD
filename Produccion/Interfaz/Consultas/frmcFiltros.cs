@@ -77,6 +77,19 @@ namespace Interfaz.Consultas
                 MessageBoxEx.Show(ex.Message);
             }
         }
+        private void ComboA()
+        {
+            try
+            {
+                cmbAyudante.DataSource = E.ListarA(true, true);
+                cmbAyudante.DisplayMember = "NOMBRE";
+                cmbAyudante.ValueMember = "ID_EMPLEADO";
+            }
+            catch (Exception ex)
+            {
+                MessageBoxEx.Show(ex.Message);
+            }
+        }
         private void ComboO()
         {
             try
@@ -162,6 +175,7 @@ namespace Interfaz.Consultas
         private void frmcFiltros_Load(object sender, EventArgs e)
         {
             ComboS();
+            ComboA();
             ComboC();
             ComboM();
             ComboP();
@@ -172,6 +186,7 @@ namespace Interfaz.Consultas
             cmbSupervisor.SelectedValue = "";
             cmbProducto.SelectedValue = "";
             cmbMaquina.SelectedValue = "";
+            cmbAyudante.SelectedValue = "";
             cmbOperador.SelectedValue = "";
             cmbCliente.SelectedValue = 0;
             Limpiar();
@@ -180,6 +195,7 @@ namespace Interfaz.Consultas
         private void Limpiar()
         {
             cmbSupervisor.SelectedValue = "";
+            cmbAyudante.SelectedValue = "";
             cmbProducto.SelectedValue = "";
             cmbMaquina.SelectedValue = "";
             cmbOperador.SelectedValue = "";
@@ -188,7 +204,7 @@ namespace Interfaz.Consultas
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            Consultas.frmcProducto obj = new Consultas.frmcProducto();
+            frmcProducto obj = new frmcProducto();
             Program.Valor3 = 1;
             Program.Valor2 = 1;
             obj.ShowDialog();
@@ -262,10 +278,49 @@ namespace Interfaz.Consultas
                     }
                     else
                         obj.Cliente = "0";
+                    if (cmbAyudante.SelectedIndex != -1) //(cmbProducto.SelectedValue != null)
+                    {
+                        obj.Ayudante = cmbAyudante.SelectedValue.ToString();
+                    }
+                    else
+                        obj.Ayudante = "0";
 
-                    obj.Valor = 10;
-                    obj.Nombre = "filtrar_prod_detalle.rdlc";
-                    obj.Order1 = "1";
+                    if (radioDetallado.Checked)
+                    {
+                        obj.Valor = 10;
+                        obj.Nombre = "filtrar_prod_detalle.rdlc";
+                        obj.Order1 = "1";
+                    }
+                    else if (radioResumido.Checked)
+                    {
+                        obj.Valor = 21;
+                        obj.Nombre = "filtrar_prod_resumido.rdlc";
+                        obj.gProducto = "0";
+                        obj.gCliente = "0";
+                        obj.gMaquina = "0";
+                        obj.gSupervisor = "0";
+                        obj.gOperador = "0";
+                        if (radioCliente.Checked)
+                        {
+                            obj.gCliente = "1";
+                        }
+                        else if (radioOperador.Checked)
+                        {
+                            obj.gOperador = "1";
+                        }
+                        else if (radioSupervisor.Checked)
+                        {
+                            obj.gSupervisor = "1";
+                        }
+                        else if (radioMaquina.Checked)
+                        {
+                            obj.gMaquina = "1";
+                        }
+                        else if (radioProducto.Checked)
+                        {
+                            obj.gProducto = "1";
+                        }
+                    }
                     obj.Show();
                     //obj.Operador = cmbOperador.SelectedValue.ToString();
                     //obj.Maquina = cmbMaquina.SelectedValue.ToString();

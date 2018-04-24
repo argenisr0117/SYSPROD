@@ -279,6 +279,7 @@
             this.btnimportar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.toolTip1.SetToolTip(this.btnimportar, "Importar");
             this.btnimportar.UseVisualStyleBackColor = false;
+            this.btnimportar.Visible = false;
             this.btnimportar.Click += new System.EventHandler(this.btnimportar_Click);
             // 
             // btnagregar

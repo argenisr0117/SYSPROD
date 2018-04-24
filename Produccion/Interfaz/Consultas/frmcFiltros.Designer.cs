@@ -50,6 +50,7 @@
             this.radioDetallado = new System.Windows.Forms.RadioButton();
             this.radioResumido = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.radioCliente = new System.Windows.Forms.RadioButton();
             this.radioSupervisor = new System.Windows.Forms.RadioButton();
             this.radioOperador = new System.Windows.Forms.RadioButton();
             this.radioMaquina = new System.Windows.Forms.RadioButton();
@@ -57,6 +58,8 @@
             this.btnBusqueda = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
+            this.cmbAyudante = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -142,7 +145,7 @@
             this.cmbSupervisor.ForeColor = System.Drawing.Color.Black;
             this.cmbSupervisor.FormattingEnabled = true;
             this.cmbSupervisor.IntegralHeight = false;
-            this.cmbSupervisor.Location = new System.Drawing.Point(127, 99);
+            this.cmbSupervisor.Location = new System.Drawing.Point(127, 98);
             this.cmbSupervisor.MaxDropDownItems = 30;
             this.cmbSupervisor.Name = "cmbSupervisor";
             this.cmbSupervisor.Size = new System.Drawing.Size(451, 26);
@@ -154,7 +157,7 @@
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(12, 106);
+            this.label4.Location = new System.Drawing.Point(12, 105);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(91, 13);
             this.label4.TabIndex = 119;
@@ -178,7 +181,7 @@
             this.label6.BackColor = System.Drawing.Color.White;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(12, 162);
+            this.label6.Location = new System.Drawing.Point(12, 192);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 13);
             this.label6.TabIndex = 121;
@@ -190,7 +193,7 @@
             this.label7.BackColor = System.Drawing.Color.White;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(12, 218);
+            this.label7.Location = new System.Drawing.Point(12, 251);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(63, 13);
             this.label7.TabIndex = 122;
@@ -202,7 +205,7 @@
             this.label8.BackColor = System.Drawing.Color.White;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(12, 191);
+            this.label8.Location = new System.Drawing.Point(12, 221);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(80, 13);
             this.label8.TabIndex = 123;
@@ -218,7 +221,7 @@
             this.cmbMaquina.ForeColor = System.Drawing.Color.Black;
             this.cmbMaquina.FormattingEnabled = true;
             this.cmbMaquina.IntegralHeight = false;
-            this.cmbMaquina.Location = new System.Drawing.Point(127, 155);
+            this.cmbMaquina.Location = new System.Drawing.Point(127, 185);
             this.cmbMaquina.MaxDropDownItems = 30;
             this.cmbMaquina.Name = "cmbMaquina";
             this.cmbMaquina.Size = new System.Drawing.Size(451, 26);
@@ -251,7 +254,7 @@
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.Black;
             this.btnBuscar.Image = global::Interfaz.Properties.Resources.Search_icon;
-            this.btnBuscar.Location = new System.Drawing.Point(541, 185);
+            this.btnBuscar.Location = new System.Drawing.Point(541, 215);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(37, 24);
             this.btnBuscar.TabIndex = 134;
@@ -269,7 +272,7 @@
             this.cmbProducto.ForeColor = System.Drawing.Color.Black;
             this.cmbProducto.FormattingEnabled = true;
             this.cmbProducto.IntegralHeight = false;
-            this.cmbProducto.Location = new System.Drawing.Point(127, 184);
+            this.cmbProducto.Location = new System.Drawing.Point(127, 214);
             this.cmbProducto.MaxDropDownItems = 30;
             this.cmbProducto.Name = "cmbProducto";
             this.cmbProducto.Size = new System.Drawing.Size(412, 26);
@@ -285,7 +288,7 @@
             this.cmbCliente.ForeColor = System.Drawing.Color.Black;
             this.cmbCliente.FormattingEnabled = true;
             this.cmbCliente.IntegralHeight = false;
-            this.cmbCliente.Location = new System.Drawing.Point(127, 211);
+            this.cmbCliente.Location = new System.Drawing.Point(127, 244);
             this.cmbCliente.MaxDropDownItems = 30;
             this.cmbCliente.Name = "cmbCliente";
             this.cmbCliente.Size = new System.Drawing.Size(451, 26);
@@ -298,7 +301,7 @@
             this.groupBox1.Controls.Add(this.radioResumido);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
-            this.groupBox1.Location = new System.Drawing.Point(15, 243);
+            this.groupBox1.Location = new System.Drawing.Point(15, 278);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(380, 42);
             this.groupBox1.TabIndex = 136;
@@ -334,18 +337,32 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.White;
+            this.groupBox2.Controls.Add(this.radioCliente);
             this.groupBox2.Controls.Add(this.radioSupervisor);
             this.groupBox2.Controls.Add(this.radioOperador);
             this.groupBox2.Controls.Add(this.radioMaquina);
             this.groupBox2.Controls.Add(this.radioProducto);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.Black;
-            this.groupBox2.Location = new System.Drawing.Point(15, 291);
+            this.groupBox2.Location = new System.Drawing.Point(15, 326);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(453, 51);
+            this.groupBox2.Size = new System.Drawing.Size(563, 51);
             this.groupBox2.TabIndex = 137;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "AGRUPADO POR";
+            // 
+            // radioCliente
+            // 
+            this.radioCliente.AutoSize = true;
+            this.radioCliente.BackColor = System.Drawing.Color.White;
+            this.radioCliente.ForeColor = System.Drawing.Color.Black;
+            this.radioCliente.Location = new System.Drawing.Point(420, 19);
+            this.radioCliente.Name = "radioCliente";
+            this.radioCliente.Size = new System.Drawing.Size(77, 17);
+            this.radioCliente.TabIndex = 4;
+            this.radioCliente.TabStop = true;
+            this.radioCliente.Text = "CLIENTE";
+            this.radioCliente.UseVisualStyleBackColor = false;
             // 
             // radioSupervisor
             // 
@@ -410,7 +427,7 @@
             this.btnBusqueda.ForeColor = System.Drawing.Color.Black;
             this.btnBusqueda.Image = global::Interfaz.Properties.Resources.Search_icon1;
             this.btnBusqueda.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnBusqueda.Location = new System.Drawing.Point(95, 348);
+            this.btnBusqueda.Location = new System.Drawing.Point(95, 383);
             this.btnBusqueda.Name = "btnBusqueda";
             this.btnBusqueda.Size = new System.Drawing.Size(107, 51);
             this.btnBusqueda.TabIndex = 138;
@@ -431,7 +448,7 @@
             this.btnSalir.ForeColor = System.Drawing.Color.Black;
             this.btnSalir.Image = global::Interfaz.Properties.Resources.salir_icon;
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSalir.Location = new System.Drawing.Point(409, 348);
+            this.btnSalir.Location = new System.Drawing.Point(409, 383);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(107, 51);
             this.btnSalir.TabIndex = 139;
@@ -452,7 +469,7 @@
             this.btnLimpiar.ForeColor = System.Drawing.Color.Black;
             this.btnLimpiar.Image = global::Interfaz.Properties.Resources.Clear_icon;
             this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnLimpiar.Location = new System.Drawing.Point(252, 348);
+            this.btnLimpiar.Location = new System.Drawing.Point(252, 383);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(107, 51);
             this.btnLimpiar.TabIndex = 140;
@@ -462,11 +479,41 @@
             this.btnLimpiar.UseVisualStyleBackColor = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
+            // cmbAyudante
+            // 
+            this.cmbAyudante.BackColor = System.Drawing.Color.LightGray;
+            this.cmbAyudante.DropDownHeight = 160;
+            this.cmbAyudante.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbAyudante.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbAyudante.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbAyudante.ForeColor = System.Drawing.Color.Black;
+            this.cmbAyudante.FormattingEnabled = true;
+            this.cmbAyudante.IntegralHeight = false;
+            this.cmbAyudante.Location = new System.Drawing.Point(127, 156);
+            this.cmbAyudante.MaxDropDownItems = 30;
+            this.cmbAyudante.Name = "cmbAyudante";
+            this.cmbAyudante.Size = new System.Drawing.Size(451, 26);
+            this.cmbAyudante.TabIndex = 142;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.White;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(12, 163);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(78, 13);
+            this.label9.TabIndex = 141;
+            this.label9.Text = "AYUDANTE:";
+            // 
             // frmcFiltros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(610, 411);
+            this.ClientSize = new System.Drawing.Size(610, 454);
+            this.Controls.Add(this.cmbAyudante);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnBusqueda);
@@ -536,5 +583,8 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.RadioButton radioSupervisor;
+        private System.Windows.Forms.RadioButton radioCliente;
+        private System.Windows.Forms.ComboBox cmbAyudante;
+        private System.Windows.Forms.Label label9;
     }
 }

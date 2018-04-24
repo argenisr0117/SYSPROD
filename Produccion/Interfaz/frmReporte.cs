@@ -48,7 +48,11 @@ namespace Interfaz
         public int Iduso { get; set; }
         public string Almacen { get; set; }
 
-
+        public string gSupervisor { get; set; }
+        public string gOperador { get; set; }
+        public string gCliente { get; set; }
+        public string gMaquina { get; set; }
+        public string gProducto { get; set; }
 
         //tickets
         public int Id { get; set; }
@@ -157,6 +161,10 @@ namespace Interfaz
             else if (Valor == 20)
             {
                 SalidaInventario();
+            }
+            else if (Valor == 21)
+            {
+                FiltrarProduccionResumido();
             }
         }
 
@@ -733,7 +741,34 @@ namespace Interfaz
             parametros[0] = new ReportParameter("Fechai", Fechai.ToShortDateString());
             parametros[1] = new ReportParameter("Fechaf", Fechaf.ToShortDateString());
             parametros[2] = new ReportParameter("Orden1", Order1.ToString());
-            rgta.Fill(ds.filtrar_produccion, Supervisor,int.Parse(Cliente),Maquina,Producto,Operador,Fechai,Fechaf,1);
+            rgta.Fill(ds.filtrar_produccion, Supervisor,int.Parse(Cliente),Maquina,Producto,Operador,Ayudante,Fechai,Fechaf,1);
+            ReportDataSource rds = new ReportDataSource();
+            reportViewer1.LocalReport.DisplayName = Reporte;
+            rds.Name = "DataSet1";
+            rds.Value = (ds.Tables["filtrar_produccion"]);
+            reportViewer1.LocalReport.DataSources.Clear();
+            reportViewer1.LocalReport.SetParameters(parametros);
+            lc.DataSources.Add(rds);
+            this.reportViewer1.RefreshReport();
+        }
+        private void FiltrarProduccionResumido()
+        {
+            ReportParameter[] parametros = new ReportParameter[7];
+            this.Text = Reporte;
+            PRODUCCIONDataSet ds = new PRODUCCIONDataSet();
+            PRODUCCIONDataSetTableAdapters.filtrar_produccionTableAdapter rgta = new PRODUCCIONDataSetTableAdapters.filtrar_produccionTableAdapter();
+            reportViewer1.ProcessingMode = ProcessingMode.Local;
+            LocalReport lc = reportViewer1.LocalReport;
+            string ruta = "Reportes\\" + Nombre;
+            lc.ReportPath = ruta;
+            parametros[0] = new ReportParameter("Fechai", Fechai.ToShortDateString());
+            parametros[1] = new ReportParameter("Fechaf", Fechaf.ToShortDateString());
+            parametros[2] = new ReportParameter("Goperador", gOperador.ToString());
+            parametros[3] = new ReportParameter("Gcliente", gCliente.ToString());
+            parametros[4] = new ReportParameter("Gsupervisor", gSupervisor.ToString());
+            parametros[5] = new ReportParameter("Gproducto", gProducto.ToString());
+            parametros[6] = new ReportParameter("Gmaquina", gMaquina.ToString());
+            rgta.Fill(ds.filtrar_produccion, Supervisor, int.Parse(Cliente), Maquina, Producto, Operador,Ayudante, Fechai, Fechaf, 1);
             ReportDataSource rds = new ReportDataSource();
             reportViewer1.LocalReport.DisplayName = Reporte;
             rds.Name = "DataSet1";

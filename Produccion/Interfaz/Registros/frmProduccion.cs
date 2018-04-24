@@ -694,6 +694,7 @@ namespace Interfaz.Registros
                             {
                                 MessageBoxEx.Show(mensaje, "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 Program.Evento = 0;
+                                btnregistrar.Enabled = false;
 
                                 //////////REGISTRAR PRODUCCION EN ALMACENES//////////
                                 DataTable ca_dt = new DataTable();
