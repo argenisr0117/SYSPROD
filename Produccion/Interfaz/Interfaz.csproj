@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icono.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevComponents.DotNetBar2, Version=11.3.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -766,6 +769,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\refresh-button %281%29.png" />
     <None Include="Resources\exportar %281%29.png" />
     <None Include="Resources\exportar.png" />
     <None Include="Resources\visualizacion.png" />
@@ -812,6 +816,7 @@
     <None Include="Recursos\Circle2.png" />
     <None Include="Recursos\Bollino_rosso_converted.png" />
     <None Include="Recursos\forward %282%29.ico" />
+    <Content Include="icono.ico" />
     <Content Include="Recursos\icono.ico" />
   </ItemGroup>
   <ItemGroup />

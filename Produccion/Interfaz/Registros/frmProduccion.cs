@@ -282,7 +282,7 @@ namespace Interfaz.Registros
                     return;
                 }
                 else
-                {  
+                {
                     btnimportar.Enabled = false;
                     lbdescripcion.Visible = true;
                     dtgvproduccion.DataSource = null;
@@ -302,7 +302,7 @@ namespace Interfaz.Registros
                     for (int x = 0; x < dtgvproduccion.Rows.Count; x++)
                     {
                         Pr.Fecha = Convert.ToDateTime(dtgvproduccion.Rows[x].Cells[0].Value);
-                        Pr.Hora =TimeSpan.Parse(dtgvproduccion.Rows[x].Cells[1].Value.ToString()); 
+                        Pr.Hora = TimeSpan.Parse(dtgvproduccion.Rows[x].Cells[1].Value.ToString());
                         Pr.Supervisor = dtgvproduccion.Rows[x].Cells[2].Value.ToString();
                         Pr.Operador = dtgvproduccion.Rows[x].Cells[3].Value.ToString();
                         Pr.Ayudante = dtgvproduccion.Rows[x].Cells[4].Value.ToString();
@@ -904,7 +904,7 @@ namespace Interfaz.Registros
 
         private void terminadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Actualizar();
+            //Actualizar();
             frmReporte obj = new frmReporte();
             dt1 = Pr.TotalProduccion("Acerados");
             double acerado;
@@ -1169,7 +1169,7 @@ namespace Interfaz.Registros
 
         private void procesosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Actualizar();
+            //Actualizar();
             frmReporte obj = new frmReporte();
             dt1 = Pr.TotalProduccion("Acerados");
             double acerado;
@@ -1215,7 +1215,7 @@ namespace Interfaz.Registros
 
         private void desperdiciosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Actualizar();
+            //Actualizar();
             frmReporte obj = new frmReporte();
             dt1 = Pr.TotalProduccion("Acerados");
             double acerado;
@@ -1261,7 +1261,7 @@ namespace Interfaz.Registros
 
         private void lineaGalvanizadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Actualizar();
+            //Actualizar();
             frmReporte obj = new frmReporte();
             dt1 = Pr.TotalProduccion("Acerados");
             double acerado;
@@ -1454,6 +1454,11 @@ namespace Interfaz.Registros
         private void lISTADOLINEAGALVToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CrearExcel("LINEA GALV", "LISTADO LINEA GALVANIZADO");
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            Actualizar();
         }
     }
 }

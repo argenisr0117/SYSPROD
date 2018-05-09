@@ -170,15 +170,16 @@ namespace Intermedia
         {
             string mensaje = "";
             List<clsParametros> lst = new List<clsParametros>();
+            lst.Add(new clsParametros("@mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 50));
             lst.Add(new clsParametros("@tarjeta", Mtarjeta));
             lst.Add(new clsParametros("@ayudante", Mayudante));
             lst.Add(new clsParametros("@operador", Moperador));
             lst.Add(new clsParametros("@maquina", Midmaquina));
             lst.Add(new clsParametros("@producto", Midproducto));
             lst.Add(new clsParametros("@cantidad", Mcantidad));
-            lst.Add(new clsParametros("@mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 50));
+            lst.Add(new clsParametros("@idcliente",Midcliente ));
             M.EjecutarSP("actualizar_registro_indm", ref lst);
-            mensaje = lst[6].Valor.ToString();
+            mensaje = lst[0].Valor.ToString();
             return mensaje;
         }
         public DataTable ObtenerOrden()

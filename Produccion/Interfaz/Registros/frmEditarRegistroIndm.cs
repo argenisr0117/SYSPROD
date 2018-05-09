@@ -27,6 +27,7 @@ namespace Interfaz.Registros
         public string Ayudante;
         public string Operador;
         public string Maquina;
+        public string Cliente;
         public int Tarjeta;
         public decimal Peso;
         private void ComboP()
@@ -82,12 +83,26 @@ namespace Interfaz.Registros
                 MessageBoxEx.Show(ex.Message);
             }
         }
+        private void ComboCli()
+        {
+            try
+            {
+                cmbCliente.DataSource = Pi.ListadoCliente2();
+                cmbCliente.DisplayMember = "DESCRIPCION";
+                cmbCliente.ValueMember = "ID_CLIENTE";
+            }
+            catch (Exception ex)
+            {
+                MessageBoxEx.Show(ex.Message);
+            }
+        }
         private void frmEditarRegistroIndm_Load(object sender, EventArgs e)
         {
             ComboA();
             ComboM();
             ComboO();
             ComboP();
+            ComboCli();
             LlenarCampos();
         }
         private void LlenarCampos()
@@ -98,6 +113,7 @@ namespace Interfaz.Registros
                 cmbOperador.Text = Operador;
                 cmbMaquina.Text = Maquina;
                 cmbProducto.Text = Producto;
+                cmbCliente.Text = Cliente;
                 txtPeso.Text = Peso.ToString();
             }
             catch (Exception ex)
@@ -132,6 +148,7 @@ namespace Interfaz.Registros
                 Pi.Idmaquina = cmbMaquina.SelectedValue.ToString().Trim();
                 Pi.Idproducto = cmbProducto.SelectedValue.ToString().Trim();
                 Pi.Cantidad = Convert.ToDecimal(txtPeso.Text.Trim());
+                Pi.Idcliente = Convert.ToInt16(cmbCliente.SelectedValue);
                 mensaje = Pi.ActualizarRegistros();
                 if (mensaje == "1")
                 {

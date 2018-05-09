@@ -49,6 +49,7 @@ namespace Interfaz
 
         private void btnAcceder_Click(object sender, EventArgs e)
         {
+            
             errorProvider1.Clear();
             if (Utilidades.ValidarForm(this, errorProvider1) == false)
             {
