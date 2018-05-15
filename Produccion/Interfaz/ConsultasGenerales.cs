@@ -592,28 +592,44 @@ namespace Interfaz
         private void rollosRollitosCortadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmReporte obj = new frmReporte();
+            frmReporte obj2 = new frmReporte();
             Consultas.frmcFechas obj1 = new Consultas.frmcFechas();
             obj.Destino = tscbempresa.ComboBox.Text;
+            obj2.Destino = tscbempresa.ComboBox.Text;
             dt = Pr.FechaCierre();
             if (string.IsNullOrEmpty(dt.Rows[0]["Fecha"].ToString()))
             {
                 obj.Fecha = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+                obj2.Fecha = Convert.ToDateTime(DateTime.Now.ToShortDateString());
             }
             else
             {
                 obj.Fecha = Convert.ToDateTime(dt.Rows[0]["Fecha"]);
+                obj2.Fecha = Convert.ToDateTime(dt.Rows[0]["Fecha"]);
             }
             obj.Incentivo = "Rollos,Rollitos,Cortado";
             obj.Empresa = tscbempresa.ComboBox.SelectedValue.ToString();
             obj.Nombre = "incentivo_rollos_cort.rdlc";
             obj.Reporte = "INCENTIVO ROLLOS,ROLLITOS,CORTADO";
             obj.Valor = 3;
+            obj.Idcliente = 0;
+
+
+            obj2.Incentivo = "Rollos,Rollitos,Cortado";
+            obj2.Empresa = tscbempresa.ComboBox.SelectedValue.ToString();
+            obj2.Nombre = "incentivo_rollos_cort.rdlc";
+            obj2.Reporte = "INCENTIVO ROLLOS,ROLLITOS,CORTADO";
+            obj2.Valor = 3;
+            obj2.Idcliente = 43;
             obj1.ShowDialog();
             if(Program.Valor2==1)
             {
                 obj.Fechai = Program.Fechai;
                 obj.Fechaf = Program.Fechaf;
                 obj.Show();
+                obj2.Fechai = Program.Fechai;
+                obj2.Fechaf = Program.Fechaf;
+                obj2.Show();
             }
            
         }

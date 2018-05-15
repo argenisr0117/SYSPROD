@@ -578,7 +578,7 @@ namespace Interfaz
         }
         private void Incentivo_Rollos()
         {
-            ReportParameter[] parametros = new ReportParameter[4];
+            ReportParameter[] parametros = new ReportParameter[5];
             PRODUCCIONDataSet ds = new PRODUCCIONDataSet();
             PRODUCCIONDataSetTableAdapters.incentivo_rollos_cortTableAdapter rgta = new PRODUCCIONDataSetTableAdapters.incentivo_rollos_cortTableAdapter();
             PRODUCCIONDataSetTableAdapters.incentivo_rollos_cort1TableAdapter rgta1 = new PRODUCCIONDataSetTableAdapters.incentivo_rollos_cort1TableAdapter();
@@ -591,9 +591,10 @@ namespace Interfaz
             parametros[1] = new ReportParameter("Empresa", Destino.ToString());
             parametros[2] = new ReportParameter("Fechai", Fechai.ToShortDateString());
             parametros[3] = new ReportParameter("Fechaf", Fechaf.ToShortDateString());
-            rgta.Fill(ds.incentivo_rollos_cort, Incentivo, Empresa, Fechai, Fechaf);
-            rgta1.Fill(ds.incentivo_rollos_cort1, Incentivo, Empresa, Fechai, Fechaf);
-            rgta2.Fill(ds.incentivo_rollos_cort2, Incentivo, Empresa, Fechai, Fechaf);
+            parametros[4] = new ReportParameter("Idcliente", Idcliente.ToString());
+            rgta.Fill(ds.incentivo_rollos_cort, Incentivo, Empresa, Fechai, Fechaf,Idcliente);
+            rgta1.Fill(ds.incentivo_rollos_cort1, Incentivo, Empresa, Fechai, Fechaf,Idcliente);
+            rgta2.Fill(ds.incentivo_rollos_cort2, Incentivo, Empresa, Fechai, Fechaf,Idcliente);
             ReportDataSource rds = new ReportDataSource();
             ReportDataSource rds1 = new ReportDataSource();
             ReportDataSource rds2 = new ReportDataSource();
