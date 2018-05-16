@@ -1,15 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using DevComponents.DotNetBar.Metro;
 using Microsoft.Reporting.WinForms;
-using System.IO;
 
 
 namespace Interfaz
@@ -48,7 +39,18 @@ namespace Interfaz
         public int Iduso { get; set; }
         public string Almacen { get; set; }
 
-
+        public string gSupervisor { get; set; }
+        public string gOperador { get; set; }
+        public string gCliente { get; set; }
+        public string gMaquina { get; set; }
+        public string gProducto { get; set; }
+        public string gAyudante { get; set; }
+        public string _Supervisor { get; set; }
+        public string _Operador { get; set; }
+        public string _Cliente { get; set; }
+        public string _Maquina { get; set; }
+        public string _Producto { get; set; }
+        public string _Ayudante { get; set; }
 
         //tickets
         public int Id { get; set; }
@@ -157,6 +159,10 @@ namespace Interfaz
             else if (Valor == 20)
             {
                 SalidaInventario();
+            }
+            else if (Valor == 21)
+            {
+                FiltrarProduccionResumido();
             }
         }
 
@@ -572,7 +578,7 @@ namespace Interfaz
         }
         private void Incentivo_Rollos()
         {
-            ReportParameter[] parametros = new ReportParameter[4];
+            ReportParameter[] parametros = new ReportParameter[5];
             PRODUCCIONDataSet ds = new PRODUCCIONDataSet();
             PRODUCCIONDataSetTableAdapters.incentivo_rollos_cortTableAdapter rgta = new PRODUCCIONDataSetTableAdapters.incentivo_rollos_cortTableAdapter();
             PRODUCCIONDataSetTableAdapters.incentivo_rollos_cort1TableAdapter rgta1 = new PRODUCCIONDataSetTableAdapters.incentivo_rollos_cort1TableAdapter();
@@ -585,9 +591,10 @@ namespace Interfaz
             parametros[1] = new ReportParameter("Empresa", Destino.ToString());
             parametros[2] = new ReportParameter("Fechai", Fechai.ToShortDateString());
             parametros[3] = new ReportParameter("Fechaf", Fechaf.ToShortDateString());
-            rgta.Fill(ds.incentivo_rollos_cort, Incentivo, Empresa, Fechai, Fechaf);
-            rgta1.Fill(ds.incentivo_rollos_cort1, Incentivo, Empresa, Fechai, Fechaf);
-            rgta2.Fill(ds.incentivo_rollos_cort2, Incentivo, Empresa, Fechai, Fechaf);
+            parametros[4] = new ReportParameter("Idcliente", Idcliente.ToString());
+            rgta.Fill(ds.incentivo_rollos_cort, Incentivo, Empresa, Fechai, Fechaf,Idcliente);
+            rgta1.Fill(ds.incentivo_rollos_cort1, Incentivo, Empresa, Fechai, Fechaf,Idcliente);
+            rgta2.Fill(ds.incentivo_rollos_cort2, Incentivo, Empresa, Fechai, Fechaf,Idcliente);
             ReportDataSource rds = new ReportDataSource();
             ReportDataSource rds1 = new ReportDataSource();
             ReportDataSource rds2 = new ReportDataSource();
@@ -733,7 +740,41 @@ namespace Interfaz
             parametros[0] = new ReportParameter("Fechai", Fechai.ToShortDateString());
             parametros[1] = new ReportParameter("Fechaf", Fechaf.ToShortDateString());
             parametros[2] = new ReportParameter("Orden1", Order1.ToString());
-            rgta.Fill(ds.filtrar_produccion, Supervisor,int.Parse(Cliente),Maquina,Producto,Operador,Fechai,Fechaf,1);
+            rgta.Fill(ds.filtrar_produccion, Supervisor,int.Parse(Cliente),Maquina,Producto,Operador,Ayudante,Fechai,Fechaf,1);
+            ReportDataSource rds = new ReportDataSource();
+            reportViewer1.LocalReport.DisplayName = Reporte;
+            rds.Name = "DataSet1";
+            rds.Value = (ds.Tables["filtrar_produccion"]);
+            reportViewer1.LocalReport.DataSources.Clear();
+            reportViewer1.LocalReport.SetParameters(parametros);
+            lc.DataSources.Add(rds);
+            this.reportViewer1.RefreshReport();
+        }
+        private void FiltrarProduccionResumido()
+        {
+            ReportParameter[] parametros = new ReportParameter[14];
+            this.Text = Reporte;
+            PRODUCCIONDataSet ds = new PRODUCCIONDataSet();
+            PRODUCCIONDataSetTableAdapters.filtrar_produccionTableAdapter rgta = new PRODUCCIONDataSetTableAdapters.filtrar_produccionTableAdapter();
+            reportViewer1.ProcessingMode = ProcessingMode.Local;
+            LocalReport lc = reportViewer1.LocalReport;
+            string ruta = "Reportes\\" + Nombre;
+            lc.ReportPath = ruta;
+            parametros[0] = new ReportParameter("Fechai", Fechai.ToShortDateString());
+            parametros[1] = new ReportParameter("Fechaf", Fechaf.ToShortDateString());
+            parametros[2] = new ReportParameter("Goperador", gOperador.ToString());
+            parametros[3] = new ReportParameter("Gcliente", gCliente.ToString());
+            parametros[4] = new ReportParameter("Gsupervisor", gSupervisor.ToString());
+            parametros[5] = new ReportParameter("Gproducto", gProducto.ToString());
+            parametros[6] = new ReportParameter("Gmaquina", gMaquina.ToString());
+            parametros[7] = new ReportParameter("Gayudante", gAyudante.ToString());
+            parametros[8] = new ReportParameter("Operador", _Operador.ToString());
+            parametros[9] = new ReportParameter("Cliente", _Cliente.ToString());
+            parametros[10] = new ReportParameter("Supervisor", _Supervisor.ToString());
+            parametros[11] = new ReportParameter("Producto", _Producto.ToString());
+            parametros[12] = new ReportParameter("Maquina", _Maquina.ToString());
+            parametros[13] = new ReportParameter("Ayudante", _Ayudante.ToString());
+            rgta.Fill(ds.filtrar_produccion, Supervisor, int.Parse(Cliente), Maquina, Producto, Operador,Ayudante, Fechai, Fechaf, 1);
             ReportDataSource rds = new ReportDataSource();
             reportViewer1.LocalReport.DisplayName = Reporte;
             rds.Name = "DataSet1";

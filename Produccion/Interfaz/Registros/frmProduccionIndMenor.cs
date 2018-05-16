@@ -24,31 +24,6 @@ namespace Interfaz.Registros
         clsMaquina M = new clsMaquina();
         clsProduccionIndM Pi = new clsProduccionIndM();
 
-        //void cmbProducto_MouseWheel(object sender, MouseEventArgs e)
-        //{
-        //    ((HandledMouseEventArgs)e).Handled = true;
-        //}
-        //void cmbProducto2_MouseWheel(object sender, MouseEventArgs e)
-        //{
-        //    ((HandledMouseEventArgs)e).Handled = true;
-        //}
-        //void cmbOperador_MouseWheel(object sender, MouseEventArgs e)
-        //{
-        //    ((HandledMouseEventArgs)e).Handled = true;
-        //}
-        //void cmbOperador2_MouseWheel(object sender, MouseEventArgs e)
-        //{
-        //    ((HandledMouseEventArgs)e).Handled = true;
-        //}
-        //void cmbMaquina_MouseWheel(object sender, MouseEventArgs e)
-        //{
-        //    ((HandledMouseEventArgs)e).Handled = true;
-        //}
-        //void cmbAyudante_MouseWheel(object sender, MouseEventArgs e)
-        //{
-        //    ((HandledMouseEventArgs)e).Handled = true;
-        //}
-
         private void ComboP()
         {
             try
@@ -157,14 +132,6 @@ namespace Interfaz.Registros
         private void frmProduccionIndMenor_Load(object sender, EventArgs e)
         {
             Permisos();
-            //cmbProducto.MouseWheel += new MouseEventHandler(cmbProducto_MouseWheel);
-            //cmbOperador.MouseWheel += new MouseEventHandler(cmbOperador_MouseWheel);
-            //cmbProducto2.MouseWheel += new MouseEventHandler(cmbProducto2_MouseWheel);
-            //cmbOperador2.MouseWheel += new MouseEventHandler(cmbOperador2_MouseWheel);
-            //cmbMaquina.MouseWheel += new MouseEventHandler(cmbMaquina_MouseWheel);
-            //cmbAyudante.MouseWheel += new MouseEventHandler(cmbAyudante_MouseWheel);
-            //dtgvProduccion.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 7);
-            //dtgvProduccion.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 7, FontStyle.Bold);
             ComboO();
             ComboA();
             ComboP();
@@ -639,6 +606,7 @@ namespace Interfaz.Registros
                 obj.Operador = dtgvProduccion.CurrentRow.Cells[2].Value.ToString();
                 obj.Producto = dtgvProduccion.CurrentRow.Cells[4].Value.ToString();
                 obj.Maquina = dtgvProduccion.CurrentRow.Cells[6].Value.ToString();
+                obj.Cliente = dtgvProduccion.CurrentRow.Cells[7].Value.ToString();
                 obj.Peso =Convert.ToDecimal(dtgvProduccion.CurrentRow.Cells[5].Value);
                 obj.Tarjeta = Convert.ToInt32(dtgvProduccion.CurrentRow.Cells[0].Value);
                 obj.ShowDialog();

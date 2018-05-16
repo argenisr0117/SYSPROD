@@ -75,6 +75,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_17D6DAE106B14BEEA2669BF22F961F25"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_1C32AEBDC5504BBD940D81CC2AF7F505"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -232,6 +238,12 @@
         "Entry"
         {
         "MsmKey" = "8:_7A6EE9AC100E4200957C1CE327047A5E"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_7DCF6B6B929A4446B3E1F71EC35F1979"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -814,6 +826,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_17D6DAE106B14BEEA2669BF22F961F25"
+            {
+            "SourcePath" = "8:..\\Interfaz\\bin\\Debug\\Reportes\\filtrar_prod_resumido.rdlc"
+            "TargetName" = "8:filtrar_prod_resumido.rdlc"
+            "Tag" = "8:"
+            "Folder" = "8:_00DD0B03E441403CB4D3297F2511FE1C"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1C32AEBDC5504BBD940D81CC2AF7F505"
             {
             "SourcePath" = "8:..\\Interfaz\\bin\\Debug\\Reportes\\historial_produccion.rdlc"
@@ -1348,6 +1380,26 @@
             "TargetName" = "8:icono.ico"
             "Tag" = "8:"
             "Folder" = "8:_2C4FF5305C374AB3BEAD902C54996373"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7DCF6B6B929A4446B3E1F71EC35F1979"
+            {
+            "SourcePath" = "8:..\\Interfaz\\Reportes\\cierre_general_kinnox.rdlc"
+            "TargetName" = "8:cierre_general_kinnox.rdlc"
+            "Tag" = "8:"
+            "Folder" = "8:_00DD0B03E441403CB4D3297F2511FE1C"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -2006,15 +2058,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SYSPROD"
-        "ProductCode" = "8:{2CB45D38-C354-4202-8422-0D07EAB10E80}"
-        "PackageCode" = "8:{57E2B9D8-CD73-4AA3-A176-E563E2086E14}"
+        "ProductCode" = "8:{9F329112-EDDA-4FF3-AA97-BD07D8EEA7C6}"
+        "PackageCode" = "8:{04D4979F-210B-49EB-B347-278703332D6E}"
         "UpgradeCode" = "8:{1F2619E1-0BC5-42FB-88F1-DDD754EAF1D1}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.0"
+        "ProductVersion" = "8:1.0.2"
         "Manufacturer" = "8:ACERO DEL CIBAO,SRL"
         "ARPHELPTELEPHONE" = "8:849-876-2356"
         "ARPHELPLINK" = "8:"
@@ -2024,7 +2076,7 @@
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
-        "ARPPRODUCTICON" = "8:"
+        "ARPPRODUCTICON" = "8:_7A6EE9AC100E4200957C1CE327047A5E"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
@@ -2137,20 +2189,6 @@
             "Transitive" = "11:FALSE"
             "Target" = "8:_AC8F81798BFE411F8B149F404424B183"
             "Folder" = "8:_DFAD6A6D68F64B598E83512D1DACF6D1"
-            "WorkingFolder" = "8:_2C4FF5305C374AB3BEAD902C54996373"
-            "Icon" = "8:_7A6EE9AC100E4200957C1CE327047A5E"
-            "Feature" = "8:"
-            }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_4C58DD6F2E9A497FB8030761448C9D64"
-            {
-            "Name" = "8:SYSPROD"
-            "Arguments" = "8:sysprod"
-            "Description" = "8:SYSPROD"
-            "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
-            "Transitive" = "11:FALSE"
-            "Target" = "8:_AC8F81798BFE411F8B149F404424B183"
-            "Folder" = "8:_2C4FF5305C374AB3BEAD902C54996373"
             "WorkingFolder" = "8:_2C4FF5305C374AB3BEAD902C54996373"
             "Icon" = "8:_7A6EE9AC100E4200957C1CE327047A5E"
             "Feature" = "8:"
@@ -2400,7 +2438,7 @@
                 {
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_317A755D37974221AA0F8792EC3784CD"
                     {
-                    "Sequence" = "3:100"
+                    "Sequence" = "3:200"
                     "DisplayName" = "8:Welcome"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
@@ -2449,7 +2487,7 @@
                     }
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_EF6AAC72CC144063B35BF647ED835339"
                     {
-                    "Sequence" = "3:300"
+                    "Sequence" = "3:500"
                     "DisplayName" = "8:Confirm Installation"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
@@ -2471,7 +2509,7 @@
                     }
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_F1C046B5046345079A10D6CF825DA161"
                     {
-                    "Sequence" = "3:200"
+                    "Sequence" = "3:300"
                     "DisplayName" = "8:Installation Folder"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
