@@ -68,7 +68,7 @@ namespace Interfaz.Registros
             {
                 SerialPort sp = (SerialPort)sender;
                 string indata = sp.ReadLine();
-                //MessageBox.Show(indata);
+                MessageBox.Show(indata);
                 SetText(indata);
                 //ClosePuertoSerial();
             }
