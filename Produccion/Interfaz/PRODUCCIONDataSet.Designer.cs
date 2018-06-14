@@ -66,8 +66,6 @@ namespace Interfaz {
         
         private incentivo_rollos_cort1DataTable tableincentivo_rollos_cort1;
         
-        private incentivo_trefiladoDataTable tableincentivo_trefilado;
-        
         private incentivo_tref_indirectoDataTable tableincentivo_tref_indirecto;
         
         private incentivo_flejadoDataTable tableincentivo_flejado;
@@ -121,6 +119,8 @@ namespace Interfaz {
         private obt_sal_almDataTable tableobt_sal_alm;
         
         private filtrar_produccionDataTable tablefiltrar_produccion;
+        
+        private incentivo_trefiladoDataTable tableincentivo_trefilado;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -213,9 +213,6 @@ namespace Interfaz {
                 if ((ds.Tables["incentivo_rollos_cort1"] != null)) {
                     base.Tables.Add(new incentivo_rollos_cort1DataTable(ds.Tables["incentivo_rollos_cort1"]));
                 }
-                if ((ds.Tables["incentivo_trefilado"] != null)) {
-                    base.Tables.Add(new incentivo_trefiladoDataTable(ds.Tables["incentivo_trefilado"]));
-                }
                 if ((ds.Tables["incentivo_tref_indirecto"] != null)) {
                     base.Tables.Add(new incentivo_tref_indirectoDataTable(ds.Tables["incentivo_tref_indirecto"]));
                 }
@@ -296,6 +293,9 @@ namespace Interfaz {
                 }
                 if ((ds.Tables["filtrar_produccion"] != null)) {
                     base.Tables.Add(new filtrar_produccionDataTable(ds.Tables["filtrar_produccion"]));
+                }
+                if ((ds.Tables["incentivo_trefilado"] != null)) {
+                    base.Tables.Add(new incentivo_trefiladoDataTable(ds.Tables["incentivo_trefilado"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -522,16 +522,6 @@ namespace Interfaz {
         public incentivo_rollos_cort1DataTable incentivo_rollos_cort1 {
             get {
                 return this.tableincentivo_rollos_cort1;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public incentivo_trefiladoDataTable incentivo_trefilado {
-            get {
-                return this.tableincentivo_trefilado;
             }
         }
         
@@ -807,6 +797,16 @@ namespace Interfaz {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public incentivo_trefiladoDataTable incentivo_trefilado {
+            get {
+                return this.tableincentivo_trefilado;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -935,9 +935,6 @@ namespace Interfaz {
                 if ((ds.Tables["incentivo_rollos_cort1"] != null)) {
                     base.Tables.Add(new incentivo_rollos_cort1DataTable(ds.Tables["incentivo_rollos_cort1"]));
                 }
-                if ((ds.Tables["incentivo_trefilado"] != null)) {
-                    base.Tables.Add(new incentivo_trefiladoDataTable(ds.Tables["incentivo_trefilado"]));
-                }
                 if ((ds.Tables["incentivo_tref_indirecto"] != null)) {
                     base.Tables.Add(new incentivo_tref_indirectoDataTable(ds.Tables["incentivo_tref_indirecto"]));
                 }
@@ -1018,6 +1015,9 @@ namespace Interfaz {
                 }
                 if ((ds.Tables["filtrar_produccion"] != null)) {
                     base.Tables.Add(new filtrar_produccionDataTable(ds.Tables["filtrar_produccion"]));
+                }
+                if ((ds.Tables["incentivo_trefilado"] != null)) {
+                    base.Tables.Add(new incentivo_trefiladoDataTable(ds.Tables["incentivo_trefilado"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -1176,12 +1176,6 @@ namespace Interfaz {
             if ((initTable == true)) {
                 if ((this.tableincentivo_rollos_cort1 != null)) {
                     this.tableincentivo_rollos_cort1.InitVars();
-                }
-            }
-            this.tableincentivo_trefilado = ((incentivo_trefiladoDataTable)(base.Tables["incentivo_trefilado"]));
-            if ((initTable == true)) {
-                if ((this.tableincentivo_trefilado != null)) {
-                    this.tableincentivo_trefilado.InitVars();
                 }
             }
             this.tableincentivo_tref_indirecto = ((incentivo_tref_indirectoDataTable)(base.Tables["incentivo_tref_indirecto"]));
@@ -1346,6 +1340,12 @@ namespace Interfaz {
                     this.tablefiltrar_produccion.InitVars();
                 }
             }
+            this.tableincentivo_trefilado = ((incentivo_trefiladoDataTable)(base.Tables["incentivo_trefilado"]));
+            if ((initTable == true)) {
+                if ((this.tableincentivo_trefilado != null)) {
+                    this.tableincentivo_trefilado.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1398,8 +1398,6 @@ namespace Interfaz {
             base.Tables.Add(this.tableincentivo_rollos_cort);
             this.tableincentivo_rollos_cort1 = new incentivo_rollos_cort1DataTable();
             base.Tables.Add(this.tableincentivo_rollos_cort1);
-            this.tableincentivo_trefilado = new incentivo_trefiladoDataTable();
-            base.Tables.Add(this.tableincentivo_trefilado);
             this.tableincentivo_tref_indirecto = new incentivo_tref_indirectoDataTable();
             base.Tables.Add(this.tableincentivo_tref_indirecto);
             this.tableincentivo_flejado = new incentivo_flejadoDataTable();
@@ -1454,6 +1452,8 @@ namespace Interfaz {
             base.Tables.Add(this.tableobt_sal_alm);
             this.tablefiltrar_produccion = new filtrar_produccionDataTable();
             base.Tables.Add(this.tablefiltrar_produccion);
+            this.tableincentivo_trefilado = new incentivo_trefiladoDataTable();
+            base.Tables.Add(this.tableincentivo_trefilado);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1579,12 +1579,6 @@ namespace Interfaz {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializeincentivo_rollos_cort1() {
-            return false;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeincentivo_trefilado() {
             return false;
         }
         
@@ -1752,6 +1746,12 @@ namespace Interfaz {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeincentivo_trefilado() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e) {
             if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove)) {
                 this.InitVars();
@@ -1869,9 +1869,6 @@ namespace Interfaz {
         public delegate void incentivo_rollos_cort1RowChangeEventHandler(object sender, incentivo_rollos_cort1RowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void incentivo_trefiladoRowChangeEventHandler(object sender, incentivo_trefiladoRowChangeEvent e);
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void incentivo_tref_indirectoRowChangeEventHandler(object sender, incentivo_tref_indirectoRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -1951,6 +1948,9 @@ namespace Interfaz {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void filtrar_produccionRowChangeEventHandler(object sender, filtrar_produccionRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void incentivo_trefiladoRowChangeEventHandler(object sender, incentivo_trefiladoRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -4742,19 +4742,11 @@ namespace Interfaz {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class listado_productoDataTable : global::System.Data.TypedTableBase<listado_productoRow> {
             
-            private global::System.Data.DataColumn columnID_PRODUCTO;
-            
             private global::System.Data.DataColumn columnCODIGO;
             
             private global::System.Data.DataColumn columnDESCRIPCION;
             
-            private global::System.Data.DataColumn columnID_UNIDAD;
-            
             private global::System.Data.DataColumn columnCALIBRE;
-            
-            private global::System.Data.DataColumn columnDIAMETRO_PULG;
-            
-            private global::System.Data.DataColumn columnDIAMETRO_MM;
             
             private global::System.Data.DataColumn columnGROSOR;
             
@@ -4797,14 +4789,6 @@ namespace Interfaz {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ID_PRODUCTOColumn {
-                get {
-                    return this.columnID_PRODUCTO;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn CODIGOColumn {
                 get {
                     return this.columnCODIGO;
@@ -4821,33 +4805,9 @@ namespace Interfaz {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ID_UNIDADColumn {
-                get {
-                    return this.columnID_UNIDAD;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn CALIBREColumn {
                 get {
                     return this.columnCALIBRE;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn DIAMETRO_PULGColumn {
-                get {
-                    return this.columnDIAMETRO_PULG;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn DIAMETRO_MMColumn {
-                get {
-                    return this.columnDIAMETRO_MM;
                 }
             }
             
@@ -4912,29 +4872,18 @@ namespace Interfaz {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public listado_productoRow Addlistado_productoRow(string CODIGO, string DESCRIPCION, string ID_UNIDAD, double CALIBRE, decimal DIAMETRO_PULG, decimal DIAMETRO_MM, string GROSOR, int ID_CATEGORIA, bool ESTADO) {
+            public listado_productoRow Addlistado_productoRow(string CODIGO, string DESCRIPCION, double CALIBRE, string GROSOR, int ID_CATEGORIA, bool ESTADO) {
                 listado_productoRow rowlistado_productoRow = ((listado_productoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
                         CODIGO,
                         DESCRIPCION,
-                        ID_UNIDAD,
                         CALIBRE,
-                        DIAMETRO_PULG,
-                        DIAMETRO_MM,
                         GROSOR,
                         ID_CATEGORIA,
                         ESTADO};
                 rowlistado_productoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowlistado_productoRow);
                 return rowlistado_productoRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public listado_productoRow FindByID_PRODUCTO(int ID_PRODUCTO) {
-                return ((listado_productoRow)(this.Rows.Find(new object[] {
-                            ID_PRODUCTO})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4954,13 +4903,9 @@ namespace Interfaz {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnID_PRODUCTO = base.Columns["ID_PRODUCTO"];
                 this.columnCODIGO = base.Columns["CODIGO"];
                 this.columnDESCRIPCION = base.Columns["DESCRIPCION"];
-                this.columnID_UNIDAD = base.Columns["ID_UNIDAD"];
                 this.columnCALIBRE = base.Columns["CALIBRE"];
-                this.columnDIAMETRO_PULG = base.Columns["DIAMETRO_PULG"];
-                this.columnDIAMETRO_MM = base.Columns["DIAMETRO_MM"];
                 this.columnGROSOR = base.Columns["GROSOR"];
                 this.columnID_CATEGORIA = base.Columns["ID_CATEGORIA"];
                 this.columnESTADO = base.Columns["ESTADO"];
@@ -4969,35 +4914,20 @@ namespace Interfaz {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnID_PRODUCTO = new global::System.Data.DataColumn("ID_PRODUCTO", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID_PRODUCTO);
                 this.columnCODIGO = new global::System.Data.DataColumn("CODIGO", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCODIGO);
                 this.columnDESCRIPCION = new global::System.Data.DataColumn("DESCRIPCION", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDESCRIPCION);
-                this.columnID_UNIDAD = new global::System.Data.DataColumn("ID_UNIDAD", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID_UNIDAD);
                 this.columnCALIBRE = new global::System.Data.DataColumn("CALIBRE", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCALIBRE);
-                this.columnDIAMETRO_PULG = new global::System.Data.DataColumn("DIAMETRO_PULG", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDIAMETRO_PULG);
-                this.columnDIAMETRO_MM = new global::System.Data.DataColumn("DIAMETRO_MM", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDIAMETRO_MM);
                 this.columnGROSOR = new global::System.Data.DataColumn("GROSOR", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnGROSOR);
                 this.columnID_CATEGORIA = new global::System.Data.DataColumn("ID_CATEGORIA", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID_CATEGORIA);
                 this.columnESTADO = new global::System.Data.DataColumn("ESTADO", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnESTADO);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnID_PRODUCTO}, true));
-                this.columnID_PRODUCTO.AutoIncrement = true;
-                this.columnID_PRODUCTO.AllowDBNull = false;
-                this.columnID_PRODUCTO.ReadOnly = true;
-                this.columnID_PRODUCTO.Unique = true;
                 this.columnCODIGO.MaxLength = 30;
                 this.columnDESCRIPCION.MaxLength = 100;
-                this.columnID_UNIDAD.MaxLength = 3;
                 this.columnGROSOR.MaxLength = 7;
             }
             
@@ -8346,299 +8276,6 @@ namespace Interfaz {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "incentivo_rollos_cort1DataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class incentivo_trefiladoDataTable : global::System.Data.TypedTableBase<incentivo_trefiladoRow> {
-            
-            private global::System.Data.DataColumn columnOPERADOR;
-            
-            private global::System.Data.DataColumn columnID_MAQUINA;
-            
-            private global::System.Data.DataColumn columnTOTAL;
-            
-            private global::System.Data.DataColumn columnTARIFA;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public incentivo_trefiladoDataTable() {
-                this.TableName = "incentivo_trefilado";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal incentivo_trefiladoDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected incentivo_trefiladoDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn OPERADORColumn {
-                get {
-                    return this.columnOPERADOR;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ID_MAQUINAColumn {
-                get {
-                    return this.columnID_MAQUINA;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn TOTALColumn {
-                get {
-                    return this.columnTOTAL;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn TARIFAColumn {
-                get {
-                    return this.columnTARIFA;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public incentivo_trefiladoRow this[int index] {
-                get {
-                    return ((incentivo_trefiladoRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event incentivo_trefiladoRowChangeEventHandler incentivo_trefiladoRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event incentivo_trefiladoRowChangeEventHandler incentivo_trefiladoRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event incentivo_trefiladoRowChangeEventHandler incentivo_trefiladoRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event incentivo_trefiladoRowChangeEventHandler incentivo_trefiladoRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Addincentivo_trefiladoRow(incentivo_trefiladoRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public incentivo_trefiladoRow Addincentivo_trefiladoRow(string OPERADOR, string ID_MAQUINA, decimal TOTAL, decimal TARIFA) {
-                incentivo_trefiladoRow rowincentivo_trefiladoRow = ((incentivo_trefiladoRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        OPERADOR,
-                        ID_MAQUINA,
-                        TOTAL,
-                        TARIFA};
-                rowincentivo_trefiladoRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowincentivo_trefiladoRow);
-                return rowincentivo_trefiladoRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                incentivo_trefiladoDataTable cln = ((incentivo_trefiladoDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new incentivo_trefiladoDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal void InitVars() {
-                this.columnOPERADOR = base.Columns["OPERADOR"];
-                this.columnID_MAQUINA = base.Columns["ID_MAQUINA"];
-                this.columnTOTAL = base.Columns["TOTAL"];
-                this.columnTARIFA = base.Columns["TARIFA"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            private void InitClass() {
-                this.columnOPERADOR = new global::System.Data.DataColumn("OPERADOR", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnOPERADOR);
-                this.columnID_MAQUINA = new global::System.Data.DataColumn("ID_MAQUINA", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID_MAQUINA);
-                this.columnTOTAL = new global::System.Data.DataColumn("TOTAL", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTOTAL);
-                this.columnTARIFA = new global::System.Data.DataColumn("TARIFA", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTARIFA);
-                this.columnOPERADOR.MaxLength = 50;
-                this.columnID_MAQUINA.AllowDBNull = false;
-                this.columnID_MAQUINA.MaxLength = 7;
-                this.columnTOTAL.ReadOnly = true;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public incentivo_trefiladoRow Newincentivo_trefiladoRow() {
-                return ((incentivo_trefiladoRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new incentivo_trefiladoRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(incentivo_trefiladoRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.incentivo_trefiladoRowChanged != null)) {
-                    this.incentivo_trefiladoRowChanged(this, new incentivo_trefiladoRowChangeEvent(((incentivo_trefiladoRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.incentivo_trefiladoRowChanging != null)) {
-                    this.incentivo_trefiladoRowChanging(this, new incentivo_trefiladoRowChangeEvent(((incentivo_trefiladoRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.incentivo_trefiladoRowDeleted != null)) {
-                    this.incentivo_trefiladoRowDeleted(this, new incentivo_trefiladoRowChangeEvent(((incentivo_trefiladoRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.incentivo_trefiladoRowDeleting != null)) {
-                    this.incentivo_trefiladoRowDeleting(this, new incentivo_trefiladoRowChangeEvent(((incentivo_trefiladoRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Removeincentivo_trefiladoRow(incentivo_trefiladoRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                PRODUCCIONDataSet ds = new PRODUCCIONDataSet();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "incentivo_trefiladoDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -16939,6 +16576,299 @@ namespace Interfaz {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class incentivo_trefiladoDataTable : global::System.Data.TypedTableBase<incentivo_trefiladoRow> {
+            
+            private global::System.Data.DataColumn columnOPERADOR;
+            
+            private global::System.Data.DataColumn columnID_MAQUINA;
+            
+            private global::System.Data.DataColumn columnTOTAL;
+            
+            private global::System.Data.DataColumn columnTARIFA;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public incentivo_trefiladoDataTable() {
+                this.TableName = "incentivo_trefilado";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal incentivo_trefiladoDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected incentivo_trefiladoDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn OPERADORColumn {
+                get {
+                    return this.columnOPERADOR;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ID_MAQUINAColumn {
+                get {
+                    return this.columnID_MAQUINA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TOTALColumn {
+                get {
+                    return this.columnTOTAL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TARIFAColumn {
+                get {
+                    return this.columnTARIFA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public incentivo_trefiladoRow this[int index] {
+                get {
+                    return ((incentivo_trefiladoRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event incentivo_trefiladoRowChangeEventHandler incentivo_trefiladoRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event incentivo_trefiladoRowChangeEventHandler incentivo_trefiladoRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event incentivo_trefiladoRowChangeEventHandler incentivo_trefiladoRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event incentivo_trefiladoRowChangeEventHandler incentivo_trefiladoRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Addincentivo_trefiladoRow(incentivo_trefiladoRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public incentivo_trefiladoRow Addincentivo_trefiladoRow(string OPERADOR, string ID_MAQUINA, decimal TOTAL, decimal TARIFA) {
+                incentivo_trefiladoRow rowincentivo_trefiladoRow = ((incentivo_trefiladoRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        OPERADOR,
+                        ID_MAQUINA,
+                        TOTAL,
+                        TARIFA};
+                rowincentivo_trefiladoRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowincentivo_trefiladoRow);
+                return rowincentivo_trefiladoRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                incentivo_trefiladoDataTable cln = ((incentivo_trefiladoDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new incentivo_trefiladoDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnOPERADOR = base.Columns["OPERADOR"];
+                this.columnID_MAQUINA = base.Columns["ID_MAQUINA"];
+                this.columnTOTAL = base.Columns["TOTAL"];
+                this.columnTARIFA = base.Columns["TARIFA"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnOPERADOR = new global::System.Data.DataColumn("OPERADOR", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOPERADOR);
+                this.columnID_MAQUINA = new global::System.Data.DataColumn("ID_MAQUINA", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_MAQUINA);
+                this.columnTOTAL = new global::System.Data.DataColumn("TOTAL", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTOTAL);
+                this.columnTARIFA = new global::System.Data.DataColumn("TARIFA", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTARIFA);
+                this.columnOPERADOR.MaxLength = 50;
+                this.columnID_MAQUINA.AllowDBNull = false;
+                this.columnID_MAQUINA.MaxLength = 7;
+                this.columnTOTAL.ReadOnly = true;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public incentivo_trefiladoRow Newincentivo_trefiladoRow() {
+                return ((incentivo_trefiladoRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new incentivo_trefiladoRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(incentivo_trefiladoRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.incentivo_trefiladoRowChanged != null)) {
+                    this.incentivo_trefiladoRowChanged(this, new incentivo_trefiladoRowChangeEvent(((incentivo_trefiladoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.incentivo_trefiladoRowChanging != null)) {
+                    this.incentivo_trefiladoRowChanging(this, new incentivo_trefiladoRowChangeEvent(((incentivo_trefiladoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.incentivo_trefiladoRowDeleted != null)) {
+                    this.incentivo_trefiladoRowDeleted(this, new incentivo_trefiladoRowChangeEvent(((incentivo_trefiladoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.incentivo_trefiladoRowDeleting != null)) {
+                    this.incentivo_trefiladoRowDeleting(this, new incentivo_trefiladoRowChangeEvent(((incentivo_trefiladoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Removeincentivo_trefiladoRow(incentivo_trefiladoRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                PRODUCCIONDataSet ds = new PRODUCCIONDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "incentivo_trefiladoDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class consulta_productoRow : global::System.Data.DataRow {
@@ -18101,17 +18031,6 @@ namespace Interfaz {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int ID_PRODUCTO {
-                get {
-                    return ((int)(this[this.tablelistado_producto.ID_PRODUCTOColumn]));
-                }
-                set {
-                    this[this.tablelistado_producto.ID_PRODUCTOColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string CODIGO {
                 get {
                     try {
@@ -18144,22 +18063,6 @@ namespace Interfaz {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string ID_UNIDAD {
-                get {
-                    try {
-                        return ((string)(this[this.tablelistado_producto.ID_UNIDADColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ID_UNIDAD\' in table \'listado_producto\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablelistado_producto.ID_UNIDADColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public double CALIBRE {
                 get {
                     try {
@@ -18171,38 +18074,6 @@ namespace Interfaz {
                 }
                 set {
                     this[this.tablelistado_producto.CALIBREColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal DIAMETRO_PULG {
-                get {
-                    try {
-                        return ((decimal)(this[this.tablelistado_producto.DIAMETRO_PULGColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DIAMETRO_PULG\' in table \'listado_producto\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablelistado_producto.DIAMETRO_PULGColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal DIAMETRO_MM {
-                get {
-                    try {
-                        return ((decimal)(this[this.tablelistado_producto.DIAMETRO_MMColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DIAMETRO_MM\' in table \'listado_producto\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablelistado_producto.DIAMETRO_MMColumn] = value;
                 }
             }
             
@@ -18280,18 +18151,6 @@ namespace Interfaz {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsID_UNIDADNull() {
-                return this.IsNull(this.tablelistado_producto.ID_UNIDADColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetID_UNIDADNull() {
-                this[this.tablelistado_producto.ID_UNIDADColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsCALIBRENull() {
                 return this.IsNull(this.tablelistado_producto.CALIBREColumn);
             }
@@ -18300,30 +18159,6 @@ namespace Interfaz {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetCALIBRENull() {
                 this[this.tablelistado_producto.CALIBREColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsDIAMETRO_PULGNull() {
-                return this.IsNull(this.tablelistado_producto.DIAMETRO_PULGColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetDIAMETRO_PULGNull() {
-                this[this.tablelistado_producto.DIAMETRO_PULGColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsDIAMETRO_MMNull() {
-                return this.IsNull(this.tablelistado_producto.DIAMETRO_MMColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetDIAMETRO_MMNull() {
-                this[this.tablelistado_producto.DIAMETRO_MMColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -19734,116 +19569,6 @@ namespace Interfaz {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetTARIFANull() {
                 this[this.tableincentivo_rollos_cort1.TARIFAColumn] = global::System.Convert.DBNull;
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class incentivo_trefiladoRow : global::System.Data.DataRow {
-            
-            private incentivo_trefiladoDataTable tableincentivo_trefilado;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal incentivo_trefiladoRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableincentivo_trefilado = ((incentivo_trefiladoDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string OPERADOR {
-                get {
-                    try {
-                        return ((string)(this[this.tableincentivo_trefilado.OPERADORColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'OPERADOR\' in table \'incentivo_trefilado\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableincentivo_trefilado.OPERADORColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string ID_MAQUINA {
-                get {
-                    return ((string)(this[this.tableincentivo_trefilado.ID_MAQUINAColumn]));
-                }
-                set {
-                    this[this.tableincentivo_trefilado.ID_MAQUINAColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal TOTAL {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableincentivo_trefilado.TOTALColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TOTAL\' in table \'incentivo_trefilado\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableincentivo_trefilado.TOTALColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal TARIFA {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableincentivo_trefilado.TARIFAColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TARIFA\' in table \'incentivo_trefilado\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableincentivo_trefilado.TARIFAColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsOPERADORNull() {
-                return this.IsNull(this.tableincentivo_trefilado.OPERADORColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetOPERADORNull() {
-                this[this.tableincentivo_trefilado.OPERADORColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsTOTALNull() {
-                return this.IsNull(this.tableincentivo_trefilado.TOTALColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetTOTALNull() {
-                this[this.tableincentivo_trefilado.TOTALColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsTARIFANull() {
-                return this.IsNull(this.tableincentivo_trefilado.TARIFAColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetTARIFANull() {
-                this[this.tableincentivo_trefilado.TARIFAColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -23948,6 +23673,116 @@ namespace Interfaz {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class incentivo_trefiladoRow : global::System.Data.DataRow {
+            
+            private incentivo_trefiladoDataTable tableincentivo_trefilado;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal incentivo_trefiladoRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableincentivo_trefilado = ((incentivo_trefiladoDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string OPERADOR {
+                get {
+                    try {
+                        return ((string)(this[this.tableincentivo_trefilado.OPERADORColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'OPERADOR\' in table \'incentivo_trefilado\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableincentivo_trefilado.OPERADORColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ID_MAQUINA {
+                get {
+                    return ((string)(this[this.tableincentivo_trefilado.ID_MAQUINAColumn]));
+                }
+                set {
+                    this[this.tableincentivo_trefilado.ID_MAQUINAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal TOTAL {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableincentivo_trefilado.TOTALColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TOTAL\' in table \'incentivo_trefilado\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableincentivo_trefilado.TOTALColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal TARIFA {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableincentivo_trefilado.TARIFAColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TARIFA\' in table \'incentivo_trefilado\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableincentivo_trefilado.TARIFAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsOPERADORNull() {
+                return this.IsNull(this.tableincentivo_trefilado.OPERADORColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetOPERADORNull() {
+                this[this.tableincentivo_trefilado.OPERADORColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTOTALNull() {
+                return this.IsNull(this.tableincentivo_trefilado.TOTALColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTOTALNull() {
+                this[this.tableincentivo_trefilado.TOTALColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTARIFANull() {
+                return this.IsNull(this.tableincentivo_trefilado.TARIFAColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTARIFANull() {
+                this[this.tableincentivo_trefilado.TARIFAColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -24647,40 +24482,6 @@ namespace Interfaz {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public incentivo_rollos_cort1Row Row {
-                get {
-                    return this.eventRow;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataRowAction Action {
-                get {
-                    return this.eventAction;
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Row event argument class
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class incentivo_trefiladoRowChangeEvent : global::System.EventArgs {
-            
-            private incentivo_trefiladoRow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public incentivo_trefiladoRowChangeEvent(incentivo_trefiladoRow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public incentivo_trefiladoRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -25599,6 +25400,40 @@ namespace Interfaz {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public filtrar_produccionRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class incentivo_trefiladoRowChangeEvent : global::System.EventArgs {
+            
+            private incentivo_trefiladoRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public incentivo_trefiladoRowChangeEvent(incentivo_trefiladoRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public incentivo_trefiladoRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -27425,13 +27260,9 @@ namespace Interfaz.PRODUCCIONDataSetTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "listado_producto";
-            tableMapping.ColumnMappings.Add("ID_PRODUCTO", "ID_PRODUCTO");
             tableMapping.ColumnMappings.Add("CODIGO", "CODIGO");
             tableMapping.ColumnMappings.Add("DESCRIPCION", "DESCRIPCION");
-            tableMapping.ColumnMappings.Add("ID_UNIDAD", "ID_UNIDAD");
             tableMapping.ColumnMappings.Add("CALIBRE", "CALIBRE");
-            tableMapping.ColumnMappings.Add("DIAMETRO_PULG", "DIAMETRO_PULG");
-            tableMapping.ColumnMappings.Add("DIAMETRO_MM", "DIAMETRO_MM");
             tableMapping.ColumnMappings.Add("GROSOR", "GROSOR");
             tableMapping.ColumnMappings.Add("ID_CATEGORIA", "ID_CATEGORIA");
             tableMapping.ColumnMappings.Add("ESTADO", "ESTADO");
@@ -29693,190 +29524,6 @@ namespace Interfaz.PRODUCCIONDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class incentivo_trefiladoTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public incentivo_trefiladoTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "incentivo_trefilado";
-            tableMapping.ColumnMappings.Add("OPERADOR", "OPERADOR");
-            tableMapping.ColumnMappings.Add("ID_MAQUINA", "ID_MAQUINA");
-            tableMapping.ColumnMappings.Add("TOTAL", "TOTAL");
-            tableMapping.ColumnMappings.Add("TARIFA", "TARIFA");
-            this._adapter.TableMappings.Add(tableMapping);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Interfaz.Properties.Settings.Default.PRODUCCIONConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.incentivo_trefilado";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@empresa", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(PRODUCCIONDataSet.incentivo_trefiladoDataTable dataTable, string empresa) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((empresa == null)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(empresa));
-            }
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual PRODUCCIONDataSet.incentivo_trefiladoDataTable GetData(string empresa) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((empresa == null)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(empresa));
-            }
-            PRODUCCIONDataSet.incentivo_trefiladoDataTable dataTable = new PRODUCCIONDataSet.incentivo_trefiladoDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
     public partial class incentivo_tref_indirectoTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
@@ -30013,19 +29660,26 @@ namespace Interfaz.PRODUCCIONDataSetTableAdapters {
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@empresa", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idcliente", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(PRODUCCIONDataSet.incentivo_tref_indirectoDataTable dataTable, string empresa) {
+        public virtual int Fill(PRODUCCIONDataSet.incentivo_tref_indirectoDataTable dataTable, string empresa, global::System.Nullable<int> idcliente) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((empresa == null)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((string)(empresa));
+            }
+            if ((idcliente.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(idcliente.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -30038,13 +29692,19 @@ namespace Interfaz.PRODUCCIONDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual PRODUCCIONDataSet.incentivo_tref_indirectoDataTable GetData(string empresa) {
+        public virtual PRODUCCIONDataSet.incentivo_tref_indirectoDataTable GetData(string empresa, global::System.Nullable<int> idcliente) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((empresa == null)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((string)(empresa));
+            }
+            if ((idcliente.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(idcliente.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             PRODUCCIONDataSet.incentivo_tref_indirectoDataTable dataTable = new PRODUCCIONDataSet.incentivo_tref_indirectoDataTable();
             this.Adapter.Fill(dataTable);
@@ -35194,6 +34854,203 @@ namespace Interfaz.PRODUCCIONDataSetTableAdapters {
                 this.Adapter.SelectCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             PRODUCCIONDataSet.filtrar_produccionDataTable dataTable = new PRODUCCIONDataSet.filtrar_produccionDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class incentivo_trefiladoTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public incentivo_trefiladoTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "incentivo_trefilado";
+            tableMapping.ColumnMappings.Add("OPERADOR", "OPERADOR");
+            tableMapping.ColumnMappings.Add("ID_MAQUINA", "ID_MAQUINA");
+            tableMapping.ColumnMappings.Add("TOTAL", "TOTAL");
+            tableMapping.ColumnMappings.Add("TARIFA", "TARIFA");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::Interfaz.Properties.Settings.Default.PRODUCCIONConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.incentivo_trefilado";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@empresa", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idcliente", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(PRODUCCIONDataSet.incentivo_trefiladoDataTable dataTable, string empresa, global::System.Nullable<int> idcliente) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((empresa == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(empresa));
+            }
+            if ((idcliente.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(idcliente.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual PRODUCCIONDataSet.incentivo_trefiladoDataTable GetData(string empresa, global::System.Nullable<int> idcliente) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((empresa == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(empresa));
+            }
+            if ((idcliente.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(idcliente.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            PRODUCCIONDataSet.incentivo_trefiladoDataTable dataTable = new PRODUCCIONDataSet.incentivo_trefiladoDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }

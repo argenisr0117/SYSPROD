@@ -637,21 +637,33 @@ namespace Interfaz
         private void trefiladoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmReporte obj = new frmReporte();
+            frmReporte obj2 = new frmReporte();
             obj.Destino = tscbempresa.ComboBox.Text;
+            obj2.Destino = tscbempresa.ComboBox.Text;
             dt = Pr.FechaCierre();
             if (string.IsNullOrEmpty(dt.Rows[0]["Fecha"].ToString()))
             {
                 obj.Fecha = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+                obj2.Fecha = Convert.ToDateTime(DateTime.Now.ToShortDateString());
             }
             else
             {
                 obj.Fecha = Convert.ToDateTime(dt.Rows[0]["Fecha"]);
+                obj2.Fecha = Convert.ToDateTime(dt.Rows[0]["Fecha"]);
             }
             obj.Empresa = tscbempresa.ComboBox.SelectedValue.ToString();
             obj.Nombre = "incentivo_trefilado.rdlc";
             obj.Reporte = "INCENTIVO TREFILADO";
             obj.Valor = 4;
+            obj.Idcliente = 0;
             obj.Show();
+
+            obj2.Empresa = tscbempresa.ComboBox.SelectedValue.ToString();
+            obj2.Nombre = "incentivo_trefilado.rdlc";
+            obj2.Reporte = "INCENTIVO TREFILADO";
+            obj2.Valor = 4;
+            obj2.Idcliente = 43;
+            obj2.Show();
         }
 
         private void flejadoToolStripMenuItem_Click(object sender, EventArgs e)

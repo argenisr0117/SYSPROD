@@ -2062,7 +2062,7 @@
   <Width>8.5in</Width>
   <Page>
     <PageHeader>
-      <Height>1.14583in</Height>
+      <Height>1.35639in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -2316,7 +2316,7 @@
           </Style>
         </Textbox>
         <Line Name="Line3">
-          <Top>1.10639in</Top>
+          <Top>1.35639in</Top>
           <Height>0in</Height>
           <Width>8.5in</Width>
           <ZIndex>7</ZIndex>
@@ -2327,6 +2327,43 @@
             </Border>
           </Style>
         </Line>
+        <Textbox Name="Textbox32">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>PRODUCTOS ELABORADOS A KINNOX</Value>
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox30</rd:DefaultName>
+          <Top>1.03695in</Top>
+          <Left>2.04399in</Left>
+          <Height>0.25in</Height>
+          <Width>3.625in</Width>
+          <ZIndex>8</ZIndex>
+          <Visibility>
+            <Hidden>=IIf(Parameters!Idcliente.Value = 0, True, False)</Hidden>
+          </Visibility>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
       </ReportItems>
       <Style>
         <Border>
@@ -2564,6 +2601,10 @@
     </ReportParameter>
     <ReportParameter Name="Fecha">
       <DataType>DateTime</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Idcliente">
+      <DataType>Integer</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
   </ReportParameters>

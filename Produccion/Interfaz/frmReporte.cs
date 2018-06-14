@@ -614,7 +614,7 @@ namespace Interfaz
         }
         private void Incentivo_Trefilado()
         {
-            ReportParameter[] parametros = new ReportParameter[2];
+            ReportParameter[] parametros = new ReportParameter[3];
             PRODUCCIONDataSet ds = new PRODUCCIONDataSet();
             PRODUCCIONDataSetTableAdapters.incentivo_trefiladoTableAdapter rgta = new PRODUCCIONDataSetTableAdapters.incentivo_trefiladoTableAdapter();
             PRODUCCIONDataSetTableAdapters.incentivo_tref_indirectoTableAdapter rgta1 = new PRODUCCIONDataSetTableAdapters.incentivo_tref_indirectoTableAdapter();
@@ -624,8 +624,9 @@ namespace Interfaz
             lc.ReportPath = ruta;
             parametros[0] = new ReportParameter("Fecha", Fecha.ToShortDateString());
             parametros[1] = new ReportParameter("Empresa", Destino.ToString());
-            rgta.Fill(ds.incentivo_trefilado, Empresa);
-            rgta1.Fill(ds.incentivo_tref_indirecto, Empresa);
+            parametros[2] = new ReportParameter("Idcliente", Idcliente.ToString());
+            rgta.Fill(ds.incentivo_trefilado, Empresa,Idcliente);
+            rgta1.Fill(ds.incentivo_tref_indirecto, Empresa,Idcliente);
             ReportDataSource rds = new ReportDataSource();
             ReportDataSource rds1 = new ReportDataSource();
             reportViewer1.LocalReport.DisplayName = Reporte;
