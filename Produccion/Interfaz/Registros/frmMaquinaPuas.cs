@@ -17,6 +17,8 @@ namespace Interfaz.Registros
     {
         clsMaquina M = new clsMaquina();
         clsProducto P = new clsProducto();
+        clsTurno T = new clsTurno();
+        clsEmpleado E = new clsEmpleado();
         public frmMaquinaPuas()
         {
             InitializeComponent();
@@ -48,6 +50,32 @@ namespace Interfaz.Registros
             }
         }
 
+        private void ComboT()
+        {
+            try
+            {
+                cmbTurno.DataSource = T.Listar(true);
+                cmbTurno.DisplayMember = "DESCRIPCION";
+                cmbTurno.ValueMember = "ID_TURNO";
+            }
+            catch (Exception ex)
+            {
+                MessageBoxEx.Show(ex.Message);
+            }
+        }
+        private void ComboO()
+        {
+            try
+            {
+                cmbOperador.DataSource = E.ListarOA();
+                cmbOperador.DisplayMember = "NOMBRE";
+                cmbOperador.ValueMember = "ID_EMPLEADO";
+            }
+            catch (Exception ex)
+            {
+                MessageBoxEx.Show(ex.Message);
+            }
+        }
         private void frmMaquinaPuas_Load(object sender, EventArgs e)
         {
             ComboM();

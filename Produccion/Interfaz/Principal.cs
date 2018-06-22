@@ -126,6 +126,16 @@ namespace Interfaz
                     frmControlAlm obj = new frmControlAlm();
                     obj.Show();
                 }
+                if (form == "MainForm")
+                {
+                    TempSys.MainForm obj = new TempSys.MainForm();
+                    obj.Show();
+                }
+                if (form == "frmcMonitoreoMaquinas")
+                {
+                    Consultas.frmcMonitoreoMaquinas obj = new Consultas.frmcMonitoreoMaquinas();
+                    obj.Show();
+                }
             }
         }
 
@@ -208,6 +218,18 @@ namespace Interfaz
         {
             Program.Almacen = "LINEA GALV";
             form = "frmControlAlm";
+            AbrirForm(form);
+        }
+
+        private void btnTemperatura_Click(object sender, EventArgs e)
+        {
+            form = "MainForm";
+            AbrirForm(form);
+        }
+
+        private void btnMonitoreomaq_Click(object sender, EventArgs e)
+        {
+            form = "frmcMonitoreoMaquinas";
             AbrirForm(form);
         }
     }

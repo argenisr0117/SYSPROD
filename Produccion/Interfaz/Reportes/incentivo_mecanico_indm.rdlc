@@ -72,6 +72,7 @@
                   <CellContents>
                     <Textbox Name="TOTAL1">
                       <CanGrow>true</CanGrow>
+                      <HideDuplicates>DataSet1</HideDuplicates>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
@@ -214,6 +215,7 @@
                 <CellContents>
                   <Textbox Name="DESCRIPCION11">
                     <CanGrow>true</CanGrow>
+                    <HideDuplicates>DataSet1</HideDuplicates>
                     <KeepTogether>true</KeepTogether>
                     <Paragraphs>
                       <Paragraph>
@@ -297,9 +299,12 @@
           </SortExpression>
         </SortExpressions>
         <Top>1.06819in</Top>
-        <Left>0.34695in</Left>
+        <Left>4.1364in</Left>
         <Height>0.845in</Height>
         <Width>4.125in</Width>
+        <Visibility>
+          <Hidden>true</Hidden>
+        </Visibility>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -583,7 +588,7 @@
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
         <Top>1.06819in</Top>
-        <Left>4.59001in</Left>
+        <Left>0.33778in</Left>
         <Height>0.845in</Height>
         <Width>3.72918in</Width>
         <ZIndex>1</ZIndex>
@@ -1183,7 +1188,7 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>2.02082in</Height>
+    <Height>1.98957in</Height>
     <Style />
   </Body>
   <Width>8.5in</Width>

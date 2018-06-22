@@ -63,6 +63,16 @@ namespace Interfaz.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _3d_printing_software {
+            get {
+                object obj = ResourceManager.GetObject("3d-printing-software", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Add_Folder_icon {
             get {
                 object obj = ResourceManager.GetObject("Add-Folder-icon", resourceCulture);
@@ -316,6 +326,46 @@ namespace Interfaz.Properties {
         internal static System.Drawing.Bitmap forward__2_ {
             get {
                 object obj = ResourceManager.GetObject("forward (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gauge__1_ {
+            get {
+                object obj = ResourceManager.GetObject("gauge (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gauge__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("gauge (1)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gauge__1_2 {
+            get {
+                object obj = ResourceManager.GetObject("gauge (1)2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gauge__1_3 {
+            get {
+                object obj = ResourceManager.GetObject("gauge (1)3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

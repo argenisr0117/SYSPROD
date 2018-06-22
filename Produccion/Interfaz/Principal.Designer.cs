@@ -38,6 +38,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnTemperatura = new System.Windows.Forms.Button();
             this.btnconsultas = new System.Windows.Forms.Button();
             this.btnregistros = new System.Windows.Forms.Button();
             this.btnproduccion = new System.Windows.Forms.Button();
@@ -55,6 +56,7 @@
             this.btnAlmacenLineaGalv = new System.Windows.Forms.Button();
             this.btnAlmacenTerminados = new System.Windows.Forms.Button();
             this.btnAlmacenIntermedios = new System.Windows.Forms.Button();
+            this.btnMonitoreomaq = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -133,6 +135,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
+            this.panel2.Controls.Add(this.btnTemperatura);
             this.panel2.Controls.Add(this.btnconsultas);
             this.panel2.Controls.Add(this.btnregistros);
             this.panel2.Controls.Add(this.btnproduccion);
@@ -140,8 +143,28 @@
             this.panel2.ForeColor = System.Drawing.Color.Black;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(600, 112);
+            this.panel2.Size = new System.Drawing.Size(618, 112);
             this.panel2.TabIndex = 1;
+            // 
+            // btnTemperatura
+            // 
+            this.btnTemperatura.BackColor = System.Drawing.Color.DarkRed;
+            this.btnTemperatura.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTemperatura.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnTemperatura.FlatAppearance.BorderSize = 0;
+            this.btnTemperatura.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTemperatura.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTemperatura.ForeColor = System.Drawing.Color.White;
+            this.btnTemperatura.Image = global::Interfaz.Properties.Resources.gauge__1_3;
+            this.btnTemperatura.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnTemperatura.Location = new System.Drawing.Point(462, 0);
+            this.btnTemperatura.Name = "btnTemperatura";
+            this.btnTemperatura.Size = new System.Drawing.Size(154, 112);
+            this.btnTemperatura.TabIndex = 7;
+            this.btnTemperatura.Text = "Monitoreo Temperatura";
+            this.btnTemperatura.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnTemperatura.UseVisualStyleBackColor = false;
+            this.btnTemperatura.Click += new System.EventHandler(this.btnTemperatura_Click);
             // 
             // btnconsultas
             // 
@@ -154,9 +177,9 @@
             this.btnconsultas.ForeColor = System.Drawing.Color.White;
             this.btnconsultas.Image = global::Interfaz.Properties.Resources.la_busqueda_de_empleo;
             this.btnconsultas.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnconsultas.Location = new System.Drawing.Point(400, 0);
+            this.btnconsultas.Location = new System.Drawing.Point(308, 0);
             this.btnconsultas.Name = "btnconsultas";
-            this.btnconsultas.Size = new System.Drawing.Size(200, 112);
+            this.btnconsultas.Size = new System.Drawing.Size(154, 112);
             this.btnconsultas.TabIndex = 2;
             this.btnconsultas.Text = "Consultas Generales";
             this.btnconsultas.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -174,9 +197,9 @@
             this.btnregistros.ForeColor = System.Drawing.Color.White;
             this.btnregistros.Image = global::Interfaz.Properties.Resources.icono_registro_converted1;
             this.btnregistros.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnregistros.Location = new System.Drawing.Point(200, 0);
+            this.btnregistros.Location = new System.Drawing.Point(154, 0);
             this.btnregistros.Name = "btnregistros";
-            this.btnregistros.Size = new System.Drawing.Size(200, 112);
+            this.btnregistros.Size = new System.Drawing.Size(154, 112);
             this.btnregistros.TabIndex = 1;
             this.btnregistros.Text = "Registros Generales";
             this.btnregistros.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -196,7 +219,7 @@
             this.btnproduccion.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnproduccion.Location = new System.Drawing.Point(0, 0);
             this.btnproduccion.Name = "btnproduccion";
-            this.btnproduccion.Size = new System.Drawing.Size(200, 112);
+            this.btnproduccion.Size = new System.Drawing.Size(154, 112);
             this.btnproduccion.TabIndex = 0;
             this.btnproduccion.Text = "Producción Diaria";
             this.btnproduccion.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -211,6 +234,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
+            this.panel3.Controls.Add(this.btnMonitoreomaq);
             this.panel3.Controls.Add(this.btnIndustriaMenor);
             this.panel3.Controls.Add(this.btnGalvanizado);
             this.panel3.Controls.Add(this.btnTrefilado);
@@ -218,7 +242,7 @@
             this.panel3.ForeColor = System.Drawing.Color.Black;
             this.panel3.Location = new System.Drawing.Point(0, 112);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(600, 112);
+            this.panel3.Size = new System.Drawing.Size(618, 112);
             this.panel3.TabIndex = 3;
             // 
             // btnIndustriaMenor
@@ -232,9 +256,9 @@
             this.btnIndustriaMenor.ForeColor = System.Drawing.Color.White;
             this.btnIndustriaMenor.Image = global::Interfaz.Properties.Resources.proddiaria_converted;
             this.btnIndustriaMenor.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnIndustriaMenor.Location = new System.Drawing.Point(400, 0);
+            this.btnIndustriaMenor.Location = new System.Drawing.Point(308, 0);
             this.btnIndustriaMenor.Name = "btnIndustriaMenor";
-            this.btnIndustriaMenor.Size = new System.Drawing.Size(200, 112);
+            this.btnIndustriaMenor.Size = new System.Drawing.Size(154, 112);
             this.btnIndustriaMenor.TabIndex = 2;
             this.btnIndustriaMenor.Text = "Industria Menor";
             this.btnIndustriaMenor.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -252,9 +276,9 @@
             this.btnGalvanizado.ForeColor = System.Drawing.Color.White;
             this.btnGalvanizado.Image = global::Interfaz.Properties.Resources.proddiaria_converted;
             this.btnGalvanizado.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnGalvanizado.Location = new System.Drawing.Point(200, 0);
+            this.btnGalvanizado.Location = new System.Drawing.Point(154, 0);
             this.btnGalvanizado.Name = "btnGalvanizado";
-            this.btnGalvanizado.Size = new System.Drawing.Size(200, 112);
+            this.btnGalvanizado.Size = new System.Drawing.Size(154, 112);
             this.btnGalvanizado.TabIndex = 1;
             this.btnGalvanizado.Text = "Galvanizado";
             this.btnGalvanizado.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -274,7 +298,7 @@
             this.btnTrefilado.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnTrefilado.Location = new System.Drawing.Point(0, 0);
             this.btnTrefilado.Name = "btnTrefilado";
-            this.btnTrefilado.Size = new System.Drawing.Size(200, 112);
+            this.btnTrefilado.Size = new System.Drawing.Size(154, 112);
             this.btnTrefilado.TabIndex = 0;
             this.btnTrefilado.Text = "Trefilado";
             this.btnTrefilado.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -291,7 +315,7 @@
             this.panel4.ForeColor = System.Drawing.Color.Black;
             this.panel4.Location = new System.Drawing.Point(0, 224);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(600, 112);
+            this.panel4.Size = new System.Drawing.Size(618, 112);
             this.panel4.TabIndex = 4;
             // 
             // btnVerPruebasCald
@@ -305,9 +329,9 @@
             this.btnVerPruebasCald.ForeColor = System.Drawing.Color.White;
             this.btnVerPruebasCald.Image = global::Interfaz.Properties.Resources.visualizacion;
             this.btnVerPruebasCald.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnVerPruebasCald.Location = new System.Drawing.Point(400, 0);
+            this.btnVerPruebasCald.Location = new System.Drawing.Point(308, 0);
             this.btnVerPruebasCald.Name = "btnVerPruebasCald";
-            this.btnVerPruebasCald.Size = new System.Drawing.Size(200, 112);
+            this.btnVerPruebasCald.Size = new System.Drawing.Size(154, 112);
             this.btnVerPruebasCald.TabIndex = 2;
             this.btnVerPruebasCald.Text = "Visualizar Pruebas Calidad";
             this.btnVerPruebasCald.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -325,9 +349,9 @@
             this.btnPruebasCalidad.ForeColor = System.Drawing.Color.White;
             this.btnPruebasCalidad.Image = global::Interfaz.Properties.Resources.proddiaria_converted;
             this.btnPruebasCalidad.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnPruebasCalidad.Location = new System.Drawing.Point(200, 0);
+            this.btnPruebasCalidad.Location = new System.Drawing.Point(154, 0);
             this.btnPruebasCalidad.Name = "btnPruebasCalidad";
-            this.btnPruebasCalidad.Size = new System.Drawing.Size(200, 112);
+            this.btnPruebasCalidad.Size = new System.Drawing.Size(154, 112);
             this.btnPruebasCalidad.TabIndex = 1;
             this.btnPruebasCalidad.Text = "Registro Pruebas Calidad";
             this.btnPruebasCalidad.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -347,7 +371,7 @@
             this.btnOrden.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnOrden.Location = new System.Drawing.Point(0, 0);
             this.btnOrden.Name = "btnOrden";
-            this.btnOrden.Size = new System.Drawing.Size(200, 112);
+            this.btnOrden.Size = new System.Drawing.Size(154, 112);
             this.btnOrden.TabIndex = 0;
             this.btnOrden.Text = "Orden Producción";
             this.btnOrden.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -362,9 +386,9 @@
             this.panel5.Controls.Add(this.panel3);
             this.panel5.Controls.Add(this.panel2);
             this.panel5.ForeColor = System.Drawing.Color.Black;
-            this.panel5.Location = new System.Drawing.Point(161, 71);
+            this.panel5.Location = new System.Drawing.Point(152, 65);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(600, 450);
+            this.panel5.Size = new System.Drawing.Size(618, 450);
             this.panel5.TabIndex = 5;
             // 
             // panel6
@@ -377,7 +401,7 @@
             this.panel6.ForeColor = System.Drawing.Color.Black;
             this.panel6.Location = new System.Drawing.Point(0, 336);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(600, 112);
+            this.panel6.Size = new System.Drawing.Size(618, 112);
             this.panel6.TabIndex = 5;
             // 
             // btnAlmacenLineaGalv
@@ -391,9 +415,9 @@
             this.btnAlmacenLineaGalv.ForeColor = System.Drawing.Color.White;
             this.btnAlmacenLineaGalv.Image = global::Interfaz.Properties.Resources.almacen;
             this.btnAlmacenLineaGalv.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnAlmacenLineaGalv.Location = new System.Drawing.Point(400, 0);
+            this.btnAlmacenLineaGalv.Location = new System.Drawing.Point(308, 0);
             this.btnAlmacenLineaGalv.Name = "btnAlmacenLineaGalv";
-            this.btnAlmacenLineaGalv.Size = new System.Drawing.Size(200, 112);
+            this.btnAlmacenLineaGalv.Size = new System.Drawing.Size(154, 112);
             this.btnAlmacenLineaGalv.TabIndex = 2;
             this.btnAlmacenLineaGalv.Text = "Almacén Linea Galv.";
             this.btnAlmacenLineaGalv.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -411,9 +435,9 @@
             this.btnAlmacenTerminados.ForeColor = System.Drawing.Color.White;
             this.btnAlmacenTerminados.Image = global::Interfaz.Properties.Resources.almacen__1_;
             this.btnAlmacenTerminados.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnAlmacenTerminados.Location = new System.Drawing.Point(200, 0);
+            this.btnAlmacenTerminados.Location = new System.Drawing.Point(154, 0);
             this.btnAlmacenTerminados.Name = "btnAlmacenTerminados";
-            this.btnAlmacenTerminados.Size = new System.Drawing.Size(200, 112);
+            this.btnAlmacenTerminados.Size = new System.Drawing.Size(154, 112);
             this.btnAlmacenTerminados.TabIndex = 1;
             this.btnAlmacenTerminados.Text = "Almacén Terminados";
             this.btnAlmacenTerminados.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -433,12 +457,32 @@
             this.btnAlmacenIntermedios.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAlmacenIntermedios.Location = new System.Drawing.Point(0, 0);
             this.btnAlmacenIntermedios.Name = "btnAlmacenIntermedios";
-            this.btnAlmacenIntermedios.Size = new System.Drawing.Size(200, 112);
+            this.btnAlmacenIntermedios.Size = new System.Drawing.Size(154, 112);
             this.btnAlmacenIntermedios.TabIndex = 0;
             this.btnAlmacenIntermedios.Text = "Almacén Intermedios";
             this.btnAlmacenIntermedios.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAlmacenIntermedios.UseVisualStyleBackColor = false;
             this.btnAlmacenIntermedios.Click += new System.EventHandler(this.btnAlmacenIntermedios_Click);
+            // 
+            // btnMonitoreomaq
+            // 
+            this.btnMonitoreomaq.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
+            this.btnMonitoreomaq.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMonitoreomaq.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnMonitoreomaq.FlatAppearance.BorderSize = 0;
+            this.btnMonitoreomaq.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnMonitoreomaq.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMonitoreomaq.ForeColor = System.Drawing.Color.White;
+            this.btnMonitoreomaq.Image = global::Interfaz.Properties.Resources._3d_printing_software;
+            this.btnMonitoreomaq.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnMonitoreomaq.Location = new System.Drawing.Point(462, 0);
+            this.btnMonitoreomaq.Name = "btnMonitoreomaq";
+            this.btnMonitoreomaq.Size = new System.Drawing.Size(154, 112);
+            this.btnMonitoreomaq.TabIndex = 9;
+            this.btnMonitoreomaq.Text = "Monitoreo Máq. Púas";
+            this.btnMonitoreomaq.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnMonitoreomaq.UseVisualStyleBackColor = false;
+            this.btnMonitoreomaq.Click += new System.EventHandler(this.btnMonitoreomaq_Click);
             // 
             // Principal
             // 
@@ -494,5 +538,7 @@
         private System.Windows.Forms.Button btnAlmacenTerminados;
         private System.Windows.Forms.Button btnAlmacenLineaGalv;
         private System.Windows.Forms.Button btnAlmacenIntermedios;
+        private System.Windows.Forms.Button btnTemperatura;
+        private System.Windows.Forms.Button btnMonitoreomaq;
     }
 }

@@ -488,3 +488,9 @@ C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\RdlCompi
 C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\RdlCompile.compiled
 C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.exe
 C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.pdb
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\TempSys.exe
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\MccDaq.dll
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\TempSys.pdb
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\MccDaq.xml

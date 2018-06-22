@@ -767,8 +767,17 @@
       <Project>{4e0725ac-09c9-4a4e-8946-c8db6777ff14}</Project>
       <Name>Intermedia</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TempSys\TempSys.csproj">
+      <Project>{40f94533-da05-4686-9c9d-fb57a0910d21}</Project>
+      <Name>TempSys</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\3d-printing-software.png" />
+    <None Include="Resources\gauge %281%293.png" />
+    <None Include="Resources\gauge %281%292.png" />
+    <None Include="Resources\gauge %281%291.png" />
+    <None Include="Resources\gauge %281%29.png" />
     <None Include="Resources\refresh-button %281%29.png" />
     <None Include="Resources\exportar %281%29.png" />
     <None Include="Resources\exportar.png" />

@@ -118,35 +118,35 @@
             // generalToolStripMenuItem
             // 
             this.generalToolStripMenuItem.Name = "generalToolStripMenuItem";
-            this.generalToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.generalToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.generalToolStripMenuItem.Text = "GENERAL";
             this.generalToolStripMenuItem.Click += new System.EventHandler(this.generalToolStripMenuItem_Click);
             // 
             // intermediosToolStripMenuItem
             // 
             this.intermediosToolStripMenuItem.Name = "intermediosToolStripMenuItem";
-            this.intermediosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.intermediosToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.intermediosToolStripMenuItem.Text = "INTERMEDIOS";
             this.intermediosToolStripMenuItem.Click += new System.EventHandler(this.intermediosToolStripMenuItem_Click);
             // 
             // terminadosToolStripMenuItem
             // 
             this.terminadosToolStripMenuItem.Name = "terminadosToolStripMenuItem";
-            this.terminadosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.terminadosToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.terminadosToolStripMenuItem.Text = "TERMINADOS";
             this.terminadosToolStripMenuItem.Click += new System.EventHandler(this.terminadosToolStripMenuItem_Click);
             // 
             // lineaGalvanizadoToolStripMenuItem
             // 
             this.lineaGalvanizadoToolStripMenuItem.Name = "lineaGalvanizadoToolStripMenuItem";
-            this.lineaGalvanizadoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.lineaGalvanizadoToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.lineaGalvanizadoToolStripMenuItem.Text = "LINEA GALV.";
             this.lineaGalvanizadoToolStripMenuItem.Click += new System.EventHandler(this.lineaGalvanizadoToolStripMenuItem_Click);
             // 
             // kINNOXToolStripMenuItem
             // 
             this.kINNOXToolStripMenuItem.Name = "kINNOXToolStripMenuItem";
-            this.kINNOXToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.kINNOXToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.kINNOXToolStripMenuItem.Text = "KINNOX";
             this.kINNOXToolStripMenuItem.Click += new System.EventHandler(this.kINNOXToolStripMenuItem_Click);
             // 
