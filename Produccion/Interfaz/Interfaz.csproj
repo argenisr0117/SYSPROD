@@ -289,6 +289,12 @@
     <Compile Include="Registros\frmMaquinaPuas.Designer.cs">
       <DependentUpon>frmMaquinaPuas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Registros\frmMaquinasParadas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\frmMaquinasParadas.Designer.cs">
+      <DependentUpon>frmMaquinasParadas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Registros\frmOrdenProduccion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -528,6 +534,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registros\frmMaquinaPuas.resx">
       <DependentUpon>frmMaquinaPuas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros\frmMaquinasParadas.resx">
+      <DependentUpon>frmMaquinasParadas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registros\frmOrdenProduccion.resx">
       <DependentUpon>frmOrdenProduccion.cs</DependentUpon>
@@ -773,6 +782,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\technics.png" />
     <None Include="Resources\3d-printing-software.png" />
     <None Include="Resources\gauge %281%293.png" />
     <None Include="Resources\gauge %281%292.png" />

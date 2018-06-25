@@ -43,7 +43,13 @@ namespace Intermedia
             lst.Add(new clsParametros("@estado", objEstado));
             return dt = M.Listado("listado_dpto", lst);
         }
-
+        public DataTable Listar2(Boolean objEstado)
+        {
+            DataTable dt = new DataTable();
+            List<clsParametros> lst = new List<clsParametros>();
+            lst.Add(new clsParametros("@estado", objEstado));
+            return dt = M.Listado("listado_dpto2", lst);
+        }
         public string ActivarDepartamento()
         {
             string mensaje = "";

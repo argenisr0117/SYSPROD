@@ -126,7 +126,7 @@
             this.btnRegistrar.ForeColor = System.Drawing.Color.Black;
             this.btnRegistrar.Image = global::Interfaz.Properties.Resources.save_icon;
             this.btnRegistrar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnRegistrar.Location = new System.Drawing.Point(12, 443);
+            this.btnRegistrar.Location = new System.Drawing.Point(123, 424);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(102, 54);
             this.btnRegistrar.TabIndex = 158;
@@ -147,7 +147,7 @@
             this.btnEliminar.ForeColor = System.Drawing.Color.Black;
             this.btnEliminar.Image = global::Interfaz.Properties.Resources.delete_file_icon;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEliminar.Location = new System.Drawing.Point(392, 443);
+            this.btnEliminar.Location = new System.Drawing.Point(231, 424);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(102, 54);
             this.btnEliminar.TabIndex = 159;
@@ -167,13 +167,13 @@
             this.maquina,
             this.idproducto,
             this.idmaquina});
-            this.dtgvProductoMaq.Location = new System.Drawing.Point(12, 292);
+            this.dtgvProductoMaq.Location = new System.Drawing.Point(9, 225);
             this.dtgvProductoMaq.MultiSelect = false;
             this.dtgvProductoMaq.Name = "dtgvProductoMaq";
             this.dtgvProductoMaq.ReadOnly = true;
             this.dtgvProductoMaq.RowHeadersWidth = 20;
             this.dtgvProductoMaq.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvProductoMaq.Size = new System.Drawing.Size(482, 111);
+            this.dtgvProductoMaq.Size = new System.Drawing.Size(475, 191);
             this.dtgvProductoMaq.TabIndex = 160;
             // 
             // producto
@@ -220,6 +220,7 @@
             this.cmbTurno.Name = "cmbTurno";
             this.cmbTurno.Size = new System.Drawing.Size(394, 24);
             this.cmbTurno.TabIndex = 162;
+            this.cmbTurno.Visible = false;
             // 
             // label1
             // 
@@ -232,6 +233,7 @@
             this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 161;
             this.label1.Text = "TURNO:";
+            this.label1.Visible = false;
             // 
             // cmbOperador
             // 
@@ -247,6 +249,7 @@
             this.cmbOperador.Name = "cmbOperador";
             this.cmbOperador.Size = new System.Drawing.Size(394, 24);
             this.cmbOperador.TabIndex = 164;
+            this.cmbOperador.Visible = false;
             // 
             // label2
             // 
@@ -259,12 +262,13 @@
             this.label2.Size = new System.Drawing.Size(80, 13);
             this.label2.TabIndex = 163;
             this.label2.Text = "OPERADOR:";
+            this.label2.Visible = false;
             // 
             // frmMaquinaPuas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(522, 519);
+            this.ClientSize = new System.Drawing.Size(498, 490);
             this.Controls.Add(this.cmbOperador);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cmbTurno);

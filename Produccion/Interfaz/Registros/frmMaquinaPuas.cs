@@ -80,6 +80,8 @@ namespace Interfaz.Registros
         {
             ComboM();
             ComboP2();
+            ComboO();
+            ComboT();
             LlenarGrid();
         }
 

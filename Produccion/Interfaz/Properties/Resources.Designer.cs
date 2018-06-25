@@ -663,6 +663,16 @@ namespace Interfaz.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap technics {
+            get {
+                object obj = ResourceManager.GetObject("technics", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap texto_de_periodico {
             get {
                 object obj = ResourceManager.GetObject("texto-de-periodico", resourceCulture);
