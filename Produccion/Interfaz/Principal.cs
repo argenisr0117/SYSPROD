@@ -136,6 +136,11 @@ namespace Interfaz
                     Consultas.frmcMonitoreoMaquinas obj = new Consultas.frmcMonitoreoMaquinas();
                     obj.Show();
                 }
+                if (form == "frmMaquinasParadas")
+                {
+                    frmMaquinasParadas obj = new frmMaquinasParadas();
+                    obj.Show();
+                }
             }
         }
 
@@ -230,6 +235,12 @@ namespace Interfaz
         private void btnMonitoreomaq_Click(object sender, EventArgs e)
         {
             form = "frmcMonitoreoMaquinas";
+            AbrirForm(form);
+        }
+
+        private void btnMaquinasParadas_Click(object sender, EventArgs e)
+        {
+            form = "frmMaquinasParadas";
             AbrirForm(form);
         }
     }

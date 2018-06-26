@@ -44,6 +44,7 @@
             this.btnproduccion = new System.Windows.Forms.Button();
             this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnMonitoreomaq = new System.Windows.Forms.Button();
             this.btnIndustriaMenor = new System.Windows.Forms.Button();
             this.btnGalvanizado = new System.Windows.Forms.Button();
             this.btnTrefilado = new System.Windows.Forms.Button();
@@ -56,7 +57,7 @@
             this.btnAlmacenLineaGalv = new System.Windows.Forms.Button();
             this.btnAlmacenTerminados = new System.Windows.Forms.Button();
             this.btnAlmacenIntermedios = new System.Windows.Forms.Button();
-            this.btnMonitoreomaq = new System.Windows.Forms.Button();
+            this.btnMaquinasParadas = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -245,6 +246,26 @@
             this.panel3.Size = new System.Drawing.Size(618, 112);
             this.panel3.TabIndex = 3;
             // 
+            // btnMonitoreomaq
+            // 
+            this.btnMonitoreomaq.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
+            this.btnMonitoreomaq.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMonitoreomaq.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnMonitoreomaq.FlatAppearance.BorderSize = 0;
+            this.btnMonitoreomaq.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnMonitoreomaq.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMonitoreomaq.ForeColor = System.Drawing.Color.White;
+            this.btnMonitoreomaq.Image = global::Interfaz.Properties.Resources._3d_printing_software;
+            this.btnMonitoreomaq.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnMonitoreomaq.Location = new System.Drawing.Point(462, 0);
+            this.btnMonitoreomaq.Name = "btnMonitoreomaq";
+            this.btnMonitoreomaq.Size = new System.Drawing.Size(154, 112);
+            this.btnMonitoreomaq.TabIndex = 9;
+            this.btnMonitoreomaq.Text = "Monitoreo Máq. Púas";
+            this.btnMonitoreomaq.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnMonitoreomaq.UseVisualStyleBackColor = false;
+            this.btnMonitoreomaq.Click += new System.EventHandler(this.btnMonitoreomaq_Click);
+            // 
             // btnIndustriaMenor
             // 
             this.btnIndustriaMenor.BackColor = System.Drawing.Color.Peru;
@@ -308,6 +329,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
+            this.panel4.Controls.Add(this.btnMaquinasParadas);
             this.panel4.Controls.Add(this.btnVerPruebasCald);
             this.panel4.Controls.Add(this.btnPruebasCalidad);
             this.panel4.Controls.Add(this.btnOrden);
@@ -464,25 +486,25 @@
             this.btnAlmacenIntermedios.UseVisualStyleBackColor = false;
             this.btnAlmacenIntermedios.Click += new System.EventHandler(this.btnAlmacenIntermedios_Click);
             // 
-            // btnMonitoreomaq
+            // btnMaquinasParadas
             // 
-            this.btnMonitoreomaq.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
-            this.btnMonitoreomaq.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnMonitoreomaq.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnMonitoreomaq.FlatAppearance.BorderSize = 0;
-            this.btnMonitoreomaq.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnMonitoreomaq.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMonitoreomaq.ForeColor = System.Drawing.Color.White;
-            this.btnMonitoreomaq.Image = global::Interfaz.Properties.Resources._3d_printing_software;
-            this.btnMonitoreomaq.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnMonitoreomaq.Location = new System.Drawing.Point(462, 0);
-            this.btnMonitoreomaq.Name = "btnMonitoreomaq";
-            this.btnMonitoreomaq.Size = new System.Drawing.Size(154, 112);
-            this.btnMonitoreomaq.TabIndex = 9;
-            this.btnMonitoreomaq.Text = "Monitoreo Máq. Púas";
-            this.btnMonitoreomaq.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnMonitoreomaq.UseVisualStyleBackColor = false;
-            this.btnMonitoreomaq.Click += new System.EventHandler(this.btnMonitoreomaq_Click);
+            this.btnMaquinasParadas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnMaquinasParadas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMaquinasParadas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnMaquinasParadas.FlatAppearance.BorderSize = 0;
+            this.btnMaquinasParadas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnMaquinasParadas.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMaquinasParadas.ForeColor = System.Drawing.Color.White;
+            this.btnMaquinasParadas.Image = global::Interfaz.Properties.Resources.repairing;
+            this.btnMaquinasParadas.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnMaquinasParadas.Location = new System.Drawing.Point(462, 0);
+            this.btnMaquinasParadas.Name = "btnMaquinasParadas";
+            this.btnMaquinasParadas.Size = new System.Drawing.Size(156, 112);
+            this.btnMaquinasParadas.TabIndex = 11;
+            this.btnMaquinasParadas.Text = "Máquinas Paradas";
+            this.btnMaquinasParadas.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnMaquinasParadas.UseVisualStyleBackColor = false;
+            this.btnMaquinasParadas.Click += new System.EventHandler(this.btnMaquinasParadas_Click);
             // 
             // Principal
             // 
@@ -540,5 +562,6 @@
         private System.Windows.Forms.Button btnAlmacenIntermedios;
         private System.Windows.Forms.Button btnTemperatura;
         private System.Windows.Forms.Button btnMonitoreomaq;
+        private System.Windows.Forms.Button btnMaquinasParadas;
     }
 }

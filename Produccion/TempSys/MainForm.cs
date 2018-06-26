@@ -294,7 +294,7 @@ namespace TempSys
             }
             catch (Exception ex)
             {
-                //MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -362,6 +362,8 @@ namespace TempSys
             LlenarChart();
             LlenarChart2();
             LlenarChart3();
+            Temp_timer.Start();
+            UpdateDb_timer.Start();
             backgroundWorker1.RunWorkerAsync();
 
         }

@@ -22,7 +22,7 @@ namespace Interfaz.Registros
         clsDepartamento D = new clsDepartamento();
         clsMaquina M = new clsMaquina();
         clsMonitoreoMaq Mo = new clsMonitoreoMaq();
-        
+
         private void ComboD()
         {
             try
@@ -58,8 +58,8 @@ namespace Interfaz.Registros
         private void frmMaquinasParadas_Load(object sender, EventArgs e)
         {
             ComboD();
-            cmbDpto.SelectedValue = "Galv";
-            cmbDpto2.SelectedValue = "Galv";
+            cmbDpto.SelectedValue = "IndM";
+            cmbDpto2.SelectedValue = "Puas";
             ComboM();
             LlenarGridMaqParadas();
         }
@@ -79,7 +79,7 @@ namespace Interfaz.Registros
                     c.AutoSize = true;
                     flowLayoutPanel1.Controls.Add(c);
                 }
-               
+
             }
             catch (Exception ex)
             {
@@ -102,7 +102,7 @@ namespace Interfaz.Registros
             {
                 if (chbSelTodas.Checked)
                 {
-                    for(int x = 0; x < flowLayoutPanel1.Controls.Count; x++)
+                    for (int x = 0; x < flowLayoutPanel1.Controls.Count; x++)
                     {
                         c = (CheckBox)flowLayoutPanel1.Controls[x];
                         c.Checked = true;
@@ -128,25 +128,27 @@ namespace Interfaz.Registros
             {
                 if (flowLayoutPanel1.Controls.Count > 0)
                 {
-                    for (int x = 0; x < flowLayoutPanel1.Controls.Count; x++)
+                    if (dtpFecha.Value > DateTime.Now)
                     {
-                        c = (CheckBox)flowLayoutPanel1.Controls[x];
-                        if (c.Checked)
-                        {
-                            seleccion = true;
-                            if(dtpFecha.Value>DateTime.Now)
-                            {
+                        MessageBoxEx.Show("Hora de parada no puede \nser mayor que hora actual.", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
 
-                            }
-                            else
+                        for (int x = 0; x < flowLayoutPanel1.Controls.Count; x++)
+                        {
+                            c = (CheckBox)flowLayoutPanel1.Controls[x];
+                            if (c.Checked)
                             {
+                                seleccion = true;
+
                                 Mo.Idparada = 0;
                                 Mo.Valor = 0;
                                 Mo.Idmaquina = c.Tag.ToString();
                                 Mo.Duracion = 0;
                                 Mo.Fecha = dtpFecha.Value;
                                 Mo.Idmotivo = Convert.ToInt16(cmbMotivos.SelectedValue);
-                                if(txtComentario.Text=="")
+                                if (txtComentario.Text == "")
                                 {
                                     Mo.Comentario = "Maq. parada debido a " + cmbMotivos.Text;
                                 }
@@ -155,30 +157,29 @@ namespace Interfaz.Registros
                                     Mo.Comentario = txtComentario.Text;
                                 }
                                 msj = Mo.Registrar_ResolverMaqParada();
-                              
+                                c.Checked = false;
                             }
-                        
+
                         }
-                       
-                    }
-                    if (msj == "1")
-                    {
-                        MessageBoxEx.Show("Parada de máquina registrada", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        LlenarGridMaqParadas();
-                    }
-                    else
-                    {
-                        MessageBoxEx.Show("Ha ocurrido un error..", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    if (!seleccion)
-                    {
-                        MessageBoxEx.Show("No hay máquinas seleccionadas.", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        if (msj == "1")
+                        {
+                            MessageBoxEx.Show("Parada de máquina registrada", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            LlenarGridMaqParadas();
+                        }
+                        else
+                        {
+                            MessageBoxEx.Show("Ha ocurrido un error..", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        if (!seleccion)
+                        {
+                            MessageBoxEx.Show("No hay máquinas seleccionadas.", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-
+                MessageBoxEx.Show(ex.Message, "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -190,8 +191,10 @@ namespace Interfaz.Registros
                 DataTable dt = Mo.ObtenerMaqParadas();
                 dtgMaquinaParada.DataSource = null;
                 dtgMaquinaParada.DataSource = dt;
+                dtgMaquinaParada.Columns[0].Visible = false;
+                dtgMaquinaParada.Columns[4].Visible = false;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
 
             }
@@ -200,6 +203,28 @@ namespace Interfaz.Registros
         private void cmbDpto2_SelectedValueChanged(object sender, EventArgs e)
         {
             LlenarGridMaqParadas();
+        }
+
+        private void btnResolverMaq_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dtgMaquinaParada.SelectedRows.Count > 0)
+                {
+                    frmResolverMaqParada obj = new frmResolverMaqParada();
+                    obj.Fechap = Convert.ToDateTime(dtgMaquinaParada.CurrentRow.Cells[2].Value);
+                    obj.Idparada = Convert.ToInt16(dtgMaquinaParada.CurrentRow.Cells[0].Value);
+                    obj.Maquina = dtgMaquinaParada.CurrentRow.Cells[1].Value.ToString();
+                    obj.Motivo= dtgMaquinaParada.CurrentRow.Cells[3].Value.ToString();
+                    obj.Dpto = dtgMaquinaParada.CurrentRow.Cells[4].Value.ToString();
+                    obj.ShowDialog();
+                    LlenarGridMaqParadas();
+                }
+            }
+            catch(Exception ex)
+            {
+
+            }
         }
     }
 }

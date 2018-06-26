@@ -301,12 +301,12 @@
             // 
             this.dtgMaquinaParada.AllowUserToAddRows = false;
             this.dtgMaquinaParada.AllowUserToDeleteRows = false;
-            this.dtgMaquinaParada.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dtgMaquinaParada.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgMaquinaParada.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dtgMaquinaParada.BackgroundColor = System.Drawing.Color.LightGray;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -322,6 +322,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtgMaquinaParada.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtgMaquinaParada.Location = new System.Drawing.Point(6, 107);
+            this.dtgMaquinaParada.MultiSelect = false;
             this.dtgMaquinaParada.Name = "dtgMaquinaParada";
             this.dtgMaquinaParada.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -332,6 +333,8 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtgMaquinaParada.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dtgMaquinaParada.RowHeadersVisible = false;
+            this.dtgMaquinaParada.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgMaquinaParada.Size = new System.Drawing.Size(580, 238);
             this.dtgMaquinaParada.TabIndex = 145;
             // 
@@ -354,6 +357,7 @@
             this.btnResolverMaq.Text = "RESOLVER MÁQ.";
             this.btnResolverMaq.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnResolverMaq.UseVisualStyleBackColor = false;
+            this.btnResolverMaq.Click += new System.EventHandler(this.btnResolverMaq_Click);
             // 
             // btnRegistrar
             // 

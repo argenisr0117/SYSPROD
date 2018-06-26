@@ -69,7 +69,7 @@
             this.label2.BackColor = System.Drawing.Color.DarkRed;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(266, 3);
+            this.label2.Location = new System.Drawing.Point(253, 3);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(288, 30);
             this.label2.TabIndex = 3;

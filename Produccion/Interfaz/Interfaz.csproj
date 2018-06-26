@@ -325,6 +325,12 @@
     <Compile Include="Registros\frmProductoClienteLongitud.Designer.cs">
       <DependentUpon>frmProductoClienteLongitud.cs</DependentUpon>
     </Compile>
+    <Compile Include="Registros\frmResolverMaqParada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\frmResolverMaqParada.Designer.cs">
+      <DependentUpon>frmResolverMaqParada.cs</DependentUpon>
+    </Compile>
     <Compile Include="Registros\frmUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -552,6 +558,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registros\frmProductoClienteLongitud.resx">
       <DependentUpon>frmProductoClienteLongitud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros\frmResolverMaqParada.resx">
+      <DependentUpon>frmResolverMaqParada.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registros\frmUsuario.resx">
       <DependentUpon>frmUsuario.cs</DependentUpon>
@@ -782,6 +791,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\repairing.png" />
     <None Include="Resources\technics.png" />
     <None Include="Resources\3d-printing-software.png" />
     <None Include="Resources\gauge %281%293.png" />

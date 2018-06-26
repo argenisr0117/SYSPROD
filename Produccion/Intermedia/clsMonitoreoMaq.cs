@@ -60,7 +60,7 @@ namespace Intermedia
         public int Idparada
         {
             get { return Midparada; }
-            set { Midmotivo = value; }
+            set { Midparada = value; }
         }
         public string Idturno
         {
