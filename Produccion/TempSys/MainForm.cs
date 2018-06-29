@@ -32,6 +32,7 @@ namespace TempSys
         Global g = new Global();
         DataTable dt;
         DataTable dt2;
+        int k = 0;
         public string TipoHorno = "";
         public int Min = 0;
         public int Max = 0;
@@ -46,7 +47,6 @@ namespace TempSys
         public bool UpdateDb = false;
         public bool UpdateLecturasDesdeBd = false;
         public int seleccionada = 0;
-        public int k = 0;
         public MainForm()
         {
             InitializeComponent();
@@ -124,13 +124,12 @@ namespace TempSys
                     lbl.ForeColor = Color.DarkGreen;
                 }
             }
-
-
         }
 
         public void LlenarDtgTemperatura()
         {
-            if (k==0)
+
+            if (k == 0)
             {
                 temps_dtgv.DataSource = null;
                 temps_dtgv.DataSource = dt2;
@@ -144,7 +143,7 @@ namespace TempSys
                 temps_dtgv.DataSource = null;
                 temps_dtgv.DataSource = dt2;
             }
-           
+
         }
         private void Temp_timer_Tick(object sender, EventArgs e)
         {
@@ -183,61 +182,61 @@ namespace TempSys
 
                 lb_Entrada1.Text = ObtenerEntradas(0).ToUpper();
 
-                ULStat = DaqBoard.TIn(0, MccDaq.TempScale.Fahrenheit, out MyTemp, MccDaq.ThermocoupleOptions.NoFilter);
-                ValoresMinimosMaximosHornos(TipoHorno);
-                E0 = Convert.ToInt32(MyTemp);
-                //lblCh0Error.Text = ULStat.Message;
-                errormsj = ULStat.Message;
-                lb_error.Text = "Module Status: " + errormsj;
-                ActualizarValores(Convert.ToInt64(MyTemp), lb_entradaValue1, errormsj);
+                //ULStat = DaqBoard.TIn(0, MccDaq.TempScale.Fahrenheit, out MyTemp, MccDaq.ThermocoupleOptions.NoFilter);
+                //ValoresMinimosMaximosHornos(TipoHorno);
+                //E0 = Convert.ToInt32(MyTemp);
+                ////lblCh0Error.Text = ULStat.Message;
+                //errormsj = ULStat.Message;
+                //lb_error.Text = "Module Status: " + errormsj;
+                //ActualizarValores(Convert.ToInt64(MyTemp), lb_entradaValue1, errormsj);
 
                 lb_Entrada2.Text = ObtenerEntradas(1).ToUpper();
-                ULStat = DaqBoard.TIn(1, MccDaq.TempScale.Fahrenheit, out MyTemp, MccDaq.ThermocoupleOptions.NoFilter);
-                ValoresMinimosMaximosHornos(TipoHorno);
-                ActualizarValores(Convert.ToInt64(MyTemp), lb_entradaValue2, errormsj);
-                E1 = Convert.ToInt32(MyTemp);
+                //ULStat = DaqBoard.TIn(1, MccDaq.TempScale.Fahrenheit, out MyTemp, MccDaq.ThermocoupleOptions.NoFilter);
+                //ValoresMinimosMaximosHornos(TipoHorno);
+                //ActualizarValores(Convert.ToInt64(MyTemp), lb_entradaValue2, errormsj);
+                //E1 = Convert.ToInt32(MyTemp);
 
 
                 lb_Entrada3.Text = ObtenerEntradas(2).ToUpper();
-                ULStat = DaqBoard.TIn(2, MccDaq.TempScale.Fahrenheit, out MyTemp, MccDaq.ThermocoupleOptions.NoFilter);
-                ValoresMinimosMaximosHornos(TipoHorno);
-                ActualizarValores(Convert.ToInt64(MyTemp), lb_entradaValue3, errormsj);
-                E2 = Convert.ToInt32(MyTemp);
-                //lblCh2Error.Text = ULStat.Message;
+                //ULStat = DaqBoard.TIn(2, MccDaq.TempScale.Fahrenheit, out MyTemp, MccDaq.ThermocoupleOptions.NoFilter);
+                //ValoresMinimosMaximosHornos(TipoHorno);
+                //ActualizarValores(Convert.ToInt64(MyTemp), lb_entradaValue3, errormsj);
+                //E2 = Convert.ToInt32(MyTemp);
+                ////lblCh2Error.Text = ULStat.Message;
 
                 lb_Entrada4.Text = ObtenerEntradas(3).ToUpper();
-                ULStat = DaqBoard.TIn(3, MccDaq.TempScale.Fahrenheit, out MyTemp, MccDaq.ThermocoupleOptions.NoFilter);
-                ValoresMinimosMaximosHornos(TipoHorno);
-                ActualizarValores(Convert.ToInt64(MyTemp), lb_entradaValue4, errormsj);
-                E3 = Convert.ToInt32(MyTemp);
-                //lblCh3Error.Text = ULStat.Message;
+                //ULStat = DaqBoard.TIn(3, MccDaq.TempScale.Fahrenheit, out MyTemp, MccDaq.ThermocoupleOptions.NoFilter);
+                //ValoresMinimosMaximosHornos(TipoHorno);
+                //ActualizarValores(Convert.ToInt64(MyTemp), lb_entradaValue4, errormsj);
+                //E3 = Convert.ToInt32(MyTemp);
+                ////lblCh3Error.Text = ULStat.Message;
 
                 lb_Entrada5.Text = ObtenerEntradas(4).ToUpper();
-                ULStat = DaqBoard.TIn(4, MccDaq.TempScale.Fahrenheit, out MyTemp, MccDaq.ThermocoupleOptions.NoFilter);
-                ValoresMinimosMaximosHornos(TipoHorno);
-                ActualizarValores(Convert.ToInt64(MyTemp), lb_entradaValue5, errormsj);
-                //lblCh4Error.Text = ULStat.Message;
-                E4 = Convert.ToInt32(MyTemp);
+                //ULStat = DaqBoard.TIn(4, MccDaq.TempScale.Fahrenheit, out MyTemp, MccDaq.ThermocoupleOptions.NoFilter);
+                //ValoresMinimosMaximosHornos(TipoHorno);
+                //ActualizarValores(Convert.ToInt64(MyTemp), lb_entradaValue5, errormsj);
+                ////lblCh4Error.Text = ULStat.Message;
+                //E4 = Convert.ToInt32(MyTemp);
 
                 lb_Entrada6.Text = ObtenerEntradas(5).ToUpper();
-                ULStat = DaqBoard.TIn(5, MccDaq.TempScale.Fahrenheit, out MyTemp, MccDaq.ThermocoupleOptions.NoFilter);
-                ValoresMinimosMaximosHornos(TipoHorno);
-                ActualizarValores(Convert.ToInt64(MyTemp), lb_entradaValue6, errormsj);
-                E5 = Convert.ToInt32(MyTemp);
-                //lblCh5Error.Text = ULStat.Message;
+                //ULStat = DaqBoard.TIn(5, MccDaq.TempScale.Fahrenheit, out MyTemp, MccDaq.ThermocoupleOptions.NoFilter);
+                //ValoresMinimosMaximosHornos(TipoHorno);
+                //ActualizarValores(Convert.ToInt64(MyTemp), lb_entradaValue6, errormsj);
+                //E5 = Convert.ToInt32(MyTemp);
+                ////lblCh5Error.Text = ULStat.Message;
 
                 lb_Entrada7.Text = ObtenerEntradas(6).ToUpper();
-                ULStat = DaqBoard.TIn(6, MccDaq.TempScale.Fahrenheit, out MyTemp, MccDaq.ThermocoupleOptions.NoFilter);
-                ValoresMinimosMaximosHornos(TipoHorno);
-                ActualizarValores(Convert.ToInt64(MyTemp), lb_entradaValue7, errormsj);
-                E6 = Convert.ToInt32(MyTemp);
-                //lblCh6Error.Text = ULStat.Message;
+                //ULStat = DaqBoard.TIn(6, MccDaq.TempScale.Fahrenheit, out MyTemp, MccDaq.ThermocoupleOptions.NoFilter);
+                //ValoresMinimosMaximosHornos(TipoHorno);
+                //ActualizarValores(Convert.ToInt64(MyTemp), lb_entradaValue7, errormsj);
+                //E6 = Convert.ToInt32(MyTemp);
+                ////lblCh6Error.Text = ULStat.Message;
 
                 lb_Entrada8.Text = ObtenerEntradas(7).ToUpper();
-                ULStat = DaqBoard.TIn(7, MccDaq.TempScale.Fahrenheit, out MyTemp, MccDaq.ThermocoupleOptions.NoFilter);
-                ValoresMinimosMaximosHornos(TipoHorno);
-                ActualizarValores(Convert.ToInt64(MyTemp), lb_entradaValue8, errormsj);
-                E7 = Convert.ToInt32(MyTemp);
+                //ULStat = DaqBoard.TIn(7, MccDaq.TempScale.Fahrenheit, out MyTemp, MccDaq.ThermocoupleOptions.NoFilter);
+                //ValoresMinimosMaximosHornos(TipoHorno);
+                //ActualizarValores(Convert.ToInt64(MyTemp), lb_entradaValue8, errormsj);
+                //E7 = Convert.ToInt32(MyTemp);
                 Chart[] charts = { chartPlomoG, chartZincG, chartPlomoP };
                 if (UpdateDb && errormsj == "No error has occurred.")
                 {
@@ -264,10 +263,10 @@ namespace TempSys
                     seleccionada = Convert.ToInt32(temps_dtgv.Rows[seleccionada + 1].Index);
                     UpdateDb = false;
                     tm = DateTime.Now.ToString("HH:mm");
-                    if (tm == "07:58")
-                    {
-                        EnviarCorreo(charts);
-                    }
+                    //if (tm == "07:58")
+                    //{
+                    //    EnviarCorreo(charts);
+                    //}
 
                 }
                 if (UpdateLecturasDesdeBd && errormsj != "No error has occurred.")
@@ -275,10 +274,10 @@ namespace TempSys
                     LlenarDtgTemperatura();
                     LeerTemperaturaDesdeBD();
                     tm = DateTime.Now.ToString("HH:mm");
-                    if (tm == "07:58")
-                    {
-                        EnviarCorreo(charts);
-                    }
+                    //if (tm == "07:58")
+                    //{
+                    //    EnviarCorreo(charts);
+                    //}
                 }
                 errormsj = "";
                 Temp_timer.Start();
@@ -352,11 +351,12 @@ namespace TempSys
 
         private void cerrar_btn_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+
             Temp_timer_Tick(e, e);
             LeerTemperaturaDesdeBD();
             LlenarChart();
@@ -365,6 +365,7 @@ namespace TempSys
             Temp_timer.Start();
             UpdateDb_timer.Start();
             backgroundWorker1.RunWorkerAsync();
+
 
         }
 
@@ -428,7 +429,7 @@ namespace TempSys
                 double max_ = max.ToOADate();
                 //series.XValueType = ChartValueType.DateTime;
 
-                chartPlomoG.ChartAreas[0].AxisX.LabelStyle.Format = "yy-MM-dd hh:mm tt";
+                chartPlomoG.ChartAreas[0].AxisX.LabelStyle.Format = "dd-MM-yyyy hh:mm tt";
                 //series.Points.DataBindXY(new[] { 14, 15, 16, 17 },new[] { 0, 4, 10, 13});
                 series.Points.Clear();
                 series.Points.DataBindXY(xvalues, yvalues);
@@ -508,7 +509,7 @@ namespace TempSys
                 double max_ = max.ToOADate();
                 //series.XValueType = ChartValueType.DateTime;
 
-                chartZincG.ChartAreas[0].AxisX.LabelStyle.Format = "yy-MM-dd hh:mm tt";
+                chartZincG.ChartAreas[0].AxisX.LabelStyle.Format = "dd-MM-yyyy hh:mm tt";
                 //series.Points.DataBindXY(new[] { 14, 15, 16, 17 },new[] { 0, 4, 10, 13});
                 series.Points.Clear();
                 series.Points.DataBindXY(xvalues, yvalues);
@@ -588,7 +589,7 @@ namespace TempSys
                 double max_ = max.ToOADate();
                 //series.XValueType = ChartValueType.DateTime;
 
-                chartPlomoP.ChartAreas[0].AxisX.LabelStyle.Format = "yy-MM-dd hh:mm tt";
+                chartPlomoP.ChartAreas[0].AxisX.LabelStyle.Format = "dd-MM-yyyy hh:mm tt";
                 //series.Points.DataBindXY(new[] { 14, 15, 16, 17 },new[] { 0, 4, 10, 13});
                 //series.Points.Clear();
                 //series.Points.DataBindXY(xvalues, yvalues);
@@ -623,51 +624,52 @@ namespace TempSys
             }
         } // plomo grande
 
-        private void EnviarCorreo(Chart[] chart)
-        {
+        //private void EnviarCorreo(Chart[] chart)
+        //{
 
-            using (MemoryStream ms = new MemoryStream())
-            {
+        //    using (MemoryStream ms = new MemoryStream())
+        //    {
 
-                var correo = new MailMessage { From = new MailAddress("arosario@acerodelcibao.com", "Sistema de Producción") };
-                correo.To.Add("rbrito@acerodelcibao.com");
-                correo.Subject = "Gráficos de Temperatura";
+        //        var correo = new MailMessage { From = new MailAddress(Properties.Settings.Default.correo, "Sistema de Producción") };
+        //        correo.To.Add("rbrito@acerodelcibao.com");
+        //        correo.Subject = "Gráficos de Temperatura";
 
-                chart[0].SaveImage(ms, ChartImageFormat.Jpeg);
-                byte[] i = ms.ToArray();
-                ms.SetLength(0);
-                correo.Attachments.Add(new Attachment(new MemoryStream(i), "PlomoGrande.jpeg"));
-                chart[1].SaveImage(ms, ChartImageFormat.Jpeg);
-                byte[] i1 = ms.ToArray();
-                ms.SetLength(0);
-                correo.Attachments.Add(new Attachment(new MemoryStream(i1), "ZincGrande.jpeg"));
-                chart[2].SaveImage(ms, ChartImageFormat.Jpeg);
-                byte[] i2 = ms.ToArray();
-                correo.Attachments.Add(new Attachment(new MemoryStream(i2), "PlomoPeq.jpeg"));
+        //        chart[0].SaveImage(ms, ChartImageFormat.Jpeg);
+        //        byte[] i = ms.ToArray();
+        //        ms.SetLength(0);
+        //        correo.Attachments.Add(new Attachment(new MemoryStream(i), "PlomoGrande.jpeg"));
+        //        chart[1].SaveImage(ms, ChartImageFormat.Jpeg);
+        //        byte[] i1 = ms.ToArray();
+        //        ms.SetLength(0);
+        //        correo.Attachments.Add(new Attachment(new MemoryStream(i1), "ZincGrande.jpeg"));
+        //        chart[2].SaveImage(ms, ChartImageFormat.Jpeg);
+        //        byte[] i2 = ms.ToArray();
+        //        correo.Attachments.Add(new Attachment(new MemoryStream(i2), "PlomoPeq.jpeg"));
 
-                //correo.Attachments.Add(new Attachment(new MemoryStream(i), "Grafico.jpeg"));
-                using (var smtpclient = new SmtpClient("acerodelcibao.com"))
-                {
-                    smtpclient.EnableSsl = false;
-                    smtpclient.Port = 2500;
-                    smtpclient.Credentials = new System.Net.NetworkCredential("arosario@acerodelcibao.com", Properties.Settings.Default.clave);
-                    smtpclient.Send(correo);
-                }
+        //        //correo.Attachments.Add(new Attachment(new MemoryStream(i), "Grafico.jpeg"));
+        //        using (var smtpclient = new SmtpClient("acerodelcibao.com"))
+        //        {
+        //            smtpclient.EnableSsl = false;
+        //            smtpclient.Port = 2500;
+        //            smtpclient.Credentials = new System.Net.NetworkCredential(Properties.Settings.Default.correo, Properties.Settings.Default.clave);
+        //            smtpclient.Send(correo);
+        //        }
 
 
-            }
+        //    }
 
-        }
-
-        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
-        {
-            dt2 = g.ObtenerRegistrosTemperatura();
-        }
+        //}
 
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             LlenarDtgTemperatura();
             label2.Visible = false;
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            dt2 = g.ObtenerRegistrosTemperatura();
+
         }
     }
 }

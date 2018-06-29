@@ -158,6 +158,10 @@ namespace Interfaz.Registros
                                 }
                                 msj = Mo.Registrar_ResolverMaqParada();
                                 c.Checked = false;
+                                if (msj == "0")
+                                {
+                                    MessageBoxEx.Show("Ya se ha registrado una parada para esta máquina." + c.Text, "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
                             }
 
                         }
@@ -165,10 +169,6 @@ namespace Interfaz.Registros
                         {
                             MessageBoxEx.Show("Parada de máquina registrada", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             LlenarGridMaqParadas();
-                        }
-                        else
-                        {
-                            MessageBoxEx.Show("Ha ocurrido un error..", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                         if (!seleccion)
                         {

@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmcHistorialMonitoreo));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dtpHasta = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnBusqueda = new System.Windows.Forms.Button();
             this.dtpDesde = new System.Windows.Forms.DateTimePicker();
             this.lbFecha = new System.Windows.Forms.Label();
@@ -38,8 +40,6 @@
             this.cmbMaquina = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.lbTitulo = new System.Windows.Forms.Label();
-            this.dtpHasta = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +58,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(601, 89);
             this.panel1.TabIndex = 138;
+            // 
+            // dtpHasta
+            // 
+            this.dtpHasta.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpHasta.Location = new System.Drawing.Point(60, 48);
+            this.dtpHasta.Name = "dtpHasta";
+            this.dtpHasta.Size = new System.Drawing.Size(125, 20);
+            this.dtpHasta.TabIndex = 162;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(3, 52);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(52, 13);
+            this.label2.TabIndex = 161;
+            this.label2.Text = "HASTA:";
             // 
             // btnBusqueda
             // 
@@ -168,31 +188,11 @@
             this.lbTitulo.TabIndex = 137;
             this.lbTitulo.Text = "HISTORIAL DE PRODUCCIÓN";
             // 
-            // dtpHasta
-            // 
-            this.dtpHasta.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpHasta.Location = new System.Drawing.Point(60, 48);
-            this.dtpHasta.Name = "dtpHasta";
-            this.dtpHasta.Size = new System.Drawing.Size(125, 20);
-            this.dtpHasta.TabIndex = 162;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(3, 52);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
-            this.label2.TabIndex = 161;
-            this.label2.Text = "HASTA:";
-            // 
             // frmcHistorialMonitoreo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(622, 264);
+            this.ClientSize = new System.Drawing.Size(622, 206);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lbTitulo);
             this.DoubleBuffered = true;

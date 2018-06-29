@@ -18,6 +18,7 @@ namespace Interfaz
         public DateTime Fechaf { get; set; }
         public string Destino { get; set; }
         public string Turno { get; set; }
+        public string Dpto { get; set; }
         public string Reporte { get; set; }
         public string Nombre { get; set; }
         public double Acerado { get; set; }
@@ -27,6 +28,8 @@ namespace Interfaz
         public double Galvanizadoa { get; set; }
         public double Recocidoa { get; set; }
         public int Valor { get; set; }
+        public int idMotivo { get; set; }
+        public int Valor_ { get; set; } 
         public int Idpacking { get; set; }
         public int Idrepcalidad { get; set; }
         public string Empresa { get; set; }
@@ -163,6 +166,10 @@ namespace Interfaz
             else if (Valor == 21)
             {
                 FiltrarProduccionResumido();
+            }
+            else if (Valor == 22)
+            {
+                GraficosMaqParada();
             }
         }
 
@@ -571,6 +578,27 @@ namespace Interfaz
             reportViewer1.LocalReport.DisplayName = Reporte;
             rds.Name = "DataSet1";
             rds.Value = (ds.Tables["incentivo_mecanico"]);
+            reportViewer1.LocalReport.DataSources.Clear();
+            reportViewer1.LocalReport.SetParameters(parametros);
+            lc.DataSources.Add(rds);
+            this.reportViewer1.RefreshReport();
+        }
+        private void GraficosMaqParada()
+        {
+            ReportParameter[] parametros = new ReportParameter[2];
+            PRODUCCIONDataSet ds = new PRODUCCIONDataSet();
+            PRODUCCIONDataSetTableAdapters.obt_graficos_maq_paradaTableAdapter rgta = new PRODUCCIONDataSetTableAdapters.obt_graficos_maq_paradaTableAdapter();
+            reportViewer1.ProcessingMode = ProcessingMode.Local;
+            LocalReport lc = reportViewer1.LocalReport;
+            string ruta = "Reportes\\" + Nombre;
+            lc.ReportPath = ruta;
+            parametros[0] = new ReportParameter("Fechai", Fechai.ToShortDateString());
+            parametros[1] = new ReportParameter("Fechaf", Fechaf.ToShortDateString());
+            rgta.Fill(ds.obt_graficos_maq_parada,Maquina,Dpto,idMotivo,Valor_,Fechai,Fechaf);
+            ReportDataSource rds = new ReportDataSource();
+            reportViewer1.LocalReport.DisplayName = Reporte;
+            rds.Name = "DataSet1";
+            rds.Value = (ds.Tables["obt_graficos_maq_parada"]);
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.SetParameters(parametros);
             lc.DataSources.Add(rds);

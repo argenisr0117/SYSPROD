@@ -44,7 +44,7 @@
             this.lbTitulo.BackColor = System.Drawing.Color.DarkRed;
             this.lbTitulo.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTitulo.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lbTitulo.Location = new System.Drawing.Point(278, 9);
+            this.lbTitulo.Location = new System.Drawing.Point(284, 9);
             this.lbTitulo.Name = "lbTitulo";
             this.lbTitulo.Size = new System.Drawing.Size(283, 26);
             this.lbTitulo.TabIndex = 68;
@@ -52,15 +52,16 @@
             // 
             // EstadoMaqTimer
             // 
-            this.EstadoMaqTimer.Interval = 1000;
+            this.EstadoMaqTimer.Interval = 15000;
             this.EstadoMaqTimer.Tick += new System.EventHandler(this.EstadoMaqTimer_Tick);
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 44);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 64);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(839, 464);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(850, 418);
             this.flowLayoutPanel1.TabIndex = 69;
             // 
             // panel1
@@ -69,14 +70,14 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(839, 44);
+            this.panel1.Size = new System.Drawing.Size(850, 64);
             this.panel1.TabIndex = 70;
             // 
             // frmcMonitoreoMaquinas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(839, 508);
+            this.ClientSize = new System.Drawing.Size(850, 482);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;

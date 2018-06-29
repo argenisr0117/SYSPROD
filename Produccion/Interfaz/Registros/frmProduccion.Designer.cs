@@ -48,26 +48,15 @@
             this.btnbuscar3 = new System.Windows.Forms.Button();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabregistro = new System.Windows.Forms.TabPage();
-            this.dtpfecha = new System.Windows.Forms.DateTimePicker();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.lbdescripcion = new System.Windows.Forms.Label();
-            this.cbdestino = new Interfaz.Controles.comboboxar(this.components);
-            this.cbmaquina = new Interfaz.Controles.comboboxar(this.components);
-            this.cbproducto = new Interfaz.Controles.comboboxar(this.components);
-            this.cbturno = new Interfaz.Controles.comboboxar(this.components);
-            this.cbayudante = new Interfaz.Controles.comboboxar(this.components);
-            this.cboperador = new Interfaz.Controles.comboboxar(this.components);
-            this.cbsupervisor = new Interfaz.Controles.comboboxar(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtreporte = new Interfaz.Controles.textboxN(this.components);
             this.label16 = new System.Windows.Forms.Label();
             this.dtp2 = new System.Windows.Forms.DateTimePicker();
             this.label15 = new System.Windows.Forms.Label();
-            this.txtcantidad = new Interfaz.Controles.textboxN(this.components);
-            this.txttarjeta = new Interfaz.Controles.textboxN(this.components);
             this.label14 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -105,6 +94,17 @@
             this.listadoTerminadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lISTADOLINEAGALVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.dtpFecha1 = new System.Windows.Forms.DateTimePicker();
+            this.cbdestino = new Interfaz.Controles.comboboxar(this.components);
+            this.cbmaquina = new Interfaz.Controles.comboboxar(this.components);
+            this.cbproducto = new Interfaz.Controles.comboboxar(this.components);
+            this.cbturno = new Interfaz.Controles.comboboxar(this.components);
+            this.cbayudante = new Interfaz.Controles.comboboxar(this.components);
+            this.cboperador = new Interfaz.Controles.comboboxar(this.components);
+            this.cbsupervisor = new Interfaz.Controles.comboboxar(this.components);
+            this.txtreporte = new Interfaz.Controles.textboxN(this.components);
+            this.txtcantidad = new Interfaz.Controles.textboxN(this.components);
+            this.txttarjeta = new Interfaz.Controles.textboxN(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.tabControl.SuspendLayout();
             this.tabregistro.SuspendLayout();
@@ -176,7 +176,7 @@
             this.btnsalir.ForeColor = System.Drawing.Color.Black;
             this.btnsalir.Image = global::Interfaz.Properties.Resources.salir_icon;
             this.btnsalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnsalir.Location = new System.Drawing.Point(492, 0);
+            this.btnsalir.Location = new System.Drawing.Point(328, 0);
             this.btnsalir.Name = "btnsalir";
             this.btnsalir.Size = new System.Drawing.Size(81, 55);
             this.btnsalir.TabIndex = 49;
@@ -199,7 +199,7 @@
             this.btneliminar.ForeColor = System.Drawing.Color.Black;
             this.btneliminar.Image = global::Interfaz.Properties.Resources.delete_file_icon;
             this.btneliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btneliminar.Location = new System.Drawing.Point(410, 0);
+            this.btneliminar.Location = new System.Drawing.Point(246, 0);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Size = new System.Drawing.Size(82, 55);
             this.btneliminar.TabIndex = 51;
@@ -222,7 +222,7 @@
             this.btnmostrar.ForeColor = System.Drawing.Color.Black;
             this.btnmostrar.Image = global::Interfaz.Properties.Resources.Show_all_icon;
             this.btnmostrar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnmostrar.Location = new System.Drawing.Point(328, 0);
+            this.btnmostrar.Location = new System.Drawing.Point(164, 0);
             this.btnmostrar.Name = "btnmostrar";
             this.btnmostrar.Size = new System.Drawing.Size(82, 55);
             this.btnmostrar.TabIndex = 54;
@@ -245,7 +245,7 @@
             this.btnbuscar1.ForeColor = System.Drawing.Color.Black;
             this.btnbuscar1.Image = global::Interfaz.Properties.Resources.Search_icon1;
             this.btnbuscar1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnbuscar1.Location = new System.Drawing.Point(246, 0);
+            this.btnbuscar1.Location = new System.Drawing.Point(82, 0);
             this.btnbuscar1.Name = "btnbuscar1";
             this.btnbuscar1.Size = new System.Drawing.Size(82, 55);
             this.btnbuscar1.TabIndex = 53;
@@ -268,7 +268,7 @@
             this.btnregistrar.ForeColor = System.Drawing.Color.Black;
             this.btnregistrar.Image = global::Interfaz.Properties.Resources.save_icon;
             this.btnregistrar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnregistrar.Location = new System.Drawing.Point(164, 0);
+            this.btnregistrar.Location = new System.Drawing.Point(0, 0);
             this.btnregistrar.Name = "btnregistrar";
             this.btnregistrar.Size = new System.Drawing.Size(82, 55);
             this.btnregistrar.TabIndex = 50;
@@ -282,7 +282,6 @@
             // btnimportar
             // 
             this.btnimportar.BackColor = System.Drawing.Color.White;
-            this.btnimportar.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnimportar.Enabled = false;
             this.btnimportar.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
             this.btnimportar.FlatAppearance.BorderSize = 2;
@@ -292,7 +291,7 @@
             this.btnimportar.ForeColor = System.Drawing.Color.Black;
             this.btnimportar.Image = global::Interfaz.Properties.Resources.Excel_icon;
             this.btnimportar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnimportar.Location = new System.Drawing.Point(82, 0);
+            this.btnimportar.Location = new System.Drawing.Point(803, 368);
             this.btnimportar.Name = "btnimportar";
             this.btnimportar.Size = new System.Drawing.Size(82, 55);
             this.btnimportar.TabIndex = 52;
@@ -301,12 +300,12 @@
             this.btnimportar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.toolTip1.SetToolTip(this.btnimportar, "Importar");
             this.btnimportar.UseVisualStyleBackColor = false;
+            this.btnimportar.Visible = false;
             this.btnimportar.Click += new System.EventHandler(this.btnimportar_Click);
             // 
             // btnagregar
             // 
             this.btnagregar.BackColor = System.Drawing.Color.White;
-            this.btnagregar.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnagregar.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
             this.btnagregar.FlatAppearance.BorderSize = 2;
             this.btnagregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
@@ -315,7 +314,7 @@
             this.btnagregar.ForeColor = System.Drawing.Color.Black;
             this.btnagregar.Image = global::Interfaz.Properties.Resources.add_icon;
             this.btnagregar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnagregar.Location = new System.Drawing.Point(0, 0);
+            this.btnagregar.Location = new System.Drawing.Point(715, 368);
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Size = new System.Drawing.Size(82, 55);
             this.btnagregar.TabIndex = 48;
@@ -324,6 +323,7 @@
             this.btnagregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.toolTip1.SetToolTip(this.btnagregar, "Agregar");
             this.btnagregar.UseVisualStyleBackColor = false;
+            this.btnagregar.Visible = false;
             this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
             // 
             // btneliminar1
@@ -414,11 +414,13 @@
             // 
             // tabregistro
             // 
+            this.tabregistro.Controls.Add(this.dtpFecha1);
             this.tabregistro.Controls.Add(this.btnActualizar);
-            this.tabregistro.Controls.Add(this.dtpfecha);
             this.tabregistro.Controls.Add(this.panel5);
             this.tabregistro.Controls.Add(this.btnbuscar);
             this.tabregistro.Controls.Add(this.cbdestino);
+            this.tabregistro.Controls.Add(this.btnagregar);
+            this.tabregistro.Controls.Add(this.btnimportar);
             this.tabregistro.Controls.Add(this.cbmaquina);
             this.tabregistro.Controls.Add(this.cbproducto);
             this.tabregistro.Controls.Add(this.cbturno);
@@ -451,20 +453,6 @@
             this.tabregistro.Text = "REGISTRO";
             this.tabregistro.UseVisualStyleBackColor = true;
             this.tabregistro.MouseEnter += new System.EventHandler(this.tabregistro_MouseEnter);
-            // 
-            // dtpfecha
-            // 
-            this.dtpfecha.BackColor = System.Drawing.Color.White;
-            this.dtpfecha.CustomFormat = "dd/MM/yyyy";
-            this.dtpfecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpfecha.ForeColor = System.Drawing.Color.Black;
-            this.dtpfecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpfecha.Location = new System.Drawing.Point(81, 66);
-            this.dtpfecha.Name = "dtpfecha";
-            this.dtpfecha.Size = new System.Drawing.Size(111, 20);
-            this.dtpfecha.TabIndex = 106;
-            this.dtpfecha.TabStop = false;
-            this.dtpfecha.ValueChanged += new System.EventHandler(this.dtpfecha_ValueChanged_1);
             // 
             // panel5
             // 
@@ -519,132 +507,6 @@
             this.lbdescripcion.TabIndex = 104;
             this.lbdescripcion.Text = "..";
             // 
-            // cbdestino
-            // 
-            this.cbdestino.BackColor = System.Drawing.Color.Gainsboro;
-            this.cbdestino.DropDownHeight = 60;
-            this.cbdestino.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbdestino.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbdestino.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbdestino.ForeColor = System.Drawing.Color.Black;
-            this.cbdestino.FormattingEnabled = true;
-            this.cbdestino.IntegralHeight = false;
-            this.cbdestino.Location = new System.Drawing.Point(81, 334);
-            this.cbdestino.Name = "cbdestino";
-            this.cbdestino.Size = new System.Drawing.Size(295, 21);
-            this.cbdestino.TabIndex = 102;
-            this.cbdestino.TabStop = false;
-            this.cbdestino.Validar = false;
-            this.cbdestino.SelectedValueChanged += new System.EventHandler(this.cbdestino_SelectedValueChanged);
-            // 
-            // cbmaquina
-            // 
-            this.cbmaquina.BackColor = System.Drawing.Color.Gainsboro;
-            this.cbmaquina.DropDownHeight = 60;
-            this.cbmaquina.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbmaquina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbmaquina.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbmaquina.ForeColor = System.Drawing.Color.Black;
-            this.cbmaquina.FormattingEnabled = true;
-            this.cbmaquina.IntegralHeight = false;
-            this.cbmaquina.Location = new System.Drawing.Point(82, 300);
-            this.cbmaquina.Name = "cbmaquina";
-            this.cbmaquina.Size = new System.Drawing.Size(294, 21);
-            this.cbmaquina.TabIndex = 101;
-            this.cbmaquina.TabStop = false;
-            this.cbmaquina.Validar = false;
-            this.cbmaquina.SelectedValueChanged += new System.EventHandler(this.cbmaquina_SelectedValueChanged);
-            // 
-            // cbproducto
-            // 
-            this.cbproducto.BackColor = System.Drawing.Color.Gainsboro;
-            this.cbproducto.DropDownHeight = 60;
-            this.cbproducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbproducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbproducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbproducto.ForeColor = System.Drawing.Color.Black;
-            this.cbproducto.FormattingEnabled = true;
-            this.cbproducto.IntegralHeight = false;
-            this.cbproducto.Location = new System.Drawing.Point(81, 266);
-            this.cbproducto.Name = "cbproducto";
-            this.cbproducto.Size = new System.Drawing.Size(296, 21);
-            this.cbproducto.TabIndex = 100;
-            this.cbproducto.TabStop = false;
-            this.cbproducto.Validar = false;
-            this.cbproducto.SelectedValueChanged += new System.EventHandler(this.cbproducto_SelectedValueChanged);
-            // 
-            // cbturno
-            // 
-            this.cbturno.BackColor = System.Drawing.Color.Gainsboro;
-            this.cbturno.DropDownHeight = 60;
-            this.cbturno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbturno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbturno.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbturno.ForeColor = System.Drawing.Color.Black;
-            this.cbturno.FormattingEnabled = true;
-            this.cbturno.IntegralHeight = false;
-            this.cbturno.Location = new System.Drawing.Point(81, 199);
-            this.cbturno.Name = "cbturno";
-            this.cbturno.Size = new System.Drawing.Size(295, 21);
-            this.cbturno.TabIndex = 99;
-            this.cbturno.TabStop = false;
-            this.cbturno.Validar = false;
-            this.cbturno.SelectedValueChanged += new System.EventHandler(this.cbturno_SelectedValueChanged);
-            // 
-            // cbayudante
-            // 
-            this.cbayudante.BackColor = System.Drawing.Color.Gainsboro;
-            this.cbayudante.DropDownHeight = 60;
-            this.cbayudante.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbayudante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbayudante.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbayudante.ForeColor = System.Drawing.Color.Black;
-            this.cbayudante.FormattingEnabled = true;
-            this.cbayudante.IntegralHeight = false;
-            this.cbayudante.Location = new System.Drawing.Point(81, 165);
-            this.cbayudante.Name = "cbayudante";
-            this.cbayudante.Size = new System.Drawing.Size(295, 21);
-            this.cbayudante.TabIndex = 98;
-            this.cbayudante.TabStop = false;
-            this.cbayudante.Validar = false;
-            this.cbayudante.SelectedValueChanged += new System.EventHandler(this.cbayudante_SelectedValueChanged);
-            // 
-            // cboperador
-            // 
-            this.cboperador.BackColor = System.Drawing.Color.Gainsboro;
-            this.cboperador.DropDownHeight = 60;
-            this.cboperador.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboperador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cboperador.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboperador.ForeColor = System.Drawing.Color.Black;
-            this.cboperador.FormattingEnabled = true;
-            this.cboperador.IntegralHeight = false;
-            this.cboperador.Location = new System.Drawing.Point(81, 131);
-            this.cboperador.Name = "cboperador";
-            this.cboperador.Size = new System.Drawing.Size(295, 21);
-            this.cboperador.TabIndex = 97;
-            this.cboperador.TabStop = false;
-            this.cboperador.Validar = false;
-            this.cboperador.SelectedValueChanged += new System.EventHandler(this.cboperador_SelectedValueChanged);
-            // 
-            // cbsupervisor
-            // 
-            this.cbsupervisor.BackColor = System.Drawing.Color.Gainsboro;
-            this.cbsupervisor.DropDownHeight = 60;
-            this.cbsupervisor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbsupervisor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbsupervisor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbsupervisor.ForeColor = System.Drawing.Color.Black;
-            this.cbsupervisor.FormattingEnabled = true;
-            this.cbsupervisor.IntegralHeight = false;
-            this.cbsupervisor.Location = new System.Drawing.Point(81, 97);
-            this.cbsupervisor.Name = "cbsupervisor";
-            this.cbsupervisor.Size = new System.Drawing.Size(295, 21);
-            this.cbsupervisor.TabIndex = 96;
-            this.cbsupervisor.TabStop = false;
-            this.cbsupervisor.Validar = false;
-            this.cbsupervisor.SelectedValueChanged += new System.EventHandler(this.cbsupervisor_SelectedValueChanged_1);
-            // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -653,13 +515,11 @@
             this.panel2.Controls.Add(this.btnmostrar);
             this.panel2.Controls.Add(this.btnbuscar1);
             this.panel2.Controls.Add(this.btnregistrar);
-            this.panel2.Controls.Add(this.btnimportar);
-            this.panel2.Controls.Add(this.btnagregar);
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.ForeColor = System.Drawing.Color.Black;
-            this.panel2.Location = new System.Drawing.Point(211, 454);
+            this.panel2.Location = new System.Drawing.Point(292, 454);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(575, 57);
+            this.panel2.Size = new System.Drawing.Size(412, 57);
             this.panel2.TabIndex = 88;
             // 
             // panel1
@@ -675,21 +535,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(246, 100);
             this.panel1.TabIndex = 87;
-            // 
-            // txtreporte
-            // 
-            this.txtreporte.BackColor = System.Drawing.Color.White;
-            this.txtreporte.Enabled = false;
-            this.txtreporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtreporte.ForeColor = System.Drawing.Color.Black;
-            this.txtreporte.Location = new System.Drawing.Point(101, 54);
-            this.txtreporte.Multiline = true;
-            this.txtreporte.Name = "txtreporte";
-            this.txtreporte.Size = new System.Drawing.Size(120, 20);
-            this.txtreporte.TabIndex = 81;
-            this.txtreporte.TabStop = false;
-            this.txtreporte.Validar = false;
-            this.txtreporte.Valor = Interfaz.Controles.textboxN.Tipo.Números;
             // 
             // label16
             // 
@@ -727,34 +572,6 @@
             this.label15.Size = new System.Drawing.Size(47, 13);
             this.label15.TabIndex = 78;
             this.label15.Text = "FECHA";
-            // 
-            // txtcantidad
-            // 
-            this.txtcantidad.BackColor = System.Drawing.Color.White;
-            this.txtcantidad.ForeColor = System.Drawing.Color.Black;
-            this.txtcantidad.Location = new System.Drawing.Point(82, 368);
-            this.txtcantidad.Multiline = true;
-            this.txtcantidad.Name = "txtcantidad";
-            this.txtcantidad.Size = new System.Drawing.Size(110, 20);
-            this.txtcantidad.TabIndex = 86;
-            this.txtcantidad.TabStop = false;
-            this.txtcantidad.Validar = false;
-            this.txtcantidad.Valor = Interfaz.Controles.textboxN.Tipo.Números;
-            this.txtcantidad.TextChanged += new System.EventHandler(this.txtcantidad_TextChanged);
-            // 
-            // txttarjeta
-            // 
-            this.txttarjeta.BackColor = System.Drawing.Color.White;
-            this.txttarjeta.ForeColor = System.Drawing.Color.Black;
-            this.txttarjeta.Location = new System.Drawing.Point(82, 232);
-            this.txttarjeta.Multiline = true;
-            this.txttarjeta.Name = "txttarjeta";
-            this.txttarjeta.Size = new System.Drawing.Size(294, 20);
-            this.txttarjeta.TabIndex = 82;
-            this.txttarjeta.TabStop = false;
-            this.txttarjeta.Validar = false;
-            this.txttarjeta.Valor = Interfaz.Controles.textboxN.Tipo.Números;
-            this.txttarjeta.TextChanged += new System.EventHandler(this.txttarjeta_TextChanged);
             // 
             // label14
             // 
@@ -1153,6 +970,176 @@
             this.lISTADOLINEAGALVToolStripMenuItem.Text = "LISTADO LINEA GALV.";
             this.lISTADOLINEAGALVToolStripMenuItem.Click += new System.EventHandler(this.lISTADOLINEAGALVToolStripMenuItem_Click);
             // 
+            // dtpFecha1
+            // 
+            this.dtpFecha1.CustomFormat = "dd/MM/yyyy";
+            this.dtpFecha1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFecha1.Location = new System.Drawing.Point(81, 70);
+            this.dtpFecha1.Name = "dtpFecha1";
+            this.dtpFecha1.Size = new System.Drawing.Size(200, 20);
+            this.dtpFecha1.TabIndex = 108;
+            // 
+            // cbdestino
+            // 
+            this.cbdestino.BackColor = System.Drawing.Color.Gainsboro;
+            this.cbdestino.DropDownHeight = 60;
+            this.cbdestino.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbdestino.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbdestino.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbdestino.ForeColor = System.Drawing.Color.Black;
+            this.cbdestino.FormattingEnabled = true;
+            this.cbdestino.IntegralHeight = false;
+            this.cbdestino.Location = new System.Drawing.Point(81, 334);
+            this.cbdestino.Name = "cbdestino";
+            this.cbdestino.Size = new System.Drawing.Size(295, 21);
+            this.cbdestino.TabIndex = 102;
+            this.cbdestino.TabStop = false;
+            this.cbdestino.Validar = false;
+            // 
+            // cbmaquina
+            // 
+            this.cbmaquina.BackColor = System.Drawing.Color.Gainsboro;
+            this.cbmaquina.DropDownHeight = 60;
+            this.cbmaquina.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbmaquina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbmaquina.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbmaquina.ForeColor = System.Drawing.Color.Black;
+            this.cbmaquina.FormattingEnabled = true;
+            this.cbmaquina.IntegralHeight = false;
+            this.cbmaquina.Location = new System.Drawing.Point(82, 300);
+            this.cbmaquina.Name = "cbmaquina";
+            this.cbmaquina.Size = new System.Drawing.Size(294, 21);
+            this.cbmaquina.TabIndex = 101;
+            this.cbmaquina.TabStop = false;
+            this.cbmaquina.Validar = false;
+            // 
+            // cbproducto
+            // 
+            this.cbproducto.BackColor = System.Drawing.Color.Gainsboro;
+            this.cbproducto.DropDownHeight = 60;
+            this.cbproducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbproducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbproducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbproducto.ForeColor = System.Drawing.Color.Black;
+            this.cbproducto.FormattingEnabled = true;
+            this.cbproducto.IntegralHeight = false;
+            this.cbproducto.Location = new System.Drawing.Point(81, 266);
+            this.cbproducto.Name = "cbproducto";
+            this.cbproducto.Size = new System.Drawing.Size(296, 21);
+            this.cbproducto.TabIndex = 100;
+            this.cbproducto.TabStop = false;
+            this.cbproducto.Validar = false;
+            this.cbproducto.SelectedValueChanged += new System.EventHandler(this.cbproducto_SelectedValueChanged);
+            // 
+            // cbturno
+            // 
+            this.cbturno.BackColor = System.Drawing.Color.Gainsboro;
+            this.cbturno.DropDownHeight = 60;
+            this.cbturno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbturno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbturno.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbturno.ForeColor = System.Drawing.Color.Black;
+            this.cbturno.FormattingEnabled = true;
+            this.cbturno.IntegralHeight = false;
+            this.cbturno.Location = new System.Drawing.Point(81, 199);
+            this.cbturno.Name = "cbturno";
+            this.cbturno.Size = new System.Drawing.Size(295, 21);
+            this.cbturno.TabIndex = 99;
+            this.cbturno.TabStop = false;
+            this.cbturno.Validar = false;
+            // 
+            // cbayudante
+            // 
+            this.cbayudante.BackColor = System.Drawing.Color.Gainsboro;
+            this.cbayudante.DropDownHeight = 60;
+            this.cbayudante.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbayudante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbayudante.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbayudante.ForeColor = System.Drawing.Color.Black;
+            this.cbayudante.FormattingEnabled = true;
+            this.cbayudante.IntegralHeight = false;
+            this.cbayudante.Location = new System.Drawing.Point(81, 165);
+            this.cbayudante.Name = "cbayudante";
+            this.cbayudante.Size = new System.Drawing.Size(295, 21);
+            this.cbayudante.TabIndex = 98;
+            this.cbayudante.TabStop = false;
+            this.cbayudante.Validar = false;
+            // 
+            // cboperador
+            // 
+            this.cboperador.BackColor = System.Drawing.Color.Gainsboro;
+            this.cboperador.DropDownHeight = 60;
+            this.cboperador.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboperador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboperador.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboperador.ForeColor = System.Drawing.Color.Black;
+            this.cboperador.FormattingEnabled = true;
+            this.cboperador.IntegralHeight = false;
+            this.cboperador.Location = new System.Drawing.Point(81, 131);
+            this.cboperador.Name = "cboperador";
+            this.cboperador.Size = new System.Drawing.Size(295, 21);
+            this.cboperador.TabIndex = 97;
+            this.cboperador.TabStop = false;
+            this.cboperador.Validar = false;
+            // 
+            // cbsupervisor
+            // 
+            this.cbsupervisor.BackColor = System.Drawing.Color.Gainsboro;
+            this.cbsupervisor.DropDownHeight = 60;
+            this.cbsupervisor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbsupervisor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbsupervisor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbsupervisor.ForeColor = System.Drawing.Color.Black;
+            this.cbsupervisor.FormattingEnabled = true;
+            this.cbsupervisor.IntegralHeight = false;
+            this.cbsupervisor.Location = new System.Drawing.Point(81, 97);
+            this.cbsupervisor.Name = "cbsupervisor";
+            this.cbsupervisor.Size = new System.Drawing.Size(295, 21);
+            this.cbsupervisor.TabIndex = 96;
+            this.cbsupervisor.TabStop = false;
+            this.cbsupervisor.Validar = false;
+            // 
+            // txtreporte
+            // 
+            this.txtreporte.BackColor = System.Drawing.Color.White;
+            this.txtreporte.Enabled = false;
+            this.txtreporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtreporte.ForeColor = System.Drawing.Color.Black;
+            this.txtreporte.Location = new System.Drawing.Point(101, 54);
+            this.txtreporte.Multiline = true;
+            this.txtreporte.Name = "txtreporte";
+            this.txtreporte.Size = new System.Drawing.Size(120, 20);
+            this.txtreporte.TabIndex = 81;
+            this.txtreporte.TabStop = false;
+            this.txtreporte.Validar = false;
+            this.txtreporte.Valor = Interfaz.Controles.textboxN.Tipo.Números;
+            // 
+            // txtcantidad
+            // 
+            this.txtcantidad.BackColor = System.Drawing.Color.White;
+            this.txtcantidad.ForeColor = System.Drawing.Color.Black;
+            this.txtcantidad.Location = new System.Drawing.Point(82, 368);
+            this.txtcantidad.Multiline = true;
+            this.txtcantidad.Name = "txtcantidad";
+            this.txtcantidad.Size = new System.Drawing.Size(110, 20);
+            this.txtcantidad.TabIndex = 86;
+            this.txtcantidad.TabStop = false;
+            this.txtcantidad.Validar = false;
+            this.txtcantidad.Valor = Interfaz.Controles.textboxN.Tipo.Números;
+            // 
+            // txttarjeta
+            // 
+            this.txttarjeta.BackColor = System.Drawing.Color.White;
+            this.txttarjeta.ForeColor = System.Drawing.Color.Black;
+            this.txttarjeta.Location = new System.Drawing.Point(82, 232);
+            this.txttarjeta.Multiline = true;
+            this.txttarjeta.Name = "txttarjeta";
+            this.txttarjeta.Size = new System.Drawing.Size(294, 20);
+            this.txttarjeta.TabIndex = 82;
+            this.txttarjeta.TabStop = false;
+            this.txttarjeta.Validar = false;
+            this.txttarjeta.Valor = Interfaz.Controles.textboxN.Tipo.Números;
+            // 
             // frmProduccion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1243,7 +1230,6 @@
         private System.Windows.Forms.ToolStripMenuItem generalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem intermediosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem terminadosToolStripMenuItem;
-        private System.Windows.Forms.DateTimePicker dtpfecha;
         private System.Windows.Forms.Button btnmostrar;
         private System.Windows.Forms.Button btnbuscar1;
         public System.Windows.Forms.TabControl tabControl;
@@ -1267,5 +1253,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ToolStripMenuItem lISTADOLINEAGALVToolStripMenuItem;
         private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.DateTimePicker dtpFecha1;
     }
 }

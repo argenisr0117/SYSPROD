@@ -893,6 +893,12 @@ namespace Interfaz
 
             }
         }
+
+        private void mÁQPARADAToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Consultas.frmcMaqParada obj = new Consultas.frmcMaqParada();
+            obj.ShowDialog();
+        }
     }
     
 }

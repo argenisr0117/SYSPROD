@@ -53,6 +53,8 @@
             this.empresaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tscbempresa = new System.Windows.Forms.ToolStripComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.iNFORMESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mÁQPARADAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnMonitoreo = new System.Windows.Forms.Button();
             this.btnHistorial = new System.Windows.Forms.Button();
             this.btnFiltros = new System.Windows.Forms.Button();
@@ -95,7 +97,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.acumuladoMensualToolStripMenuItem,
             this.incentivosToolStripMenuItem,
-            this.empresaToolStripMenuItem});
+            this.empresaToolStripMenuItem,
+            this.iNFORMESToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 40);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(798, 24);
@@ -275,6 +278,21 @@
             this.panel2.Size = new System.Drawing.Size(798, 70);
             this.panel2.TabIndex = 6;
             // 
+            // iNFORMESToolStripMenuItem
+            // 
+            this.iNFORMESToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mÁQPARADAToolStripMenuItem});
+            this.iNFORMESToolStripMenuItem.Name = "iNFORMESToolStripMenuItem";
+            this.iNFORMESToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
+            this.iNFORMESToolStripMenuItem.Text = "INFORMES";
+            // 
+            // mÁQPARADAToolStripMenuItem
+            // 
+            this.mÁQPARADAToolStripMenuItem.Name = "mÁQPARADAToolStripMenuItem";
+            this.mÁQPARADAToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.mÁQPARADAToolStripMenuItem.Text = "MÁQ. PARADA";
+            this.mÁQPARADAToolStripMenuItem.Click += new System.EventHandler(this.mÁQPARADAToolStripMenuItem_Click);
+            // 
             // btnMonitoreo
             // 
             this.btnMonitoreo.BackColor = System.Drawing.Color.White;
@@ -452,5 +470,7 @@
         private System.Windows.Forms.Button btnMonitoreo;
         private System.Windows.Forms.Button btnHistorial;
         private System.Windows.Forms.ToolStripMenuItem kINNOXToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem iNFORMESToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mÁQPARADAToolStripMenuItem;
     }
 }

@@ -39,9 +39,9 @@
             this.dtpFechaParada = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtMaquina = new Interfaz.Controles.textbox(this.components);
-            this.txtMotivo = new Interfaz.Controles.textbox(this.components);
             this.label6 = new System.Windows.Forms.Label();
+            this.txtMotivo = new Interfaz.Controles.textbox(this.components);
+            this.txtMaquina = new Interfaz.Controles.textbox(this.components);
             this.SuspendLayout();
             // 
             // txtComentario
@@ -156,26 +156,6 @@
             this.label3.TabIndex = 158;
             this.label3.Text = "MÁQUINA:";
             // 
-            // txtMaquina
-            // 
-            this.txtMaquina.Enabled = false;
-            this.txtMaquina.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaquina.Location = new System.Drawing.Point(158, 55);
-            this.txtMaquina.Name = "txtMaquina";
-            this.txtMaquina.Size = new System.Drawing.Size(293, 20);
-            this.txtMaquina.TabIndex = 159;
-            this.txtMaquina.Validar = false;
-            // 
-            // txtMotivo
-            // 
-            this.txtMotivo.Enabled = false;
-            this.txtMotivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMotivo.Location = new System.Drawing.Point(158, 79);
-            this.txtMotivo.Name = "txtMotivo";
-            this.txtMotivo.Size = new System.Drawing.Size(293, 20);
-            this.txtMotivo.TabIndex = 161;
-            this.txtMotivo.Validar = false;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -187,6 +167,26 @@
             this.label6.Size = new System.Drawing.Size(113, 13);
             this.label6.TabIndex = 160;
             this.label6.Text = "MOTIVO PARADA:";
+            // 
+            // txtMotivo
+            // 
+            this.txtMotivo.Enabled = false;
+            this.txtMotivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMotivo.Location = new System.Drawing.Point(158, 79);
+            this.txtMotivo.Name = "txtMotivo";
+            this.txtMotivo.Size = new System.Drawing.Size(293, 20);
+            this.txtMotivo.TabIndex = 161;
+            this.txtMotivo.Validar = false;
+            // 
+            // txtMaquina
+            // 
+            this.txtMaquina.Enabled = false;
+            this.txtMaquina.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaquina.Location = new System.Drawing.Point(158, 55);
+            this.txtMaquina.Name = "txtMaquina";
+            this.txtMaquina.Size = new System.Drawing.Size(293, 20);
+            this.txtMaquina.TabIndex = 159;
+            this.txtMaquina.Validar = false;
             // 
             // frmResolverMaqParada
             // 

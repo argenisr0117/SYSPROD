@@ -89,6 +89,13 @@ namespace Intermedia
             List<clsParametros> lst = new List<clsParametros>();
             return dt= M.Listado("monitoreo_maquinas",lst);           
         }
+        public DataTable ObtenerDetalleMaqParada()
+        {
+            DataTable dt = new DataTable();
+            List<clsParametros> lst = new List<clsParametros>();
+            lst.Add(new clsParametros("@idmaquina", Midmaquina));
+            return dt = M.Listado("obt_detalle_maq_parada", lst);
+        }
         public DataTable ListadoMotivos()
         {
             DataTable dt = new DataTable();

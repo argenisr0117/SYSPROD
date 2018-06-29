@@ -21,6 +21,7 @@ namespace Interfaz.Consultas
         }
         clsMaquina M = new clsMaquina();
         clsTurno T = new clsTurno();
+        clsMonitoreoMaq Mo = new clsMonitoreoMaq();
         private void ComboM()
         {
             try
