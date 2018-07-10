@@ -68,6 +68,7 @@ namespace Interfaz.Consultas
             ComboDpto();
             ComboMotivo();
             Limpiar();
+            rbDpto.Checked = true;
         }
 
         private void Limpiar()
@@ -82,6 +83,7 @@ namespace Interfaz.Consultas
             cmbMaquina.Enabled = true;
             cmbMotivo.Enabled = false;
             cmbDpto.Enabled = false;
+            cmbMaquina.SelectedIndex = 0;
         }
 
         private void rbDpto_CheckedChanged(object sender, EventArgs e)
@@ -89,6 +91,7 @@ namespace Interfaz.Consultas
             cmbMotivo.Enabled = false;
             cmbDpto.Enabled = true;
             cmbMaquina.Enabled = false;
+            cmbDpto.SelectedIndex = 0;
         }
 
         private void rbMotivo_CheckedChanged(object sender, EventArgs e)
@@ -102,6 +105,7 @@ namespace Interfaz.Consultas
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             Limpiar();
+            rbMaquina.Checked = true;
             rbMaquina_CheckedChanged(e, e);
         }
 
@@ -118,6 +122,8 @@ namespace Interfaz.Consultas
                     {
                         obj.Maquina = cmbMaquina.SelectedValue.ToString();
                         obj.Valor_ = 0;
+                        obj.Titulo = "GRÁFICO RESUMEN HORAS DE MOTIVOS DE PARADAS - MÁQUINA: " + cmbMaquina.Text;
+                        obj.Titulo1 = "GRÁFICO FRECUENCIA DE MOTIVOS DE PARADAS - MÁQUINA: " + cmbMaquina.Text;
                     }
                     else
                     {
@@ -127,6 +133,8 @@ namespace Interfaz.Consultas
                     {
                         obj.Dpto = cmbDpto.SelectedValue.ToString();
                         obj.Valor_ = 1;
+                        obj.Titulo = "GRÁFICO RESUMEN HORAS DE PARADAS DE MÁQUINAS - DEPARTAMENTO: " + cmbDpto.Text;
+                        obj.Titulo1 = "GRÁFICO FRECUENCIA DE PARADAS DE MÁQUINAS - DEPARTAMENTO: " + cmbDpto.Text;
 
                     }
                     else
@@ -137,13 +145,21 @@ namespace Interfaz.Consultas
                     {
                         obj.idMotivo = Convert.ToInt16(cmbMotivo.SelectedValue);
                         obj.Valor_ = 3;
-
+                        obj.Titulo = "GRÁFICO RESUMEN HORAS PARADAS POR: " + cmbMotivo.Text;
+                        obj.Titulo1 = "GRÁFICO FRECUENCIA DE PARADAS DE MÁQUINAS POR: " + cmbMotivo.Text;
                     }
                     else
                     {
                         obj.idMotivo = 0;
                     }
-                    obj.Nombre = "graficos_maq_parada.rdlc";
+                    if(rbMotivo.Checked && cmbMotivo.SelectedIndex < 0)
+                    {
+                        obj.idMotivo = 0;
+                        obj.Valor_ = 2;
+                        obj.Titulo = "GRÁFICO RESUMEN HORAS PARADAS MOTIVOS";
+                        obj.Titulo1 = "GRÁFICO FRECUENCIA DE PARADAS POR MOTIVOS" ;
+                    }
+                    obj.Nombre = "graficos_maq_parada_dpto.rdlc";
                     obj.Valor = 22;
                     obj.Show();
                 }

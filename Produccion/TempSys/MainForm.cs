@@ -293,7 +293,7 @@ namespace TempSys
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                //MessageBox.Show(ex.Message);
             }
         }
 
@@ -351,7 +351,7 @@ namespace TempSys
 
         private void cerrar_btn_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void MainForm_Load(object sender, EventArgs e)

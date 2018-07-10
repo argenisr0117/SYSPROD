@@ -45,6 +45,7 @@ namespace Interfaz.Registros
                 valor = false;
             }
             DataTable dt = new DataTable();
+            E.Iddpto = "";
             dt = E.Listar(valor);
             try
             {

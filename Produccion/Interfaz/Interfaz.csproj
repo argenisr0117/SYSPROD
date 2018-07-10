@@ -295,6 +295,12 @@
     <Compile Include="Registros\frmEditarInvPuas1.Designer.cs">
       <DependentUpon>frmEditarInvPuas1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Registros\frmHoraExtra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\frmHoraExtra.Designer.cs">
+      <DependentUpon>frmHoraExtra.cs</DependentUpon>
+    </Compile>
     <Compile Include="Registros\frmMaquinaPuas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -556,6 +562,9 @@
     <EmbeddedResource Include="Registros\frmEditarInvPuas1.resx">
       <DependentUpon>frmEditarInvPuas1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Registros\frmHoraExtra.resx">
+      <DependentUpon>frmHoraExtra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Registros\frmMaquinaPuas.resx">
       <DependentUpon>frmMaquinaPuas.cs</DependentUpon>
     </EmbeddedResource>
@@ -646,7 +655,7 @@
     <EmbeddedResource Include="Reportes\cierre_general_kinnox.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\graficos_maq_parada.rdlc">
+    <EmbeddedResource Include="Reportes\graficos_maq_parada_dpto.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\filtrar_prod_resumido.rdlc">

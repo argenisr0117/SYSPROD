@@ -18,20 +18,45 @@ namespace Intermedia
         string Mempresa;
         string Mnombre;
         string Middpto;
+        string Midturno;
         string Mcargo;
         Boolean Mestado;
         Boolean Mayudante;
         Boolean Moperador;
+        Boolean Mcorrido;
+        Boolean Mferiado;
         Boolean Msupervisor;
         string Mcampo = "ID_EMPLEADO";
         string Mtabla = "EMPLEADO";
+        DateTime Mhoraent;
+        DateTime Mhorasal;
+        int Midhora;
 
+        public DateTime HoraEnt
+        {
+            get { return Mhoraent; }
+            set { Mhoraent = value; }
+        }
+        public DateTime HoraSal
+        {
+            get { return Mhorasal; }
+            set { Mhorasal = value; }
+        }
         public string Idempleado
         {
             get { return Midempleado; }
             set { Midempleado = value; }
         }
-
+        public string Idturno
+        {
+            get { return Midturno; }
+            set { Midturno = value; }
+        }
+        public int Idhora
+        {
+            get { return Midhora; }
+            set { Midhora = value; }
+        }
         public string Empresa
         {
             get { return Mempresa; }
@@ -59,6 +84,16 @@ namespace Intermedia
             get { return Mestado; }
             set { Mestado = value; }
         }
+        public Boolean Corrido
+        {
+            get { return Mcorrido; }
+            set { Mcorrido = value; }
+        }
+        public Boolean Feriado
+        {
+            get { return Mferiado; }
+            set { Mferiado = value; }
+        }
         public Boolean Ayudante
         {
             get { return Mayudante; }
@@ -80,6 +115,7 @@ namespace Intermedia
             DataTable dt = new DataTable();
             List<clsParametros> lst = new List<clsParametros>();
             lst.Add(new clsParametros("@estado", objEstado));
+            lst.Add(new clsParametros("@iddpto", Middpto));
             return dt = M.Listado("listado_empleado", lst);
 
         }
@@ -170,7 +206,22 @@ namespace Intermedia
 
             return mensaje;
         }
-
+        public string RegistrarActHorasExtras()
+        {
+            string mensaje = "";
+            List<clsParametros> lst = new List<clsParametros>();
+            lst.Add(new clsParametros("@msj", "", SqlDbType.VarChar, ParameterDirection.Output, 50));
+            lst.Add(new clsParametros("@id", Midhora));
+            lst.Add(new clsParametros("@idempleado", Midempleado));
+            lst.Add(new clsParametros("@idturno", Midturno));
+            lst.Add(new clsParametros("@hora_ent", Mhoraent));
+            lst.Add(new clsParametros("@hora_sal", Mhorasal));
+            lst.Add(new clsParametros("@feriado", Mferiado));
+            lst.Add(new clsParametros("@corrido", Mcorrido));
+            M.EjecutarSP("reg_act_horas_extras", ref lst);
+            mensaje = lst[0].Valor.ToString();
+            return mensaje;
+        }
 
         public string RegistrarEmpleado()
         {

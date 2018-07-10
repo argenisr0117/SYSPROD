@@ -246,7 +246,7 @@
             this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(262, 105);
+            this.label8.Location = new System.Drawing.Point(285, 105);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(90, 15);
             this.label8.TabIndex = 43;
@@ -471,7 +471,7 @@
             this.cbempresa.ItemHeight = 13;
             this.cbempresa.Location = new System.Drawing.Point(123, 104);
             this.cbempresa.Name = "cbempresa";
-            this.cbempresa.Size = new System.Drawing.Size(111, 21);
+            this.cbempresa.Size = new System.Drawing.Size(156, 21);
             this.cbempresa.TabIndex = 42;
             // 
             // cbcargoi
@@ -489,7 +489,7 @@
             "Utility",
             "Supervisor General",
             "Indefinido"});
-            this.cbcargoi.Location = new System.Drawing.Point(358, 103);
+            this.cbcargoi.Location = new System.Drawing.Point(381, 103);
             this.cbcargoi.Name = "cbcargoi";
             this.cbcargoi.Size = new System.Drawing.Size(125, 21);
             this.cbcargoi.TabIndex = 44;

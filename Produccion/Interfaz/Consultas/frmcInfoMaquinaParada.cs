@@ -45,55 +45,60 @@ namespace Interfaz.Consultas
                     DateTime fechainicial = dtpFecha.Value;
                     DateTime fechafinal = DateTime.Now;
                     DateTime fechaf2 = DateTime.Now;
+                    fechaf2 = Convert.ToDateTime(fechaf2.Date.ToShortDateString() + " 10:00 PM");
                     double rollosp = 0;
-                    int cont = 0;
+                    //int cont = 0;
                     double duracion = (int)(fechaf2 - fechainicial).TotalMinutes;
-                    double seg = (int)(fechaf2 - fechainicial).TotalSeconds;
+                    double seg = 0;
                     if (Dpto == "Galv")
                     {
                         Mo.Duracion = Convert.ToInt16(duracion);
                     }
                     else if (Dpto == "Puas" || Dpto == "Tref" || Dpto == "IndM")
                     {
-                        double diferencia = (int)(fechaf2 - fechainicial).TotalDays;
-                        double minutos = 0;
-                        for (DateTime date = dtpFecha.Value; date <= fechaf2; date = date.AddDays(1))
-                        {
-                            if (diferencia == 0) //si la maquina se paro y se arreglo en el mismo dia.
-                            {
-                                minutos = minutos + (int)(fechafinal - date).TotalMinutes;
-                                break;
-                            }
-                            else
-                            {
-                                if (cont == 0)//asignar el valor de la fecha de parada igual
-                                {
-                                    fechainicial = date;
-                                }
-                                else
-                                {
-                                    fechainicial = Convert.ToDateTime(date.Date.ToShortDateString() + " 06:00 AM");
-                                }
-                                if (date.DayOfWeek == DayOfWeek.Sunday || date.DayOfWeek == DayOfWeek.Saturday)
-                                {
-                                    fechafinal = Convert.ToDateTime(date.Date.ToShortDateString() + " 06:00 PM");
-                                }
-                                else
-                                {
-                                    fechafinal = Convert.ToDateTime(date.Date.ToShortDateString() + " 10:00 PM");
+                        //double diferencia = (int)(fechaf2 - fechainicial).TotalDays;
+                        double minutos = Convert.ToDouble(dt.Rows[0]["Duracion"]);
+                        seg = (int)minutos * 60;
+                        //for (DateTime date = dtpFecha.Value; date <= fechaf2; date = date.AddDays(1))
+                        //{
+                        //    if (diferencia == 0) //si la maquina se paro y se arreglo en el mismo dia.
+                        //    {
+                        //        minutos = minutos + (int)(fechafinal - date).TotalMinutes;
+                        //        seg = seg + (int)(fechafinal - date).TotalSeconds;
+                        //        break;
+                        //    }
+                        //    else
+                        //    {
+                        //        if (cont == 0)//asignar el valor de la fecha de parada igual
+                        //        {
+                        //            fechainicial = dtpFecha.Value;
+                        //        }
+                        //        else
+                        //        {
+                        //            fechainicial = Convert.ToDateTime(date.Date.ToShortDateString() + " 06:00 AM");
+                        //        }
+                        //        if (date.DayOfWeek == DayOfWeek.Sunday || date.DayOfWeek == DayOfWeek.Saturday)
+                        //        {
+                        //            fechafinal = Convert.ToDateTime(date.Date.ToShortDateString() + " 06:00 PM");
+                        //        }
+                        //        else
+                        //        {
+                        //            fechafinal = Convert.ToDateTime(date.Date.ToShortDateString() + " 10:00 PM");
+                        //        }
+                        //        if (fechafinal >= fechaf2)//cuando las fechas sean iguales, restar la inicial menos la de solucion
+                        //        {
+                        //            fechaf2 = DateTime.Now;
 
-                                }
-                                if (fechafinal > fechaf2)//cuando las fechas sean iguales, restar la inicial menos la de solucion
-                                {
-                                    minutos = minutos + (int)(fechaf2 - fechainicial).TotalMinutes;
-                                }
-                                else
-                                {
-                                    minutos = minutos + (int)(fechafinal - fechainicial).TotalMinutes;
-                                }
-                                cont++;
-                            }
-                        }
+                        //            seg = seg + (int)(fechaf2 - fechainicial).TotalSeconds;
+                        //        }
+                        //        else
+                        //        {
+                        //            minutos = minutos + (int)(fechafinal - fechainicial).TotalMinutes;
+                        //            seg = seg + (int)(fechafinal - fechainicial).TotalSeconds;
+                        //        }
+                        //        cont++;
+                        //    }
+                        //}
                         rollosp = minutos / promedio;
                         txtTiempoparada.Text = (seg / 3600).ToString("#") + " Hrs " + ((seg % 3600) / 60).ToString("#") + " Mins";
                         rollosp = Math.Ceiling(rollosp);

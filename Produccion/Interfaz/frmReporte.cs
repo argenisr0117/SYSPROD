@@ -19,6 +19,8 @@ namespace Interfaz
         public string Destino { get; set; }
         public string Turno { get; set; }
         public string Dpto { get; set; }
+        public string Titulo { get; set; }
+        public string Titulo1 { get; set; }
         public string Reporte { get; set; }
         public string Nombre { get; set; }
         public double Acerado { get; set; }
@@ -585,7 +587,7 @@ namespace Interfaz
         }
         private void GraficosMaqParada()
         {
-            ReportParameter[] parametros = new ReportParameter[2];
+            ReportParameter[] parametros = new ReportParameter[4];
             PRODUCCIONDataSet ds = new PRODUCCIONDataSet();
             PRODUCCIONDataSetTableAdapters.obt_graficos_maq_paradaTableAdapter rgta = new PRODUCCIONDataSetTableAdapters.obt_graficos_maq_paradaTableAdapter();
             reportViewer1.ProcessingMode = ProcessingMode.Local;
@@ -594,6 +596,8 @@ namespace Interfaz
             lc.ReportPath = ruta;
             parametros[0] = new ReportParameter("Fechai", Fechai.ToShortDateString());
             parametros[1] = new ReportParameter("Fechaf", Fechaf.ToShortDateString());
+            parametros[2] = new ReportParameter("Titulo", Titulo);
+            parametros[3] = new ReportParameter("Titulo1", Titulo1);
             rgta.Fill(ds.obt_graficos_maq_parada,Maquina,Dpto,idMotivo,Valor_,Fechai,Fechaf);
             ReportDataSource rds = new ReportDataSource();
             reportViewer1.LocalReport.DisplayName = Reporte;

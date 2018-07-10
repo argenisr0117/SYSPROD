@@ -103,7 +103,7 @@
             this.btnBusqueda.ForeColor = System.Drawing.Color.Black;
             this.btnBusqueda.Image = global::Interfaz.Properties.Resources.Show_all_icon;
             this.btnBusqueda.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnBusqueda.Location = new System.Drawing.Point(493, 17);
+            this.btnBusqueda.Location = new System.Drawing.Point(516, 17);
             this.btnBusqueda.Name = "btnBusqueda";
             this.btnBusqueda.Size = new System.Drawing.Size(80, 51);
             this.btnBusqueda.TabIndex = 160;
@@ -143,10 +143,10 @@
             this.cmbDpto.ForeColor = System.Drawing.Color.Black;
             this.cmbDpto.FormattingEnabled = true;
             this.cmbDpto.IntegralHeight = false;
-            this.cmbDpto.Location = new System.Drawing.Point(276, 45);
+            this.cmbDpto.Location = new System.Drawing.Point(259, 41);
             this.cmbDpto.MaxDropDownItems = 30;
             this.cmbDpto.Name = "cmbDpto";
-            this.cmbDpto.Size = new System.Drawing.Size(175, 26);
+            this.cmbDpto.Size = new System.Drawing.Size(238, 26);
             this.cmbDpto.TabIndex = 136;
             // 
             // label1
@@ -155,7 +155,7 @@
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(202, 52);
+            this.label1.Location = new System.Drawing.Point(185, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(45, 13);
             this.label1.TabIndex = 137;
@@ -171,10 +171,10 @@
             this.cmbMaquina.ForeColor = System.Drawing.Color.Black;
             this.cmbMaquina.FormattingEnabled = true;
             this.cmbMaquina.IntegralHeight = false;
-            this.cmbMaquina.Location = new System.Drawing.Point(276, 13);
+            this.cmbMaquina.Location = new System.Drawing.Point(259, 9);
             this.cmbMaquina.MaxDropDownItems = 30;
             this.cmbMaquina.Name = "cmbMaquina";
-            this.cmbMaquina.Size = new System.Drawing.Size(175, 26);
+            this.cmbMaquina.Size = new System.Drawing.Size(238, 26);
             this.cmbMaquina.TabIndex = 134;
             // 
             // label4
@@ -183,7 +183,7 @@
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(202, 20);
+            this.label4.Location = new System.Drawing.Point(185, 16);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 13);
             this.label4.TabIndex = 135;
@@ -275,10 +275,10 @@
             this.cmbMotivo.ForeColor = System.Drawing.Color.Black;
             this.cmbMotivo.FormattingEnabled = true;
             this.cmbMotivo.IntegralHeight = false;
-            this.cmbMotivo.Location = new System.Drawing.Point(276, 77);
+            this.cmbMotivo.Location = new System.Drawing.Point(259, 73);
             this.cmbMotivo.MaxDropDownItems = 30;
             this.cmbMotivo.Name = "cmbMotivo";
-            this.cmbMotivo.Size = new System.Drawing.Size(175, 26);
+            this.cmbMotivo.Size = new System.Drawing.Size(238, 26);
             this.cmbMotivo.TabIndex = 163;
             // 
             // label5
@@ -287,7 +287,7 @@
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(202, 84);
+            this.label5.Location = new System.Drawing.Point(185, 80);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(59, 13);
             this.label5.TabIndex = 164;
@@ -304,7 +304,7 @@
             this.btnLimpiar.ForeColor = System.Drawing.Color.Black;
             this.btnLimpiar.Image = global::Interfaz.Properties.Resources.Clear_icon;
             this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnLimpiar.Location = new System.Drawing.Point(493, 77);
+            this.btnLimpiar.Location = new System.Drawing.Point(516, 77);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(80, 51);
             this.btnLimpiar.TabIndex = 165;
