@@ -25,11 +25,16 @@ namespace Intermedia
         Boolean Moperador;
         Boolean Mcorrido;
         Boolean Mferiado;
+        Boolean Mvacaciones;
+        Boolean Mincapacidad;
+        Boolean Minasistencia;
         Boolean Msupervisor;
         string Mcampo = "ID_EMPLEADO";
         string Mtabla = "EMPLEADO";
         DateTime Mhoraent;
         DateTime Mhorasal;
+        DateTime Mdesde;
+        DateTime Mhasta;
         int Midhora;
 
         public DateTime HoraEnt
@@ -41,6 +46,16 @@ namespace Intermedia
         {
             get { return Mhorasal; }
             set { Mhorasal = value; }
+        }
+        public DateTime Desde
+        {
+            get { return Mdesde; }
+            set { Mdesde = value; }
+        }
+        public DateTime Hasta
+        {
+            get { return Mhasta; }
+            set { Mhasta = value; }
         }
         public string Idempleado
         {
@@ -94,6 +109,21 @@ namespace Intermedia
             get { return Mferiado; }
             set { Mferiado = value; }
         }
+        public Boolean Vacaciones
+        {
+            get { return Mvacaciones; }
+            set { Mvacaciones = value; }
+        }
+        public Boolean Incapacidad
+        {
+            get { return Mincapacidad; }
+            set { Mincapacidad = value; }
+        }
+        public Boolean Inasistencia
+        {
+            get { return Minasistencia; }
+            set { Minasistencia = value; }
+        }
         public Boolean Ayudante
         {
             get { return Mayudante; }
@@ -117,6 +147,17 @@ namespace Intermedia
             lst.Add(new clsParametros("@estado", objEstado));
             lst.Add(new clsParametros("@iddpto", Middpto));
             return dt = M.Listado("listado_empleado", lst);
+
+        }
+        public DataTable ObtRegistrosHorasExtras()
+        {
+            DataTable dt = new DataTable();
+            List<clsParametros> lst = new List<clsParametros>();
+            lst.Add(new clsParametros("@desde", Mdesde));
+            lst.Add(new clsParametros("@hasta", Mhasta));
+            lst.Add(new clsParametros("@idempresa", Mempresa));
+            lst.Add(new clsParametros("@iddpto", Middpto));
+            return dt = M.Listado("obt_registros_horas_extras", lst);
 
         }
         public DataTable Listado_Operadores_Tref()
@@ -218,6 +259,9 @@ namespace Intermedia
             lst.Add(new clsParametros("@hora_sal", Mhorasal));
             lst.Add(new clsParametros("@feriado", Mferiado));
             lst.Add(new clsParametros("@corrido", Mcorrido));
+            lst.Add(new clsParametros("@vacaciones", Mvacaciones));
+            lst.Add(new clsParametros("@incapacidad", Mincapacidad));
+            lst.Add(new clsParametros("@inasistencia", Minasistencia));
             M.EjecutarSP("reg_act_horas_extras", ref lst);
             mensaje = lst[0].Valor.ToString();
             return mensaje;

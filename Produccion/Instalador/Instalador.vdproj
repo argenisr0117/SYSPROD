@@ -309,6 +309,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_A363112EBDE14C7DAF9EBD3FFAD13571"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_A47CFB863DFA431FA60CEC5E6183E192"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -1690,6 +1696,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A363112EBDE14C7DAF9EBD3FFAD13571"
+            {
+            "SourcePath" = "8:..\\Interfaz\\Reportes\\horas_extra.rdlc"
+            "TargetName" = "8:horas_extra.rdlc"
+            "Tag" = "8:"
+            "Folder" = "8:_00DD0B03E441403CB4D3297F2511FE1C"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A47CFB863DFA431FA60CEC5E6183E192"
             {
             "SourcePath" = "8:..\\Interfaz\\bin\\Debug\\Reportes\\reporte_general.rdlc"
@@ -2226,7 +2252,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SYSPROD"
         "ProductCode" = "8:{4B6EFF15-2EC9-448E-92D6-9B133F235F14}"
-        "PackageCode" = "8:{58BFE55D-DBD7-4B19-B905-78028842509E}"
+        "PackageCode" = "8:{0F2B8644-969D-4A54-850E-192C7B505856}"
         "UpgradeCode" = "8:{1F2619E1-0BC5-42FB-88F1-DDD754EAF1D1}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

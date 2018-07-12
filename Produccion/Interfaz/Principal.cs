@@ -63,6 +63,10 @@ namespace Interfaz
             btnAlmacenIntermedios.Enabled = Program.almintermedios;
             btnAlmacenTerminados.Enabled = Program.almterminados;
             btnAlmacenLineaGalv.Enabled = Program.almlg;
+            btnMonitoreomaq.Enabled = Program.monmaq;
+            btnTemperatura.Enabled = Program.montemp;
+            btnRegHoras.Enabled = Program.reghora;
+            btnMaquinasParadas.Enabled = Program.maqpar;
         }
         private void AbrirForm(string form)
         {
@@ -139,6 +143,11 @@ namespace Interfaz
                 if (form == "frmMaquinasParadas")
                 {
                     frmMaquinasParadas obj = new frmMaquinasParadas();
+                    obj.Show();
+                }
+                if (form == "frmHoraExtra")
+                {
+                    frmHoraExtra obj = new frmHoraExtra();
                     obj.Show();
                 }
             }
@@ -241,6 +250,12 @@ namespace Interfaz
         private void btnMaquinasParadas_Click(object sender, EventArgs e)
         {
             form = "frmMaquinasParadas";
+            AbrirForm(form);
+        }
+
+        private void btnRegHoras_Click(object sender, EventArgs e)
+        {
+            form = "frmHoraExtra";
             AbrirForm(form);
         }
     }

@@ -53,6 +53,7 @@
             this.cmbDpto = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgMaquinaParada)).BeginInit();
@@ -86,6 +87,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btnEliminar);
             this.tabPage1.Controls.Add(this.btnResolverMaq);
             this.tabPage1.Controls.Add(this.dtgMaquinaParada);
             this.tabPage1.Controls.Add(this.cmbDpto2);
@@ -111,9 +113,9 @@
             this.btnResolverMaq.ForeColor = System.Drawing.Color.Black;
             this.btnResolverMaq.Image = global::Interfaz.Properties.Resources.technics;
             this.btnResolverMaq.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnResolverMaq.Location = new System.Drawing.Point(242, 372);
+            this.btnResolverMaq.Location = new System.Drawing.Point(177, 368);
             this.btnResolverMaq.Name = "btnResolverMaq";
-            this.btnResolverMaq.Size = new System.Drawing.Size(108, 55);
+            this.btnResolverMaq.Size = new System.Drawing.Size(116, 55);
             this.btnResolverMaq.TabIndex = 146;
             this.btnResolverMaq.TabStop = false;
             this.btnResolverMaq.Text = "RESOLVER MÁQ.";
@@ -381,6 +383,28 @@
             this.label1.TabIndex = 144;
             this.label1.Text = "REGISTRAR MÁQUINAS PARADAS";
             // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.White;
+            this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
+            this.btnEliminar.FlatAppearance.BorderSize = 2;
+            this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.ForeColor = System.Drawing.Color.Black;
+            this.btnEliminar.Image = global::Interfaz.Properties.Resources.delete_file_icon;
+            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnEliminar.Location = new System.Drawing.Point(299, 368);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(116, 55);
+            this.btnEliminar.TabIndex = 167;
+            this.btnEliminar.TabStop = false;
+            this.btnEliminar.Text = "ELIMINAR";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Visible = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
             // frmMaquinasParadas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -429,5 +453,6 @@
         private System.Windows.Forms.DataGridView dtgMaquinaParada;
         private System.Windows.Forms.ComboBox cmbDpto2;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }

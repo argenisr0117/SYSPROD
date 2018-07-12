@@ -226,5 +226,24 @@ namespace Interfaz.Registros
 
             }
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dtgMaquinaParada.SelectedRows.Count > 0)
+            {
+                string msj = "";
+                Mo.Idparada = Convert.ToInt16(dtgMaquinaParada.CurrentRow.Cells[0].Value);
+                msj = Mo.EliminarMaqParada();
+                if (msj == "1")
+                {
+                    MessageBoxEx.Show("Registro eliminado", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LlenarGridMaqParadas();
+                }
+                else
+                {
+                    MessageBoxEx.Show("Ha ocurrido un error.", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
     }
 }

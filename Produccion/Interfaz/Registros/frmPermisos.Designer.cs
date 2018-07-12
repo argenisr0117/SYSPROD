@@ -80,6 +80,10 @@
             this.cbAlmTerminados = new System.Windows.Forms.CheckBox();
             this.cbAlmIntermedios = new System.Windows.Forms.CheckBox();
             this.cbAlmacenLineagalv = new System.Windows.Forms.CheckBox();
+            this.chbMonTemp = new System.Windows.Forms.CheckBox();
+            this.chbMaqParada = new System.Windows.Forms.CheckBox();
+            this.chbReghor = new System.Windows.Forms.CheckBox();
+            this.chbMonMaquina = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -696,18 +700,70 @@
             this.cbAlmacenLineagalv.AutoSize = true;
             this.cbAlmacenLineagalv.BackColor = System.Drawing.Color.White;
             this.cbAlmacenLineagalv.ForeColor = System.Drawing.Color.Black;
-            this.cbAlmacenLineagalv.Location = new System.Drawing.Point(277, 136);
+            this.cbAlmacenLineagalv.Location = new System.Drawing.Point(301, 136);
             this.cbAlmacenLineagalv.Name = "cbAlmacenLineagalv";
             this.cbAlmacenLineagalv.Size = new System.Drawing.Size(100, 17);
             this.cbAlmacenLineagalv.TabIndex = 174;
             this.cbAlmacenLineagalv.Text = "Alm. Linea Galv";
             this.cbAlmacenLineagalv.UseVisualStyleBackColor = false;
             // 
+            // chbMonTemp
+            // 
+            this.chbMonTemp.AutoSize = true;
+            this.chbMonTemp.BackColor = System.Drawing.Color.White;
+            this.chbMonTemp.ForeColor = System.Drawing.Color.Black;
+            this.chbMonTemp.Location = new System.Drawing.Point(301, 159);
+            this.chbMonTemp.Name = "chbMonTemp";
+            this.chbMonTemp.Size = new System.Drawing.Size(103, 17);
+            this.chbMonTemp.TabIndex = 175;
+            this.chbMonTemp.Text = "Monitoreo Temp";
+            this.chbMonTemp.UseVisualStyleBackColor = false;
+            // 
+            // chbMaqParada
+            // 
+            this.chbMaqParada.AutoSize = true;
+            this.chbMaqParada.BackColor = System.Drawing.Color.White;
+            this.chbMaqParada.ForeColor = System.Drawing.Color.Black;
+            this.chbMaqParada.Location = new System.Drawing.Point(301, 182);
+            this.chbMaqParada.Name = "chbMaqParada";
+            this.chbMaqParada.Size = new System.Drawing.Size(87, 17);
+            this.chbMaqParada.TabIndex = 176;
+            this.chbMaqParada.Text = "Maq. Parada";
+            this.chbMaqParada.UseVisualStyleBackColor = false;
+            // 
+            // chbReghor
+            // 
+            this.chbReghor.AutoSize = true;
+            this.chbReghor.BackColor = System.Drawing.Color.White;
+            this.chbReghor.ForeColor = System.Drawing.Color.Black;
+            this.chbReghor.Location = new System.Drawing.Point(299, 228);
+            this.chbReghor.Name = "chbReghor";
+            this.chbReghor.Size = new System.Drawing.Size(104, 17);
+            this.chbReghor.TabIndex = 178;
+            this.chbReghor.Text = "Registro Hora E.";
+            this.chbReghor.UseVisualStyleBackColor = false;
+            // 
+            // chbMonMaquina
+            // 
+            this.chbMonMaquina.AutoSize = true;
+            this.chbMonMaquina.BackColor = System.Drawing.Color.White;
+            this.chbMonMaquina.ForeColor = System.Drawing.Color.Black;
+            this.chbMonMaquina.Location = new System.Drawing.Point(299, 205);
+            this.chbMonMaquina.Name = "chbMonMaquina";
+            this.chbMonMaquina.Size = new System.Drawing.Size(100, 17);
+            this.chbMonMaquina.TabIndex = 177;
+            this.chbMonMaquina.Text = "Monitoreo Maq.";
+            this.chbMonMaquina.UseVisualStyleBackColor = false;
+            // 
             // frmPermisos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(733, 539);
+            this.Controls.Add(this.chbReghor);
+            this.Controls.Add(this.chbMonMaquina);
+            this.Controls.Add(this.chbMaqParada);
+            this.Controls.Add(this.chbMonTemp);
             this.Controls.Add(this.cbAlmacenLineagalv);
             this.Controls.Add(this.cbAlmTerminados);
             this.Controls.Add(this.cbAlmIntermedios);
@@ -824,5 +880,9 @@
         private System.Windows.Forms.CheckBox cbAlmTerminados;
         private System.Windows.Forms.CheckBox cbAlmIntermedios;
         private System.Windows.Forms.CheckBox cbAlmacenLineagalv;
+        private System.Windows.Forms.CheckBox chbMonTemp;
+        private System.Windows.Forms.CheckBox chbMaqParada;
+        private System.Windows.Forms.CheckBox chbReghor;
+        private System.Windows.Forms.CheckBox chbMonMaquina;
     }
 }

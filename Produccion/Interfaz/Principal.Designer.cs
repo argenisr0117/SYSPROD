@@ -49,6 +49,7 @@
             this.btnGalvanizado = new System.Windows.Forms.Button();
             this.btnTrefilado = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnMaquinasParadas = new System.Windows.Forms.Button();
             this.btnVerPruebasCald = new System.Windows.Forms.Button();
             this.btnPruebasCalidad = new System.Windows.Forms.Button();
             this.btnOrden = new System.Windows.Forms.Button();
@@ -57,7 +58,7 @@
             this.btnAlmacenLineaGalv = new System.Windows.Forms.Button();
             this.btnAlmacenTerminados = new System.Windows.Forms.Button();
             this.btnAlmacenIntermedios = new System.Windows.Forms.Button();
-            this.btnMaquinasParadas = new System.Windows.Forms.Button();
+            this.btnRegHoras = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -340,6 +341,26 @@
             this.panel4.Size = new System.Drawing.Size(618, 112);
             this.panel4.TabIndex = 4;
             // 
+            // btnMaquinasParadas
+            // 
+            this.btnMaquinasParadas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnMaquinasParadas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMaquinasParadas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnMaquinasParadas.FlatAppearance.BorderSize = 0;
+            this.btnMaquinasParadas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnMaquinasParadas.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMaquinasParadas.ForeColor = System.Drawing.Color.White;
+            this.btnMaquinasParadas.Image = global::Interfaz.Properties.Resources.repairing;
+            this.btnMaquinasParadas.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnMaquinasParadas.Location = new System.Drawing.Point(462, 0);
+            this.btnMaquinasParadas.Name = "btnMaquinasParadas";
+            this.btnMaquinasParadas.Size = new System.Drawing.Size(156, 112);
+            this.btnMaquinasParadas.TabIndex = 11;
+            this.btnMaquinasParadas.Text = "Máquinas Paradas";
+            this.btnMaquinasParadas.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnMaquinasParadas.UseVisualStyleBackColor = false;
+            this.btnMaquinasParadas.Click += new System.EventHandler(this.btnMaquinasParadas_Click);
+            // 
             // btnVerPruebasCald
             // 
             this.btnVerPruebasCald.BackColor = System.Drawing.Color.DarkOliveGreen;
@@ -416,6 +437,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
+            this.panel6.Controls.Add(this.btnRegHoras);
             this.panel6.Controls.Add(this.btnAlmacenLineaGalv);
             this.panel6.Controls.Add(this.btnAlmacenTerminados);
             this.panel6.Controls.Add(this.btnAlmacenIntermedios);
@@ -486,25 +508,25 @@
             this.btnAlmacenIntermedios.UseVisualStyleBackColor = false;
             this.btnAlmacenIntermedios.Click += new System.EventHandler(this.btnAlmacenIntermedios_Click);
             // 
-            // btnMaquinasParadas
+            // btnRegHoras
             // 
-            this.btnMaquinasParadas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnMaquinasParadas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnMaquinasParadas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnMaquinasParadas.FlatAppearance.BorderSize = 0;
-            this.btnMaquinasParadas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnMaquinasParadas.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMaquinasParadas.ForeColor = System.Drawing.Color.White;
-            this.btnMaquinasParadas.Image = global::Interfaz.Properties.Resources.repairing;
-            this.btnMaquinasParadas.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnMaquinasParadas.Location = new System.Drawing.Point(462, 0);
-            this.btnMaquinasParadas.Name = "btnMaquinasParadas";
-            this.btnMaquinasParadas.Size = new System.Drawing.Size(156, 112);
-            this.btnMaquinasParadas.TabIndex = 11;
-            this.btnMaquinasParadas.Text = "Máquinas Paradas";
-            this.btnMaquinasParadas.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnMaquinasParadas.UseVisualStyleBackColor = false;
-            this.btnMaquinasParadas.Click += new System.EventHandler(this.btnMaquinasParadas_Click);
+            this.btnRegHoras.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnRegHoras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRegHoras.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnRegHoras.FlatAppearance.BorderSize = 0;
+            this.btnRegHoras.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRegHoras.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegHoras.ForeColor = System.Drawing.Color.White;
+            this.btnRegHoras.Image = global::Interfaz.Properties.Resources.clock;
+            this.btnRegHoras.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnRegHoras.Location = new System.Drawing.Point(462, 0);
+            this.btnRegHoras.Name = "btnRegHoras";
+            this.btnRegHoras.Size = new System.Drawing.Size(156, 112);
+            this.btnRegHoras.TabIndex = 13;
+            this.btnRegHoras.Text = "Registro Horas Extras";
+            this.btnRegHoras.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnRegHoras.UseVisualStyleBackColor = false;
+            this.btnRegHoras.Click += new System.EventHandler(this.btnRegHoras_Click);
             // 
             // Principal
             // 
@@ -563,5 +585,6 @@
         private System.Windows.Forms.Button btnTemperatura;
         private System.Windows.Forms.Button btnMonitoreomaq;
         private System.Windows.Forms.Button btnMaquinasParadas;
+        private System.Windows.Forms.Button btnRegHoras;
     }
 }

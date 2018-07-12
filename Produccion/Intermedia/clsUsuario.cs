@@ -60,7 +60,10 @@ namespace Intermedia
         Boolean Malmintermedios;
         Boolean Malmterminados;
         Boolean Malmlg;
-
+        Boolean Mmontemp;
+        Boolean Mmaqpar;
+        Boolean Mmonmaq;
+        Boolean Mreghor;
 
         public int Idusuario
         {
@@ -306,7 +309,26 @@ namespace Intermedia
             get { return Malmlg; }
             set { Malmlg = value; }
         }
-
+        public Boolean MonTemp
+        {
+            get { return Mmontemp; }
+            set { Mmontemp = value; }
+        }
+        public Boolean MaqPar
+        {
+            get { return Mmaqpar; }
+            set { Mmaqpar = value; }
+        }
+        public Boolean MonMaq
+        {
+            get { return Mmonmaq; }
+            set { Mmonmaq = value; }
+        }
+        public Boolean RegHor
+        {
+            get { return Mreghor; }
+            set { Mreghor = value; }
+        }
         public string RegistrarUsuario()
         {
             string mensaje = "";
@@ -363,9 +385,13 @@ namespace Intermedia
             lst.Add(new clsParametros("@fdesgalv", Mfdesgalv));
             lst.Add(new clsParametros("@fhasgalv", Mfhasgalv));
             lst.Add(new clsParametros("@reimgalv", Mreimgalv));
-            lst.Add(new clsParametros("almintermedios", Malmintermedios));
+            lst.Add(new clsParametros("@almintermedios", Malmintermedios));
             lst.Add(new clsParametros("@almterminados", Malmterminados));
             lst.Add(new clsParametros("@almlg", Malmlg));
+            lst.Add(new clsParametros("@montemp", Mmontemp));
+            lst.Add(new clsParametros("@maqpar", Mmaqpar));
+            lst.Add(new clsParametros("@monmaq", Mmonmaq));
+            lst.Add(new clsParametros("@reghor", Mreghor));
             M.EjecutarSP("registrar_act_permisos", ref lst);
             mensaje =Convert.ToInt32(lst[0].Valor);
             return mensaje;

@@ -87,6 +87,10 @@ namespace Interfaz.Registros
                 U.Almintermedios = cbAlmIntermedios.Checked;
                 U.Almterminados = cbAlmTerminados.Checked;
                 U.Almlg = cbAlmacenLineagalv.Checked;
+                U.MonTemp = chbMonTemp.Checked;
+                U.MaqPar = chbMaqParada.Checked;
+                U.MonMaq = chbMonMaquina.Checked;
+                U.RegHor = chbReghor.Checked;
                 mensaje = U.RegistrarActPermisos();
                 if (mensaje == 1)
                 {
@@ -154,6 +158,10 @@ namespace Interfaz.Registros
                 cbAlmIntermedios.Checked = Convert.ToBoolean(dt.Rows[0][39]);
                 cbAlmTerminados.Checked = Convert.ToBoolean(dt.Rows[0][40]);
                 cbAlmacenLineagalv.Checked= Convert.ToBoolean(dt.Rows[0][41]);
+                chbMonTemp.Checked= Convert.ToBoolean(dt.Rows[0][42]);
+                chbMaqParada.Checked= Convert.ToBoolean(dt.Rows[0][43]);
+                chbMonMaquina.Checked= Convert.ToBoolean(dt.Rows[0][44]);
+                chbReghor.Checked= Convert.ToBoolean(dt.Rows[0][45]);
             }
             catch(Exception ex)
             {

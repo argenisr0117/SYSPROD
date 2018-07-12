@@ -127,6 +127,10 @@ namespace Interfaz
                         Program.almintermedios= Convert.ToBoolean(dt.Rows[0][39]);
                         Program.almterminados= Convert.ToBoolean(dt.Rows[0][40]);
                         Program.almlg= Convert.ToBoolean(dt.Rows[0][41]);
+                        Program.montemp= Convert.ToBoolean(dt.Rows[0][42]);
+                        Program.maqpar= Convert.ToBoolean(dt.Rows[0][43]);
+                        Program.monmaq= Convert.ToBoolean(dt.Rows[0][44]);
+                        Program.reghora= Convert.ToBoolean(dt.Rows[0][45]);
                         //Program.Usuario = txtUsuario.Text;
                         //Splash obj = new Splash();
                         Principal obj = new Principal();

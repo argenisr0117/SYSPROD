@@ -661,6 +661,9 @@
     <EmbeddedResource Include="Reportes\filtrar_prod_resumido.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\horas_extra.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\packing_list_kinnox.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -789,8 +792,8 @@
     </None>
     <None Include="PRODUCCIONDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>PRODUCCIONDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>PRODUCCIONDataSet1.Designer.cs</LastGenOutput>
     </None>
     <None Include="PRODUCCIONDataSet.xss">
       <DependentUpon>PRODUCCIONDataSet.xsd</DependentUpon>
@@ -821,6 +824,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\clock.png" />
     <None Include="Resources\repairing.png" />
     <None Include="Resources\technics.png" />
     <None Include="Resources\3d-printing-software.png" />

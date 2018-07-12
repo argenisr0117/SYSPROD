@@ -93,6 +93,10 @@ namespace Interfaz
         public static Boolean almintermedios;
         public static Boolean almterminados;
         public static Boolean almlg;
+        public static Boolean montemp;
+        public static Boolean maqpar;
+        public static Boolean monmaq;
+        public static Boolean reghora;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -102,8 +106,8 @@ namespace Interfaz
             System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-US");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Registros.frmHoraExtra());
-            //Application.Run(new Login());
+            //Application.Run(new Registros.frmHoraExtra());
+            Application.Run(new Login());
         }
     }
 }

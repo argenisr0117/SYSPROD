@@ -19,6 +19,8 @@ namespace Interfaz
         public string Destino { get; set; }
         public string Turno { get; set; }
         public string Dpto { get; set; }
+        public string Iddpto { get; set; }
+        public string Idempresa{ get; set; }
         public string Titulo { get; set; }
         public string Titulo1 { get; set; }
         public string Reporte { get; set; }
@@ -172,6 +174,10 @@ namespace Interfaz
             else if (Valor == 22)
             {
                 GraficosMaqParada();
+            }
+            else if (Valor == 23)
+            {
+                HorasExtras();
             }
         }
 
@@ -688,6 +694,29 @@ namespace Interfaz
             reportViewer1.LocalReport.DisplayName = Reporte;
             rds.Name = "DataSet1";
             rds.Value = (ds.Tables["incentivo_flejado"]);
+            reportViewer1.LocalReport.DataSources.Clear();
+            reportViewer1.LocalReport.SetParameters(parametros);
+            lc.DataSources.Add(rds);
+            this.reportViewer1.RefreshReport();
+        }
+        private void HorasExtras()
+        {
+            ReportParameter[] parametros = new ReportParameter[4];
+            PRODUCCIONDataSet ds = new PRODUCCIONDataSet();
+            PRODUCCIONDataSetTableAdapters.obt_registros_horas_extrasTableAdapter rgta = new PRODUCCIONDataSetTableAdapters.obt_registros_horas_extrasTableAdapter();
+            reportViewer1.ProcessingMode = ProcessingMode.Local;
+            LocalReport lc = reportViewer1.LocalReport;
+            string ruta = "Reportes\\" + Nombre;
+            lc.ReportPath = ruta;
+            parametros[0] = new ReportParameter("Empresa", Empresa.ToString());
+            parametros[1] = new ReportParameter("Fechai", Fechai.ToShortDateString());
+            parametros[2] = new ReportParameter("Fechaf", Fechaf.ToShortDateString());
+            parametros[3] = new ReportParameter("Dpto", Dpto.ToString());
+            rgta.Fill(ds.obt_registros_horas_extras,Fechai,Fechaf,Iddpto,Idempresa);
+            ReportDataSource rds = new ReportDataSource();
+            reportViewer1.LocalReport.DisplayName = Reporte;
+            rds.Name = "DataSet1";
+            rds.Value = (ds.Tables["obt_registros_horas_extras"]);
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.SetParameters(parametros);
             lc.DataSources.Add(rds);
