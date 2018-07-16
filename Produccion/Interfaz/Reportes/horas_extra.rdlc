@@ -984,7 +984,7 @@ TRABAJADAS</Value>
                   <Value>=Parameters!Dpto.Value</Value>
                   <Style>
                     <FontWeight>Bold</FontWeight>
-                    <Color>Red</Color>
+                    <TextDecoration>Underline</TextDecoration>
                   </Style>
                 </TextRun>
               </TextRuns>

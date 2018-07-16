@@ -42,6 +42,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.dtpHoraSalida = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.chbInasistencia = new System.Windows.Forms.RadioButton();
+            this.chbIncapacidad = new System.Windows.Forms.RadioButton();
+            this.chbVacaciones = new System.Windows.Forms.RadioButton();
             this.chbCorrido = new System.Windows.Forms.CheckBox();
             this.chbFeriado = new System.Windows.Forms.CheckBox();
             this.btnRegistrar = new System.Windows.Forms.Button();
@@ -61,10 +65,6 @@
             this.dtpFechaHasta = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.dtpFechaDesde = new System.Windows.Forms.DateTimePicker();
-            this.chbVacaciones = new System.Windows.Forms.RadioButton();
-            this.chbIncapacidad = new System.Windows.Forms.RadioButton();
-            this.chbInasistencia = new System.Windows.Forms.RadioButton();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvHorasExtra)).BeginInit();
@@ -144,6 +144,8 @@
             this.cmbTurno.Name = "cmbTurno";
             this.cmbTurno.Size = new System.Drawing.Size(292, 28);
             this.cmbTurno.TabIndex = 149;
+            this.cmbTurno.SelectionChangeCommitted += new System.EventHandler(this.cmbTurno_SelectionChangeCommitted);
+            this.cmbTurno.SelectedValueChanged += new System.EventHandler(this.cmbTurno_SelectedValueChanged);
             // 
             // label1
             // 
@@ -239,6 +241,63 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(680, 251);
             this.panel1.TabIndex = 157;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.White;
+            this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
+            this.btnCancelar.FlatAppearance.BorderSize = 2;
+            this.btnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.ForeColor = System.Drawing.Color.Black;
+            this.btnCancelar.Image = global::Interfaz.Properties.Resources.salir_icon;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCancelar.Location = new System.Drawing.Point(558, 159);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(85, 55);
+            this.btnCancelar.TabIndex = 163;
+            this.btnCancelar.TabStop = false;
+            this.btnCancelar.Text = "CANCELAR";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // chbInasistencia
+            // 
+            this.chbInasistencia.AutoSize = true;
+            this.chbInasistencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chbInasistencia.Location = new System.Drawing.Point(558, 89);
+            this.chbInasistencia.Name = "chbInasistencia";
+            this.chbInasistencia.Size = new System.Drawing.Size(111, 17);
+            this.chbInasistencia.TabIndex = 162;
+            this.chbInasistencia.TabStop = true;
+            this.chbInasistencia.Text = "INASISTENCIA";
+            this.chbInasistencia.UseVisualStyleBackColor = true;
+            // 
+            // chbIncapacidad
+            // 
+            this.chbIncapacidad.AutoSize = true;
+            this.chbIncapacidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chbIncapacidad.Location = new System.Drawing.Point(433, 116);
+            this.chbIncapacidad.Name = "chbIncapacidad";
+            this.chbIncapacidad.Size = new System.Drawing.Size(108, 17);
+            this.chbIncapacidad.TabIndex = 161;
+            this.chbIncapacidad.TabStop = true;
+            this.chbIncapacidad.Text = "INCAPACIDAD";
+            this.chbIncapacidad.UseVisualStyleBackColor = true;
+            // 
+            // chbVacaciones
+            // 
+            this.chbVacaciones.AutoSize = true;
+            this.chbVacaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chbVacaciones.Location = new System.Drawing.Point(433, 93);
+            this.chbVacaciones.Name = "chbVacaciones";
+            this.chbVacaciones.Size = new System.Drawing.Size(103, 17);
+            this.chbVacaciones.TabIndex = 160;
+            this.chbVacaciones.TabStop = true;
+            this.chbVacaciones.Text = "VACACIONES";
+            this.chbVacaciones.UseVisualStyleBackColor = true;
             // 
             // chbCorrido
             // 
@@ -349,7 +408,7 @@
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Visible = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnEditar
             // 
@@ -532,63 +591,6 @@
             this.dtpFechaDesde.Name = "dtpFechaDesde";
             this.dtpFechaDesde.Size = new System.Drawing.Size(109, 22);
             this.dtpFechaDesde.TabIndex = 155;
-            // 
-            // chbVacaciones
-            // 
-            this.chbVacaciones.AutoSize = true;
-            this.chbVacaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chbVacaciones.Location = new System.Drawing.Point(433, 93);
-            this.chbVacaciones.Name = "chbVacaciones";
-            this.chbVacaciones.Size = new System.Drawing.Size(103, 17);
-            this.chbVacaciones.TabIndex = 160;
-            this.chbVacaciones.TabStop = true;
-            this.chbVacaciones.Text = "VACACIONES";
-            this.chbVacaciones.UseVisualStyleBackColor = true;
-            // 
-            // chbIncapacidad
-            // 
-            this.chbIncapacidad.AutoSize = true;
-            this.chbIncapacidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chbIncapacidad.Location = new System.Drawing.Point(433, 116);
-            this.chbIncapacidad.Name = "chbIncapacidad";
-            this.chbIncapacidad.Size = new System.Drawing.Size(108, 17);
-            this.chbIncapacidad.TabIndex = 161;
-            this.chbIncapacidad.TabStop = true;
-            this.chbIncapacidad.Text = "INCAPACIDAD";
-            this.chbIncapacidad.UseVisualStyleBackColor = true;
-            // 
-            // chbInasistencia
-            // 
-            this.chbInasistencia.AutoSize = true;
-            this.chbInasistencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chbInasistencia.Location = new System.Drawing.Point(558, 89);
-            this.chbInasistencia.Name = "chbInasistencia";
-            this.chbInasistencia.Size = new System.Drawing.Size(111, 17);
-            this.chbInasistencia.TabIndex = 162;
-            this.chbInasistencia.TabStop = true;
-            this.chbInasistencia.Text = "INASISTENCIA";
-            this.chbInasistencia.UseVisualStyleBackColor = true;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.White;
-            this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
-            this.btnCancelar.FlatAppearance.BorderSize = 2;
-            this.btnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.ForeColor = System.Drawing.Color.Black;
-            this.btnCancelar.Image = global::Interfaz.Properties.Resources.salir_icon;
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCancelar.Location = new System.Drawing.Point(558, 159);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(85, 55);
-            this.btnCancelar.TabIndex = 163;
-            this.btnCancelar.TabStop = false;
-            this.btnCancelar.Text = "CANCELAR";
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // frmHoraExtra
             // 

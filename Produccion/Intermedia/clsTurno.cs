@@ -43,6 +43,13 @@ namespace Intermedia
             lst.Add(new clsParametros("@estado", objEstado));
             return dt = M.Listado("listado_turno", lst);
         }
+        public DataTable ObtenerInicioFinTurno()
+        {
+            DataTable dt = new DataTable();
+            List<clsParametros> lst = new List<clsParametros>();
+            lst.Add(new clsParametros("@idturno", Midturno));
+            return dt = M.Listado("obt_inicio_fin_turno", lst);
+        }
         public string ActivarTurno()
         {
             string mensaje = "";

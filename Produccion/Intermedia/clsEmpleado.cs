@@ -247,6 +247,17 @@ namespace Intermedia
 
             return mensaje;
         }
+        public string EliminarRegHoraExtra()
+        {
+            string mensaje = "";
+            List<clsParametros> lst = new List<clsParametros>();
+            lst.Add(new clsParametros("@msj", "", SqlDbType.VarChar, ParameterDirection.Output, 50));
+            lst.Add(new clsParametros("@idreghora", Midhora));
+            M.EjecutarSP("eliminar_reg_hora_extra", ref lst);
+            mensaje = lst[0].Valor.ToString();
+
+            return mensaje;
+        }
         public string RegistrarActHorasExtras()
         {
             string mensaje = "";

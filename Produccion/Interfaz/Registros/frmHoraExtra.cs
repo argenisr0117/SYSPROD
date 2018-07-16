@@ -122,6 +122,8 @@ namespace Interfaz.Registros
             dtpHoraSalida.Value = dtpHoraSalida.Value.AddDays(-1);
             dtpHoraSalida.Value = new DateTime(dtpHoraSalida.Value.Year, dtpHoraSalida.Value.Month, dtpHoraSalida.Value.Day, 14, 0, 0);
             LlenarGrid();
+            cmbTurno.SelectedIndex = 0;
+            cmbTurno_SelectionChangeCommitted(e, e);
 
         }
 
@@ -223,7 +225,7 @@ namespace Interfaz.Registros
         private void btnReporte_Click(object sender, EventArgs e)
         {
             int diferencia = (int)(dtpFechaHasta.Value - dtpFechaDesde.Value).TotalDays;
-            if (diferencia<=17)
+            if (diferencia <= 17)
             {
                 if (dtpFechaDesde.Value <= dtpFechaHasta.Value)
                 {
@@ -239,12 +241,48 @@ namespace Interfaz.Registros
                     obj.Show();
                 }
             }
-            
+
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Limpiar();
+        }
+
+        private void cmbTurno_SelectedValueChanged(object sender, EventArgs e)
+        {
+            //if (cmbTurno.SelectedIndex > -1)
+            //{
+
+            //}
+
+        }
+
+        private void cmbTurno_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            T.Idturno = cmbTurno.SelectedValue.ToString();
+            DataTable dt = T.ObtenerInicioFinTurno();
+            dtpHoraEntrada.Value = new DateTime(dtpHoraEntrada.Value.Year, dtpHoraEntrada.Value.Month, dtpHoraEntrada.Value.Day, Convert.ToInt16(dt.Rows[0][0]), 0, 0);
+            dtpHoraSalida.Value = new DateTime(dtpHoraSalida.Value.Year, dtpHoraSalida.Value.Month, dtpHoraSalida.Value.Day, Convert.ToInt16(dt.Rows[0][1]), 0, 0);
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dtgvHorasExtra.SelectedRows.Count > 0)
+            {
+                string msj = "";
+                E.Idhora = Convert.ToInt16(dtgvHorasExtra.CurrentRow.Cells[0].Value);
+                msj = E.EliminarRegHoraExtra();
+                if (msj == "1")
+                {
+                    MessageBoxEx.Show("Registro eliminado", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LlenarGrid();
+                }
+                else
+                {
+                    MessageBoxEx.Show("Ha ocurrido un error.", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }
