@@ -720,6 +720,7 @@ namespace Interfaz
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.SetParameters(parametros);
             lc.DataSources.Add(rds);
+            reportViewer1.ZoomPercent = 125;
             this.reportViewer1.RefreshReport();
         }
         private void Incentivo_Galvanizado()

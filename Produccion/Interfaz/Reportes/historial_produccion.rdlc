@@ -305,7 +305,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Round(Fields!MINUTOS.Value/Fields!ROLLOS.Value,2)</Value>
+                              <Value>=IIF(Single.IsNAN(Round(Fields!MINUTOS.Value/Fields!ROLLOS.Value,2)) or Single.IsInfinity(Round(Fields!MINUTOS.Value/Fields!ROLLOS.Value,2)), 0, Round(Fields!MINUTOS.Value/Fields!ROLLOS.Value,2))</Value>
                               <Style>
                                 <FontFamily>Calibri</FontFamily>
                                 <FontSize>9pt</FontSize>

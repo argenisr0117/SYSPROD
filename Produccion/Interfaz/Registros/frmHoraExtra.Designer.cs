@@ -65,6 +65,7 @@
             this.dtpFechaHasta = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.dtpFechaDesde = new System.Windows.Forms.DateTimePicker();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvHorasExtra)).BeginInit();
@@ -350,7 +351,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 251);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(680, 347);
+            this.panel2.Size = new System.Drawing.Size(680, 421);
             this.panel2.TabIndex = 158;
             // 
             // dtgvHorasExtra
@@ -369,24 +370,25 @@
             this.dtgvHorasExtra.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgvHorasExtra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvHorasExtra.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtgvHorasExtra.Location = new System.Drawing.Point(0, 128);
+            this.dtgvHorasExtra.Location = new System.Drawing.Point(0, 186);
             this.dtgvHorasExtra.MultiSelect = false;
             this.dtgvHorasExtra.Name = "dtgvHorasExtra";
             this.dtgvHorasExtra.ReadOnly = true;
             this.dtgvHorasExtra.RowHeadersVisible = false;
             this.dtgvHorasExtra.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvHorasExtra.Size = new System.Drawing.Size(596, 219);
+            this.dtgvHorasExtra.Size = new System.Drawing.Size(596, 235);
             this.dtgvHorasExtra.TabIndex = 1;
             // 
             // panel4
             // 
+            this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.btnEliminar);
             this.panel4.Controls.Add(this.btnEditar);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(596, 128);
+            this.panel4.Location = new System.Drawing.Point(596, 186);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(84, 219);
+            this.panel4.Size = new System.Drawing.Size(84, 235);
             this.panel4.TabIndex = 2;
             // 
             // btnEliminar
@@ -433,7 +435,9 @@
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.btnBuscar);
             this.panel3.Controls.Add(this.btnReporte);
             this.panel3.Controls.Add(this.label9);
@@ -447,7 +451,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(680, 128);
+            this.panel3.Size = new System.Drawing.Size(680, 186);
             this.panel3.TabIndex = 0;
             // 
             // btnBuscar
@@ -461,7 +465,7 @@
             this.btnBuscar.ForeColor = System.Drawing.Color.Black;
             this.btnBuscar.Image = global::Interfaz.Properties.Resources.Search_icon1;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnBuscar.Location = new System.Drawing.Point(379, 41);
+            this.btnBuscar.Location = new System.Drawing.Point(379, 95);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(81, 58);
             this.btnBuscar.TabIndex = 165;
@@ -482,7 +486,7 @@
             this.btnReporte.ForeColor = System.Drawing.Color.Black;
             this.btnReporte.Image = global::Interfaz.Properties.Resources.Show_all_icon;
             this.btnReporte.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnReporte.Location = new System.Drawing.Point(466, 41);
+            this.btnReporte.Location = new System.Drawing.Point(466, 95);
             this.btnReporte.Name = "btnReporte";
             this.btnReporte.Size = new System.Drawing.Size(81, 58);
             this.btnReporte.TabIndex = 164;
@@ -498,7 +502,7 @@
             this.label9.BackColor = System.Drawing.Color.White;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(132, 19);
+            this.label9.Location = new System.Drawing.Point(132, 73);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(70, 13);
             this.label9.TabIndex = 161;
@@ -514,7 +518,7 @@
             this.cmbEmpresa.ForeColor = System.Drawing.Color.Black;
             this.cmbEmpresa.FormattingEnabled = true;
             this.cmbEmpresa.IntegralHeight = false;
-            this.cmbEmpresa.Location = new System.Drawing.Point(132, 35);
+            this.cmbEmpresa.Location = new System.Drawing.Point(132, 89);
             this.cmbEmpresa.MaxDropDownItems = 30;
             this.cmbEmpresa.Name = "cmbEmpresa";
             this.cmbEmpresa.Size = new System.Drawing.Size(236, 28);
@@ -526,7 +530,7 @@
             this.label8.BackColor = System.Drawing.Color.White;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(132, 66);
+            this.label8.Location = new System.Drawing.Point(132, 120);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(113, 13);
             this.label8.TabIndex = 159;
@@ -542,7 +546,7 @@
             this.cmbDpto2.ForeColor = System.Drawing.Color.Black;
             this.cmbDpto2.FormattingEnabled = true;
             this.cmbDpto2.IntegralHeight = false;
-            this.cmbDpto2.Location = new System.Drawing.Point(132, 82);
+            this.cmbDpto2.Location = new System.Drawing.Point(132, 136);
             this.cmbDpto2.MaxDropDownItems = 30;
             this.cmbDpto2.Name = "cmbDpto2";
             this.cmbDpto2.Size = new System.Drawing.Size(236, 28);
@@ -552,7 +556,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(7, 66);
+            this.label4.Location = new System.Drawing.Point(7, 120);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 13);
             this.label4.TabIndex = 158;
@@ -565,7 +569,7 @@
             this.dtpFechaHasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaHasta.ForeColor = System.Drawing.Color.Black;
             this.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFechaHasta.Location = new System.Drawing.Point(7, 82);
+            this.dtpFechaHasta.Location = new System.Drawing.Point(7, 136);
             this.dtpFechaHasta.Name = "dtpFechaHasta";
             this.dtpFechaHasta.Size = new System.Drawing.Size(109, 22);
             this.dtpFechaHasta.TabIndex = 157;
@@ -574,7 +578,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(7, 19);
+            this.label7.Location = new System.Drawing.Point(7, 73);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(53, 13);
             this.label7.TabIndex = 156;
@@ -587,16 +591,28 @@
             this.dtpFechaDesde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaDesde.ForeColor = System.Drawing.Color.Black;
             this.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFechaDesde.Location = new System.Drawing.Point(7, 35);
+            this.dtpFechaDesde.Location = new System.Drawing.Point(7, 89);
             this.dtpFechaDesde.Name = "dtpFechaDesde";
             this.dtpFechaDesde.Size = new System.Drawing.Size(109, 22);
             this.dtpFechaDesde.TabIndex = 155;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.DarkRed;
+            this.label10.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label10.Location = new System.Drawing.Point(161, 18);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(357, 26);
+            this.label10.TabIndex = 166;
+            this.label10.Text = "LISTADO DE HORAS REGISTRADAS";
             // 
             // frmHoraExtra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(680, 598);
+            this.ClientSize = new System.Drawing.Size(680, 672);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
@@ -655,5 +671,6 @@
         private System.Windows.Forms.RadioButton chbIncapacidad;
         private System.Windows.Forms.RadioButton chbVacaciones;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Label label10;
     }
 }

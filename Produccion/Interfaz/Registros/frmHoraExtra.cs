@@ -227,7 +227,7 @@ namespace Interfaz.Registros
             int diferencia = (int)(dtpFechaHasta.Value - dtpFechaDesde.Value).TotalDays;
             if (diferencia <= 17)
             {
-                if (dtpFechaDesde.Value <= dtpFechaHasta.Value)
+                if (dtpFechaDesde.Value.Date <= dtpFechaHasta.Value.Date)
                 {
                     frmReporte obj = new frmReporte();
                     obj.Valor = 23;
@@ -270,17 +270,21 @@ namespace Interfaz.Registros
         {
             if (dtgvHorasExtra.SelectedRows.Count > 0)
             {
-                string msj = "";
-                E.Idhora = Convert.ToInt16(dtgvHorasExtra.CurrentRow.Cells[0].Value);
-                msj = E.EliminarRegHoraExtra();
-                if (msj == "1")
+                DialogResult var = MessageBoxEx.Show("¿Desea eliminar el registro?", "Sistema de Producción", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (var == DialogResult.Yes)
                 {
-                    MessageBoxEx.Show("Registro eliminado", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LlenarGrid();
-                }
-                else
-                {
-                    MessageBoxEx.Show("Ha ocurrido un error.", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    string msj = "";
+                    E.Idhora = Convert.ToInt16(dtgvHorasExtra.CurrentRow.Cells[0].Value);
+                    msj = E.EliminarRegHoraExtra();
+                    if (msj == "1")
+                    {
+                        MessageBoxEx.Show("Registro eliminado", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LlenarGrid();
+                    }
+                    else
+                    {
+                        MessageBoxEx.Show("Ha ocurrido un error.", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
         }
