@@ -100,7 +100,7 @@ namespace Interfaz.Registros
                                 cont++;
                             }
                         }
-                        Mo.Duracion = Convert.ToInt16(minutos);
+                        Mo.Duracion = Convert.ToInt32(minutos);
                     }
 
                     msj = Mo.Registrar_ResolverMaqParada();

@@ -71,11 +71,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=IIf(IsNothing(Fields!HORA_TRA.Value),"0.0",Fields!HORA_TRA.Value)</Value>
+                              <Value>=IIf(IsNothing(Fields!HORA_TRA.Value),"0",Fields!HORA_TRA.Value) &amp; "" &amp; IIf(Fields!HE_NOCTURNA.Value&lt;=0,"",Variables!slash.Value &amp; "" &amp; Fields!HE_NOCTURNA.Value)</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>=IIf(Fields!CORRIDO.Value=true,"SemiBold",IIf(Fields!FERIADO.Value=true,"SemiBold",IIf(Fields!VACACIONES.Value=true,"SemiBold",IIf(Fields!INASISTENCIA.Value=true,"SemiBold",IIf(Fields!INCAPACIDAD.Value=true,"SemiBold","Default")))))</FontWeight>
-                                <Format>f1</Format>
                                 <Color>=IIf(Fields!CORRIDO.Value=true,"Chocolate",IIf(Fields!FERIADO.Value=true,"Maroon",IIf(Fields!VACACIONES.Value=true,"DarkBlue",IIf(Fields!INASISTENCIA.Value=true,"Red",IIf(Fields!INCAPACIDAD.Value=true,"DarkGreen","Black")))))</Color>
                                 <Language>es-DO</Language>
                               </Style>
@@ -525,16 +524,16 @@ TRABAJADAS</Value>
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>0.14931in</Width>
+              <Width>0.18666in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.74306in</Width>
+              <Width>0.78041in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.13767in</Width>
+              <Width>0.17502in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.76727in</Width>
+              <Width>0.92265in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -875,18 +874,23 @@ TRABAJADAS</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
-                              <Style />
+                              <Value>/</Value>
+                              <Style>
+                                <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox34</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
-                          <Style>None</Style>
+                          <Style>Solid</Style>
                         </Border>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -905,8 +909,10 @@ TRABAJADAS</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
-                              <Style />
+                              <Value>HE. NOCTURNAS</Value>
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -916,7 +922,7 @@ TRABAJADAS</Value>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
-                          <Style>None</Style>
+                          <Style>Solid</Style>
                         </Border>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -948,7 +954,7 @@ TRABAJADAS</Value>
         <Top>0.8425in</Top>
         <Left>0.125in</Left>
         <Height>0.75in</Height>
-        <Width>1.79731in</Width>
+        <Width>2.06473in</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -957,6 +963,75 @@ TRABAJADAS</Value>
           <FontSize>7pt</FontSize>
         </Style>
       </Tablix>
+      <Textbox Name="Textbox3">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>OBSERVACIONES:</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>0.8425in</Top>
+        <Left>2.29042in</Left>
+        <Height>0.25in</Height>
+        <Width>1.12733in</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Line Name="Line4">
+        <Top>1.10292in</Top>
+        <Left>3.42583in</Left>
+        <Height>0in</Height>
+        <Width>7.27778in</Width>
+        <ZIndex>3</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
+      <Line Name="Line5">
+        <Top>1.29042in</Top>
+        <Left>3.41775in</Left>
+        <Height>0in</Height>
+        <Width>7.28586in</Width>
+        <ZIndex>4</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
+      <Line Name="Line6">
+        <Top>1.47854in</Top>
+        <Left>3.41775in</Left>
+        <Height>0in</Height>
+        <Width>7.28586in</Width>
+        <ZIndex>5</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
     </ReportItems>
     <Height>1.64458in</Height>
     <Style />
@@ -1516,6 +1591,11 @@ TRABAJADAS</Value>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
   </ReportParameters>
+  <Variables>
+    <Variable Name="slash">
+      <Value>/</Value>
+    </Variable>
+  </Variables>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>683a4c8d-c2cf-45cc-b26b-05c8d4651f35</rd:ReportID>
