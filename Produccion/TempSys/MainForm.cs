@@ -485,7 +485,7 @@ namespace TempSys
 
                 chartZincG.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Hours;
                 chartZincG.ChartAreas[0].AxisX.Interval = 2;
-                chartZincG.ChartAreas[0].AxisY.Interval = 20;
+                chartZincG.ChartAreas[0].AxisY.Interval = 30;
                 series.ChartType = SeriesChartType.Line;
                 series1.ChartType = SeriesChartType.Line;
 
@@ -534,8 +534,8 @@ namespace TempSys
                 chartZincG.ChartAreas[0].AxisX.LabelStyle.Angle = -30;
                 chartZincG.ChartAreas[0].AxisX.Minimum = min_;
                 chartZincG.ChartAreas[0].AxisX.Maximum = max_;
-                chartZincG.ChartAreas[0].AxisY.Minimum = Convert.ToDouble(minY) - 25;
-                chartZincG.ChartAreas[0].AxisY.Maximum = Convert.ToDouble(maxY) + 25;
+                chartZincG.ChartAreas[0].AxisY.Minimum = Convert.ToDouble(minY) - 40;
+                chartZincG.ChartAreas[0].AxisY.Maximum = Convert.ToDouble(maxY) + 40;
                 //chartE0.Series.RemoveAt(0);
             }
             catch (Exception ex)
