@@ -41,6 +41,8 @@ namespace Interfaz.Consultas
                 {
                     panel1.Visible = true;
                     lblEstado.Visible = false;
+                    txtUtilizacion.Visible = false;
+                    txtProdMin.Visible = false;
                     produccionChart.Visible = false;
                     string Dpto = dt.Rows[0]["Dpto"].ToString();
                     txtMaquina.Text = dt.Rows[0]["Maquina"].ToString();
@@ -120,6 +122,8 @@ namespace Interfaz.Consultas
                 {
                     panel1.Visible = false;
                     lblEstado.Visible = false;
+                    txtProdMin.Visible = true;
+                    txtUtilizacion.Visible = true;
                     produccionChart.Visible = true;
                     //produccionChart.BringToFront();
                     LlenarChart();
@@ -318,7 +322,7 @@ namespace Interfaz.Consultas
                     b++;
 
                 }
-                //txtUtilizacion.Clear();
+                txtUtilizacion.Clear();
                 dt = Mo.ObtenerTotalDetalleProduccion();
                 if (dt.Rows.Count > 0)
                 {
@@ -327,12 +331,12 @@ namespace Interfaz.Consultas
                     tiempo = tiempo / 60;
                     double utilizacion = ((double)tiempo / (double)450);
                     utilizacion = Math.Round(utilizacion, 2) * 100;
-                    //txtUtilizacion.Text = "Utilización: " + utilizacion.ToString() + " %";
+                    txtUtilizacion.Text = "Utilización: " + utilizacion.ToString() + " %";
                     double prodd = (double)tiempo / (double)prod;
                     prodd = Math.Round(prodd, 1);
-                    //txtProdMin.Text = "Mins/Rollo: " + prodd.ToString();
-                    //txtUtilizacion.Visible = true;
-                    //txtProdMin.Visible = true;
+                    txtProdMin.Text = "Mins/Rollo: " + prodd.ToString();
+                    txtUtilizacion.Visible = true;
+                    txtProdMin.Visible = true;
                 }
 
                 series.XValueType = ChartValueType.Time;

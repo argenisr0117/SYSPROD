@@ -224,7 +224,7 @@
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.Black;
             this.btnBuscar.Image = global::Interfaz.Properties.Resources.Search_icon;
-            this.btnBuscar.Location = new System.Drawing.Point(698, 143);
+            this.btnBuscar.Location = new System.Drawing.Point(751, 143);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(41, 24);
             this.btnBuscar.TabIndex = 150;
@@ -270,7 +270,7 @@
             this.cmbProducto.Location = new System.Drawing.Point(263, 141);
             this.cmbProducto.MaxDropDownItems = 30;
             this.cmbProducto.Name = "cmbProducto";
-            this.cmbProducto.Size = new System.Drawing.Size(431, 28);
+            this.cmbProducto.Size = new System.Drawing.Size(476, 28);
             this.cmbProducto.TabIndex = 147;
             this.cmbProducto.SelectedValueChanged += new System.EventHandler(this.cmbProducto_SelectedValueChanged);
             // 
@@ -354,7 +354,7 @@
             this.btnImprimir.ForeColor = System.Drawing.Color.Black;
             this.btnImprimir.Image = global::Interfaz.Properties.Resources.save_icon;
             this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnImprimir.Location = new System.Drawing.Point(341, 413);
+            this.btnImprimir.Location = new System.Drawing.Point(317, 413);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(128, 67);
             this.btnImprimir.TabIndex = 136;
@@ -376,7 +376,7 @@
             this.btnBorrar.ForeColor = System.Drawing.Color.Black;
             this.btnBorrar.Image = global::Interfaz.Properties.Resources.delete_file_icon;
             this.btnBorrar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnBorrar.Location = new System.Drawing.Point(488, 413);
+            this.btnBorrar.Location = new System.Drawing.Point(464, 413);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(128, 67);
             this.btnBorrar.TabIndex = 135;
@@ -392,7 +392,7 @@
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkRed;
-            this.label1.Location = new System.Drawing.Point(304, 35);
+            this.label1.Location = new System.Drawing.Point(274, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(361, 24);
             this.label1.TabIndex = 113;
@@ -551,7 +551,7 @@
             this.btnExportar.ForeColor = System.Drawing.Color.Black;
             this.btnExportar.Image = global::Interfaz.Properties.Resources.exportar__1_;
             this.btnExportar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnExportar.Location = new System.Drawing.Point(163, 6);
+            this.btnExportar.Location = new System.Drawing.Point(236, 6);
             this.btnExportar.Name = "btnExportar";
             this.btnExportar.Size = new System.Drawing.Size(103, 55);
             this.btnExportar.TabIndex = 61;
@@ -572,7 +572,7 @@
             this.btnEliminar.ForeColor = System.Drawing.Color.Black;
             this.btnEliminar.Image = global::Interfaz.Properties.Resources.delete_file_icon;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEliminar.Location = new System.Drawing.Point(490, 6);
+            this.btnEliminar.Location = new System.Drawing.Point(563, 6);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(103, 55);
             this.btnEliminar.TabIndex = 59;
@@ -593,7 +593,7 @@
             this.btnEditar.ForeColor = System.Drawing.Color.Black;
             this.btnEditar.Image = global::Interfaz.Properties.Resources.save_icon;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEditar.Location = new System.Drawing.Point(381, 6);
+            this.btnEditar.Location = new System.Drawing.Point(454, 6);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(103, 55);
             this.btnEditar.TabIndex = 58;
@@ -614,7 +614,7 @@
             this.btnReporte.ForeColor = System.Drawing.Color.Black;
             this.btnReporte.Image = global::Interfaz.Properties.Resources.Show_all_icon;
             this.btnReporte.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnReporte.Location = new System.Drawing.Point(272, 6);
+            this.btnReporte.Location = new System.Drawing.Point(345, 6);
             this.btnReporte.Name = "btnReporte";
             this.btnReporte.Size = new System.Drawing.Size(103, 55);
             this.btnReporte.TabIndex = 60;

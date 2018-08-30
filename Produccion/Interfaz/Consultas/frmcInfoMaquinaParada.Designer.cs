@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmcInfoMaquinaParada));
@@ -47,6 +48,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblEstado = new System.Windows.Forms.Label();
             this.produccionChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.txtProdMin = new Interfaz.Controles.textboxN(this.components);
+            this.txtUtilizacion = new Interfaz.Controles.textboxN(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.produccionChart)).BeginInit();
             this.SuspendLayout();
@@ -57,7 +60,7 @@
             this.lbTitulo.BackColor = System.Drawing.Color.DarkRed;
             this.lbTitulo.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTitulo.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lbTitulo.Location = new System.Drawing.Point(194, 3);
+            this.lbTitulo.Location = new System.Drawing.Point(200, 3);
             this.lbTitulo.Name = "lbTitulo";
             this.lbTitulo.Size = new System.Drawing.Size(335, 24);
             this.lbTitulo.TabIndex = 69;
@@ -87,7 +90,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(147, 60);
+            this.panel1.Location = new System.Drawing.Point(142, 60);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(428, 289);
             this.panel1.TabIndex = 71;
@@ -226,15 +229,41 @@
             this.produccionChart.Legends.Add(legend1);
             this.produccionChart.Location = new System.Drawing.Point(3, 49);
             this.produccionChart.Name = "produccionChart";
-            this.produccionChart.Size = new System.Drawing.Size(716, 311);
+            this.produccionChart.Size = new System.Drawing.Size(728, 311);
             this.produccionChart.TabIndex = 82;
             this.produccionChart.Text = "chart1";
+            // 
+            // txtProdMin
+            // 
+            this.txtProdMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProdMin.Location = new System.Drawing.Point(581, 140);
+            this.txtProdMin.Name = "txtProdMin";
+            this.txtProdMin.ReadOnly = true;
+            this.txtProdMin.Size = new System.Drawing.Size(129, 21);
+            this.txtProdMin.TabIndex = 140;
+            this.txtProdMin.Validar = false;
+            this.txtProdMin.Valor = Interfaz.Controles.textboxN.Tipo.Números;
+            this.txtProdMin.Visible = false;
+            // 
+            // txtUtilizacion
+            // 
+            this.txtUtilizacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUtilizacion.Location = new System.Drawing.Point(581, 115);
+            this.txtUtilizacion.Name = "txtUtilizacion";
+            this.txtUtilizacion.ReadOnly = true;
+            this.txtUtilizacion.Size = new System.Drawing.Size(129, 21);
+            this.txtUtilizacion.TabIndex = 139;
+            this.txtUtilizacion.Validar = false;
+            this.txtUtilizacion.Valor = Interfaz.Controles.textboxN.Tipo.Números;
+            this.txtUtilizacion.Visible = false;
             // 
             // frmcInfoMaquinaParada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(723, 372);
+            this.ClientSize = new System.Drawing.Size(735, 372);
+            this.Controls.Add(this.txtProdMin);
+            this.Controls.Add(this.txtUtilizacion);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lbTitulo);
             this.Controls.Add(this.lblEstado);
@@ -272,5 +301,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.DataVisualization.Charting.Chart produccionChart;
+        private Controles.textboxN txtProdMin;
+        private Controles.textboxN txtUtilizacion;
     }
 }

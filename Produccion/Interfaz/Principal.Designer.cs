@@ -55,10 +55,10 @@
             this.btnOrden = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.btnRegHoras = new System.Windows.Forms.Button();
             this.btnAlmacenLineaGalv = new System.Windows.Forms.Button();
             this.btnAlmacenTerminados = new System.Windows.Forms.Button();
             this.btnAlmacenIntermedios = new System.Windows.Forms.Button();
-            this.btnRegHoras = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -448,6 +448,26 @@
             this.panel6.Size = new System.Drawing.Size(618, 112);
             this.panel6.TabIndex = 5;
             // 
+            // btnRegHoras
+            // 
+            this.btnRegHoras.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnRegHoras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRegHoras.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnRegHoras.FlatAppearance.BorderSize = 0;
+            this.btnRegHoras.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRegHoras.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegHoras.ForeColor = System.Drawing.Color.White;
+            this.btnRegHoras.Image = global::Interfaz.Properties.Resources.clock;
+            this.btnRegHoras.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnRegHoras.Location = new System.Drawing.Point(462, 0);
+            this.btnRegHoras.Name = "btnRegHoras";
+            this.btnRegHoras.Size = new System.Drawing.Size(156, 112);
+            this.btnRegHoras.TabIndex = 13;
+            this.btnRegHoras.Text = "Registro Horas Extras";
+            this.btnRegHoras.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnRegHoras.UseVisualStyleBackColor = false;
+            this.btnRegHoras.Click += new System.EventHandler(this.btnRegHoras_Click);
+            // 
             // btnAlmacenLineaGalv
             // 
             this.btnAlmacenLineaGalv.BackColor = System.Drawing.Color.DarkSlateBlue;
@@ -508,26 +528,6 @@
             this.btnAlmacenIntermedios.UseVisualStyleBackColor = false;
             this.btnAlmacenIntermedios.Click += new System.EventHandler(this.btnAlmacenIntermedios_Click);
             // 
-            // btnRegHoras
-            // 
-            this.btnRegHoras.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnRegHoras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnRegHoras.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnRegHoras.FlatAppearance.BorderSize = 0;
-            this.btnRegHoras.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRegHoras.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegHoras.ForeColor = System.Drawing.Color.White;
-            this.btnRegHoras.Image = global::Interfaz.Properties.Resources.clock;
-            this.btnRegHoras.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnRegHoras.Location = new System.Drawing.Point(462, 0);
-            this.btnRegHoras.Name = "btnRegHoras";
-            this.btnRegHoras.Size = new System.Drawing.Size(156, 112);
-            this.btnRegHoras.TabIndex = 13;
-            this.btnRegHoras.Text = "Registro Horas Extras";
-            this.btnRegHoras.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnRegHoras.UseVisualStyleBackColor = false;
-            this.btnRegHoras.Click += new System.EventHandler(this.btnRegHoras_Click);
-            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -543,6 +543,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SISTEMA DE PRODUCCIÓN";
             this.Load += new System.EventHandler(this.Principal_Load);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Principal_MouseMove);
             this.Resize += new System.EventHandler(this.Principal_Resize);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -19,6 +19,7 @@ namespace Interfaz
             InitializeComponent();
         }
         string form;
+        int inactivo = 0;
         private void Principal_Load(object sender, EventArgs e)
         {
             Permisos();
@@ -39,6 +40,11 @@ namespace Interfaz
         private void timer1_Tick(object sender, EventArgs e)
         {
             ObtenerHora();
+            inactivo = inactivo + 1;
+            if (inactivo > 1200)
+            {
+                Application.Exit();
+            }
         }
 
         private void btnregistros_Click(object sender, EventArgs e)
@@ -257,6 +263,11 @@ namespace Interfaz
         {
             form = "frmHoraExtra";
             AbrirForm(form);
+        }
+
+        private void Principal_MouseMove(object sender, MouseEventArgs e)
+        {
+            inactivo = 0;
         }
     }
 }

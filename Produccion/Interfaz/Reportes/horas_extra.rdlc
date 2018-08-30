@@ -60,7 +60,7 @@
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.33334in</Height>
+              <Height>0.28126in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -71,7 +71,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=IIf(IsNothing(Fields!HORA_TRA.Value),"0",Replace(Format(Fields!HORA_TRA.Value,"#,###0.00"),",",".")) &amp; "" &amp; IIf(Fields!HE_NOCTURNA.Value&lt;=0,"",Variables!slash.Value &amp; "" &amp; Replace(Format(Fields!HE_NOCTURNA.Value,"#,###0.00"),",","."))</Value>
+                              <Value>=IIf(IsNothing(Fields!HORA_TRA.Value),"0",Replace(Fields!HORA_TRA.Value,",",".")) &amp; "" &amp; IIf(Fields!HE_NOCTURNA.Value&lt;=0,"",Variables!slash.Value &amp; "" &amp; Replace(Fields!HE_NOCTURNA.Value,",","."))</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>=IIf(Fields!CORRIDO.Value=true,"SemiBold",IIf(Fields!FERIADO.Value=true,"SemiBold",IIf(Fields!VACACIONES.Value=true,"SemiBold",IIf(Fields!INASISTENCIA.Value=true,"SemiBold",IIf(Fields!INCAPACIDAD.Value=true,"SemiBold","Default")))))</FontWeight>
@@ -513,7 +513,7 @@ TRABAJADAS</Value>
         <DataSetName>DataSet1</DataSetName>
         <Top>0.0925in</Top>
         <Left>0.125in</Left>
-        <Height>0.69792in</Height>
+        <Height>0.64584in</Height>
         <Width>4.9918in</Width>
         <Style>
           <Border>
@@ -952,7 +952,7 @@ TRABAJADAS</Value>
             <TablixMember />
           </TablixMembers>
         </TablixRowHierarchy>
-        <Top>1.0925in</Top>
+        <Top>0.8425in</Top>
         <Left>0.125in</Left>
         <Height>0.75in</Height>
         <Width>2.06474in</Width>
@@ -982,7 +982,7 @@ TRABAJADAS</Value>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>1.0925in</Top>
+        <Top>0.8425in</Top>
         <Left>2.29042in</Left>
         <Height>0.25in</Height>
         <Width>1.12733in</Width>
@@ -998,7 +998,7 @@ TRABAJADAS</Value>
         </Style>
       </Textbox>
       <Line Name="Line4">
-        <Top>1.35292in</Top>
+        <Top>1.10292in</Top>
         <Left>3.42583in</Left>
         <Height>0in</Height>
         <Width>7.27778in</Width>
@@ -1010,7 +1010,7 @@ TRABAJADAS</Value>
         </Style>
       </Line>
       <Line Name="Line5">
-        <Top>1.54042in</Top>
+        <Top>1.29042in</Top>
         <Left>3.41775in</Left>
         <Height>0in</Height>
         <Width>7.28586in</Width>
@@ -1022,7 +1022,7 @@ TRABAJADAS</Value>
         </Style>
       </Line>
       <Line Name="Line6">
-        <Top>1.72854in</Top>
+        <Top>1.47854in</Top>
         <Left>3.41775in</Left>
         <Height>0in</Height>
         <Width>7.28586in</Width>
@@ -1034,7 +1034,7 @@ TRABAJADAS</Value>
         </Style>
       </Line>
     </ReportItems>
-    <Height>1.89458in</Height>
+    <Height>1.655in</Height>
     <Style />
   </Body>
   <Width>10.95805in</Width>
