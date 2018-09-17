@@ -630,6 +630,7 @@ namespace Interfaz
                 obj2.Fechai = Program.Fechai;
                 obj2.Fechaf = Program.Fechaf;
                 obj2.Show();
+                Program.Valor2 = 0;
             }
            
         }
@@ -767,6 +768,7 @@ namespace Interfaz
                 obj2.Fechai = Program.Fechai;
                 obj2.Fechaf = Program.Fechaf;
                 obj2.Show();
+                Program.Valor2 = 0;
             }
         }
 

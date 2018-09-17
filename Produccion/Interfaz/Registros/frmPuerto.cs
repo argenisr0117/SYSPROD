@@ -24,43 +24,38 @@ namespace Interfaz.Registros
         }
         private void LlenarCombo()
         {
-            try
-            {
-                cmbDpto.DataSource = D.Listar(true);
-                cmbDpto.DisplayMember = "DEPARTAMENTO";
-                cmbDpto.ValueMember = "ID_DPTO";
-            }
-            catch (Exception ex)
-            {
-                MessageBoxEx.Show(ex.Message);
-            }
+
+            cmbDpto.DataSource = D.Listar(true);
+            cmbDpto.DisplayMember = "DEPARTAMENTO";
+            cmbDpto.ValueMember = "ID_DPTO";
+
 
         }
         public string PortName;
         private void btnregistrar_Click(object sender, EventArgs e)
         {
-            if(cmbPuerto.SelectedIndex >-1 && cmbSpeed.SelectedIndex >-1)
+            if (cmbPuerto.SelectedIndex > -1 && cmbSpeed.SelectedIndex > -1)
             {
-            string mensaje = "";
-            PT.Puerto = cmbPuerto.Text;
-            PT.Id = Program.Idpuerto;
-            PT.Baud = Convert.ToInt32(cmbSpeed.SelectedItem);
-            PT.Iddpto = cmbDpto.SelectedValue.ToString();
-            try
-            {
-                mensaje = PT.ActualizarPuerto();
-                if (mensaje == "1")
+                string mensaje = "";
+                PT.Puerto = cmbPuerto.Text;
+                PT.Id = Program.Idpuerto;
+                PT.Baud = Convert.ToInt32(cmbSpeed.SelectedItem);
+                PT.Iddpto = cmbDpto.SelectedValue.ToString();
+                try
                 {
-                    MessageBoxEx.Show("Configuración Actualizada", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    ConfiguracionActual();
-                    Program.Valor3 = 1;
-                    this.Close();
+                    mensaje = PT.ActualizarPuerto();
+                    if (mensaje == "1")
+                    {
+                        MessageBoxEx.Show("Configuración Actualizada", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        ConfiguracionActual();
+                        Program.Valor3 = 1;
+                        this.Close();
+                    }
                 }
-            }
-            catch(Exception ex)
-            {
-                MessageBoxEx.Show(ex.Message, "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+                catch (Exception ex)
+                {
+                    MessageBoxEx.Show(ex.Message, "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             else
             {
@@ -78,13 +73,13 @@ namespace Interfaz.Registros
             }
             LlenarCombo();
             cmbDpto.SelectedValue = "Tref";
-            ConfiguracionActual();           
+            ConfiguracionActual();
             //cmbDpto.Enabled = false;
         }
         private void ConfiguracionActual()
         {
             DataTable dt = new DataTable();
-            dt=PT.Configuracion_Puerto(cmbDpto.SelectedValue.ToString());
+            dt = PT.Configuracion_Puerto(cmbDpto.SelectedValue.ToString());
             Program.Idpuerto = 0;
             lbPort.Text = "";
             lbBaud.Text = "";

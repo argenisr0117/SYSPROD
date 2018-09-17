@@ -27,7 +27,8 @@ namespace Intermedia
         Boolean Mferiado;
         Boolean Mvacaciones;
         Boolean Mincapacidad;
-        Boolean Minasistencia;
+        bool Minasistencia;
+        bool? Mpermiso;
         Boolean Msupervisor;
         string Mcampo = "ID_EMPLEADO";
         string Mtabla = "EMPLEADO";
@@ -108,6 +109,11 @@ namespace Intermedia
         {
             get { return Mferiado; }
             set { Mferiado = value; }
+        }
+        public bool? Permiso
+        {
+            get { return Mpermiso; }
+            set { Mpermiso = value; }
         }
         public Boolean Vacaciones
         {
@@ -273,6 +279,7 @@ namespace Intermedia
             lst.Add(new clsParametros("@vacaciones", Mvacaciones));
             lst.Add(new clsParametros("@incapacidad", Mincapacidad));
             lst.Add(new clsParametros("@inasistencia", Minasistencia));
+            lst.Add(new clsParametros("@permiso", Mpermiso));
             M.EjecutarSP("reg_act_horas_extras", ref lst);
             mensaje = lst[0].Valor.ToString();
             return mensaje;

@@ -1,16 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Intermedia;
 using DevComponents.DotNetBar.Metro;
 using DevComponents.DotNetBar;
-using System.Collections;
 
 namespace Interfaz.Registros
 {
@@ -32,7 +27,7 @@ namespace Interfaz.Registros
                 O.Numorden = Program.Orden;
                 dtgDisponibles.DataSource = null;
                 dt = O.ObtenerBobinasOrdenPacking();
-                for(int x = 0; x < dt.Rows.Count; x++)
+                for (int x = 0; x < dt.Rows.Count; x++)
                 {
                     dtgDisponibles.Rows.Add(dt.Rows[x][0]);
                     dtgDisponibles.Rows[x].Cells[0].Value = dt.Rows[x][0].ToString();
@@ -43,9 +38,9 @@ namespace Interfaz.Registros
                     dtgDisponibles.Rows[x].Cells[5].Value = dt.Rows[x][5].ToString();
                 }
                 dtgDisponibles.ClearSelection();
-                
+
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBoxEx.Show(ex.Message);
             }
@@ -121,9 +116,9 @@ namespace Interfaz.Registros
             ComboC();
             ComboU();
 
-            if (Program.Valor==6)
+            if (Program.Valor == 6)
             {
-                DateTime mydate = DateTime.ParseExact(Program.FechaS,"dd-MM-yyyy",null);
+                DateTime mydate = DateTime.ParseExact(Program.FechaS, "dd-MM-yyyy", null);
                 txtContenedor.Text = Program.Contenedor;
                 cmbTamano.Text = Program.Tamano.ToString();
                 cmbCliente.SelectedValue = Program.Cliente;
@@ -141,7 +136,7 @@ namespace Interfaz.Registros
             txtContenedor.Focus();
             if (Program.Idtipoorden == 1)
             {
-            SecuenciaConduce();
+                SecuenciaConduce();
                 cmbTamano.Enabled = false;
                 txtContenedor.Enabled = false;
                 txtContenedor.Text = "N/A";
@@ -189,7 +184,7 @@ namespace Interfaz.Registros
         private void CalcularTotales()  //calcular totales de qqs y unds disponibles y seleccionadas
         {
             double qqs = 0;
-            for(int x = 0; x < dtgDisponibles.Rows.Count; x++)
+            for (int x = 0; x < dtgDisponibles.Rows.Count; x++)
             {
                 qqs = qqs + Convert.ToDouble(dtgDisponibles.Rows[x].Cells[2].Value);
             }
@@ -227,7 +222,7 @@ namespace Interfaz.Registros
             {
                 if (dtgSeleccionadas.SelectedRows.Count > 0)
                 {
-                    if(Program.Valor==6)
+                    if (Program.Valor == 6)
                     {
                         O.Tarjeta = dtgSeleccionadas.CurrentRow.Cells[1].Value.ToString();
                         O.EliminarBobinaPacking();
@@ -248,13 +243,13 @@ namespace Interfaz.Registros
             try
             {
 
-                foreach(DataGridViewRow row in dtgDisponibles.Rows)
+                foreach (DataGridViewRow row in dtgDisponibles.Rows)
                 {
                     dtgSeleccionadas.Rows.Add(row.Cells[0].Value, row.Cells[1].Value, row.Cells[2].Value, row.Cells[3].Value, row.Cells[4].Value, row.Cells[5].Value);
                 }
                 dtgDisponibles.Rows.Clear();
                 CalcularTotales();
-                
+
             }
             catch (Exception ex)
             {
@@ -307,7 +302,7 @@ namespace Interfaz.Registros
                 int divisor = 0;
                 DataTable dt = new DataTable();
                 List<double> diametros = new List<double>();
-                List <double> recubrimientos = new List<double>();
+                List<double> recubrimientos = new List<double>();
                 List<double> resis_lbs = new List<double>();
 
                 if (dtgSeleccionadas.Rows.Count > 0)
@@ -570,7 +565,7 @@ namespace Interfaz.Registros
                         {
                             obj.Nombre = "packing_list_local.rdlc";
                         }
-                    
+
                         if (Program.Valor == 6)
                         {
                             obj.Idpacking = Program.Idpacking;
@@ -582,25 +577,25 @@ namespace Interfaz.Registros
                         }
                         obj.Show();
                     }
-                        
+
                     dtgSeleccionadas.Rows.Clear();
                     txtProdSel.Text = "";
                     txtUndSel.Text = "";
                     txtContenedor.Clear();
                     cmbEmpresa.SelectedValue = "";
-                    cmbTamano.SelectedIndex=-1;
+                    cmbTamano.SelectedIndex = -1;
                     cmbCliente.SelectedIndex = -1;
                     cmbUso.SelectedIndex = -1;
                     SecuenciaConduce();
-                        
-                        //if(Program.Valor==6)
-                        //{
-                        //    this.Close();
-                        //}
+
+                    //if(Program.Valor==6)
+                    //{
+                    //    this.Close();
+                    //}
                     Program.Valor = 0;
                     Program.Idtipoorden = 0;
                     //this.Close();
-                    
+
 
                 }
                 else
@@ -608,7 +603,7 @@ namespace Interfaz.Registros
                     MessageBoxEx.Show("No hay bobinas seleccionadas", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBoxEx.Show(ex.Message);
             }
@@ -617,10 +612,10 @@ namespace Interfaz.Registros
         {
             double promedio = 0;
             double valor = 0;
-            if(lista.Count>0)
+            if (lista.Count > 0)
             {
-               promedio=lista.Average();
-               valor= Math.Sqrt(lista.Sum(x => ((x - promedio) * (x - promedio)) / lista.Count));
+                promedio = lista.Average();
+                valor = Math.Sqrt(lista.Sum(x => ((x - promedio) * (x - promedio)) / lista.Count));
             }
             else
             {

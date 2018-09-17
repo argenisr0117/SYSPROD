@@ -85,6 +85,7 @@ namespace Interfaz.Registros
                 dtgvHorasExtra.Columns[13].Visible = false;
                 dtgvHorasExtra.Columns[14].Visible = false;
                 dtgvHorasExtra.Columns[15].Visible = false;
+                dtgvHorasExtra.Columns[16].Visible = false;
             }
             else
             {
@@ -153,6 +154,7 @@ namespace Interfaz.Registros
                     E.Vacaciones = chbVacaciones.Checked;
                     E.Inasistencia = chbInasistencia.Checked;
                     E.Incapacidad = chbIncapacidad.Checked;
+                    E.Permiso = chbPermiso.Checked;
                     if (editar == 1)
                     {
                         E.Idhora = Idhora;
@@ -202,6 +204,7 @@ namespace Interfaz.Registros
             chbVacaciones.Checked = false;
             chbIncapacidad.Checked = false;
             chbInasistencia.Checked = false;
+            chbPermiso.Checked = false;
         }
         private void btnEditar_Click(object sender, EventArgs e)
         {
@@ -218,6 +221,7 @@ namespace Interfaz.Registros
                 chbVacaciones.Checked = Convert.ToBoolean(dtgvHorasExtra.CurrentRow.Cells[13].Value);
                 chbIncapacidad.Checked = Convert.ToBoolean(dtgvHorasExtra.CurrentRow.Cells[14].Value);
                 chbInasistencia.Checked = Convert.ToBoolean(dtgvHorasExtra.CurrentRow.Cells[15].Value);
+                chbPermiso.Checked = Convert.ToBoolean(dtgvHorasExtra.CurrentRow.Cells[16].Value);
                 editar = 1;
             }
         }

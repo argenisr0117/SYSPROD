@@ -48,15 +48,26 @@
             this.btnbuscar3 = new System.Windows.Forms.Button();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabregistro = new System.Windows.Forms.TabPage();
+            this.dtpFecha1 = new System.Windows.Forms.DateTimePicker();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.lbdescripcion = new System.Windows.Forms.Label();
+            this.cbdestino = new Interfaz.Controles.comboboxar(this.components);
+            this.cbmaquina = new Interfaz.Controles.comboboxar(this.components);
+            this.cbproducto = new Interfaz.Controles.comboboxar(this.components);
+            this.cbturno = new Interfaz.Controles.comboboxar(this.components);
+            this.cbayudante = new Interfaz.Controles.comboboxar(this.components);
+            this.cboperador = new Interfaz.Controles.comboboxar(this.components);
+            this.cbsupervisor = new Interfaz.Controles.comboboxar(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtreporte = new Interfaz.Controles.textboxN(this.components);
             this.label16 = new System.Windows.Forms.Label();
             this.dtp2 = new System.Windows.Forms.DateTimePicker();
             this.label15 = new System.Windows.Forms.Label();
+            this.txtcantidad = new Interfaz.Controles.textboxN(this.components);
+            this.txttarjeta = new Interfaz.Controles.textboxN(this.components);
             this.label14 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -94,17 +105,7 @@
             this.listadoTerminadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lISTADOLINEAGALVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.dtpFecha1 = new System.Windows.Forms.DateTimePicker();
-            this.cbdestino = new Interfaz.Controles.comboboxar(this.components);
-            this.cbmaquina = new Interfaz.Controles.comboboxar(this.components);
-            this.cbproducto = new Interfaz.Controles.comboboxar(this.components);
-            this.cbturno = new Interfaz.Controles.comboboxar(this.components);
-            this.cbayudante = new Interfaz.Controles.comboboxar(this.components);
-            this.cboperador = new Interfaz.Controles.comboboxar(this.components);
-            this.cbsupervisor = new Interfaz.Controles.comboboxar(this.components);
-            this.txtreporte = new Interfaz.Controles.textboxN(this.components);
-            this.txtcantidad = new Interfaz.Controles.textboxN(this.components);
-            this.txttarjeta = new Interfaz.Controles.textboxN(this.components);
+            this.kINNOXToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.tabControl.SuspendLayout();
             this.tabregistro.SuspendLayout();
@@ -123,6 +124,12 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.AutoPopDelay = 5000;
+            this.toolTip1.InitialDelay = 100;
+            this.toolTip1.ReshowDelay = 100;
             // 
             // btnActualizar
             // 
@@ -454,6 +461,15 @@
             this.tabregistro.UseVisualStyleBackColor = true;
             this.tabregistro.MouseEnter += new System.EventHandler(this.tabregistro_MouseEnter);
             // 
+            // dtpFecha1
+            // 
+            this.dtpFecha1.CustomFormat = "dd/MM/yyyy";
+            this.dtpFecha1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFecha1.Location = new System.Drawing.Point(81, 70);
+            this.dtpFecha1.Name = "dtpFecha1";
+            this.dtpFecha1.Size = new System.Drawing.Size(200, 20);
+            this.dtpFecha1.TabIndex = 108;
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
@@ -507,6 +523,126 @@
             this.lbdescripcion.TabIndex = 104;
             this.lbdescripcion.Text = "..";
             // 
+            // cbdestino
+            // 
+            this.cbdestino.BackColor = System.Drawing.Color.Gainsboro;
+            this.cbdestino.DropDownHeight = 60;
+            this.cbdestino.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbdestino.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbdestino.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbdestino.ForeColor = System.Drawing.Color.Black;
+            this.cbdestino.FormattingEnabled = true;
+            this.cbdestino.IntegralHeight = false;
+            this.cbdestino.Location = new System.Drawing.Point(81, 334);
+            this.cbdestino.Name = "cbdestino";
+            this.cbdestino.Size = new System.Drawing.Size(295, 21);
+            this.cbdestino.TabIndex = 102;
+            this.cbdestino.TabStop = false;
+            this.cbdestino.Validar = false;
+            // 
+            // cbmaquina
+            // 
+            this.cbmaquina.BackColor = System.Drawing.Color.Gainsboro;
+            this.cbmaquina.DropDownHeight = 60;
+            this.cbmaquina.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbmaquina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbmaquina.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbmaquina.ForeColor = System.Drawing.Color.Black;
+            this.cbmaquina.FormattingEnabled = true;
+            this.cbmaquina.IntegralHeight = false;
+            this.cbmaquina.Location = new System.Drawing.Point(82, 300);
+            this.cbmaquina.Name = "cbmaquina";
+            this.cbmaquina.Size = new System.Drawing.Size(294, 21);
+            this.cbmaquina.TabIndex = 101;
+            this.cbmaquina.TabStop = false;
+            this.cbmaquina.Validar = false;
+            // 
+            // cbproducto
+            // 
+            this.cbproducto.BackColor = System.Drawing.Color.Gainsboro;
+            this.cbproducto.DropDownHeight = 60;
+            this.cbproducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbproducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbproducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbproducto.ForeColor = System.Drawing.Color.Black;
+            this.cbproducto.FormattingEnabled = true;
+            this.cbproducto.IntegralHeight = false;
+            this.cbproducto.Location = new System.Drawing.Point(81, 266);
+            this.cbproducto.Name = "cbproducto";
+            this.cbproducto.Size = new System.Drawing.Size(296, 21);
+            this.cbproducto.TabIndex = 100;
+            this.cbproducto.TabStop = false;
+            this.cbproducto.Validar = false;
+            this.cbproducto.SelectedValueChanged += new System.EventHandler(this.cbproducto_SelectedValueChanged);
+            // 
+            // cbturno
+            // 
+            this.cbturno.BackColor = System.Drawing.Color.Gainsboro;
+            this.cbturno.DropDownHeight = 60;
+            this.cbturno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbturno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbturno.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbturno.ForeColor = System.Drawing.Color.Black;
+            this.cbturno.FormattingEnabled = true;
+            this.cbturno.IntegralHeight = false;
+            this.cbturno.Location = new System.Drawing.Point(81, 199);
+            this.cbturno.Name = "cbturno";
+            this.cbturno.Size = new System.Drawing.Size(295, 21);
+            this.cbturno.TabIndex = 99;
+            this.cbturno.TabStop = false;
+            this.cbturno.Validar = false;
+            // 
+            // cbayudante
+            // 
+            this.cbayudante.BackColor = System.Drawing.Color.Gainsboro;
+            this.cbayudante.DropDownHeight = 60;
+            this.cbayudante.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbayudante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbayudante.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbayudante.ForeColor = System.Drawing.Color.Black;
+            this.cbayudante.FormattingEnabled = true;
+            this.cbayudante.IntegralHeight = false;
+            this.cbayudante.Location = new System.Drawing.Point(81, 165);
+            this.cbayudante.Name = "cbayudante";
+            this.cbayudante.Size = new System.Drawing.Size(295, 21);
+            this.cbayudante.TabIndex = 98;
+            this.cbayudante.TabStop = false;
+            this.cbayudante.Validar = false;
+            // 
+            // cboperador
+            // 
+            this.cboperador.BackColor = System.Drawing.Color.Gainsboro;
+            this.cboperador.DropDownHeight = 60;
+            this.cboperador.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboperador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboperador.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboperador.ForeColor = System.Drawing.Color.Black;
+            this.cboperador.FormattingEnabled = true;
+            this.cboperador.IntegralHeight = false;
+            this.cboperador.Location = new System.Drawing.Point(81, 131);
+            this.cboperador.Name = "cboperador";
+            this.cboperador.Size = new System.Drawing.Size(295, 21);
+            this.cboperador.TabIndex = 97;
+            this.cboperador.TabStop = false;
+            this.cboperador.Validar = false;
+            // 
+            // cbsupervisor
+            // 
+            this.cbsupervisor.BackColor = System.Drawing.Color.Gainsboro;
+            this.cbsupervisor.DropDownHeight = 60;
+            this.cbsupervisor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbsupervisor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbsupervisor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbsupervisor.ForeColor = System.Drawing.Color.Black;
+            this.cbsupervisor.FormattingEnabled = true;
+            this.cbsupervisor.IntegralHeight = false;
+            this.cbsupervisor.Location = new System.Drawing.Point(81, 97);
+            this.cbsupervisor.Name = "cbsupervisor";
+            this.cbsupervisor.Size = new System.Drawing.Size(295, 21);
+            this.cbsupervisor.TabIndex = 96;
+            this.cbsupervisor.TabStop = false;
+            this.cbsupervisor.Validar = false;
+            // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -535,6 +671,21 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(246, 100);
             this.panel1.TabIndex = 87;
+            // 
+            // txtreporte
+            // 
+            this.txtreporte.BackColor = System.Drawing.Color.White;
+            this.txtreporte.Enabled = false;
+            this.txtreporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtreporte.ForeColor = System.Drawing.Color.Black;
+            this.txtreporte.Location = new System.Drawing.Point(101, 54);
+            this.txtreporte.Multiline = true;
+            this.txtreporte.Name = "txtreporte";
+            this.txtreporte.Size = new System.Drawing.Size(120, 20);
+            this.txtreporte.TabIndex = 81;
+            this.txtreporte.TabStop = false;
+            this.txtreporte.Validar = false;
+            this.txtreporte.Valor = Interfaz.Controles.textboxN.Tipo.Números;
             // 
             // label16
             // 
@@ -572,6 +723,32 @@
             this.label15.Size = new System.Drawing.Size(47, 13);
             this.label15.TabIndex = 78;
             this.label15.Text = "FECHA";
+            // 
+            // txtcantidad
+            // 
+            this.txtcantidad.BackColor = System.Drawing.Color.White;
+            this.txtcantidad.ForeColor = System.Drawing.Color.Black;
+            this.txtcantidad.Location = new System.Drawing.Point(82, 368);
+            this.txtcantidad.Multiline = true;
+            this.txtcantidad.Name = "txtcantidad";
+            this.txtcantidad.Size = new System.Drawing.Size(110, 20);
+            this.txtcantidad.TabIndex = 86;
+            this.txtcantidad.TabStop = false;
+            this.txtcantidad.Validar = false;
+            this.txtcantidad.Valor = Interfaz.Controles.textboxN.Tipo.Números;
+            // 
+            // txttarjeta
+            // 
+            this.txttarjeta.BackColor = System.Drawing.Color.White;
+            this.txttarjeta.ForeColor = System.Drawing.Color.Black;
+            this.txttarjeta.Location = new System.Drawing.Point(82, 232);
+            this.txttarjeta.Multiline = true;
+            this.txttarjeta.Name = "txttarjeta";
+            this.txttarjeta.Size = new System.Drawing.Size(294, 20);
+            this.txttarjeta.TabIndex = 82;
+            this.txttarjeta.TabStop = false;
+            this.txttarjeta.Validar = false;
+            this.txttarjeta.Valor = Interfaz.Controles.textboxN.Tipo.Números;
             // 
             // label14
             // 
@@ -891,14 +1068,17 @@
             this.terminadosToolStripMenuItem,
             this.procesosToolStripMenuItem,
             this.desperdiciosToolStripMenuItem,
-            this.lineaGalvanizadoToolStripMenuItem});
+            this.lineaGalvanizadoToolStripMenuItem,
+            this.kINNOXToolStripMenuItem});
+            this.reportesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             this.reportesToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
             this.reportesToolStripMenuItem.Text = "REPORTES";
             // 
             // generalToolStripMenuItem
             // 
+            this.generalToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.generalToolStripMenuItem.Name = "generalToolStripMenuItem";
             this.generalToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.generalToolStripMenuItem.Text = "GENERAL";
@@ -906,6 +1086,7 @@
             // 
             // intermediosToolStripMenuItem
             // 
+            this.intermediosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.intermediosToolStripMenuItem.Name = "intermediosToolStripMenuItem";
             this.intermediosToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.intermediosToolStripMenuItem.Text = "INTERMEDIOS";
@@ -913,6 +1094,7 @@
             // 
             // terminadosToolStripMenuItem
             // 
+            this.terminadosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.terminadosToolStripMenuItem.Name = "terminadosToolStripMenuItem";
             this.terminadosToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.terminadosToolStripMenuItem.Text = "TERMINADOS";
@@ -920,6 +1102,7 @@
             // 
             // procesosToolStripMenuItem
             // 
+            this.procesosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.procesosToolStripMenuItem.Name = "procesosToolStripMenuItem";
             this.procesosToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.procesosToolStripMenuItem.Text = "PROCESOS";
@@ -927,6 +1110,7 @@
             // 
             // desperdiciosToolStripMenuItem
             // 
+            this.desperdiciosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.desperdiciosToolStripMenuItem.Name = "desperdiciosToolStripMenuItem";
             this.desperdiciosToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.desperdiciosToolStripMenuItem.Text = "DESPERDICIOS";
@@ -934,6 +1118,7 @@
             // 
             // lineaGalvanizadoToolStripMenuItem
             // 
+            this.lineaGalvanizadoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.lineaGalvanizadoToolStripMenuItem.Name = "lineaGalvanizadoToolStripMenuItem";
             this.lineaGalvanizadoToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.lineaGalvanizadoToolStripMenuItem.Text = "LINEA GALVANIZADO";
@@ -948,6 +1133,7 @@
             this.listadosToolStripMenuItem.Name = "listadosToolStripMenuItem";
             this.listadosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.listadosToolStripMenuItem.Text = "LISTADOS";
+            this.listadosToolStripMenuItem.Visible = false;
             // 
             // listadoIntermediosToolStripMenuItem
             // 
@@ -970,175 +1156,13 @@
             this.lISTADOLINEAGALVToolStripMenuItem.Text = "LISTADO LINEA GALV.";
             this.lISTADOLINEAGALVToolStripMenuItem.Click += new System.EventHandler(this.lISTADOLINEAGALVToolStripMenuItem_Click);
             // 
-            // dtpFecha1
+            // kINNOXToolStripMenuItem
             // 
-            this.dtpFecha1.CustomFormat = "dd/MM/yyyy";
-            this.dtpFecha1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFecha1.Location = new System.Drawing.Point(81, 70);
-            this.dtpFecha1.Name = "dtpFecha1";
-            this.dtpFecha1.Size = new System.Drawing.Size(200, 20);
-            this.dtpFecha1.TabIndex = 108;
-            // 
-            // cbdestino
-            // 
-            this.cbdestino.BackColor = System.Drawing.Color.Gainsboro;
-            this.cbdestino.DropDownHeight = 60;
-            this.cbdestino.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbdestino.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbdestino.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbdestino.ForeColor = System.Drawing.Color.Black;
-            this.cbdestino.FormattingEnabled = true;
-            this.cbdestino.IntegralHeight = false;
-            this.cbdestino.Location = new System.Drawing.Point(81, 334);
-            this.cbdestino.Name = "cbdestino";
-            this.cbdestino.Size = new System.Drawing.Size(295, 21);
-            this.cbdestino.TabIndex = 102;
-            this.cbdestino.TabStop = false;
-            this.cbdestino.Validar = false;
-            // 
-            // cbmaquina
-            // 
-            this.cbmaquina.BackColor = System.Drawing.Color.Gainsboro;
-            this.cbmaquina.DropDownHeight = 60;
-            this.cbmaquina.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbmaquina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbmaquina.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbmaquina.ForeColor = System.Drawing.Color.Black;
-            this.cbmaquina.FormattingEnabled = true;
-            this.cbmaquina.IntegralHeight = false;
-            this.cbmaquina.Location = new System.Drawing.Point(82, 300);
-            this.cbmaquina.Name = "cbmaquina";
-            this.cbmaquina.Size = new System.Drawing.Size(294, 21);
-            this.cbmaquina.TabIndex = 101;
-            this.cbmaquina.TabStop = false;
-            this.cbmaquina.Validar = false;
-            // 
-            // cbproducto
-            // 
-            this.cbproducto.BackColor = System.Drawing.Color.Gainsboro;
-            this.cbproducto.DropDownHeight = 60;
-            this.cbproducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbproducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbproducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbproducto.ForeColor = System.Drawing.Color.Black;
-            this.cbproducto.FormattingEnabled = true;
-            this.cbproducto.IntegralHeight = false;
-            this.cbproducto.Location = new System.Drawing.Point(81, 266);
-            this.cbproducto.Name = "cbproducto";
-            this.cbproducto.Size = new System.Drawing.Size(296, 21);
-            this.cbproducto.TabIndex = 100;
-            this.cbproducto.TabStop = false;
-            this.cbproducto.Validar = false;
-            this.cbproducto.SelectedValueChanged += new System.EventHandler(this.cbproducto_SelectedValueChanged);
-            // 
-            // cbturno
-            // 
-            this.cbturno.BackColor = System.Drawing.Color.Gainsboro;
-            this.cbturno.DropDownHeight = 60;
-            this.cbturno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbturno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbturno.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbturno.ForeColor = System.Drawing.Color.Black;
-            this.cbturno.FormattingEnabled = true;
-            this.cbturno.IntegralHeight = false;
-            this.cbturno.Location = new System.Drawing.Point(81, 199);
-            this.cbturno.Name = "cbturno";
-            this.cbturno.Size = new System.Drawing.Size(295, 21);
-            this.cbturno.TabIndex = 99;
-            this.cbturno.TabStop = false;
-            this.cbturno.Validar = false;
-            // 
-            // cbayudante
-            // 
-            this.cbayudante.BackColor = System.Drawing.Color.Gainsboro;
-            this.cbayudante.DropDownHeight = 60;
-            this.cbayudante.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbayudante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbayudante.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbayudante.ForeColor = System.Drawing.Color.Black;
-            this.cbayudante.FormattingEnabled = true;
-            this.cbayudante.IntegralHeight = false;
-            this.cbayudante.Location = new System.Drawing.Point(81, 165);
-            this.cbayudante.Name = "cbayudante";
-            this.cbayudante.Size = new System.Drawing.Size(295, 21);
-            this.cbayudante.TabIndex = 98;
-            this.cbayudante.TabStop = false;
-            this.cbayudante.Validar = false;
-            // 
-            // cboperador
-            // 
-            this.cboperador.BackColor = System.Drawing.Color.Gainsboro;
-            this.cboperador.DropDownHeight = 60;
-            this.cboperador.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboperador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cboperador.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboperador.ForeColor = System.Drawing.Color.Black;
-            this.cboperador.FormattingEnabled = true;
-            this.cboperador.IntegralHeight = false;
-            this.cboperador.Location = new System.Drawing.Point(81, 131);
-            this.cboperador.Name = "cboperador";
-            this.cboperador.Size = new System.Drawing.Size(295, 21);
-            this.cboperador.TabIndex = 97;
-            this.cboperador.TabStop = false;
-            this.cboperador.Validar = false;
-            // 
-            // cbsupervisor
-            // 
-            this.cbsupervisor.BackColor = System.Drawing.Color.Gainsboro;
-            this.cbsupervisor.DropDownHeight = 60;
-            this.cbsupervisor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbsupervisor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbsupervisor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbsupervisor.ForeColor = System.Drawing.Color.Black;
-            this.cbsupervisor.FormattingEnabled = true;
-            this.cbsupervisor.IntegralHeight = false;
-            this.cbsupervisor.Location = new System.Drawing.Point(81, 97);
-            this.cbsupervisor.Name = "cbsupervisor";
-            this.cbsupervisor.Size = new System.Drawing.Size(295, 21);
-            this.cbsupervisor.TabIndex = 96;
-            this.cbsupervisor.TabStop = false;
-            this.cbsupervisor.Validar = false;
-            // 
-            // txtreporte
-            // 
-            this.txtreporte.BackColor = System.Drawing.Color.White;
-            this.txtreporte.Enabled = false;
-            this.txtreporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtreporte.ForeColor = System.Drawing.Color.Black;
-            this.txtreporte.Location = new System.Drawing.Point(101, 54);
-            this.txtreporte.Multiline = true;
-            this.txtreporte.Name = "txtreporte";
-            this.txtreporte.Size = new System.Drawing.Size(120, 20);
-            this.txtreporte.TabIndex = 81;
-            this.txtreporte.TabStop = false;
-            this.txtreporte.Validar = false;
-            this.txtreporte.Valor = Interfaz.Controles.textboxN.Tipo.Números;
-            // 
-            // txtcantidad
-            // 
-            this.txtcantidad.BackColor = System.Drawing.Color.White;
-            this.txtcantidad.ForeColor = System.Drawing.Color.Black;
-            this.txtcantidad.Location = new System.Drawing.Point(82, 368);
-            this.txtcantidad.Multiline = true;
-            this.txtcantidad.Name = "txtcantidad";
-            this.txtcantidad.Size = new System.Drawing.Size(110, 20);
-            this.txtcantidad.TabIndex = 86;
-            this.txtcantidad.TabStop = false;
-            this.txtcantidad.Validar = false;
-            this.txtcantidad.Valor = Interfaz.Controles.textboxN.Tipo.Números;
-            // 
-            // txttarjeta
-            // 
-            this.txttarjeta.BackColor = System.Drawing.Color.White;
-            this.txttarjeta.ForeColor = System.Drawing.Color.Black;
-            this.txttarjeta.Location = new System.Drawing.Point(82, 232);
-            this.txttarjeta.Multiline = true;
-            this.txttarjeta.Name = "txttarjeta";
-            this.txttarjeta.Size = new System.Drawing.Size(294, 20);
-            this.txttarjeta.TabIndex = 82;
-            this.txttarjeta.TabStop = false;
-            this.txttarjeta.Validar = false;
-            this.txttarjeta.Valor = Interfaz.Controles.textboxN.Tipo.Números;
+            this.kINNOXToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.kINNOXToolStripMenuItem.Name = "kINNOXToolStripMenuItem";
+            this.kINNOXToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.kINNOXToolStripMenuItem.Text = "KINNOX";
+            this.kINNOXToolStripMenuItem.Click += new System.EventHandler(this.kINNOXToolStripMenuItem_Click);
             // 
             // frmProduccion
             // 
@@ -1254,5 +1278,6 @@
         private System.Windows.Forms.ToolStripMenuItem lISTADOLINEAGALVToolStripMenuItem;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.DateTimePicker dtpFecha1;
+        private System.Windows.Forms.ToolStripMenuItem kINNOXToolStripMenuItem;
     }
 }

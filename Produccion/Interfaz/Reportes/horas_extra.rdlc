@@ -43,16 +43,16 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>0.31318in</Width>
+              <Width>0.36562in</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>0.78298in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.58099in</Width>
+              <Width>0.60182in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.61632in</Width>
+              <Width>0.52257in</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>0.75174in</Width>
@@ -60,7 +60,7 @@
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.28126in</Height>
+              <Height>0.21876in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -71,11 +71,12 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=IIf(IsNothing(Fields!HORA_TRA.Value),"0",Replace(Fields!HORA_TRA.Value,",",".")) &amp; "" &amp; IIf(Fields!HE_NOCTURNA.Value&lt;=0,"",Variables!slash.Value &amp; "" &amp; Replace(Fields!HE_NOCTURNA.Value,",","."))</Value>
+                              <Value>=IIf((Fields!INCAPACIDAD.Value),"Inc","") &amp; "" &amp; IIf((Fields!VACACIONES.Value),"V","") &amp; "" 
+&amp; IIf((Fields!INASISTENCIA.Value),"I","") &amp; "" &amp; IIf((Fields!CORRIDO.Value),"C ","") &amp; "" &amp; IIf((Fields!PERMISO.Value),"P ","")
+&amp; "" &amp; IIf((Fields!FERIADO.Value),"F","") &amp; "" &amp; IIf(Fields!HORA_TRA.Value&lt;=0,"",Replace(Fields!HORA_TRA.Value,",",".")) &amp; "" &amp; IIf(Fields!HE_NOCTURNA.Value&lt;=0,"",Variables!slash.Value &amp; "" &amp; Replace(Fields!HE_NOCTURNA.Value,",","."))</Value>
                               <Style>
-                                <FontSize>8pt</FontSize>
-                                <FontWeight>=IIf(Fields!CORRIDO.Value=true,"SemiBold",IIf(Fields!FERIADO.Value=true,"SemiBold",IIf(Fields!VACACIONES.Value=true,"SemiBold",IIf(Fields!INASISTENCIA.Value=true,"SemiBold",IIf(Fields!INCAPACIDAD.Value=true,"SemiBold","Default")))))</FontWeight>
-                                <Format>#,0.00;(#,0.00)</Format>
+                                <FontSize>=IIf(((ReportItems!HORA_TRA.Value).ToString().Contains("/") And (ReportItems!HORA_TRA.Value).ToString().Contains(".")),"7pt","8pt")</FontSize>
+                                <FontWeight>=IIf(Fields!CORRIDO.Value=true,"SemiBold",IIf(Fields!FERIADO.Value=true,"SemiBold",IIf(Fields!VACACIONES.Value=true,"SemiBold",IIf(Fields!INASISTENCIA.Value=true,"SemiBold",IIf(Fields!INCAPACIDAD.Value=true,"SemiBold",IIf(Fields!INASISTENCIA.Value=true,"SemiBold","Default"))))))</FontWeight>
                                 <Color>=IIf(Fields!CORRIDO.Value=true,"Chocolate",IIf(Fields!FERIADO.Value=true,"Maroon",IIf(Fields!VACACIONES.Value=true,"DarkBlue",IIf(Fields!INASISTENCIA.Value=true,"Red",IIf(Fields!INCAPACIDAD.Value=true,"DarkGreen","Black")))))</Color>
                                 <Language>es-DO</Language>
                               </Style>
@@ -92,10 +93,8 @@
                           <Color>DimGray</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <PaddingLeft>1pt</PaddingLeft>
-                        <PaddingRight>1pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingTop>1pt</PaddingTop>
+                        <PaddingBottom>1pt</PaddingBottom>
                       </Style>
                     </Textbox>
                   </CellContents>
@@ -269,7 +268,7 @@
                 <Size>0.36458in</Size>
                 <CellContents>
                   <Textbox Name="ENTRADA">
-                    <CanGrow>true</CanGrow>
+                    <CanShrink>true</CanShrink>
                     <KeepTogether>true</KeepTogether>
                     <Paragraphs>
                       <Paragraph>
@@ -295,6 +294,8 @@
                         <Style>Solid</Style>
                       </Border>
                       <BackgroundColor>LightGrey</BackgroundColor>
+                      <PaddingLeft>1pt</PaddingLeft>
+                      <PaddingRight>1pt</PaddingRight>
                       <PaddingTop>2pt</PaddingTop>
                       <PaddingBottom>2pt</PaddingBottom>
                     </Style>
@@ -470,7 +471,7 @@ TRABAJADAS</Value>
                 </SortExpression>
               </SortExpressions>
               <TablixHeader>
-                <Size>1.94659in</Size>
+                <Size>1.64912in</Size>
                 <CellContents>
                   <Textbox Name="NOMBRE">
                     <CanGrow>true</CanGrow>
@@ -481,7 +482,7 @@ TRABAJADAS</Value>
                           <TextRun>
                             <Value>=Fields!NOMBRE.Value</Value>
                             <Style>
-                              <FontSize>8pt</FontSize>
+                              <FontSize>7pt</FontSize>
                             </Style>
                           </TextRun>
                         </TextRuns>
@@ -513,8 +514,8 @@ TRABAJADAS</Value>
         <DataSetName>DataSet1</DataSetName>
         <Top>0.0925in</Top>
         <Left>0.125in</Left>
-        <Height>0.64584in</Height>
-        <Width>4.9918in</Width>
+        <Height>0.58334in</Height>
+        <Width>4.67385in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1034,7 +1035,7 @@ TRABAJADAS</Value>
         </Style>
       </Line>
     </ReportItems>
-    <Height>1.655in</Height>
+    <Height>1.61396in</Height>
     <Style />
   </Body>
   <Width>10.95805in</Width>
@@ -1561,6 +1562,10 @@ TRABAJADAS</Value>
         </Field>
         <Field Name="INASISTENCIA">
           <DataField>INASISTENCIA</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="PERMISO">
+          <DataField>PERMISO</DataField>
           <rd:TypeName>System.Boolean</rd:TypeName>
         </Field>
       </Fields>

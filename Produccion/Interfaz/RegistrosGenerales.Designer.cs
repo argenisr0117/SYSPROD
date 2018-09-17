@@ -127,9 +127,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
+            this.panel2.Controls.Add(this.btncargo);
             this.panel2.Controls.Add(this.btncategoria);
-            this.panel2.Controls.Add(this.btnunidad);
-            this.panel2.Controls.Add(this.btnproducto);
+            this.panel2.Controls.Add(this.btnAsignar);
             this.panel2.ForeColor = System.Drawing.Color.Black;
             this.panel2.Location = new System.Drawing.Point(147, 102);
             this.panel2.Name = "panel2";
@@ -144,7 +144,7 @@
             this.btncategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btncategoria.Font = new System.Drawing.Font("Bookman Old Style", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncategoria.ForeColor = System.Drawing.Color.White;
-            this.btncategoria.Location = new System.Drawing.Point(302, 0);
+            this.btncategoria.Location = new System.Drawing.Point(151, 0);
             this.btncategoria.Name = "btncategoria";
             this.btncategoria.Size = new System.Drawing.Size(151, 72);
             this.btncategoria.TabIndex = 2;
@@ -176,7 +176,7 @@
             this.btnproducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnproducto.Font = new System.Drawing.Font("Bookman Old Style", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnproducto.ForeColor = System.Drawing.Color.White;
-            this.btnproducto.Location = new System.Drawing.Point(0, 0);
+            this.btnproducto.Location = new System.Drawing.Point(151, 0);
             this.btnproducto.Name = "btnproducto";
             this.btnproducto.Size = new System.Drawing.Size(151, 72);
             this.btnproducto.TabIndex = 0;
@@ -187,9 +187,9 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
-            this.panel3.Controls.Add(this.btncargo);
-            this.panel3.Controls.Add(this.btnempleado);
             this.panel3.Controls.Add(this.btndepartamento);
+            this.panel3.Controls.Add(this.btnColadas);
+            this.panel3.Controls.Add(this.btnCliente);
             this.panel3.ForeColor = System.Drawing.Color.Black;
             this.panel3.Location = new System.Drawing.Point(147, 173);
             this.panel3.Name = "panel3";
@@ -214,7 +214,7 @@
             // 
             // btnempleado
             // 
-            this.btnempleado.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnempleado.BackColor = System.Drawing.Color.RosyBrown;
             this.btnempleado.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnempleado.FlatAppearance.BorderSize = 0;
             this.btnempleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -236,7 +236,7 @@
             this.btndepartamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btndepartamento.Font = new System.Drawing.Font("Bookman Old Style", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btndepartamento.ForeColor = System.Drawing.Color.White;
-            this.btndepartamento.Location = new System.Drawing.Point(0, 0);
+            this.btndepartamento.Location = new System.Drawing.Point(302, 0);
             this.btndepartamento.Name = "btndepartamento";
             this.btndepartamento.Size = new System.Drawing.Size(151, 72);
             this.btndepartamento.TabIndex = 0;
@@ -247,9 +247,9 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
-            this.panel4.Controls.Add(this.btnmaquina);
+            this.panel4.Controls.Add(this.btnempresas);
+            this.panel4.Controls.Add(this.btnempleado);
             this.panel4.Controls.Add(this.btndestino);
-            this.panel4.Controls.Add(this.btnturno);
             this.panel4.ForeColor = System.Drawing.Color.Black;
             this.panel4.Location = new System.Drawing.Point(147, 244);
             this.panel4.Name = "panel4";
@@ -258,7 +258,7 @@
             // 
             // btnmaquina
             // 
-            this.btnmaquina.BackColor = System.Drawing.Color.DarkRed;
+            this.btnmaquina.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.btnmaquina.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnmaquina.FlatAppearance.BorderSize = 0;
             this.btnmaquina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -280,7 +280,7 @@
             this.btndestino.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btndestino.Font = new System.Drawing.Font("Bookman Old Style", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btndestino.ForeColor = System.Drawing.Color.White;
-            this.btndestino.Location = new System.Drawing.Point(151, 0);
+            this.btndestino.Location = new System.Drawing.Point(0, 0);
             this.btndestino.Name = "btndestino";
             this.btndestino.Size = new System.Drawing.Size(151, 72);
             this.btndestino.TabIndex = 1;
@@ -290,7 +290,7 @@
             // 
             // btnturno
             // 
-            this.btnturno.BackColor = System.Drawing.Color.Chocolate;
+            this.btnturno.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnturno.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnturno.FlatAppearance.BorderSize = 0;
             this.btnturno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -319,8 +319,8 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
-            this.panel5.Controls.Add(this.btnColadas);
-            this.panel5.Controls.Add(this.btnempresas);
+            this.panel5.Controls.Add(this.btnmaquina);
+            this.panel5.Controls.Add(this.button2);
             this.panel5.Controls.Add(this.btnincentivos);
             this.panel5.ForeColor = System.Drawing.Color.Black;
             this.panel5.Location = new System.Drawing.Point(147, 315);
@@ -336,7 +336,7 @@
             this.btnColadas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnColadas.Font = new System.Drawing.Font("Bookman Old Style", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnColadas.ForeColor = System.Drawing.Color.White;
-            this.btnColadas.Location = new System.Drawing.Point(302, 0);
+            this.btnColadas.Location = new System.Drawing.Point(151, 0);
             this.btnColadas.Name = "btnColadas";
             this.btnColadas.Size = new System.Drawing.Size(151, 72);
             this.btnColadas.TabIndex = 2;
@@ -352,7 +352,7 @@
             this.btnempresas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnempresas.Font = new System.Drawing.Font("Bookman Old Style", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnempresas.ForeColor = System.Drawing.Color.White;
-            this.btnempresas.Location = new System.Drawing.Point(151, 0);
+            this.btnempresas.Location = new System.Drawing.Point(302, 0);
             this.btnempresas.Name = "btnempresas";
             this.btnempresas.Size = new System.Drawing.Size(151, 72);
             this.btnempresas.TabIndex = 1;
@@ -379,8 +379,8 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
-            this.panel6.Controls.Add(this.btnUsuario);
-            this.panel6.Controls.Add(this.btnCliente);
+            this.panel6.Controls.Add(this.button1);
+            this.panel6.Controls.Add(this.btnproducto);
             this.panel6.Controls.Add(this.btnpesocanastos);
             this.panel6.ForeColor = System.Drawing.Color.Black;
             this.panel6.Location = new System.Drawing.Point(147, 386);
@@ -406,13 +406,13 @@
             // 
             // btnCliente
             // 
-            this.btnCliente.BackColor = System.Drawing.Color.OliveDrab;
+            this.btnCliente.BackColor = System.Drawing.Color.DarkOrange;
             this.btnCliente.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnCliente.FlatAppearance.BorderSize = 0;
             this.btnCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCliente.Font = new System.Drawing.Font("Bookman Old Style", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCliente.ForeColor = System.Drawing.Color.White;
-            this.btnCliente.Location = new System.Drawing.Point(151, 0);
+            this.btnCliente.Location = new System.Drawing.Point(0, 0);
             this.btnCliente.Name = "btnCliente";
             this.btnCliente.Size = new System.Drawing.Size(151, 72);
             this.btnCliente.TabIndex = 1;
@@ -439,9 +439,9 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
-            this.panel7.Controls.Add(this.button1);
-            this.panel7.Controls.Add(this.button2);
-            this.panel7.Controls.Add(this.btnAsignar);
+            this.panel7.Controls.Add(this.btnUsuario);
+            this.panel7.Controls.Add(this.btnunidad);
+            this.panel7.Controls.Add(this.btnturno);
             this.panel7.ForeColor = System.Drawing.Color.Black;
             this.panel7.Location = new System.Drawing.Point(147, 458);
             this.panel7.Name = "panel7";

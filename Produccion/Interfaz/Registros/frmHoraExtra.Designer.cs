@@ -55,6 +55,7 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnReporte = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
@@ -65,7 +66,7 @@
             this.dtpFechaHasta = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.dtpFechaDesde = new System.Windows.Forms.DateTimePicker();
-            this.label10 = new System.Windows.Forms.Label();
+            this.chbPermiso = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvHorasExtra)).BeginInit();
@@ -219,6 +220,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.chbPermiso);
             this.panel1.Controls.Add(this.btnCancelar);
             this.panel1.Controls.Add(this.chbInasistencia);
             this.panel1.Controls.Add(this.chbIncapacidad);
@@ -268,7 +270,7 @@
             // 
             this.chbInasistencia.AutoSize = true;
             this.chbInasistencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chbInasistencia.Location = new System.Drawing.Point(558, 89);
+            this.chbInasistencia.Location = new System.Drawing.Point(558, 93);
             this.chbInasistencia.Name = "chbInasistencia";
             this.chbInasistencia.Size = new System.Drawing.Size(111, 17);
             this.chbInasistencia.TabIndex = 162;
@@ -454,6 +456,18 @@
             this.panel3.Size = new System.Drawing.Size(680, 186);
             this.panel3.TabIndex = 0;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.DarkRed;
+            this.label10.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label10.Location = new System.Drawing.Point(161, 18);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(357, 26);
+            this.label10.TabIndex = 166;
+            this.label10.Text = "LISTADO DE HORAS REGISTRADAS";
+            // 
             // btnBuscar
             // 
             this.btnBuscar.BackColor = System.Drawing.Color.White;
@@ -596,17 +610,17 @@
             this.dtpFechaDesde.Size = new System.Drawing.Size(109, 22);
             this.dtpFechaDesde.TabIndex = 155;
             // 
-            // label10
+            // chbPermiso
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.DarkRed;
-            this.label10.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label10.Location = new System.Drawing.Point(161, 18);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(357, 26);
-            this.label10.TabIndex = 166;
-            this.label10.Text = "LISTADO DE HORAS REGISTRADAS";
+            this.chbPermiso.AutoSize = true;
+            this.chbPermiso.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chbPermiso.Location = new System.Drawing.Point(558, 116);
+            this.chbPermiso.Name = "chbPermiso";
+            this.chbPermiso.Size = new System.Drawing.Size(81, 17);
+            this.chbPermiso.TabIndex = 164;
+            this.chbPermiso.TabStop = true;
+            this.chbPermiso.Text = "PERMISO";
+            this.chbPermiso.UseVisualStyleBackColor = true;
             // 
             // frmHoraExtra
             // 
@@ -672,5 +686,6 @@
         private System.Windows.Forms.RadioButton chbVacaciones;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.RadioButton chbPermiso;
     }
 }

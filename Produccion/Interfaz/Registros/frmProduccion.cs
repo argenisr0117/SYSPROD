@@ -28,6 +28,9 @@ namespace Interfaz.Registros
         public DataTable dt = new DataTable();
         public DataTable dt1 = new DataTable();
         public DataTable dt3 = new DataTable();
+        public double acerado = 0;
+        public double galvanizado = 0;
+        public double recocido = 0;
         public frmProduccion()
         {
             InitializeComponent();
@@ -479,104 +482,7 @@ namespace Interfaz.Registros
             {
                 if (obj.ShowDialog() == DialogResult.OK)
                 {
-                    //if (dt.Rows.Count > 0)
-                    //{
-                    MostrarTodos();
-                    //if (dt2.Rows.Count > 0)
-                    //{
-                    //    for (int x = 0; x < dt2.Rows.Count; x++)
-                    //    {
-                    //        TimeSpan ts = new TimeSpan(08, 0, 0);
-                    //        Pr.Fecha =Convert.ToDateTime(dt2.Rows[x][0]);
-                    //        Pr.Hora =ts;
-                    //        Pr.Supervisor = dt2.Rows[x][1].ToString();
-                    //        Pr.Operador = dt2.Rows[x][2].ToString();
-                    //        Pr.Ayudante = dt2.Rows[x][3].ToString();
-                    //        Pr.Turno = dt2.Rows[x][4].ToString();
-                    //        Pr.Tarjeta = dt2.Rows[x][5].ToString();
-                    //        Pr.Maquina = dt2.Rows[x][6].ToString();
-                    //        Pr.Producto = dt2.Rows[x][7].ToString();
-                    //        Pr.Destino = dt2.Rows[x][8].ToString();
-                    //        Pr.Cantidad =Convert.ToDecimal(dt2.Rows[x][9]);
-                    //        Pr.RegistrarProduccion("registrar_produccion");
-                    //    }
-                    //dtpfecha.DataBindings.Clear();
-                    //cbsupervisor.DataBindings.Clear();
-                    //cboperador.DataBindings.Clear();
-                    //cbayudante.DataBindings.Clear();
-                    //cbturno.DataBindings.Clear();
-                    //txttarjeta.DataBindings.Clear();
-                    //cbmaquina.DataBindings.Clear();
-                    //cbproducto.DataBindings.Clear();
-                    //cbdestino.DataBindings.Clear();
-                    //txtcantidad.DataBindings.Clear();
-                    //lbdescripcion.Visible = false;
-
-                    //LlenarGrid();
-                    //bs.DataSource = null;
-                    //dtgvproduccion.DataSource = null;
-                    //bs.DataSource = dt;
-                    //dtgvproduccion.DataSource = bs;
-                    //tabControl1.SelectedTab = tablistado;
-                    //dtpfecha.DataBindings.Add("Text", bs, "FECHA");
-                    //cbsupervisor.DataBindings.Add("SelectedValue", bs, "SUPERVISOR", true);
-                    //cboperador.DataBindings.Add("selectedvalue", bs, "OPERADOR");
-                    //cbayudante.DataBindings.Add("selectedvalue", bs, "AYUDANTE");
-                    //cbturno.DataBindings.Add("selectedvalue", bs, "TURNO");
-                    //txttarjeta.DataBindings.Add("Text", bs, "TARJETA");
-                    //cbmaquina.DataBindings.Add("selectedvalue", bs, "MÁQUINA");
-                    //cbproducto.DataBindings.Add("selectedvalue", bs, "PRODUCTO");
-                    //cbdestino.DataBindings.Add("selectedvalue", bs, "DESTINO");
-                    //txtcantidad.DataBindings.Add("Text", bs, "CANTIDAD");
-                    //}
-                    //}
-                    //else
-                    //{
-                    //if(dt3.Columns.Count==0)
-                    //{
-                    //    btnimportar.Enabled = false;
-                    //    dt3.Columns.Add("FECHA");
-                    //    dt3.Columns.Add("SUPERVISOR");
-                    //    dt3.Columns.Add("OPERADOR");
-                    //    dt3.Columns.Add("AYUDANTE");
-                    //    dt3.Columns.Add("TURNO");
-                    //    dt3.Columns.Add("TARJETA");
-                    //    dt3.Columns.Add("MÁQUINA");
-                    //    dt3.Columns.Add("PRODUCTO");
-                    //    dt3.Columns.Add("DESTINO");
-                    //    dt3.Columns.Add("CANTIDAD");
-                    //}
-                    //dt2 = obj.dt; 
-                    //for(int x=0;x<dt2.Rows.Count;x++)
-                    //{
-                    //    DataRow nf = dt3.NewRow();
-                    //    nf[0] = dt2.Rows[x][0].ToString();
-                    //    nf[1] = dt2.Rows[x][1].ToString();
-                    //    nf[2] = dt2.Rows[x][2].ToString();
-                    //    nf[3] = dt2.Rows[x][3].ToString();
-                    //    nf[4] = dt2.Rows[x][4].ToString();
-                    //    nf[5] = dt2.Rows[x][5].ToString();
-                    //    nf[6] = dt2.Rows[x][6].ToString();
-                    //    nf[7] = dt2.Rows[x][7].ToString();
-                    //    nf[8] = dt2.Rows[x][8].ToString();
-                    //    nf[9] = dt2.Rows[x][9].ToString();
-                    //    dt3.Rows.Add(nf);
-                    //}
-                    //lbdescripcion.Visible = true;                                         
-                    //bs.DataSource = null;
-                    //bs.DataSource = dt3;
-                    //dtgvproduccion.DataSource = bs;
-                    //dtpfecha.DataBindings.Add("Text", bs, "FECHA");
-                    //cbsupervisor.DataBindings.Add("SelectedValue", bs, "SUPERVISOR", true);
-                    //cboperador.DataBindings.Add("selectedvalue", bs, "OPERADOR");
-                    //cbayudante.DataBindings.Add("selectedvalue", bs, "AYUDANTE");
-                    //cbturno.DataBindings.Add("selectedvalue", bs, "TURNO");
-                    //txttarjeta.DataBindings.Add("Text", bs, "TARJETA");
-                    //cbmaquina.DataBindings.Add("selectedvalue", bs, "MÁQUINA");
-                    //cbproducto.DataBindings.Add("selectedvalue", bs, "PRODUCTO");
-                    //cbdestino.DataBindings.Add("selectedvalue", bs, "DESTINO");
-                    //txtcantidad.DataBindings.Add("Text", bs, "CANTIDAD");
-                    //}
+                    MostrarTodos();                    
                 }
                 else
                 {
@@ -775,38 +681,9 @@ namespace Interfaz.Registros
         private void generalToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //Actualizar();
-            frmReporte obj = new frmReporte();
-            dt1 = Pr.TotalProduccion("Acerados");
-            double acerado;
-            double galvanizado;
-            double recocido;
-            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
-            {
-                acerado = 0.00;
-            }
-            else
-            {
-                acerado = Convert.ToDouble(dt1.Rows[0]["Total"]);
-            }
-            dt1 = Pr.TotalProduccion("Galvanizados");
-            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
-            {
-                galvanizado = 0.00;
-            }
-            else
-            {
-                galvanizado = Convert.ToDouble(dt1.Rows[0]["Total"]);
-            }
-            dt1 = Pr.TotalProduccion("Recocidos");
-            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
-            {
-                recocido = 0.00;
-            }
-            else
-            {
-                recocido = Convert.ToDouble(dt1.Rows[0]["Total"]);
-            }
-            obj.Valor = 0;
+            frmReporte obj = new frmReporte();           
+            GetReportTotals();
+             obj.Valor = 0;
             obj.Acerado = acerado;
             obj.Galvanizado = galvanizado;
             obj.Recocido = recocido;
@@ -821,37 +698,8 @@ namespace Interfaz.Registros
         private void intermediosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //Actualizar();
-            frmReporte obj = new frmReporte();
-            dt1 = Pr.TotalProduccion("Acerados");
-            double acerado;
-            double galvanizado;
-            double recocido;
-            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
-            {
-                acerado = 0.00;
-            }
-            else
-            {
-                acerado = Convert.ToDouble(dt1.Rows[0]["Total"]);
-            }
-            dt1 = Pr.TotalProduccion("Galvanizados");
-            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
-            {
-                galvanizado = 0.00;
-            }
-            else
-            {
-                galvanizado = Convert.ToDouble(dt1.Rows[0]["Total"]);
-            }
-            dt1 = Pr.TotalProduccion("Recocidos");
-            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
-            {
-                recocido = 0.00;
-            }
-            else
-            {
-                recocido = Convert.ToDouble(dt1.Rows[0]["Total"]);
-            }
+            frmReporte obj = new frmReporte();           
+            GetReportTotals();
             obj.Valor = 0;
             obj.Acerado = acerado;
             obj.Galvanizado = galvanizado;
@@ -867,37 +715,8 @@ namespace Interfaz.Registros
         private void terminadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //Actualizar();
-            frmReporte obj = new frmReporte();
-            dt1 = Pr.TotalProduccion("Acerados");
-            double acerado;
-            double galvanizado;
-            double recocido;
-            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
-            {
-                acerado = 0.00;
-            }
-            else
-            {
-                acerado = Convert.ToDouble(dt1.Rows[0]["Total"]);
-            }
-            dt1 = Pr.TotalProduccion("Galvanizados");
-            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
-            {
-                galvanizado = 0.00;
-            }
-            else
-            {
-                galvanizado = Convert.ToDouble(dt1.Rows[0]["Total"]);
-            }
-            dt1 = Pr.TotalProduccion("Recocidos");
-            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
-            {
-                recocido = 0.00;
-            }
-            else
-            {
-                recocido = Convert.ToDouble(dt1.Rows[0]["Total"]);
-            }
+            frmReporte obj = new frmReporte();           
+            GetReportTotals();
             obj.Valor = 0;
             obj.Acerado = acerado;
             obj.Galvanizado = galvanizado;
@@ -1087,37 +906,8 @@ namespace Interfaz.Registros
         private void procesosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //Actualizar();
-            frmReporte obj = new frmReporte();
-            dt1 = Pr.TotalProduccion("Acerados");
-            double acerado;
-            double galvanizado;
-            double recocido;
-            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
-            {
-                acerado = 0.00;
-            }
-            else
-            {
-                acerado = Convert.ToDouble(dt1.Rows[0]["Total"]);
-            }
-            dt1 = Pr.TotalProduccion("Galvanizados");
-            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
-            {
-                galvanizado = 0.00;
-            }
-            else
-            {
-                galvanizado = Convert.ToDouble(dt1.Rows[0]["Total"]);
-            }
-            dt1 = Pr.TotalProduccion("Recocidos");
-            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
-            {
-                recocido = 0.00;
-            }
-            else
-            {
-                recocido = Convert.ToDouble(dt1.Rows[0]["Total"]);
-            }
+            frmReporte obj = new frmReporte();          
+            GetReportTotals();
             obj.Valor = 0;
             obj.Acerado = acerado;
             obj.Galvanizado = galvanizado;
@@ -1133,37 +923,8 @@ namespace Interfaz.Registros
         private void desperdiciosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //Actualizar();
-            frmReporte obj = new frmReporte();
-            dt1 = Pr.TotalProduccion("Acerados");
-            double acerado;
-            double galvanizado;
-            double recocido;
-            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
-            {
-                acerado = 0.00;
-            }
-            else
-            {
-                acerado = Convert.ToDouble(dt1.Rows[0]["Total"]);
-            }
-            dt1 = Pr.TotalProduccion("Galvanizados");
-            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
-            {
-                galvanizado = 0.00;
-            }
-            else
-            {
-                galvanizado = Convert.ToDouble(dt1.Rows[0]["Total"]);
-            }
-            dt1 = Pr.TotalProduccion("Recocidos");
-            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
-            {
-                recocido = 0.00;
-            }
-            else
-            {
-                recocido = Convert.ToDouble(dt1.Rows[0]["Total"]);
-            }
+            frmReporte obj = new frmReporte();            
+            GetReportTotals();
             obj.Valor = 0;
             obj.Acerado = acerado;
             obj.Galvanizado = galvanizado;
@@ -1180,36 +941,7 @@ namespace Interfaz.Registros
         {
             //Actualizar();
             frmReporte obj = new frmReporte();
-            dt1 = Pr.TotalProduccion("Acerados");
-            double acerado;
-            double galvanizado;
-            double recocido;
-            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
-            {
-                acerado = 0.00;
-            }
-            else
-            {
-                acerado = Convert.ToDouble(dt1.Rows[0]["Total"]);
-            }
-            dt1 = Pr.TotalProduccion("Galvanizados");
-            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
-            {
-                galvanizado = 0.00;
-            }
-            else
-            {
-                galvanizado = Convert.ToDouble(dt1.Rows[0]["Total"]);
-            }
-            dt1 = Pr.TotalProduccion("Recocidos");
-            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
-            {
-                recocido = 0.00;
-            }
-            else
-            {
-                recocido = Convert.ToDouble(dt1.Rows[0]["Total"]);
-            }
+            GetReportTotals();
             obj.Valor = 0;
             obj.Acerado = acerado;
             obj.Galvanizado = galvanizado;
@@ -1281,31 +1013,7 @@ namespace Interfaz.Registros
                     {
                         txtreporte.Text = dt.Rows[0][11].ToString();
                         MostrarTodos();
-                        btnregistrar.Text = "Actualizar";
-                        //bs.DataSource = dt;
-                        //dtgvproduccion.DataSource = bs;
-                        //tabControl.SelectedTab = tablistado;
-                        //dtpfecha.DataBindings.Clear();
-                        //cbsupervisor.DataBindings.Clear();
-                        //cboperador.DataBindings.Clear();
-                        //cbayudante.DataBindings.Clear();
-                        //cbturno.DataBindings.Clear();
-                        //txttarjeta.DataBindings.Clear();
-                        //cbmaquina.DataBindings.Clear();
-                        //cbproducto.DataBindings.Clear();
-                        //cbdestino.DataBindings.Clear();
-                        //txtcantidad.DataBindings.Clear();
-                        //dtpfecha.DataBindings.Add("Text", bs, "FECHA");
-                        //cbsupervisor.DataBindings.Add("SelectedValue", bs, "SUPERVISOR", true);
-                        //cboperador.DataBindings.Add("selectedvalue", bs, "OPERADOR");
-                        //cbayudante.DataBindings.Add("selectedvalue", bs, "AYUDANTE");
-                        //cbturno.DataBindings.Add("selectedvalue", bs, "TURNO");
-                        //txttarjeta.DataBindings.Add("Text", bs, "TARJETA");
-                        //cbmaquina.DataBindings.Add("selectedvalue", bs, "MÁQUINA");
-                        //cbproducto.DataBindings.Add("selectedvalue", bs, "PRODUCTO");
-                        //cbdestino.DataBindings.Add("selectedvalue", bs, "DESTINO");
-                        //txtcantidad.DataBindings.Add("Text", bs, "CANTIDAD");
-                        //lbdescripcion.Visible = true;
+                        btnregistrar.Text = "Actualizar";    
                         ContarRegistros();
 
                     }
@@ -1329,30 +1037,6 @@ namespace Interfaz.Registros
                         txtreporte.Text = dt.Rows[0][11].ToString();
                         MostrarTodos();
                         btnregistrar.Text = "Actualizar";
-                        //bs.DataSource = dt;
-                        //dtgvproduccion.DataSource = bs;
-                        //tabControl.SelectedTab = tablistado;
-                        //dtpfecha.DataBindings.Clear();
-                        //cbsupervisor.DataBindings.Clear();
-                        //cboperador.DataBindings.Clear();
-                        //cbayudante.DataBindings.Clear();
-                        //cbturno.DataBindings.Clear();
-                        //txttarjeta.DataBindings.Clear();
-                        //cbmaquina.DataBindings.Clear();
-                        //cbproducto.DataBindings.Clear();
-                        //cbdestino.DataBindings.Clear();
-                        //txtcantidad.DataBindings.Clear();
-                        //dtpfecha.DataBindings.Add("Text", bs, "FECHA");
-                        //cbsupervisor.DataBindings.Add("SelectedValue", bs, "SUPERVISOR", true);
-                        //cboperador.DataBindings.Add("selectedvalue", bs, "OPERADOR");
-                        //cbayudante.DataBindings.Add("selectedvalue", bs, "AYUDANTE");
-                        //cbturno.DataBindings.Add("selectedvalue", bs, "TURNO");
-                        //txttarjeta.DataBindings.Add("Text", bs, "TARJETA");
-                        //cbmaquina.DataBindings.Add("selectedvalue", bs, "MÁQUINA");
-                        //cbproducto.DataBindings.Add("selectedvalue", bs, "PRODUCTO");
-                        //cbdestino.DataBindings.Add("selectedvalue", bs, "DESTINO");
-                        //txtcantidad.DataBindings.Add("Text", bs, "CANTIDAD");
-                        //lbdescripcion.Visible = true;
                         ContarRegistros();
 
                     }
@@ -1376,6 +1060,53 @@ namespace Interfaz.Registros
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             Actualizar();
+        }
+
+        private void kINNOXToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReporte obj = new frmReporte();
+            GetReportTotals();
+            obj.Valor = 0;
+            obj.Acerado = acerado;
+            obj.Galvanizado = galvanizado;
+            obj.Recocido = recocido;
+            obj.NoReporte = txtreporte.Text;
+            obj.Fecha = dtp2.Value;
+            obj.Nombre = "reporte_kinnox.rdlc";
+            obj.Destino = "Kinnox";
+            obj.Reporte = "REPORTE KINNOX";
+            obj.Show();
+        }
+
+        private void GetReportTotals()
+        {
+            dt1 = Pr.TotalProduccion("Acerados");           
+            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
+            {
+                acerado = 0.00;
+            }
+            else
+            {
+                acerado = Convert.ToDouble(dt1.Rows[0]["Total"]);
+            }
+            dt1 = Pr.TotalProduccion("Galvanizados");
+            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
+            {
+                galvanizado = 0.00;
+            }
+            else
+            {
+                galvanizado = Convert.ToDouble(dt1.Rows[0]["Total"]);
+            }
+            dt1 = Pr.TotalProduccion("Recocidos");
+            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
+            {
+                recocido = 0.00;
+            }
+            else
+            {
+                recocido = Convert.ToDouble(dt1.Rows[0]["Total"]);
+            }
         }
     }
 }

@@ -36,6 +36,25 @@ namespace Interfaz.Registros
         public frmProduccionGalv()
         {
             InitializeComponent();
+            Permisos();
+            dtphasta.Value = DateTime.Now.AddDays(1);
+            puertoSerial();
+            cmbDiametro.SelectedIndex = 1;
+            ComboP();
+            ComboM();
+            ComboO();
+            ComboS();
+            ComboPc();
+            ComboCo();
+            ComboC();
+            ComboA();
+            cmbSupervisor.SelectedValue = "";
+            Limpiar();
+            PG.Valor = 1; //valor para filtrar total produccion
+            LlenarGrid();
+            Produccion_Total();
+            cmbOperador.SelectedValue = "";
+            cmbAyudante.SelectedValue = "";
         }
 
         public void SetText(string text)
@@ -98,14 +117,18 @@ namespace Interfaz.Registros
                     serialPort1.Close();
                 }
                 DataTable dt = new DataTable();
+                string[] ports = SerialPort.GetPortNames();
                 dt = PG.Configuracion_Puerto("Galv");
                 for (int x = 0; x < dt.Rows.Count; x++)
                 {
                     serialPort1.PortName = dt.Rows[x][1].ToString();
                     serialPort1.BaudRate = Convert.ToInt32(dt.Rows[x][2]);
                 }
-                serialPort1.Open();
-                serialPort1.NewLine = "\r";  //para que termine la linea;
+                if (ports.Contains(serialPort1.PortName))
+                {
+                    serialPort1.Open();
+                    serialPort1.NewLine = "\r";  //para que termine la linea;
+                }
                 if (timer1.Enabled == false)
                 {
                     timer1.Enabled = true;
@@ -229,66 +252,7 @@ namespace Interfaz.Registros
                 MessageBoxEx.Show(ex.Message);
             }
         }
-        //void cmbProducto_MouseWheel(object sender, MouseEventArgs e)
-        //{
-        //    ((HandledMouseEventArgs)e).Handled = true;
-        //}
-        //void cmbSupervisor_MouseWheel(object sender, MouseEventArgs e)
-        //{
-        //    ((HandledMouseEventArgs)e).Handled = true;
-        //}
-        //void cmbCliente_MouseWheel(object sender, MouseEventArgs e)
-        //{
-        //    ((HandledMouseEventArgs)e).Handled = true;
-        //}
-        //void cmbOperador_MouseWheel(object sender, MouseEventArgs e)
-        //{
-        //    ((HandledMouseEventArgs)e).Handled = true;
-        //}
-        //void cmbColada_MouseWheel(object sender, MouseEventArgs e)
-        //{
-        //    ((HandledMouseEventArgs)e).Handled = true;
-        //}
-        //void cmbMaquina_MouseWheel(object sender, MouseEventArgs e)
-        //{
-        //    ((HandledMouseEventArgs)e).Handled = true;
-        //}
-        //void cmbPesocanasto_MouseWheel(object sender, MouseEventArgs e)
-        //{
-        //    ((HandledMouseEventArgs)e).Handled = true;
-        //}
-        private void frmProduccionTrefilado_Load(object sender, EventArgs e)
-        {
-            Permisos();
-            //cmbProducto.MouseWheel += new MouseEventHandler(cmbProducto_MouseWheel);
-            //cmbOperador.MouseWheel += new MouseEventHandler(cmbOperador_MouseWheel);
-            //cmbCliente.MouseWheel += new MouseEventHandler(cmbCliente_MouseWheel);
-            //cmbSupervisor.MouseWheel += new MouseEventHandler(cmbSupervisor_MouseWheel);
-            //cmbColada.MouseWheel += new MouseEventHandler(cmbColada_MouseWheel);
-            //cmbMaquina.MouseWheel += new MouseEventHandler(cmbMaquina_MouseWheel);
-            //cmbPesocanasto.MouseWheel += new MouseEventHandler(cmbPesocanasto_MouseWheel);
-            dtphasta.Value = DateTime.Now.AddDays(1);
-            puertoSerial();
-            cmbDiametro.SelectedIndex = 1;
-            ComboP();
-            ComboM();
-            ComboO();
-            ComboS();
-            ComboPc();
-            ComboCo();
-            ComboC();
-            ComboA();
-            cmbSupervisor.SelectedValue = "";
-            Limpiar();
-            PG.Valor = 1; //valor para filtrar total produccion
-            LlenarGrid();
-            Produccion_Total();
-            cmbOperador.SelectedValue = "";
-            cmbAyudante.SelectedValue = "";
-            // timer1.Enabled = true;
-            //timer1.Start();
 
-        }
         private void Permisos()
         {
             btnEliminar.Enabled = Program.eligalv;
@@ -323,20 +287,6 @@ namespace Interfaz.Registros
                 {
                     dtgvProduccion.DataSource = null;
                     dtgvProduccion.DataSource = dt;
-                    //for (int x = 0; x < dt.Rows.Count; x++)
-                    //{
-                    //    dtgvProduccion.Rows.Add(dt.Rows[x][0]);
-                    //    dtgvProduccion.Rows[x].Cells[0].Value = dt.Rows[x][0].ToString();
-                    //    dtgvProduccion.Rows[x].Cells[1].Value = dt.Rows[x][1].ToString();
-                    //    dtgvProduccion.Rows[x].Cells[2].Value = dt.Rows[x][2].ToString();
-                    //    dtgvProduccion.Rows[x].Cells[3].Value = dt.Rows[x][3].ToString();
-                    //    dtgvProduccion.Rows[x].Cells[4].Value = dt.Rows[x][4].ToString();
-                    //    dtgvProduccion.Rows[x].Cells[5].Value = dt.Rows[x][5].ToString();
-                    //    dtgvProduccion.Rows[x].Cells[6].Value = dt.Rows[x][6].ToString();
-                    //    dtgvProduccion.Rows[x].Cells[7].Value = dt.Rows[x][7].ToString();
-                    //    dtgvProduccion.Rows[x].Cells[8].Value = dt.Rows[x][8].ToString();
-                    //    dtgvProduccion.Rows[x].Cells[9].Value = dt.Rows[x][9].ToString();
-                    //}
                     dtgvProduccion.ClearSelection();
                     dtgvProduccion.Columns[10].Visible = false;
                     dtgvProduccion.Columns[11].Visible = false;
@@ -346,16 +296,6 @@ namespace Interfaz.Registros
                 {
                     MessageBoxEx.Show(ex.Message, "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                //    //Limpiar();   
-                //}
-                //else
-                //{
-                //    PG.Fecha1 = dtpdesde.Value;
-                //    PG.Fechaf = dtphasta.Value;
-                //    PG.Fechaft = Convert.ToDateTime("1/1/1753 12:00:00 AM");
-                //    //Limpiar();
-
-                //}
             }
             else
             {
@@ -371,21 +311,6 @@ namespace Interfaz.Registros
             {
                 dtgvProduccion.DataSource = null;
                 dtgvProduccion.DataSource = dt;
-                //dtgvProduccion.Rows.Clear();
-                //for (int x = 0; x < dt.Rows.Count; x++)
-                //{
-                //    dtgvProduccion.Rows.Add(dt.Rows[x][0]);
-                //    dtgvProduccion.Rows[x].Cells[0].Value = dt.Rows[x][0].ToString();
-                //    dtgvProduccion.Rows[x].Cells[1].Value = dt.Rows[x][1].ToString();
-                //    dtgvProduccion.Rows[x].Cells[2].Value = dt.Rows[x][2].ToString();
-                //    dtgvProduccion.Rows[x].Cells[3].Value = dt.Rows[x][3].ToString();
-                //    dtgvProduccion.Rows[x].Cells[4].Value = dt.Rows[x][4].ToString();
-                //    dtgvProduccion.Rows[x].Cells[5].Value = dt.Rows[x][5].ToString();
-                //    dtgvProduccion.Rows[x].Cells[6].Value = dt.Rows[x][6].ToString();
-                //    dtgvProduccion.Rows[x].Cells[7].Value = dt.Rows[x][7].ToString();
-                //    dtgvProduccion.Rows[x].Cells[8].Value = dt.Rows[x][8].ToString();
-                //    dtgvProduccion.Rows[x].Cells[9].Value = dt.Rows[x][9].ToString();
-                //}
                 dtgvProduccion.ClearSelection();
                 dtgvProduccion.Columns[10].Visible = false;
 
@@ -415,25 +340,6 @@ namespace Interfaz.Registros
             label14.Text = "";
         }
 
-        private void cmbMaquina_DropDown(object sender, EventArgs e)
-        {
-            ComboM();
-        }
-
-        private void cmbOperador_DropDown(object sender, EventArgs e)
-        {
-            ComboO();
-        }
-
-        private void cmbProducto_DropDown(object sender, EventArgs e)
-        {
-            ComboP();
-        }
-
-        private void cmbSupervisor_DropDown(object sender, EventArgs e)
-        {
-            ComboS();
-        }
 
         private void cmbProducto_SelectedValueChanged(object sender, EventArgs e)
         {
@@ -507,7 +413,7 @@ namespace Interfaz.Registros
                     return;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return;
             }
@@ -521,19 +427,19 @@ namespace Interfaz.Registros
 
         private void coladasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmColada obj = new frmColada();
+            var obj = new frmColada();
             obj.ShowDialog();
         }
 
         private void pesoCanastosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmPesocanasto obj = new frmPesocanasto();
+            var obj = new frmPesocanasto();
             obj.ShowDialog();
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            Consultas.frmcProductosDpto obj = new Consultas.frmcProductosDpto();
+            var obj = new Consultas.frmcProductosDpto();
             Program.Valor3 = 5;
             Program.Valor2 = 2;
             obj.ShowDialog();
@@ -819,7 +725,7 @@ namespace Interfaz.Registros
         {
             if (dtgvProduccion.SelectedRows.Count > 0)
             {
-                frmEditarRegistroTref obj = new frmEditarRegistroTref();
+                var obj = new frmEditarRegistroTref();
                 Program.Editar = 1;
                 obj.Supervisor = dtgvProduccion.CurrentRow.Cells[2].Value.ToString();
                 obj.Operador = dtgvProduccion.CurrentRow.Cells[3].Value.ToString();
