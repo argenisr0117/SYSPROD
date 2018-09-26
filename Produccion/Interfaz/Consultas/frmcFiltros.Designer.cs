@@ -60,6 +60,7 @@
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.cmbAyudante = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.radioCategoria = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -337,6 +338,7 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.White;
+            this.groupBox2.Controls.Add(this.radioCategoria);
             this.groupBox2.Controls.Add(this.radioCliente);
             this.groupBox2.Controls.Add(this.radioSupervisor);
             this.groupBox2.Controls.Add(this.radioOperador);
@@ -346,7 +348,7 @@
             this.groupBox2.ForeColor = System.Drawing.Color.Black;
             this.groupBox2.Location = new System.Drawing.Point(15, 326);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(563, 51);
+            this.groupBox2.Size = new System.Drawing.Size(563, 77);
             this.groupBox2.TabIndex = 137;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "AGRUPADO POR";
@@ -427,7 +429,7 @@
             this.btnBusqueda.ForeColor = System.Drawing.Color.Black;
             this.btnBusqueda.Image = global::Interfaz.Properties.Resources.Search_icon1;
             this.btnBusqueda.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnBusqueda.Location = new System.Drawing.Point(95, 383);
+            this.btnBusqueda.Location = new System.Drawing.Point(95, 421);
             this.btnBusqueda.Name = "btnBusqueda";
             this.btnBusqueda.Size = new System.Drawing.Size(107, 51);
             this.btnBusqueda.TabIndex = 138;
@@ -448,7 +450,7 @@
             this.btnSalir.ForeColor = System.Drawing.Color.Black;
             this.btnSalir.Image = global::Interfaz.Properties.Resources.salir_icon;
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSalir.Location = new System.Drawing.Point(409, 383);
+            this.btnSalir.Location = new System.Drawing.Point(409, 421);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(107, 51);
             this.btnSalir.TabIndex = 139;
@@ -469,7 +471,7 @@
             this.btnLimpiar.ForeColor = System.Drawing.Color.Black;
             this.btnLimpiar.Image = global::Interfaz.Properties.Resources.Clear_icon;
             this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnLimpiar.Location = new System.Drawing.Point(252, 383);
+            this.btnLimpiar.Location = new System.Drawing.Point(252, 421);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(107, 51);
             this.btnLimpiar.TabIndex = 140;
@@ -507,11 +509,24 @@
             this.label9.TabIndex = 141;
             this.label9.Text = "AYUDANTE:";
             // 
+            // radioCategoria
+            // 
+            this.radioCategoria.AutoSize = true;
+            this.radioCategoria.BackColor = System.Drawing.Color.White;
+            this.radioCategoria.ForeColor = System.Drawing.Color.Black;
+            this.radioCategoria.Location = new System.Drawing.Point(6, 48);
+            this.radioCategoria.Name = "radioCategoria";
+            this.radioCategoria.Size = new System.Drawing.Size(96, 17);
+            this.radioCategoria.TabIndex = 5;
+            this.radioCategoria.TabStop = true;
+            this.radioCategoria.Text = "CATEGORIA";
+            this.radioCategoria.UseVisualStyleBackColor = false;
+            // 
             // frmcFiltros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(610, 454);
+            this.ClientSize = new System.Drawing.Size(610, 496);
             this.Controls.Add(this.cmbAyudante);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.btnLimpiar);
@@ -586,5 +601,6 @@
         private System.Windows.Forms.RadioButton radioCliente;
         private System.Windows.Forms.ComboBox cmbAyudante;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.RadioButton radioCategoria;
     }
 }

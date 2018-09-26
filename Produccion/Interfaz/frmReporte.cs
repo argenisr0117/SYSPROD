@@ -11,6 +11,8 @@ namespace Interfaz
         {
             InitializeComponent();
         }
+
+        #region Variables
         public string NoReporte { get; set; }
         public string Order1 { get; set; }
         public DateTime Fecha { get; set; }
@@ -20,7 +22,7 @@ namespace Interfaz
         public string Turno { get; set; }
         public string Dpto { get; set; }
         public string Iddpto { get; set; }
-        public string Idempresa{ get; set; }
+        public string Idempresa { get; set; }
         public string Titulo { get; set; }
         public string Titulo1 { get; set; }
         public string Reporte { get; set; }
@@ -33,7 +35,7 @@ namespace Interfaz
         public double Recocidoa { get; set; }
         public int Valor { get; set; }
         public int idMotivo { get; set; }
-        public int Valor_ { get; set; } 
+        public int Valor_ { get; set; }
         public int Idpacking { get; set; }
         public int Idrepcalidad { get; set; }
         public string Empresa { get; set; }
@@ -52,14 +54,19 @@ namespace Interfaz
         public string gMaquina { get; set; }
         public string gProducto { get; set; }
         public string gAyudante { get; set; }
+        public string gCategoria { get; set; }
         public string _Supervisor { get; set; }
         public string _Operador { get; set; }
         public string _Cliente { get; set; }
         public string _Maquina { get; set; }
         public string _Producto { get; set; }
         public string _Ayudante { get; set; }
+        #endregion
+
+
 
         //tickets
+        #region TicketVariables
         public int Id { get; set; }
         public int Idcliente { get; set; }
         public string Supervisor { get; set; }
@@ -80,30 +87,31 @@ namespace Interfaz
         public string Longft { get; set; }
         public string Longmt { get; set; }
         public string VerLong { get; set; }
- 
+        #endregion
+
         private void frmReporte_Load(object sender, EventArgs e)
         {
-            if(Valor==1)
+            if (Valor == 1)
             {
                 CierreMensual();
             }
-            else if(Valor==0)
+            else if (Valor == 0)
             {
                 ReporteDiario();
             }
-            else if(Valor==2)
+            else if (Valor == 2)
             {
                 Incentivos();
             }
-            else if(Valor==3)
+            else if (Valor == 3)
             {
                 Incentivo_Rollos();
             }
-            else if(Valor==4)
+            else if (Valor == 4)
             {
                 Incentivo_Trefilado();
             }
-            else if(Valor==5)
+            else if (Valor == 5)
             {
                 Incentivo_Flejado();
             }
@@ -115,15 +123,15 @@ namespace Interfaz
             {
                 TicketTrefilado();
             }
-            else if(Valor==8)
+            else if (Valor == 8)
             {
                 IncentivoMecanicoIndm();
             }
-            else if(Valor==9)
+            else if (Valor == 9)
             {
                 ReporteIndm();
             }
-            else if(Valor==10)
+            else if (Valor == 10)
             {
                 FiltrarProduccion();
             }
@@ -181,6 +189,7 @@ namespace Interfaz
             }
         }
 
+        #region Methods
         private void TicketTrefilado2()
         {
             ReportParameter[] parametros = new ReportParameter[13];
@@ -204,7 +213,7 @@ namespace Interfaz
             parametros[11] = new ReportParameter("Sae", Sae.ToString());
             parametros[12] = new ReportParameter("Medio", Medio.ToString());
             //NoReporte = "0000002";
-            rgta.Fill(ds.reimprimir_ticket,Id,0);
+            rgta.Fill(ds.reimprimir_ticket, Id, 0);
             ReportDataSource rds = new ReportDataSource();
             reportViewer1.LocalReport.DisplayName = Reporte;
             rds.Name = "DataSet1";
@@ -349,7 +358,7 @@ namespace Interfaz
             parametros[18] = new ReportParameter("Verlong", VerLong.ToString());
             parametros[19] = new ReportParameter("Empresa", Empresa.ToString());
             //NoReporte = "0000002";
-            rgta.Fill(ds.reimprimir_ticket, Id,1);
+            rgta.Fill(ds.reimprimir_ticket, Id, 1);
             ReportDataSource rds = new ReportDataSource();
             reportViewer1.LocalReport.DisplayName = Reporte;
             rds.Name = "DataSet1";
@@ -413,8 +422,8 @@ namespace Interfaz
             string ruta = "Reportes\\" + Nombre;
             lc.ReportPath = ruta;
             rgta.Fill(ds.obtener_packing_list, Idpacking);
-            rgta1.Fill(ds.obtener_detalle_packing_list, Idpacking,Inicio,Final);
-            rgta2.Fill(ds.obtener_detalle_packing_list2, Idpacking,Inicio1,Final1);
+            rgta1.Fill(ds.obtener_detalle_packing_list, Idpacking, Inicio, Final);
+            rgta2.Fill(ds.obtener_detalle_packing_list2, Idpacking, Inicio1, Final1);
             ReportDataSource rds = new ReportDataSource();
             ReportDataSource rds1 = new ReportDataSource();
             ReportDataSource rds2 = new ReportDataSource();
@@ -445,8 +454,8 @@ namespace Interfaz
             LocalReport lc = reportViewer1.LocalReport;
             string ruta = "Reportes\\" + Nombre;
             lc.ReportPath = ruta;
-            rtga.Fill(ds.obtener_header_certificado_calidad,Idrepcalidad);
-            rtga1.Fill(ds.obtener_detalle_certificado_calidad,Idrepcalidad);
+            rtga.Fill(ds.obtener_header_certificado_calidad, Idrepcalidad);
+            rtga1.Fill(ds.obtener_detalle_certificado_calidad, Idrepcalidad);
             //rtga2.Fill(ds.obtener_temp_grafico_diametro);
             //rtga3.Fill(ds.obtener_temp_grafico_recubrimiento);
             //rtga4.Fill(ds.obtener_temp_grafico_resistencia);
@@ -534,7 +543,7 @@ namespace Interfaz
             parametros[5] = new ReportParameter("Galvanizadoa", Galvanizadoa.ToString());
             parametros[6] = new ReportParameter("Recocidoa", Recocidoa.ToString());
             //NoReporte = "0000002";
-            rgta.Fill(ds.cierre_mensual,Destino);
+            rgta.Fill(ds.cierre_mensual, Destino);
             ReportDataSource rds = new ReportDataSource();
             reportViewer1.LocalReport.DisplayName = Reporte;
             rds.Name = "DataSet1";
@@ -542,13 +551,13 @@ namespace Interfaz
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.SetParameters(parametros);
             lc.DataSources.Add(rds);
-      
+
             this.reportViewer1.RefreshReport();
         }
         private void Incentivos()
         {
             ReportParameter[] parametros = new ReportParameter[3];
-            PRODUCCIONDataSet ds = new PRODUCCIONDataSet();            
+            PRODUCCIONDataSet ds = new PRODUCCIONDataSet();
             PRODUCCIONDataSetTableAdapters.generar_incentivoTableAdapter rgta = new PRODUCCIONDataSetTableAdapters.generar_incentivoTableAdapter();
             reportViewer1.ProcessingMode = ProcessingMode.Local;
             LocalReport lc = reportViewer1.LocalReport;
@@ -557,7 +566,7 @@ namespace Interfaz
             parametros[0] = new ReportParameter("Fecha", Fecha.ToShortDateString());
             parametros[1] = new ReportParameter("Empresa", Destino.ToString());
             parametros[2] = new ReportParameter("Idcliente", Idcliente.ToString());
-            rgta.Fill(ds.generar_incentivo, Incentivo,Empresa,Fechai,Fechaf,Idcliente);
+            rgta.Fill(ds.generar_incentivo, Incentivo, Empresa, Fechai, Fechaf, Idcliente);
             ReportDataSource rds = new ReportDataSource();
             reportViewer1.LocalReport.DisplayName = Reporte;
             rds.Name = "DataSet1";
@@ -569,24 +578,33 @@ namespace Interfaz
         }
         private void IncentivoMecanicoIndm()
         {
-            ReportParameter[] parametros = new ReportParameter[5];
+            ReportParameter[] parametros = new ReportParameter[4];
             PRODUCCIONDataSet ds = new PRODUCCIONDataSet();
             PRODUCCIONDataSetTableAdapters.incentivo_mecanicoTableAdapter rgta = new PRODUCCIONDataSetTableAdapters.incentivo_mecanicoTableAdapter();
             reportViewer1.ProcessingMode = ProcessingMode.Local;
+            //reportViewer1.ProcessingMode = ProcessingMode.Remote;
             LocalReport lc = reportViewer1.LocalReport;
+            //ServerReport sr = reportViewer1.ServerReport;
+            //System.Net.ICredentials credentials = System.Net.CredentialCache.DefaultCredentials;
+            //ReportServerCredentials rsCredentials = sr.ReportServerCredentials;
+            //rsCredentials.NetworkCredentials = credentials;
+
+            //sr.ReportServerUrl = new Uri("http://computos-pc:8081/ReportServer");
+            //sr.ReportPath = "/incentivo_mecanico_indm";
             string ruta = "Reportes\\" + Nombre;
             lc.ReportPath = ruta;
-            parametros[0] = new ReportParameter("Fecha", Fecha.ToShortDateString());
-            parametros[1] = new ReportParameter("Empresa", Destino.ToString());
-            parametros[2] = new ReportParameter("Fechai", Fechai.ToShortDateString());
-            parametros[3] = new ReportParameter("Fechaf", Fechaf.ToShortDateString());
-            parametros[4] = new ReportParameter("Idcliente", Idcliente.ToString());
-            rgta.Fill(ds.incentivo_mecanico, Empresa, Fechai,Fechaf,Idcliente);
+            //parametros[0] = new ReportParameter("Fecha", Fecha.ToShortDateString());
+            parametros[0] = new ReportParameter("Empresa", Destino.ToString());
+            parametros[1] = new ReportParameter("Fechai", Fechai.ToShortDateString());
+            parametros[2] = new ReportParameter("Fechaf", Fechaf.ToShortDateString());
+            parametros[3] = new ReportParameter("Idcliente", Idcliente.ToString());
+            rgta.Fill(ds.incentivo_mecanico, Empresa, Fechai, Fechaf, Idcliente);
             ReportDataSource rds = new ReportDataSource();
             reportViewer1.LocalReport.DisplayName = Reporte;
             rds.Name = "DataSet1";
             rds.Value = (ds.Tables["incentivo_mecanico"]);
             reportViewer1.LocalReport.DataSources.Clear();
+            //reportViewer1.ServerReport.SetParameters(parametros);
             reportViewer1.LocalReport.SetParameters(parametros);
             lc.DataSources.Add(rds);
             this.reportViewer1.RefreshReport();
@@ -604,7 +622,7 @@ namespace Interfaz
             parametros[1] = new ReportParameter("Fechaf", Fechaf.ToShortDateString());
             parametros[2] = new ReportParameter("Titulo", Titulo);
             parametros[3] = new ReportParameter("Titulo1", Titulo1);
-            rgta.Fill(ds.obt_graficos_maq_parada,Maquina,Dpto,idMotivo,Valor_,Fechai,Fechaf);
+            rgta.Fill(ds.obt_graficos_maq_parada, Maquina, Dpto, idMotivo, Valor_, Fechai, Fechaf);
             ReportDataSource rds = new ReportDataSource();
             reportViewer1.LocalReport.DisplayName = Reporte;
             rds.Name = "DataSet1";
@@ -630,9 +648,9 @@ namespace Interfaz
             parametros[2] = new ReportParameter("Fechai", Fechai.ToShortDateString());
             parametros[3] = new ReportParameter("Fechaf", Fechaf.ToShortDateString());
             parametros[4] = new ReportParameter("Idcliente", Idcliente.ToString());
-            rgta.Fill(ds.incentivo_rollos_cort, Incentivo, Empresa, Fechai, Fechaf,Idcliente);
-            rgta1.Fill(ds.incentivo_rollos_cort1, Incentivo, Empresa, Fechai, Fechaf,Idcliente);
-            rgta2.Fill(ds.incentivo_rollos_cort2, Incentivo, Empresa, Fechai, Fechaf,Idcliente);
+            rgta.Fill(ds.incentivo_rollos_cort, Incentivo, Empresa, Fechai, Fechaf, Idcliente);
+            rgta1.Fill(ds.incentivo_rollos_cort1, Incentivo, Empresa, Fechai, Fechaf, Idcliente);
+            rgta2.Fill(ds.incentivo_rollos_cort2, Incentivo, Empresa, Fechai, Fechaf, Idcliente);
             ReportDataSource rds = new ReportDataSource();
             ReportDataSource rds1 = new ReportDataSource();
             ReportDataSource rds2 = new ReportDataSource();
@@ -663,8 +681,8 @@ namespace Interfaz
             parametros[0] = new ReportParameter("Fecha", Fecha.ToShortDateString());
             parametros[1] = new ReportParameter("Empresa", Destino.ToString());
             parametros[2] = new ReportParameter("Idcliente", Idcliente.ToString());
-            rgta.Fill(ds.incentivo_trefilado, Empresa,Idcliente);
-            rgta1.Fill(ds.incentivo_tref_indirecto, Empresa,Idcliente);
+            rgta.Fill(ds.incentivo_trefilado, Empresa, Idcliente);
+            rgta1.Fill(ds.incentivo_tref_indirecto, Empresa, Idcliente);
             ReportDataSource rds = new ReportDataSource();
             ReportDataSource rds1 = new ReportDataSource();
             reportViewer1.LocalReport.DisplayName = Reporte;
@@ -712,7 +730,7 @@ namespace Interfaz
             parametros[1] = new ReportParameter("Fechai", Fechai.ToShortDateString());
             parametros[2] = new ReportParameter("Fechaf", Fechaf.ToShortDateString());
             parametros[3] = new ReportParameter("Dpto", Dpto.ToString());
-            rgta.Fill(ds.obt_registros_horas_extras,Fechai,Fechaf,Iddpto,Idempresa);
+            rgta.Fill(ds.obt_registros_horas_extras, Fechai, Fechaf, Iddpto, Idempresa);
             ReportDataSource rds = new ReportDataSource();
             reportViewer1.LocalReport.DisplayName = Reporte;
             rds.Name = "DataSet1";
@@ -779,7 +797,7 @@ namespace Interfaz
             string ruta = "Reportes\\" + Nombre;
             lc.ReportPath = ruta;
             //NoReporte = "0000002";
-            rgta.Fill(ds.reporte_diario_indm, Fecha,Fechaf);
+            rgta.Fill(ds.reporte_diario_indm, Fecha, Fechaf);
             ReportDataSource rds = new ReportDataSource();
             reportViewer1.LocalReport.DisplayName = Reporte;
             rds.Name = "DataSet1";
@@ -803,7 +821,7 @@ namespace Interfaz
             parametros[0] = new ReportParameter("Fechai", Fechai.ToShortDateString());
             parametros[1] = new ReportParameter("Fechaf", Fechaf.ToShortDateString());
             parametros[2] = new ReportParameter("Orden1", Order1.ToString());
-            rgta.Fill(ds.filtrar_produccion, Supervisor,int.Parse(Cliente),Maquina,Producto,Operador,Ayudante,Fechai,Fechaf,1);
+            rgta.Fill(ds.filtrar_produccion, Supervisor, int.Parse(Cliente), Maquina, Producto, Operador, Ayudante, Fechai, Fechaf, 1);
             ReportDataSource rds = new ReportDataSource();
             reportViewer1.LocalReport.DisplayName = Reporte;
             rds.Name = "DataSet1";
@@ -815,7 +833,7 @@ namespace Interfaz
         }
         private void FiltrarProduccionResumido()
         {
-            ReportParameter[] parametros = new ReportParameter[14];
+            ReportParameter[] parametros = new ReportParameter[15];
             this.Text = Reporte;
             PRODUCCIONDataSet ds = new PRODUCCIONDataSet();
             PRODUCCIONDataSetTableAdapters.filtrar_produccionTableAdapter rgta = new PRODUCCIONDataSetTableAdapters.filtrar_produccionTableAdapter();
@@ -837,7 +855,8 @@ namespace Interfaz
             parametros[11] = new ReportParameter("Producto", _Producto.ToString());
             parametros[12] = new ReportParameter("Maquina", _Maquina.ToString());
             parametros[13] = new ReportParameter("Ayudante", _Ayudante.ToString());
-            rgta.Fill(ds.filtrar_produccion, Supervisor, int.Parse(Cliente), Maquina, Producto, Operador,Ayudante, Fechai, Fechaf, 1);
+            parametros[14] = new ReportParameter("Gcategoria", gCategoria.ToString());
+            rgta.Fill(ds.filtrar_produccion, Supervisor, int.Parse(Cliente), Maquina, Producto, Operador, Ayudante, Fechai, Fechaf, 1);
             ReportDataSource rds = new ReportDataSource();
             reportViewer1.LocalReport.DisplayName = Reporte;
             rds.Name = "DataSet1";
@@ -860,7 +879,7 @@ namespace Interfaz
             parametros[0] = new ReportParameter("Fechai", Fechai.ToShortDateString());
             parametros[1] = new ReportParameter("Fechaf", Fechaf.ToShortDateString());
             //parametros[2] = new ReportParameter("Orden1", Order1.ToString());
-            rgta.Fill(ds.Obtener_produccion_total,Fechai, Fechaf, Turno, Maquina);
+            rgta.Fill(ds.Obtener_produccion_total, Fechai, Fechaf, Turno, Maquina);
             ReportDataSource rds = new ReportDataSource();
             reportViewer1.LocalReport.DisplayName = Reporte;
             rds.Name = "DataSet1";
@@ -906,7 +925,7 @@ namespace Interfaz
             parametros[0] = new ReportParameter("Fechai", Fechai.ToShortDateString());
             parametros[1] = new ReportParameter("Fechaf", Fechaf.ToShortDateString());
             parametros[2] = new ReportParameter("Almacen", Almacen.ToString());
-            rgta.Fill(ds.obt_ent_alm, Fechai, Fechaf,Idalmacen,NoReporte);
+            rgta.Fill(ds.obt_ent_alm, Fechai, Fechaf, Idalmacen, NoReporte);
             ReportDataSource rds = new ReportDataSource();
             reportViewer1.LocalReport.DisplayName = Reporte;
             rds.Name = "DataSet1";
@@ -929,7 +948,7 @@ namespace Interfaz
             parametros[0] = new ReportParameter("Fechai", Fechai.ToShortDateString());
             parametros[1] = new ReportParameter("Fechaf", Fechaf.ToShortDateString());
             parametros[2] = new ReportParameter("Almacen", Almacen.ToString());
-            rgta.Fill(ds.obt_sal_alm, Idalmacen,Iduso,Producto, Fechai, Fechaf);
+            rgta.Fill(ds.obt_sal_alm, Idalmacen, Iduso, Producto, Fechai, Fechaf);
             ReportDataSource rds = new ReportDataSource();
             reportViewer1.LocalReport.DisplayName = Reporte;
             rds.Name = "DataSet1";
@@ -939,5 +958,6 @@ namespace Interfaz
             lc.DataSources.Add(rds);
             this.reportViewer1.RefreshReport();
         }
+        #endregion
     }
 }

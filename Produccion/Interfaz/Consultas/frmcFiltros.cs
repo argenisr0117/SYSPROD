@@ -312,7 +312,8 @@ namespace Interfaz.Consultas
                         obj.gSupervisor = "0";
                         obj.gOperador = "0";
                         obj.gAyudante = "0";
-                  
+                        obj.gCategoria = "0";
+
                         if (radioCliente.Checked)
                         {
                             obj.gCliente = "1";
@@ -333,6 +334,11 @@ namespace Interfaz.Consultas
                         {
                             obj.gProducto = "1";
                             obj.gAyudante = "1";
+                        }
+                        else if (radioCategoria.Checked)
+                        {
+                            //obj.gProducto = "1";
+                            obj.gCategoria = "1";
                         }
                     }
                     obj.Show();

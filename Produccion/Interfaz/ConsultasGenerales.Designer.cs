@@ -52,9 +52,9 @@
             this.mecanicoIndustriaMenorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.empresaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tscbempresa = new System.Windows.Forms.ToolStripComboBox();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.iNFORMESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mÁQPARADAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.btnMonitoreo = new System.Windows.Forms.Button();
             this.btnHistorial = new System.Windows.Forms.Button();
             this.btnFiltros = new System.Windows.Forms.Button();
@@ -113,43 +113,48 @@
             this.terminadosToolStripMenuItem,
             this.lineaGalvanizadoToolStripMenuItem,
             this.kINNOXToolStripMenuItem});
-            this.acumuladoMensualToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.acumuladoMensualToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.acumuladoMensualToolStripMenuItem.Name = "acumuladoMensualToolStripMenuItem";
-            this.acumuladoMensualToolStripMenuItem.Size = new System.Drawing.Size(185, 20);
+            this.acumuladoMensualToolStripMenuItem.Size = new System.Drawing.Size(209, 20);
             this.acumuladoMensualToolStripMenuItem.Text = "REPORTES PROD. ACUMULADA";
             // 
             // generalToolStripMenuItem
             // 
+            this.generalToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.generalToolStripMenuItem.Name = "generalToolStripMenuItem";
-            this.generalToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.generalToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.generalToolStripMenuItem.Text = "GENERAL";
             this.generalToolStripMenuItem.Click += new System.EventHandler(this.generalToolStripMenuItem_Click);
             // 
             // intermediosToolStripMenuItem
             // 
+            this.intermediosToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.intermediosToolStripMenuItem.Name = "intermediosToolStripMenuItem";
-            this.intermediosToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.intermediosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.intermediosToolStripMenuItem.Text = "INTERMEDIOS";
             this.intermediosToolStripMenuItem.Click += new System.EventHandler(this.intermediosToolStripMenuItem_Click);
             // 
             // terminadosToolStripMenuItem
             // 
+            this.terminadosToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.terminadosToolStripMenuItem.Name = "terminadosToolStripMenuItem";
-            this.terminadosToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.terminadosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.terminadosToolStripMenuItem.Text = "TERMINADOS";
             this.terminadosToolStripMenuItem.Click += new System.EventHandler(this.terminadosToolStripMenuItem_Click);
             // 
             // lineaGalvanizadoToolStripMenuItem
             // 
+            this.lineaGalvanizadoToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lineaGalvanizadoToolStripMenuItem.Name = "lineaGalvanizadoToolStripMenuItem";
-            this.lineaGalvanizadoToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.lineaGalvanizadoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.lineaGalvanizadoToolStripMenuItem.Text = "LINEA GALV.";
             this.lineaGalvanizadoToolStripMenuItem.Click += new System.EventHandler(this.lineaGalvanizadoToolStripMenuItem_Click);
             // 
             // kINNOXToolStripMenuItem
             // 
+            this.kINNOXToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kINNOXToolStripMenuItem.Name = "kINNOXToolStripMenuItem";
-            this.kINNOXToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.kINNOXToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.kINNOXToolStripMenuItem.Text = "KINNOX";
             this.kINNOXToolStripMenuItem.Click += new System.EventHandler(this.kINNOXToolStripMenuItem_Click);
             // 
@@ -167,13 +172,14 @@
             this.flejadoToolStripMenuItem,
             this.varillasAceradasToolStripMenuItem,
             this.mecanicoIndustriaMenorToolStripMenuItem});
-            this.incentivosToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.incentivosToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.incentivosToolStripMenuItem.Name = "incentivosToolStripMenuItem";
-            this.incentivosToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
+            this.incentivosToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
             this.incentivosToolStripMenuItem.Text = "INCENTIVOS";
             // 
             // grapasToolStripMenuItem
             // 
+            this.grapasToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grapasToolStripMenuItem.Name = "grapasToolStripMenuItem";
             this.grapasToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
             this.grapasToolStripMenuItem.Text = "GRAPAS";
@@ -181,6 +187,7 @@
             // 
             // púasToolStripMenuItem
             // 
+            this.púasToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.púasToolStripMenuItem.Name = "púasToolStripMenuItem";
             this.púasToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
             this.púasToolStripMenuItem.Text = "PUAS";
@@ -188,6 +195,7 @@
             // 
             // sunchosToolStripMenuItem
             // 
+            this.sunchosToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sunchosToolStripMenuItem.Name = "sunchosToolStripMenuItem";
             this.sunchosToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
             this.sunchosToolStripMenuItem.Text = "SUNCHOS";
@@ -195,6 +203,7 @@
             // 
             // mallasCiclonicasToolStripMenuItem
             // 
+            this.mallasCiclonicasToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mallasCiclonicasToolStripMenuItem.Name = "mallasCiclonicasToolStripMenuItem";
             this.mallasCiclonicasToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
             this.mallasCiclonicasToolStripMenuItem.Text = "MALLAS CICLONICAS";
@@ -202,6 +211,7 @@
             // 
             // mallasGallineroToolStripMenuItem
             // 
+            this.mallasGallineroToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mallasGallineroToolStripMenuItem.Name = "mallasGallineroToolStripMenuItem";
             this.mallasGallineroToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
             this.mallasGallineroToolStripMenuItem.Text = "MALLAS GALLINERO";
@@ -209,6 +219,7 @@
             // 
             // rollosRollitosCortadoToolStripMenuItem
             // 
+            this.rollosRollitosCortadoToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rollosRollitosCortadoToolStripMenuItem.Name = "rollosRollitosCortadoToolStripMenuItem";
             this.rollosRollitosCortadoToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
             this.rollosRollitosCortadoToolStripMenuItem.Text = "ROLLOS,ROLLITOS,CORTADO";
@@ -216,6 +227,7 @@
             // 
             // trefiladoToolStripMenuItem
             // 
+            this.trefiladoToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.trefiladoToolStripMenuItem.Name = "trefiladoToolStripMenuItem";
             this.trefiladoToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
             this.trefiladoToolStripMenuItem.Text = "TREFILADO";
@@ -223,6 +235,7 @@
             // 
             // lineaGalvanizadoToolStripMenuItem1
             // 
+            this.lineaGalvanizadoToolStripMenuItem1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lineaGalvanizadoToolStripMenuItem1.Name = "lineaGalvanizadoToolStripMenuItem1";
             this.lineaGalvanizadoToolStripMenuItem1.Size = new System.Drawing.Size(229, 22);
             this.lineaGalvanizadoToolStripMenuItem1.Text = "LINEA GALVANIZADO";
@@ -230,6 +243,7 @@
             // 
             // flejadoToolStripMenuItem
             // 
+            this.flejadoToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flejadoToolStripMenuItem.Name = "flejadoToolStripMenuItem";
             this.flejadoToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
             this.flejadoToolStripMenuItem.Text = "FLEJADO";
@@ -237,6 +251,7 @@
             // 
             // varillasAceradasToolStripMenuItem
             // 
+            this.varillasAceradasToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.varillasAceradasToolStripMenuItem.Name = "varillasAceradasToolStripMenuItem";
             this.varillasAceradasToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
             this.varillasAceradasToolStripMenuItem.Text = "VARILLAS ACERADAS";
@@ -244,6 +259,7 @@
             // 
             // mecanicoIndustriaMenorToolStripMenuItem
             // 
+            this.mecanicoIndustriaMenorToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mecanicoIndustriaMenorToolStripMenuItem.Name = "mecanicoIndustriaMenorToolStripMenuItem";
             this.mecanicoIndustriaMenorToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
             this.mecanicoIndustriaMenorToolStripMenuItem.Text = "MEC. INDUSTRIA MENOR";
@@ -253,9 +269,9 @@
             // 
             this.empresaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tscbempresa});
-            this.empresaToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.empresaToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.empresaToolStripMenuItem.Name = "empresaToolStripMenuItem";
-            this.empresaToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.empresaToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
             this.empresaToolStripMenuItem.Text = "EMPRESA";
             // 
             // tscbempresa
@@ -263,6 +279,23 @@
             this.tscbempresa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.tscbempresa.Name = "tscbempresa";
             this.tscbempresa.Size = new System.Drawing.Size(165, 23);
+            // 
+            // iNFORMESToolStripMenuItem
+            // 
+            this.iNFORMESToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mÁQPARADAToolStripMenuItem});
+            this.iNFORMESToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.iNFORMESToolStripMenuItem.Name = "iNFORMESToolStripMenuItem";
+            this.iNFORMESToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
+            this.iNFORMESToolStripMenuItem.Text = "INFORMES";
+            // 
+            // mÁQPARADAToolStripMenuItem
+            // 
+            this.mÁQPARADAToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.mÁQPARADAToolStripMenuItem.Name = "mÁQPARADAToolStripMenuItem";
+            this.mÁQPARADAToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.mÁQPARADAToolStripMenuItem.Text = "MÁQ. PARADA";
+            this.mÁQPARADAToolStripMenuItem.Click += new System.EventHandler(this.mÁQPARADAToolStripMenuItem_Click);
             // 
             // panel2
             // 
@@ -277,21 +310,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(798, 70);
             this.panel2.TabIndex = 6;
-            // 
-            // iNFORMESToolStripMenuItem
-            // 
-            this.iNFORMESToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mÁQPARADAToolStripMenuItem});
-            this.iNFORMESToolStripMenuItem.Name = "iNFORMESToolStripMenuItem";
-            this.iNFORMESToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
-            this.iNFORMESToolStripMenuItem.Text = "INFORMES";
-            // 
-            // mÁQPARADAToolStripMenuItem
-            // 
-            this.mÁQPARADAToolStripMenuItem.Name = "mÁQPARADAToolStripMenuItem";
-            this.mÁQPARADAToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
-            this.mÁQPARADAToolStripMenuItem.Text = "MÁQ. PARADA";
-            this.mÁQPARADAToolStripMenuItem.Click += new System.EventHandler(this.mÁQPARADAToolStripMenuItem_Click);
             // 
             // btnMonitoreo
             // 

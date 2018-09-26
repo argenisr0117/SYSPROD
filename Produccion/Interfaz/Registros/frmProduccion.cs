@@ -482,7 +482,7 @@ namespace Interfaz.Registros
             {
                 if (obj.ShowDialog() == DialogResult.OK)
                 {
-                    MostrarTodos();                    
+                    MostrarTodos();
                 }
                 else
                 {
@@ -681,9 +681,9 @@ namespace Interfaz.Registros
         private void generalToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //Actualizar();
-            frmReporte obj = new frmReporte();           
+            frmReporte obj = new frmReporte();
             GetReportTotals();
-             obj.Valor = 0;
+            obj.Valor = 0;
             obj.Acerado = acerado;
             obj.Galvanizado = galvanizado;
             obj.Recocido = recocido;
@@ -698,7 +698,7 @@ namespace Interfaz.Registros
         private void intermediosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //Actualizar();
-            frmReporte obj = new frmReporte();           
+            frmReporte obj = new frmReporte();
             GetReportTotals();
             obj.Valor = 0;
             obj.Acerado = acerado;
@@ -715,7 +715,7 @@ namespace Interfaz.Registros
         private void terminadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //Actualizar();
-            frmReporte obj = new frmReporte();           
+            frmReporte obj = new frmReporte();
             GetReportTotals();
             obj.Valor = 0;
             obj.Acerado = acerado;
@@ -906,7 +906,7 @@ namespace Interfaz.Registros
         private void procesosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //Actualizar();
-            frmReporte obj = new frmReporte();          
+            frmReporte obj = new frmReporte();
             GetReportTotals();
             obj.Valor = 0;
             obj.Acerado = acerado;
@@ -923,7 +923,7 @@ namespace Interfaz.Registros
         private void desperdiciosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //Actualizar();
-            frmReporte obj = new frmReporte();            
+            frmReporte obj = new frmReporte();
             GetReportTotals();
             obj.Valor = 0;
             obj.Acerado = acerado;
@@ -1013,7 +1013,7 @@ namespace Interfaz.Registros
                     {
                         txtreporte.Text = dt.Rows[0][11].ToString();
                         MostrarTodos();
-                        btnregistrar.Text = "Actualizar";    
+                        btnregistrar.Text = "Actualizar";
                         ContarRegistros();
 
                     }
@@ -1080,7 +1080,7 @@ namespace Interfaz.Registros
 
         private void GetReportTotals()
         {
-            dt1 = Pr.TotalProduccion("Acerados");           
+            dt1 = Pr.TotalProduccion("Alambres Acerados");
             if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
             {
                 acerado = 0.00;
@@ -1089,7 +1089,7 @@ namespace Interfaz.Registros
             {
                 acerado = Convert.ToDouble(dt1.Rows[0]["Total"]);
             }
-            dt1 = Pr.TotalProduccion("Galvanizados");
+            dt1 = Pr.TotalProduccion("Alambres Galvanizados");
             if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
             {
                 galvanizado = 0.00;
@@ -1098,7 +1098,7 @@ namespace Interfaz.Registros
             {
                 galvanizado = Convert.ToDouble(dt1.Rows[0]["Total"]);
             }
-            dt1 = Pr.TotalProduccion("Recocidos");
+            dt1 = Pr.TotalProduccion("Alambres Recocidos");
             if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
             {
                 recocido = 0.00;

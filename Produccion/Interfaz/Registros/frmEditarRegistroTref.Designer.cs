@@ -40,14 +40,14 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.cmbAyudante = new Interfaz.Controles.comboboxar(this.components);
             this.cmbCliente = new Interfaz.Controles.comboboxar(this.components);
             this.cmbMaquina = new Interfaz.Controles.comboboxar(this.components);
             this.cmbProducto = new Interfaz.Controles.comboboxar(this.components);
             this.cmbOperador = new Interfaz.Controles.comboboxar(this.components);
             this.cmbSupervisor = new Interfaz.Controles.comboboxar(this.components);
             this.txtPeso = new Interfaz.Controles.textboxN(this.components);
-            this.cmbAyudante = new Interfaz.Controles.comboboxar(this.components);
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -175,6 +175,31 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(22, 127);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(70, 15);
+            this.label1.TabIndex = 143;
+            this.label1.Text = "AYUDANTE";
+            // 
+            // cmbAyudante
+            // 
+            this.cmbAyudante.BackColor = System.Drawing.Color.Gainsboro;
+            this.cmbAyudante.DropDownHeight = 60;
+            this.cmbAyudante.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbAyudante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbAyudante.FormattingEnabled = true;
+            this.cmbAyudante.IntegralHeight = false;
+            this.cmbAyudante.Location = new System.Drawing.Point(124, 125);
+            this.cmbAyudante.Name = "cmbAyudante";
+            this.cmbAyudante.Size = new System.Drawing.Size(272, 21);
+            this.cmbAyudante.TabIndex = 142;
+            this.cmbAyudante.Validar = true;
+            // 
             // cmbCliente
             // 
             this.cmbCliente.BackColor = System.Drawing.Color.Gainsboro;
@@ -206,7 +231,7 @@
             // cmbProducto
             // 
             this.cmbProducto.BackColor = System.Drawing.Color.Gainsboro;
-            this.cmbProducto.DropDownHeight = 60;
+            this.cmbProducto.DropDownHeight = 100;
             this.cmbProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbProducto.FormattingEnabled = true;
@@ -258,31 +283,6 @@
             this.txtPeso.TabIndex = 132;
             this.txtPeso.Validar = true;
             this.txtPeso.Valor = Interfaz.Controles.textboxN.Tipo.Números;
-            // 
-            // cmbAyudante
-            // 
-            this.cmbAyudante.BackColor = System.Drawing.Color.Gainsboro;
-            this.cmbAyudante.DropDownHeight = 60;
-            this.cmbAyudante.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbAyudante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbAyudante.FormattingEnabled = true;
-            this.cmbAyudante.IntegralHeight = false;
-            this.cmbAyudante.Location = new System.Drawing.Point(124, 125);
-            this.cmbAyudante.Name = "cmbAyudante";
-            this.cmbAyudante.Size = new System.Drawing.Size(272, 21);
-            this.cmbAyudante.TabIndex = 142;
-            this.cmbAyudante.Validar = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(22, 127);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 15);
-            this.label1.TabIndex = 143;
-            this.label1.Text = "AYUDANTE";
             // 
             // frmEditarRegistroTref
             // 

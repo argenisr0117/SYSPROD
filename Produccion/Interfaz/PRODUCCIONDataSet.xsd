@@ -1134,6 +1134,8 @@
               <Mapping SourceColumn="PRODUCTO" DataSetColumn="PRODUCTO" />
               <Mapping SourceColumn="CLIENTE" DataSetColumn="CLIENTE" />
               <Mapping SourceColumn="TARJETA" DataSetColumn="TARJETA" />
+              <Mapping SourceColumn="CATEGORIA" DataSetColumn="CATEGORIA" />
+              <Mapping SourceColumn="UNIDAD" DataSetColumn="UNIDAD" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -2427,6 +2429,20 @@
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CATEGORIA" msprop:Generator_ColumnVarNameInTable="columnCATEGORIA" msprop:Generator_ColumnPropNameInRow="CATEGORIA" msprop:Generator_ColumnPropNameInTable="CATEGORIAColumn" msprop:Generator_UserColumnName="CATEGORIA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UNIDAD" msprop:Generator_ColumnVarNameInTable="columnUNIDAD" msprop:Generator_ColumnPropNameInRow="UNIDAD" msprop:Generator_ColumnPropNameInTable="UNIDADColumn" msprop:Generator_UserColumnName="UNIDAD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>

@@ -14,6 +14,9 @@
             <TablixColumn>
               <Width>0.75in</Width>
             </TablixColumn>
+            <TablixColumn>
+              <Width>0.70833in</Width>
+            </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
@@ -134,6 +137,44 @@
                     </Textbox>
                   </CellContents>
                 </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox8">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox8</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>None</Style>
+                        </Border>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                        </BottomBorder>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
               </TablixCells>
             </TablixRow>
             <TablixRow>
@@ -219,6 +260,7 @@
                               <Value>=Sum(Fields!CANTIDAD.Value)</Value>
                               <Style>
                                 <FontSize>9pt</FontSize>
+                                <Format>n2</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -228,6 +270,40 @@
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox57</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingLeft>1pt</PaddingLeft>
+                        <PaddingRight>1pt</PaddingRight>
+                        <PaddingTop>1pt</PaddingTop>
+                        <PaddingBottom>1pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox4">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox4</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -334,6 +410,7 @@
                               <Style>
                                 <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
+                                <Format>n2</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -343,6 +420,45 @@
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox63</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>None</Style>
+                        </Border>
+                        <TopBorder>
+                          <Color>Black</Color>
+                          <Style>Double</Style>
+                        </TopBorder>
+                        <PaddingLeft>1pt</PaddingLeft>
+                        <PaddingRight>1pt</PaddingRight>
+                        <PaddingTop>1pt</PaddingTop>
+                        <PaddingBottom>1pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="UNIDAD1">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!UNIDAD.Value</Value>
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>UNIDAD1</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -449,6 +565,7 @@
                               <Style>
                                 <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
+                                <Format>n2</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -458,6 +575,45 @@
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox67</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>None</Style>
+                        </Border>
+                        <TopBorder>
+                          <Color>Black</Color>
+                          <Style>Double</Style>
+                        </TopBorder>
+                        <PaddingLeft>1pt</PaddingLeft>
+                        <PaddingRight>1pt</PaddingRight>
+                        <PaddingTop>1pt</PaddingTop>
+                        <PaddingBottom>1pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox7">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox7</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -489,6 +645,11 @@
             </TablixMember>
             <TablixMember />
             <TablixMember />
+            <TablixMember>
+              <Visibility>
+                <Hidden>=IIf(Parameters!Gcategoria.Value="1",false,true)</Hidden>
+              </Visibility>
+            </TablixMember>
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
@@ -504,7 +665,7 @@
                       <Paragraph>
                         <TextRuns>
                           <TextRun>
-                            <Value>=Switch(Parameters!Goperador.Value="1","OPERADOR",Parameters!Gsupervisor.Value="1","SUPERVISOR",Parameters!Gcliente.Value="1","CLIENTE",Parameters!Gayudante.Value="1","AYUDANTE",Parameters!Gmaquina.Value="1","MÁQUINA")</Value>
+                            <Value>=Switch(Parameters!Goperador.Value="1","OPERADOR",Parameters!Gsupervisor.Value="1","SUPERVISOR",Parameters!Gcliente.Value="1","CLIENTE",Parameters!Gayudante.Value="1","AYUDANTE",Parameters!Gmaquina.Value="1","MÁQUINA",Parameters!Gcategoria.Value="1","CATEGORIA")</Value>
                             <Style>
                               <FontSize>9pt</FontSize>
                               <FontWeight>Bold</FontWeight>
@@ -541,12 +702,12 @@
             <TablixMember>
               <Group Name="Group1">
                 <GroupExpressions>
-                  <GroupExpression>=Switch(Parameters!Goperador.Value="1",Fields!OPERADOR.Value,Parameters!Gsupervisor.Value="1",Fields!SUPERVISOR.Value,Parameters!Gcliente.Value="1",Fields!CLIENTE.Value,Parameters!Gproducto.Value="1",Fields!PRODUCTO.Value,Parameters!Gmaquina.Value="1",Fields!MAQUINA.Value)</GroupExpression>
+                  <GroupExpression>=Switch(Parameters!Goperador.Value="1",Fields!OPERADOR.Value,Parameters!Gsupervisor.Value="1",Fields!SUPERVISOR.Value,Parameters!Gcliente.Value="1",Fields!CLIENTE.Value,Parameters!Gproducto.Value="1",Fields!PRODUCTO.Value,Parameters!Gmaquina.Value="1",Fields!MAQUINA.Value,Parameters!Gcategoria.Value="1",Fields!CATEGORIA.Value)</GroupExpression>
                 </GroupExpressions>
               </Group>
               <SortExpressions>
                 <SortExpression>
-                  <Value>=Switch(Parameters!Goperador.Value="1",Fields!OPERADOR.Value,Parameters!Gsupervisor.Value="1",Fields!SUPERVISOR.Value,Parameters!Gcliente.Value="1",Fields!CLIENTE.Value,Parameters!Gproducto.Value="1",Fields!PRODUCTO.Value,Parameters!Gmaquina.Value="1",Fields!MAQUINA.Value)</Value>
+                  <Value>=Switch(Parameters!Goperador.Value="1",Fields!OPERADOR.Value,Parameters!Gsupervisor.Value="1",Fields!SUPERVISOR.Value,Parameters!Gcliente.Value="1",Fields!CLIENTE.Value,Parameters!Gproducto.Value="1",Fields!PRODUCTO.Value,Parameters!Gmaquina.Value="1",Fields!MAQUINA.Value,Parameters!Gcategoria.Value="1",Fields!CATEGORIA.Value)</Value>
                 </SortExpression>
               </SortExpressions>
               <TablixMembers>
@@ -561,7 +722,7 @@
                           <Paragraph>
                             <TextRuns>
                               <TextRun>
-                                <Value>=Switch(Parameters!Goperador.Value="1",Fields!OPERADOR.Value,Parameters!Gsupervisor.Value="1",Fields!SUPERVISOR.Value,Parameters!Gcliente.Value="1",Fields!CLIENTE.Value,Parameters!Gayudante.Value="1",Fields!AYUDANTE.Value,Parameters!Gmaquina.Value="1",Fields!MAQUINA.Value)</Value>
+                                <Value>=Switch(Parameters!Goperador.Value="1",Fields!OPERADOR.Value,Parameters!Gsupervisor.Value="1",Fields!SUPERVISOR.Value,Parameters!Gcliente.Value="1",Fields!CLIENTE.Value,Parameters!Gayudante.Value="1",Fields!AYUDANTE.Value,Parameters!Gmaquina.Value="1",Fields!MAQUINA.Value,Parameters!Gcategoria.Value="1",UCase(Fields!CATEGORIA.Value))</Value>
                                 <Style>
                                   <FontSize>9pt</FontSize>
                                 </Style>
@@ -687,7 +848,7 @@
         <Top>1.23833in</Top>
         <Left>0.14112in</Left>
         <Height>0.73958in</Height>
-        <Width>6.82291in</Width>
+        <Width>7.53124in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1021,7 +1182,7 @@
     <Height>2.05083in</Height>
     <Style />
   </Body>
-  <Width>7.78695in</Width>
+  <Width>7.89111in</Width>
   <Page>
     <PageHeader>
       <Height>1.32292in</Height>
@@ -1411,6 +1572,14 @@
           <DataField>TARJETA</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="CATEGORIA">
+          <DataField>CATEGORIA</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="UNIDAD">
+          <DataField>UNIDAD</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>PRODUCCIONDataSet</rd:DataSetName>
@@ -1483,6 +1652,10 @@
     <ReportParameter Name="Cliente">
       <DataType>String</DataType>
       <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Gcategoria">
+      <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
   </ReportParameters>

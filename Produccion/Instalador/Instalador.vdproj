@@ -213,6 +213,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_706B00155C26428BB197FD3118ED6C8F"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_731E5A9A2FCD367ADE1374068D8A341E"
         "OwnerKey" = "8:_AC8F81798BFE411F8B149F404424B183"
         "MsmSig" = "8:_UNDEFINED"
@@ -1356,6 +1362,26 @@
             {
             "SourcePath" = "8:..\\Interfaz\\bin\\Debug\\Reportes\\incentivo_trefilado.rdlc"
             "TargetName" = "8:incentivo_trefilado.rdlc"
+            "Tag" = "8:"
+            "Folder" = "8:_00DD0B03E441403CB4D3297F2511FE1C"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_706B00155C26428BB197FD3118ED6C8F"
+            {
+            "SourcePath" = "8:..\\Interfaz\\Reportes\\reporte_kinnox.rdlc"
+            "TargetName" = "8:reporte_kinnox.rdlc"
             "Tag" = "8:"
             "Folder" = "8:_00DD0B03E441403CB4D3297F2511FE1C"
             "Condition" = "8:"
@@ -2789,7 +2815,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_AC8F81798BFE411F8B149F404424B183"
             {
-            "SourcePath" = "8:..\\Interfaz\\obj\\Debug\\Interfaz.exe"
+            "SourcePath" = "8:..\\Interfaz\\obj\\Debug\\SysProd.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_2C4FF5305C374AB3BEAD902C54996373"

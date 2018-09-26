@@ -44,7 +44,7 @@
             this.lbTitulo.BackColor = System.Drawing.Color.DarkRed;
             this.lbTitulo.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTitulo.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lbTitulo.Location = new System.Drawing.Point(284, 9);
+            this.lbTitulo.Location = new System.Drawing.Point(284, 19);
             this.lbTitulo.Name = "lbTitulo";
             this.lbTitulo.Size = new System.Drawing.Size(283, 26);
             this.lbTitulo.TabIndex = 68;
@@ -52,7 +52,7 @@
             // 
             // EstadoMaqTimer
             // 
-            this.EstadoMaqTimer.Interval = 15000;
+            this.EstadoMaqTimer.Interval = 3000;
             this.EstadoMaqTimer.Tick += new System.EventHandler(this.EstadoMaqTimer_Tick);
             // 
             // flowLayoutPanel1
