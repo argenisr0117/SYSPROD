@@ -506,3 +506,7 @@ C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\SysProd.
 C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\SysProd.application
 C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\SysProd.exe
 C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\SysProd.pdb
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Interop.zkemkeeper.dll
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interop.zkemkeeper.dll
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.csproj.ResolveComReference.cache
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmPonche.resources
