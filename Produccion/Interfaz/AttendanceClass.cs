@@ -4170,15 +4170,15 @@ namespace Interfaz
                     P.Date = Convert.ToDateTime(idwYear + "-" + idwMonth + "-" + idwDay + " " + idwHour + ":" + idwMinute + ":" + idwSecond);
                     P.VerifyMode = idwVerifyMode;
                     P.InsertAtteandance();
-                    //DataRow dr = dt_log.NewRow();
-                    //dr["Count"] = cont;
-                    //dr["User ID"] = sdwEnrollNumber;
-                    //dr["Verify Date"] = idwYear + "-" + idwMonth + "-" + idwDay + " " + idwHour + ":" + idwMinute + ":" + idwSecond;
-                    //dr["Verify Type"] = idwVerifyMode;
-                    //dr["Verify State"] = idwInOutMode;
-                    //dr["WorkCode"] = idwWorkcode;
-                    //dt_log.Rows.Add(dr);
-                    //cont++;
+                    DataRow dr = dt_log.NewRow();
+                    dr["Count"] = cont;
+                    dr["User ID"] = sdwEnrollNumber;
+                    dr["Verify Date"] = idwYear + "-" + idwMonth + "-" + idwDay + " " + idwHour + ":" + idwMinute + ":" + idwSecond;
+                    dr["Verify Type"] = idwVerifyMode;
+                    dr["Verify State"] = idwInOutMode;
+                    dr["WorkCode"] = idwWorkcode;
+                    dt_log.Rows.Add(dr);
+                    cont++;
                 }
                 ret = 1;
                 Console.Write(cont);

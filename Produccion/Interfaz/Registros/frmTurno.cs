@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Intermedia;
 using DevComponents.DotNetBar.Metro;
+using DevComponents.DotNetBar;
 
 namespace Interfaz.Registros
 {
@@ -43,14 +44,22 @@ namespace Interfaz.Registros
                 {
                     T.Idturno = txtabreviacion.Text;
                     T.Descripcion = txtturno.Text;
+                    T.HoraComida = cbHoraComida.Checked;
+                    T.InicioHent = dtpIniciohent.Value;
+                    T.FinHent = dtpFinHEnt.Value;
+                    T.InicioHsal = dtpInicioHsal.Value;
+                    T.FinHsal = dtpFinHSal.Value;
+                    T.HoraInicio = dtpHorainicio.Value;
+                    T.HoraFin = dtpHorafin.Value;
+                    T.Duracion =Convert.ToInt32(nupDuracion.Value);
                     mensaje = T.RegistrarTurno();
                     if (mensaje == "Turno ya existe!")
                     {
-                        DevComponents.DotNetBar.MessageBoxEx.Show(mensaje, "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBoxEx.Show(mensaje, "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
                     {
-                        DevComponents.DotNetBar.MessageBoxEx.Show(mensaje, "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBoxEx.Show(mensaje, "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Limpiar();
                     }
                 }
@@ -58,7 +67,15 @@ namespace Interfaz.Registros
                 {
                     T.Idturno = txtabreviacion.Text;
                     T.Descripcion = txtturno.Text;
-                    DevComponents.DotNetBar.MessageBoxEx.Show(T.ActualizarTurno(), "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    T.HoraComida = cbHoraComida.Checked;
+                    T.InicioHent = dtpIniciohent.Value;
+                    T.FinHent = dtpFinHEnt.Value;
+                    T.InicioHsal = dtpInicioHsal.Value;
+                    T.FinHsal = dtpFinHSal.Value;
+                    T.HoraInicio = dtpHorainicio.Value;
+                    T.HoraFin = dtpHorafin.Value;
+                    T.Duracion = Convert.ToInt32(nupDuracion.Value);
+                    MessageBoxEx.Show(T.ActualizarTurno(), "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Limpiar();
                 }
                 LlenarGrid();
@@ -70,7 +87,7 @@ namespace Interfaz.Registros
 
             catch (Exception ex)
             {
-                DevComponents.DotNetBar.MessageBoxEx.Show(ex.Message);
+                MessageBoxEx.Show(ex.Message);
             }
         }
 
@@ -89,19 +106,20 @@ namespace Interfaz.Registros
             dt = T.Listar(valor);
             try
             {
-                dtgvTurno.Rows.Clear();
-                for (int x = 0; x < dt.Rows.Count; x++)
-                {
-                    dtgvTurno.Rows.Add(dt.Rows[x][0]);
-                    dtgvTurno.Rows[x].Cells[0].Value = dt.Rows[x][0].ToString();
-                    dtgvTurno.Rows[x].Cells[1].Value = dt.Rows[x][1].ToString();
-                    dtgvTurno.Rows[x].Cells[2].Value = dt.Rows[x][2].ToString();
-                }
+                //for (int x = 0; x < dt.Rows.Count; x++)
+                //{
+                //    dtgvTurno.Rows.Add(dt.Rows[x][0]);
+                //    dtgvTurno.Rows[x].Cells[0].Value = dt.Rows[x][0].ToString();
+                //    dtgvTurno.Rows[x].Cells[1].Value = dt.Rows[x][1].ToString();
+                //    dtgvTurno.Rows[x].Cells[2].Value = dt.Rows[x][2].ToString();
+                //}
+                dtgvTurno.DataSource = dt;
+                dtgvTurno.Columns[2].Visible = false;
                 dtgvTurno.ClearSelection();
             }
             catch (Exception ex)
             {
-                DevComponents.DotNetBar.MessageBoxEx.Show(ex.Message, "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBoxEx.Show(ex.Message, "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         private void Limpiar()
@@ -109,6 +127,16 @@ namespace Interfaz.Registros
             txtabreviacion.Clear();
             txtturno.Clear();
             txtabreviacion.Focus();
+            cbHoraComida.Checked = false;
+            cbestado.SelectedIndex = 0;
+            dtpFinHEnt.Value = new DateTime(2018, 10, 11, 00, 00, 00);
+            dtpFinHSal.Value = new DateTime(2018, 10, 11, 00, 00, 00);
+            dtpHorafin.Value = new DateTime(2018, 10, 11, 00, 00, 00);
+            dtpHorainicio.Value = new DateTime(2018, 10, 11, 00, 00, 00);
+            dtpIniciohent.Value = new DateTime(2018, 10, 11, 00, 00, 00);
+            dtpInicioHsal.Value = new DateTime(2018, 10, 11, 00, 00, 00);
+            nupDuracion.Value = 0;
+
         }
 
         private void btneditar_Click(object sender, EventArgs e)
@@ -119,16 +147,25 @@ namespace Interfaz.Registros
                 txtabreviacion.Text = dtgvTurno.CurrentRow.Cells[0].Value.ToString();
                 txtabreviacion.Enabled = false;
                 txtturno.Text = dtgvTurno.CurrentRow.Cells[1].Value.ToString();
+                nupDuracion.Value = Convert.ToInt32(dtgvTurno.CurrentRow.Cells[3].Value);
+                cbHoraComida.Checked = Convert.ToBoolean(dtgvTurno.CurrentRow.Cells["H_COMIDA"].Value);
+                dtpHorainicio.Value = Convert.ToDateTime((dtgvTurno.CurrentRow.Cells["HORA_INICIO"].Value.ToString()));
+                dtpHorafin.Value = Convert.ToDateTime(dtgvTurno.CurrentRow.Cells["HORA_FIN"].Value.ToString());
+                dtpIniciohent.Value = Convert.ToDateTime(dtgvTurno.CurrentRow.Cells["Inicio Entrada"].Value.ToString());
+                dtpFinHEnt.Value = Convert.ToDateTime(dtgvTurno.CurrentRow.Cells["Fin Entrada"].Value.ToString());
+                dtpInicioHsal.Value = Convert.ToDateTime(dtgvTurno.CurrentRow.Cells["Inicio Salida"].Value.ToString());
+                dtpFinHSal.Value = Convert.ToDateTime(dtgvTurno.CurrentRow.Cells["Fin Salida"].Value.ToString());
                 Program.Evento = 1;
             }
             else
             {
-                DevComponents.DotNetBar.MessageBoxEx.Show("Seleccione un registro!", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBoxEx.Show("Seleccione un registro!", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
         private void frmTurno_Load(object sender, EventArgs e)
         {
+            Limpiar();
             Program.Evento = 0;
             LlenarGrid();
             txtabreviacion.Focus();

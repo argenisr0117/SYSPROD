@@ -35,7 +35,17 @@
             this.lbSysOutputInfo = new System.Windows.Forms.ListBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.dispositivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cONECTARToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dESCONECTARToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dESCARGARREGISTROSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bORRARREGISTROSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aSISTENCIADIARIAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hISTORIALDEASISTENCIAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eMPLEADOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mANTEMPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aSIGNARTURNOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aSIGNARVACACIONESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.RealTime_Dtg = new System.Windows.Forms.DataGridView();
@@ -44,15 +54,12 @@
             this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.aSISTENCIADIARIAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cONECTARToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dESCONECTARToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dESCARGARREGISTROSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bORRARREGISTROSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.hISTORIALDEASISTENCIAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.Attlog_Dtg = new System.Windows.Forms.DataGridView();
+            this.aSIGNARPERMISOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aSIGNARINCAPACIDADESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mANTTURNOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RealTime_Dtg)).BeginInit();
@@ -83,7 +90,8 @@
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dispositivoToolStripMenuItem,
-            this.reportesToolStripMenuItem});
+            this.reportesToolStripMenuItem,
+            this.eMPLEADOToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 41);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(841, 24);
@@ -101,6 +109,37 @@
             this.dispositivoToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
             this.dispositivoToolStripMenuItem.Text = "DISPOSITIVO";
             // 
+            // cONECTARToolStripMenuItem
+            // 
+            this.cONECTARToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cONECTARToolStripMenuItem.Name = "cONECTARToolStripMenuItem";
+            this.cONECTARToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.cONECTARToolStripMenuItem.Text = "CONECTAR";
+            this.cONECTARToolStripMenuItem.Click += new System.EventHandler(this.cONECTARToolStripMenuItem_Click);
+            // 
+            // dESCONECTARToolStripMenuItem
+            // 
+            this.dESCONECTARToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dESCONECTARToolStripMenuItem.Name = "dESCONECTARToolStripMenuItem";
+            this.dESCONECTARToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.dESCONECTARToolStripMenuItem.Text = "DESCONECTAR";
+            this.dESCONECTARToolStripMenuItem.Click += new System.EventHandler(this.dESCONECTARToolStripMenuItem_Click);
+            // 
+            // dESCARGARREGISTROSToolStripMenuItem
+            // 
+            this.dESCARGARREGISTROSToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dESCARGARREGISTROSToolStripMenuItem.Name = "dESCARGARREGISTROSToolStripMenuItem";
+            this.dESCARGARREGISTROSToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.dESCARGARREGISTROSToolStripMenuItem.Text = "DESCARGAR REGISTROS";
+            this.dESCARGARREGISTROSToolStripMenuItem.Click += new System.EventHandler(this.dESCARGARREGISTROSToolStripMenuItem_Click);
+            // 
+            // bORRARREGISTROSToolStripMenuItem
+            // 
+            this.bORRARREGISTROSToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bORRARREGISTROSToolStripMenuItem.Name = "bORRARREGISTROSToolStripMenuItem";
+            this.bORRARREGISTROSToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.bORRARREGISTROSToolStripMenuItem.Text = "BORRAR REGISTROS";
+            // 
             // reportesToolStripMenuItem
             // 
             this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -109,6 +148,54 @@
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
             this.reportesToolStripMenuItem.Text = "REPORTES";
+            // 
+            // aSISTENCIADIARIAToolStripMenuItem
+            // 
+            this.aSISTENCIADIARIAToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aSISTENCIADIARIAToolStripMenuItem.Name = "aSISTENCIADIARIAToolStripMenuItem";
+            this.aSISTENCIADIARIAToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.aSISTENCIADIARIAToolStripMenuItem.Text = "ASISTENCIA DIARIA";
+            // 
+            // hISTORIALDEASISTENCIAToolStripMenuItem
+            // 
+            this.hISTORIALDEASISTENCIAToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hISTORIALDEASISTENCIAToolStripMenuItem.Name = "hISTORIALDEASISTENCIAToolStripMenuItem";
+            this.hISTORIALDEASISTENCIAToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.hISTORIALDEASISTENCIAToolStripMenuItem.Text = "HISTORIAL DE ASISTENCIA";
+            // 
+            // eMPLEADOToolStripMenuItem
+            // 
+            this.eMPLEADOToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mANTEMPToolStripMenuItem,
+            this.mANTTURNOToolStripMenuItem,
+            this.aSIGNARTURNOToolStripMenuItem,
+            this.aSIGNARVACACIONESToolStripMenuItem,
+            this.aSIGNARPERMISOSToolStripMenuItem,
+            this.aSIGNARINCAPACIDADESToolStripMenuItem});
+            this.eMPLEADOToolStripMenuItem.Name = "eMPLEADOToolStripMenuItem";
+            this.eMPLEADOToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
+            this.eMPLEADOToolStripMenuItem.Text = "EMPLEADO";
+            // 
+            // mANTEMPToolStripMenuItem
+            // 
+            this.mANTEMPToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mANTEMPToolStripMenuItem.Name = "mANTEMPToolStripMenuItem";
+            this.mANTEMPToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
+            this.mANTEMPToolStripMenuItem.Text = "MANT. EMP";
+            // 
+            // aSIGNARTURNOToolStripMenuItem
+            // 
+            this.aSIGNARTURNOToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aSIGNARTURNOToolStripMenuItem.Name = "aSIGNARTURNOToolStripMenuItem";
+            this.aSIGNARTURNOToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
+            this.aSIGNARTURNOToolStripMenuItem.Text = "ASIGNAR TURNO";
+            // 
+            // aSIGNARVACACIONESToolStripMenuItem
+            // 
+            this.aSIGNARVACACIONESToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aSIGNARVACACIONESToolStripMenuItem.Name = "aSIGNARVACACIONESToolStripMenuItem";
+            this.aSIGNARVACACIONESToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
+            this.aSIGNARVACACIONESToolStripMenuItem.Text = "ASIGNAR VACACIONES";
             // 
             // label4
             // 
@@ -200,51 +287,6 @@
             this.label2.TabIndex = 50;
             this.label2.Text = "PONCHE EN TIEMPO REAL";
             // 
-            // aSISTENCIADIARIAToolStripMenuItem
-            // 
-            this.aSISTENCIADIARIAToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aSISTENCIADIARIAToolStripMenuItem.Name = "aSISTENCIADIARIAToolStripMenuItem";
-            this.aSISTENCIADIARIAToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
-            this.aSISTENCIADIARIAToolStripMenuItem.Text = "ASISTENCIA DIARIA";
-            // 
-            // cONECTARToolStripMenuItem
-            // 
-            this.cONECTARToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cONECTARToolStripMenuItem.Name = "cONECTARToolStripMenuItem";
-            this.cONECTARToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.cONECTARToolStripMenuItem.Text = "CONECTAR";
-            this.cONECTARToolStripMenuItem.Click += new System.EventHandler(this.cONECTARToolStripMenuItem_Click);
-            // 
-            // dESCONECTARToolStripMenuItem
-            // 
-            this.dESCONECTARToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dESCONECTARToolStripMenuItem.Name = "dESCONECTARToolStripMenuItem";
-            this.dESCONECTARToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.dESCONECTARToolStripMenuItem.Text = "DESCONECTAR";
-            this.dESCONECTARToolStripMenuItem.Click += new System.EventHandler(this.dESCONECTARToolStripMenuItem_Click);
-            // 
-            // dESCARGARREGISTROSToolStripMenuItem
-            // 
-            this.dESCARGARREGISTROSToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dESCARGARREGISTROSToolStripMenuItem.Name = "dESCARGARREGISTROSToolStripMenuItem";
-            this.dESCARGARREGISTROSToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.dESCARGARREGISTROSToolStripMenuItem.Text = "DESCARGAR REGISTROS";
-            this.dESCARGARREGISTROSToolStripMenuItem.Click += new System.EventHandler(this.dESCARGARREGISTROSToolStripMenuItem_Click);
-            // 
-            // bORRARREGISTROSToolStripMenuItem
-            // 
-            this.bORRARREGISTROSToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bORRARREGISTROSToolStripMenuItem.Name = "bORRARREGISTROSToolStripMenuItem";
-            this.bORRARREGISTROSToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.bORRARREGISTROSToolStripMenuItem.Text = "BORRAR REGISTROS";
-            // 
-            // hISTORIALDEASISTENCIAToolStripMenuItem
-            // 
-            this.hISTORIALDEASISTENCIAToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hISTORIALDEASISTENCIAToolStripMenuItem.Name = "hISTORIALDEASISTENCIAToolStripMenuItem";
-            this.hISTORIALDEASISTENCIAToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
-            this.hISTORIALDEASISTENCIAToolStripMenuItem.Text = "HISTORIAL DE ASISTENCIA";
-            // 
             // shapeContainer1
             // 
             this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
@@ -285,6 +327,24 @@
             this.Attlog_Dtg.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Attlog_Dtg.Size = new System.Drawing.Size(613, 241);
             this.Attlog_Dtg.TabIndex = 52;
+            // 
+            // aSIGNARPERMISOSToolStripMenuItem
+            // 
+            this.aSIGNARPERMISOSToolStripMenuItem.Name = "aSIGNARPERMISOSToolStripMenuItem";
+            this.aSIGNARPERMISOSToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
+            this.aSIGNARPERMISOSToolStripMenuItem.Text = "ASIGNAR PERMISOS";
+            // 
+            // aSIGNARINCAPACIDADESToolStripMenuItem
+            // 
+            this.aSIGNARINCAPACIDADESToolStripMenuItem.Name = "aSIGNARINCAPACIDADESToolStripMenuItem";
+            this.aSIGNARINCAPACIDADESToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
+            this.aSIGNARINCAPACIDADESToolStripMenuItem.Text = "ASIGNAR INCAPACIDADES";
+            // 
+            // mANTTURNOToolStripMenuItem
+            // 
+            this.mANTTURNOToolStripMenuItem.Name = "mANTTURNOToolStripMenuItem";
+            this.mANTTURNOToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
+            this.mANTTURNOToolStripMenuItem.Text = "MANT. TURNO";
             // 
             // frmPonche
             // 
@@ -343,5 +403,12 @@
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
         private System.Windows.Forms.DataGridView Attlog_Dtg;
+        private System.Windows.Forms.ToolStripMenuItem eMPLEADOToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mANTEMPToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aSIGNARTURNOToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aSIGNARVACACIONESToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aSIGNARPERMISOSToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aSIGNARINCAPACIDADESToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mANTTURNOToolStripMenuItem;
     }
 }

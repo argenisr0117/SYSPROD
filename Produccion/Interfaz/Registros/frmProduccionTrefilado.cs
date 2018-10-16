@@ -78,6 +78,33 @@ namespace Interfaz.Registros
                 this.txtPesoBruto.Text = res.ToString();
             }
         }
+
+        //public void SetText(string text)
+        //{
+        //    // InvokeRequired required compares the thread ID of the
+        //    // calling thread to the thread ID of the creating thread.
+        //    // If these threads are different, it returns true.
+        //    if (this.txtPesoBruto.InvokeRequired)
+        //    {
+        //        SetTextCallback d = new SetTextCallback(SetText);
+        //        this.Invoke(d, new object[] { text });
+        //    }
+        //    else
+        //    {
+        //        //var doubleArray = Regex.Split(text, @"[^0-9\.]+")
+        //        //.Where(c => c != "." && c.Trim() != "");
+        //        //string result = Regex.Replace(text, @"[^\d]+[^\.]$", "");
+        //        string result = Regex.Replace(text, "[^0-9*.]", "");
+        //        //string result = Regex.Replace(text, @"^[0-9]*\.?[0-9]*$", "");
+        //        //text =(text.Trim(new Char[] { 'G', 'S', 'U', '+', 'l','b','.', ' ' }));
+        //        //double var = Convert.ToDouble(result);
+        //        // MessageBox.Show(result);
+        //        // int num = (int)Convert.ToInt32(result);
+        //        // MessageBox.Show(num.ToString());
+        //        //decimal res =decimal.Truncate(Convert.ToDecimal(result));
+        //        this.txtPesoBruto.Text = result;
+        //    }
+        //}
         private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
             try
@@ -96,6 +123,39 @@ namespace Interfaz.Registros
 
         }
 
+        //private void puertoSerial()
+        //{
+        //    try
+        //    {
+        //        if (serialPort1.IsOpen)
+        //        {
+        //            serialPort1.Close();
+        //        }
+        //        DataTable dt = new DataTable();
+        //        string[] ports = SerialPort.GetPortNames();
+        //        dt = PT.Configuracion_Puerto("Galv");
+        //        for (int x = 0; x < dt.Rows.Count; x++)
+        //        {
+        //            serialPort1.PortName = dt.Rows[x][1].ToString();
+        //            serialPort1.BaudRate = Convert.ToInt32(dt.Rows[x][2]);
+        //        }
+        //        if (ports.Contains(serialPort1.PortName))
+        //        {
+        //            serialPort1.Open();
+        //            serialPort1.NewLine = "\r";  //para que termine la linea;
+        //        }
+        //        if (timer1.Enabled == false)
+        //        {
+        //            timer1.Enabled = true;
+        //        }
+
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBoxEx.Show(ex.Message, "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //    }
+        //}
         private void puertoSerial()
         {
             if (serialPort1.IsOpen)
@@ -892,6 +952,30 @@ namespace Interfaz.Registros
                 return;
             }
 
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            //try
+            //{
+            //    SerialPort sp = new SerialPort();
+            //    if (!serialPort1.IsOpen)
+            //    {
+            //        serialPort1.Open();
+            //    }
+            //    else
+            //    {
+            //        byte[] code = { 0x05 }; //codigo para que la balanza envie el peso
+            //                                //string code1 = code.ToString("X2");
+            //                                //code1 = "0" + code1;
+            //        serialPort1.Write(code, 0, code.Length);
+            //        //Console.WriteLine(code1);
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    timer1.Enabled = false;
+            //}
         }
     }
 }

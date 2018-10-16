@@ -106,8 +106,10 @@ namespace Interfaz
             System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("es-DO");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Registros.frmPonche());
-            //Application.Run(new Login());
+            //Application.Run(new Registros.frmPonche());
+            Application.Run(new Login());
+            //Application.Run(new Registros.frmAsignarTurno());
+            //Application.Run(new Registros.frmAttControl());
         }
     }
 }

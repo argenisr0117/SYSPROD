@@ -510,3 +510,5 @@ C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Interop.
 C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interop.zkemkeeper.dll
 C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.csproj.ResolveComReference.cache
 C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmPonche.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmAsignarTurno.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmAttControl.resources

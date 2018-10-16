@@ -94,6 +94,7 @@
             this.lbTotalProd = new System.Windows.Forms.Label();
             this.dtgvProduccion = new System.Windows.Forms.DataGridView();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabregistro.SuspendLayout();
@@ -978,6 +979,11 @@
             this.serialPort1.PortName = "COM3";
             this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // frmProduccionTrefilado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -1072,5 +1078,6 @@
         private System.Windows.Forms.DateTimePicker dtpdesde;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button btnReimprimir;
+        private System.Windows.Forms.Timer timer1;
     }
 }

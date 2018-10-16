@@ -62,6 +62,10 @@ namespace Interfaz.Registros
                         bORRARREGISTROSToolStripMenuItem.Enabled = false;
                     }
                 }
+                else
+                {
+                    MessageBoxEx.Show("No existe dispositivo al cual conectarse..", "SysProd", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
                 Cursor = Cursors.Default;
             }
             catch (Exception ex)
