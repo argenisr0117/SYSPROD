@@ -36,8 +36,16 @@ namespace Intermedia
         DateTime Mhorasal;
         DateTime Mdesde;
         DateTime Mhasta;
+        DateTime Mfecha;
         int Midhora;
+        int Mpin;
+        int Mid;
 
+        public DateTime Fecha
+        {
+            get { return Mfecha; }
+            set { Mfecha = value; }
+        }
         public DateTime HoraEnt
         {
             get { return Mhoraent; }
@@ -72,6 +80,16 @@ namespace Intermedia
         {
             get { return Midhora; }
             set { Midhora = value; }
+        }
+        public int Id
+        {
+            get { return Mid; }
+            set { Mid = value; }
+        }
+        public int Pin
+        {
+            get { return Mpin; }
+            set { Mpin = value; }
         }
         public string Empresa
         {
@@ -239,6 +257,18 @@ namespace Intermedia
             return dt = M.Listado("listado_operador_ayu", lst);
 
         }
+        public string RegistrarDailyAtt()
+        {
+            string mensaje = "";
+            List<clsParametros> lst = new List<clsParametros>();
+            //lst.Add(new clsParametros("@msj", "", SqlDbType.VarChar, ParameterDirection.Output, 50));
+            lst.Add(new clsParametros("@fecha", Mfecha));
+            lst.Add(new clsParametros("@iddpto", Middpto));
+            M.EjecutarSP("reg_daily_att", ref lst);
+            //mensaje = lst[4].Valor.ToString();
+
+            return mensaje;
+        }
         public string ActivarEmpleado()
         {
             string mensaje = "";
@@ -260,6 +290,18 @@ namespace Intermedia
             lst.Add(new clsParametros("@msj", "", SqlDbType.VarChar, ParameterDirection.Output, 50));
             lst.Add(new clsParametros("@idreghora", Midhora));
             M.EjecutarSP("eliminar_reg_hora_extra", ref lst);
+            mensaje = lst[0].Valor.ToString();
+
+            return mensaje;
+        }
+
+        public string EliminarRegAttControl()
+        {
+            string mensaje = "";
+            List<clsParametros> lst = new List<clsParametros>();
+            lst.Add(new clsParametros("@msj", "", SqlDbType.VarChar, ParameterDirection.Output, 50));
+            lst.Add(new clsParametros("@id", Mid));
+            M.EjecutarSP("eliminar_reg_attcontrol", ref lst);
             mensaje = lst[0].Valor.ToString();
 
             return mensaje;
@@ -298,6 +340,7 @@ namespace Intermedia
             lst.Add(new clsParametros("@mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 50));
             lst.Add(new clsParametros("@empresa", Mempresa));
             lst.Add(new clsParametros("@cargo", Mcargo));
+            lst.Add(new clsParametros("@pin", Mpin));
             M.EjecutarSP("registrar_empleado", ref lst);
             mensaje = lst[6].Valor.ToString();
             return mensaje;
@@ -316,6 +359,7 @@ namespace Intermedia
             lst.Add(new clsParametros("@mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 50));
             lst.Add(new clsParametros("@empresa", Mempresa));
             lst.Add(new clsParametros("@cargo", Mcargo));
+            lst.Add(new clsParametros("@pin", Mpin));
             M.EjecutarSP("actualizar_empleado", ref lst);
             mensaje = lst[6].Valor.ToString();
             return mensaje;

@@ -463,7 +463,7 @@
             this.btnRegHoras.Name = "btnRegHoras";
             this.btnRegHoras.Size = new System.Drawing.Size(156, 112);
             this.btnRegHoras.TabIndex = 13;
-            this.btnRegHoras.Text = "Registro Horas Extras";
+            this.btnRegHoras.Text = "Control de Asistencia";
             this.btnRegHoras.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnRegHoras.UseVisualStyleBackColor = false;
             this.btnRegHoras.Click += new System.EventHandler(this.btnRegHoras_Click);

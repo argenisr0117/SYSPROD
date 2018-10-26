@@ -205,11 +205,13 @@ namespace Interfaz.Registros
             chbIncapacidad.Checked = false;
             chbInasistencia.Checked = false;
             chbPermiso.Checked = false;
+            lbeditar.Visible = false;
         }
         private void btnEditar_Click(object sender, EventArgs e)
         {
             if (dtgvHorasExtra.SelectedRows.Count > 0)
             {
+                lbeditar.Visible = true;
                 Idhora = Convert.ToInt32(dtgvHorasExtra.CurrentRow.Cells[0].Value);
                 cmbDpto.SelectedValue = dtgvHorasExtra.CurrentRow.Cells[9].Value.ToString();
                 cmbEmpleado.Text = dtgvHorasExtra.CurrentRow.Cells[1].Value.ToString();

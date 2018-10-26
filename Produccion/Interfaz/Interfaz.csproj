@@ -220,6 +220,12 @@
     <Compile Include="Consultas\frmcProductosDpto.Designer.cs">
       <DependentUpon>frmcProductosDpto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Consultas\frmcHoraExtra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmcHoraExtra.Designer.cs">
+      <DependentUpon>frmcHoraExtra.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controles\comboboxar.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -315,6 +321,12 @@
     </Compile>
     <Compile Include="Registros\frmControlCalidad.Designer.cs">
       <DependentUpon>frmControlCalidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\frmDiasFeriados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\frmDiasFeriados.Designer.cs">
+      <DependentUpon>frmDiasFeriados.cs</DependentUpon>
     </Compile>
     <Compile Include="Registros\frmEditarInvPuas.cs">
       <SubType>Form</SubType>
@@ -572,6 +584,9 @@
     <EmbeddedResource Include="Consultas\frmcProductosDpto.resx">
       <DependentUpon>frmcProductosDpto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\frmcHoraExtra.resx">
+      <DependentUpon>frmcHoraExtra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controles\textboxceros.resx">
       <DependentUpon>textboxceros.cs</DependentUpon>
     </EmbeddedResource>
@@ -606,6 +621,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registros\frmControlCalidad.resx">
       <DependentUpon>frmControlCalidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros\frmDiasFeriados.resx">
+      <DependentUpon>frmDiasFeriados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registros\frmEditarInvPuas.resx">
       <DependentUpon>frmEditarInvPuas.cs</DependentUpon>
@@ -888,6 +906,22 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\timeline.png" />
+    <None Include="Resources\fingerprint-scanner.png" />
+    <None Include="Resources\calendar.png" />
+    <None Include="Resources\wall-calendar.png" />
+    <None Include="Resources\document.png" />
+    <None Include="Resources\file.png" />
+    <None Include="Resources\file %281%29.png" />
+    <None Include="Resources\power.png" />
+    <None Include="Resources\power-button.png" />
+    <None Include="Resources\tap.png" />
+    <None Include="Resources\hospital.png" />
+    <None Include="Resources\settings %281%29.png" />
+    <None Include="Resources\time %281%29.png" />
+    <None Include="Resources\history.png" />
+    <None Include="Resources\time.png" />
+    <None Include="Resources\hired.png" />
     <None Include="Resources\clock.png" />
     <None Include="Resources\repairing.png" />
     <None Include="Resources\technics.png" />

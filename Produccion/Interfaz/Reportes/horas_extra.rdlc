@@ -76,8 +76,8 @@
 &amp; "" &amp; IIf((Fields!FERIADO.Value),"F","") &amp; "" &amp; IIf(Fields!HORA_TRA.Value&lt;=0,"",Replace(Fields!HORA_TRA.Value,",",".")) &amp; "" &amp; IIf(Fields!HE_NOCTURNA.Value&lt;=0,"",Variables!slash.Value &amp; "" &amp; Replace(Fields!HE_NOCTURNA.Value,",","."))</Value>
                               <Style>
                                 <FontSize>=IIf(((ReportItems!HORA_TRA.Value).ToString().Contains("/") And (ReportItems!HORA_TRA.Value).ToString().Contains(".")),"7pt","8pt")</FontSize>
-                                <FontWeight>=IIf(Fields!CORRIDO.Value=true,"SemiBold",IIf(Fields!FERIADO.Value=true,"SemiBold",IIf(Fields!VACACIONES.Value=true,"SemiBold",IIf(Fields!INASISTENCIA.Value=true,"SemiBold",IIf(Fields!INCAPACIDAD.Value=true,"SemiBold",IIf(Fields!INASISTENCIA.Value=true,"SemiBold","Default"))))))</FontWeight>
-                                <Color>=IIf(Fields!CORRIDO.Value=true,"Chocolate",IIf(Fields!FERIADO.Value=true,"Maroon",IIf(Fields!VACACIONES.Value=true,"DarkBlue",IIf(Fields!INASISTENCIA.Value=true,"Red",IIf(Fields!INCAPACIDAD.Value=true,"DarkGreen","Black")))))</Color>
+                                <FontWeight>=IIf(Fields!CORRIDO.Value=true,"Bold",IIf(Fields!FERIADO.Value=true,"Bold",IIf(Fields!VACACIONES.Value=true,"Bold",IIf(Fields!INASISTENCIA.Value=true,"Bold",IIf(Fields!INCAPACIDAD.Value=true,"Bold",IIf(Fields!PERMISO.Value=true,"Bold",IIf(Fields!INASISTENCIA.Value=true,"Bold","Default")))))))</FontWeight>
+                                <Color>=IIf(Fields!CORRIDO.Value=true,"Chocolate",IIf(Fields!FERIADO.Value=true,"Maroon",IIf(Fields!VACACIONES.Value=true,"DarkBlue",IIf(Fields!PERMISO.Value=true,"Purple",IIf(Fields!INASISTENCIA.Value=true,"Red",IIf(Fields!INCAPACIDAD.Value=true,"DarkGreen","Black"))))))</Color>
                                 <Language>es-DO</Language>
                               </Style>
                             </TextRun>
@@ -537,6 +537,12 @@ TRABAJADAS</Value>
             <TablixColumn>
               <Width>0.92265in</Width>
             </TablixColumn>
+            <TablixColumn>
+              <Width>0.17502in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>0.92265in</Width>
+            </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
@@ -668,6 +674,71 @@ TRABAJADAS</Value>
                     </Textbox>
                   </CellContents>
                 </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox5">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox5</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>Purple</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox10">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>PERMISO</Value>
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox10</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
               </TablixCells>
             </TablixRow>
             <TablixRow>
@@ -786,6 +857,70 @@ TRABAJADAS</Value>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox31</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox7">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox7</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox12">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox12</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -934,12 +1069,78 @@ TRABAJADAS</Value>
                     </Textbox>
                   </CellContents>
                 </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox9">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox9</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox14">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox14</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
               </TablixCells>
             </TablixRow>
           </TablixRows>
         </TablixBody>
         <TablixColumnHierarchy>
           <TablixMembers>
+            <TablixMember />
+            <TablixMember />
             <TablixMember />
             <TablixMember />
             <TablixMember />
@@ -956,7 +1157,7 @@ TRABAJADAS</Value>
         <Top>0.8425in</Top>
         <Left>0.125in</Left>
         <Height>0.75in</Height>
-        <Width>2.06474in</Width>
+        <Width>3.16241in</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -983,8 +1184,8 @@ TRABAJADAS</Value>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>0.8425in</Top>
-        <Left>2.29042in</Left>
+        <Top>0.85292in</Top>
+        <Left>3.39954in</Left>
         <Height>0.25in</Height>
         <Width>1.12733in</Width>
         <ZIndex>2</ZIndex>
@@ -1000,9 +1201,9 @@ TRABAJADAS</Value>
       </Textbox>
       <Line Name="Line4">
         <Top>1.10292in</Top>
-        <Left>3.42583in</Left>
+        <Left>4.60291in</Left>
         <Height>0in</Height>
-        <Width>7.27778in</Width>
+        <Width>6.1007in</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>
@@ -1012,9 +1213,9 @@ TRABAJADAS</Value>
       </Line>
       <Line Name="Line5">
         <Top>1.29042in</Top>
-        <Left>3.41775in</Left>
+        <Left>4.60291in</Left>
         <Height>0in</Height>
-        <Width>7.28586in</Width>
+        <Width>6.1007in</Width>
         <ZIndex>4</ZIndex>
         <Style>
           <Border>
@@ -1024,9 +1225,9 @@ TRABAJADAS</Value>
       </Line>
       <Line Name="Line6">
         <Top>1.47854in</Top>
-        <Left>3.41775in</Left>
+        <Left>4.60291in</Left>
         <Height>0in</Height>
-        <Width>7.28586in</Width>
+        <Width>6.1007in</Width>
         <ZIndex>5</ZIndex>
         <Style>
           <Border>

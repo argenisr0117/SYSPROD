@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using DevComponents.DotNetBar.Metro;
 using DevComponents.DotNetBar;
 using Intermedia;
+using System.Drawing;
 namespace Interfaz.Registros
 {
     public partial class frmAsignarTurno : MetroForm
@@ -49,11 +50,28 @@ namespace Interfaz.Registros
         {
 
             T.Iddpto = cmbDpto2.SelectedValue.ToString();
-
+            dtgvHorasExtra.Columns.Clear();
             DataTable dt = T.ObtenerAsignacionTurno();
             dtgvHorasExtra.DataSource = null;
             dtgvHorasExtra.DataSource = dt;
             dtgvHorasExtra.Columns[0].Visible = false;
+            dtgvHorasExtra.Columns[5].Visible = false;
+            dtgvHorasExtra.Columns[1].ReadOnly = true;
+            dtgvHorasExtra.Columns[1].SortMode = DataGridViewColumnSortMode.NotSortable;
+            dtgvHorasExtra.Columns[2].ReadOnly = true;
+            DataGridViewComboBoxCell bc = new DataGridViewComboBoxCell();
+            bc.DataSource = T.Listar(true);
+            bc.DisplayMember = "ID_TURNO";
+            bc.ValueMember = "ID_TURNO";
+            DataGridViewColumn cc = new DataGridViewColumn(bc);
+            cc.HeaderText = "ID_TURNO";
+            cc.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dtgvHorasExtra.Columns.Add(cc);
+            dtgvHorasExtra.ColumnHeadersDefaultCellStyle.Font = new Font(dtgvHorasExtra.ColumnHeadersDefaultCellStyle.Font, FontStyle.Bold);
+            foreach (DataGridViewRow item in dtgvHorasExtra.Rows)
+            {
+                item.Cells[6].Value = item.Cells[2].Value;
+            }
             dtgvHorasExtra.ClearSelection();
         }
         private void ComboD()
@@ -132,17 +150,28 @@ namespace Interfaz.Registros
         {
             chFinsemana.Checked = false;
             chSemana.Checked = false;
+            dtgvHorasExtra.Enabled = true;
+            btnEliminar.Enabled = true;
+            btnEditar.Enabled = true;
+            btnRegistrar.Text = "REGISTRAR";
+            cmbDpto2.Enabled = true;
         }
         private void btnEditar_Click(object sender, EventArgs e)
         {
             if (dtgvHorasExtra.SelectedRows.Count > 0)
             {
+                cmbDpto.Text = cmbDpto2.Text;
+                cmbDpto2.Enabled = false;
+                btnRegistrar.Text = "GUARDAR";
+                btnEditar.Enabled = false;
+                btnEliminar.Enabled = false;
                 Id = Convert.ToInt32(dtgvHorasExtra.CurrentRow.Cells[0].Value);
                 cmbEmpleado.Text = dtgvHorasExtra.CurrentRow.Cells[1].Value.ToString();
                 cmbTurno.SelectedValue = dtgvHorasExtra.CurrentRow.Cells[2].Value.ToString();
                 chSemana.Checked = Convert.ToBoolean(dtgvHorasExtra.CurrentRow.Cells[3].Value);
                 chFinsemana.Checked = Convert.ToBoolean(dtgvHorasExtra.CurrentRow.Cells[4].Value);
                 editar = 1;
+                dtgvHorasExtra.Enabled = false;
             }
         }
 
@@ -177,6 +206,20 @@ namespace Interfaz.Registros
                         MessageBoxEx.Show("Ha ocurrido un error.", "SysProd", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
+            }
+        }
+
+        private void dtgvHorasExtra_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            T.Id = Convert.ToInt32(dtgvHorasExtra.CurrentRow.Cells[0].Value);
+            T.Semana = Convert.ToBoolean(dtgvHorasExtra.CurrentRow.Cells[3].Value);
+            T.FinSemana = Convert.ToBoolean(dtgvHorasExtra.CurrentRow.Cells[4].Value);
+            T.IdEmpleado = dtgvHorasExtra.CurrentRow.Cells[5].Value.ToString();
+            T.Idturno = dtgvHorasExtra.CurrentRow.Cells[6].Value.ToString();
+            T.RegistrarAsignacionTurno();
+            foreach (DataGridViewRow item in dtgvHorasExtra.Rows)
+            {
+                item.Cells[2].Value = item.Cells[6].Value;
             }
         }
     }

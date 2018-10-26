@@ -46,6 +46,10 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.nupDuracion = new System.Windows.Forms.NumericUpDown();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtturno = new Interfaz.Controles.textbox(this.components);
+            this.txtabreviacion = new Interfaz.Controles.textbox(this.components);
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.cbestado = new System.Windows.Forms.ComboBox();
             this.dtgvTurno = new System.Windows.Forms.DataGridView();
@@ -58,14 +62,11 @@
             this.dtpFinHSal = new System.Windows.Forms.DateTimePicker();
             this.dtpInicioHsal = new System.Windows.Forms.DateTimePicker();
             this.cbHoraComida = new System.Windows.Forms.CheckBox();
-            this.nupDuracion = new System.Windows.Forms.NumericUpDown();
             this.dtpIniciohent = new System.Windows.Forms.DateTimePicker();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txtturno = new Interfaz.Controles.textbox(this.components);
-            this.txtabreviacion = new Interfaz.Controles.textbox(this.components);
+            this.cbAmanecida = new System.Windows.Forms.CheckBox();
+            ((System.ComponentModel.ISupportInitialize)(this.nupDuracion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvTurno)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nupDuracion)).BeginInit();
             this.SuspendLayout();
             // 
             // btneditar
@@ -77,11 +78,11 @@
             this.btneditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btneditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btneditar.ForeColor = System.Drawing.Color.Black;
-            this.btneditar.Location = new System.Drawing.Point(392, 278);
+            this.btneditar.Location = new System.Drawing.Point(392, 281);
             this.btneditar.Name = "btneditar";
-            this.btneditar.Size = new System.Drawing.Size(68, 32);
+            this.btneditar.Size = new System.Drawing.Size(78, 42);
             this.btneditar.TabIndex = 11;
-            this.btneditar.Text = "Editar";
+            this.btneditar.Text = "EDITAR";
             this.toolTip1.SetToolTip(this.btneditar, "Editar");
             this.btneditar.UseVisualStyleBackColor = false;
             this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
@@ -95,11 +96,11 @@
             this.btnsalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnsalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnsalir.ForeColor = System.Drawing.Color.Black;
-            this.btnsalir.Location = new System.Drawing.Point(392, 355);
+            this.btnsalir.Location = new System.Drawing.Point(392, 382);
             this.btnsalir.Name = "btnsalir";
-            this.btnsalir.Size = new System.Drawing.Size(68, 32);
+            this.btnsalir.Size = new System.Drawing.Size(78, 42);
             this.btnsalir.TabIndex = 13;
-            this.btnsalir.Text = "Salir";
+            this.btnsalir.Text = "SALIR";
             this.toolTip1.SetToolTip(this.btnsalir, "Salir");
             this.btnsalir.UseVisualStyleBackColor = false;
             this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
@@ -113,11 +114,11 @@
             this.btnactivar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnactivar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnactivar.ForeColor = System.Drawing.Color.Black;
-            this.btnactivar.Location = new System.Drawing.Point(392, 317);
+            this.btnactivar.Location = new System.Drawing.Point(392, 331);
             this.btnactivar.Name = "btnactivar";
-            this.btnactivar.Size = new System.Drawing.Size(68, 32);
+            this.btnactivar.Size = new System.Drawing.Size(78, 42);
             this.btnactivar.TabIndex = 12;
-            this.btnactivar.Text = "Act/Dact";
+            this.btnactivar.Text = "ACT/DACT";
             this.toolTip1.SetToolTip(this.btnactivar, "Activar/Desactivar");
             this.btnactivar.UseVisualStyleBackColor = false;
             this.btnactivar.Click += new System.EventHandler(this.btnactivar_Click);
@@ -131,11 +132,11 @@
             this.btnregistrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnregistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnregistrar.ForeColor = System.Drawing.Color.Black;
-            this.btnregistrar.Location = new System.Drawing.Point(392, 240);
+            this.btnregistrar.Location = new System.Drawing.Point(392, 233);
             this.btnregistrar.Name = "btnregistrar";
-            this.btnregistrar.Size = new System.Drawing.Size(68, 32);
+            this.btnregistrar.Size = new System.Drawing.Size(78, 42);
             this.btnregistrar.TabIndex = 10;
-            this.btnregistrar.Text = "Registrar";
+            this.btnregistrar.Text = "REGISTRAR";
             this.toolTip1.SetToolTip(this.btnregistrar, "Registrar");
             this.btnregistrar.UseVisualStyleBackColor = false;
             this.btnregistrar.Click += new System.EventHandler(this.btnregistrar_Click);
@@ -144,13 +145,13 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(97, 39);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 15);
+            this.label2.Size = new System.Drawing.Size(54, 13);
             this.label2.TabIndex = 13;
-            this.label2.Text = "Nombre";
+            this.label2.Text = "NOMBRE";
             this.toolTip1.SetToolTip(this.label2, "Turno");
             // 
             // label1
@@ -158,13 +159,13 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(7, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 15);
+            this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 11;
-            this.label1.Text = "Turno";
+            this.label1.Text = "TURNO";
             this.toolTip1.SetToolTip(this.label1, "Abreviación");
             // 
             // label3
@@ -172,13 +173,13 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(7, 94);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 15);
+            this.label3.Size = new System.Drawing.Size(74, 13);
             this.label3.TabIndex = 47;
-            this.label3.Text = "Hora Inicio";
+            this.label3.Text = "HORA INICIO";
             this.toolTip1.SetToolTip(this.label3, "Abreviación");
             // 
             // label7
@@ -186,13 +187,13 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.White;
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(97, 94);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(54, 15);
+            this.label7.Size = new System.Drawing.Size(58, 13);
             this.label7.TabIndex = 49;
-            this.label7.Text = "Hora Fin";
+            this.label7.Text = "HORA FIN";
             this.toolTip1.SetToolTip(this.label7, "Abreviación");
             // 
             // label8
@@ -200,13 +201,13 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.White;
             this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(277, 94);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(60, 15);
+            this.label8.Size = new System.Drawing.Size(60, 13);
             this.label8.TabIndex = 53;
-            this.label8.Text = "Fin H. Ent";
+            this.label8.Text = "FIN H. ENT";
             this.toolTip1.SetToolTip(this.label8, "Abreviación");
             // 
             // label9
@@ -214,13 +215,13 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.White;
             this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(187, 94);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(75, 15);
+            this.label9.Size = new System.Drawing.Size(76, 13);
             this.label9.TabIndex = 51;
-            this.label9.Text = "Inicio H. Ent.";
+            this.label9.Text = "INICIO H. ENT";
             this.toolTip1.SetToolTip(this.label9, "Abreviación");
             // 
             // label10
@@ -228,13 +229,13 @@
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.White;
             this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Black;
             this.label10.Location = new System.Drawing.Point(97, 158);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(63, 15);
+            this.label10.Size = new System.Drawing.Size(59, 13);
             this.label10.TabIndex = 57;
-            this.label10.Text = "Fin H. Sal.";
+            this.label10.Text = "FIN H. SAL";
             this.toolTip1.SetToolTip(this.label10, "Abreviación");
             // 
             // label11
@@ -242,27 +243,73 @@
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.White;
             this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
             this.label11.Location = new System.Drawing.Point(7, 158);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(75, 15);
+            this.label11.Size = new System.Drawing.Size(75, 13);
             this.label11.TabIndex = 55;
-            this.label11.Text = "Inicio H. Sal.";
+            this.label11.Text = "INICIO H. SAL";
             this.toolTip1.SetToolTip(this.label11, "Abreviación");
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.White;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Black;
             this.label12.Location = new System.Drawing.Point(319, 39);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(87, 15);
+            this.label12.Size = new System.Drawing.Size(94, 13);
             this.label12.TabIndex = 61;
-            this.label12.Text = "Duración (Hrs)";
+            this.label12.Text = "DURACIÓN (HRS)";
             this.toolTip1.SetToolTip(this.label12, "Turno");
+            // 
+            // nupDuracion
+            // 
+            this.nupDuracion.Location = new System.Drawing.Point(322, 58);
+            this.nupDuracion.Maximum = new decimal(new int[] {
+            24,
+            0,
+            0,
+            0});
+            this.nupDuracion.Name = "nupDuracion";
+            this.nupDuracion.Size = new System.Drawing.Size(73, 22);
+            this.nupDuracion.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.nupDuracion, "Cantidad de horas que dura el turno");
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.White;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.DarkRed;
+            this.label13.Location = new System.Drawing.Point(207, 168);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(115, 26);
+            this.label13.TabIndex = 62;
+            this.label13.Text = "Formato de 24 Horas\r\nEj: 01:00 pm -> 13:00";
+            this.toolTip1.SetToolTip(this.label13, "Turno");
+            // 
+            // txtturno
+            // 
+            this.txtturno.Location = new System.Drawing.Point(100, 58);
+            this.txtturno.Multiline = true;
+            this.txtturno.Name = "txtturno";
+            this.txtturno.Size = new System.Drawing.Size(204, 20);
+            this.txtturno.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.txtturno, "Turno");
+            this.txtturno.Validar = true;
+            // 
+            // txtabreviacion
+            // 
+            this.txtabreviacion.Location = new System.Drawing.Point(10, 58);
+            this.txtabreviacion.Multiline = true;
+            this.txtabreviacion.Name = "txtabreviacion";
+            this.txtabreviacion.Size = new System.Drawing.Size(84, 20);
+            this.txtabreviacion.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.txtabreviacion, "Abreviación");
+            this.txtabreviacion.Validar = true;
             // 
             // errorProvider1
             // 
@@ -294,7 +341,7 @@
             this.dtgvTurno.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dtgvTurno.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -303,20 +350,20 @@
             this.dtgvTurno.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.IndianRed;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtgvTurno.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dtgvTurno.Location = new System.Drawing.Point(10, 241);
+            this.dtgvTurno.Location = new System.Drawing.Point(10, 233);
             this.dtgvTurno.MultiSelect = false;
             this.dtgvTurno.Name = "dtgvTurno";
             this.dtgvTurno.ReadOnly = true;
             this.dtgvTurno.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dtgvTurno.RowHeadersWidth = 20;
             this.dtgvTurno.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvTurno.Size = new System.Drawing.Size(376, 262);
+            this.dtgvTurno.Size = new System.Drawing.Size(376, 270);
             this.dtgvTurno.TabIndex = 14;
             // 
             // label6
@@ -348,11 +395,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.DarkRed;
-            this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label4.Location = new System.Drawing.Point(133, -3);
+            this.label4.Location = new System.Drawing.Point(131, -5);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(202, 26);
+            this.label4.Size = new System.Drawing.Size(206, 30);
             this.label4.TabIndex = 44;
             this.label4.Text = "REGISTRO TURNOS";
             // 
@@ -363,7 +410,7 @@
             this.dtpHorainicio.Location = new System.Drawing.Point(10, 116);
             this.dtpHorainicio.Name = "dtpHorainicio";
             this.dtpHorainicio.ShowUpDown = true;
-            this.dtpHorainicio.Size = new System.Drawing.Size(72, 20);
+            this.dtpHorainicio.Size = new System.Drawing.Size(72, 22);
             this.dtpHorainicio.TabIndex = 3;
             // 
             // dtpHorafin
@@ -373,7 +420,7 @@
             this.dtpHorafin.Location = new System.Drawing.Point(100, 116);
             this.dtpHorafin.Name = "dtpHorafin";
             this.dtpHorafin.ShowUpDown = true;
-            this.dtpHorafin.Size = new System.Drawing.Size(72, 20);
+            this.dtpHorafin.Size = new System.Drawing.Size(72, 22);
             this.dtpHorafin.TabIndex = 4;
             // 
             // dtpFinHEnt
@@ -383,7 +430,7 @@
             this.dtpFinHEnt.Location = new System.Drawing.Point(280, 116);
             this.dtpFinHEnt.Name = "dtpFinHEnt";
             this.dtpFinHEnt.ShowUpDown = true;
-            this.dtpFinHEnt.Size = new System.Drawing.Size(72, 20);
+            this.dtpFinHEnt.Size = new System.Drawing.Size(72, 22);
             this.dtpFinHEnt.TabIndex = 6;
             // 
             // dtpFinHSal
@@ -393,7 +440,7 @@
             this.dtpFinHSal.Location = new System.Drawing.Point(100, 178);
             this.dtpFinHSal.Name = "dtpFinHSal";
             this.dtpFinHSal.ShowUpDown = true;
-            this.dtpFinHSal.Size = new System.Drawing.Size(72, 20);
+            this.dtpFinHSal.Size = new System.Drawing.Size(72, 22);
             this.dtpFinHSal.TabIndex = 8;
             // 
             // dtpInicioHsal
@@ -403,31 +450,19 @@
             this.dtpInicioHsal.Location = new System.Drawing.Point(10, 178);
             this.dtpInicioHsal.Name = "dtpInicioHsal";
             this.dtpInicioHsal.ShowUpDown = true;
-            this.dtpInicioHsal.Size = new System.Drawing.Size(72, 20);
+            this.dtpInicioHsal.Size = new System.Drawing.Size(72, 22);
             this.dtpInicioHsal.TabIndex = 7;
             // 
             // cbHoraComida
             // 
             this.cbHoraComida.AutoSize = true;
-            this.cbHoraComida.Location = new System.Drawing.Point(370, 116);
+            this.cbHoraComida.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbHoraComida.Location = new System.Drawing.Point(367, 101);
             this.cbHoraComida.Name = "cbHoraComida";
-            this.cbHoraComida.Size = new System.Drawing.Size(87, 17);
+            this.cbHoraComida.Size = new System.Drawing.Size(104, 17);
             this.cbHoraComida.TabIndex = 9;
-            this.cbHoraComida.Text = "Hora Comida";
+            this.cbHoraComida.Text = "HORA COMIDA";
             this.cbHoraComida.UseVisualStyleBackColor = true;
-            // 
-            // nupDuracion
-            // 
-            this.nupDuracion.Location = new System.Drawing.Point(322, 58);
-            this.nupDuracion.Maximum = new decimal(new int[] {
-            24,
-            0,
-            0,
-            0});
-            this.nupDuracion.Name = "nupDuracion";
-            this.nupDuracion.Size = new System.Drawing.Size(73, 20);
-            this.nupDuracion.TabIndex = 2;
-            this.toolTip1.SetToolTip(this.nupDuracion, "Cantidad de horas que dura el turno");
             // 
             // dtpIniciohent
             // 
@@ -436,47 +471,26 @@
             this.dtpIniciohent.Location = new System.Drawing.Point(190, 116);
             this.dtpIniciohent.Name = "dtpIniciohent";
             this.dtpIniciohent.ShowUpDown = true;
-            this.dtpIniciohent.Size = new System.Drawing.Size(72, 20);
+            this.dtpIniciohent.Size = new System.Drawing.Size(72, 22);
             this.dtpIniciohent.TabIndex = 5;
             // 
-            // label13
+            // cbAmanecida
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.White;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.DarkRed;
-            this.label13.Location = new System.Drawing.Point(207, 168);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(145, 30);
-            this.label13.TabIndex = 62;
-            this.label13.Text = "Formato de 24 Horas\r\nEj: 01:00 pm -> 13:00";
-            this.toolTip1.SetToolTip(this.label13, "Turno");
-            // 
-            // txtturno
-            // 
-            this.txtturno.Location = new System.Drawing.Point(100, 58);
-            this.txtturno.Multiline = true;
-            this.txtturno.Name = "txtturno";
-            this.txtturno.Size = new System.Drawing.Size(204, 20);
-            this.txtturno.TabIndex = 1;
-            this.toolTip1.SetToolTip(this.txtturno, "Turno");
-            this.txtturno.Validar = true;
-            // 
-            // txtabreviacion
-            // 
-            this.txtabreviacion.Location = new System.Drawing.Point(10, 58);
-            this.txtabreviacion.Multiline = true;
-            this.txtabreviacion.Name = "txtabreviacion";
-            this.txtabreviacion.Size = new System.Drawing.Size(84, 20);
-            this.txtabreviacion.TabIndex = 0;
-            this.toolTip1.SetToolTip(this.txtabreviacion, "Abreviación");
-            this.txtabreviacion.Validar = true;
+            this.cbAmanecida.AutoSize = true;
+            this.cbAmanecida.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbAmanecida.Location = new System.Drawing.Point(367, 124);
+            this.cbAmanecida.Name = "cbAmanecida";
+            this.cbAmanecida.Size = new System.Drawing.Size(89, 17);
+            this.cbAmanecida.TabIndex = 63;
+            this.cbAmanecida.Text = "AMANECIDA";
+            this.cbAmanecida.UseVisualStyleBackColor = true;
             // 
             // frmTurno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(469, 515);
+            this.Controls.Add(this.cbAmanecida);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.dtpIniciohent);
             this.Controls.Add(this.label12);
@@ -507,6 +521,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -514,9 +529,9 @@
             this.Name = "frmTurno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmTurno_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.nupDuracion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvTurno)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nupDuracion)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -555,5 +570,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dtpIniciohent;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.CheckBox cbAmanecida;
     }
 }

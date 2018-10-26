@@ -4138,7 +4138,7 @@ namespace Interfaz
 
         #region  AttLogMng
 
-        public int sta_readAttLog(ListBox lblOutputInfo, DataTable dt_log)
+        public int sta_readAttLog(ListBox lblOutputInfo/*, DataTable dt_log*/)
         {
             if (GetConnectState() == false)
             {
@@ -4170,14 +4170,14 @@ namespace Interfaz
                     P.Date = Convert.ToDateTime(idwYear + "-" + idwMonth + "-" + idwDay + " " + idwHour + ":" + idwMinute + ":" + idwSecond);
                     P.VerifyMode = idwVerifyMode;
                     P.InsertAtteandance();
-                    DataRow dr = dt_log.NewRow();
-                    dr["Count"] = cont;
-                    dr["User ID"] = sdwEnrollNumber;
-                    dr["Verify Date"] = idwYear + "-" + idwMonth + "-" + idwDay + " " + idwHour + ":" + idwMinute + ":" + idwSecond;
-                    dr["Verify Type"] = idwVerifyMode;
-                    dr["Verify State"] = idwInOutMode;
-                    dr["WorkCode"] = idwWorkcode;
-                    dt_log.Rows.Add(dr);
+                    //DataRow dr = dt_log.NewRow();
+                    //dr["Count"] = cont;
+                    //dr["User ID"] = sdwEnrollNumber;
+                    //dr["Verify Date"] = idwYear + "-" + idwMonth + "-" + idwDay + " " + idwHour + ":" + idwMinute + ":" + idwSecond;
+                    //dr["Verify Type"] = idwVerifyMode;
+                    //dr["Verify State"] = idwInOutMode;
+                    //dr["WorkCode"] = idwWorkcode;
+                    //dt_log.Rows.Add(dr);
                     cont++;
                 }
                 ret = 1;
@@ -4194,7 +4194,7 @@ namespace Interfaz
                 }
                 else
                 {
-                    lblOutputInfo.Items.Add("No data from terminal returns!");
+                    lblOutputInfo.Items.Add("No hay datos que descargar!");
                 }
             }
 
@@ -4281,6 +4281,7 @@ namespace Interfaz
             {
                 axCZKEM1.RefreshData(GetMachineNumber());
                 ret = 1;
+                lblOutputInfo.Items.Add("Se han borrado los datos de registro..");
             }
             else
             {

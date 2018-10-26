@@ -40,18 +40,20 @@ namespace Interfaz.Registros
             string mensaje = "";
             try
             {
+                T.Idturno = txtabreviacion.Text;
+                T.Descripcion = txtturno.Text;
+                T.HoraComida = cbHoraComida.Checked;
+                T.InicioHent = dtpIniciohent.Value;
+                T.FinHent = dtpFinHEnt.Value;
+                T.InicioHsal = dtpInicioHsal.Value;
+                T.FinHsal = dtpFinHSal.Value;
+                T.HoraInicio = dtpHorainicio.Value;
+                T.HoraFin = dtpHorafin.Value;
+                T.Duracion = Convert.ToInt32(nupDuracion.Value);
+                T.Amanecida = cbAmanecida.Checked;
                 if (Program.Evento == 0)
                 {
-                    T.Idturno = txtabreviacion.Text;
-                    T.Descripcion = txtturno.Text;
-                    T.HoraComida = cbHoraComida.Checked;
-                    T.InicioHent = dtpIniciohent.Value;
-                    T.FinHent = dtpFinHEnt.Value;
-                    T.InicioHsal = dtpInicioHsal.Value;
-                    T.FinHsal = dtpFinHSal.Value;
-                    T.HoraInicio = dtpHorainicio.Value;
-                    T.HoraFin = dtpHorafin.Value;
-                    T.Duracion =Convert.ToInt32(nupDuracion.Value);
+
                     mensaje = T.RegistrarTurno();
                     if (mensaje == "Turno ya existe!")
                     {
@@ -65,21 +67,11 @@ namespace Interfaz.Registros
                 }
                 else
                 {
-                    T.Idturno = txtabreviacion.Text;
-                    T.Descripcion = txtturno.Text;
-                    T.HoraComida = cbHoraComida.Checked;
-                    T.InicioHent = dtpIniciohent.Value;
-                    T.FinHent = dtpFinHEnt.Value;
-                    T.InicioHsal = dtpInicioHsal.Value;
-                    T.FinHsal = dtpFinHSal.Value;
-                    T.HoraInicio = dtpHorainicio.Value;
-                    T.HoraFin = dtpHorafin.Value;
-                    T.Duracion = Convert.ToInt32(nupDuracion.Value);
                     MessageBoxEx.Show(T.ActualizarTurno(), "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Limpiar();
                 }
                 LlenarGrid();
-                btnregistrar.Text = "Registrar";
+                btnregistrar.Text = "REGISTRAR";
                 Program.Evento = 0;
                 txtabreviacion.Enabled = true;
                 txtabreviacion.Focus();
@@ -128,6 +120,7 @@ namespace Interfaz.Registros
             txtturno.Clear();
             txtabreviacion.Focus();
             cbHoraComida.Checked = false;
+            cbAmanecida.Checked = false;
             cbestado.SelectedIndex = 0;
             dtpFinHEnt.Value = new DateTime(2018, 10, 11, 00, 00, 00);
             dtpFinHSal.Value = new DateTime(2018, 10, 11, 00, 00, 00);
@@ -143,12 +136,13 @@ namespace Interfaz.Registros
         {
             if (dtgvTurno.SelectedRows.Count > 0)
             {
-                btnregistrar.Text = "Guardar";
+                btnregistrar.Text = "GUARDAR";
                 txtabreviacion.Text = dtgvTurno.CurrentRow.Cells[0].Value.ToString();
                 txtabreviacion.Enabled = false;
                 txtturno.Text = dtgvTurno.CurrentRow.Cells[1].Value.ToString();
                 nupDuracion.Value = Convert.ToInt32(dtgvTurno.CurrentRow.Cells[3].Value);
                 cbHoraComida.Checked = Convert.ToBoolean(dtgvTurno.CurrentRow.Cells["H_COMIDA"].Value);
+                cbAmanecida.Checked = Convert.ToBoolean(dtgvTurno.CurrentRow.Cells["AMANECIDA"].Value);
                 dtpHorainicio.Value = Convert.ToDateTime((dtgvTurno.CurrentRow.Cells["HORA_INICIO"].Value.ToString()));
                 dtpHorafin.Value = Convert.ToDateTime(dtgvTurno.CurrentRow.Cells["HORA_FIN"].Value.ToString());
                 dtpIniciohent.Value = Convert.ToDateTime(dtgvTurno.CurrentRow.Cells["Inicio Entrada"].Value.ToString());
@@ -184,21 +178,21 @@ namespace Interfaz.Registros
                     mensaje = T.ActivarTurno();
                     if (mensaje == "Desactivado!")
                     {
-                        DevComponents.DotNetBar.MessageBoxEx.Show(mensaje, "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBoxEx.Show(mensaje, "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
-                        DevComponents.DotNetBar.MessageBoxEx.Show(mensaje, "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBoxEx.Show(mensaje, "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
                 else
                 {
-                    DevComponents.DotNetBar.MessageBoxEx.Show("Seleccione un registro!", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBoxEx.Show("Seleccione un registro!", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             catch (Exception ex)
             {
-                DevComponents.DotNetBar.MessageBoxEx.Show("Error:" + ex.Message, "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBoxEx.Show("Error:" + ex.Message, "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             LlenarGrid();
         }

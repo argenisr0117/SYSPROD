@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPonche));
-            this.btnTCPConnect = new System.Windows.Forms.Button();
             this.lbSysOutputInfo = new System.Windows.Forms.ListBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.dispositivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,12 +38,15 @@
             this.dESCARGARREGISTROSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bORRARREGISTROSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aSISTENCIADIARIAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hISTORIALDEASISTENCIAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hORASREGISTRADASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eMPLEADOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mANTEMPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mANTTURNOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aSIGNARTURNOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aSIGNARVACACIONESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aSIGNARPERMISOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rEGISTROMANUALHORASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dIASFERIADOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.RealTime_Dtg = new System.Windows.Forms.DataGridView();
@@ -57,24 +58,20 @@
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.Attlog_Dtg = new System.Windows.Forms.DataGridView();
-            this.aSIGNARPERMISOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aSIGNARINCAPACIDADESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mANTTURNOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dtpHasta = new System.Windows.Forms.DateTimePicker();
+            this.btnCalcular = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cmbDpto = new System.Windows.Forms.ComboBox();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RealTime_Dtg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Attlog_Dtg)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnTCPConnect
-            // 
-            this.btnTCPConnect.Location = new System.Drawing.Point(12, 152);
-            this.btnTCPConnect.Name = "btnTCPConnect";
-            this.btnTCPConnect.Size = new System.Drawing.Size(104, 48);
-            this.btnTCPConnect.TabIndex = 16;
-            this.btnTCPConnect.Text = "CONECTAR";
-            this.btnTCPConnect.UseVisualStyleBackColor = true;
-            this.btnTCPConnect.Click += new System.EventHandler(this.btnTCPConnect_Click);
             // 
             // lbSysOutputInfo
             // 
@@ -105,13 +102,15 @@
             this.dESCONECTARToolStripMenuItem,
             this.dESCARGARREGISTROSToolStripMenuItem,
             this.bORRARREGISTROSToolStripMenuItem});
+            this.dispositivoToolStripMenuItem.Image = global::Interfaz.Properties.Resources.tap;
             this.dispositivoToolStripMenuItem.Name = "dispositivoToolStripMenuItem";
-            this.dispositivoToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
+            this.dispositivoToolStripMenuItem.Size = new System.Drawing.Size(103, 20);
             this.dispositivoToolStripMenuItem.Text = "DISPOSITIVO";
             // 
             // cONECTARToolStripMenuItem
             // 
             this.cONECTARToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cONECTARToolStripMenuItem.Image = global::Interfaz.Properties.Resources.power_button;
             this.cONECTARToolStripMenuItem.Name = "cONECTARToolStripMenuItem";
             this.cONECTARToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.cONECTARToolStripMenuItem.Text = "CONECTAR";
@@ -120,6 +119,7 @@
             // dESCONECTARToolStripMenuItem
             // 
             this.dESCONECTARToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dESCONECTARToolStripMenuItem.Image = global::Interfaz.Properties.Resources.power;
             this.dESCONECTARToolStripMenuItem.Name = "dESCONECTARToolStripMenuItem";
             this.dESCONECTARToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.dESCONECTARToolStripMenuItem.Text = "DESCONECTAR";
@@ -128,6 +128,7 @@
             // dESCARGARREGISTROSToolStripMenuItem
             // 
             this.dESCARGARREGISTROSToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dESCARGARREGISTROSToolStripMenuItem.Image = global::Interfaz.Properties.Resources.file__1_;
             this.dESCARGARREGISTROSToolStripMenuItem.Name = "dESCARGARREGISTROSToolStripMenuItem";
             this.dESCARGARREGISTROSToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.dESCARGARREGISTROSToolStripMenuItem.Text = "DESCARGAR REGISTROS";
@@ -136,32 +137,38 @@
             // bORRARREGISTROSToolStripMenuItem
             // 
             this.bORRARREGISTROSToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bORRARREGISTROSToolStripMenuItem.Image = global::Interfaz.Properties.Resources.file;
             this.bORRARREGISTROSToolStripMenuItem.Name = "bORRARREGISTROSToolStripMenuItem";
             this.bORRARREGISTROSToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.bORRARREGISTROSToolStripMenuItem.Text = "BORRAR REGISTROS";
+            this.bORRARREGISTROSToolStripMenuItem.Click += new System.EventHandler(this.bORRARREGISTROSToolStripMenuItem_Click);
             // 
             // reportesToolStripMenuItem
             // 
             this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aSISTENCIADIARIAToolStripMenuItem,
-            this.hISTORIALDEASISTENCIAToolStripMenuItem});
+            this.hISTORIALDEASISTENCIAToolStripMenuItem,
+            this.hORASREGISTRADASToolStripMenuItem});
+            this.reportesToolStripMenuItem.Image = global::Interfaz.Properties.Resources.Search_icon;
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
-            this.reportesToolStripMenuItem.Text = "REPORTES";
-            // 
-            // aSISTENCIADIARIAToolStripMenuItem
-            // 
-            this.aSISTENCIADIARIAToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aSISTENCIADIARIAToolStripMenuItem.Name = "aSISTENCIADIARIAToolStripMenuItem";
-            this.aSISTENCIADIARIAToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
-            this.aSISTENCIADIARIAToolStripMenuItem.Text = "ASISTENCIA DIARIA";
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(100, 20);
+            this.reportesToolStripMenuItem.Text = "CONSULTAS";
             // 
             // hISTORIALDEASISTENCIAToolStripMenuItem
             // 
             this.hISTORIALDEASISTENCIAToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hISTORIALDEASISTENCIAToolStripMenuItem.Image = global::Interfaz.Properties.Resources.fingerprint_scanner;
             this.hISTORIALDEASISTENCIAToolStripMenuItem.Name = "hISTORIALDEASISTENCIAToolStripMenuItem";
             this.hISTORIALDEASISTENCIAToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
             this.hISTORIALDEASISTENCIAToolStripMenuItem.Text = "HISTORIAL DE ASISTENCIA";
+            // 
+            // hORASREGISTRADASToolStripMenuItem
+            // 
+            this.hORASREGISTRADASToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hORASREGISTRADASToolStripMenuItem.Image = global::Interfaz.Properties.Resources.calendar;
+            this.hORASREGISTRADASToolStripMenuItem.Name = "hORASREGISTRADASToolStripMenuItem";
+            this.hORASREGISTRADASToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.hORASREGISTRADASToolStripMenuItem.Text = "HORAS REGISTRADAS";
+            this.hORASREGISTRADASToolStripMenuItem.Click += new System.EventHandler(this.hORASREGISTRADASToolStripMenuItem_Click);
             // 
             // eMPLEADOToolStripMenuItem
             // 
@@ -169,43 +176,78 @@
             this.mANTEMPToolStripMenuItem,
             this.mANTTURNOToolStripMenuItem,
             this.aSIGNARTURNOToolStripMenuItem,
-            this.aSIGNARVACACIONESToolStripMenuItem,
             this.aSIGNARPERMISOSToolStripMenuItem,
-            this.aSIGNARINCAPACIDADESToolStripMenuItem});
+            this.rEGISTROMANUALHORASToolStripMenuItem,
+            this.dIASFERIADOSToolStripMenuItem});
+            this.eMPLEADOToolStripMenuItem.Image = global::Interfaz.Properties.Resources.settings__1_;
             this.eMPLEADOToolStripMenuItem.Name = "eMPLEADOToolStripMenuItem";
-            this.eMPLEADOToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
-            this.eMPLEADOToolStripMenuItem.Text = "EMPLEADO";
+            this.eMPLEADOToolStripMenuItem.Size = new System.Drawing.Size(138, 20);
+            this.eMPLEADOToolStripMenuItem.Text = "MANTENIMIENTOS";
             // 
             // mANTEMPToolStripMenuItem
             // 
             this.mANTEMPToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mANTEMPToolStripMenuItem.Image = global::Interfaz.Properties.Resources.hired;
             this.mANTEMPToolStripMenuItem.Name = "mANTEMPToolStripMenuItem";
-            this.mANTEMPToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
-            this.mANTEMPToolStripMenuItem.Text = "MANT. EMP";
+            this.mANTEMPToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.mANTEMPToolStripMenuItem.Text = "EMPLEADO";
+            this.mANTEMPToolStripMenuItem.Click += new System.EventHandler(this.mANTEMPToolStripMenuItem_Click);
+            // 
+            // mANTTURNOToolStripMenuItem
+            // 
+            this.mANTTURNOToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mANTTURNOToolStripMenuItem.Image = global::Interfaz.Properties.Resources.history;
+            this.mANTTURNOToolStripMenuItem.Name = "mANTTURNOToolStripMenuItem";
+            this.mANTTURNOToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.mANTTURNOToolStripMenuItem.Text = "TURNO";
+            this.mANTTURNOToolStripMenuItem.Click += new System.EventHandler(this.mANTTURNOToolStripMenuItem_Click);
             // 
             // aSIGNARTURNOToolStripMenuItem
             // 
             this.aSIGNARTURNOToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aSIGNARTURNOToolStripMenuItem.Image = global::Interfaz.Properties.Resources.time__1_;
             this.aSIGNARTURNOToolStripMenuItem.Name = "aSIGNARTURNOToolStripMenuItem";
-            this.aSIGNARTURNOToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
+            this.aSIGNARTURNOToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
             this.aSIGNARTURNOToolStripMenuItem.Text = "ASIGNAR TURNO";
+            this.aSIGNARTURNOToolStripMenuItem.Click += new System.EventHandler(this.aSIGNARTURNOToolStripMenuItem_Click);
             // 
-            // aSIGNARVACACIONESToolStripMenuItem
+            // aSIGNARPERMISOSToolStripMenuItem
             // 
-            this.aSIGNARVACACIONESToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aSIGNARVACACIONESToolStripMenuItem.Name = "aSIGNARVACACIONESToolStripMenuItem";
-            this.aSIGNARVACACIONESToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
-            this.aSIGNARVACACIONESToolStripMenuItem.Text = "ASIGNAR VACACIONES";
+            this.aSIGNARPERMISOSToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aSIGNARPERMISOSToolStripMenuItem.Image = global::Interfaz.Properties.Resources.hospital;
+            this.aSIGNARPERMISOSToolStripMenuItem.Name = "aSIGNARPERMISOSToolStripMenuItem";
+            this.aSIGNARPERMISOSToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.aSIGNARPERMISOSToolStripMenuItem.Text = "ASIGNAR VAC, INC, PER, AUS";
+            this.aSIGNARPERMISOSToolStripMenuItem.ToolTipText = "ASIGNAR VACACIONES, INCAPACIDADES, PERMISOS, AUSENCIAS";
+            this.aSIGNARPERMISOSToolStripMenuItem.Click += new System.EventHandler(this.aSIGNARPERMISOSToolStripMenuItem_Click);
+            // 
+            // rEGISTROMANUALHORASToolStripMenuItem
+            // 
+            this.rEGISTROMANUALHORASToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rEGISTROMANUALHORASToolStripMenuItem.Image = global::Interfaz.Properties.Resources.timeline;
+            this.rEGISTROMANUALHORASToolStripMenuItem.Name = "rEGISTROMANUALHORASToolStripMenuItem";
+            this.rEGISTROMANUALHORASToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.rEGISTROMANUALHORASToolStripMenuItem.Text = "REGISTRO MANUAL HORAS";
+            this.rEGISTROMANUALHORASToolStripMenuItem.Click += new System.EventHandler(this.rEGISTROMANUALHORASToolStripMenuItem_Click);
+            // 
+            // dIASFERIADOSToolStripMenuItem
+            // 
+            this.dIASFERIADOSToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dIASFERIADOSToolStripMenuItem.Image = global::Interfaz.Properties.Resources.wall_calendar;
+            this.dIASFERIADOSToolStripMenuItem.Name = "dIASFERIADOSToolStripMenuItem";
+            this.dIASFERIADOSToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.dIASFERIADOSToolStripMenuItem.Text = "DIAS FERIADOS";
+            this.dIASFERIADOSToolStripMenuItem.Click += new System.EventHandler(this.dIASFERIADOSToolStripMenuItem_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.DarkRed;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label4.Location = new System.Drawing.Point(299, 9);
+            this.label4.Location = new System.Drawing.Point(285, 5);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(242, 25);
+            this.label4.Size = new System.Drawing.Size(271, 30);
             this.label4.TabIndex = 45;
             this.label4.Text = "CONTROL DE ASISTENCIA";
             // 
@@ -223,14 +265,6 @@
             this.RealTime_Dtg.AllowUserToAddRows = false;
             this.RealTime_Dtg.AllowUserToDeleteRows = false;
             this.RealTime_Dtg.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.RealTime_Dtg.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.RealTime_Dtg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.RealTime_Dtg.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.UserId,
@@ -268,22 +302,22 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkRed;
             this.label1.Location = new System.Drawing.Point(0, 327);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 13);
+            this.label1.Size = new System.Drawing.Size(139, 13);
             this.label1.TabIndex = 49;
             this.label1.Text = "ESTADO DEL DISPOSITIVO";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkRed;
             this.label2.Location = new System.Drawing.Point(407, 327);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(137, 13);
+            this.label2.Size = new System.Drawing.Size(144, 13);
             this.label2.TabIndex = 50;
             this.label2.Text = "PONCHE EN TIEMPO REAL";
             // 
@@ -310,47 +344,132 @@
             // 
             this.Attlog_Dtg.AllowUserToAddRows = false;
             this.Attlog_Dtg.AllowUserToDeleteRows = false;
+            this.Attlog_Dtg.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Attlog_Dtg.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Attlog_Dtg.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.Attlog_Dtg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Attlog_Dtg.Location = new System.Drawing.Point(214, 68);
+            this.Attlog_Dtg.Location = new System.Drawing.Point(410, 68);
             this.Attlog_Dtg.Name = "Attlog_Dtg";
             this.Attlog_Dtg.ReadOnly = true;
             this.Attlog_Dtg.RowHeadersWidth = 10;
             this.Attlog_Dtg.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Attlog_Dtg.Size = new System.Drawing.Size(613, 241);
+            this.Attlog_Dtg.Size = new System.Drawing.Size(417, 243);
             this.Attlog_Dtg.TabIndex = 52;
             // 
-            // aSIGNARPERMISOSToolStripMenuItem
+            // dtpFecha
             // 
-            this.aSIGNARPERMISOSToolStripMenuItem.Name = "aSIGNARPERMISOSToolStripMenuItem";
-            this.aSIGNARPERMISOSToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
-            this.aSIGNARPERMISOSToolStripMenuItem.Text = "ASIGNAR PERMISOS";
+            this.dtpFecha.CustomFormat = "dd/MM/yyyy";
+            this.dtpFecha.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFecha.Location = new System.Drawing.Point(54, 141);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(108, 25);
+            this.dtpFecha.TabIndex = 53;
             // 
-            // aSIGNARINCAPACIDADESToolStripMenuItem
+            // label3
             // 
-            this.aSIGNARINCAPACIDADESToolStripMenuItem.Name = "aSIGNARINCAPACIDADESToolStripMenuItem";
-            this.aSIGNARINCAPACIDADESToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
-            this.aSIGNARINCAPACIDADESToolStripMenuItem.Text = "ASIGNAR INCAPACIDADES";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DarkRed;
+            this.label3.Location = new System.Drawing.Point(58, 111);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(268, 15);
+            this.label3.TabIndex = 167;
+            this.label3.Text = "CALCULAR REGISTRO DE HORAS TRABAJADAS";
             // 
-            // mANTTURNOToolStripMenuItem
+            // label5
             // 
-            this.mANTTURNOToolStripMenuItem.Name = "mANTTURNOToolStripMenuItem";
-            this.mANTTURNOToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
-            this.mANTTURNOToolStripMenuItem.Text = "MANT. TURNO";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(6, 147);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(41, 13);
+            this.label5.TabIndex = 168;
+            this.label5.Text = "DESDE";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(228, 147);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(42, 13);
+            this.label6.TabIndex = 170;
+            this.label6.Text = "HASTA";
+            // 
+            // dtpHasta
+            // 
+            this.dtpHasta.CustomFormat = "dd/MM/yyyy";
+            this.dtpHasta.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpHasta.Location = new System.Drawing.Point(276, 141);
+            this.dtpHasta.Name = "dtpHasta";
+            this.dtpHasta.Size = new System.Drawing.Size(108, 25);
+            this.dtpHasta.TabIndex = 169;
+            // 
+            // btnCalcular
+            // 
+            this.btnCalcular.BackColor = System.Drawing.Color.White;
+            this.btnCalcular.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
+            this.btnCalcular.FlatAppearance.BorderSize = 2;
+            this.btnCalcular.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnCalcular.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnCalcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCalcular.ForeColor = System.Drawing.Color.Black;
+            this.btnCalcular.Image = global::Interfaz.Properties.Resources.save_icon;
+            this.btnCalcular.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCalcular.Location = new System.Drawing.Point(159, 238);
+            this.btnCalcular.Name = "btnCalcular";
+            this.btnCalcular.Size = new System.Drawing.Size(109, 51);
+            this.btnCalcular.TabIndex = 166;
+            this.btnCalcular.TabStop = false;
+            this.btnCalcular.Text = "CALCULAR";
+            this.btnCalcular.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCalcular.UseVisualStyleBackColor = false;
+            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.White;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(7, 188);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(98, 13);
+            this.label7.TabIndex = 171;
+            this.label7.Text = "DEPARTAMENTO:";
+            // 
+            // cmbDpto
+            // 
+            this.cmbDpto.BackColor = System.Drawing.Color.Gainsboro;
+            this.cmbDpto.DropDownHeight = 160;
+            this.cmbDpto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDpto.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbDpto.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbDpto.ForeColor = System.Drawing.Color.Black;
+            this.cmbDpto.FormattingEnabled = true;
+            this.cmbDpto.IntegralHeight = false;
+            this.cmbDpto.Location = new System.Drawing.Point(111, 182);
+            this.cmbDpto.MaxDropDownItems = 30;
+            this.cmbDpto.Name = "cmbDpto";
+            this.cmbDpto.Size = new System.Drawing.Size(273, 25);
+            this.cmbDpto.TabIndex = 172;
             // 
             // frmPonche
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(841, 534);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.cmbDpto);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.dtpHasta);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.btnCalcular);
+            this.Controls.Add(this.dtpFecha);
             this.Controls.Add(this.Attlog_Dtg);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -358,9 +477,9 @@
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lbSysOutputInfo);
-            this.Controls.Add(this.btnTCPConnect);
             this.Controls.Add(this.shapeContainer1);
             this.DoubleBuffered = true;
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
@@ -380,8 +499,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnTCPConnect;
         private System.Windows.Forms.ListBox lbSysOutputInfo;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem dispositivoToolStripMenuItem;
@@ -397,7 +514,6 @@
         private System.Windows.Forms.ToolStripMenuItem dESCONECTARToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dESCARGARREGISTROSToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bORRARREGISTROSToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aSISTENCIADIARIAToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hISTORIALDEASISTENCIAToolStripMenuItem;
         private System.Windows.Forms.Label label2;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
@@ -406,9 +522,19 @@
         private System.Windows.Forms.ToolStripMenuItem eMPLEADOToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mANTEMPToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aSIGNARTURNOToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aSIGNARVACACIONESToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aSIGNARPERMISOSToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aSIGNARINCAPACIDADESToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mANTTURNOToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rEGISTROMANUALHORASToolStripMenuItem;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.DateTimePicker dtpFecha;
+        private System.Windows.Forms.Button btnCalcular;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ToolStripMenuItem hORASREGISTRADASToolStripMenuItem;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DateTimePicker dtpHasta;
+        private System.Windows.Forms.ToolStripMenuItem dIASFERIADOSToolStripMenuItem;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cmbDpto;
     }
 }

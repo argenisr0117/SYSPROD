@@ -64,6 +64,7 @@ namespace Interfaz.Registros
             dtgvRegAttControl.DataSource = dt;
             dtgvRegAttControl.ClearSelection();
             dtgvRegAttControl.Columns[0].Visible = false;
+            dtgvRegAttControl.ColumnHeadersDefaultCellStyle.Font = new Font(dtgvRegAttControl.ColumnHeadersDefaultCellStyle.Font, FontStyle.Bold);
         }
         private void ComboD()
         {
@@ -110,7 +111,7 @@ namespace Interfaz.Registros
             try
             {
                 string msj = "";
-                if (dtpFechaInicio.Value >= dtpFechaFin.Value)
+                if (dtpFechaInicio.Value.Date > dtpFechaFin.Value.Date)
                 {
                     MessageBoxEx.Show("Fecha inicio no puede ser mayor que fecha final", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -174,15 +175,6 @@ namespace Interfaz.Registros
             Limpiar();
         }
 
-        private void cmbTurno_SelectedValueChanged(object sender, EventArgs e)
-        {
-            //if (cmbTurno.SelectedIndex > -1)
-            //{
-
-            //}
-
-        }
-
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             if (dtgvRegAttControl.SelectedRows.Count > 0)
@@ -191,8 +183,8 @@ namespace Interfaz.Registros
                 if (var == DialogResult.Yes)
                 {
                     string msj = "";
-                    E.Idhora = Convert.ToInt16(dtgvRegAttControl.CurrentRow.Cells[0].Value);
-                    msj = E.EliminarRegHoraExtra();
+                    E.Id = Convert.ToInt16(dtgvRegAttControl.CurrentRow.Cells[0].Value);
+                    msj = E.EliminarRegAttControl();
                     if (msj == "1")
                     {
                         MessageBoxEx.Show("Registro eliminado", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -18,6 +18,7 @@ namespace Intermedia
         string Middpto;
         string Midturno;
         string Mdescripcion;
+        string Mnombre;
         Boolean Mestado;
         string Mcampo = "ID_TURNO";
         string Mtabla = "TURNO";
@@ -27,11 +28,13 @@ namespace Intermedia
         DateTime MFinHent;
         DateTime MInicioHsal;
         DateTime MFinHsal;
+        DateTime Mfecha;
         bool MHoracomida;
         int MDuracion;
         string Midempleado;
         bool Msemana;
         bool MfinSemana;
+        bool Mamanecida;
         #endregion
 
         #region Properties
@@ -66,11 +69,21 @@ namespace Intermedia
             get { return Mdescripcion; }
             set { Mdescripcion = value; }
         }
+        public string Nombre
+        {
+            get { return Mnombre; }
+            set { Mnombre = value; }
+        }
 
         public bool Estado
         {
             get { return Mestado; }
             set { Mestado = value; }
+        }
+        public bool Amanecida
+        {
+            get { return Mamanecida; }
+            set { Mamanecida = value; }
         }
         public bool Semana
         {
@@ -93,6 +106,11 @@ namespace Intermedia
         {
             get { return MDuracion; }
             set { MDuracion = value; }
+        }
+        public DateTime Fecha
+        {
+            get { return Mfecha; }
+            set { Mfecha = value; }
         }
         public DateTime HoraInicio
         {
@@ -153,6 +171,34 @@ namespace Intermedia
             return mensaje;
         }
 
+        public string RegistrarDiasFeriados()
+        {
+            string mensaje = "";
+            List<clsParametros> lst = new List<clsParametros>();
+            lst.Add(new clsParametros("@msj", "", SqlDbType.VarChar, ParameterDirection.Output, 1));
+            lst.Add(new clsParametros("@nombre", Mnombre));
+            lst.Add(new clsParametros("@fecha", Mfecha));
+            M.EjecutarSP("reg_dias_feriados", ref lst);
+            mensaje = lst[0].Valor.ToString();
+            return mensaje;
+        }
+        public string EliminarDiasFeriados()
+        {
+            string mensaje = "";
+            List<clsParametros> lst = new List<clsParametros>();
+            lst.Add(new clsParametros("@msj", "", SqlDbType.VarChar, ParameterDirection.Output, 1));
+            lst.Add(new clsParametros("@id", Mid));
+            M.EjecutarSP("eliminar_dias_feriados", ref lst);
+            mensaje = lst[0].Valor.ToString();
+
+            return mensaje;
+        }
+        public DataTable ObtDiasFeriados()
+        {
+            DataTable dt = new DataTable();
+            List<clsParametros> lst = new List<clsParametros>();
+            return dt = M.Listado("Obt_dias_feriados", lst);
+        }
         public DataTable ObtRegAttControl()
         {
             DataTable dt = new DataTable();
@@ -160,6 +206,13 @@ namespace Intermedia
             lst.Add(new clsParametros("@iddpto", Middpto));
             lst.Add(new clsParametros("@typeid", Mtypeid));
             return dt = M.Listado("obt_reg_attcontrol", lst);
+        }
+
+        public DataTable ObtDailyAttendance()
+        {
+            DataTable dt = new DataTable();
+            List<clsParametros> lst = new List<clsParametros>();
+            return dt = M.Listado("obt_daily_attendance", lst);
         }
         #endregion
 
@@ -226,6 +279,7 @@ namespace Intermedia
             lst.Add(new clsParametros("@finhsal", MFinHsal));
             lst.Add(new clsParametros("@horacomida", MHoracomida));
             lst.Add(new clsParametros("@duracion", MDuracion));
+            lst.Add(new clsParametros("@amanecida", Mamanecida));
             M.EjecutarSP("registrar_turno", ref lst);
             mensaje = lst[0].Valor.ToString();
             return mensaje;
@@ -261,6 +315,7 @@ namespace Intermedia
             lst.Add(new clsParametros("@finhsal", MFinHsal));
             lst.Add(new clsParametros("@horacomida", MHoracomida));
             lst.Add(new clsParametros("@duracion", MDuracion));
+            lst.Add(new clsParametros("@amanecida", Mamanecida));
             M.EjecutarSP("actualizar_turno", ref lst);
             mensaje = lst[0].Valor.ToString();
             return mensaje;

@@ -41,7 +41,7 @@ namespace Interfaz
         {
             ObtenerHora();
             inactivo = inactivo + 1;
-            if (inactivo > 1200)
+            if (inactivo > 1500)
             {
                 Application.Exit();
             }
@@ -151,9 +151,9 @@ namespace Interfaz
                     frmMaquinasParadas obj = new frmMaquinasParadas();
                     obj.Show();
                 }
-                if (form == "frmHoraExtra")
+                if (form == "frmPonche")
                 {
-                    frmHoraExtra obj = new frmHoraExtra();
+                    frmPonche obj = new frmPonche();
                     obj.Show();
                 }
             }
@@ -261,7 +261,7 @@ namespace Interfaz
 
         private void btnRegHoras_Click(object sender, EventArgs e)
         {
-            form = "frmHoraExtra";
+            form = "frmPonche";
             AbrirForm(form);
         }
 

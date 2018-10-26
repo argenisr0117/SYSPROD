@@ -74,11 +74,11 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.White;
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(12, 118);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(49, 15);
+            this.label7.Size = new System.Drawing.Size(47, 13);
             this.label7.TabIndex = 62;
             this.label7.Text = "Destino";
             // 
@@ -109,11 +109,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.DarkRed;
-            this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label4.Location = new System.Drawing.Point(108, 9);
+            this.label4.Location = new System.Drawing.Point(114, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(214, 26);
+            this.label4.Size = new System.Drawing.Size(214, 30);
             this.label4.TabIndex = 59;
             this.label4.Text = "REGISTRO CLIENTES";
             // 
@@ -221,11 +221,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(12, 65);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 15);
+            this.label2.Size = new System.Drawing.Size(51, 13);
             this.label2.TabIndex = 54;
             this.label2.Text = "Nombre ";
             // 
@@ -234,11 +234,11 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(12, 91);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 15);
+            this.label1.Size = new System.Drawing.Size(81, 13);
             this.label1.TabIndex = 64;
             this.label1.Text = "Departamento";
             // 
@@ -282,21 +282,21 @@
             this.nombre.HeaderText = "Nombre";
             this.nombre.Name = "nombre";
             this.nombre.ReadOnly = true;
-            this.nombre.Width = 69;
+            this.nombre.Width = 73;
             // 
             // destino
             // 
             this.destino.HeaderText = "Destino";
             this.destino.Name = "destino";
             this.destino.ReadOnly = true;
-            this.destino.Width = 68;
+            this.destino.Width = 72;
             // 
             // departamento
             // 
             this.departamento.HeaderText = "Departamento";
             this.departamento.Name = "departamento";
             this.departamento.ReadOnly = true;
-            this.departamento.Width = 99;
+            this.departamento.Width = 106;
             // 
             // codigodpto
             // 
@@ -346,6 +346,7 @@
             this.Controls.Add(this.btnregistrar);
             this.Controls.Add(this.label2);
             this.DoubleBuffered = true;
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
