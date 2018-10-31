@@ -173,6 +173,17 @@ namespace Intermedia
             return dt = M.Listado("listado_empleado", lst);
 
         }
+        public DataTable ObtHistorialAsistencia()
+        {
+            DataTable dt = new DataTable();
+            List<clsParametros> lst = new List<clsParametros>();
+            lst.Add(new clsParametros("@desde", Mdesde));
+            lst.Add(new clsParametros("@hasta", Mhasta));
+            lst.Add(new clsParametros("@idempleado",Midempleado));
+            lst.Add(new clsParametros("@iddpto", Middpto));
+            return dt = M.Listado("obt_historial_asistencia", lst);
+
+        }
         public DataTable ObtRegistrosHorasExtras()
         {
             DataTable dt = new DataTable();

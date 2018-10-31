@@ -29,7 +29,7 @@ namespace Interfaz
         private void generalToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmReporte obj = new frmReporte();
-            dt1 = Pr.TotalProduccion("Acerados");
+            dt1 = Pr.TotalProduccion("Alambres Acerados");
             double acerado;
             double galvanizado;
             double recocido;
@@ -44,7 +44,7 @@ namespace Interfaz
             {
                 acerado = Convert.ToDouble(dt1.Rows[0]["Total"]);
             }
-            dt1 = Pr.TotalProduccion("Galvanizados");
+            dt1 = Pr.TotalProduccion("Alambres Galvanizados");
             if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
             {
                 galvanizado = 0.00;
@@ -53,7 +53,7 @@ namespace Interfaz
             {
                 galvanizado = Convert.ToDouble(dt1.Rows[0]["Total"]);
             }
-            dt1 = Pr.TotalProduccion("Recocidos");
+            dt1 = Pr.TotalProduccion("Alambres Recocidos");
             if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
             {
                 recocido = 0.00;
@@ -63,7 +63,7 @@ namespace Interfaz
                 recocido = Convert.ToDouble(dt1.Rows[0]["Total"]);
             }
 
-            dt = Pr.AnualTotalProduccion("Acerados");
+            dt = Pr.AnualTotalProduccion("Alambres Acerados");
             if (string.IsNullOrEmpty(dt.Rows[0]["Total"].ToString()))
             {
                 aceradoa = 0.00;
@@ -72,7 +72,7 @@ namespace Interfaz
             {
                 aceradoa = Convert.ToDouble(dt.Rows[0]["Total"]);
             }
-            dt = Pr.AnualTotalProduccion("Galvanizados");
+            dt = Pr.AnualTotalProduccion("Alambres Galvanizados");
             if (string.IsNullOrEmpty(dt.Rows[0]["Total"].ToString()))
             {
                 galvanizadoa = 0.00;
@@ -81,7 +81,7 @@ namespace Interfaz
             {
                 galvanizadoa = Convert.ToDouble(dt.Rows[0]["Total"]);
             }
-            dt = Pr.AnualTotalProduccion("Recocidos");
+            dt = Pr.AnualTotalProduccion("Alambres Recocidos");
             if (string.IsNullOrEmpty(dt.Rows[0]["Total"].ToString()))
             {
                 recocidoa = 0.00;
@@ -140,7 +140,7 @@ namespace Interfaz
         private void intermediosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmReporte obj = new frmReporte();
-            dt1 = Pr.TotalProduccion("Acerados");
+            dt1 = Pr.TotalProduccion("Alambres Acerados");
             double acerado;
             double galvanizado;
             double recocido;
@@ -155,7 +155,7 @@ namespace Interfaz
             {
                 acerado = Convert.ToDouble(dt1.Rows[0]["Total"]);
             }
-            dt1 = Pr.TotalProduccion("Galvanizados");
+            dt1 = Pr.TotalProduccion("Alambres Galvanizados");
             if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
             {
                 galvanizado = 0.00;
@@ -164,7 +164,7 @@ namespace Interfaz
             {
                 galvanizado = Convert.ToDouble(dt1.Rows[0]["Total"]);
             }
-            dt1 = Pr.TotalProduccion("Recocidos");
+            dt1 = Pr.TotalProduccion("Alambres Recocidos");
             if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
             {
                 recocido = 0.00;
@@ -174,7 +174,7 @@ namespace Interfaz
                 recocido = Convert.ToDouble(dt1.Rows[0]["Total"]);
             }
 
-            dt = Pr.AnualTotalProduccion("Acerados");
+            dt = Pr.AnualTotalProduccion("Alambres Acerados");
             if (string.IsNullOrEmpty(dt.Rows[0]["Total"].ToString()))
             {
                 aceradoa = 0.00;
@@ -183,7 +183,7 @@ namespace Interfaz
             {
                 aceradoa = Convert.ToDouble(dt.Rows[0]["Total"]);
             }
-            dt = Pr.AnualTotalProduccion("Galvanizados");
+            dt = Pr.AnualTotalProduccion("Alambres Galvanizados");
             if (string.IsNullOrEmpty(dt.Rows[0]["Total"].ToString()))
             {
                 galvanizadoa = 0.00;
@@ -192,7 +192,7 @@ namespace Interfaz
             {
                 galvanizadoa = Convert.ToDouble(dt.Rows[0]["Total"]);
             }
-            dt = Pr.AnualTotalProduccion("Recocidos");
+            dt = Pr.AnualTotalProduccion("Alambres Recocidos");
             if (string.IsNullOrEmpty(dt.Rows[0]["Total"].ToString()))
             {
                 recocidoa = 0.00;
@@ -227,7 +227,7 @@ namespace Interfaz
         private void terminadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmReporte obj = new frmReporte();
-            dt1 = Pr.TotalProduccion("Acerados");
+            dt1 = Pr.TotalProduccion("Alambres Acerados");
             double acerado;
             double galvanizado;
             double recocido;
@@ -242,7 +242,7 @@ namespace Interfaz
             {
                 acerado = Convert.ToDouble(dt1.Rows[0]["Total"]);
             }
-            dt1 = Pr.TotalProduccion("Galvanizados");
+            dt1 = Pr.TotalProduccion("Alambres Galvanizados");
             if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
             {
                 galvanizado = 0.00;
@@ -251,7 +251,7 @@ namespace Interfaz
             {
                 galvanizado = Convert.ToDouble(dt1.Rows[0]["Total"]);
             }
-            dt1 = Pr.TotalProduccion("Recocidos");
+            dt1 = Pr.TotalProduccion("Alambres Recocidos");
             if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
             {
                 recocido = 0.00;
@@ -261,7 +261,7 @@ namespace Interfaz
                 recocido = Convert.ToDouble(dt1.Rows[0]["Total"]);
             }
 
-            dt = Pr.AnualTotalProduccion("Acerados");
+            dt = Pr.AnualTotalProduccion("Alambres Acerados");
             if (string.IsNullOrEmpty(dt.Rows[0]["Total"].ToString()))
             {
                 aceradoa = 0.00;
@@ -270,7 +270,7 @@ namespace Interfaz
             {
                 aceradoa = Convert.ToDouble(dt.Rows[0]["Total"]);
             }
-            dt = Pr.AnualTotalProduccion("Galvanizados");
+            dt = Pr.AnualTotalProduccion("Alambres Galvanizados");
             if (string.IsNullOrEmpty(dt.Rows[0]["Total"].ToString()))
             {
                 galvanizadoa = 0.00;
@@ -279,7 +279,7 @@ namespace Interfaz
             {
                 galvanizadoa = Convert.ToDouble(dt.Rows[0]["Total"]);
             }
-            dt = Pr.AnualTotalProduccion("Recocidos");
+            dt = Pr.AnualTotalProduccion("Alambres Recocidos");
             if (string.IsNullOrEmpty(dt.Rows[0]["Total"].ToString()))
             {
                 recocidoa = 0.00;
@@ -314,7 +314,7 @@ namespace Interfaz
         private void lineaGalvanizadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmReporte obj = new frmReporte();
-            dt1 = Pr.TotalProduccion("Acerados");
+            dt1 = Pr.TotalProduccion("Alambres Acerados");
             double acerado;
             double galvanizado;
             double recocido;
@@ -329,7 +329,7 @@ namespace Interfaz
             {
                 acerado = Convert.ToDouble(dt1.Rows[0]["Total"]);
             }
-            dt1 = Pr.TotalProduccion("Galvanizados");
+            dt1 = Pr.TotalProduccion("Alambres Galvanizados");
             if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
             {
                 galvanizado = 0.00;
@@ -338,7 +338,7 @@ namespace Interfaz
             {
                 galvanizado = Convert.ToDouble(dt1.Rows[0]["Total"]);
             }
-            dt1 = Pr.TotalProduccion("Recocidos");
+            dt1 = Pr.TotalProduccion("Alambres Recocidos");
             if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
             {
                 recocido = 0.00;
@@ -348,7 +348,7 @@ namespace Interfaz
                 recocido = Convert.ToDouble(dt1.Rows[0]["Total"]);
             }
 
-            dt = Pr.AnualTotalProduccion("Acerados");
+            dt = Pr.AnualTotalProduccion("Alambres Acerados");
             if (string.IsNullOrEmpty(dt.Rows[0]["Total"].ToString()))
             {
                 aceradoa = 0.00;
@@ -357,7 +357,7 @@ namespace Interfaz
             {
                 aceradoa = Convert.ToDouble(dt.Rows[0]["Total"]);
             }
-            dt = Pr.AnualTotalProduccion("Galvanizados");
+            dt = Pr.AnualTotalProduccion("Alambres Galvanizados");
             if (string.IsNullOrEmpty(dt.Rows[0]["Total"].ToString()))
             {
                 galvanizadoa = 0.00;
@@ -366,7 +366,7 @@ namespace Interfaz
             {
                 galvanizadoa = Convert.ToDouble(dt.Rows[0]["Total"]);
             }
-            dt = Pr.AnualTotalProduccion("Recocidos");
+            dt = Pr.AnualTotalProduccion("Alambres Recocidos");
             if (string.IsNullOrEmpty(dt.Rows[0]["Total"].ToString()))
             {
                 recocidoa = 0.00;

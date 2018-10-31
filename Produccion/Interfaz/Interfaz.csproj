@@ -178,6 +178,12 @@
     <Compile Include="Consultas\frmcHistorialPacking.Designer.cs">
       <DependentUpon>frmcHistorialPacking.cs</DependentUpon>
     </Compile>
+    <Compile Include="Consultas\frmcHistorialAsistencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmcHistorialAsistencia.Designer.cs">
+      <DependentUpon>frmcHistorialAsistencia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consultas\frmcInfoMaquinaParada.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -274,7 +280,7 @@
     <Compile Include="PRODUCCIONDataSet.cs">
       <DependentUpon>PRODUCCIONDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="PRODUCCIONDataSet.Designer.cs">
+    <Compile Include="PRODUCCIONDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PRODUCCIONDataSet.xsd</DependentUpon>
@@ -563,6 +569,9 @@
     <EmbeddedResource Include="Consultas\frmcHistorialPacking.resx">
       <DependentUpon>frmcHistorialPacking.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\frmcHistorialAsistencia.resx">
+      <DependentUpon>frmcHistorialAsistencia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consultas\frmcInfoMaquinaParada.resx">
       <DependentUpon>frmcInfoMaquinaParada.cs</DependentUpon>
     </EmbeddedResource>
@@ -737,6 +746,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\filtrar_prod_resumido.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\historial_asistencia.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\horas_extra.rdlc">

@@ -160,6 +160,7 @@
             this.hISTORIALDEASISTENCIAToolStripMenuItem.Name = "hISTORIALDEASISTENCIAToolStripMenuItem";
             this.hISTORIALDEASISTENCIAToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
             this.hISTORIALDEASISTENCIAToolStripMenuItem.Text = "HISTORIAL DE ASISTENCIA";
+            this.hISTORIALDEASISTENCIAToolStripMenuItem.Click += new System.EventHandler(this.hISTORIALDEASISTENCIAToolStripMenuItem_Click);
             // 
             // hORASREGISTRADASToolStripMenuItem
             // 

@@ -103,6 +103,7 @@ namespace Interfaz.Registros
             //Att.sta_SetRTLogListBox(RealTimeEventListBox);
             Att.sta_SetRTLogDtg(RealTimeEventDtg);
             ComboD();
+            dispositivoToolStripMenuItem.Enabled = Program.congen;
         }
 
         private void cONECTARToolStripMenuItem_Click(object sender, EventArgs e)
@@ -247,13 +248,29 @@ namespace Interfaz.Registros
                     frmHoraExtra obj = new frmHoraExtra();
                     obj.Show();
                 }
+                if (form == "frmcHistorialAsistencia")
+                {
+                    Consultas.frmcHistorialAsistencia obj = new Consultas.frmcHistorialAsistencia();
+                    obj.Show();
+                }
+                if (form == "frmDiasFeriados")
+                {
+                    frmDiasFeriados obj = new frmDiasFeriados();
+                    obj.Show();
+                }
             }
           
         }
         private void dIASFERIADOSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmDiasFeriados obj = new frmDiasFeriados();
-            obj.Show();
+            form = "frmDiasFeriados";
+            AbrirForm(form);
+        }
+
+        private void hISTORIALDEASISTENCIAToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            form = "frmcHistorialAsistencia";
+            AbrirForm(form);
         }
     }
 }

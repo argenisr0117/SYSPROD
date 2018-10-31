@@ -23,6 +23,7 @@ namespace Interfaz
         public string Dpto { get; set; }
         public string Iddpto { get; set; }
         public string Idempresa { get; set; }
+        public string Idempleado { get; set; }
         public string Titulo { get; set; }
         public string Titulo1 { get; set; }
         public string Reporte { get; set; }
@@ -186,6 +187,10 @@ namespace Interfaz
             else if (Valor == 23)
             {
                 HorasExtras();
+            }
+            else if (Valor == 24)
+            {
+                HistorialAsistencia();
             }
         }
 
@@ -735,6 +740,29 @@ namespace Interfaz
             reportViewer1.LocalReport.DisplayName = Reporte;
             rds.Name = "DataSet1";
             rds.Value = (ds.Tables["obt_registros_horas_extras"]);
+            reportViewer1.LocalReport.DataSources.Clear();
+            reportViewer1.LocalReport.SetParameters(parametros);
+            lc.DataSources.Add(rds);
+            reportViewer1.ZoomPercent = 125;
+            this.reportViewer1.RefreshReport();
+        }
+        private void HistorialAsistencia()
+        {
+            ReportParameter[] parametros = new ReportParameter[2];
+            PRODUCCIONDataSet ds = new PRODUCCIONDataSet();
+            PRODUCCIONDataSetTableAdapters.obt_historial_asistenciaTableAdapter rgta = new PRODUCCIONDataSetTableAdapters.obt_historial_asistenciaTableAdapter();
+            reportViewer1.ProcessingMode = ProcessingMode.Local;
+            LocalReport lc = reportViewer1.LocalReport;
+            string ruta = "Reportes\\" + Nombre;
+            lc.ReportPath = ruta;
+
+            parametros[0] = new ReportParameter("Fechai", Fechai.ToShortDateString());
+            parametros[1] = new ReportParameter("Fechaf", Fechaf.ToShortDateString());
+            rgta.Fill(ds.obt_historial_asistencia, Fechai, Fechaf, Iddpto, Idempleado);
+            ReportDataSource rds = new ReportDataSource();
+            reportViewer1.LocalReport.DisplayName = Reporte;
+            rds.Name = "DataSet1";
+            rds.Value = (ds.Tables["obt_historial_asistencia"]);
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.SetParameters(parametros);
             lc.DataSources.Add(rds);

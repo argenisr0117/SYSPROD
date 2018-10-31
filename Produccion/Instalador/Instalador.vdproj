@@ -285,6 +285,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_91FE1C3E70ED491FBBAEE0E5714AC13F"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_96B18D5982C546599BAF879ED0215029"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -1640,6 +1646,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_91FE1C3E70ED491FBBAEE0E5714AC13F"
+            {
+            "SourcePath" = "8:..\\Interfaz\\Reportes\\historial_asistencia.rdlc"
+            "TargetName" = "8:historial_asistencia.rdlc"
+            "Tag" = "8:"
+            "Folder" = "8:_00DD0B03E441403CB4D3297F2511FE1C"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_96B18D5982C546599BAF879ED0215029"
             {
             "SourcePath" = "8:..\\Interfaz\\bin\\Debug\\Reportes\\incentivo_galvanizado.rdlc"
@@ -2347,7 +2373,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SYSPROD"
         "ProductCode" = "8:{4B6EFF15-2EC9-448E-92D6-9B133F235F14}"
-        "PackageCode" = "8:{0F2B8644-969D-4A54-850E-192C7B505856}"
+        "PackageCode" = "8:{7B091417-317C-4904-A876-F37237F839EC}"
         "UpgradeCode" = "8:{1F2619E1-0BC5-42FB-88F1-DDD754EAF1D1}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
