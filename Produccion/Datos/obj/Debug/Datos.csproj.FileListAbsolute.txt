@@ -19,6 +19,5 @@ C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Datos\obj\Debug\Datos.dll
 C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Datos\obj\Debug\Datos.pdb
 C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Datos\bin\Debug\Datos.dll
 C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Datos\bin\Debug\Datos.pdb
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
 C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Datos\obj\Debug\Datos.dll
 C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Datos\obj\Debug\Datos.pdb

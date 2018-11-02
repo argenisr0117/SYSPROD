@@ -67,6 +67,9 @@
             this.btnCalcular = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.cmbDpto = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cmbEmpleado = new System.Windows.Forms.ComboBox();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RealTime_Dtg)).BeginInit();
@@ -338,8 +341,8 @@
             this.lineShape1.Name = "lineShape1";
             this.lineShape1.X1 = -3;
             this.lineShape1.X2 = 844;
-            this.lineShape1.Y1 = 318;
-            this.lineShape1.Y2 = 318;
+            this.lineShape1.Y1 = 321;
+            this.lineShape1.Y2 = 321;
             // 
             // Attlog_Dtg
             // 
@@ -420,9 +423,9 @@
             this.btnCalcular.ForeColor = System.Drawing.Color.Black;
             this.btnCalcular.Image = global::Interfaz.Properties.Resources.save_icon;
             this.btnCalcular.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCalcular.Location = new System.Drawing.Point(159, 238);
+            this.btnCalcular.Location = new System.Drawing.Point(140, 253);
             this.btnCalcular.Name = "btnCalcular";
-            this.btnCalcular.Size = new System.Drawing.Size(109, 51);
+            this.btnCalcular.Size = new System.Drawing.Size(81, 58);
             this.btnCalcular.TabIndex = 166;
             this.btnCalcular.TabStop = false;
             this.btnCalcular.Text = "CALCULAR";
@@ -436,7 +439,7 @@
             this.label7.BackColor = System.Drawing.Color.White;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(7, 188);
+            this.label7.Location = new System.Drawing.Point(6, 188);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(98, 13);
             this.label7.TabIndex = 171;
@@ -457,12 +460,65 @@
             this.cmbDpto.Name = "cmbDpto";
             this.cmbDpto.Size = new System.Drawing.Size(273, 25);
             this.cmbDpto.TabIndex = 172;
+            this.cmbDpto.SelectedValueChanged += new System.EventHandler(this.cmbDpto_SelectedValueChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.White;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(6, 221);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(70, 13);
+            this.label9.TabIndex = 173;
+            this.label9.Text = "EMPLEADO:";
+            // 
+            // cmbEmpleado
+            // 
+            this.cmbEmpleado.BackColor = System.Drawing.Color.Gainsboro;
+            this.cmbEmpleado.DropDownHeight = 160;
+            this.cmbEmpleado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbEmpleado.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbEmpleado.ForeColor = System.Drawing.Color.Black;
+            this.cmbEmpleado.FormattingEnabled = true;
+            this.cmbEmpleado.IntegralHeight = false;
+            this.cmbEmpleado.Location = new System.Drawing.Point(111, 213);
+            this.cmbEmpleado.MaxDropDownItems = 30;
+            this.cmbEmpleado.Name = "cmbEmpleado";
+            this.cmbEmpleado.Size = new System.Drawing.Size(273, 25);
+            this.cmbEmpleado.TabIndex = 174;
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.BackColor = System.Drawing.Color.White;
+            this.btnLimpiar.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
+            this.btnLimpiar.FlatAppearance.BorderSize = 2;
+            this.btnLimpiar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnLimpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiar.ForeColor = System.Drawing.Color.Black;
+            this.btnLimpiar.Image = global::Interfaz.Properties.Resources.Clear_icon;
+            this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnLimpiar.Location = new System.Drawing.Point(260, 253);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(81, 58);
+            this.btnLimpiar.TabIndex = 175;
+            this.btnLimpiar.TabStop = false;
+            this.btnLimpiar.Text = "LIMPIAR";
+            this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // frmPonche
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(841, 534);
+            this.Controls.Add(this.btnLimpiar);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.cmbEmpleado);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.cmbDpto);
             this.Controls.Add(this.label6);
@@ -537,5 +593,8 @@
         private System.Windows.Forms.ToolStripMenuItem dIASFERIADOSToolStripMenuItem;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cmbDpto;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox cmbEmpleado;
+        private System.Windows.Forms.Button btnLimpiar;
     }
 }

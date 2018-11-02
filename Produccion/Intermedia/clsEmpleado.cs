@@ -275,6 +275,7 @@ namespace Intermedia
             //lst.Add(new clsParametros("@msj", "", SqlDbType.VarChar, ParameterDirection.Output, 50));
             lst.Add(new clsParametros("@fecha", Mfecha));
             lst.Add(new clsParametros("@iddpto", Middpto));
+            lst.Add(new clsParametros("@idempleado", Midempleado));
             M.EjecutarSP("reg_daily_att", ref lst);
             //mensaje = lst[4].Valor.ToString();
 

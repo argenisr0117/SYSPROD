@@ -71,6 +71,19 @@ namespace Interfaz.Registros
             }
         }
 
+        private void ComboE()
+        {
+            try
+            {
+                cmbEmpleado.DataSource = E.Listar(true);
+                cmbEmpleado.DisplayMember = "NOMBRE";
+                cmbEmpleado.ValueMember = "ID_EMPLEADO";
+            }
+            catch (Exception ex)
+            {
+                MessageBoxEx.Show(ex.Message);
+            }
+        }
         //public ListBox RealTimeEventListBox()
         //{
         //    ListBox dtg = lbRTOutputInfo;
@@ -103,7 +116,9 @@ namespace Interfaz.Registros
             //Att.sta_SetRTLogListBox(RealTimeEventListBox);
             Att.sta_SetRTLogDtg(RealTimeEventDtg);
             ComboD();
+            ComboE();
             dispositivoToolStripMenuItem.Enabled = Program.congen;
+            btnLimpiar_Click(e, e);
         }
 
         private void cONECTARToolStripMenuItem_Click(object sender, EventArgs e)
@@ -193,6 +208,14 @@ namespace Interfaz.Registros
                 {
                     E.Fecha = dtp;
                     E.Iddpto = cmbDpto.SelectedValue.ToString();
+                    if(cmbEmpleado.Text=="")
+                    {
+                        E.Idempleado = "";
+                    }
+                    else
+                    {
+                        E.Idempleado = cmbEmpleado.SelectedValue.ToString();
+                    }
                     E.RegistrarDailyAtt();
                 }
 
@@ -271,6 +294,18 @@ namespace Interfaz.Registros
         {
             form = "frmcHistorialAsistencia";
             AbrirForm(form);
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            cmbEmpleado.SelectedValue = "";
+        }
+
+        private void cmbDpto_SelectedValueChanged(object sender, EventArgs e)
+        {
+            E.Iddpto = cmbDpto.SelectedValue.ToString();
+            ComboE();
+            btnLimpiar_Click(e, e);
         }
     }
 }
