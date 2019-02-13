@@ -38,7 +38,8 @@ namespace Interfaz.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=COMPUTOS-PC;Initial Catalog=PRODUCCION;User Id=sa; Password=12345678")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=OLDSVR12,1433;Initial Catalog=PRODUCCION;User Id=sa; Password=1234567" +
+            "8")]
         public string PRODUCCIONConnectionString {
             get {
                 return ((string)(this["PRODUCCIONConnectionString"]));
