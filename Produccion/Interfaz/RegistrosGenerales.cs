@@ -136,5 +136,11 @@ namespace Interfaz
             Registros.frmEditarInvPuas obj = new Registros.frmEditarInvPuas();
             obj.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Registros.frmProductoClienteLongitud obj = new Registros.frmProductoClienteLongitud();
+            obj.ShowDialog();
+        }
     }
 }

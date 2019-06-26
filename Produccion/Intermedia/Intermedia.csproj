@@ -29,9 +29,28 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,6 +59,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsControlAlmacen.cs" />
+    <Compile Include="clsMonitoreoMaq.cs" />
     <Compile Include="clsCargo.cs" />
     <Compile Include="clsCategoria.cs" />
     <Compile Include="clsCliente.cs" />
@@ -51,12 +72,15 @@
     <Compile Include="clsIncentivos.cs" />
     <Compile Include="clsMaquina.cs" />
     <Compile Include="clsPeso_Canasto.cs" />
+    <Compile Include="clsPonche.cs" />
     <Compile Include="clsProduccion.cs" />
+    <Compile Include="clsPruebasCald.cs" />
     <Compile Include="clsProduccionIndM.cs" />
     <Compile Include="clsProduccionGalv.cs" />
     <Compile Include="clsOrdenProduccion.cs" />
     <Compile Include="clsProduccionTref.cs" />
     <Compile Include="clsProducto.cs" />
+    <Compile Include="clsRecepAlambron.cs" />
     <Compile Include="clsTurno.cs" />
     <Compile Include="clsUnidad.cs" />
     <Compile Include="clsUsuario.cs" />

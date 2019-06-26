@@ -45,6 +45,7 @@ namespace Interfaz.Registros
                 valor = false;
             }
             DataTable dt = new DataTable();
+            E.Iddpto = "";
             dt = E.Listar(valor);
             try
             {
@@ -53,14 +54,15 @@ namespace Interfaz.Registros
                 {
                     dtgvEmpleado.Rows.Add(dt.Rows[x][0]);
                     dtgvEmpleado.Rows[x].Cells[0].Value = dt.Rows[x][0].ToString();
-                    dtgvEmpleado.Rows[x].Cells[1].Value = dt.Rows[x][1].ToString();
-                    dtgvEmpleado.Rows[x].Cells[2].Value = dt.Rows[x][2].ToString();
+                    dtgvEmpleado.Rows[x].Cells[1].Value = dt.Rows[x][2].ToString();
+                    dtgvEmpleado.Rows[x].Cells[2].Value = dt.Rows[x][1].ToString();
                     dtgvEmpleado.Rows[x].Cells[3].Value = dt.Rows[x][3].ToString();
                     dtgvEmpleado.Rows[x].Cells[4].Value = dt.Rows[x][4].ToString();
                     dtgvEmpleado.Rows[x].Cells[5].Value = dt.Rows[x][5].ToString();
                     dtgvEmpleado.Rows[x].Cells[6].Value = dt.Rows[x][6].ToString();
                     dtgvEmpleado.Rows[x].Cells[7].Value = dt.Rows[x][7].ToString();
                     dtgvEmpleado.Rows[x].Cells[8].Value = dt.Rows[x][8].ToString();
+                    dtgvEmpleado.Rows[x].Cells[9].Value = dt.Rows[x][9].ToString();
                 }
                 dtgvEmpleado.ClearSelection();
             }
@@ -74,6 +76,7 @@ namespace Interfaz.Registros
             txtcodigo.Clear();
             txtnombre.Clear();
             txtcodigo.Focus();
+            nUpPin.Value = 0;
             cbdpto.SelectedText = null;
             for(int i=0; i<clbCargo.Items.Count;i++)
             {
@@ -134,6 +137,7 @@ namespace Interfaz.Registros
                     E.Iddpto = cbdpto.SelectedValue.ToString();
                     E.Empresa = cbempresa.SelectedValue.ToString();
                     E.Cargo = cbcargoi.SelectedValue.ToString();
+                    E.Pin =(int) nUpPin.Value;
                     ValoresCheck();
                     mensaje = E.RegistrarEmpleado();
                     if (mensaje == "Empleado ya existe!")
@@ -153,12 +157,13 @@ namespace Interfaz.Registros
                     E.Iddpto = cbdpto.SelectedValue.ToString();
                     E.Empresa = cbempresa.SelectedValue.ToString();
                     E.Cargo = cbcargoi.SelectedValue.ToString();
+                    E.Pin = (int)nUpPin.Value;
                     ValoresCheck();
                     MessageBoxEx.Show(E.ActualizarEmpleado(), "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Limpiar();
                 }
                 LlenarGrid();
-                btnregistrar.Text = "Registrar";
+                btnregistrar.Text = "REGISTRAR";
                 Program.Evento = 0;
                 txtcodigo.Enabled = true;
                 txtcodigo.Focus();
@@ -174,17 +179,18 @@ namespace Interfaz.Registros
         {
             if (dtgvEmpleado.SelectedRows.Count > 0)
             {
-                btnregistrar.Text = "Guardar";
+                btnregistrar.Text = "GUARDAR";
                 txtcodigo.Text = dtgvEmpleado.CurrentRow.Cells[0].Value.ToString();
                 txtcodigo.Enabled = false;
-                txtnombre.Text = dtgvEmpleado.CurrentRow.Cells[1].Value.ToString();
-                cbdpto.SelectedValue = dtgvEmpleado.CurrentRow.Cells[2].Value.ToString();
-                clbCargo.SetItemChecked(0,Convert.ToBoolean(dtgvEmpleado.CurrentRow.Cells[3].Value));
-                clbCargo.SetItemChecked(1, Convert.ToBoolean(dtgvEmpleado.CurrentRow.Cells[4].Value));
-                clbCargo.SetItemChecked(2, Convert.ToBoolean(dtgvEmpleado.CurrentRow.Cells[5].Value));
+                txtnombre.Text = dtgvEmpleado.CurrentRow.Cells[2].Value.ToString();
+                nUpPin.Value = Convert.ToDecimal(dtgvEmpleado.CurrentRow.Cells[1].Value);
+                cbdpto.Text = dtgvEmpleado.CurrentRow.Cells[3].Value.ToString();
+                clbCargo.SetItemChecked(0,Convert.ToBoolean(dtgvEmpleado.CurrentRow.Cells[4].Value));
+                clbCargo.SetItemChecked(1, Convert.ToBoolean(dtgvEmpleado.CurrentRow.Cells[5].Value));
+                clbCargo.SetItemChecked(2, Convert.ToBoolean(dtgvEmpleado.CurrentRow.Cells[6].Value));
                 txtnombre.Focus();
                 cbempresa.SelectedValue= dtgvEmpleado.CurrentRow.Cells[7].Value.ToString();
-                cbcargoi.SelectedValue = dtgvEmpleado.CurrentRow.Cells[8].Value.ToString();
+                cbcargoi.Text = dtgvEmpleado.CurrentRow.Cells[8].Value.ToString();
                 Program.Evento = 1;
             }
             else
@@ -201,7 +207,7 @@ namespace Interfaz.Registros
                 if (dtgvEmpleado.SelectedRows.Count > 0)
                 {
                     E.Idempleado = "'" + dtgvEmpleado.CurrentRow.Cells[0].Value.ToString() + "'";
-                    E.Estado = Convert.ToBoolean(dtgvEmpleado.CurrentRow.Cells[6].Value);
+                    E.Estado = Convert.ToBoolean(dtgvEmpleado.CurrentRow.Cells[9].Value);
                     mensaje = E.ActivarEmpleado();
                     if (mensaje == "Desactivado!")
                     {

@@ -31,13 +31,6 @@ C:\Users\COMPUTOS\Desktop\SYSPROD\En Proceso\Produccion\Intermedia\bin\Debug\Dat
 C:\Users\COMPUTOS\Desktop\SYSPROD\En Proceso\Produccion\Intermedia\obj\Debug\Intermedia.csprojResolveAssemblyReference.cache
 C:\Users\COMPUTOS\Desktop\SYSPROD\En Proceso\Produccion\Intermedia\obj\Debug\Intermedia.dll
 C:\Users\COMPUTOS\Desktop\SYSPROD\En Proceso\Produccion\Intermedia\obj\Debug\Intermedia.pdb
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Intermedia\bin\Debug\Intermedia.dll
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Intermedia\bin\Debug\Intermedia.pdb
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Intermedia\bin\Debug\Datos.dll
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Intermedia\bin\Debug\Datos.pdb
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Intermedia\obj\Debug\Intermedia.csprojResolveAssemblyReference.cache
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Intermedia\obj\Debug\Intermedia.dll
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Intermedia\obj\Debug\Intermedia.pdb
 C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Intermedia\bin\Debug\Intermedia.dll
 C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Intermedia\bin\Debug\Intermedia.pdb
 C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Intermedia\bin\Debug\Datos.dll
@@ -45,3 +38,26 @@ C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Intermedia\bin\Debug\Datos.pdb
 C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Intermedia\obj\Debug\Intermedia.csprojResolveAssemblyReference.cache
 C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Intermedia\obj\Debug\Intermedia.dll
 C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Intermedia\obj\Debug\Intermedia.pdb
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Intermedia\bin\Debug\Intermedia.dll
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Intermedia\bin\Debug\Intermedia.pdb
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Intermedia\bin\Debug\Datos.dll
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Intermedia\bin\Debug\Datos.pdb
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Intermedia\obj\Debug\Intermedia.csprojResolveAssemblyReference.cache
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Intermedia\obj\Debug\Intermedia.dll
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Intermedia\obj\Debug\Intermedia.pdb
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Intermedia\bin\Debug\Intermedia.dll
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Intermedia\bin\Debug\Intermedia.pdb
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Intermedia\bin\Debug\Datos.dll
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Intermedia\bin\Debug\Datos.pdb
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Intermedia\obj\Debug\Intermedia.csprojResolveAssemblyReference.cache
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Intermedia\obj\Debug\Intermedia.dll
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Intermedia\obj\Debug\Intermedia.pdb
+D:\Proyectos Personales\Proceso\Produccion\Intermedia\bin\Debug\Intermedia.dll
+D:\Proyectos Personales\Proceso\Produccion\Intermedia\bin\Debug\Intermedia.pdb
+D:\Proyectos Personales\Proceso\Produccion\Intermedia\bin\Debug\Datos.dll
+D:\Proyectos Personales\Proceso\Produccion\Intermedia\bin\Debug\Datos.pdb
+D:\Proyectos Personales\Proceso\Produccion\Intermedia\obj\Debug\Intermedia.csprojAssemblyReference.cache
+D:\Proyectos Personales\Proceso\Produccion\Intermedia\obj\Debug\Intermedia.csproj.CoreCompileInputs.cache
+D:\Proyectos Personales\Proceso\Produccion\Intermedia\obj\Debug\Intermedia.csproj.CopyComplete
+D:\Proyectos Personales\Proceso\Produccion\Intermedia\obj\Debug\Intermedia.dll
+D:\Proyectos Personales\Proceso\Produccion\Intermedia\obj\Debug\Intermedia.pdb

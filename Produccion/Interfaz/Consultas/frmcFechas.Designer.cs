@@ -43,7 +43,7 @@
             this.label2.BackColor = System.Drawing.Color.DarkRed;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(30, 9);
+            this.label2.Location = new System.Drawing.Point(38, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(286, 24);
             this.label2.TabIndex = 4;
@@ -52,7 +52,7 @@
             // dtpdesde
             // 
             this.dtpdesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpdesde.Location = new System.Drawing.Point(34, 78);
+            this.dtpdesde.Location = new System.Drawing.Point(40, 78);
             this.dtpdesde.Name = "dtpdesde";
             this.dtpdesde.Size = new System.Drawing.Size(102, 20);
             this.dtpdesde.TabIndex = 5;
@@ -60,7 +60,7 @@
             // dtphasta
             // 
             this.dtphasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtphasta.Location = new System.Drawing.Point(214, 78);
+            this.dtphasta.Location = new System.Drawing.Point(220, 78);
             this.dtphasta.Name = "dtphasta";
             this.dtphasta.Size = new System.Drawing.Size(102, 20);
             this.dtphasta.TabIndex = 6;
@@ -69,7 +69,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(49, 51);
+            this.label1.Location = new System.Drawing.Point(55, 51);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 15);
             this.label1.TabIndex = 7;
@@ -79,7 +79,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(233, 51);
+            this.label3.Location = new System.Drawing.Point(239, 51);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(50, 15);
             this.label3.TabIndex = 8;
@@ -94,7 +94,7 @@
             this.btnreporte.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnreporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnreporte.ForeColor = System.Drawing.Color.Black;
-            this.btnreporte.Location = new System.Drawing.Point(141, 112);
+            this.btnreporte.Location = new System.Drawing.Point(147, 112);
             this.btnreporte.Name = "btnreporte";
             this.btnreporte.Size = new System.Drawing.Size(68, 32);
             this.btnreporte.TabIndex = 9;

@@ -63,17 +63,17 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(775, 107);
+            this.panel1.Size = new System.Drawing.Size(823, 107);
             this.panel1.TabIndex = 0;
             // 
             // lbinf
             // 
             this.lbinf.AutoSize = true;
-            this.lbinf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbinf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbinf.ForeColor = System.Drawing.Color.Maroon;
             this.lbinf.Location = new System.Drawing.Point(433, 80);
             this.lbinf.Name = "lbinf";
-            this.lbinf.Size = new System.Drawing.Size(129, 15);
+            this.lbinf.Size = new System.Drawing.Size(143, 16);
             this.lbinf.TabIndex = 62;
             this.lbinf.Text = "Doble click para editar";
             this.lbinf.Visible = false;
@@ -144,7 +144,7 @@
             this.label4.BackColor = System.Drawing.Color.DarkRed;
             this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label4.Location = new System.Drawing.Point(253, 7);
+            this.label4.Location = new System.Drawing.Point(286, 7);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(247, 26);
             this.label4.TabIndex = 56;
@@ -185,7 +185,7 @@
             this.dtgvProducto.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgvProducto.RowHeadersWidth = 21;
             this.dtgvProducto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvProducto.Size = new System.Drawing.Size(775, 286);
+            this.dtgvProducto.Size = new System.Drawing.Size(823, 306);
             this.dtgvProducto.TabIndex = 1;
             this.dtgvProducto.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvProducto_CellDoubleClick);
             // 
@@ -227,7 +227,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(775, 393);
+            this.ClientSize = new System.Drawing.Size(823, 413);
             this.Controls.Add(this.dtgvProducto);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;

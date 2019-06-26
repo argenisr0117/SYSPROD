@@ -24,13 +24,22 @@ namespace Interfaz.Consultas
         clsEmpleado E = new clsEmpleado();
         clsMaquina M = new clsMaquina();
         clsProduccionTref PT = new clsProduccionTref();
+        clsProduccionGalv PG = new clsProduccionGalv();
         clsCliente C = new clsCliente();
 
         private void ComboP()
         {
             try
             {
-                cmbProducto.DataSource = P.Listado_Productos_Dpto(1);
+                if(Program.Filtrar==0)
+                {
+                    cmbProducto.DataSource = P.Listado_Productos_Dpto(1);
+
+                }
+                else if(Program.Filtrar==1)
+                {
+                    cmbProducto.DataSource = P.Listado_Productos_Dpto(5);
+                }
                 cmbProducto.DisplayMember = "DESCRIPCION";
                 cmbProducto.ValueMember = "CODIGO";
             }
@@ -44,7 +53,16 @@ namespace Interfaz.Consultas
         {
             try
             {
-                cmbCliente.DataSource = C.Listado_Cliente_Combo(true, "Tref");
+                if (Program.Filtrar == 0)
+                {
+                    cmbCliente.DataSource = C.Listado_Cliente_Combo(true, "Tref");
+
+                }
+                else if (Program.Filtrar == 1)
+                {
+                    cmbCliente.DataSource = C.Listado_Cliente_Combo(true, "Galv");
+
+                }
                 cmbCliente.DisplayMember = "DESCRIPCION";
                 cmbCliente.ValueMember = "ID_CLIENTE";
             }
@@ -57,7 +75,16 @@ namespace Interfaz.Consultas
         {
             try
             {
-                cmbMaquina.DataSource = M.Listado_Maquinas_Tref();
+                if (Program.Filtrar == 0)
+                {
+                    cmbMaquina.DataSource = M.Listado_Maquinas_Tref();
+
+                }
+                else if (Program.Filtrar == 1)
+                {
+                    cmbMaquina.DataSource = M.Listado_Maquinas_Galv();
+
+                }
                 cmbMaquina.DisplayMember = "ID_MAQUINA";
                 cmbMaquina.ValueMember = "ID_MAQUINA";
             }
@@ -70,7 +97,16 @@ namespace Interfaz.Consultas
         {
             try
             {
-                cmbSupervisor.DataSource = E.Listado_Supervisores_Tref();
+                if (Program.Filtrar == 0)
+                {
+                    cmbSupervisor.DataSource = E.Listado_Supervisores_Tref();
+
+                }
+                else if (Program.Filtrar == 1)
+                {
+                    cmbSupervisor.DataSource = E.Listado_Supervisores_Galv();
+
+                }
                 cmbSupervisor.DisplayMember = "NOMBRE";
                 cmbSupervisor.ValueMember = "ID_EMPLEADO";
             }
@@ -87,6 +123,8 @@ namespace Interfaz.Consultas
             ComboM();
             ComboP();
             Limpiar();
+            dtpdesde.Value = Program.Fechai;
+            dtphasta.Value = Program.Fechaf;
         }
         private void Limpiar()
         {

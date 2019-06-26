@@ -271,63 +271,6 @@ C:\Users\COMPUTOS\Desktop\SYSPROD\En Proceso\Produccion\Interfaz\obj\Debug\Inter
 C:\Users\COMPUTOS\Desktop\SYSPROD\En Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmMaquinaPuas.resources
 C:\Users\COMPUTOS\Desktop\SYSPROD\En Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmEditarInvPuas.resources
 C:\Users\COMPUTOS\Desktop\SYSPROD\En Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmEditarInvPuas1.resources
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.csprojResolveAssemblyReference.cache
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.ConsultasGenerales.resources
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcBuscarRegistros.resources
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcFechas.resources
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcFiltrarRegistros.resources
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcFiltros.resources
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcProducto.resources
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcProductosDpto.resources
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Controles.textboxceros.resources
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.frmReporte.resources
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Login.resources
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Principal.resources
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Properties.Resources.resources
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.RegistrosGenerales.resources
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmAgregarProducto.resources
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmCargo.resources
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmCategoria.resources
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmEditarInvPuas.resources
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmEditarInvPuas1.resources
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmMaquinaPuas.resources
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmPermisos.resources
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmUsuario.resources
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmCliente.resources
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmColada.resources
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmDepartamento.resources
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmDestino.resources
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmEditarRegistroIndm.resources
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmEditarRegistroTref.resources
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmEmpleado.resources
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmEmpresa.resources
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmIncentivos.resources
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmInventarioPuas.resources
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmMaquina.resources
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmPesocanasto.resources
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmProduccion.resources
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmProduccionIndMenor.resources
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmProduccionTrefilado.resources
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmProducto.resources
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmPuerto.resources
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmTurno.resources
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmUnidad.resources
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Splash.resources
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.csproj.GenerateResource.Cache
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\RdlCompile.cache
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\RdlCompile.compiled
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Interfaz.exe.config
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Interfaz.exe
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Interfaz.pdb
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\DocumentFormat.OpenXml.dll
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Intermedia.dll
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Microsoft.ReportViewer.WinForms.dll
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Datos.dll
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Intermedia.pdb
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\DocumentFormat.OpenXml.xml
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Datos.pdb
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.exe
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.pdb
 C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Interfaz\bin\Debug\Interfaz.exe.config
 C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.exe
 C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.pdb
@@ -422,7 +365,31 @@ C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Interfaz\bin\Debug\Reportes\repor
 C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Interfaz\bin\Debug\Reportes\reporte_terminados.rdlc
 C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Interfaz\bin\Debug\Reportes\ticket_trefilado2.rdlc
 C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Interfaz\bin\Debug\Reportes\ticket_trefilado.rdlc
+C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmOrdenProduccion.resources
+C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmProduccionGalv.resources
+C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcOrdenProduccion.resources
+C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Interfaz\bin\Debug\Reportes\ticket_galvanizado.rdlc
+C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Interfaz\bin\Debug\Reportes\ticket_galvanizado2.rdlc
+C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Interfaz\bin\Debug\Reportes\ticket_galvanizado3.rdlc
+C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmProductoClienteLongitud.resources
+C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmControlCalidad.resources
+C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcPruebasCalidad.resources
+C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmPackingList.resources
+C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Interfaz\bin\Debug\Reportes\packing_list.rdlc
 C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Reportes\incentivo_trefilado.rdlc
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Reportes\certificado_calidad - Copy.rdlc
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Reportes\cierre_general_kinnox.rdlc
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Reportes\graficos_maq_parada_dpto.rdlc
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Reportes\filtrar_prod_resumido.rdlc
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Reportes\horas_extra.rdlc
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Reportes\packing_list_kinnox.rdlc
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Reportes\salida_inventario.rdlc
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Reportes\entrada_inventario.rdlc
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Reportes\inventario_resumido.rdlc
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Reportes\inventario_detallado.rdlc
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Reportes\historial_produccion.rdlc
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Reportes\graficos_certificado_cald.rdlc
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Reportes\certificado_calidad.rdlc
 C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Reportes\cierre_general.rdlc
 C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Reportes\diario_indm.rdlc
 C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Reportes\cierre_intermedios.rdlc
@@ -441,13 +408,406 @@ C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Reportes
 C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Reportes\incentivo_varillas_aceradas.rdlc
 C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Reportes\linea_galv.rdlc
 C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Reportes\filtrar_prod_detalle.rdlc
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Reportes\packing_list_local.rdlc
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Reportes\packing_list.rdlc
 C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Reportes\procesos.rdlc
 C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Reportes\reporte_general.rdlc
 C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Reportes\reporte_intermedios.rdlc
 C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Reportes\reporte_terminados.rdlc
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Reportes\ticket_trefilado2.rdlc
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Reportes\ticket_galvanizado - Copy.rdlc
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Reportes\ticket_galvanizado4.rdlc
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Reportes\ticket_galvanizado_steel.rdlc
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Reportes\ticket_galvanizado.rdlc
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Reportes\ticket_galvanizado2.rdlc
 C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Reportes\ticket_trefilado.rdlc
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Reportes\ticket_trefilado2.rdlc
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Intermedia.dll
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\TempSys.exe
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Datos.dll
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\MccDaq.dll
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Intermedia.pdb
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\TempSys.pdb
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Datos.pdb
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\MccDaq.xml
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.csprojResolveAssemblyReference.cache
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.ConsultasGenerales.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcBuscarRegistros.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcDetalleProduccionMaquinas.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcFechas.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcFiltrarRegistros.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcFiltros.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcHistorialMonitoreo.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcHistorialPacking.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcInfoMaquinaParada.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcMaqParada.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcMonitoreoMaquinas.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcPruebasCalidad.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcOrdenProduccion.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcProducto.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcProductosDpto.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Controles.textboxceros.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.frmReporte.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Login.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Principal.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Properties.Resources.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.RegistrosGenerales.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmAgregarProducto.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmCargo.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmCategoria.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmControlAlm.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmControlCalidad.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmEditarInvPuas.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmEditarInvPuas1.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmHoraExtra.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmMaquinaPuas.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmMaquinasParadas.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmOrdenProduccion.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmPackingList.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmPermisos.resources
 C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmProduccionGalv.resources
-C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmOrdenProduccion.resources
-C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmProduccionGalv.resources
-C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcOrdenProduccion.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmProductoClienteLongitud.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmResolverMaqParada.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmUsuario.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmCliente.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmColada.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmDepartamento.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmDestino.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmEditarRegistroIndm.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmEditarRegistroTref.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmEmpleado.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmEmpresa.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmIncentivos.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmInventarioPuas.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmMaquina.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmPesocanasto.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmProduccion.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmProduccionIndMenor.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmProduccionTrefilado.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmProducto.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmPuerto.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmTurno.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmUnidad.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Splash.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.csproj.GenerateResource.Cache
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\RdlCompile.cache
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\RdlCompile.compiled
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Reportes\reporte_kinnox.rdlc
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\SysProd.exe.config
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\SysProd.exe.manifest
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\SysProd.application
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\SysProd.exe
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\SysProd.pdb
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\SysProd.exe.manifest
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\SysProd.application
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\SysProd.exe
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\SysProd.pdb
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Interop.zkemkeeper.dll
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interop.zkemkeeper.dll
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.csproj.ResolveComReference.cache
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmPonche.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmAsignarTurno.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmAttControl.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcHoraExtra.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmDiasFeriados.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcHistorialAsistencia.resources
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Interfaz\bin\Debug\Reportes\historial_asistencia.rdlc
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\SysProd.exe.config
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interop.zkemkeeper.dll
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.csproj.ResolveComReference.cache
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\SysProd.exe
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\SysProd.pdb
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Reportes\incentivo_trefilado.rdlc
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Reportes\certificado_calidad - Copy.rdlc
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Reportes\cierre_general_kinnox.rdlc
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Reportes\graficos_maq_parada_dpto.rdlc
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Reportes\filtrar_prod_resumido.rdlc
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Reportes\historial_asistencia.rdlc
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Reportes\horas_extra.rdlc
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Reportes\packing_list_kinnox.rdlc
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Reportes\reporte_kinnox.rdlc
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Reportes\salida_inventario.rdlc
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Reportes\entrada_inventario.rdlc
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Reportes\inventario_resumido.rdlc
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Reportes\inventario_detallado.rdlc
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Reportes\historial_produccion.rdlc
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Reportes\graficos_certificado_cald.rdlc
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Reportes\certificado_calidad.rdlc
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Reportes\cierre_general.rdlc
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Reportes\diario_indm.rdlc
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Reportes\cierre_intermedios.rdlc
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Reportes\cierre_lineagalv.rdlc
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Reportes\cierre_terminados.rdlc
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Reportes\desperdicios.rdlc
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Reportes\incentivo_flejado.rdlc
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Reportes\incentivo_galvanizado.rdlc
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Reportes\incentivo_grapas.rdlc
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Reportes\incentivo_mallas_ciclonicas.rdlc
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Reportes\incentivo_mallas_gallinero.rdlc
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Reportes\incentivo_mecanico_indm.rdlc
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Reportes\incentivo_puas.rdlc
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Reportes\incentivo_rollos_cort.rdlc
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Reportes\incentivo_sunchos.rdlc
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Reportes\incentivo_varillas_aceradas.rdlc
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Reportes\linea_galv.rdlc
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Reportes\filtrar_prod_detalle.rdlc
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Reportes\packing_list_local.rdlc
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Reportes\packing_list.rdlc
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Reportes\procesos.rdlc
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Reportes\reporte_general.rdlc
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Reportes\reporte_intermedios.rdlc
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Reportes\reporte_terminados.rdlc
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Reportes\ticket_galvanizado - Copy.rdlc
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Reportes\ticket_galvanizado4.rdlc
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Reportes\ticket_galvanizado_steel.rdlc
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Reportes\ticket_galvanizado.rdlc
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Reportes\ticket_galvanizado2.rdlc
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Reportes\ticket_trefilado.rdlc
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Reportes\ticket_trefilado2.rdlc
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\SysProd.exe.manifest
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\SysProd.application
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\SysProd.exe
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\SysProd.pdb
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Intermedia.dll
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\TempSys.exe
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Datos.dll
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\MccDaq.dll
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Intermedia.pdb
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\TempSys.pdb
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Datos.pdb
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\MccDaq.xml
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\bin\Debug\Interop.zkemkeeper.dll
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.csprojResolveAssemblyReference.cache
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.ConsultasGenerales.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcBuscarRegistros.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcDetalleProduccionMaquinas.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcFechas.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcFiltrarRegistros.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcFiltros.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcHistorialMonitoreo.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcHistorialPacking.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcHistorialAsistencia.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcInfoMaquinaParada.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcMaqParada.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcMonitoreoMaquinas.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcPruebasCalidad.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcOrdenProduccion.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcProducto.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcProductosDpto.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcHoraExtra.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Controles.textboxceros.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.frmReporte.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Login.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Principal.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Properties.Resources.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.RegistrosGenerales.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmAgregarProducto.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmCargo.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmCategoria.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmControlAlm.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmControlCalidad.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmDiasFeriados.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmEditarInvPuas.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmEditarInvPuas1.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmAsignarTurno.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmAttControl.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmHoraExtra.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmMaquinaPuas.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmMaquinasParadas.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmOrdenProduccion.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmPackingList.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmPermisos.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmPonche.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmProduccionGalv.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmProductoClienteLongitud.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmResolverMaqParada.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmUsuario.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmCliente.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmColada.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmDepartamento.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmDestino.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmEditarRegistroIndm.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmEditarRegistroTref.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmEmpleado.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmEmpresa.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmIncentivos.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmInventarioPuas.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmMaquina.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmPesocanasto.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmProduccion.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmProduccionIndMenor.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmProduccionTrefilado.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmProducto.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmPuerto.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmTurno.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmUnidad.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Splash.resources
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.csproj.GenerateResource.Cache
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\RdlCompile.cache
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\RdlCompile.compiled
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\SysProd.exe.manifest
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\SysProd.application
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.csprojAssemblyReference.cache
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.csproj.ResolveComReference.cache
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.ConsultasGenerales.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcBuscarRegistros.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcDetalleProduccionMaquinas.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcFechas.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcFiltrarRegistros.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcFiltros.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcHistorialMonitoreo.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcHistorialPacking.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcHistorialAsistencia.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcInfoMaquinaParada.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcMaqParada.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcMonitoreoMaquinas.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcPruebasCalidad.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcOrdenProduccion.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcProducto.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcProductosDpto.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcHoraExtra.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Controles.textboxceros.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.frmReporte.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Login.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Principal.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Properties.Resources.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.RegistrosGenerales.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmAgregarProducto.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmCargo.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmCategoria.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmControlAlm.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmControlCalidad.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmDiasFeriados.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmEditarInvPuas.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmEditarInvPuas1.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmAsignarTurno.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmAttControl.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmHoraExtra.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmMaquinaPuas.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmMaquinasParadas.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmOrdenProduccion.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmPackingList.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmPedido.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmPermisos.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmPonche.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmProduccionGalv.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmProductoClienteLongitud.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmResolverMaqParada.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmUsuario.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmCliente.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmColada.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmDepartamento.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmDestino.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmEditarRegistroIndm.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmEditarRegistroTref.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmEmpleado.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmEmpresa.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmIncentivos.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmInventarioPuas.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmMaquina.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmPesocanasto.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmProduccion.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmProduccionIndMenor.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmProduccionTrefilado.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmProducto.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmPuerto.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmTurno.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmUnidad.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Splash.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.csproj.GenerateResource.cache
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\RdlCompile.cache
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\RdlCompile.compiled
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.csproj.CoreCompileInputs.cache
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\SysProd.exe
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\SysProd.pdb
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interop.zkemkeeper.dll
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\incentivo_trefilado.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\certificado_calidad - Copy.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\cierre_general_kinnox.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\graficos_maq_parada_dpto.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\filtrar_prod_resumido.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\historial_asistencia.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\horas_extra.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\packing_list_kinnox.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\reporte_kinnox.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\salida_inventario.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\entrada_inventario.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\inventario_resumido.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\inventario_detallado.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\historial_produccion.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\graficos_certificado_cald.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\certificado_calidad.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\cierre_general.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\diario_indm.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\cierre_intermedios.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\cierre_lineagalv.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\cierre_terminados.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\desperdicios.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\incentivo_flejado.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\incentivo_galvanizado.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\incentivo_grapas.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\incentivo_mallas_ciclonicas.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\incentivo_mallas_gallinero.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\incentivo_mecanico_indm.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\incentivo_puas.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\incentivo_rollos_cort.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\incentivo_sunchos.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\incentivo_varillas_aceradas.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\linea_galv.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\filtrar_prod_detalle.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\packing_list_local.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\packing_list.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\procesos.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\reporte_general.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\reporte_intermedios.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\reporte_terminados.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\ticket_galvanizado - Copy.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\ticket_galvanizado4.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\ticket_galvanizado_steel.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\ticket_galvanizado.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\ticket_galvanizado2.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\ticket_trefilado.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\ticket_trefilado2.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\SysProd.exe.config
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\SysProd.exe.manifest
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\SysProd.application
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\SysProd.exe
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\SysProd.pdb
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\DocumentFormat.OpenXml.dll
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Intermedia.dll
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\TempSys.exe
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Datos.dll
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\MccDaq.dll
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Intermedia.pdb
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\TempSys.pdb
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\TempSys.exe.config
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\DocumentFormat.OpenXml.xml
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Datos.pdb
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\MccDaq.xml
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\SysProd.exe.manifest
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\SysProd.application
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.csproj.CopyComplete

@@ -12,12 +12,23 @@ C:\Users\COMPUTOS\Desktop\SYSPROD\En Proceso\Produccion\Datos\bin\Debug\Datos.dl
 C:\Users\COMPUTOS\Desktop\SYSPROD\En Proceso\Produccion\Datos\bin\Debug\Datos.pdb
 C:\Users\COMPUTOS\Desktop\SYSPROD\En Proceso\Produccion\Datos\obj\Debug\Datos.dll
 C:\Users\COMPUTOS\Desktop\SYSPROD\En Proceso\Produccion\Datos\obj\Debug\Datos.pdb
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Datos\bin\Debug\Datos.dll
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Datos\bin\Debug\Datos.pdb
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Datos\obj\Debug\Datos.dll
-C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Datos\obj\Debug\Datos.pdb
 C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Datos\bin\Debug\Datos.dll
 C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Datos\bin\Debug\Datos.pdb
 C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
 C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Datos\obj\Debug\Datos.dll
 C:\Users\Argenis-PC\Desktop\Proceso\Produccion\Datos\obj\Debug\Datos.pdb
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Datos\bin\Debug\Datos.dll
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Datos\bin\Debug\Datos.pdb
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Datos\obj\Debug\Datos.dll
+C:\Users\COMPUTOS\Desktop\SYSPROD\Proceso\Produccion\Datos\obj\Debug\Datos.pdb
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Datos\bin\Debug\Datos.dll
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Datos\bin\Debug\Datos.pdb
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Datos\obj\Debug\Datos.dll
+C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Datos\obj\Debug\Datos.pdb
+D:\Proyectos Personales\Proceso\Produccion\Datos\bin\Debug\Datos.dll
+D:\Proyectos Personales\Proceso\Produccion\Datos\bin\Debug\Datos.pdb
+D:\Proyectos Personales\Proceso\Produccion\Datos\obj\Debug\Datos.csprojAssemblyReference.cache
+D:\Proyectos Personales\Proceso\Produccion\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+D:\Proyectos Personales\Proceso\Produccion\Datos\obj\Debug\Datos.dll
+D:\Proyectos Personales\Proceso\Produccion\Datos\obj\Debug\Datos.pdb

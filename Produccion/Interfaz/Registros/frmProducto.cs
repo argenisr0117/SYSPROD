@@ -97,20 +97,8 @@ namespace Interfaz.Registros
             dt = P.Listar(valor);
             try
             {
-                dtgvProducto.Rows.Clear();
-                for (int x = 0; x < dt.Rows.Count; x++)
-                {
-                    dtgvProducto.Rows.Add(dt.Rows[x][0]);
-                    dtgvProducto.Rows[x].Cells[0].Value = dt.Rows[x][1].ToString();
-                    dtgvProducto.Rows[x].Cells[1].Value = dt.Rows[x][2].ToString();
-                    dtgvProducto.Rows[x].Cells[2].Value = dt.Rows[x][3].ToString();
-                    dtgvProducto.Rows[x].Cells[3].Value = dt.Rows[x][10].ToString();
-                    dtgvProducto.Rows[x].Cells[4].Value = dt.Rows[x][8].ToString();
-                    dtgvProducto.Rows[x].Cells[5].Value = dt.Rows[x][4].ToString();
-                    dtgvProducto.Rows[x].Cells[6].Value = dt.Rows[x][7].ToString();
-                    dtgvProducto.Rows[x].Cells[7].Value = dt.Rows[x][9].ToString();
-                }
-                dtgvProducto.ClearSelection();
+                dtgvProducto.DataSource = null;
+                dtgvProducto.DataSource = dt;
             }
             catch (Exception ex)
             {
@@ -249,8 +237,8 @@ namespace Interfaz.Registros
             txtcodigo.Focus();
             LlenarGrid();
             LlenarComboU();
-            cbunidad.SelectedValue = "";
             LlenarComboC();
+            cbunidad.SelectedValue = "";
             cbcategoria.SelectedValue = -1;
         }
         private void LlenarComboU()

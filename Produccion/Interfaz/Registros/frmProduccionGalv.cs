@@ -30,11 +30,31 @@ namespace Interfaz.Registros
         public string calibre;
         public string medio;
         public string ind = "";
+        frmReporte reporte = new frmReporte();
 
 
         public frmProduccionGalv()
         {
             InitializeComponent();
+            Permisos();
+            dtphasta.Value = DateTime.Now.AddDays(1);
+            puertoSerial();
+            cmbDiametro.SelectedIndex = 1;
+            ComboP();
+            ComboM();
+            ComboO();
+            ComboS();
+            ComboPc();
+            ComboCo();
+            ComboC();
+            ComboA();
+            cmbSupervisor.SelectedValue = "";
+            Limpiar();
+            PG.Valor = 1; //valor para filtrar total produccion
+            LlenarGrid();
+            Produccion_Total();
+            cmbOperador.SelectedValue = "";
+            cmbAyudante.SelectedValue = "";
         }
 
         public void SetText(string text)
@@ -76,11 +96,11 @@ namespace Interfaz.Registros
                 SetText(indata);
                 //Console.Write(indata);
                 //MessageBox.Show(indata);
-               
+
                 //ind = "";
                 //ClosePuertoSerial();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 //MessageBoxEx.Show(ex.Message);
             }
@@ -90,22 +110,30 @@ namespace Interfaz.Registros
 
         private void puertoSerial()
         {
-            if(serialPort1.IsOpen)
-            {
-                serialPort1.Close();
-            }
-            DataTable dt = new DataTable();
-            dt = PG.Configuracion_Puerto("Galv");
             try
             {
+                if (serialPort1.IsOpen)
+                {
+                    serialPort1.Close();
+                }
+                DataTable dt = new DataTable();
+                string[] ports = SerialPort.GetPortNames();
+                dt = PG.Configuracion_Puerto("Galv");
                 for (int x = 0; x < dt.Rows.Count; x++)
                 {
                     serialPort1.PortName = dt.Rows[x][1].ToString();
                     serialPort1.BaudRate = Convert.ToInt32(dt.Rows[x][2]);
                 }
-                serialPort1.Open();
-                serialPort1.NewLine = "\r";  //para que termine la linea;
-                
+                if (ports.Contains(serialPort1.PortName))
+                {
+                    serialPort1.Open();
+                    serialPort1.NewLine = "\r";  //para que termine la linea;
+                }
+                if (timer1.Enabled == false)
+                {
+                    timer1.Enabled = true;
+                }
+
 
             }
             catch (Exception ex)
@@ -115,9 +143,9 @@ namespace Interfaz.Registros
         }
         private void ClosePuertoSerial()
         {
-           
+
             serialPort1.Close();
-            
+
         }
         private void ComboP()
         {
@@ -224,131 +252,56 @@ namespace Interfaz.Registros
                 MessageBoxEx.Show(ex.Message);
             }
         }
-        //void cmbProducto_MouseWheel(object sender, MouseEventArgs e)
-        //{
-        //    ((HandledMouseEventArgs)e).Handled = true;
-        //}
-        //void cmbSupervisor_MouseWheel(object sender, MouseEventArgs e)
-        //{
-        //    ((HandledMouseEventArgs)e).Handled = true;
-        //}
-        //void cmbCliente_MouseWheel(object sender, MouseEventArgs e)
-        //{
-        //    ((HandledMouseEventArgs)e).Handled = true;
-        //}
-        //void cmbOperador_MouseWheel(object sender, MouseEventArgs e)
-        //{
-        //    ((HandledMouseEventArgs)e).Handled = true;
-        //}
-        //void cmbColada_MouseWheel(object sender, MouseEventArgs e)
-        //{
-        //    ((HandledMouseEventArgs)e).Handled = true;
-        //}
-        //void cmbMaquina_MouseWheel(object sender, MouseEventArgs e)
-        //{
-        //    ((HandledMouseEventArgs)e).Handled = true;
-        //}
-        //void cmbPesocanasto_MouseWheel(object sender, MouseEventArgs e)
-        //{
-        //    ((HandledMouseEventArgs)e).Handled = true;
-        //}
-        private void frmProduccionTrefilado_Load(object sender, EventArgs e)
-        {
-            Permisos();
-            //cmbProducto.MouseWheel += new MouseEventHandler(cmbProducto_MouseWheel);
-            //cmbOperador.MouseWheel += new MouseEventHandler(cmbOperador_MouseWheel);
-            //cmbCliente.MouseWheel += new MouseEventHandler(cmbCliente_MouseWheel);
-            //cmbSupervisor.MouseWheel += new MouseEventHandler(cmbSupervisor_MouseWheel);
-            //cmbColada.MouseWheel += new MouseEventHandler(cmbColada_MouseWheel);
-            //cmbMaquina.MouseWheel += new MouseEventHandler(cmbMaquina_MouseWheel);
-            //cmbPesocanasto.MouseWheel += new MouseEventHandler(cmbPesocanasto_MouseWheel);
-            dtphasta.Value = DateTime.Now.AddDays(1);
-            puertoSerial();
-            cmbDiametro.SelectedIndex = 0;
-            ComboP();
-            ComboM();
-            ComboO();
-            ComboS();
-            ComboPc();
-            ComboCo();
-            ComboC();
-            ComboA();
-            cmbSupervisor.SelectedValue = "";
-            Limpiar();
-            PG.Valor = 2; //valor para filtrar total produccion
-            LlenarGrid();
-            Produccion_Total();
-           // timer1.Enabled = true;
-            timer1.Start();
-                
-        }
+
         private void Permisos()
         {
-            btnEliminar.Enabled = Program.elitref;
-            btnExportar.Enabled = Program.exptref;
-            btnbuscar1.Enabled = Program.mostref;
-            dtpdesde.Enabled = Program.fdestref;
-            dtphasta.Enabled = Program.fhastref;
-            btnFiltrar.Enabled = Program.filtref;
-            btnEditar.Enabled = Program.editref;
-            btnReimprimir.Enabled = Program.reimtref;
+            btnEliminar.Enabled = Program.eligalv;
+            btnExportar.Enabled = Program.expgalv;
+            btnbuscar1.Enabled = Program.mosgalv;
+            dtpdesde.Enabled = Program.fdesgalv;
+            dtphasta.Enabled = Program.fhasgalv;
+            btnFiltrar.Enabled = Program.filgalv;
+            btnEditar.Enabled = Program.edigalv;
+            btnReimprimir.Enabled = Program.reimgalv;
         }
         private void LlenarGrid()
         {
-            int diferencia = 0;
-            TimeSpan fechas = new TimeSpan();
+            //int diferencia = 0;
+            //TimeSpan fechas = new TimeSpan();
             DateTime fechaft = dtphasta.Value.AddDays(-1);
             if (dtpdesde.Value.Date < dtphasta.Value.Date)
             {
-                fechas = dtphasta.Value.Date - dtpdesde.Value.Date;
-                diferencia = fechas.Days;
-                if (diferencia > 1)
+                lbProdT1.Text = "0.00";
+                lbProdT2.Text = "0.00";
+                lbProdT3.Text = "0.00";
+                //fechas = dtphasta.Value.Date - dtpdesde.Value.Date;
+                //diferencia = fechas.Days;
+                //if (diferencia > 1)
+                //{
+                PG.Fecha1 = dtpdesde.Value;
+                PG.Fechaft = fechaft;
+                PG.Fechaf = dtphasta.Value;
+                DataTable dt = new DataTable();
+                dt = PG.Produccion_Diaria();
+                try
                 {
-                    PG.Fecha1 = dtpdesde.Value;
-                    PG.Fechaft = fechaft;
-                    PG.Fechaf = dtphasta.Value;
-                    //Limpiar();   
+                    dtgvProduccion.DataSource = null;
+                    dtgvProduccion.DataSource = dt;
+                    dtgvProduccion.ClearSelection();
+                    dtgvProduccion.Columns[10].Visible = false;
+                    dtgvProduccion.Columns[11].Visible = false;
+                    dtgvProduccion.Columns[12].Visible = false;
                 }
-                else
+                catch (Exception ex)
                 {
-                    PG.Fecha1 = dtpdesde.Value;
-                    PG.Fechaf = dtphasta.Value;
-                    PG.Fechaft = Convert.ToDateTime("1/1/1753 12:00:00 AM");
-                    //Limpiar();
- 
+                    MessageBoxEx.Show(ex.Message, "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else
             {
                 MessageBoxEx.Show("Fecha inicial mayor que Fecha final", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            DataTable dt = new DataTable();
-            dt = PG.Produccion_Diaria();
-            try
-            {
-                dtgvProduccion.DataSource = null;
-                dtgvProduccion.DataSource = dt;
-                //for (int x = 0; x < dt.Rows.Count; x++)
-                //{
-                //    dtgvProduccion.Rows.Add(dt.Rows[x][0]);
-                //    dtgvProduccion.Rows[x].Cells[0].Value = dt.Rows[x][0].ToString();
-                //    dtgvProduccion.Rows[x].Cells[1].Value = dt.Rows[x][1].ToString();
-                //    dtgvProduccion.Rows[x].Cells[2].Value = dt.Rows[x][2].ToString();
-                //    dtgvProduccion.Rows[x].Cells[3].Value = dt.Rows[x][3].ToString();
-                //    dtgvProduccion.Rows[x].Cells[4].Value = dt.Rows[x][4].ToString();
-                //    dtgvProduccion.Rows[x].Cells[5].Value = dt.Rows[x][5].ToString();
-                //    dtgvProduccion.Rows[x].Cells[6].Value = dt.Rows[x][6].ToString();
-                //    dtgvProduccion.Rows[x].Cells[7].Value = dt.Rows[x][7].ToString();
-                //    dtgvProduccion.Rows[x].Cells[8].Value = dt.Rows[x][8].ToString();
-                //    dtgvProduccion.Rows[x].Cells[9].Value = dt.Rows[x][9].ToString();
-                //}
-                dtgvProduccion.ClearSelection();
-                dtgvProduccion.Columns[9].Visible = false;
-            }
-            catch (Exception ex)
-            {
-                MessageBoxEx.Show(ex.Message, "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+
         }
         private void LlenarGrid2()
         {
@@ -358,23 +311,8 @@ namespace Interfaz.Registros
             {
                 dtgvProduccion.DataSource = null;
                 dtgvProduccion.DataSource = dt;
-                //dtgvProduccion.Rows.Clear();
-                //for (int x = 0; x < dt.Rows.Count; x++)
-                //{
-                //    dtgvProduccion.Rows.Add(dt.Rows[x][0]);
-                //    dtgvProduccion.Rows[x].Cells[0].Value = dt.Rows[x][0].ToString();
-                //    dtgvProduccion.Rows[x].Cells[1].Value = dt.Rows[x][1].ToString();
-                //    dtgvProduccion.Rows[x].Cells[2].Value = dt.Rows[x][2].ToString();
-                //    dtgvProduccion.Rows[x].Cells[3].Value = dt.Rows[x][3].ToString();
-                //    dtgvProduccion.Rows[x].Cells[4].Value = dt.Rows[x][4].ToString();
-                //    dtgvProduccion.Rows[x].Cells[5].Value = dt.Rows[x][5].ToString();
-                //    dtgvProduccion.Rows[x].Cells[6].Value = dt.Rows[x][6].ToString();
-                //    dtgvProduccion.Rows[x].Cells[7].Value = dt.Rows[x][7].ToString();
-                //    dtgvProduccion.Rows[x].Cells[8].Value = dt.Rows[x][8].ToString();
-                //    dtgvProduccion.Rows[x].Cells[9].Value = dt.Rows[x][9].ToString();
-                //}
                 dtgvProduccion.ClearSelection();
-                dtgvProduccion.Columns[9].Visible = false;
+                dtgvProduccion.Columns[10].Visible = false;
 
             }
             catch (Exception ex)
@@ -391,8 +329,8 @@ namespace Interfaz.Registros
         {
             cmbProducto.SelectedValue = "";
             cmbMaquina.SelectedValue = "";
-            cmbOperador.SelectedValue = "";
-            cmbAyudante.SelectedValue = "";
+            //cmbOperador.SelectedValue = "";
+            //cmbAyudante.SelectedValue = "";
             cmbCliente.SelectedValue = 0;
             cmbPesocanasto.SelectedValue = -1;
             cmbColada.SelectedValue = 0;
@@ -402,25 +340,6 @@ namespace Interfaz.Registros
             label14.Text = "";
         }
 
-        private void cmbMaquina_DropDown(object sender, EventArgs e)
-        {
-            ComboM();
-        }
-
-        private void cmbOperador_DropDown(object sender, EventArgs e)
-        {
-            ComboO();
-        }
-
-        private void cmbProducto_DropDown(object sender, EventArgs e)
-        {
-            ComboP();
-        }
-
-        private void cmbSupervisor_DropDown(object sender, EventArgs e)
-        {
-            ComboS();
-        }
 
         private void cmbProducto_SelectedValueChanged(object sender, EventArgs e)
         {
@@ -447,7 +366,7 @@ namespace Interfaz.Registros
                         {
                             calibre = word;
                         }
-                        else if (p==1)
+                        else if (p == 1)
                         {
                             medio = word;
                         }
@@ -463,7 +382,7 @@ namespace Interfaz.Registros
                         label14.Text = "BC";
                         sae1 = "BC";
                     }
-                    else if(sae = cmbProducto.SelectedValue.ToString().Contains("MC"))
+                    else if (sae = cmbProducto.SelectedValue.ToString().Contains("MC"))
                     {
                         txtCalibre.Text = dt.Rows[0][0].ToString();
                         label14.Text = "MC";
@@ -494,7 +413,7 @@ namespace Interfaz.Registros
                     return;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return;
             }
@@ -508,21 +427,21 @@ namespace Interfaz.Registros
 
         private void coladasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmColada obj = new frmColada();
+            var obj = new frmColada();
             obj.ShowDialog();
         }
 
         private void pesoCanastosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmPesocanasto obj = new frmPesocanasto();
+            var obj = new frmPesocanasto();
             obj.ShowDialog();
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            Consultas.frmcProductosDpto obj = new Consultas.frmcProductosDpto();
-            Program.Valor3 = 1;
-            Program.Valor2 = 1;
+            var obj = new Consultas.frmcProductosDpto();
+            Program.Valor3 = 5;
+            Program.Valor2 = 2;
             obj.ShowDialog();
             if (string.IsNullOrEmpty(Program.CodigoP))
             {
@@ -550,51 +469,55 @@ namespace Interfaz.Registros
         private void Produccion_Total()
         {
             DataTable dt = new DataTable();
-            double total=0;
+            double total = 0;
             int canasto = 0;
             int a = 0;
             int b = 0;
-            dt = PG.Total_Produccion();
+            int c = 0;
             try
             {
-                for (int x = 0; x < dt.Rows.Count; x++)
+                if (dtpdesde.Value.Date < dtphasta.Value.Date)
                 {
-                    if(dt.Rows[x][0].ToString()== "06AM02PM")
+                    dt = PG.Total_Produccion();
+                    for (int x = 0; x < dt.Rows.Count; x++)
                     {
-                        lbTurno1.Text = "TURNO1";
-                        lbProdT1.Text =(Convert.ToDouble(dt.Rows[x][1])/100).ToString()+" QQS";
-                        a = 1;
+                        if (dt.Rows[x][0].ToString() == "06AM02PM")
+                        {
+                            lbTurno1.Text = "TURNO1";
+                            lbProdT1.Text = (Convert.ToDouble(dt.Rows[x][1]) / 100).ToString() + " QQS";
+                            a = 1;
+                        }
+                        if (a == 0)
+                        {
+                            lbProdT1.Text = "";
+                        }
+                        if (dt.Rows[x][0].ToString() == "02PM10PM")
+                        {
+                            lbTurno2.Text = "TURNO2";
+                            lbProdT2.Text = (Convert.ToDouble(dt.Rows[x][1]) / 100).ToString() + " QQS";
+                            b = 1;
+                        }
+                        if (b == 0)
+                        {
+                            lbProdT2.Text = "";
+                        }
+                        if (dt.Rows[x][0].ToString() == "10PM06AM")
+                        {
+                            lbTurno3.Text = "TURNO3";
+                            lbProdT3.Text = (Convert.ToDouble(dt.Rows[x][1]) / 100).ToString() + " QQS";
+                            c = 1;
+                        }
+                        if (c == 0)
+                        {
+                            lbProdT3.Text = "";
+                        }
+                        total = total + (Convert.ToDouble(dt.Rows[x][1]) / 100);
+                        canasto = canasto + (Convert.ToInt32(dt.Rows[x][2]));
                     }
-                    if(a==0)
-                    {
-                        lbProdT1.Text = "";
-                    }
-                    if (dt.Rows[x][0].ToString() == "02PM10PM")
-                    {
-                        lbTurno2.Text = "TURNO2";
-                        lbProdT2.Text = (Convert.ToDouble(dt.Rows[x][1]) / 100).ToString() + " QQS";
-                        b = 1;
-                    }
-                    if(b==0)
-                    {
-                        lbProdT2.Text = "";
-                    }
-                    b = 0;
-                    if (dt.Rows[x][0].ToString() == "10PM06AM")
-                    {
-                        lbTurno3.Text = "TURNO3";
-                        lbProdT3.Text = (Convert.ToDouble(dt.Rows[x][1]) / 100).ToString() + " QQS";
-                        b = 1;
-                    }
-                    if (b == 0)
-                    {
-                        lbProdT3.Text = "";
-                    }
-                    total = total + (Convert.ToDouble(dt.Rows[x][1]) / 100);
-                    canasto=canasto+ (Convert.ToInt32(dt.Rows[x][2]));
+                    lbTotalP.Text = total.ToString() + " QQS";
+                    lbTotalC.Text = canasto.ToString();
+
                 }
-                lbTotalP.Text = total.ToString() + " QQS";
-                lbTotalC.Text = canasto.ToString();
             }
             catch (Exception ex)
             {
@@ -605,95 +528,182 @@ namespace Interfaz.Registros
         {
             try
             {
-                int h = DateTime.Now.Hour;
-                if (cmbProducto.SelectedIndex > -1 && cmbPesocanasto.SelectedIndex > -1 && cmbSupervisor.SelectedIndex > -1 && cmbOperador.SelectedIndex > -1 && cmbMaquina.SelectedIndex > -1 && cmbProducto.SelectedIndex > -1 && cmbColada.SelectedIndex > -1 && txtPesoBruto.Text!="")
+                DialogResult var = new DialogResult();
+                var = MessageBoxEx.Show("Desea registrar el canasto?", "Sistema de Producción", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (var == DialogResult.Yes)
                 {
-                    if(Convert.ToDouble(cmbPesocanasto.Text)>Convert.ToDouble(txtPesoBruto.Text))
+                    int h = DateTime.Now.Hour;
+                    DataTable dt = new DataTable();
+                    string Orden = "";
+                    double qqs = 0;
+                    if (cmbProducto.SelectedIndex > -1 && cmbPesocanasto.SelectedIndex > -1 && cmbSupervisor.SelectedIndex > -1 && cmbOperador.SelectedIndex > -1 && cmbMaquina.SelectedIndex > -1 && cmbProducto.SelectedIndex > -1 && cmbColada.SelectedIndex > -1 && txtPesoBruto.Text != "")
                     {
-                        MessageBoxEx.Show("Peso del canasto no puede ser mayor que el peso bruto!", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }
-                    else
-                    {
-                        string mensaje = "";
-                        int tarjeta = PG.SecuenciaTarjeta();
-                        DateTime hora = Convert.ToDateTime(DateTime.Now.ToShortTimeString());
-                        TimeSpan hora1 = TimeSpan.Parse(hora.ToString("H\\:mm:ss"));
-                        PG.Supervisor = cmbSupervisor.SelectedValue.ToString();
-                        PG.Operador = cmbOperador.SelectedValue.ToString();
-                        PG.Ayudante = "DESC-01";
-                        PG.Fecha = Convert.ToDateTime(DateTime.Now.ToShortDateString());
-                        PG.Hora = hora1;
-                        PG.Cliente = Convert.ToInt32(cmbCliente.SelectedValue);
-                        PG.Colada = Convert.ToInt32(cmbColada.SelectedValue);
-                        PG.Producto = cmbProducto.SelectedValue.ToString();
-                        PG.Maquina = cmbMaquina.SelectedValue.ToString();
-                        PG.Tarjeta = tarjeta;
-                        if (h > 5 && h < 14)
+                        if (Convert.ToDouble(cmbPesocanasto.Text) > Convert.ToDouble(txtPesoBruto.Text))
                         {
-                            PG.Turno = "06AM02PM";
-                        }
-                        else if (h > 13 && h < 22)
-                        {
-                            PG.Turno = "02PM10PM";
+                            MessageBoxEx.Show("Peso del canasto no puede ser mayor que el peso bruto!", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         }
                         else
                         {
-                            PG.Turno = "10PM06AM";
+                            string mensaje = "";
+                            int tarjeta = PG.SecuenciaTarjeta();
+                            DateTime hora = Convert.ToDateTime(DateTime.Now.ToShortTimeString());
+                            TimeSpan hora1 = TimeSpan.Parse(hora.ToString("H\\:mm:ss"));
+                            PG.Supervisor = cmbSupervisor.SelectedValue.ToString();
+                            PG.Operador = cmbOperador.SelectedValue.ToString();
+                            PG.Ayudante = cmbAyudante.SelectedValue.ToString();
+                            PG.Fecha = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+                            PG.Hora = hora1;
+                            PG.Cliente = Convert.ToInt32(cmbCliente.SelectedValue);
+                            PG.Colada = Convert.ToInt32(cmbColada.SelectedValue);
+                            PG.Producto = cmbProducto.SelectedValue.ToString();
+                            PG.Maquina = cmbMaquina.SelectedValue.ToString();
+                            PG.Tarjeta = tarjeta;
+                            PG.Dpto = "Galv";
+                            double peso = Convert.ToDouble(txtPesoBruto.Text) - Convert.ToDouble(cmbPesocanasto.SelectedValue);
+                            qqs = peso / 100;
+                            qqs = Math.Round(qqs, 2);
+                            PG.PesoNeto = peso;
+                            //////FUNCION PARA IDENTIFICAR LA EMPRESA Y EL TIPO DE TICKET///////
+                            IdentificarTicket_Longitud(peso);
+                            ///IDENTIFICAR ORDEN DEL CANASTO Y ACTUALIZAR DICHA ORDEN//
+                            dt = PG.ObtenerOrdenCanasto();
+                            for (int x = 0; x < dt.Rows.Count; x++)
+                            {
+                                Double cantidad = Convert.ToDouble(dt.Rows[x][2]);
+                                Double cant_prod = Convert.ToDouble(dt.Rows[x][3]);
+                                Double cantidad2 = cantidad;
+                                if (cantidad == 0) //IDENTIFICAR SI EXISTE ALGUNA ORDEN PARA ESTE CLIENTE Y ESTE PRODUCTO, SI ES CERO, ASIGNAR S/N
+                                {
+                                    PG.Idorden = Convert.ToInt16(dt.Rows[x][0]);
+                                    Orden = dt.Rows[x][1].ToString();
+                                    break;
+                                }
+                                else
+                                {
+                                    cant_prod = cant_prod + qqs;
+                                    cantidad = cantidad + 10;
+                                    if (cant_prod > cantidad) //COMPLETAR ORDEN
+                                    {
+                                        PG.Idorden = Convert.ToInt16(dt.Rows[x][0]);
+                                        PG.CompletarOrdenProduccion();
+                                        if (dt.Rows.Count == 1)
+                                        {
+                                            Orden = "S/N";
+                                            PG.Idorden = 0;
+                                            break;
+                                        }
+                                    }
+                                    else  //ACTUALIZAR ORDEN 
+                                    {
+                                        PG.Idorden = Convert.ToInt16(dt.Rows[x][0]);
+                                        PG.PesoNeto = qqs;
+                                        PG.ActCantOrdenProduccion();
+                                        PG.PesoNeto = peso;
+                                        Orden = dt.Rows[x][1].ToString();
+                                        break;
+                                    }
+                                }
+                            }
+                            ///IDENTIFICAR ORDEN DEL CANASTO Y ACTUALIZAR DICHA ORDEN//
+                            if (h > 5 && h < 14)
+                            {
+                                PG.Turno = "06AM02PM";
+                            }
+                            else if (h > 13 && h < 22)
+                            {
+                                PG.Turno = "02PM10PM";
+                            }
+                            else
+                            {
+                                PG.Turno = "10PM06AM";
+                            }
+
+                            Zen.Barcode.Code128BarcodeDraw barcode = Zen.Barcode.BarcodeDrawFactory.Code128WithChecksum;
+                            pictureBox1.Image = barcode.Draw(tarjeta.ToString() + "P" + peso.ToString(), 25);
+                            MemoryStream ms = new MemoryStream();
+                            pictureBox1.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                            byte[] Pic = ms.ToArray();
+                            PG.Barcode = Pic;
+                            mensaje = PG.RegistrarProduccion();
+                            if (mensaje == "1")
+                            {
+                                MessageBoxEx.Show("Registrado con éxito!", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            else if (mensaje == "2")
+                            {
+                                MessageBoxEx.Show("Error,no se ha podido registrar! ", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+
+                            reporte.Fecha = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+                            reporte.Valor = 12;
+                            reporte.Supervisor = cmbSupervisor.SelectedValue.ToString();
+                            reporte.Maquina = cmbMaquina.Text;
+                            reporte.Cliente = cmbCliente.Text;
+                            reporte.Colada = cmbColada.Text;
+                            reporte.Calibre = calibre;
+                            reporte.Operador = cmbOperador.SelectedValue.ToString();
+                            reporte.Ayudante = cmbAyudante.SelectedValue.ToString();
+                            reporte.Peso = peso.ToString();
+                            reporte.Tarjeta = tarjeta;
+                            reporte.Diametro = txtDiametro.Text + " " + cmbDiametro.Text;
+                            reporte.Producto = cmbProducto.Text;
+                            reporte.Reporte = "Rollo " + tarjeta + " " + txtCalibre.Text + " " + sae1;
+                            reporte.Sae = sae1;
+                            reporte.Medio = medio;
+                            reporte.Orden = Orden;
+                            reporte.Pesokg = (peso * 0.4536).ToString("N0");
+                            reporte.ShowDialog();
+                            Limpiar();
+                            PG.Valor = 1; //VALOR PARA FILTRAR TOTAL PROD
+                            dtpdesde.Value = DateTime.Now;
+                            dtphasta.Value = dtpdesde.Value.AddDays(1);
+                            LlenarGrid();
+                            Produccion_Total();
                         }
-                        double peso = Convert.ToDouble(txtPesoBruto.Text) - Convert.ToDouble(cmbPesocanasto.SelectedValue);
-                        PG.PesoNeto = peso;
-                        Zen.Barcode.Code128BarcodeDraw barcode = Zen.Barcode.BarcodeDrawFactory.Code128WithChecksum;
-                        pictureBox1.Image = barcode.Draw(tarjeta.ToString() + "P" + peso.ToString(), 25);
-                        MemoryStream ms = new MemoryStream();
-                        pictureBox1.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-                        byte[] Pic = ms.ToArray();
-                        PG.Barcode = Pic;
-                        mensaje = PG.RegistrarProduccion();
-                        if (mensaje == "1")
-                        {
-                            MessageBoxEx.Show("Registrado con éxito!", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        else if (mensaje == "2")
-                        {
-                            MessageBoxEx.Show("Error,no se ha podido registrar! ", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                        frmReporte obj = new frmReporte();
-                        obj.Fecha = Convert.ToDateTime(DateTime.Now.ToShortDateString());
-                        obj.Valor = 7;
-                        obj.Supervisor = cmbSupervisor.Text;
-                        obj.Maquina = cmbMaquina.Text;
-                        obj.Cliente = cmbCliente.Text;
-                        obj.Colada = cmbColada.Text;
-                        obj.Calibre = calibre;
-                        obj.Operador = cmbOperador.SelectedValue.ToString();
-                        obj.Peso = peso.ToString();
-                        obj.Tarjeta = tarjeta;
-                        obj.Diametro = txtDiametro.Text + " " + cmbDiametro.Text;
-                        obj.Nombre = "ticket_trefilado.rdlc";
-                        obj.Producto = cmbProducto.Text;
-                        obj.Reporte = "Rollo "+tarjeta +" "+ txtCalibre.Text+" "+ sae1;
-                        obj.Sae = sae1;
-                        obj.Medio = medio;
-                        obj.ShowDialog();
-                        Limpiar();
-                        PG.Valor = 2; //VALOR PARA FILTRAR TOTAL PROD
-                        LlenarGrid();
-                        Produccion_Total();
+
                     }
-                   
+                    else
+                    {
+                        MessageBoxEx.Show("Complete todos los campos!", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+
                 }
                 else
                 {
-                    MessageBoxEx.Show("Complete todos los campos!", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
                 }
-               
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBoxEx.Show(ex.ToString(), "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void IdentificarTicket_Longitud(double peso)
+        {
+            DataTable dt2 = new DataTable();
+            dt2 = PG.ObtenerProductoLongitudConversion();
+            reporte.Nombre = "ticket_galvanizado.rdlc";
+            reporte.Empresa = "ACERO DEL CIBAO,SRL.";
+            if (dt2.Rows.Count > 0)
+            {
+                reporte.VerLong = "1";
+                reporte.Longft = (peso * Convert.ToDouble(dt2.Rows[0][0])).ToString("N2");
+                reporte.Longmt = (peso * Convert.ToDouble(dt2.Rows[0][1])).ToString("N2");
+                reporte.Empresa = dt2.Rows[0][3].ToString();
+                if (Convert.ToBoolean(dt2.Rows[0][2]))
+                {
+                    reporte.Nombre = "ticket_galvanizado_steel.rdlc";
+                }
+            }
+            else
+            {
+                reporte.VerLong = "0";
+                reporte.Longft = "0.00";
+                reporte.Longmt = "0.00";
             }
 
+        }
         private void frmProduccionTrefilado_FormClosing(object sender, FormClosingEventArgs e)
         {
             ClosePuertoSerial();
@@ -706,9 +716,7 @@ namespace Interfaz.Registros
             PG.Maquina = "";
             PG.Cliente = 0;
             PG.Producto = "";
-            lbProdT1.Text = "0.00";
-            lbProdT2.Text = "0.00";
-            lbProdT3.Text = "0.00";
+
             LlenarGrid();
             Produccion_Total();
         }
@@ -717,16 +725,18 @@ namespace Interfaz.Registros
         {
             if (dtgvProduccion.SelectedRows.Count > 0)
             {
-                frmEditarRegistroTref obj = new frmEditarRegistroTref();
-                obj.Supervisor= dtgvProduccion.CurrentRow.Cells[2].Value.ToString();
-                obj.Operador= dtgvProduccion.CurrentRow.Cells[3].Value.ToString();
-                obj.Producto= dtgvProduccion.CurrentRow.Cells[4].Value.ToString();
-                obj.Maquina= dtgvProduccion.CurrentRow.Cells[5].Value.ToString();
-                obj.Peso= dtgvProduccion.CurrentRow.Cells[7].Value.ToString();
-                obj.Cliente = dtgvProduccion.CurrentRow.Cells[8].Value.ToString();
-                obj.Id = Convert.ToInt32(dtgvProduccion.CurrentRow.Cells[9].Value);
+                var obj = new frmEditarRegistroTref();
+                Program.Editar = 1;
+                obj.Supervisor = dtgvProduccion.CurrentRow.Cells[2].Value.ToString();
+                obj.Operador = dtgvProduccion.CurrentRow.Cells[3].Value.ToString();
+                obj.Ayudante = dtgvProduccion.CurrentRow.Cells[4].Value.ToString();
+                obj.Producto = dtgvProduccion.CurrentRow.Cells[5].Value.ToString();
+                obj.Maquina = dtgvProduccion.CurrentRow.Cells[6].Value.ToString();
+                obj.Peso = dtgvProduccion.CurrentRow.Cells[8].Value.ToString();
+                obj.Cliente = dtgvProduccion.CurrentRow.Cells[9].Value.ToString();
+                obj.Id = Convert.ToInt32(dtgvProduccion.CurrentRow.Cells[10].Value);
                 obj.ShowDialog();
-                if(Program.Valor==1)
+                if (Program.Valor == 1)
                 {
                     PG.Valor = 1;//VALOR PARA FILTRAR TOTAL PRODUCCION
                     LlenarGrid();
@@ -742,6 +752,8 @@ namespace Interfaz.Registros
             {
                 MessageBoxEx.Show("Seleccione un registro!", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+            Program.Editar = 2;
+
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -752,10 +764,12 @@ namespace Interfaz.Registros
                 DialogResult var = MessageBoxEx.Show("¿Desea eliminar el registro?", "Sistema de Producción", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (var == DialogResult.Yes)
                 {
-                    PG.Id= Convert.ToInt32(dtgvProduccion.CurrentRow.Cells[9].Value);
+                    PG.Id = Convert.ToInt32(dtgvProduccion.CurrentRow.Cells[10].Value);
                     PG.Dpto = "Galvanizado";
-                    mensaje=PG.EliminarRegistro();
-                    if(mensaje=="1")
+                    PG.Idusuario = Program.Idusuario;
+                    PG.Pcname = Environment.MachineName;
+                    mensaje = PG.EliminarRegistro();
+                    if (mensaje == "1")
                     {
                         MessageBoxEx.Show("Registro Eliminado!", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         PG.Valor = 1;//VALOR PARA FILTRAR TOTAL PRODUCCION
@@ -766,7 +780,7 @@ namespace Interfaz.Registros
                     {
                         MessageBoxEx.Show("Ha ocurrido un error!", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
-                  
+
                 }
             }
             else
@@ -778,8 +792,11 @@ namespace Interfaz.Registros
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
             Consultas.frmcFiltrarRegistros obj = new Consultas.frmcFiltrarRegistros();
+            Program.Filtrar = 1;
+            Program.Fechai = dtpdesde.Value;
+            Program.Fechaf = dtphasta.Value;
             obj.ShowDialog();
-            if(Program.Valor==1)
+            if (Program.Valor == 1)
             {
                 PG.Supervisor = Program.Supervisor;
                 PG.Maquina = Program.Maquina;
@@ -801,6 +818,7 @@ namespace Interfaz.Registros
             Program.Maquina = "";
             Program.Producto = "";
             Program.Cliente = 0;
+            Program.Filtrar = 2;
         }
 
         private void btnExportar_Click(object sender, EventArgs e)
@@ -843,7 +861,7 @@ namespace Interfaz.Registros
                     }
                     reporte = SecuenciaReporte();
                     PG.Reporte = reporte;
-                    PG.Valor = 1;
+                    PG.Valor = 3;
                     mensaje = PG.ExportarRegistroDpto();
                     if (mensaje == "1")
                     {
@@ -867,13 +885,13 @@ namespace Interfaz.Registros
 
         private string SecuenciaReporte()
         {
-            string reporte="";
+            string reporte = "";
             try
             {
                 int var;
                 int var2;
                 string secuencia;
-          
+
                 DataTable dtt = new DataTable();
                 dtt = Pr.SecuenciaReporte();
                 if (string.IsNullOrEmpty(dtt.Rows[0]["Reporte"].ToString().Trim()))
@@ -886,14 +904,14 @@ namespace Interfaz.Registros
                 {
                     var = Convert.ToInt32(dtt.Rows[0]["Reporte"]);
                     var2 = var + 1;
-                    reporte= var2.ToString();
+                    reporte = var2.ToString();
                     secuencia = reporte;
                     reporte = secuencia.PadLeft(7, '0');
-                    
+
                 }
                 //return reporte;
             }
-          
+
             catch (Exception ex)
             {
                 MessageBoxEx.Show(ex.Message);
@@ -906,34 +924,39 @@ namespace Interfaz.Registros
         {
             try
             {
-              
+
                 if (dtgvProduccion.SelectedRows.Count > 0)
                 {
                     DataTable dt;
-                    dt = PG.Reimprimir(Convert.ToInt32(dtgvProduccion.CurrentRow.Cells[9].Value));
+                    dt = PG.Reimprimir(Convert.ToInt32(dtgvProduccion.CurrentRow.Cells[10].Value), 1);
                     SeleccionarDiametro2(dt.Rows[0][10].ToString());
-                    frmReporte obj = new frmReporte();
-                    obj.Id = Convert.ToInt32(dtgvProduccion.CurrentRow.Cells[9].Value);
-                    obj.Valor = 11;
-                    obj.Fecha = Convert.ToDateTime(dt.Rows[0][0]);
-                    obj.Supervisor = dt.Rows[0][1].ToString();
-                    obj.Operador = dt.Rows[0][2].ToString();
-                    obj.Maquina = dt.Rows[0][3].ToString();
-                    obj.Colada = dt.Rows[0][4].ToString();
-                    obj.Peso = dt.Rows[0][5].ToString();
-                    obj.Producto = dt.Rows[0][6].ToString();
-                    obj.Diametro = dt.Rows[0][7].ToString() + " " + "PULG";
-                    obj.Cliente = dt.Rows[0][8].ToString();
-                    obj.Tarjeta=Convert.ToInt32(dt.Rows[0][11]);
-                    obj.Calibre = calibre;
-                    obj.Nombre = "ticket_trefilado2.rdlc";                 
-                    obj.Reporte = "Ticket";
-                    obj.Sae = sae1;
-                    obj.Medio = medio;
-                    obj.ShowDialog();
+                    reporte.Id = Convert.ToInt32(dtgvProduccion.CurrentRow.Cells[10].Value);
+                    reporte.Valor = 13;
+                    reporte.Fecha = Convert.ToDateTime(dt.Rows[0][0]);
+                    reporte.Supervisor = dt.Rows[0][1].ToString();
+                    reporte.Operador = dt.Rows[0][2].ToString();
+                    reporte.Maquina = dt.Rows[0][3].ToString();
+                    reporte.Colada = dt.Rows[0][4].ToString();
+                    reporte.Peso = dt.Rows[0][5].ToString();
+                    reporte.Pesokg = (Convert.ToDouble(dt.Rows[0][5]) * 0.4536).ToString("N0");
+                    reporte.Producto = dt.Rows[0][6].ToString();
+                    reporte.Diametro = dt.Rows[0][7].ToString() + " " + "MM";
+                    reporte.Cliente = dt.Rows[0][8].ToString();
+                    reporte.Tarjeta = Convert.ToInt32(dt.Rows[0][11]);
+                    reporte.Calibre = calibre;
+                    //reporte.Nombre = "ticket_galvanizado2.rdlc";
+                    reporte.Reporte = "Ticket";
+                    reporte.Sae = sae1;
+                    reporte.Medio = medio;
+                    reporte.Ayudante = dt.Rows[0][12].ToString();
+                    reporte.Orden = dt.Rows[0][13].ToString();
+                    PG.Producto = dtgvProduccion.CurrentRow.Cells[12].Value.ToString();
+                    PG.Cliente = Convert.ToInt32(dtgvProduccion.CurrentRow.Cells[11].Value);
+                    IdentificarTicket_Longitud(Convert.ToDouble(dt.Rows[0][5]));
+                    reporte.ShowDialog();
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return;
             }
@@ -941,47 +964,47 @@ namespace Interfaz.Registros
         private void SeleccionarDiametro2(string CodigoProducto)
         {
             try
-            {              
-                    DataTable dt = new DataTable();
-                    bool sae;
-                    sae1 = "";
-                    medio = "";
-                    calibre = "";
-                    int p = 0;
-                    dt = PG.Diametro_Producto(CodigoProducto);
-                    string[] words = dt.Rows[0][0].ToString().Split(' ');
-                    foreach (string word in words)
+            {
+                DataTable dt = new DataTable();
+                bool sae;
+                sae1 = "";
+                medio = "";
+                calibre = "";
+                int p = 0;
+                dt = PG.Diametro_Producto(CodigoProducto);
+                string[] words = dt.Rows[0][0].ToString().Split(' ');
+                foreach (string word in words)
+                {
+                    if (p == 0)
                     {
-                        if (p == 0)
-                        {
-                            calibre = word;
-                        }
-                        else if (p == 1)
-                        {
-                            medio = word;
-                        }
-                        else
-                        {
-                            medio = "";
-                        }
-                        p++;
+                        calibre = word;
                     }
-                    if (sae = CodigoProducto.Contains("LC"))
+                    else if (p == 1)
                     {
-
-                        sae1 = "BC";
+                        medio = word;
                     }
-                    else if (sae = CodigoProducto.Contains("MC"))
+                    else
                     {
-
-                        sae1 = "MC";
+                        medio = "";
                     }
-                    else if (sae = CodigoProducto.Contains("HC"))
-                    {
+                    p++;
+                }
+                if (sae = CodigoProducto.Contains("LC"))
+                {
 
-                        sae1 = "HC";
-                    }               
-             
+                    sae1 = "BC";
+                }
+                else if (sae = CodigoProducto.Contains("MC"))
+                {
+
+                    sae1 = "MC";
+                }
+                else if (sae = CodigoProducto.Contains("HC"))
+                {
+
+                    sae1 = "HC";
+                }
+
             }
             catch (Exception ex)
             {
@@ -992,21 +1015,28 @@ namespace Interfaz.Registros
 
         private void timer1_Tick(object sender, EventArgs e) //timer para enviar peso de la balanza cada 1 segundo
         {
-            SerialPort sp = new SerialPort();
-            if (!serialPort1.IsOpen)
+            try
             {
-                serialPort1.Open();
+                SerialPort sp = new SerialPort();
+                if (!serialPort1.IsOpen)
+                {
+                    serialPort1.Open();
+                }
+                else
+                {
+                    byte[] code = { 0x05 }; //codigo para que la balanza envie el peso
+                                            //string code1 = code.ToString("X2");
+                                            //code1 = "0" + code1;
+                    serialPort1.Write(code, 0, code.Length);
+                    //Console.WriteLine(code1);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                byte[] code = { 0x05 }; //codigo para que la balanza envie el peso
-                //string code1 = code.ToString("X2");
-                //code1 = "0" + code1;
-                serialPort1.Write(code,0,code.Length);
-                //Console.WriteLine(code1);
+                timer1.Enabled = false;
             }
-            
-        }
 
+
+        }
     }
 }

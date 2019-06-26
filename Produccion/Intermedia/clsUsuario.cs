@@ -47,7 +47,23 @@ namespace Intermedia
         Boolean Mfilcong;
         Boolean Mordenprod;
         Boolean Mcontrolcald;
-
+        Boolean Mvcontrolcald;
+        Boolean Mvccfecha;
+        Boolean Medigalv;
+        Boolean Meligalv;
+        Boolean Mmosgalv;
+        Boolean Mfilgalv;
+        Boolean Mexpgalv;
+        Boolean Mfdesgalv;
+        Boolean Mfhasgalv;
+        Boolean Mreimgalv;
+        Boolean Malmintermedios;
+        Boolean Malmterminados;
+        Boolean Malmlg;
+        Boolean Mmontemp;
+        Boolean Mmaqpar;
+        Boolean Mmonmaq;
+        Boolean Mreghor;
 
         public int Idusuario
         {
@@ -227,8 +243,92 @@ namespace Intermedia
             get { return Mfilcong; }
             set { Mfilcong = value; }
         }
+        public Boolean VControlCald
+        {
+            get { return Mvcontrolcald; }
+            set { Mvcontrolcald = value; }
+        }
+        public Boolean Vccfecha
+        {
+            get { return Mvccfecha; }
+            set { Mvccfecha = value; }
+        }
+        public Boolean Edigalv
+        {
+            get { return Medigalv; }
+            set { Medigalv = value; }
+        }
+        public Boolean Eligalv
+        {
+            get { return Meligalv; }
+            set { Meligalv = value; }
+        }
+        public Boolean Mosgalv
+        {
+            get { return Mmosgalv; }
+            set { Mmosgalv = value; }
+        }
+        public Boolean Expgalv
+        {
+            get { return Mexpgalv; }
+            set { Mexpgalv = value; }
+        }
+        public Boolean Filgalv
+        {
+            get { return Mfilgalv; }
+            set { Mfilgalv = value; }
+        }
+        public Boolean Fhasgalv
+        {
+            get { return Mfhasgalv; }
+            set { Mfhasgalv = value; }
+        }
+        public Boolean Fdesgalv
+        {
+            get { return Mfdesgalv; }
+            set { Mfdesgalv = value; }
+        }
 
-
+        public Boolean Reimgalv
+        {
+            get { return Mreimgalv; }
+            set { Mreimgalv = value; }
+        }
+        public Boolean Almintermedios
+        {
+            get { return Malmintermedios; }
+            set { Malmintermedios = value; }
+        }
+        public Boolean Almterminados
+        {
+            get { return Malmterminados; }
+            set { Malmterminados = value; }
+        }
+        public Boolean Almlg
+        {
+            get { return Malmlg; }
+            set { Malmlg = value; }
+        }
+        public Boolean MonTemp
+        {
+            get { return Mmontemp; }
+            set { Mmontemp = value; }
+        }
+        public Boolean MaqPar
+        {
+            get { return Mmaqpar; }
+            set { Mmaqpar = value; }
+        }
+        public Boolean MonMaq
+        {
+            get { return Mmonmaq; }
+            set { Mmonmaq = value; }
+        }
+        public Boolean RegHor
+        {
+            get { return Mreghor; }
+            set { Mreghor = value; }
+        }
         public string RegistrarUsuario()
         {
             string mensaje = "";
@@ -245,6 +345,7 @@ namespace Intermedia
         {
             int mensaje = 2;
             List<clsParametros> lst = new List<clsParametros>();
+            lst.Add(new clsParametros("@mensaje", "", SqlDbType.Int, ParameterDirection.Output, 8));
             lst.Add(new clsParametros("@idusuario", Midusuario));
             lst.Add(new clsParametros("@proddiaria", Mproddiaria));
             lst.Add(new clsParametros("@reggen", Mreggen));
@@ -274,9 +375,25 @@ namespace Intermedia
             lst.Add(new clsParametros("@filcong",Mfilcong));
             lst.Add(new clsParametros("@ordenprod",Mordenprod));
             lst.Add(new clsParametros("@controlcald",Mcontrolcald));
-            lst.Add(new clsParametros("@mensaje", "", SqlDbType.Int, ParameterDirection.Output, 8));
+            lst.Add(new clsParametros("@vcontrolcald",Mvcontrolcald));
+            lst.Add(new clsParametros("@vccfecha",Mvccfecha));
+            lst.Add(new clsParametros("@edigalv", Medigalv));
+            lst.Add(new clsParametros("@eligalv", Meligalv));
+            lst.Add(new clsParametros("@mosgalv", Mmosgalv));
+            lst.Add(new clsParametros("@filgalv", Mfilgalv));
+            lst.Add(new clsParametros("@expgalv", Mexpgalv));
+            lst.Add(new clsParametros("@fdesgalv", Mfdesgalv));
+            lst.Add(new clsParametros("@fhasgalv", Mfhasgalv));
+            lst.Add(new clsParametros("@reimgalv", Mreimgalv));
+            lst.Add(new clsParametros("@almintermedios", Malmintermedios));
+            lst.Add(new clsParametros("@almterminados", Malmterminados));
+            lst.Add(new clsParametros("@almlg", Malmlg));
+            lst.Add(new clsParametros("@montemp", Mmontemp));
+            lst.Add(new clsParametros("@maqpar", Mmaqpar));
+            lst.Add(new clsParametros("@monmaq", Mmonmaq));
+            lst.Add(new clsParametros("@reghor", Mreghor));
             M.EjecutarSP("registrar_act_permisos", ref lst);
-            mensaje =Convert.ToInt32(lst[29].Valor);
+            mensaje =Convert.ToInt32(lst[0].Valor);
             return mensaje;
         }
         public string VerificarLogin()

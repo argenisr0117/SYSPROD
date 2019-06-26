@@ -57,9 +57,9 @@
             this.cmbCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbCliente.FormattingEnabled = true;
             this.cmbCliente.IntegralHeight = false;
-            this.cmbCliente.Location = new System.Drawing.Point(142, 206);
+            this.cmbCliente.Location = new System.Drawing.Point(128, 206);
             this.cmbCliente.Name = "cmbCliente";
-            this.cmbCliente.Size = new System.Drawing.Size(215, 21);
+            this.cmbCliente.Size = new System.Drawing.Size(326, 21);
             this.cmbCliente.TabIndex = 144;
             this.cmbCliente.Validar = true;
             // 
@@ -71,9 +71,9 @@
             this.cmbMaquina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbMaquina.FormattingEnabled = true;
             this.cmbMaquina.IntegralHeight = false;
-            this.cmbMaquina.Location = new System.Drawing.Point(142, 179);
+            this.cmbMaquina.Location = new System.Drawing.Point(128, 179);
             this.cmbMaquina.Name = "cmbMaquina";
-            this.cmbMaquina.Size = new System.Drawing.Size(215, 21);
+            this.cmbMaquina.Size = new System.Drawing.Size(326, 21);
             this.cmbMaquina.TabIndex = 143;
             this.cmbMaquina.Validar = true;
             // 
@@ -85,9 +85,9 @@
             this.cmbProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbProducto.FormattingEnabled = true;
             this.cmbProducto.IntegralHeight = false;
-            this.cmbProducto.Location = new System.Drawing.Point(142, 152);
+            this.cmbProducto.Location = new System.Drawing.Point(128, 152);
             this.cmbProducto.Name = "cmbProducto";
-            this.cmbProducto.Size = new System.Drawing.Size(215, 21);
+            this.cmbProducto.Size = new System.Drawing.Size(326, 21);
             this.cmbProducto.TabIndex = 142;
             this.cmbProducto.Validar = true;
             // 
@@ -99,9 +99,9 @@
             this.cmbSupervisor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbSupervisor.FormattingEnabled = true;
             this.cmbSupervisor.IntegralHeight = false;
-            this.cmbSupervisor.Location = new System.Drawing.Point(142, 125);
+            this.cmbSupervisor.Location = new System.Drawing.Point(128, 125);
             this.cmbSupervisor.Name = "cmbSupervisor";
-            this.cmbSupervisor.Size = new System.Drawing.Size(215, 21);
+            this.cmbSupervisor.Size = new System.Drawing.Size(326, 21);
             this.cmbSupervisor.TabIndex = 140;
             this.cmbSupervisor.Validar = true;
             // 
@@ -111,7 +111,7 @@
             this.label2.BackColor = System.Drawing.Color.DarkRed;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Location = new System.Drawing.Point(103, 9);
+            this.label2.Location = new System.Drawing.Point(141, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(218, 26);
             this.label2.TabIndex = 150;
@@ -122,7 +122,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(40, 209);
+            this.label12.Location = new System.Drawing.Point(47, 210);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(52, 13);
             this.label12.TabIndex = 149;
@@ -133,7 +133,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(40, 179);
+            this.label9.Location = new System.Drawing.Point(47, 183);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(57, 13);
             this.label9.TabIndex = 148;
@@ -144,7 +144,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(40, 150);
+            this.label10.Location = new System.Drawing.Point(47, 156);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(68, 13);
             this.label10.TabIndex = 147;
@@ -155,7 +155,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(40, 126);
+            this.label3.Location = new System.Drawing.Point(47, 129);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 13);
             this.label3.TabIndex = 145;
@@ -172,7 +172,7 @@
             this.btnLimpiar.ForeColor = System.Drawing.Color.Black;
             this.btnLimpiar.Image = global::Interfaz.Properties.Resources.Clear_icon;
             this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnLimpiar.Location = new System.Drawing.Point(235, 245);
+            this.btnLimpiar.Location = new System.Drawing.Point(285, 245);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(122, 55);
             this.btnLimpiar.TabIndex = 152;
@@ -193,7 +193,7 @@
             this.btnFiltrar.ForeColor = System.Drawing.Color.Black;
             this.btnFiltrar.Image = global::Interfaz.Properties.Resources.Search_icon1;
             this.btnFiltrar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnFiltrar.Location = new System.Drawing.Point(43, 245);
+            this.btnFiltrar.Location = new System.Drawing.Point(93, 245);
             this.btnFiltrar.Name = "btnFiltrar";
             this.btnFiltrar.Size = new System.Drawing.Size(120, 55);
             this.btnFiltrar.TabIndex = 151;
@@ -208,7 +208,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(274, 47);
+            this.label17.Location = new System.Drawing.Point(324, 47);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(52, 13);
             this.label17.TabIndex = 156;
@@ -220,7 +220,7 @@
             this.dtphasta.CustomFormat = "dd/MM/yyyy";
             this.dtphasta.ForeColor = System.Drawing.Color.Black;
             this.dtphasta.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtphasta.Location = new System.Drawing.Point(254, 63);
+            this.dtphasta.Location = new System.Drawing.Point(304, 63);
             this.dtphasta.Name = "dtphasta";
             this.dtphasta.Size = new System.Drawing.Size(103, 20);
             this.dtphasta.TabIndex = 155;
@@ -231,7 +231,7 @@
             this.dtpdesde.CustomFormat = "dd/MM/yyyy";
             this.dtpdesde.ForeColor = System.Drawing.Color.Black;
             this.dtpdesde.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpdesde.Location = new System.Drawing.Point(44, 63);
+            this.dtpdesde.Location = new System.Drawing.Point(94, 63);
             this.dtpdesde.Name = "dtpdesde";
             this.dtpdesde.Size = new System.Drawing.Size(103, 20);
             this.dtpdesde.TabIndex = 153;
@@ -241,7 +241,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(59, 47);
+            this.label15.Location = new System.Drawing.Point(109, 47);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(53, 13);
             this.label15.TabIndex = 154;
@@ -252,7 +252,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(61, 86);
+            this.label1.Location = new System.Drawing.Point(111, 86);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(61, 13);
             this.label1.TabIndex = 157;
@@ -263,7 +263,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(274, 86);
+            this.label4.Location = new System.Drawing.Point(324, 86);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(61, 13);
             this.label4.TabIndex = 158;
@@ -273,7 +273,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(396, 326);
+            this.ClientSize = new System.Drawing.Size(501, 326);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label17);

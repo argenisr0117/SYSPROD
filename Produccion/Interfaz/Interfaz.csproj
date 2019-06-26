@@ -8,10 +8,26 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Interfaz</RootNamespace>
-    <AssemblyName>Interfaz</AssemblyName>
+    <AssemblyName>SysProd</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -22,6 +38,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,6 +48,21 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icono.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>F9E6E5262FD12E2F60CD9AA88E8F64436C58830E</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Interfaz_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevComponents.DotNetBar2, Version=11.3.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
@@ -60,10 +92,14 @@
     </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -92,6 +128,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AttendanceClass.cs" />
     <Compile Include="AutomaticPrint.cs" />
     <Compile Include="ConsultasGenerales.cs">
       <SubType>Form</SubType>
@@ -104,6 +141,12 @@
     </Compile>
     <Compile Include="Consultas\frmcBuscarRegistros.Designer.cs">
       <DependentUpon>frmcBuscarRegistros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmcDetalleProduccionMaquinas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmcDetalleProduccionMaquinas.Designer.cs">
+      <DependentUpon>frmcDetalleProduccionMaquinas.cs</DependentUpon>
     </Compile>
     <Compile Include="Consultas\frmcFechas.cs">
       <SubType>Form</SubType>
@@ -123,6 +166,48 @@
     <Compile Include="Consultas\frmcFiltros.Designer.cs">
       <DependentUpon>frmcFiltros.cs</DependentUpon>
     </Compile>
+    <Compile Include="Consultas\frmcHistorialMonitoreo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmcHistorialMonitoreo.Designer.cs">
+      <DependentUpon>frmcHistorialMonitoreo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmcHistorialPacking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmcHistorialPacking.Designer.cs">
+      <DependentUpon>frmcHistorialPacking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmcHistorialAsistencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmcHistorialAsistencia.Designer.cs">
+      <DependentUpon>frmcHistorialAsistencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmcInfoMaquinaParada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmcInfoMaquinaParada.Designer.cs">
+      <DependentUpon>frmcInfoMaquinaParada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmcMaqParada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmcMaqParada.Designer.cs">
+      <DependentUpon>frmcMaqParada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmcMonitoreoMaquinas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmcMonitoreoMaquinas.Designer.cs">
+      <DependentUpon>frmcMonitoreoMaquinas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmcPruebasCalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmcPruebasCalidad.Designer.cs">
+      <DependentUpon>frmcPruebasCalidad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consultas\frmcOrdenProduccion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +225,12 @@
     </Compile>
     <Compile Include="Consultas\frmcProductosDpto.Designer.cs">
       <DependentUpon>frmcProductosDpto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmcHoraExtra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmcHoraExtra.Designer.cs">
+      <DependentUpon>frmcHoraExtra.cs</DependentUpon>
     </Compile>
     <Compile Include="Controles\comboboxar.cs">
       <SubType>Component</SubType>
@@ -189,7 +280,7 @@
     <Compile Include="PRODUCCIONDataSet.cs">
       <DependentUpon>PRODUCCIONDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="PRODUCCIONDataSet.Designer.cs">
+    <Compile Include="PRODUCCIONDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PRODUCCIONDataSet.xsd</DependentUpon>
@@ -225,6 +316,24 @@
     <Compile Include="Registros\frmCategoria.Designer.cs">
       <DependentUpon>frmCategoria.cs</DependentUpon>
     </Compile>
+    <Compile Include="Registros\frmControlAlm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\frmControlAlm.Designer.cs">
+      <DependentUpon>frmControlAlm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\frmControlCalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\frmControlCalidad.Designer.cs">
+      <DependentUpon>frmControlCalidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\frmDiasFeriados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\frmDiasFeriados.Designer.cs">
+      <DependentUpon>frmDiasFeriados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Registros\frmEditarInvPuas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -237,11 +346,35 @@
     <Compile Include="Registros\frmEditarInvPuas1.Designer.cs">
       <DependentUpon>frmEditarInvPuas1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Registros\frmAsignarTurno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\frmAsignarTurno.Designer.cs">
+      <DependentUpon>frmAsignarTurno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\frmAttControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\frmAttControl.Designer.cs">
+      <DependentUpon>frmAttControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\frmHoraExtra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\frmHoraExtra.Designer.cs">
+      <DependentUpon>frmHoraExtra.cs</DependentUpon>
+    </Compile>
     <Compile Include="Registros\frmMaquinaPuas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Registros\frmMaquinaPuas.Designer.cs">
       <DependentUpon>frmMaquinaPuas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\frmMaquinasParadas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\frmMaquinasParadas.Designer.cs">
+      <DependentUpon>frmMaquinasParadas.cs</DependentUpon>
     </Compile>
     <Compile Include="Registros\frmOrdenProduccion.cs">
       <SubType>Form</SubType>
@@ -249,17 +382,47 @@
     <Compile Include="Registros\frmOrdenProduccion.Designer.cs">
       <DependentUpon>frmOrdenProduccion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Registros\frmPackingList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\frmPackingList.Designer.cs">
+      <DependentUpon>frmPackingList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\frmPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\frmPedido.Designer.cs">
+      <DependentUpon>frmPedido.cs</DependentUpon>
+    </Compile>
     <Compile Include="Registros\frmPermisos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Registros\frmPermisos.Designer.cs">
       <DependentUpon>frmPermisos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Registros\frmPonche.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\frmPonche.Designer.cs">
+      <DependentUpon>frmPonche.cs</DependentUpon>
+    </Compile>
     <Compile Include="Registros\frmProduccionGalv.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Registros\frmProduccionGalv.Designer.cs">
       <DependentUpon>frmProduccionGalv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\frmProductoClienteLongitud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\frmProductoClienteLongitud.Designer.cs">
+      <DependentUpon>frmProductoClienteLongitud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\frmResolverMaqParada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\frmResolverMaqParada.Designer.cs">
+      <DependentUpon>frmResolverMaqParada.cs</DependentUpon>
     </Compile>
     <Compile Include="Registros\frmUsuario.cs">
       <SubType>Form</SubType>
@@ -394,6 +557,9 @@
     <EmbeddedResource Include="Consultas\frmcBuscarRegistros.resx">
       <DependentUpon>frmcBuscarRegistros.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\frmcDetalleProduccionMaquinas.resx">
+      <DependentUpon>frmcDetalleProduccionMaquinas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consultas\frmcFechas.resx">
       <DependentUpon>frmcFechas.cs</DependentUpon>
     </EmbeddedResource>
@@ -403,6 +569,27 @@
     <EmbeddedResource Include="Consultas\frmcFiltros.resx">
       <DependentUpon>frmcFiltros.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\frmcHistorialMonitoreo.resx">
+      <DependentUpon>frmcHistorialMonitoreo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\frmcHistorialPacking.resx">
+      <DependentUpon>frmcHistorialPacking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\frmcHistorialAsistencia.resx">
+      <DependentUpon>frmcHistorialAsistencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\frmcInfoMaquinaParada.resx">
+      <DependentUpon>frmcInfoMaquinaParada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\frmcMaqParada.resx">
+      <DependentUpon>frmcMaqParada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\frmcMonitoreoMaquinas.resx">
+      <DependentUpon>frmcMonitoreoMaquinas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\frmcPruebasCalidad.resx">
+      <DependentUpon>frmcPruebasCalidad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consultas\frmcOrdenProduccion.resx">
       <DependentUpon>frmcOrdenProduccion.cs</DependentUpon>
     </EmbeddedResource>
@@ -411,6 +598,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\frmcProductosDpto.resx">
       <DependentUpon>frmcProductosDpto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\frmcHoraExtra.resx">
+      <DependentUpon>frmcHoraExtra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controles\textboxceros.resx">
       <DependentUpon>textboxceros.cs</DependentUpon>
@@ -441,23 +631,59 @@
     <EmbeddedResource Include="Registros\frmCategoria.resx">
       <DependentUpon>frmCategoria.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Registros\frmControlAlm.resx">
+      <DependentUpon>frmControlAlm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros\frmControlCalidad.resx">
+      <DependentUpon>frmControlCalidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros\frmDiasFeriados.resx">
+      <DependentUpon>frmDiasFeriados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Registros\frmEditarInvPuas.resx">
       <DependentUpon>frmEditarInvPuas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registros\frmEditarInvPuas1.resx">
       <DependentUpon>frmEditarInvPuas1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Registros\frmAsignarTurno.resx">
+      <DependentUpon>frmAsignarTurno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros\frmAttControl.resx">
+      <DependentUpon>frmAttControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros\frmHoraExtra.resx">
+      <DependentUpon>frmHoraExtra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Registros\frmMaquinaPuas.resx">
       <DependentUpon>frmMaquinaPuas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros\frmMaquinasParadas.resx">
+      <DependentUpon>frmMaquinasParadas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registros\frmOrdenProduccion.resx">
       <DependentUpon>frmOrdenProduccion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Registros\frmPackingList.resx">
+      <DependentUpon>frmPackingList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros\frmPedido.resx">
+      <DependentUpon>frmPedido.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Registros\frmPermisos.resx">
       <DependentUpon>frmPermisos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Registros\frmPonche.resx">
+      <DependentUpon>frmPonche.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Registros\frmProduccionGalv.resx">
       <DependentUpon>frmProduccionGalv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros\frmProductoClienteLongitud.resx">
+      <DependentUpon>frmProductoClienteLongitud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros\frmResolverMaqParada.resx">
+      <DependentUpon>frmResolverMaqParada.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registros\frmUsuario.resx">
       <DependentUpon>frmUsuario.cs</DependentUpon>
@@ -519,6 +745,51 @@
     <EmbeddedResource Include="Registros\frmUnidad.resx">
       <DependentUpon>frmUnidad.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\certificado_calidad - Copy.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\cierre_general_kinnox.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\graficos_maq_parada_dpto.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\filtrar_prod_resumido.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\historial_asistencia.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\horas_extra.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\packing_list_kinnox.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\reporte_kinnox.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\salida_inventario.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\entrada_inventario.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\inventario_resumido.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\inventario_detallado.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\historial_produccion.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\graficos_certificado_cald.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\certificado_calidad.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\cierre_general.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -576,6 +847,12 @@
     <EmbeddedResource Include="Reportes\filtrar_prod_detalle.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\packing_list_local.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\packing_list.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\procesos.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -588,22 +865,38 @@
     <EmbeddedResource Include="Reportes\reporte_terminados.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\ticket_trefilado2.rdlc">
+    <EmbeddedResource Include="Reportes\ticket_galvanizado - Copy.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ticket_galvanizado4.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ticket_galvanizado_steel.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ticket_galvanizado.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ticket_galvanizado2.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\ticket_trefilado.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ticket_trefilado2.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Splash.resx">
       <DependentUpon>Splash.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Interfaz_TemporaryKey.pfx" />
     <None Include="PRODUCCIONDataSet.xsc">
       <DependentUpon>PRODUCCIONDataSet.xsd</DependentUpon>
     </None>
     <None Include="PRODUCCIONDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>PRODUCCIONDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>PRODUCCIONDataSet1.Designer.cs</LastGenOutput>
     </None>
     <None Include="PRODUCCIONDataSet.xss">
       <DependentUpon>PRODUCCIONDataSet.xsd</DependentUpon>
@@ -628,8 +921,55 @@
       <Project>{4e0725ac-09c9-4a4e-8946-c8db6777ff14}</Project>
       <Name>Intermedia</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TempSys\TempSys.csproj">
+      <Project>{40f94533-da05-4686-9c9d-fb57a0910d21}</Project>
+      <Name>TempSys</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\timeline.png" />
+    <None Include="Resources\fingerprint-scanner.png" />
+    <None Include="Resources\calendar.png" />
+    <None Include="Resources\wall-calendar.png" />
+    <None Include="Resources\document.png" />
+    <None Include="Resources\file.png" />
+    <None Include="Resources\file %281%29.png" />
+    <None Include="Resources\power.png" />
+    <None Include="Resources\power-button.png" />
+    <None Include="Resources\tap.png" />
+    <None Include="Resources\hospital.png" />
+    <None Include="Resources\settings %281%29.png" />
+    <None Include="Resources\time %281%29.png" />
+    <None Include="Resources\history.png" />
+    <None Include="Resources\time.png" />
+    <None Include="Resources\hired.png" />
+    <None Include="Resources\clock.png" />
+    <None Include="Resources\repairing.png" />
+    <None Include="Resources\technics.png" />
+    <None Include="Resources\3d-printing-software.png" />
+    <None Include="Resources\gauge %281%293.png" />
+    <None Include="Resources\gauge %281%292.png" />
+    <None Include="Resources\gauge %281%291.png" />
+    <None Include="Resources\gauge %281%29.png" />
+    <None Include="Resources\refresh-button %281%29.png" />
+    <None Include="Resources\exportar %281%29.png" />
+    <None Include="Resources\exportar.png" />
+    <None Include="Resources\visualizacion.png" />
+    <None Include="Resources\la-busqueda-de-empleo.png" />
+    <None Include="Resources\soporte-de-red-de-trabajo.png" />
+    <None Include="Resources\trabajador-de-ordenador-en-vista-posterior.png" />
+    <None Include="Resources\almacen %281%29.png" />
+    <None Include="Resources\almacen.png" />
+    <None Include="Resources\disquete %282%29.png" />
+    <None Include="Resources\disquete %281%29.png" />
+    <None Include="Resources\trade_report_reports_documents_2351.png" />
+    <None Include="Resources\business_ordering_pencil_table_2333.png" />
+    <None Include="Resources\texto-de-periodico.png" />
+    <None Include="Resources\buscar-en-carpeta.png" />
+    <None Include="Resources\persona-que-utiliza-una-impresora-3d-en-monitor-de-ordenador.png" />
+    <None Include="Resources\analytics-grafico-en-pantalla.png" />
+    <None Include="Resources\circle_ok.png" />
+    <None Include="Resources\circle_error.png" />
     <None Include="Resources\page_edit.png" />
     <None Include="Resources\edit.ico" />
     <None Include="Resources\imagen.jpg" />
@@ -658,9 +998,35 @@
     <None Include="Recursos\Circle2.png" />
     <None Include="Recursos\Bollino_rosso_converted.png" />
     <None Include="Recursos\forward %282%29.ico" />
+    <Content Include="icono.ico" />
     <Content Include="Recursos\icono.ico" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="zkemkeeper">
+      <Guid>{FE9DED34-E159-408E-8490-B720A5E632C7}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

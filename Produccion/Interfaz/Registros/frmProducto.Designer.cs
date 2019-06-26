@@ -43,14 +43,6 @@
             this.btnactivar = new System.Windows.Forms.Button();
             this.btnregistrar = new System.Windows.Forms.Button();
             this.dtgvProducto = new System.Windows.Forms.DataGridView();
-            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.unidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.peso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.calibre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.grosor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estado = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
@@ -237,6 +229,8 @@
             // 
             this.dtgvProducto.AllowUserToAddRows = false;
             this.dtgvProducto.AllowUserToDeleteRows = false;
+            this.dtgvProducto.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dtgvProducto.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dtgvProducto.BackgroundColor = System.Drawing.Color.White;
             this.dtgvProducto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgvProducto.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -249,15 +243,6 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtgvProducto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgvProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvProducto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.codigo,
-            this.descripcion,
-            this.unidad,
-            this.peso,
-            this.categoria,
-            this.calibre,
-            this.grosor,
-            this.estado});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -275,70 +260,6 @@
             this.dtgvProducto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgvProducto.Size = new System.Drawing.Size(513, 183);
             this.dtgvProducto.TabIndex = 48;
-            // 
-            // codigo
-            // 
-            this.codigo.FillWeight = 50F;
-            this.codigo.HeaderText = "Código";
-            this.codigo.Name = "codigo";
-            this.codigo.ReadOnly = true;
-            this.codigo.Width = 140;
-            // 
-            // descripcion
-            // 
-            this.descripcion.FillWeight = 99.49239F;
-            this.descripcion.HeaderText = "Descripción";
-            this.descripcion.Name = "descripcion";
-            this.descripcion.ReadOnly = true;
-            this.descripcion.Width = 260;
-            // 
-            // unidad
-            // 
-            this.unidad.FillWeight = 40F;
-            this.unidad.HeaderText = "Unidad";
-            this.unidad.Name = "unidad";
-            this.unidad.ReadOnly = true;
-            this.unidad.Width = 66;
-            // 
-            // peso
-            // 
-            this.peso.HeaderText = "PesoLBS";
-            this.peso.Name = "peso";
-            this.peso.ReadOnly = true;
-            this.peso.Width = 50;
-            // 
-            // categoria
-            // 
-            this.categoria.HeaderText = "Categoria";
-            this.categoria.Name = "categoria";
-            this.categoria.ReadOnly = true;
-            this.categoria.Width = 73;
-            // 
-            // calibre
-            // 
-            this.calibre.FillWeight = 60F;
-            this.calibre.HeaderText = "Calibre";
-            this.calibre.Name = "calibre";
-            this.calibre.ReadOnly = true;
-            this.calibre.Width = 64;
-            // 
-            // grosor
-            // 
-            this.grosor.FillWeight = 80F;
-            this.grosor.HeaderText = "Grosor";
-            this.grosor.Name = "grosor";
-            this.grosor.ReadOnly = true;
-            this.grosor.Width = 63;
-            // 
-            // estado
-            // 
-            this.estado.FillWeight = 40F;
-            this.estado.HeaderText = "Estado";
-            this.estado.Name = "estado";
-            this.estado.ReadOnly = true;
-            this.estado.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.estado.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.estado.Width = 65;
             // 
             // label2
             // 
@@ -692,13 +613,5 @@
         private System.Windows.Forms.Label label12;
         private Controles.textboxN txtfactor;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn unidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn peso;
-        private System.Windows.Forms.DataGridViewTextBoxColumn categoria;
-        private System.Windows.Forms.DataGridViewTextBoxColumn calibre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn grosor;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn estado;
     }
 }

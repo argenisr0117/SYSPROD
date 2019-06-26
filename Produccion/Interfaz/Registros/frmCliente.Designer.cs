@@ -29,33 +29,31 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCliente));
             this.cmbDestino = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtNombre = new Interfaz.Controles.textbox(this.components);
             this.cmbDpto = new System.Windows.Forms.ComboBox();
             this.cbestado = new System.Windows.Forms.ComboBox();
             this.btneditar = new System.Windows.Forms.Button();
             this.btnsalir = new System.Windows.Forms.Button();
             this.btnactivar = new System.Windows.Forms.Button();
             this.btnregistrar = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.dtgvCliente = new System.Windows.Forms.DataGridView();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.destino = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dpto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.departamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigodpto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estado = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvCliente)).BeginInit();
+            this.txtNombre = new Interfaz.Controles.textbox(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvCliente)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbDestino
@@ -76,11 +74,11 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.White;
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(12, 118);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(49, 15);
+            this.label7.Size = new System.Drawing.Size(47, 13);
             this.label7.TabIndex = 62;
             this.label7.Text = "Destino";
             // 
@@ -111,24 +109,13 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.DarkRed;
-            this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label4.Location = new System.Drawing.Point(108, 9);
+            this.label4.Location = new System.Drawing.Point(114, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(214, 26);
+            this.label4.Size = new System.Drawing.Size(214, 30);
             this.label4.TabIndex = 59;
             this.label4.Text = "REGISTRO CLIENTES";
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.BackColor = System.Drawing.Color.White;
-            this.txtNombre.ForeColor = System.Drawing.Color.Black;
-            this.txtNombre.Location = new System.Drawing.Point(98, 65);
-            this.txtNombre.Multiline = true;
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(256, 20);
-            this.txtNombre.TabIndex = 0;
-            this.txtNombre.Validar = true;
             // 
             // cmbDpto
             // 
@@ -230,81 +217,86 @@
             this.btnregistrar.UseVisualStyleBackColor = false;
             this.btnregistrar.Click += new System.EventHandler(this.btnregistrar_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(12, 65);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(51, 13);
+            this.label2.TabIndex = 54;
+            this.label2.Text = "Nombre ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(12, 91);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 13);
+            this.label1.TabIndex = 64;
+            this.label1.Text = "Departamento";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // dtgvCliente
             // 
             this.dtgvCliente.AllowUserToAddRows = false;
             this.dtgvCliente.AllowUserToDeleteRows = false;
-            this.dtgvCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            this.dtgvCliente.BackgroundColor = System.Drawing.Color.White;
-            this.dtgvCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dtgvCliente.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dtgvCliente.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvCliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dtgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dtgvCliente.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dtgvCliente.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dtgvCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codigo,
             this.nombre,
             this.destino,
-            this.dpto,
+            this.departamento,
             this.codigodpto,
             this.estado});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.IndianRed;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgvCliente.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtgvCliente.Location = new System.Drawing.Point(15, 156);
             this.dtgvCliente.MultiSelect = false;
             this.dtgvCliente.Name = "dtgvCliente";
             this.dtgvCliente.ReadOnly = true;
-            this.dtgvCliente.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dtgvCliente.RowHeadersWidth = 20;
             this.dtgvCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgvCliente.Size = new System.Drawing.Size(339, 147);
-            this.dtgvCliente.TabIndex = 52;
+            this.dtgvCliente.TabIndex = 65;
             // 
             // codigo
             // 
-            this.codigo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.codigo.FillWeight = 50F;
             this.codigo.HeaderText = "Código";
             this.codigo.Name = "codigo";
             this.codigo.ReadOnly = true;
             this.codigo.Visible = false;
+            this.codigo.Width = 65;
             // 
             // nombre
             // 
-            this.nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.nombre.FillWeight = 120F;
             this.nombre.HeaderText = "Nombre";
             this.nombre.Name = "nombre";
             this.nombre.ReadOnly = true;
-            this.nombre.Width = 69;
+            this.nombre.Width = 73;
             // 
             // destino
             // 
             this.destino.HeaderText = "Destino";
             this.destino.Name = "destino";
             this.destino.ReadOnly = true;
-            this.destino.Width = 68;
+            this.destino.Width = 72;
             // 
-            // dpto
+            // departamento
             // 
-            this.dpto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dpto.FillWeight = 70F;
-            this.dpto.HeaderText = "Departamento";
-            this.dpto.Name = "dpto";
-            this.dpto.ReadOnly = true;
-            this.dpto.Width = 99;
+            this.departamento.HeaderText = "Departamento";
+            this.departamento.Name = "departamento";
+            this.departamento.ReadOnly = true;
+            this.departamento.Width = 106;
             // 
             // codigodpto
             // 
@@ -316,49 +308,29 @@
             // 
             // estado
             // 
-            this.estado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.estado.FillWeight = 40F;
             this.estado.HeaderText = "Estado";
             this.estado.Name = "estado";
             this.estado.ReadOnly = true;
-            this.estado.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.estado.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.estado.Width = 65;
+            this.estado.Visible = false;
+            this.estado.Width = 46;
             // 
-            // label2
+            // txtNombre
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(12, 65);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 15);
-            this.label2.TabIndex = 54;
-            this.label2.Text = "Nombre ";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(12, 91);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 15);
-            this.label1.TabIndex = 64;
-            this.label1.Text = "Departamento";
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
+            this.txtNombre.BackColor = System.Drawing.Color.White;
+            this.txtNombre.ForeColor = System.Drawing.Color.Black;
+            this.txtNombre.Location = new System.Drawing.Point(98, 65);
+            this.txtNombre.Multiline = true;
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(256, 20);
+            this.txtNombre.TabIndex = 0;
+            this.txtNombre.Validar = true;
             // 
             // frmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(443, 325);
+            this.Controls.Add(this.dtgvCliente);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbDestino);
             this.Controls.Add(this.label7);
@@ -372,17 +344,17 @@
             this.Controls.Add(this.btnsalir);
             this.Controls.Add(this.btnactivar);
             this.Controls.Add(this.btnregistrar);
-            this.Controls.Add(this.dtgvCliente);
             this.Controls.Add(this.label2);
             this.DoubleBuffered = true;
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmCliente_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvCliente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvCliente)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -402,14 +374,14 @@
         private System.Windows.Forms.Button btnsalir;
         private System.Windows.Forms.Button btnactivar;
         private System.Windows.Forms.Button btnregistrar;
-        private System.Windows.Forms.DataGridView dtgvCliente;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.DataGridView dtgvCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn destino;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dpto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn departamento;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigodpto;
         private System.Windows.Forms.DataGridViewCheckBoxColumn estado;
     }

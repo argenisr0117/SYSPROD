@@ -19,6 +19,7 @@ namespace Interfaz
             InitializeComponent();
         }
         string form;
+        int inactivo = 0;
         private void Principal_Load(object sender, EventArgs e)
         {
             Permisos();
@@ -39,6 +40,11 @@ namespace Interfaz
         private void timer1_Tick(object sender, EventArgs e)
         {
             ObtenerHora();
+            inactivo = inactivo + 1;
+            if (inactivo > 1500)
+            {
+                Application.Exit();
+            }
         }
 
         private void btnregistros_Click(object sender, EventArgs e)
@@ -58,6 +64,15 @@ namespace Interfaz
             btnTrefilado.Enabled = Program.prodtref;
             btnIndustriaMenor.Enabled = Program.prodindm;
             btnOrden.Enabled = Program.ordenprod;
+            btnPruebasCalidad.Enabled = Program.controlcald;
+            btnVerPruebasCald.Enabled = Program.vcontrolcald;
+            btnAlmacenIntermedios.Enabled = Program.almintermedios;
+            btnAlmacenTerminados.Enabled = Program.almterminados;
+            btnAlmacenLineaGalv.Enabled = Program.almlg;
+            btnMonitoreomaq.Enabled = Program.monmaq;
+            btnTemperatura.Enabled = Program.montemp;
+            btnRegHoras.Enabled = Program.reghora;
+            btnMaquinasParadas.Enabled = Program.maqpar;
         }
         private void AbrirForm(string form)
         {
@@ -104,6 +119,41 @@ namespace Interfaz
                 if (form == "frmcOrdenProduccion")
                 {
                     Consultas.frmcOrdenProduccion obj = new Consultas.frmcOrdenProduccion();
+                    obj.Show();
+                }
+                if (form == "frmControlCalidad")
+                {
+                    frmControlCalidad obj = new frmControlCalidad();
+                    obj.Show();
+                }
+                if (form == "frmcPruebasCalidad")
+                {
+                    Consultas.frmcPruebasCalidad obj = new Consultas.frmcPruebasCalidad();
+                    obj.Show();
+                }
+                if (form == "frmControlAlm")
+                {
+                    frmControlAlm obj = new frmControlAlm();
+                    obj.Show();
+                }
+                if (form == "MainForm")
+                {
+                    TempSys.MainForm obj = new TempSys.MainForm();
+                    obj.Show();
+                }
+                if (form == "frmcMonitoreoMaquinas")
+                {
+                    Consultas.frmcMonitoreoMaquinas obj = new Consultas.frmcMonitoreoMaquinas();
+                    obj.Show();
+                }
+                if (form == "frmMaquinasParadas")
+                {
+                    frmMaquinasParadas obj = new frmMaquinasParadas();
+                    obj.Show();
+                }
+                if (form == "frmPonche")
+                {
+                    frmPonche obj = new frmPonche();
                     obj.Show();
                 }
             }
@@ -156,6 +206,68 @@ namespace Interfaz
         {
             form = "frmcOrdenProduccion";
             AbrirForm(form);
+        }
+
+        private void btnPruebasCalidad_Click(object sender, EventArgs e)
+        {
+            form = "frmControlCalidad";
+            AbrirForm(form);
+        }
+
+        private void btnVerPruebasCald_Click(object sender, EventArgs e)
+        {
+            form = "frmcPruebasCalidad";
+            AbrirForm(form);
+        }
+
+        private void btnAlmacenIntermedios_Click(object sender, EventArgs e)
+        {
+            Program.Almacen = "INTERMEDIOS";
+            form = "frmControlAlm";
+            AbrirForm(form);
+        }
+
+        private void btnAlmacenTerminados_Click(object sender, EventArgs e)
+        {
+            Program.Almacen = "TERMINADOS";
+            form = "frmControlAlm";
+            AbrirForm(form);
+        }
+
+        private void btnAlmacenLineaGalv_Click(object sender, EventArgs e)
+        {
+            Program.Almacen = "LINEA GALV";
+            form = "frmControlAlm";
+            AbrirForm(form);
+        }
+
+        private void btnTemperatura_Click(object sender, EventArgs e)
+        {
+            form = "MainForm";
+            AbrirForm(form);
+        }
+
+        private void btnMonitoreomaq_Click(object sender, EventArgs e)
+        {
+            form = "frmcMonitoreoMaquinas";
+            AbrirForm(form);
+        }
+
+        private void btnMaquinasParadas_Click(object sender, EventArgs e)
+        {
+            form = "frmMaquinasParadas";
+            AbrirForm(form);
+        }
+
+        private void btnRegHoras_Click(object sender, EventArgs e)
+        {
+            form = "frmPonche";
+            AbrirForm(form);
+        }
+
+        private void Principal_MouseMove(object sender, MouseEventArgs e)
+        {
+            inactivo = 0;
         }
     }
 }

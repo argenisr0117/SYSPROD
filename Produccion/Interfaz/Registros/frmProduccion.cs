@@ -1,17 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Intermedia;
 using DevComponents.DotNetBar.Metro;
 using DevComponents.DotNetBar;
-using System.Globalization;
-using System.Threading;
 
 namespace Interfaz.Registros
 {
@@ -23,10 +16,14 @@ namespace Interfaz.Registros
         clsProducto P = new clsProducto();
         clsTurno T = new clsTurno();
         clsProduccion Pr = new clsProduccion();
+        clsControlAlmacen Ca = new clsControlAlmacen();
         public BindingSource bs = new BindingSource();
         public DataTable dt = new DataTable();
         public DataTable dt1 = new DataTable();
         public DataTable dt3 = new DataTable();
+        public double acerado = 0;
+        public double galvanizado = 0;
+        public double recocido = 0;
         public frmProduccion()
         {
             InitializeComponent();
@@ -66,7 +63,7 @@ namespace Interfaz.Registros
                 cboperador.DisplayMember = "NOMBRE";
                 cboperador.ValueMember = "ID_EMPLEADO";
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBoxEx.Show(ex.Message);
             }
@@ -79,21 +76,21 @@ namespace Interfaz.Registros
                 cbayudante.DisplayMember = "NOMBRE";
                 cbayudante.ValueMember = "ID_EMPLEADO";
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBoxEx.Show(ex.Message);
             }
-           
+
         }
         private void ComboM()
         {
             try
-            { 
-            cbmaquina.DataSource = M.Listar(true);
-            cbmaquina.DisplayMember = "ID_MAQUINA";
-            cbmaquina.ValueMember = "ID_MAQUINA";
+            {
+                cbmaquina.DataSource = M.Listar(true);
+                cbmaquina.DisplayMember = "DESCRIPCION";
+                cbmaquina.ValueMember = "ID_MAQUINA";
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBoxEx.Show(ex.Message);
             }
@@ -182,7 +179,7 @@ namespace Interfaz.Registros
             ComboT();
             cbturno.SelectedValue = "";
             ComboP();
-            cbproducto.SelectedValue ="";
+            cbproducto.SelectedValue = "";
             dtgvproduccion.MouseWheel += new MouseEventHandler(dtgvproduccion_MouseWheel);
             tabControl.MouseWheel += new MouseEventHandler(tabControl1_MouseWheel);
             //tabregistro.KeyPress += new KeyPressEventHandler (tabregistro_KeyPress);
@@ -203,7 +200,7 @@ namespace Interfaz.Registros
             //string valu = cbproducto.SelectedValue.ToString();
             try
             {
-                if (cbproducto.Text=="System.Data.DataRowView")
+                if (cbproducto.Text == "System.Data.DataRowView")
                 {
                     return;
                 }
@@ -215,39 +212,12 @@ namespace Interfaz.Registros
                     lbdescripcion.Text = buscar[0]["DESCRIPCION"].ToString();
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 ex.ToString();
             }
         }
-        //void tabregistro_KeyPress(object sender, KeyPressEventArgs e)
-        //{
-        //    try
-        //    {
-        //        if (Program.Valor == 1)
-        //        {
-        //            if (e.KeyChar == (char)Keys.Enter)
-        //            {
-        //                BuscarRegistros();
-        //            }
-        //            else
-        //            {
-        //                return;
-        //            }
-        //        }
-        //        else
-        //        {
-        //            return;
-        //        }
-        //    }
-        //    catch(Exception ex)
-        //    {
-        //        MessageBoxEx.Show(ex.Message);
-        //    }
-        //    ContarRegistros();
-        //    tabregistro.Focus();
 
-        //}
         void dtgvproduccion_MouseWheel(object sender, MouseEventArgs e)
         {
             if (e.Delta < 0)
@@ -281,11 +251,11 @@ namespace Interfaz.Registros
                     return;
                 }
                 else
-                {  
+                {
                     btnimportar.Enabled = false;
                     lbdescripcion.Visible = true;
                     dtgvproduccion.DataSource = null;
-                    dtpfecha.DataBindings.Clear();
+                    dtpFecha1.DataBindings.Clear();
                     cbsupervisor.DataBindings.Clear();
                     cboperador.DataBindings.Clear();
                     cbayudante.DataBindings.Clear();
@@ -301,7 +271,7 @@ namespace Interfaz.Registros
                     for (int x = 0; x < dtgvproduccion.Rows.Count; x++)
                     {
                         Pr.Fecha = Convert.ToDateTime(dtgvproduccion.Rows[x].Cells[0].Value);
-                        Pr.Hora =TimeSpan.Parse(dtgvproduccion.Rows[x].Cells[1].Value.ToString()); 
+                        Pr.Hora = TimeSpan.Parse(dtgvproduccion.Rows[x].Cells[1].Value.ToString());
                         Pr.Supervisor = dtgvproduccion.Rows[x].Cells[2].Value.ToString();
                         Pr.Operador = dtgvproduccion.Rows[x].Cells[3].Value.ToString();
                         Pr.Ayudante = dtgvproduccion.Rows[x].Cells[4].Value.ToString();
@@ -321,7 +291,7 @@ namespace Interfaz.Registros
                     bs.DataSource = dt;
                     dtgvproduccion.DataSource = bs;
                     tabControl.SelectedTab = tablistado;
-                    dtpfecha.DataBindings.Add("Text", bs, "FECHA");
+                    dtpFecha1.DataBindings.Add("Text", bs, "FECHA");
                     cbsupervisor.DataBindings.Add("SelectedValue", bs, "SUPERVISOR", true);
                     cboperador.DataBindings.Add("selectedvalue", bs, "OPERADOR");
                     cbayudante.DataBindings.Add("selectedvalue", bs, "AYUDANTE");
@@ -342,9 +312,9 @@ namespace Interfaz.Registros
         private void LlenarGrid()
         {
             dtgvproduccion.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 7);
-            dtgvproduccion.DefaultCellStyle.Font= new Font("Microsoft Sans Serif", 8);
+            dtgvproduccion.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 8);
             dt = Pr.MostrarRegistros();
-            if(dt.Rows.Count>0)
+            if (dt.Rows.Count > 0)
             {
                 dt.Columns[0].ColumnName = "FECHA";
                 dt.Columns[1].ColumnName = "HORA";
@@ -364,22 +334,9 @@ namespace Interfaz.Registros
             {
                 return;
             }
-            
+
         }
-        //private string[,] LlenarArray()
-        //{
-        //    int tamf = dtgvproduccion.Rows.Count;
-        //    int tamc = dtgvproduccion.ColumnCount;
-        //    string[,] datos = new string[tamf, tamc];
-        //    for (int f = 0; f < tamf; f++)
-        //    {
-        //        for (int c = 0; c < tamc; c++)
-        //        {
-        //            datos[f, c] = dtgvproduccion.Rows[f].Cells[c].Value.ToString();
-        //        }
-        //    }
-        //    return datos;
-        //}
+
         private void btneliminar1_Click(object sender, EventArgs e)
         {
             if (dtgvproduccion.SelectedRows.Count > 0)
@@ -412,7 +369,7 @@ namespace Interfaz.Registros
                     DialogResult var = MessageBoxEx.Show("¿Desea eliminar todos los registros?", "Sistema de Producción", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (var == DialogResult.Yes)
                     {
-                        Pr.EliminarRegistros(txtreporte.Text,0);
+                        Pr.EliminarRegistros(txtreporte.Text, 0);
                         Limpiar();
                         SecuenciaReporte();
                     }
@@ -422,7 +379,7 @@ namespace Interfaz.Registros
                     MessageBoxEx.Show("No hay registros para eliminar!", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBoxEx.Show(ex.Message);
             }
@@ -430,20 +387,10 @@ namespace Interfaz.Registros
             btnimportar.Enabled = true;
 
         }
-        private void cbsupervisor_SelectedValueChanged(object sender, EventArgs e)
-        {
-            //lbsupervisor.Text = cbsupervisor.SelectedValue.ToString();
-            //tabregistro.Focus();
-        }
-
-        private void dtpfecha_ValueChanged(object sender, EventArgs e)
-        {
-            tabregistro.Focus();
-        }
 
         private void tabregistro_MouseEnter(object sender, EventArgs e)
         {
-            if(Program.Valor==0)
+            if (Program.Valor == 0)
             {
                 tabregistro.Focus();
             }
@@ -451,12 +398,12 @@ namespace Interfaz.Registros
             {
                 tabregistro.Focus();
             }
-          
+
         }
 
         private void btneliminar_Click(object sender, EventArgs e)
         {
-            if(dtgvproduccion.Rows.Count>0)
+            if (dtgvproduccion.Rows.Count > 0)
             {
                 DialogResult var = MessageBoxEx.Show("¿Desea eliminar el registro?", "Sistema de Producción", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (var == DialogResult.Yes)
@@ -467,7 +414,7 @@ namespace Interfaz.Registros
                         Pr.EliminarRegistro(tarjeta);
                         dtgvproduccion.DataSource = null;
                         LlenarGrid();
-                        if (dt.Rows.Count>0)
+                        if (dt.Rows.Count > 0)
                         {
                             LlenarGrid();
                             dtgvproduccion.DataSource = null;
@@ -479,7 +426,7 @@ namespace Interfaz.Registros
                             Limpiar();
                             Limpiar2();
                         }
-                     
+
                     }
                     else
                     {
@@ -503,7 +450,7 @@ namespace Interfaz.Registros
             obj.lbinf.Text = "Doble click para seleccinar";
             obj.lbinf.Visible = true;
             obj.ShowDialog();
-            if(string.IsNullOrEmpty(Program.CodigoP))
+            if (string.IsNullOrEmpty(Program.CodigoP))
             {
                 return;
             }
@@ -517,8 +464,7 @@ namespace Interfaz.Registros
 
         private void cbproducto_SelectedValueChanged(object sender, EventArgs e)
         {
-           //Actualizar();
-           LabelCambia();
+            LabelCambia();
         }
 
         private void btnagregar_Click(object sender, EventArgs e)
@@ -529,112 +475,15 @@ namespace Interfaz.Registros
             {
                 if (obj.ShowDialog() == DialogResult.OK)
                 {
-                    //if (dt.Rows.Count > 0)
-                    //{
-                        MostrarTodos();
-                        //if (dt2.Rows.Count > 0)
-                        //{
-                        //    for (int x = 0; x < dt2.Rows.Count; x++)
-                        //    {
-                        //        TimeSpan ts = new TimeSpan(08, 0, 0);
-                        //        Pr.Fecha =Convert.ToDateTime(dt2.Rows[x][0]);
-                        //        Pr.Hora =ts;
-                        //        Pr.Supervisor = dt2.Rows[x][1].ToString();
-                        //        Pr.Operador = dt2.Rows[x][2].ToString();
-                        //        Pr.Ayudante = dt2.Rows[x][3].ToString();
-                        //        Pr.Turno = dt2.Rows[x][4].ToString();
-                        //        Pr.Tarjeta = dt2.Rows[x][5].ToString();
-                        //        Pr.Maquina = dt2.Rows[x][6].ToString();
-                        //        Pr.Producto = dt2.Rows[x][7].ToString();
-                        //        Pr.Destino = dt2.Rows[x][8].ToString();
-                        //        Pr.Cantidad =Convert.ToDecimal(dt2.Rows[x][9]);
-                        //        Pr.RegistrarProduccion("registrar_produccion");
-                        //    }
-                            //dtpfecha.DataBindings.Clear();
-                            //cbsupervisor.DataBindings.Clear();
-                            //cboperador.DataBindings.Clear();
-                            //cbayudante.DataBindings.Clear();
-                            //cbturno.DataBindings.Clear();
-                            //txttarjeta.DataBindings.Clear();
-                            //cbmaquina.DataBindings.Clear();
-                            //cbproducto.DataBindings.Clear();
-                            //cbdestino.DataBindings.Clear();
-                            //txtcantidad.DataBindings.Clear();
-                            //lbdescripcion.Visible = false;
-
-                            //LlenarGrid();
-                            //bs.DataSource = null;
-                            //dtgvproduccion.DataSource = null;
-                            //bs.DataSource = dt;
-                            //dtgvproduccion.DataSource = bs;
-                            //tabControl1.SelectedTab = tablistado;
-                            //dtpfecha.DataBindings.Add("Text", bs, "FECHA");
-                            //cbsupervisor.DataBindings.Add("SelectedValue", bs, "SUPERVISOR", true);
-                            //cboperador.DataBindings.Add("selectedvalue", bs, "OPERADOR");
-                            //cbayudante.DataBindings.Add("selectedvalue", bs, "AYUDANTE");
-                            //cbturno.DataBindings.Add("selectedvalue", bs, "TURNO");
-                            //txttarjeta.DataBindings.Add("Text", bs, "TARJETA");
-                            //cbmaquina.DataBindings.Add("selectedvalue", bs, "MÁQUINA");
-                            //cbproducto.DataBindings.Add("selectedvalue", bs, "PRODUCTO");
-                            //cbdestino.DataBindings.Add("selectedvalue", bs, "DESTINO");
-                            //txtcantidad.DataBindings.Add("Text", bs, "CANTIDAD");
-                        //}
-                    //}
-                    //else
-                    //{
-                        //if(dt3.Columns.Count==0)
-                        //{
-                        //    btnimportar.Enabled = false;
-                        //    dt3.Columns.Add("FECHA");
-                        //    dt3.Columns.Add("SUPERVISOR");
-                        //    dt3.Columns.Add("OPERADOR");
-                        //    dt3.Columns.Add("AYUDANTE");
-                        //    dt3.Columns.Add("TURNO");
-                        //    dt3.Columns.Add("TARJETA");
-                        //    dt3.Columns.Add("MÁQUINA");
-                        //    dt3.Columns.Add("PRODUCTO");
-                        //    dt3.Columns.Add("DESTINO");
-                        //    dt3.Columns.Add("CANTIDAD");
-                        //}
-                        //dt2 = obj.dt; 
-                        //for(int x=0;x<dt2.Rows.Count;x++)
-                        //{
-                        //    DataRow nf = dt3.NewRow();
-                        //    nf[0] = dt2.Rows[x][0].ToString();
-                        //    nf[1] = dt2.Rows[x][1].ToString();
-                        //    nf[2] = dt2.Rows[x][2].ToString();
-                        //    nf[3] = dt2.Rows[x][3].ToString();
-                        //    nf[4] = dt2.Rows[x][4].ToString();
-                        //    nf[5] = dt2.Rows[x][5].ToString();
-                        //    nf[6] = dt2.Rows[x][6].ToString();
-                        //    nf[7] = dt2.Rows[x][7].ToString();
-                        //    nf[8] = dt2.Rows[x][8].ToString();
-                        //    nf[9] = dt2.Rows[x][9].ToString();
-                        //    dt3.Rows.Add(nf);
-                        //}
-                        //lbdescripcion.Visible = true;                                         
-                        //bs.DataSource = null;
-                        //bs.DataSource = dt3;
-                        //dtgvproduccion.DataSource = bs;
-                        //dtpfecha.DataBindings.Add("Text", bs, "FECHA");
-                        //cbsupervisor.DataBindings.Add("SelectedValue", bs, "SUPERVISOR", true);
-                        //cboperador.DataBindings.Add("selectedvalue", bs, "OPERADOR");
-                        //cbayudante.DataBindings.Add("selectedvalue", bs, "AYUDANTE");
-                        //cbturno.DataBindings.Add("selectedvalue", bs, "TURNO");
-                        //txttarjeta.DataBindings.Add("Text", bs, "TARJETA");
-                        //cbmaquina.DataBindings.Add("selectedvalue", bs, "MÁQUINA");
-                        //cbproducto.DataBindings.Add("selectedvalue", bs, "PRODUCTO");
-                        //cbdestino.DataBindings.Add("selectedvalue", bs, "DESTINO");
-                        //txtcantidad.DataBindings.Add("Text", bs, "CANTIDAD");
-                    //}
+                    MostrarTodos();
                 }
                 else
                 {
                     return;
                 }
             }
-        
-            catch(Exception ex)
+
+            catch (Exception ex)
             {
                 MessageBoxEx.Show(ex.Message);
             }
@@ -643,7 +492,7 @@ namespace Interfaz.Registros
 
         private void btnregistrar_Click(object sender, EventArgs e)
         {
-            if(btnregistrar.Text=="Registrar")
+            if (btnregistrar.Text == "Registrar")
             {
                 string mensaje = "";
                 DialogResult var;
@@ -681,14 +530,14 @@ namespace Interfaz.Registros
                                     if (mensaje == "2627")
                                     {
                                         MessageBoxEx.Show("La tarjeta " + dtgvproduccion.Rows[x].Cells[7].Value.ToString() + " esta repetida!", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                        Pr.EliminarRegistros(txtreporte.Text,1);
+                                        Pr.EliminarRegistros(txtreporte.Text, 1);
                                         MessageBoxEx.Show("Arregle campos erroneos", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                         break;
                                     }
                                     else if (mensaje == "547")
                                     {
                                         MessageBoxEx.Show("Campos erroneos en la fila con la tarjeta " + dtgvproduccion.Rows[x].Cells[7].Value.ToString(), "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                        Pr.EliminarRegistros(txtreporte.Text,1);
+                                        Pr.EliminarRegistros(txtreporte.Text, 1);
                                         MessageBoxEx.Show("Arregle campos erroneos", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                         break;
                                     }
@@ -706,6 +555,20 @@ namespace Interfaz.Registros
                             {
                                 MessageBoxEx.Show(mensaje, "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 Program.Evento = 0;
+                                btnregistrar.Enabled = false;
+
+                                //////////REGISTRAR PRODUCCION EN ALMACENES//////////
+                                DataTable ca_dt = new DataTable();
+                                ca_dt = Ca.Listar(true);
+                                Ca.Fecha = dtp2.Value;
+                                Ca.Reporte = txtreporte.Text;
+                                Ca.Identrada = 0;
+                                for (int a = 0; a < ca_dt.Rows.Count; a++)
+                                {
+                                    Ca.Idalmacen = Convert.ToInt16(ca_dt.Rows[a][0]);
+                                    Ca.RegistrarEntradaAlmacen();
+                                }
+                                //////////FIN REGISTRAR PRODUCCION EN ALMACENES//////////
                                 //Limpiar();
                             }
 
@@ -782,9 +645,22 @@ namespace Interfaz.Registros
                             }
                             else
                             {
+                                //////////REGISTRAR PRODUCCION EN ALMACENES//////////
+                                DataTable ca_dt = new DataTable();
+                                ca_dt = Ca.Listar(true);
+                                Ca.Fecha = dtp2.Value;
+                                Ca.Reporte = txtreporte.Text;
+                                Ca.Identrada = 0;
+                                for (int a = 0; a < ca_dt.Rows.Count; a++)
+                                {
+                                    Ca.Idalmacen = Convert.ToInt16(ca_dt.Rows[a][0]);
+                                    Ca.RegistrarEntradaAlmacen();
+                                }
+                                //////////FIN REGISTRAR PRODUCCION EN ALMACENES//////////
                                 MessageBoxEx.Show(mensaje, "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 Program.Evento = 0;
                                 //Limpiar();
+
                             }
 
                         }
@@ -804,44 +680,15 @@ namespace Interfaz.Registros
                     MessageBoxEx.Show("No hay registros!", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            
+
             ContarRegistros();
         }
 
         private void generalToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Actualizar();
+            //Actualizar();
             frmReporte obj = new frmReporte();
-            dt1 = Pr.TotalProduccion("Acerados");
-            double acerado;
-            double galvanizado;
-            double recocido;
-            if(string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
-            {
-                acerado = 0.00;
-            }
-            else
-            {
-                acerado = Convert.ToDouble(dt1.Rows[0]["Total"]);
-            }
-            dt1 = Pr.TotalProduccion("Galvanizados");
-            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
-            {
-                galvanizado = 0.00;
-            }
-            else
-            {
-                galvanizado = Convert.ToDouble(dt1.Rows[0]["Total"]);
-            }
-            dt1 = Pr.TotalProduccion("Recocidos");
-            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
-            {
-                recocido = 0.00;
-            }
-            else
-            {
-                recocido = Convert.ToDouble(dt1.Rows[0]["Total"]);
-            }
+            GetReportTotals();
             obj.Valor = 0;
             obj.Acerado = acerado;
             obj.Galvanizado = galvanizado;
@@ -856,38 +703,9 @@ namespace Interfaz.Registros
 
         private void intermediosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Actualizar();
+            //Actualizar();
             frmReporte obj = new frmReporte();
-            dt1 = Pr.TotalProduccion("Acerados");
-            double acerado;
-            double galvanizado;
-            double recocido;
-            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
-            {
-                acerado = 0.00;
-            }
-            else
-            {
-                acerado = Convert.ToDouble(dt1.Rows[0]["Total"]);
-            }
-            dt1 = Pr.TotalProduccion("Galvanizados");
-            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
-            {
-                galvanizado = 0.00;
-            }
-            else
-            {
-                galvanizado = Convert.ToDouble(dt1.Rows[0]["Total"]);
-            }
-            dt1 = Pr.TotalProduccion("Recocidos");
-            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
-            {
-                recocido = 0.00;
-            }
-            else
-            {
-                recocido = Convert.ToDouble(dt1.Rows[0]["Total"]);
-            }
+            GetReportTotals();
             obj.Valor = 0;
             obj.Acerado = acerado;
             obj.Galvanizado = galvanizado;
@@ -902,38 +720,9 @@ namespace Interfaz.Registros
 
         private void terminadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Actualizar();
+            //Actualizar();
             frmReporte obj = new frmReporte();
-            dt1 = Pr.TotalProduccion("Acerados");
-            double acerado;
-            double galvanizado;
-            double recocido;
-            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
-            {
-                acerado = 0.00;
-            }
-            else
-            {
-                acerado = Convert.ToDouble(dt1.Rows[0]["Total"]);
-            }
-            dt1 = Pr.TotalProduccion("Galvanizados");
-            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
-            {
-                galvanizado = 0.00;
-            }
-            else
-            {
-                galvanizado = Convert.ToDouble(dt1.Rows[0]["Total"]);
-            }
-            dt1 = Pr.TotalProduccion("Recocidos");
-            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
-            {
-                recocido = 0.00;
-            }
-            else
-            {
-                recocido = Convert.ToDouble(dt1.Rows[0]["Total"]);
-            }
+            GetReportTotals();
             obj.Valor = 0;
             obj.Acerado = acerado;
             obj.Galvanizado = galvanizado;
@@ -951,7 +740,7 @@ namespace Interfaz.Registros
             dt.Clear();
             //bs.Clear();
             dtgvproduccion.Rows.Clear();
-            dtpfecha.DataBindings.Clear();
+            dtpFecha1.DataBindings.Clear();
             cbsupervisor.DataBindings.Clear();
             cboperador.DataBindings.Clear();
             cbayudante.DataBindings.Clear();
@@ -982,7 +771,7 @@ namespace Interfaz.Registros
             {
                 if (dtgvproduccion.Rows.Count > 0)
                 {
-                    for(int x=0;x<dtgvproduccion.Rows.Count;x++)
+                    for (int x = 0; x < dtgvproduccion.Rows.Count; x++)
                     {
                         Pr.Fecha = Convert.ToDateTime(dtgvproduccion.Rows[x].Cells[0].Value);
                         Pr.Hora = TimeSpan.Parse(dtgvproduccion.Rows[x].Cells[1].Value.ToString());
@@ -995,62 +784,17 @@ namespace Interfaz.Registros
                         Pr.Producto = dtgvproduccion.Rows[x].Cells[9].Value.ToString();
                         Pr.Destino = dtgvproduccion.Rows[x].Cells[10].Value.ToString();
                         Pr.Cantidad = Convert.ToDecimal(dtgvproduccion.Rows[x].Cells[8].Value.ToString());
-                        Pr.Idcliente= Convert.ToInt32(dtgvproduccion.Rows[x].Cells[12].Value.ToString());
+                        Pr.Idcliente = Convert.ToInt32(dtgvproduccion.Rows[x].Cells[12].Value.ToString());
                         Pr.ActualizaRegistros();
                     }
-                 
+
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBoxEx.Show(ex.Message);
             }
-            
-        }
 
-        private void dtpfecha_ValueChanged_1(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void cbsupervisor_SelectedValueChanged_1(object sender, EventArgs e)
-        {
-            //Actualizar();
-        }
-
-        private void cboperador_SelectedValueChanged(object sender, EventArgs e)
-        {
-            //Actualizar();
-        }
-
-        private void cbayudante_SelectedValueChanged(object sender, EventArgs e)
-        {
-            //Actualizar();
-        }
-
-        private void cbturno_SelectedValueChanged(object sender, EventArgs e)
-        {
-            //Actualizar();
-        }
-
-        private void txttarjeta_TextChanged(object sender, EventArgs e)
-        {
-            //Actualizar();
-        }
-
-        private void cbmaquina_SelectedValueChanged(object sender, EventArgs e)
-        {
-            //Actualizar();
-        }
-
-        private void cbdestino_SelectedValueChanged(object sender, EventArgs e)
-        {
-            //Actualizar();
-        }
-
-        private void txtcantidad_TextChanged(object sender, EventArgs e)
-        {
-            //Actualizar();
         }
 
         private void btnbuscar1_Click(object sender, EventArgs e)
@@ -1085,7 +829,7 @@ namespace Interfaz.Registros
                         bs.DataSource = dt;
                         tabControl.SelectedTab = tablistado;
                         dtgvproduccion.DataSource = bs;
-                        dtpfecha.DataBindings.Add("Text", bs, "FECHA");
+                        dtpFecha1.DataBindings.Add("Text", bs, "FECHA");
                         cbsupervisor.DataBindings.Add("SelectedValue", bs, "SUPERVISOR", true);
                         cboperador.DataBindings.Add("selectedvalue", bs, "OPERADOR");
                         cbayudante.DataBindings.Add("selectedvalue", bs, "AYUDANTE");
@@ -1109,7 +853,7 @@ namespace Interfaz.Registros
                     return;
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBoxEx.Show(ex.Message, "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -1118,132 +862,9 @@ namespace Interfaz.Registros
         }
         private void ContarRegistros()
         {
-           label20.Text=dtgvproduccion.Rows.Count.ToString();
+            label20.Text = dtgvproduccion.Rows.Count.ToString();
         }
-        //private void BuscarRegistros()
-        //{
-        //    try
-        //    {
-        //        DataTable dt3 = new DataTable();
-        //        if (dtpfecha.Value != DateTimePicker.MinimumDateTime)
-        //        {
-        //            Pr.Fecha1 = dtpfecha.Value.ToShortDateString();
-        //        }
-        //        else
-        //        {
-        //            Pr.Fecha1 = "";
-        //        }
-        //        if (Convert.ToBoolean(cbsupervisor.SelectedIndex == -1))
-        //        {
-        //            Pr.Supervisor = "";
-        //        }
-        //        else
-        //        {
-        //            Pr.Supervisor = cbsupervisor.SelectedValue.ToString();
-        //        }
-  
-        //        if(Convert.ToBoolean(cboperador.SelectedIndex==-1))
-        //        {
-        //            Pr.Operador = "";
-        //        }
-        //        else
-        //        {
-        //            Pr.Operador = cboperador.SelectedValue.ToString();
-        //        }
-        //        if (Convert.ToBoolean(cbayudante.SelectedIndex == -1))
-        //        {
-        //            Pr.Ayudante = "";
-        //        }
-        //        else
-        //        {
-        //            Pr.Ayudante = cbayudante.SelectedValue.ToString();
-        //        }
-        //        if (Convert.ToBoolean(cbturno.SelectedIndex == -1))
-        //        {
-        //            Pr.Turno = "";
-        //        }
-        //        else
-        //        {
-        //            Pr.Turno = cbturno.SelectedValue.ToString();
-        //        }
-        //        if (Convert.ToBoolean(cbmaquina.SelectedIndex == -1))
-        //        {
-        //            Pr.Maquina = "";
-        //        }
-        //        else
-        //        {
-        //            Pr.Maquina = cbmaquina.SelectedValue.ToString();
-        //        }
-        //        if (Convert.ToBoolean(cbproducto.SelectedIndex == -1))
-        //        {
-        //            Pr.Producto = "";
-        //        }
-        //        else
-        //        {
-        //            Pr.Producto = cbproducto.SelectedValue.ToString();
-        //        }
-        //        if (Convert.ToBoolean(cbdestino.SelectedIndex == -1))
-        //        {
-        //            Pr.Destino = "";
-        //        }
-        //        else
-        //        {
-        //            Pr.Destino = cbdestino.SelectedValue.ToString();
-        //        }
 
-        //        if (string.IsNullOrEmpty(txttarjeta.Text))
-        //        {
-        //            Pr.Tarjeta = "";
-        //        }
-        //        else
-        //        {
-        //            Pr.Tarjeta = txttarjeta.Text;
-        //        }
-        //        Pr.Reporte = txtreporte.Text;
-        //        dt3=Pr.BuscarRegistro();
-        //        if(dt3.Rows.Count>0)
-        //        {
-        //            dt3.Columns[0].ColumnName = "FECHA";
-        //            dt3.Columns[1].ColumnName = "HORA";
-        //            dt3.Columns[2].ColumnName = "SUPERVISOR";
-        //            dt3.Columns[3].ColumnName = "OPERADOR";
-        //            dt3.Columns[4].ColumnName = "AYUDANTE";
-        //            dt3.Columns[5].ColumnName = "TURNO";
-        //            dt3.Columns[7].ColumnName = "TARJETA";
-        //            dt3.Columns[6].ColumnName = "MÁQUINA";
-        //            dt3.Columns[9].ColumnName = "PRODUCTO";
-        //            dt3.Columns[10].ColumnName = "DESTINO";
-        //            dt3.Columns[8].ColumnName = "CANTIDAD";
-        //            dt = dt3;
-        //            bs.DataSource = dt;
-        //            dtgvproduccion.DataSource = bs;
-        //            dtpfecha.DataBindings.Add("Text", bs, "FECHA");
-        //            cbsupervisor.DataBindings.Add("SelectedValue", bs, "SUPERVISOR", true);
-        //            cboperador.DataBindings.Add("selectedvalue", bs, "OPERADOR");
-        //            cbayudante.DataBindings.Add("selectedvalue", bs, "AYUDANTE");
-        //            cbturno.DataBindings.Add("selectedvalue", bs, "TURNO");
-        //            txttarjeta.DataBindings.Add("Text", bs, "TARJETA");
-        //            cbmaquina.DataBindings.Add("selectedvalue", bs, "MÁQUINA");
-        //            cbproducto.DataBindings.Add("selectedvalue", bs, "PRODUCTO");
-        //            cbdestino.DataBindings.Add("selectedvalue", bs, "DESTINO");
-        //            txtcantidad.DataBindings.Add("Text", bs, "CANTIDAD");
-        //            lbdescripcion.Visible = true;
-        //        }
-        //        else
-        //        {
-        //            Program.Valor = 0;
-        //            MessageBoxEx.Show("");
-        //            MessageBoxEx.Show("No se han encontrado registros!", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //            MessageBoxEx.Show("Se mostraran todos.", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //            MostrarTodos();
-        //        }            
-        //    }
-        //    catch(Exception ex)
-        //    {
-        //        MessageBoxEx.Show(ex.Message);
-        //    }
-        //    Program.Valor = 0;
-        //}
         private void btnmostrar_Click(object sender, EventArgs e)
         {
             MostrarTodos();
@@ -1253,12 +874,12 @@ namespace Interfaz.Registros
         {
             Actualizar();
             LlenarGrid();
-            if(dt.Rows.Count>0)
+            if (dt.Rows.Count > 0)
             {
                 bs.DataSource = dt;
                 dtgvproduccion.DataSource = bs;
                 tabControl.SelectedTab = tablistado;
-                dtpfecha.DataBindings.Clear();
+                dtpFecha1.DataBindings.Clear();
                 cbsupervisor.DataBindings.Clear();
                 cboperador.DataBindings.Clear();
                 cbayudante.DataBindings.Clear();
@@ -1268,7 +889,7 @@ namespace Interfaz.Registros
                 cbproducto.DataBindings.Clear();
                 cbdestino.DataBindings.Clear();
                 txtcantidad.DataBindings.Clear();
-                dtpfecha.DataBindings.Add("Text", bs, "FECHA");
+                dtpFecha1.DataBindings.Add("Text", bs, "FECHA");
                 cbsupervisor.DataBindings.Add("SelectedValue", bs, "SUPERVISOR", true);
                 cboperador.DataBindings.Add("selectedvalue", bs, "OPERADOR");
                 cbayudante.DataBindings.Add("selectedvalue", bs, "AYUDANTE");
@@ -1285,43 +906,14 @@ namespace Interfaz.Registros
             {
                 return;
             }
-        
+
         }
 
         private void procesosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Actualizar();
+            //Actualizar();
             frmReporte obj = new frmReporte();
-            dt1 = Pr.TotalProduccion("Acerados");
-            double acerado;
-            double galvanizado;
-            double recocido;
-            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
-            {
-                acerado = 0.00;
-            }
-            else
-            {
-                acerado = Convert.ToDouble(dt1.Rows[0]["Total"]);
-            }
-            dt1 = Pr.TotalProduccion("Galvanizados");
-            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
-            {
-                galvanizado = 0.00;
-            }
-            else
-            {
-                galvanizado = Convert.ToDouble(dt1.Rows[0]["Total"]);
-            }
-            dt1 = Pr.TotalProduccion("Recocidos");
-            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
-            {
-                recocido = 0.00;
-            }
-            else
-            {
-                recocido = Convert.ToDouble(dt1.Rows[0]["Total"]);
-            }
+            GetReportTotals();
             obj.Valor = 0;
             obj.Acerado = acerado;
             obj.Galvanizado = galvanizado;
@@ -1336,38 +928,9 @@ namespace Interfaz.Registros
 
         private void desperdiciosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Actualizar();
+            //Actualizar();
             frmReporte obj = new frmReporte();
-            dt1 = Pr.TotalProduccion("Acerados");
-            double acerado;
-            double galvanizado;
-            double recocido;
-            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
-            {
-                acerado = 0.00;
-            }
-            else
-            {
-                acerado = Convert.ToDouble(dt1.Rows[0]["Total"]);
-            }
-            dt1 = Pr.TotalProduccion("Galvanizados");
-            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
-            {
-                galvanizado = 0.00;
-            }
-            else
-            {
-                galvanizado = Convert.ToDouble(dt1.Rows[0]["Total"]);
-            }
-            dt1 = Pr.TotalProduccion("Recocidos");
-            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
-            {
-                recocido = 0.00;
-            }
-            else
-            {
-                recocido = Convert.ToDouble(dt1.Rows[0]["Total"]);
-            }
+            GetReportTotals();
             obj.Valor = 0;
             obj.Acerado = acerado;
             obj.Galvanizado = galvanizado;
@@ -1382,38 +945,9 @@ namespace Interfaz.Registros
 
         private void lineaGalvanizadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Actualizar();
+            //Actualizar();
             frmReporte obj = new frmReporte();
-            dt1 = Pr.TotalProduccion("Acerados");
-            double acerado;
-            double galvanizado;
-            double recocido;
-            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
-            {
-                acerado = 0.00;
-            }
-            else
-            {
-                acerado = Convert.ToDouble(dt1.Rows[0]["Total"]);
-            }
-            dt1 = Pr.TotalProduccion("Galvanizados");
-            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
-            {
-                galvanizado = 0.00;
-            }
-            else
-            {
-                galvanizado = Convert.ToDouble(dt1.Rows[0]["Total"]);
-            }
-            dt1 = Pr.TotalProduccion("Recocidos");
-            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
-            {
-                recocido = 0.00;
-            }
-            else
-            {
-                recocido = Convert.ToDouble(dt1.Rows[0]["Total"]);
-            }
+            GetReportTotals();
             obj.Valor = 0;
             obj.Acerado = acerado;
             obj.Galvanizado = galvanizado;
@@ -1431,11 +965,11 @@ namespace Interfaz.Registros
             CrearExcel("INTERMEDIOS", "LISTADO INTERMEDIOS");
         }
 
-        private void CrearExcel(string destino,string archivo)
+        private void CrearExcel(string destino, string archivo)
         {
             DataSet ds = new DataSet();
             ds.Tables.Add(Pr.Listado(destino));
-            saveFileDialog1.FileName = archivo+".xlsx";
+            saveFileDialog1.FileName = archivo + ".xlsx";
             saveFileDialog1.Filter = "Excel files (*.xlsx)|*.xlsx|All files (*.*)|*.*";
             saveFileDialog1.FilterIndex = 1;
             saveFileDialog1.RestoreDirectory = true;
@@ -1445,7 +979,7 @@ namespace Interfaz.Registros
             string TargetFilename = saveFileDialog1.FileName;
             try
             {
-                if(Utilidades.CreateExcelDocument(ds, TargetFilename))
+                if (Utilidades.CreateExcelDocument(ds, TargetFilename))
                 {
                     MessageBoxEx.Show("Archivo creado exitosamente", "Sistema de producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -1486,36 +1020,12 @@ namespace Interfaz.Registros
                         txtreporte.Text = dt.Rows[0][11].ToString();
                         MostrarTodos();
                         btnregistrar.Text = "Actualizar";
-                        //bs.DataSource = dt;
-                        //dtgvproduccion.DataSource = bs;
-                        //tabControl.SelectedTab = tablistado;
-                        //dtpfecha.DataBindings.Clear();
-                        //cbsupervisor.DataBindings.Clear();
-                        //cboperador.DataBindings.Clear();
-                        //cbayudante.DataBindings.Clear();
-                        //cbturno.DataBindings.Clear();
-                        //txttarjeta.DataBindings.Clear();
-                        //cbmaquina.DataBindings.Clear();
-                        //cbproducto.DataBindings.Clear();
-                        //cbdestino.DataBindings.Clear();
-                        //txtcantidad.DataBindings.Clear();
-                        //dtpfecha.DataBindings.Add("Text", bs, "FECHA");
-                        //cbsupervisor.DataBindings.Add("SelectedValue", bs, "SUPERVISOR", true);
-                        //cboperador.DataBindings.Add("selectedvalue", bs, "OPERADOR");
-                        //cbayudante.DataBindings.Add("selectedvalue", bs, "AYUDANTE");
-                        //cbturno.DataBindings.Add("selectedvalue", bs, "TURNO");
-                        //txttarjeta.DataBindings.Add("Text", bs, "TARJETA");
-                        //cbmaquina.DataBindings.Add("selectedvalue", bs, "MÁQUINA");
-                        //cbproducto.DataBindings.Add("selectedvalue", bs, "PRODUCTO");
-                        //cbdestino.DataBindings.Add("selectedvalue", bs, "DESTINO");
-                        //txtcantidad.DataBindings.Add("Text", bs, "CANTIDAD");
-                        //lbdescripcion.Visible = true;
                         ContarRegistros();
 
                     }
                     else
                     {
-                    MessageBoxEx.Show("No se encontraron registros", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBoxEx.Show("No se encontraron registros", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
                 else
@@ -1523,7 +1033,7 @@ namespace Interfaz.Registros
                     Pr.Fecha1 = dtpdesde.Value;
                     Pr.Fechaf = dtphasta.Value;
                     Pr.Fechaft = Convert.ToDateTime("1/1/1753 12:00:00 AM");
-                    Limpiar();            
+                    Limpiar();
                     bs.DataSource = null;
                     dtgvproduccion.DataSource = null;
                     dt = Pr.BuscarProduccion();
@@ -1533,30 +1043,6 @@ namespace Interfaz.Registros
                         txtreporte.Text = dt.Rows[0][11].ToString();
                         MostrarTodos();
                         btnregistrar.Text = "Actualizar";
-                        //bs.DataSource = dt;
-                        //dtgvproduccion.DataSource = bs;
-                        //tabControl.SelectedTab = tablistado;
-                        //dtpfecha.DataBindings.Clear();
-                        //cbsupervisor.DataBindings.Clear();
-                        //cboperador.DataBindings.Clear();
-                        //cbayudante.DataBindings.Clear();
-                        //cbturno.DataBindings.Clear();
-                        //txttarjeta.DataBindings.Clear();
-                        //cbmaquina.DataBindings.Clear();
-                        //cbproducto.DataBindings.Clear();
-                        //cbdestino.DataBindings.Clear();
-                        //txtcantidad.DataBindings.Clear();
-                        //dtpfecha.DataBindings.Add("Text", bs, "FECHA");
-                        //cbsupervisor.DataBindings.Add("SelectedValue", bs, "SUPERVISOR", true);
-                        //cboperador.DataBindings.Add("selectedvalue", bs, "OPERADOR");
-                        //cbayudante.DataBindings.Add("selectedvalue", bs, "AYUDANTE");
-                        //cbturno.DataBindings.Add("selectedvalue", bs, "TURNO");
-                        //txttarjeta.DataBindings.Add("Text", bs, "TARJETA");
-                        //cbmaquina.DataBindings.Add("selectedvalue", bs, "MÁQUINA");
-                        //cbproducto.DataBindings.Add("selectedvalue", bs, "PRODUCTO");
-                        //cbdestino.DataBindings.Add("selectedvalue", bs, "DESTINO");
-                        //txtcantidad.DataBindings.Add("Text", bs, "CANTIDAD");
-                        //lbdescripcion.Visible = true;
                         ContarRegistros();
 
                     }
@@ -1569,6 +1055,63 @@ namespace Interfaz.Registros
             else
             {
                 MessageBoxEx.Show("Fecha inicial mayor que Fecha final", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void lISTADOLINEAGALVToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CrearExcel("LINEA GALV", "LISTADO LINEA GALVANIZADO");
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            Actualizar();
+        }
+
+        private void kINNOXToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReporte obj = new frmReporte();
+            GetReportTotals();
+            obj.Valor = 0;
+            obj.Acerado = acerado;
+            obj.Galvanizado = galvanizado;
+            obj.Recocido = recocido;
+            obj.NoReporte = txtreporte.Text;
+            obj.Fecha = dtp2.Value;
+            obj.Nombre = "reporte_kinnox.rdlc";
+            obj.Destino = "Kinnox";
+            obj.Reporte = "REPORTE KINNOX";
+            obj.Show();
+        }
+
+        private void GetReportTotals()
+        {
+            dt1 = Pr.TotalProduccion("Alambres Acerados");
+            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
+            {
+                acerado = 0.00;
+            }
+            else
+            {
+                acerado = Convert.ToDouble(dt1.Rows[0]["Total"]);
+            }
+            dt1 = Pr.TotalProduccion("Alambres Galvanizados");
+            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
+            {
+                galvanizado = 0.00;
+            }
+            else
+            {
+                galvanizado = Convert.ToDouble(dt1.Rows[0]["Total"]);
+            }
+            dt1 = Pr.TotalProduccion("Alambres Recocidos");
+            if (string.IsNullOrEmpty(dt1.Rows[0]["Total"].ToString()))
+            {
+                recocido = 0.00;
+            }
+            else
+            {
+                recocido = Convert.ToDouble(dt1.Rows[0]["Total"]);
             }
         }
     }

@@ -25,10 +25,15 @@ namespace Interfaz.Consultas
 
         private void btnreporte_Click(object sender, EventArgs e)
         {
-            Program.Valor2 = 1;
-            Program.Fechai = dtpdesde.Value;
-            Program.Fechaf = dtphasta.Value;
-            this.Close();
+            if (dtpdesde.Value.Date <= dtphasta.Value.Date)
+            {
+                Program.Valor2 = 1;
+                Program.Fechai = dtpdesde.Value;
+                Program.Fechaf = dtphasta.Value;
+                this.Close();
+            }
+            else return;
+         
         }
     }
 }

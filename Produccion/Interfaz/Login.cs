@@ -23,7 +23,17 @@ namespace Interfaz
         private void Login_Load(object sender, EventArgs e)
         {
             //this.TitleText = "SysPROD";
-            txtUsuario.Focus();
+            txtUsuario.Text = Properties.Settings.Default.Usuario;
+            if (!string.IsNullOrEmpty(txtUsuario.Text))
+            {
+                txtUsuario.TabIndex = 1;
+                txtClave.TabIndex = 0;
+                txtClave.Focus();
+            }
+            else
+            {
+                txtUsuario.Focus();
+            }
             
         }
 
@@ -39,6 +49,7 @@ namespace Interfaz
 
         private void btnAcceder_Click(object sender, EventArgs e)
         {
+            
             errorProvider1.Clear();
             if (Utilidades.ValidarForm(this, errorProvider1) == false)
             {
@@ -68,6 +79,8 @@ namespace Interfaz
                     }
                     else
                     {
+                        Properties.Settings.Default.Usuario = txtUsuario.Text;
+                        Properties.Settings.Default.Save();
                         DataTable dt = new DataTable();
                         U.Idusuario = 0;
                         U.Usuario = txtUsuario.Text;
@@ -101,6 +114,23 @@ namespace Interfaz
                         Program.ordenprod = Convert.ToBoolean(dt.Rows[0][27]);
                         Program.controlcald = Convert.ToBoolean(dt.Rows[0][28]);
                         Program.Idusuario = Convert.ToInt16(dt.Rows[0][0]);
+                        Program.vcontrolcald= Convert.ToBoolean(dt.Rows[0][29]);
+                        Program.vccfecha= Convert.ToBoolean(dt.Rows[0][30]);
+                        Program.edigalv= Convert.ToBoolean(dt.Rows[0][31]);
+                        Program.eligalv= Convert.ToBoolean(dt.Rows[0][32]);
+                        Program.mosgalv= Convert.ToBoolean(dt.Rows[0][33]);
+                        Program.filgalv= Convert.ToBoolean(dt.Rows[0][34]);
+                        Program.expgalv= Convert.ToBoolean(dt.Rows[0][35]);
+                        Program.fdesgalv= Convert.ToBoolean(dt.Rows[0][36]);
+                        Program.fhasgalv=Convert.ToBoolean(dt.Rows[0][37]);
+                        Program.reimgalv= Convert.ToBoolean(dt.Rows[0][38]);
+                        Program.almintermedios= Convert.ToBoolean(dt.Rows[0][39]);
+                        Program.almterminados= Convert.ToBoolean(dt.Rows[0][40]);
+                        Program.almlg= Convert.ToBoolean(dt.Rows[0][41]);
+                        Program.montemp= Convert.ToBoolean(dt.Rows[0][42]);
+                        Program.maqpar= Convert.ToBoolean(dt.Rows[0][43]);
+                        Program.monmaq= Convert.ToBoolean(dt.Rows[0][44]);
+                        Program.reghora= Convert.ToBoolean(dt.Rows[0][45]);
                         //Program.Usuario = txtUsuario.Text;
                         //Splash obj = new Splash();
                         Principal obj = new Principal();
