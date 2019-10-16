@@ -656,7 +656,6 @@ C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\RdlCompi
 C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\RdlCompile.compiled
 C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\SysProd.exe.manifest
 C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\SysProd.application
-D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.csprojAssemblyReference.cache
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.csproj.ResolveComReference.cache
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.ConsultasGenerales.resources
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcBuscarRegistros.resources
@@ -726,7 +725,6 @@ D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Splash.re
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.csproj.GenerateResource.cache
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\RdlCompile.cache
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\RdlCompile.compiled
-D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.csproj.CoreCompileInputs.cache
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\SysProd.exe
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\SysProd.pdb
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interop.zkemkeeper.dll
@@ -770,7 +768,6 @@ D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\procesos.
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\reporte_general.rdlc
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\reporte_intermedios.rdlc
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\reporte_terminados.rdlc
-D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\ticket_galvanizado - Copy.rdlc
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\ticket_galvanizado4.rdlc
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\ticket_galvanizado_steel.rdlc
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\ticket_galvanizado.rdlc
@@ -792,11 +789,9 @@ D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\MccDaq.dll
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Microsoft.SqlServer.Types.dll
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Intermedia.pdb
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\TempSys.pdb
-D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\TempSys.exe.config
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\DocumentFormat.OpenXml.xml
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Datos.pdb
-D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\MccDaq.xml
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
@@ -810,4 +805,11 @@ D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\zh-Hans\Microsoft.
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\SysProd.exe.manifest
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\SysProd.application
-D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.csproj.CopyComplete
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmRecepcionAlambron.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\recepcion_alambron.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\rollos_alambrondet.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.csprojResolveAssemblyReference.cache
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\inventario_res_alambron.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\inventario_det_alambron.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\ticket_galvanizado - Copia.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\ticket_alambron.rdlc

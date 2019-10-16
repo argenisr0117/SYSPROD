@@ -72,7 +72,7 @@ namespace TempSys
                     }
                 }
             }
-            catch(Exception ex)
+            catch(Exception)
             {
 
             }

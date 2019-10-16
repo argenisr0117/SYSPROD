@@ -55,7 +55,9 @@ namespace Datos
             SqlCommand cmd;
 
             Conectar();
-            cmd = new SqlCommand(NombreSP, conexion);
+            cmd = new SqlCommand();
+            cmd.CommandText = NombreSP;
+            cmd.Connection = conexion;
             cmd.CommandType = CommandType.StoredProcedure;
             if (lst != null)
             {

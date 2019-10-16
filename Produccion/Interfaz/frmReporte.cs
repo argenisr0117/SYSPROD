@@ -62,6 +62,10 @@ namespace Interfaz
         public string _Maquina { get; set; }
         public string _Producto { get; set; }
         public string _Ayudante { get; set; }
+
+        public string Pedido { get; set; }
+
+        public int _IdRollo { get; set; }
         #endregion
 
 
@@ -192,6 +196,57 @@ namespace Interfaz
             {
                 HistorialAsistencia();
             }
+            else if (Valor == 25)
+            {
+                RecepcionAlambron();
+            }
+            else if (Valor == 26)
+            {
+                RollosAlambron();
+            }
+            else if (Valor == 27)
+            {
+                InvResumidoAlambron();
+            }
+            else if (Valor == 28)
+            {
+                InvDetalladoAlambron();
+            }
+            else if (Valor == 29)
+            {
+                TicketAlambron();
+            }
+        }
+
+        private void TicketAlambron()
+        {
+            //ReportParameter[] parametros = new ReportParameter[13];
+            PRODUCCIONDataSet ds = new PRODUCCIONDataSet();
+            PRODUCCIONDataSetTableAdapters.Ticket_AlambronTableAdapter rgta = new PRODUCCIONDataSetTableAdapters.Ticket_AlambronTableAdapter();
+            reportViewer1.ProcessingMode = ProcessingMode.Local;
+            LocalReport lc = reportViewer1.LocalReport;
+            string ruta = "Reportes\\" + Nombre;
+            lc.ReportPath = ruta;
+            //NoReporte = "0000002";
+            rgta.Fill(ds.Ticket_Alambron,_IdRollo);
+            ReportDataSource rds = new ReportDataSource();
+            reportViewer1.LocalReport.DisplayName = Reporte;
+            rds.Name = "DataSet1";
+            rds.Value = (ds.Tables["Ticket_Alambron"]);
+            reportViewer1.LocalReport.DataSources.Clear();
+            //reportViewer1.LocalReport.SetParameters(parametros);
+            lc.DataSources.Add(rds);
+            //this.reportViewer1.RefreshReport();
+            //lc.PrintToPrinter();
+            //Byte[] mybytes = lc.Render("PDF"); //PDF //EXCEL
+            //using (FileStream fs = File.Create(@"C:\Users\COMPUTOS\Documents\Visual Studio 2010\prueba.pdf"))
+            //{
+            //    fs.Write(mybytes, 0, mybytes.Length);
+            //}
+            //this.reportViewer1.RefreshReport();
+            AutoPrintCls autoprintme = new AutoPrintCls(lc);
+            autoprintme.Print();
+            cerrar();
         }
 
         #region Methods
@@ -983,6 +1038,99 @@ namespace Interfaz
             rds.Value = (ds.Tables["obt_sal_alm"]);
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.SetParameters(parametros);
+            lc.DataSources.Add(rds);
+            this.reportViewer1.RefreshReport();
+        }
+        private void RecepcionAlambron()
+        {
+            //ReportParameter[] parametros = new ReportParameter[3];
+            this.Text = Reporte;
+            PRODUCCIONDataSet ds = new PRODUCCIONDataSet();
+            PRODUCCIONDataSetTableAdapters.Rpt_Recep_AlambronTableAdapter rgta = new PRODUCCIONDataSetTableAdapters.Rpt_Recep_AlambronTableAdapter();
+            reportViewer1.ProcessingMode = ProcessingMode.Local;
+            LocalReport lc = reportViewer1.LocalReport;
+            string ruta = "Reportes\\" + Nombre;
+            lc.ReportPath = ruta;
+            //parametros[0] = new ReportParameter("Fechai", Fechai.ToShortDateString());
+            //parametros[1] = new ReportParameter("Fechaf", Fechaf.ToShortDateString());
+            //parametros[2] = new ReportParameter("Almacen", Almacen.ToString());
+            rgta.Fill(ds.Rpt_Recep_Alambron, Pedido,Idcliente);
+            ReportDataSource rds = new ReportDataSource();
+            reportViewer1.LocalReport.DisplayName = Reporte;
+            rds.Name = "DataSet1";
+            rds.Value = (ds.Tables["Rpt_Recep_Alambron"]);
+            reportViewer1.LocalReport.DataSources.Clear();
+            //reportViewer1.LocalReport.SetParameters(parametros);
+            lc.DataSources.Add(rds);
+            this.reportViewer1.RefreshReport();
+        }
+
+        private void RollosAlambron()
+        {
+            ReportParameter[] parametros = new ReportParameter[2];
+            this.Text = Reporte;
+            PRODUCCIONDataSet ds = new PRODUCCIONDataSet();
+            PRODUCCIONDataSetTableAdapters.Rpt_Rollos_RangoFechaTableAdapter rgta = new PRODUCCIONDataSetTableAdapters.Rpt_Rollos_RangoFechaTableAdapter();
+            reportViewer1.ProcessingMode = ProcessingMode.Local;
+            LocalReport lc = reportViewer1.LocalReport;
+            string ruta = "Reportes\\" + Nombre;
+            lc.ReportPath = ruta;
+            parametros[0] = new ReportParameter("Desde", Fechai.ToShortDateString());
+            parametros[1] = new ReportParameter("Hasta", Fechaf.ToShortDateString());
+            //parametros[2] = new ReportParameter("Almacen", Almacen.ToString());
+            rgta.Fill(ds.Rpt_Rollos_RangoFecha, Fechai,Fechaf, Idcliente);
+            ReportDataSource rds = new ReportDataSource();
+            reportViewer1.LocalReport.DisplayName = Reporte;
+            rds.Name = "DataSet1";
+            rds.Value = (ds.Tables["Rpt_Rollos_RangoFecha"]);
+            reportViewer1.LocalReport.DataSources.Clear();
+            reportViewer1.LocalReport.SetParameters(parametros);
+            lc.DataSources.Add(rds);
+            this.reportViewer1.RefreshReport();
+        }
+
+        private void InvResumidoAlambron()
+        {
+            //ReportParameter[] parametros = new ReportParameter[1];
+            this.Text = Reporte;
+            PRODUCCIONDataSet ds = new PRODUCCIONDataSet();
+            PRODUCCIONDataSetTableAdapters.Inventario_res_alambronTableAdapter rgta = new PRODUCCIONDataSetTableAdapters.Inventario_res_alambronTableAdapter();
+            reportViewer1.ProcessingMode = ProcessingMode.Local;
+            LocalReport lc = reportViewer1.LocalReport;
+            string ruta = "Reportes\\" + Nombre;
+            lc.ReportPath = ruta;
+            //parametros[0] = new ReportParameter("Almacen", Almacen.ToString());
+            //parametros[2] = new ReportParameter("Orden1", Order1.ToString());
+            rgta.Fill(ds.Inventario_res_alambron);
+            ReportDataSource rds = new ReportDataSource();
+            reportViewer1.LocalReport.DisplayName = Reporte;
+            rds.Name = "DataSet1";
+            rds.Value = (ds.Tables["Inventario_res_alambron"]);
+            reportViewer1.LocalReport.DataSources.Clear();
+            //reportViewer1.LocalReport.SetParameters(parametros);
+            lc.DataSources.Add(rds);
+            this.reportViewer1.RefreshReport();
+        }
+
+        private void InvDetalladoAlambron()
+        {
+            //ReportParameter[] parametros = new ReportParameter[1];
+            this.Text = Reporte;
+            PRODUCCIONDataSet ds = new PRODUCCIONDataSet();
+            PRODUCCIONDataSetTableAdapters.Inventario_det_alambronTableAdapter rgta = new PRODUCCIONDataSetTableAdapters.Inventario_det_alambronTableAdapter();
+            reportViewer1.ProcessingMode = ProcessingMode.Local;
+            LocalReport lc = reportViewer1.LocalReport;
+            string ruta = "Reportes\\" + Nombre;
+            lc.ReportPath = ruta;
+            //parametros[0] = new ReportParameter("Almacen", Almacen.ToString());
+            //parametros[2] = new ReportParameter("Orden1", Order1.ToString());
+            rgta.Fill(ds.Inventario_det_alambron);
+            ReportDataSource rds = new ReportDataSource();
+            reportViewer1.LocalReport.DisplayName = Reporte;
+            rds.Name = "DataSet1";
+            rds.Value = (ds.Tables["Inventario_det_alambron"]);
+            reportViewer1.LocalReport.DataSources.Clear();
+            //reportViewer1.LocalReport.SetParameters(parametros);
             lc.DataSources.Add(rds);
             this.reportViewer1.RefreshReport();
         }

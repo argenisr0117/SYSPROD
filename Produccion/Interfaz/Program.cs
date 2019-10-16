@@ -16,7 +16,7 @@ namespace Interfaz
         public static int Editar; //variable para editar prod tref - galv
         public static int Idpuerto;
         public static int Idusuario;
-        public static int Valor3;
+        private static int valor3;
         public static int Evento;
         public static int Idorden;
         public static int Valor;
@@ -31,6 +31,8 @@ namespace Interfaz
         public static string DescripcionP;
         public static string UnidadP;
         public static string Pedido;
+        public static int IdPedido;
+        public static bool VerLabel;
         public static string CategoriaP;
         public static double CalibreP;
         public static DateTime Fechai;
@@ -98,6 +100,20 @@ namespace Interfaz
         public static Boolean maqpar;
         public static Boolean monmaq;
         public static Boolean reghora;
+
+        public static int Valor3
+        {
+            get
+            {
+                return valor3;
+            }
+
+            set
+            {
+                valor3 = value;
+            }
+        }
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -108,7 +124,8 @@ namespace Interfaz
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Registros.frmPonche());
-            Application.Run(new frmPedido());
+            //Application.Run(new Login());
+            Application.Run(new frmRecepcionAlambron());
             //Application.Run(new Registros.frmAsignarTurno());
             //Application.Run(new Registros.frmAttControl());
         }

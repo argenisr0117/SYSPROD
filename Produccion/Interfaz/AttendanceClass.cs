@@ -22,7 +22,7 @@ namespace Interfaz
         private static bool bIsConnected = false;//the boolean value identifies whether the device is connected
         private static int iMachineNumber = 1;
         private static int idwErrorCode = 0;
-        private static int iDeviceTpye = 1;
+        //private static int iDeviceTpye = 1;
         bool bAddControl = true;        //Get all user's ID
 
         #region UserBioTypeClass

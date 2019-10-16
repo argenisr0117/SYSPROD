@@ -156,6 +156,11 @@ namespace Interfaz
                     frmPonche obj = new frmPonche();
                     obj.Show();
                 }
+                if (form == "frmRecepcionAlambron")
+                {
+                    frmRecepcionAlambron obj = new frmRecepcionAlambron();
+                    obj.Show();
+                }
             }
         }
 
@@ -268,6 +273,12 @@ namespace Interfaz
         private void Principal_MouseMove(object sender, MouseEventArgs e)
         {
             inactivo = 0;
+        }
+
+        private void btnRecepcionAlambron_Click(object sender, EventArgs e)
+        {
+            form = "frmRecepcionAlambron";
+            AbrirForm(form);
         }
     }
 }

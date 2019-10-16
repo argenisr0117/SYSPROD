@@ -145,7 +145,7 @@ namespace Interfaz.Registros
                 obj.Almacen = cmbAlmacen.Text;
                 obj.Show();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }
@@ -166,7 +166,7 @@ namespace Interfaz.Registros
                 obj.NoReporte = txt_NoReporte.Text.Trim();
                 obj.Show();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }

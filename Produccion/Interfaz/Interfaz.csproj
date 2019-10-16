@@ -62,7 +62,7 @@
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevComponents.DotNetBar2, Version=11.3.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
@@ -418,6 +418,12 @@
     <Compile Include="Registros\frmProductoClienteLongitud.Designer.cs">
       <DependentUpon>frmProductoClienteLongitud.cs</DependentUpon>
     </Compile>
+    <Compile Include="Registros\frmRecepcionAlambron.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\frmRecepcionAlambron.Designer.cs">
+      <DependentUpon>frmRecepcionAlambron.cs</DependentUpon>
+    </Compile>
     <Compile Include="Registros\frmResolverMaqParada.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -682,6 +688,9 @@
     <EmbeddedResource Include="Registros\frmProductoClienteLongitud.resx">
       <DependentUpon>frmProductoClienteLongitud.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Registros\frmRecepcionAlambron.resx">
+      <DependentUpon>frmRecepcionAlambron.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Registros\frmResolverMaqParada.resx">
       <DependentUpon>frmResolverMaqParada.cs</DependentUpon>
     </EmbeddedResource>
@@ -763,8 +772,23 @@
     <EmbeddedResource Include="Reportes\horas_extra.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\inventario_det_alambron.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\inventario_res_alambron.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\packing_list_kinnox.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Report1.rdlc" />
+    <EmbeddedResource Include="Reportes\rollos_alambrondet.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\recepcion_alambron.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\reporte_kinnox.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -810,6 +834,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\incentivo_flejado.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\incentivo_galvanizado.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -825,6 +850,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\incentivo_mecanico_indm.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\incentivo_puas.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -852,6 +878,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\packing_list.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\procesos.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -865,7 +892,10 @@
     <EmbeddedResource Include="Reportes\reporte_terminados.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\ticket_galvanizado - Copy.rdlc">
+    <EmbeddedResource Include="Reportes\ticket_galvanizado - Copia.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ticket_alambron.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\ticket_galvanizado4.rdlc">

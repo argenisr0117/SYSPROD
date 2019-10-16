@@ -291,7 +291,7 @@ namespace TempSys
                 //lblCJC1Value.Text = MyTemp.ToString();
                 ////lblCJC1Error.Text = ULStat.Message;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //MessageBox.Show(ex.Message);
             }

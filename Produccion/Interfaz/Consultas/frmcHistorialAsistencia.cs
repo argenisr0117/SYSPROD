@@ -21,8 +21,8 @@ namespace Interfaz.Consultas
         clsTurno T = new clsTurno();
         clsEmpleado E = new clsEmpleado();
         clsDepartamento D = new clsDepartamento();
-        int editar = 0;
-        int Idhora = 0;
+       //int editar = 0;
+        //int Idhora = 0;
 
         private void ComboE()
         {
