@@ -252,7 +252,7 @@ namespace Interfaz.Registros
                     MessageBoxEx.Show("Ha ocurrido un error!", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 Program.Valor = 1;
-                this.Close();
+                Close();
             }
             catch(Exception ex)
             {
@@ -264,8 +264,8 @@ namespace Interfaz.Registros
         {
             if (MessageBoxEx.Show("¿Desea Salir?", "Sistema de Producción", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                this.Dispose();
-                this.Close();
+                Dispose();
+                Close();
             }
         }
     }

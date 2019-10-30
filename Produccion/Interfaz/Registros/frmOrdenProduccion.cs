@@ -123,8 +123,8 @@ namespace Interfaz.Registros
         {
             if (MessageBoxEx.Show("¿Desea Salir?", "Sistema de Producción", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                this.Dispose();
-                this.Close();
+                Dispose();
+                Close();
             }
         }
 
@@ -220,7 +220,7 @@ namespace Interfaz.Registros
                             MessageBoxEx.Show("Ordén actualizada", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             Limpiar();
                             Program.Valor = 0;
-                            this.Close();
+                            Close();
                         }
                         else
                         {

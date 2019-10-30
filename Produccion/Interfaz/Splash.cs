@@ -38,9 +38,9 @@ namespace Interfaz
             {
                 timer1.Enabled = false;
                 Principal obj = new Principal();
-                this.Hide();
+                Hide();
                 obj.ShowDialog();
-                this.Close();
+                Close();
 
             }
         }

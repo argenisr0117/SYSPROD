@@ -193,7 +193,7 @@ namespace Interfaz.Consultas
                     }
 
                     Program.Valor = 1;
-                    this.Close();
+                    Close();
                 }
                 catch (Exception ex)
                 {

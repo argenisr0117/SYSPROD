@@ -351,7 +351,7 @@ namespace TempSys
 
         private void cerrar_btn_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void MainForm_Load(object sender, EventArgs e)

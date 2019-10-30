@@ -808,8 +808,9 @@ D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\SysProd.applicatio
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmRecepcionAlambron.resources
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\recepcion_alambron.rdlc
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\rollos_alambrondet.rdlc
-D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.csprojResolveAssemblyReference.cache
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\inventario_res_alambron.rdlc
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\inventario_det_alambron.rdlc
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\ticket_galvanizado - Copia.rdlc
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\ticket_alambron.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.csprojResolveAssemblyReference.cache
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\salida_inventario_alambron.rdlc

@@ -113,12 +113,31 @@ namespace Intermedia
             mensaje = Convert.ToInt16(lst[0].Valor);
             return mensaje;
         }
+        public int VerificarRolloSalida()
+        {
+            int mensaje = 0;
+            List<clsParametros> lst = new List<clsParametros>();
+            lst.Add(new clsParametros("@mensaje", "", SqlDbType.Int, ParameterDirection.Output, 8));
+            lst.Add(new clsParametros("@tarjeta", Mtarjeta));
+            lst.Add(new clsParametros("@idalmacen", Midalmacen));
+            M.EjecutarSP("verificar_rollo_salida", ref lst);
+            mensaje = Convert.ToInt16(lst[0].Valor);
+            return mensaje;
+        }
         public void EliminarBobinaSalidaAlmacen()
         {
             List<clsParametros> lst = new List<clsParametros>();
             lst.Add(new clsParametros("@tarjeta", Mtarjeta));
             M.EjecutarSP("eli_bob_sal_inv", ref lst);
         }
+
+        public void EliminarBobinaSalidaAlmacenAlambron()
+        {
+            List<clsParametros> lst = new List<clsParametros>();
+            lst.Add(new clsParametros("@tarjeta", Mtarjeta));
+            M.EjecutarSP("eli_bob_sal_inv_alambron", ref lst);
+        }
+
 
         public DataTable ObtenerEntradasAlmacen()
         {
@@ -166,6 +185,17 @@ namespace Intermedia
             mensaje = Convert.ToInt16(lst[0].Valor);
             return mensaje;
         }
+
+        public int RegistrarDetalleSalidaInventarioAlambron()
+        {
+            int mensaje = 0;
+            List<clsParametros> lst = new List<clsParametros>();
+            lst.Add(new clsParametros("@idsalida", Midsalida));
+            lst.Add(new clsParametros("@tarjeta", Mtarjeta));
+            M.EjecutarSP("reg_det_sal_inv_alambron", ref lst);
+            mensaje = Convert.ToInt16(lst[0].Valor);
+            return mensaje;
+        }
         public DataTable ObtenerHistorialSalidaAlmacen()
         {
             DataTable dt = new DataTable();
@@ -175,12 +205,29 @@ namespace Intermedia
             lst.Add(new clsParametros("@idalmacen", Midalmacen));
             return dt = M.Listado("obt_hist_sal_alm", lst);
         }
+
+        public DataTable ObtenerHistorialSalidaAlmacenAlambron()
+        {
+            DataTable dt = new DataTable();
+            List<clsParametros> lst = new List<clsParametros>();
+            lst.Add(new clsParametros("@fechai", Mfechai));
+            lst.Add(new clsParametros("@fechaf", Mfechaf));
+            lst.Add(new clsParametros("@idalmacen", Midalmacen));
+            return dt = M.Listado("obt_hist_sal_alm_alambron", lst);
+        }
         public DataTable ObtenerDetalleSalidaAlmacen()
         {
             DataTable dt = new DataTable();
             List<clsParametros> lst = new List<clsParametros>();
             lst.Add(new clsParametros("@idsalida", Midsalida));
             return dt = M.Listado("obt_det_sal_alm", lst);
+        }
+        public DataTable ObtenerDetalleSalidaAlmacenAlambron()
+        {
+            DataTable dt = new DataTable();
+            List<clsParametros> lst = new List<clsParametros>();
+            lst.Add(new clsParametros("@idsalida", Midsalida));
+            return dt = M.Listado("obt_det_sal_alm_alambron", lst);
         }
         //public string ActivarCargo()
         //{

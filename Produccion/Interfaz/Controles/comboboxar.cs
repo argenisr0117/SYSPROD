@@ -19,7 +19,7 @@ namespace Interfaz.Controles
         }
         protected override void WndProc(ref Message m)
         {
-            if (m.HWnd != this.Handle)
+            if (m.HWnd != Handle)
             {
                 return;
             }

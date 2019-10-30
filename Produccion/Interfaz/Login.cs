@@ -44,7 +44,7 @@ namespace Interfaz
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void btnAcceder_Click(object sender, EventArgs e)
@@ -134,9 +134,9 @@ namespace Interfaz
                         //Program.Usuario = txtUsuario.Text;
                         //Splash obj = new Splash();
                         Principal obj = new Principal();
-                        this.Hide();
+                        Hide();
                         obj.ShowDialog();
-                        this.Close();
+                        Close();
                     }
                 }
             }

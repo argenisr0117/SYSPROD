@@ -57,10 +57,10 @@ namespace Interfaz.Registros
             // InvokeRequired required compares the thread ID of the
             // calling thread to the thread ID of the creating thread.
             // If these threads are different, it returns true.
-            if (this.txtPesoBruto.InvokeRequired)
+            if (txtPesoBruto.InvokeRequired)
             {
                 SetTextCallback d = new SetTextCallback(SetText);
-                this.Invoke(d, new object[] { text });
+                Invoke(d, new object[] { text });
             }
             else
             {
@@ -75,7 +75,7 @@ namespace Interfaz.Registros
                 // int num = (int)Convert.ToInt32(result);
                 // MessageBox.Show(num.ToString());
                 decimal res = decimal.Truncate(Convert.ToDecimal(result));
-                this.txtPesoBruto.Text = res.ToString();
+                txtPesoBruto.Text = res.ToString();
             }
         }
 

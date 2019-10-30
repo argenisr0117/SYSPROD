@@ -17,7 +17,7 @@ namespace Interfaz.Registros
     {
         clsControlAlmacen Ca = new clsControlAlmacen();
         clsOrdenProduccion O = new clsOrdenProduccion();
-        int idsalida;
+        int idsalida=0;
         public frmControlAlm()
         {
             InitializeComponent();
@@ -62,7 +62,7 @@ namespace Interfaz.Registros
         {
             ComboU();
             dtp_Fechai.Value = DateTime.Now.AddDays(-1);
-            this.Text = this.Text + Program.Almacen;
+            Text = Text + Program.Almacen;
             lb_Titulo.Text = lb_Titulo.Text + Program.Almacen;
             ComboAlmacen();
             cmbAlmacen.Text = Program.Almacen;
@@ -351,7 +351,7 @@ namespace Interfaz.Registros
             }
             catch (Exception ex)
             {
-
+                MessageBoxEx.Show(ex.Message);
             }
         }
 
@@ -405,7 +405,7 @@ namespace Interfaz.Registros
             }
             catch(Exception ex)
             {
-
+                MessageBoxEx.Show(ex.Message);
             }
         }
     }

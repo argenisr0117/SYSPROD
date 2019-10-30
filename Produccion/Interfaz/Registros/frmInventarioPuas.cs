@@ -301,7 +301,7 @@ namespace Interfaz.Registros
 
                         MessageBoxEx.Show(mensaje, "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Program.Evento = 4;
-                        this.Close();
+                        Close();
                     }
 
 
@@ -382,7 +382,7 @@ namespace Interfaz.Registros
 
                         MessageBoxEx.Show(mensaje, "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Program.Evento = 4;
-                        this.Close();
+                        Close();
                     }
                 }
                 dt1.Rows.Clear();

@@ -31,7 +31,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>ROLLOS DE ALAMBRÒN</Value>
+                              <Value />
                               <Style>
                                 <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -293,6 +293,13 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
+                              <Value>ROLLOS DE ALAMBRÒN </Value>
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                            <TextRun>
                               <Value>=Fields!SAE.Value</Value>
                               <Style>
                                 <FontSize>9pt</FontSize>
@@ -316,7 +323,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -795,7 +801,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>ACERO DEL CIBAO, SRL</Value>
+                  <Value>=First(Fields!CLIENTE.Value, "DataSet1")</Value>
                   <Style>
                     <FontSize>20pt</FontSize>
                     <FontWeight>SemiBold</FontWeight>
@@ -803,7 +809,7 @@
                 </TextRun>
               </TextRuns>
               <Style>
-                <TextAlign>Left</TextAlign>
+                <TextAlign>Center</TextAlign>
               </Style>
             </Paragraph>
           </Paragraphs>
@@ -868,6 +874,9 @@
           <Height>0.75569in</Height>
           <Width>1.74581in</Width>
           <ZIndex>7</ZIndex>
+          <Visibility>
+            <Hidden>=IIf(First(Fields!CLIENTE.Value, "DataSet1") = "ACERO DEL CIBAO, SRL",false,true)</Hidden>
+          </Visibility>
           <Style>
             <Border>
               <Style>None</Style>
@@ -961,12 +970,16 @@
           <DataField>SAE</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="DIAMETRO">
+          <DataField>DIAMETRO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="PESO_QQS">
           <DataField>PESO_QQS</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
-        <Field Name="DIAMETRO">
-          <DataField>DIAMETRO</DataField>
+        <Field Name="CLIENTE">
+          <DataField>CLIENTE</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>

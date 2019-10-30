@@ -33,8 +33,8 @@ namespace Interfaz.Registros
         {
             if (DevComponents.DotNetBar.MessageBoxEx.Show("¿Desea Salir?", "Sistema de Producción", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                this.Dispose();
-                this.Close();
+                Dispose();
+                Close();
             }
         }
 

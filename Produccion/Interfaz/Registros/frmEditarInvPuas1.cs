@@ -104,8 +104,8 @@ namespace Interfaz.Registros
                 {
                     MessageBoxEx.Show("Se ha actualizado!", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Program.Evento = 10;
-                    this.Dispose();
-                    this.Close();
+                    Dispose();
+                    Close();
                 }
                 else
                 {
@@ -127,8 +127,8 @@ namespace Interfaz.Registros
         {
             if (MessageBoxEx.Show("¿Desea Salir?", "Sistema de Producción", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                this.Dispose();
-                this.Close();
+                Dispose();
+                Close();
             }
         }
     }

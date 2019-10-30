@@ -77,15 +77,15 @@ namespace Interfaz.Consultas
         {
             Program.CodigoP = dtgvProducto.CurrentRow.Cells[0].Value.ToString();
             Program.Evento = 1;
-            this.Close();
+            Close();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
             if (MessageBoxEx.Show("¿Desea Salir?", "Sistema de Producción", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                this.Dispose();
-                this.Close();
+                Dispose();
+                Close();
             }
         }
     }

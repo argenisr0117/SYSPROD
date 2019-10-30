@@ -71,8 +71,9 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnEliminarRollo = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnEditarRollo = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.cmbUnidadMedida = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
@@ -94,7 +95,9 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
+            this.label38 = new System.Windows.Forms.Label();
             this.btn_InventarioDet = new System.Windows.Forms.Button();
+            this.cmbClienteSalida = new System.Windows.Forms.ComboBox();
             this.label37 = new System.Windows.Forms.Label();
             this.btn_InventarioRes = new System.Windows.Forms.Button();
             this.label25 = new System.Windows.Forms.Label();
@@ -108,12 +111,12 @@
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.txt_Peso = new System.Windows.Forms.TextBox();
             this.lb_Totalc = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.btn_Registrar = new System.Windows.Forms.Button();
             this.lb_Total = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
-            this.txt_Peso = new System.Windows.Forms.TextBox();
             this.label32 = new System.Windows.Forms.Label();
             this.txt_Nota = new System.Windows.Forms.RichTextBox();
             this.label33 = new System.Windows.Forms.Label();
@@ -134,6 +137,7 @@
             this.txtConduce = new Interfaz.Controles.textbox(this.components);
             this.txtPedido = new Interfaz.Controles.textbox(this.components);
             this.txtBusqueda = new Interfaz.Controles.textbox(this.components);
+            this.txtPesoKG = new Interfaz.Controles.textboxN(this.components);
             this.txtLeerRollo = new Interfaz.Controles.textbox(this.components);
             this.txtPeso = new Interfaz.Controles.textboxN(this.components);
             this.txtDiametro = new Interfaz.Controles.textbox(this.components);
@@ -698,7 +702,7 @@
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.btnImprimir);
             this.panel6.Controls.Add(this.btnEliminarRollo);
-            this.panel6.Controls.Add(this.button3);
+            this.panel6.Controls.Add(this.btnEditarRollo);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel6.ForeColor = System.Drawing.Color.Black;
             this.panel6.Location = new System.Drawing.Point(725, 339);
@@ -749,29 +753,31 @@
             this.btnEliminarRollo.UseVisualStyleBackColor = false;
             this.btnEliminarRollo.Click += new System.EventHandler(this.btnEliminarRollo_Click);
             // 
-            // button3
+            // btnEditarRollo
             // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
-            this.button3.FlatAppearance.BorderSize = 2;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Image = global::Interfaz.Properties.Resources.business_ordering_pencil_table_2333;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.Location = new System.Drawing.Point(4, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(76, 55);
-            this.button3.TabIndex = 165;
-            this.button3.TabStop = false;
-            this.button3.Text = "EDITAR";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnEditarRollo.BackColor = System.Drawing.Color.White;
+            this.btnEditarRollo.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
+            this.btnEditarRollo.FlatAppearance.BorderSize = 2;
+            this.btnEditarRollo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnEditarRollo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnEditarRollo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditarRollo.ForeColor = System.Drawing.Color.Black;
+            this.btnEditarRollo.Image = global::Interfaz.Properties.Resources.business_ordering_pencil_table_2333;
+            this.btnEditarRollo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnEditarRollo.Location = new System.Drawing.Point(4, 2);
+            this.btnEditarRollo.Name = "btnEditarRollo";
+            this.btnEditarRollo.Size = new System.Drawing.Size(76, 55);
+            this.btnEditarRollo.TabIndex = 165;
+            this.btnEditarRollo.TabStop = false;
+            this.btnEditarRollo.Text = "EDITAR";
+            this.btnEditarRollo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEditarRollo.UseVisualStyleBackColor = false;
             // 
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.cmbUnidadMedida);
+            this.panel4.Controls.Add(this.txtPesoKG);
             this.panel4.Controls.Add(this.pictureBox1);
             this.panel4.Controls.Add(this.panel8);
             this.panel4.Controls.Add(this.label17);
@@ -799,6 +805,22 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(807, 289);
             this.panel4.TabIndex = 2;
+            // 
+            // cmbUnidadMedida
+            // 
+            this.cmbUnidadMedida.BackColor = System.Drawing.Color.White;
+            this.cmbUnidadMedida.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbUnidadMedida.ForeColor = System.Drawing.Color.Black;
+            this.cmbUnidadMedida.FormattingEnabled = true;
+            this.cmbUnidadMedida.Items.AddRange(new object[] {
+            "KG",
+            "LBS",
+            "TM"});
+            this.cmbUnidadMedida.Location = new System.Drawing.Point(57, 233);
+            this.cmbUnidadMedida.Name = "cmbUnidadMedida";
+            this.cmbUnidadMedida.Size = new System.Drawing.Size(41, 21);
+            this.cmbUnidadMedida.TabIndex = 192;
+            this.cmbUnidadMedida.SelectedIndexChanged += new System.EventHandler(this.cmbUnidadMedida_SelectedIndexChanged);
             // 
             // pictureBox1
             // 
@@ -847,12 +869,7 @@
             this.cmbFabricante.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbFabricante.ForeColor = System.Drawing.Color.Black;
             this.cmbFabricante.FormattingEnabled = true;
-            this.cmbFabricante.Items.AddRange(new object[] {
-            "NINGUNO",
-            "MINMETALS",
-            "BENXI",
-            "ACINDAR"});
-            this.cmbFabricante.Location = new System.Drawing.Point(104, 98);
+            this.cmbFabricante.Location = new System.Drawing.Point(104, 97);
             this.cmbFabricante.Name = "cmbFabricante";
             this.cmbFabricante.Size = new System.Drawing.Size(157, 21);
             this.cmbFabricante.TabIndex = 187;
@@ -861,11 +878,11 @@
             // 
             this.label15.AutoSize = true;
             this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(20, 244);
+            this.label15.Location = new System.Drawing.Point(20, 237);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(54, 13);
+            this.label15.Size = new System.Drawing.Size(37, 13);
             this.label15.TabIndex = 185;
-            this.label15.Text = "PESO KG:";
+            this.label15.Text = "PESO:";
             // 
             // label14
             // 
@@ -924,7 +941,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(20, 136);
+            this.label8.Location = new System.Drawing.Point(20, 134);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(79, 13);
             this.label8.TabIndex = 177;
@@ -965,7 +982,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(20, 206);
+            this.label11.Location = new System.Drawing.Point(20, 204);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(53, 13);
             this.label11.TabIndex = 171;
@@ -975,7 +992,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(20, 171);
+            this.label12.Location = new System.Drawing.Point(20, 169);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(55, 13);
             this.label12.TabIndex = 169;
@@ -1040,14 +1057,26 @@
             // panel13
             // 
             this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel13.Controls.Add(this.label38);
             this.panel13.Controls.Add(this.btn_InventarioDet);
+            this.panel13.Controls.Add(this.cmbClienteSalida);
             this.panel13.Controls.Add(this.label37);
             this.panel13.Controls.Add(this.btn_InventarioRes);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel13.Location = new System.Drawing.Point(384, 0);
+            this.panel13.Location = new System.Drawing.Point(315, 0);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(94, 583);
+            this.panel13.Size = new System.Drawing.Size(163, 583);
             this.panel13.TabIndex = 92;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.ForeColor = System.Drawing.Color.Black;
+            this.label38.Location = new System.Drawing.Point(52, 50);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(50, 13);
+            this.label38.TabIndex = 180;
+            this.label38.Text = "CLIENTE:";
             // 
             // btn_InventarioDet
             // 
@@ -1061,7 +1090,7 @@
             this.btn_InventarioDet.ForeColor = System.Drawing.Color.Black;
             this.btn_InventarioDet.Image = ((System.Drawing.Image)(resources.GetObject("btn_InventarioDet.Image")));
             this.btn_InventarioDet.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_InventarioDet.Location = new System.Drawing.Point(2, 125);
+            this.btn_InventarioDet.Location = new System.Drawing.Point(36, 168);
             this.btn_InventarioDet.Name = "btn_InventarioDet";
             this.btn_InventarioDet.Size = new System.Drawing.Size(88, 62);
             this.btn_InventarioDet.TabIndex = 83;
@@ -1071,13 +1100,24 @@
             this.btn_InventarioDet.UseVisualStyleBackColor = false;
             this.btn_InventarioDet.Click += new System.EventHandler(this.btn_InventarioDet_Click);
             // 
+            // cmbClienteSalida
+            // 
+            this.cmbClienteSalida.BackColor = System.Drawing.Color.White;
+            this.cmbClienteSalida.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbClienteSalida.ForeColor = System.Drawing.Color.Black;
+            this.cmbClienteSalida.FormattingEnabled = true;
+            this.cmbClienteSalida.Location = new System.Drawing.Point(3, 66);
+            this.cmbClienteSalida.Name = "cmbClienteSalida";
+            this.cmbClienteSalida.Size = new System.Drawing.Size(155, 21);
+            this.cmbClienteSalida.TabIndex = 179;
+            // 
             // label37
             // 
             this.label37.AutoSize = true;
             this.label37.BackColor = System.Drawing.Color.DarkRed;
             this.label37.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label37.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label37.Location = new System.Drawing.Point(1, 16);
+            this.label37.Location = new System.Drawing.Point(35, 16);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(82, 20);
             this.label37.TabIndex = 82;
@@ -1095,7 +1135,7 @@
             this.btn_InventarioRes.ForeColor = System.Drawing.Color.Black;
             this.btn_InventarioRes.Image = ((System.Drawing.Image)(resources.GetObject("btn_InventarioRes.Image")));
             this.btn_InventarioRes.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_InventarioRes.Location = new System.Drawing.Point(2, 50);
+            this.btn_InventarioRes.Location = new System.Drawing.Point(36, 99);
             this.btn_InventarioRes.Name = "btn_InventarioRes";
             this.btn_InventarioRes.Size = new System.Drawing.Size(88, 62);
             this.btn_InventarioRes.TabIndex = 55;
@@ -1127,7 +1167,7 @@
             this.btn_BuscarSalida.ForeColor = System.Drawing.Color.Black;
             this.btn_BuscarSalida.Image = ((System.Drawing.Image)(resources.GetObject("btn_BuscarSalida.Image")));
             this.btn_BuscarSalida.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_BuscarSalida.Location = new System.Drawing.Point(93, 90);
+            this.btn_BuscarSalida.Location = new System.Drawing.Point(56, 90);
             this.btn_BuscarSalida.Name = "btn_BuscarSalida";
             this.btn_BuscarSalida.Size = new System.Drawing.Size(83, 49);
             this.btn_BuscarSalida.TabIndex = 90;
@@ -1135,6 +1175,7 @@
             this.btn_BuscarSalida.Text = "BUSCAR";
             this.btn_BuscarSalida.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_BuscarSalida.UseVisualStyleBackColor = false;
+            this.btn_BuscarSalida.Click += new System.EventHandler(this.btn_BuscarSalida_Click);
             // 
             // dtgv_HistorialSalida
             // 
@@ -1149,8 +1190,9 @@
             this.dtgv_HistorialSalida.ReadOnly = true;
             this.dtgv_HistorialSalida.RowHeadersWidth = 10;
             this.dtgv_HistorialSalida.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgv_HistorialSalida.Size = new System.Drawing.Size(372, 253);
+            this.dtgv_HistorialSalida.Size = new System.Drawing.Size(305, 253);
             this.dtgv_HistorialSalida.TabIndex = 89;
+            this.dtgv_HistorialSalida.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_HistorialSalida_CellDoubleClick);
             // 
             // label26
             // 
@@ -1158,9 +1200,9 @@
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.Location = new System.Drawing.Point(-1, 148);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(377, 12);
+            this.label26.Size = new System.Drawing.Size(311, 12);
             this.label26.TabIndex = 88;
-            this.label26.Text = "______________________________________________________________";
+            this.label26.Text = "___________________________________________________";
             // 
             // btn_VerSalida
             // 
@@ -1174,7 +1216,7 @@
             this.btn_VerSalida.ForeColor = System.Drawing.Color.Black;
             this.btn_VerSalida.Image = ((System.Drawing.Image)(resources.GetObject("btn_VerSalida.Image")));
             this.btn_VerSalida.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_VerSalida.Location = new System.Drawing.Point(211, 90);
+            this.btn_VerSalida.Location = new System.Drawing.Point(174, 90);
             this.btn_VerSalida.Name = "btn_VerSalida";
             this.btn_VerSalida.Size = new System.Drawing.Size(83, 49);
             this.btn_VerSalida.TabIndex = 87;
@@ -1182,6 +1224,7 @@
             this.btn_VerSalida.Text = "VER SALIDA";
             this.btn_VerSalida.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_VerSalida.UseVisualStyleBackColor = false;
+            this.btn_VerSalida.Click += new System.EventHandler(this.btn_VerSalida_Click);
             // 
             // label27
             // 
@@ -1189,7 +1232,7 @@
             this.label27.BackColor = System.Drawing.Color.DarkRed;
             this.label27.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label27.Location = new System.Drawing.Point(111, 3);
+            this.label27.Location = new System.Drawing.Point(74, 3);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(163, 20);
             this.label27.TabIndex = 86;
@@ -1202,7 +1245,7 @@
             this.dtp_FechafSalida.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp_FechafSalida.ForeColor = System.Drawing.Color.Black;
             this.dtp_FechafSalida.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_FechafSalida.Location = new System.Drawing.Point(204, 57);
+            this.dtp_FechafSalida.Location = new System.Drawing.Point(167, 57);
             this.dtp_FechafSalida.Name = "dtp_FechafSalida";
             this.dtp_FechafSalida.Size = new System.Drawing.Size(105, 20);
             this.dtp_FechafSalida.TabIndex = 85;
@@ -1215,7 +1258,7 @@
             this.dtp_FechaiSalida.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp_FechaiSalida.ForeColor = System.Drawing.Color.Black;
             this.dtp_FechaiSalida.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_FechaiSalida.Location = new System.Drawing.Point(79, 57);
+            this.dtp_FechaiSalida.Location = new System.Drawing.Point(42, 57);
             this.dtp_FechaiSalida.Name = "dtp_FechaiSalida";
             this.dtp_FechaiSalida.Size = new System.Drawing.Size(105, 20);
             this.dtp_FechaiSalida.TabIndex = 84;
@@ -1225,7 +1268,7 @@
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(202, 42);
+            this.label28.Location = new System.Drawing.Point(165, 42);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(80, 13);
             this.label28.TabIndex = 83;
@@ -1235,7 +1278,7 @@
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(77, 42);
+            this.label29.Location = new System.Drawing.Point(40, 42);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(87, 13);
             this.label29.TabIndex = 82;
@@ -1244,12 +1287,12 @@
             // panel12
             // 
             this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel12.Controls.Add(this.txt_Peso);
             this.panel12.Controls.Add(this.lb_Totalc);
             this.panel12.Controls.Add(this.label30);
             this.panel12.Controls.Add(this.btn_Registrar);
             this.panel12.Controls.Add(this.lb_Total);
             this.panel12.Controls.Add(this.label31);
-            this.panel12.Controls.Add(this.txt_Peso);
             this.panel12.Controls.Add(this.label32);
             this.panel12.Controls.Add(this.txt_Nota);
             this.panel12.Controls.Add(this.label33);
@@ -1265,6 +1308,14 @@
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(325, 587);
             this.panel12.TabIndex = 9;
+            // 
+            // txt_Peso
+            // 
+            this.txt_Peso.Location = new System.Drawing.Point(170, 128);
+            this.txt_Peso.Name = "txt_Peso";
+            this.txt_Peso.Size = new System.Drawing.Size(100, 22);
+            this.txt_Peso.TabIndex = 91;
+            this.txt_Peso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Peso_KeyPress);
             // 
             // lb_Totalc
             // 
@@ -1306,6 +1357,7 @@
             this.btn_Registrar.Text = "REGISTRAR";
             this.btn_Registrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_Registrar.UseVisualStyleBackColor = false;
+            this.btn_Registrar.Click += new System.EventHandler(this.btn_Registrar_Click);
             // 
             // lb_Total
             // 
@@ -1327,13 +1379,6 @@
             this.label31.Size = new System.Drawing.Size(43, 13);
             this.label31.TabIndex = 86;
             this.label31.Text = "TOTAL:";
-            // 
-            // txt_Peso
-            // 
-            this.txt_Peso.Location = new System.Drawing.Point(170, 128);
-            this.txt_Peso.Name = "txt_Peso";
-            this.txt_Peso.Size = new System.Drawing.Size(54, 22);
-            this.txt_Peso.TabIndex = 1;
             // 
             // label32
             // 
@@ -1405,6 +1450,7 @@
             this.dtgv_Salida.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgv_Salida.Size = new System.Drawing.Size(316, 186);
             this.dtgv_Salida.TabIndex = 6;
+            this.dtgv_Salida.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtgv_Salida_KeyDown);
             // 
             // rollo
             // 
@@ -1434,6 +1480,7 @@
             this.txt_Rollo.Name = "txt_Rollo";
             this.txt_Rollo.Size = new System.Drawing.Size(100, 22);
             this.txt_Rollo.TabIndex = 0;
+            this.txt_Rollo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Rollo_KeyPress);
             // 
             // cb_Uso
             // 
@@ -1536,6 +1583,19 @@
             this.txtBusqueda.Size = new System.Drawing.Size(157, 22);
             this.txtBusqueda.TabIndex = 174;
             this.txtBusqueda.Validar = false;
+            this.txtBusqueda.TextChanged += new System.EventHandler(this.txtBusqueda_TextChanged);
+            // 
+            // txtPesoKG
+            // 
+            this.txtPesoKG.BackColor = System.Drawing.Color.White;
+            this.txtPesoKG.ForeColor = System.Drawing.Color.Black;
+            this.txtPesoKG.Location = new System.Drawing.Point(185, 232);
+            this.txtPesoKG.Name = "txtPesoKG";
+            this.txtPesoKG.ReadOnly = true;
+            this.txtPesoKG.Size = new System.Drawing.Size(77, 22);
+            this.txtPesoKG.TabIndex = 191;
+            this.txtPesoKG.Validar = true;
+            this.txtPesoKG.Valor = Interfaz.Controles.textboxN.Tipo.Números;
             // 
             // txtLeerRollo
             // 
@@ -1553,9 +1613,9 @@
             // 
             this.txtPeso.BackColor = System.Drawing.Color.White;
             this.txtPeso.ForeColor = System.Drawing.Color.Black;
-            this.txtPeso.Location = new System.Drawing.Point(104, 244);
+            this.txtPeso.Location = new System.Drawing.Point(104, 232);
             this.txtPeso.Name = "txtPeso";
-            this.txtPeso.Size = new System.Drawing.Size(157, 22);
+            this.txtPeso.Size = new System.Drawing.Size(77, 22);
             this.txtPeso.TabIndex = 186;
             this.txtPeso.Validar = true;
             this.txtPeso.Valor = Interfaz.Controles.textboxN.Tipo.Números;
@@ -1585,7 +1645,7 @@
             // 
             this.txtRecepcion2.BackColor = System.Drawing.Color.White;
             this.txtRecepcion2.ForeColor = System.Drawing.Color.Black;
-            this.txtRecepcion2.Location = new System.Drawing.Point(104, 136);
+            this.txtRecepcion2.Location = new System.Drawing.Point(104, 129);
             this.txtRecepcion2.Name = "txtRecepcion2";
             this.txtRecepcion2.Size = new System.Drawing.Size(157, 22);
             this.txtRecepcion2.TabIndex = 178;
@@ -1595,7 +1655,7 @@
             // 
             this.txtColada.BackColor = System.Drawing.Color.White;
             this.txtColada.ForeColor = System.Drawing.Color.Black;
-            this.txtColada.Location = new System.Drawing.Point(104, 206);
+            this.txtColada.Location = new System.Drawing.Point(104, 199);
             this.txtColada.Name = "txtColada";
             this.txtColada.Size = new System.Drawing.Size(157, 22);
             this.txtColada.TabIndex = 172;
@@ -1605,7 +1665,7 @@
             // 
             this.txtRollo.BackColor = System.Drawing.Color.White;
             this.txtRollo.ForeColor = System.Drawing.Color.Black;
-            this.txtRollo.Location = new System.Drawing.Point(104, 171);
+            this.txtRollo.Location = new System.Drawing.Point(104, 164);
             this.txtRollo.Name = "txtRollo";
             this.txtRollo.Size = new System.Drawing.Size(157, 22);
             this.txtRollo.TabIndex = 170;
@@ -1711,7 +1771,7 @@
         private System.Windows.Forms.DataGridView dtgvRollosAlambron;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button btnEliminarRollo;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnEditarRollo;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.ComboBox cmbFabricante;
         private Controles.textbox txtLeerRollo;
@@ -1758,7 +1818,6 @@
         private System.Windows.Forms.Button btn_Registrar;
         private System.Windows.Forms.Label lb_Total;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.TextBox txt_Peso;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.RichTextBox txt_Nota;
         private System.Windows.Forms.Label label33;
@@ -1768,7 +1827,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn rollo;
         private System.Windows.Forms.DataGridViewTextBoxColumn peso;
         private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.TextBox txt_Rollo;
         private System.Windows.Forms.ComboBox cb_Uso;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Panel panel13;
@@ -1777,5 +1835,11 @@
         private System.Windows.Forms.Button btn_InventarioRes;
         private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.ComboBox cmbClienteSalida;
+        private Controles.textboxN txtPesoKG;
+        private System.Windows.Forms.ComboBox cmbUnidadMedida;
+        private System.Windows.Forms.TextBox txt_Rollo;
+        private System.Windows.Forms.TextBox txt_Peso;
     }
 }

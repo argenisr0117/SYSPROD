@@ -415,8 +415,8 @@ namespace Interfaz.Consultas
         private void frmcMonitoreoMaquinas_Load(object sender, EventArgs e)
         {
             EstadoMaqTimer_Tick(e, e);
-            panel1.Location = new Point(this.ClientSize.Width / 2 - panel1.Size.Width / 2, this.ClientSize.Height / 2 - panel1.ClientSize.Height / 2);
-            lbTitulo.Location = new Point(this.ClientSize.Width / 2 - lbTitulo.Size.Width / 2, 18);
+            panel1.Location = new Point(ClientSize.Width / 2 - panel1.Size.Width / 2, ClientSize.Height / 2 - panel1.ClientSize.Height / 2);
+            lbTitulo.Location = new Point(ClientSize.Width / 2 - lbTitulo.Size.Width / 2, 18);
             EstadoMaqTimer.Start();
         }
 

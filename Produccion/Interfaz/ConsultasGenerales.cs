@@ -401,7 +401,7 @@ namespace Interfaz
         {
             try
             {
-                tscbempresa.ComboBox.BindingContext = this.BindingContext;
+                tscbempresa.ComboBox.BindingContext = BindingContext;
                 tscbempresa.ComboBox.DataSource = P.Listar(true);
                 tscbempresa.ComboBox.DisplayMember = "DESCRIPCION";
                 tscbempresa.ComboBox.ValueMember = "ID_EMPRESA";

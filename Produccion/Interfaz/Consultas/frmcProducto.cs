@@ -119,7 +119,7 @@ namespace Interfaz.Consultas
             Program.CalibreP = Convert.ToDouble(dtgvProducto.CurrentRow.Cells[3].Value);
             Program.CategoriaP = dtgvProducto.CurrentRow.Cells[4].Value.ToString();
             Program.Evento = 1;
-            this.Close();
+            Close();
         }
 
         private void rbCodigo_CheckedChanged(object sender, EventArgs e)

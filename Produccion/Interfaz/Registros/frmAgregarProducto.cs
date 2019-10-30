@@ -225,7 +225,7 @@ namespace Interfaz.Registros
             if (MessageBoxEx.Show("¿Desea Salir?", "Sistema de Producción", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 DialogResult = DialogResult.OK;
-                this.Close();
+                Close();
             }
         }
 

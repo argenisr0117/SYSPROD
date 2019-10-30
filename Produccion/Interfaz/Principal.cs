@@ -25,10 +25,10 @@ namespace Interfaz
             Permisos();
             ObtenerHora();
             timer1.Start();
-            this.WindowState = FormWindowState.Maximized;
-            panel5.Location = new Point(this.ClientSize.Width / 2 - panel5.Size.Width / 2, this.ClientSize.Height / 2 - panel5.ClientSize.Height / 2);
-            label2.Location = new Point(this.ClientSize.Width / 2 - label2.Size.Width / 2, 18);
-            this.MaximizeBox = false;
+            WindowState = FormWindowState.Maximized;
+            panel5.Location = new Point(ClientSize.Width / 2 - panel5.Size.Width / 2, ClientSize.Height / 2 - panel5.ClientSize.Height / 2);
+            label2.Location = new Point(ClientSize.Width / 2 - label2.Size.Width / 2, 18);
+            MaximizeBox = false;
 
         }
         private void ObtenerHora()
@@ -198,11 +198,11 @@ namespace Interfaz
         {
             if (WindowState == FormWindowState.Minimized)
             {
-                this.MaximizeBox = true;
+                MaximizeBox = true;
             }
             else if (WindowState == FormWindowState.Maximized)
             {
-                this.MaximizeBox = false;
+                MaximizeBox = false;
             }
 
         }

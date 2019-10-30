@@ -107,8 +107,8 @@ namespace Interfaz.Registros
                     if (msj == "1")
                     {
                         MessageBoxEx.Show("Parada de máquina actualizada", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Dispose();
-                        this.Close();
+                        Dispose();
+                        Close();
                     }
                     else
                     {

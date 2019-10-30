@@ -124,8 +124,8 @@ namespace Interfaz
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Registros.frmPonche());
-            //Application.Run(new Login());
-            Application.Run(new frmRecepcionAlambron());
+            Application.Run(new Login());
+            //Application.Run(new frmRecepcionAlambron());
             //Application.Run(new Registros.frmAsignarTurno());
             //Application.Run(new Registros.frmAttControl());
         }

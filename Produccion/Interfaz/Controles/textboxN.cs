@@ -15,7 +15,8 @@ namespace Interfaz.Controles
         public enum Tipo
         {
             Números,
-            Letras
+            Letras,
+            NúmerosA //Para usarlo en la salida de rollos de alambron
         }
 
         public Tipo Valor
@@ -45,9 +46,21 @@ namespace Interfaz.Controles
             }
             else if (Valor == Tipo.Letras)
             {
-                if ((char.IsLetter(e.KeyChar)) || (char.IsControl(e.KeyChar)) || ((e.KeyChar=='.' || e.KeyChar==(char)Keys.Space)))
+                if ((char.IsLetter(e.KeyChar)) || (char.IsControl(e.KeyChar)) || ((e.KeyChar == '.' || e.KeyChar == (char)Keys.Space)))
                 {
                     e.Handled = false;
+                }
+                else
+                {
+                    e.Handled = true;
+                }
+            }
+            else if (Valor == Tipo.NúmerosA)
+            {
+                if ((char.IsDigit(e.KeyChar)) || (char.IsControl(e.KeyChar)) || ((e.KeyChar == '.' || e.KeyChar == ',' || e.KeyChar == '-')))
+                {
+                    e.Handled = false;
+
                 }
                 else
                 {

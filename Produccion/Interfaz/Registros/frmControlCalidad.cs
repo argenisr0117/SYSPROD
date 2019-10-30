@@ -201,7 +201,7 @@ namespace Interfaz.Registros
                             if (btnImprimir.Text == "ACTUALIZAR")
                             {
                                 MessageBoxEx.Show("Prueba actualizada", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                this.Close();
+                                Close();
 
                             }
                             else

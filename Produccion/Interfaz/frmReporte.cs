@@ -216,6 +216,10 @@ namespace Interfaz
             {
                 TicketAlambron();
             }
+            else if(Valor == 30)
+            {
+                SalidaInventarioAlambron();
+            }
         }
 
         private void TicketAlambron()
@@ -441,12 +445,12 @@ namespace Interfaz
         }
         private void cerrar()
         {
-            this.Close();
+            Close();
         }
         private void ReporteDiario()
         {
             ReportParameter[] parametros = new ReportParameter[5];
-            this.Text = Reporte;
+            Text = Reporte;
             PRODUCCIONDataSet ds = new PRODUCCIONDataSet();
             PRODUCCIONDataSetTableAdapters.reporte_generalTableAdapter rgta = new PRODUCCIONDataSetTableAdapters.reporte_generalTableAdapter();
             PRODUCCIONDataSetTableAdapters.reporte_general1TableAdapter rgta1 = new PRODUCCIONDataSetTableAdapters.reporte_general1TableAdapter();
@@ -469,7 +473,7 @@ namespace Interfaz
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.SetParameters(parametros);
             lc.DataSources.Add(rds);
-            this.reportViewer1.RefreshReport();
+            reportViewer1.RefreshReport();
         }
         private void PackingList()
         {
@@ -499,7 +503,7 @@ namespace Interfaz
             lc.DataSources.Add(rds1);
             lc.DataSources.Add(rds2);
 
-            this.reportViewer1.RefreshReport();
+            reportViewer1.RefreshReport();
         }
 
         private void CertificadoCalidad()
@@ -542,7 +546,7 @@ namespace Interfaz
             //lc.DataSources.Add(rds3);
             //lc.DataSources.Add(rds4);
 
-            this.reportViewer1.RefreshReport();
+            reportViewer1.RefreshReport();
         }
         private void GraficosCertificadoCalidad()
         {
@@ -584,7 +588,7 @@ namespace Interfaz
             lc.DataSources.Add(rds3);
             lc.DataSources.Add(rds4);
 
-            this.reportViewer1.RefreshReport();
+            reportViewer1.RefreshReport();
         }
         private void CierreMensual()
         {
@@ -612,7 +616,7 @@ namespace Interfaz
             reportViewer1.LocalReport.SetParameters(parametros);
             lc.DataSources.Add(rds);
 
-            this.reportViewer1.RefreshReport();
+            reportViewer1.RefreshReport();
         }
         private void Incentivos()
         {
@@ -634,7 +638,7 @@ namespace Interfaz
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.SetParameters(parametros);
             lc.DataSources.Add(rds);
-            this.reportViewer1.RefreshReport();
+            reportViewer1.RefreshReport();
         }
         private void IncentivoMecanicoIndm()
         {
@@ -667,7 +671,7 @@ namespace Interfaz
             //reportViewer1.ServerReport.SetParameters(parametros);
             reportViewer1.LocalReport.SetParameters(parametros);
             lc.DataSources.Add(rds);
-            this.reportViewer1.RefreshReport();
+            reportViewer1.RefreshReport();
         }
         private void GraficosMaqParada()
         {
@@ -690,7 +694,7 @@ namespace Interfaz
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.SetParameters(parametros);
             lc.DataSources.Add(rds);
-            this.reportViewer1.RefreshReport();
+            reportViewer1.RefreshReport();
         }
         private void Incentivo_Rollos()
         {
@@ -726,7 +730,7 @@ namespace Interfaz
             lc.DataSources.Add(rds);
             lc.DataSources.Add(rds1);
             lc.DataSources.Add(rds2);
-            this.reportViewer1.RefreshReport();
+            reportViewer1.RefreshReport();
         }
         private void Incentivo_Trefilado()
         {
@@ -754,7 +758,7 @@ namespace Interfaz
             reportViewer1.LocalReport.SetParameters(parametros);
             lc.DataSources.Add(rds);
             lc.DataSources.Add(rds1);
-            this.reportViewer1.RefreshReport();
+            reportViewer1.RefreshReport();
         }
         private void Incentivo_Flejado()
         {
@@ -775,7 +779,7 @@ namespace Interfaz
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.SetParameters(parametros);
             lc.DataSources.Add(rds);
-            this.reportViewer1.RefreshReport();
+            reportViewer1.RefreshReport();
         }
         private void HorasExtras()
         {
@@ -799,7 +803,7 @@ namespace Interfaz
             reportViewer1.LocalReport.SetParameters(parametros);
             lc.DataSources.Add(rds);
             reportViewer1.ZoomPercent = 125;
-            this.reportViewer1.RefreshReport();
+            reportViewer1.RefreshReport();
         }
         private void HistorialAsistencia()
         {
@@ -822,7 +826,7 @@ namespace Interfaz
             reportViewer1.LocalReport.SetParameters(parametros);
             lc.DataSources.Add(rds);
             reportViewer1.ZoomPercent = 125;
-            this.reportViewer1.RefreshReport();
+            reportViewer1.RefreshReport();
         }
         private void Incentivo_Galvanizado()
         {
@@ -867,7 +871,7 @@ namespace Interfaz
             lc.DataSources.Add(rds2);
             lc.DataSources.Add(rds3);
             lc.DataSources.Add(rds4);
-            this.reportViewer1.RefreshReport();
+            reportViewer1.RefreshReport();
         }
         private void ReporteIndm()
         {
@@ -889,12 +893,12 @@ namespace Interfaz
             reportViewer1.LocalReport.SetParameters(parametros);
             lc.DataSources.Add(rds);
 
-            this.reportViewer1.RefreshReport();
+            reportViewer1.RefreshReport();
         }
         private void FiltrarProduccion()
         {
             ReportParameter[] parametros = new ReportParameter[3];
-            this.Text = Reporte;
+            Text = Reporte;
             PRODUCCIONDataSet ds = new PRODUCCIONDataSet();
             PRODUCCIONDataSetTableAdapters.filtrar_produccionTableAdapter rgta = new PRODUCCIONDataSetTableAdapters.filtrar_produccionTableAdapter();
             reportViewer1.ProcessingMode = ProcessingMode.Local;
@@ -912,12 +916,12 @@ namespace Interfaz
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.SetParameters(parametros);
             lc.DataSources.Add(rds);
-            this.reportViewer1.RefreshReport();
+            reportViewer1.RefreshReport();
         }
         private void FiltrarProduccionResumido()
         {
             ReportParameter[] parametros = new ReportParameter[15];
-            this.Text = Reporte;
+            Text = Reporte;
             PRODUCCIONDataSet ds = new PRODUCCIONDataSet();
             PRODUCCIONDataSetTableAdapters.filtrar_produccionTableAdapter rgta = new PRODUCCIONDataSetTableAdapters.filtrar_produccionTableAdapter();
             reportViewer1.ProcessingMode = ProcessingMode.Local;
@@ -947,12 +951,12 @@ namespace Interfaz
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.SetParameters(parametros);
             lc.DataSources.Add(rds);
-            this.reportViewer1.RefreshReport();
+            reportViewer1.RefreshReport();
         }
         private void HistorialProduccion()
         {
             ReportParameter[] parametros = new ReportParameter[2];
-            this.Text = Reporte;
+            Text = Reporte;
             PRODUCCIONDataSet ds = new PRODUCCIONDataSet();
             PRODUCCIONDataSetTableAdapters.Obtener_produccion_totalTableAdapter rgta = new PRODUCCIONDataSetTableAdapters.Obtener_produccion_totalTableAdapter();
             reportViewer1.ProcessingMode = ProcessingMode.Local;
@@ -970,12 +974,12 @@ namespace Interfaz
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.SetParameters(parametros);
             lc.DataSources.Add(rds);
-            this.reportViewer1.RefreshReport();
+            reportViewer1.RefreshReport();
         }
         private void InventarioDetallado()
         {
             ReportParameter[] parametros = new ReportParameter[1];
-            this.Text = Reporte;
+            Text = Reporte;
             PRODUCCIONDataSet ds = new PRODUCCIONDataSet();
             PRODUCCIONDataSetTableAdapters.rpt_inv_alm_detTableAdapter rgta = new PRODUCCIONDataSetTableAdapters.rpt_inv_alm_detTableAdapter();
             reportViewer1.ProcessingMode = ProcessingMode.Local;
@@ -992,13 +996,13 @@ namespace Interfaz
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.SetParameters(parametros);
             lc.DataSources.Add(rds);
-            this.reportViewer1.RefreshReport();
+            reportViewer1.RefreshReport();
         }
 
         private void EntradaInventario()
         {
             ReportParameter[] parametros = new ReportParameter[3];
-            this.Text = Reporte;
+            Text = Reporte;
             PRODUCCIONDataSet ds = new PRODUCCIONDataSet();
             PRODUCCIONDataSetTableAdapters.obt_ent_almTableAdapter rgta = new PRODUCCIONDataSetTableAdapters.obt_ent_almTableAdapter();
             reportViewer1.ProcessingMode = ProcessingMode.Local;
@@ -1016,12 +1020,12 @@ namespace Interfaz
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.SetParameters(parametros);
             lc.DataSources.Add(rds);
-            this.reportViewer1.RefreshReport();
+            reportViewer1.RefreshReport();
         }
         private void SalidaInventario()
         {
             ReportParameter[] parametros = new ReportParameter[3];
-            this.Text = Reporte;
+            Text = Reporte;
             PRODUCCIONDataSet ds = new PRODUCCIONDataSet();
             PRODUCCIONDataSetTableAdapters.obt_sal_almTableAdapter rgta = new PRODUCCIONDataSetTableAdapters.obt_sal_almTableAdapter();
             reportViewer1.ProcessingMode = ProcessingMode.Local;
@@ -1039,12 +1043,36 @@ namespace Interfaz
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.SetParameters(parametros);
             lc.DataSources.Add(rds);
-            this.reportViewer1.RefreshReport();
+            reportViewer1.RefreshReport();
+        }
+
+        private void SalidaInventarioAlambron()
+        {
+            ReportParameter[] parametros = new ReportParameter[3];
+            Text = Reporte;
+            PRODUCCIONDataSet ds = new PRODUCCIONDataSet();
+            PRODUCCIONDataSetTableAdapters.obt_sal_alm_alambronTableAdapter rgta = new PRODUCCIONDataSetTableAdapters.obt_sal_alm_alambronTableAdapter();
+            reportViewer1.ProcessingMode = ProcessingMode.Local;
+            LocalReport lc = reportViewer1.LocalReport;
+            string ruta = "Reportes\\" + Nombre;
+            lc.ReportPath = ruta;
+            parametros[0] = new ReportParameter("Fechai", Fechai.ToShortDateString());
+            parametros[1] = new ReportParameter("Fechaf", Fechaf.ToShortDateString());
+            parametros[2] = new ReportParameter("Almacen", Almacen.ToString());
+            rgta.Fill(ds.obt_sal_alm_alambron, Idalmacen, Idcliente, Fechai, Fechaf);
+            ReportDataSource rds = new ReportDataSource();
+            reportViewer1.LocalReport.DisplayName = Reporte;
+            rds.Name = "DataSet1";
+            rds.Value = (ds.Tables["obt_sal_alm_alambron"]);
+            reportViewer1.LocalReport.DataSources.Clear();
+            reportViewer1.LocalReport.SetParameters(parametros);
+            lc.DataSources.Add(rds);
+            reportViewer1.RefreshReport();
         }
         private void RecepcionAlambron()
         {
             //ReportParameter[] parametros = new ReportParameter[3];
-            this.Text = Reporte;
+            Text = Reporte;
             PRODUCCIONDataSet ds = new PRODUCCIONDataSet();
             PRODUCCIONDataSetTableAdapters.Rpt_Recep_AlambronTableAdapter rgta = new PRODUCCIONDataSetTableAdapters.Rpt_Recep_AlambronTableAdapter();
             reportViewer1.ProcessingMode = ProcessingMode.Local;
@@ -1062,13 +1090,13 @@ namespace Interfaz
             reportViewer1.LocalReport.DataSources.Clear();
             //reportViewer1.LocalReport.SetParameters(parametros);
             lc.DataSources.Add(rds);
-            this.reportViewer1.RefreshReport();
+            reportViewer1.RefreshReport();
         }
 
         private void RollosAlambron()
         {
             ReportParameter[] parametros = new ReportParameter[2];
-            this.Text = Reporte;
+            Text = Reporte;
             PRODUCCIONDataSet ds = new PRODUCCIONDataSet();
             PRODUCCIONDataSetTableAdapters.Rpt_Rollos_RangoFechaTableAdapter rgta = new PRODUCCIONDataSetTableAdapters.Rpt_Rollos_RangoFechaTableAdapter();
             reportViewer1.ProcessingMode = ProcessingMode.Local;
@@ -1086,13 +1114,13 @@ namespace Interfaz
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.SetParameters(parametros);
             lc.DataSources.Add(rds);
-            this.reportViewer1.RefreshReport();
+            reportViewer1.RefreshReport();
         }
 
         private void InvResumidoAlambron()
         {
             //ReportParameter[] parametros = new ReportParameter[1];
-            this.Text = Reporte;
+            Text = Reporte;
             PRODUCCIONDataSet ds = new PRODUCCIONDataSet();
             PRODUCCIONDataSetTableAdapters.Inventario_res_alambronTableAdapter rgta = new PRODUCCIONDataSetTableAdapters.Inventario_res_alambronTableAdapter();
             reportViewer1.ProcessingMode = ProcessingMode.Local;
@@ -1101,7 +1129,7 @@ namespace Interfaz
             lc.ReportPath = ruta;
             //parametros[0] = new ReportParameter("Almacen", Almacen.ToString());
             //parametros[2] = new ReportParameter("Orden1", Order1.ToString());
-            rgta.Fill(ds.Inventario_res_alambron);
+            rgta.Fill(ds.Inventario_res_alambron,Idcliente);
             ReportDataSource rds = new ReportDataSource();
             reportViewer1.LocalReport.DisplayName = Reporte;
             rds.Name = "DataSet1";
@@ -1109,13 +1137,13 @@ namespace Interfaz
             reportViewer1.LocalReport.DataSources.Clear();
             //reportViewer1.LocalReport.SetParameters(parametros);
             lc.DataSources.Add(rds);
-            this.reportViewer1.RefreshReport();
+            reportViewer1.RefreshReport();
         }
 
         private void InvDetalladoAlambron()
         {
             //ReportParameter[] parametros = new ReportParameter[1];
-            this.Text = Reporte;
+            Text = Reporte;
             PRODUCCIONDataSet ds = new PRODUCCIONDataSet();
             PRODUCCIONDataSetTableAdapters.Inventario_det_alambronTableAdapter rgta = new PRODUCCIONDataSetTableAdapters.Inventario_det_alambronTableAdapter();
             reportViewer1.ProcessingMode = ProcessingMode.Local;
@@ -1124,7 +1152,7 @@ namespace Interfaz
             lc.ReportPath = ruta;
             //parametros[0] = new ReportParameter("Almacen", Almacen.ToString());
             //parametros[2] = new ReportParameter("Orden1", Order1.ToString());
-            rgta.Fill(ds.Inventario_det_alambron);
+            rgta.Fill(ds.Inventario_det_alambron,Idcliente);
             ReportDataSource rds = new ReportDataSource();
             reportViewer1.LocalReport.DisplayName = Reporte;
             rds.Name = "DataSet1";
@@ -1132,7 +1160,7 @@ namespace Interfaz
             reportViewer1.LocalReport.DataSources.Clear();
             //reportViewer1.LocalReport.SetParameters(parametros);
             lc.DataSources.Add(rds);
-            this.reportViewer1.RefreshReport();
+            reportViewer1.RefreshReport();
         }
         #endregion
     }

@@ -117,7 +117,7 @@ namespace Interfaz.Registros
             {
                 Program.IdPedido = Convert.ToInt32(dtgvPedidos.CurrentRow.Cells[0].Value);
                 Program.Pedido = dtgvPedidos.CurrentRow.Cells[2].Value.ToString();
-                this.Close();
+                Close();
             }
         }
     }

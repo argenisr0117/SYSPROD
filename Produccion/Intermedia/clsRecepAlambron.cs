@@ -180,6 +180,14 @@ namespace Intermedia
             //lst.Add(new clsParametros("@estado", objEstado));
             return dt = M.Listado("Obtener_ult_recepcion", lst);
         }
+
+        public DataTable VerificarRecepcionAlambron()
+        {
+            DataTable dt = new DataTable();
+            List<clsParametros> lst = new List<clsParametros>();
+            lst.Add(new clsParametros("@Idrecepcion", _IdRecepcion));
+            return dt = M.Listado("Verificar_Recepcion_Alambron", lst);
+        }
         #endregion
 
         #region Almacen
@@ -383,6 +391,7 @@ namespace Intermedia
             return dt = M.Listado("Listado_Rollos", lst);
         }
 
+
         public int ObtenerUltimoIdRollo()
         {
             int mensaje = 0;
@@ -391,6 +400,27 @@ namespace Intermedia
             M.EjecutarSP("Obtener_ult_IdRolloAlambron", ref lst);
             mensaje = Convert.ToInt32(lst[0].Valor);
             return mensaje;
+        }
+
+        public string ObtenerPesoRolloAlambron()
+        {
+            string mensaje ="";
+            List<clsParametros> lst = new List<clsParametros>();
+            lst.Add(new clsParametros("@_Rollo", "", SqlDbType.VarChar, ParameterDirection.Output, 8));
+            lst.Add(new clsParametros("@Rollo", _NumRollo));
+            M.EjecutarSP("Obtener_Peso_Rollo_Alambron", ref lst);
+            mensaje = lst[0].Valor.ToString();
+            return mensaje;
+        }
+        #endregion
+
+        #region Fabricante
+        public DataTable ListadoFabricante()
+        {
+            DataTable dt = new DataTable();
+            List<clsParametros> lst = new List<clsParametros>();
+            //lst.Add(new clsParametros("@estado", objEstado));
+            return dt = M.Listado("listado_fabricantes", lst);
         }
         #endregion
 
