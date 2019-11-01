@@ -1,4 +1,4 @@
-﻿"DeployProject"
+"DeployProject"
 {
 "VSVersion" = "3:800"
 "ProjectType" = "8:{978C614F-708E-4E1A-B201-565925725DBA}"
@@ -101,7 +101,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_1C892C438E9FD8EC1476E0437E7D93FC"
         "OwnerKey" = "8:_AC8F81798BFE411F8B149F404424B183"
 >>>>>>> bf1dba918529b9e8fe8f30955f8e6ec0e9182058
         "MsmSig" = "8:_UNDEFINED"
