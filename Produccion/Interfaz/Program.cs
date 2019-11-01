@@ -31,8 +31,11 @@ namespace Interfaz
         public static string DescripcionP;
         public static string UnidadP;
         public static string Pedido;
+<<<<<<< HEAD
         public static int IdPedido;
         public static bool VerLabel;
+=======
+>>>>>>> bf1dba918529b9e8fe8f30955f8e6ec0e9182058
         public static string CategoriaP;
         public static double CalibreP;
         public static DateTime Fechai;
@@ -100,6 +103,7 @@ namespace Interfaz
         public static Boolean maqpar;
         public static Boolean monmaq;
         public static Boolean reghora;
+<<<<<<< HEAD
 
         public static int Valor3
         {
@@ -114,6 +118,8 @@ namespace Interfaz
             }
         }
 
+=======
+>>>>>>> bf1dba918529b9e8fe8f30955f8e6ec0e9182058
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -125,7 +131,10 @@ namespace Interfaz
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Registros.frmPonche());
             Application.Run(new Login());
+<<<<<<< HEAD
             //Application.Run(new frmRecepcionAlambron());
+=======
+>>>>>>> bf1dba918529b9e8fe8f30955f8e6ec0e9182058
             //Application.Run(new Registros.frmAsignarTurno());
             //Application.Run(new Registros.frmAttControl());
         }

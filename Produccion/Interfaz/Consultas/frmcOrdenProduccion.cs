@@ -110,8 +110,13 @@ namespace Interfaz.Consultas
         {
             if (MessageBoxEx.Show("¿Desea Salir?", "Sistema de Producción", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
+<<<<<<< HEAD
                 Dispose();
                 Close();
+=======
+                this.Dispose();
+                this.Close();
+>>>>>>> bf1dba918529b9e8fe8f30955f8e6ec0e9182058
             }
         }
 

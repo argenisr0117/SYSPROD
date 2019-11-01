@@ -291,7 +291,11 @@ namespace TempSys
                 //lblCJC1Value.Text = MyTemp.ToString();
                 ////lblCJC1Error.Text = ULStat.Message;
             }
+<<<<<<< HEAD
             catch (Exception)
+=======
+            catch (Exception ex)
+>>>>>>> bf1dba918529b9e8fe8f30955f8e6ec0e9182058
             {
                 //MessageBox.Show(ex.Message);
             }
@@ -351,7 +355,11 @@ namespace TempSys
 
         private void cerrar_btn_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             Close();
+=======
+            this.Close();
+>>>>>>> bf1dba918529b9e8fe8f30955f8e6ec0e9182058
         }
 
         private void MainForm_Load(object sender, EventArgs e)

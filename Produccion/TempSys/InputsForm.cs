@@ -29,7 +29,11 @@ namespace TempSys
         int identrada;
         private void cerrar_btn_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             Close();
+=======
+            this.Close();
+>>>>>>> bf1dba918529b9e8fe8f30955f8e6ec0e9182058
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -72,7 +76,11 @@ namespace TempSys
                     }
                 }
             }
+<<<<<<< HEAD
             catch(Exception)
+=======
+            catch(Exception ex)
+>>>>>>> bf1dba918529b9e8fe8f30955f8e6ec0e9182058
             {
 
             }
