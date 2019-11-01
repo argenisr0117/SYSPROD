@@ -656,6 +656,7 @@ C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\RdlCompi
 C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\RdlCompile.compiled
 C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\SysProd.exe.manifest
 C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Interfaz\obj\Debug\SysProd.application
+<<<<<<< HEAD
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.csproj.ResolveComReference.cache
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.ConsultasGenerales.resources
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Consultas.frmcBuscarRegistros.resources
@@ -814,3 +815,5 @@ D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\ticket_ga
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\ticket_alambron.rdlc
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.csprojResolveAssemblyReference.cache
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\salida_inventario_alambron.rdlc
+=======
+>>>>>>> bf1dba918529b9e8fe8f30955f8e6ec0e9182058

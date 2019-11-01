@@ -49,7 +49,11 @@ namespace Interfaz.Registros
                         MessageBoxEx.Show("Configuración Actualizada", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         ConfiguracionActual();
                         Program.Valor3 = 1;
+<<<<<<< HEAD
                         Close();
+=======
+                        this.Close();
+>>>>>>> bf1dba918529b9e8fe8f30955f8e6ec0e9182058
                     }
                 }
                 catch (Exception ex)

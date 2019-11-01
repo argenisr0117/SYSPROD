@@ -52,6 +52,7 @@ C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Intermedia\bin\Debug\Datos.
 C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Intermedia\obj\Debug\Intermedia.csprojResolveAssemblyReference.cache
 C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Intermedia\obj\Debug\Intermedia.dll
 C:\Users\COMPUTOS\Documents\Cosas\Proceso\Produccion\Intermedia\obj\Debug\Intermedia.pdb
+<<<<<<< HEAD
 D:\Proyectos Personales\Proceso\Produccion\Intermedia\bin\Debug\Intermedia.dll
 D:\Proyectos Personales\Proceso\Produccion\Intermedia\bin\Debug\Intermedia.pdb
 D:\Proyectos Personales\Proceso\Produccion\Intermedia\bin\Debug\Datos.dll
@@ -59,3 +60,5 @@ D:\Proyectos Personales\Proceso\Produccion\Intermedia\bin\Debug\Datos.pdb
 D:\Proyectos Personales\Proceso\Produccion\Intermedia\obj\Debug\Intermedia.dll
 D:\Proyectos Personales\Proceso\Produccion\Intermedia\obj\Debug\Intermedia.pdb
 D:\Proyectos Personales\Proceso\Produccion\Intermedia\obj\Debug\Intermedia.csprojResolveAssemblyReference.cache
+=======
+>>>>>>> bf1dba918529b9e8fe8f30955f8e6ec0e9182058

@@ -113,6 +113,7 @@ namespace Intermedia
             mensaje = Convert.ToInt16(lst[0].Valor);
             return mensaje;
         }
+<<<<<<< HEAD
         public int VerificarRolloSalida()
         {
             int mensaje = 0;
@@ -124,6 +125,8 @@ namespace Intermedia
             mensaje = Convert.ToInt16(lst[0].Valor);
             return mensaje;
         }
+=======
+>>>>>>> bf1dba918529b9e8fe8f30955f8e6ec0e9182058
         public void EliminarBobinaSalidaAlmacen()
         {
             List<clsParametros> lst = new List<clsParametros>();
@@ -131,6 +134,7 @@ namespace Intermedia
             M.EjecutarSP("eli_bob_sal_inv", ref lst);
         }
 
+<<<<<<< HEAD
         public void EliminarBobinaSalidaAlmacenAlambron()
         {
             List<clsParametros> lst = new List<clsParametros>();
@@ -139,6 +143,8 @@ namespace Intermedia
         }
 
 
+=======
+>>>>>>> bf1dba918529b9e8fe8f30955f8e6ec0e9182058
         public DataTable ObtenerEntradasAlmacen()
         {
             DataTable dt = new DataTable();
@@ -185,6 +191,7 @@ namespace Intermedia
             mensaje = Convert.ToInt16(lst[0].Valor);
             return mensaje;
         }
+<<<<<<< HEAD
 
         public int RegistrarDetalleSalidaInventarioAlambron()
         {
@@ -196,6 +203,8 @@ namespace Intermedia
             mensaje = Convert.ToInt16(lst[0].Valor);
             return mensaje;
         }
+=======
+>>>>>>> bf1dba918529b9e8fe8f30955f8e6ec0e9182058
         public DataTable ObtenerHistorialSalidaAlmacen()
         {
             DataTable dt = new DataTable();
@@ -205,6 +214,7 @@ namespace Intermedia
             lst.Add(new clsParametros("@idalmacen", Midalmacen));
             return dt = M.Listado("obt_hist_sal_alm", lst);
         }
+<<<<<<< HEAD
 
         public DataTable ObtenerHistorialSalidaAlmacenAlambron()
         {
@@ -215,6 +225,8 @@ namespace Intermedia
             lst.Add(new clsParametros("@idalmacen", Midalmacen));
             return dt = M.Listado("obt_hist_sal_alm_alambron", lst);
         }
+=======
+>>>>>>> bf1dba918529b9e8fe8f30955f8e6ec0e9182058
         public DataTable ObtenerDetalleSalidaAlmacen()
         {
             DataTable dt = new DataTable();
@@ -222,6 +234,7 @@ namespace Intermedia
             lst.Add(new clsParametros("@idsalida", Midsalida));
             return dt = M.Listado("obt_det_sal_alm", lst);
         }
+<<<<<<< HEAD
         public DataTable ObtenerDetalleSalidaAlmacenAlambron()
         {
             DataTable dt = new DataTable();
@@ -229,6 +242,8 @@ namespace Intermedia
             lst.Add(new clsParametros("@idsalida", Midsalida));
             return dt = M.Listado("obt_det_sal_alm_alambron", lst);
         }
+=======
+>>>>>>> bf1dba918529b9e8fe8f30955f8e6ec0e9182058
         //public string ActivarCargo()
         //{
         //    string mensaje = "";
