@@ -62,7 +62,11 @@
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
+
     <SignManifests>false</SignManifests>
+
+    <SignManifests>true</SignManifests>
+
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevComponents.DotNetBar2, Version=11.3.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
@@ -394,18 +398,24 @@
     <Compile Include="Registros\frmPackingList.Designer.cs">
       <DependentUpon>frmPackingList.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Registros\frmFabricante.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Registros\frmFabricante.Designer.cs">
       <DependentUpon>frmFabricante.cs</DependentUpon>
     </Compile>
+=======
+
+>>>>>>> af91966c9583b6be1e1a60315bb24ee37b4d30d7
     <Compile Include="Registros\frmPedido.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Registros\frmPedido.Designer.cs">
       <DependentUpon>frmPedido.cs</DependentUpon>
     </Compile>
+
+
     <Compile Include="Registros\frmPermisos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -430,12 +440,15 @@
     <Compile Include="Registros\frmProductoClienteLongitud.Designer.cs">
       <DependentUpon>frmProductoClienteLongitud.cs</DependentUpon>
     </Compile>
+
     <Compile Include="Registros\frmRecepcionAlambron.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Registros\frmRecepcionAlambron.Designer.cs">
       <DependentUpon>frmRecepcionAlambron.cs</DependentUpon>
     </Compile>
+
+
     <Compile Include="Registros\frmResolverMaqParada.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -688,12 +701,18 @@
     <EmbeddedResource Include="Registros\frmPackingList.resx">
       <DependentUpon>frmPackingList.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="Registros\frmFabricante.resx">
       <DependentUpon>frmFabricante.cs</DependentUpon>
     </EmbeddedResource>
+=======
+
+>>>>>>> af91966c9583b6be1e1a60315bb24ee37b4d30d7
     <EmbeddedResource Include="Registros\frmPedido.resx">
       <DependentUpon>frmPedido.cs</DependentUpon>
     </EmbeddedResource>
+
+
     <EmbeddedResource Include="Registros\frmPermisos.resx">
       <DependentUpon>frmPermisos.cs</DependentUpon>
     </EmbeddedResource>
@@ -706,9 +725,12 @@
     <EmbeddedResource Include="Registros\frmProductoClienteLongitud.resx">
       <DependentUpon>frmProductoClienteLongitud.cs</DependentUpon>
     </EmbeddedResource>
+
     <EmbeddedResource Include="Registros\frmRecepcionAlambron.resx">
       <DependentUpon>frmRecepcionAlambron.cs</DependentUpon>
     </EmbeddedResource>
+
+
     <EmbeddedResource Include="Registros\frmResolverMaqParada.resx">
       <DependentUpon>frmResolverMaqParada.cs</DependentUpon>
     </EmbeddedResource>
@@ -790,6 +812,7 @@
     <EmbeddedResource Include="Reportes\horas_extra.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+
     <EmbeddedResource Include="Reportes\inventario_det_alambron.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -814,6 +837,14 @@
     <EmbeddedResource Include="Reportes\salida_inventario_alambron.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+
+    <EmbeddedResource Include="Reportes\packing_list_kinnox.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\reporte_kinnox.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+
     <EmbeddedResource Include="Reportes\salida_inventario.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -899,7 +930,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\packing_list.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+
       <SubType>Designer</SubType>
+
+
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\procesos.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -913,10 +947,14 @@
     <EmbeddedResource Include="Reportes\reporte_terminados.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+
     <EmbeddedResource Include="Reportes\ticket_galvanizado - Copia.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\ticket_alambron.rdlc">
+ </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ticket_galvanizado - Copy.rdlc">
+
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\ticket_galvanizado4.rdlc">
@@ -1075,7 +1113,11 @@
       <Lcid>0</Lcid>
       <WrapperTool>tlbimp</WrapperTool>
       <Isolated>False</Isolated>
+
       <EmbedInteropTypes>True</EmbedInteropTypes>
+
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+
     </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

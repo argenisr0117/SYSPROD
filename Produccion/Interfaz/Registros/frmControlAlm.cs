@@ -18,6 +18,9 @@ namespace Interfaz.Registros
         clsControlAlmacen Ca = new clsControlAlmacen();
         clsOrdenProduccion O = new clsOrdenProduccion();
         int idsalida = 0;
+=======
+        int idsalida;
+>>>>>>> bf1dba918529b9e8fe8f30955f8e6ec0e9182058
         public frmControlAlm()
         {
             InitializeComponent();
@@ -27,9 +30,10 @@ namespace Interfaz.Registros
         {
             try
             {
-                if (Program.Almacen == "LINEA GALV")
+                if(Program.Almacen=="LINEA GALV")
                 {
                     cb_Uso.DataSource = O.ListadoUsoAlambre(1);
+
                 }
                 else
                 {
@@ -55,12 +59,17 @@ namespace Interfaz.Registros
             {
                 MessageBoxEx.Show(ex.Message);
             }
+
         }
         private void frmControlAlm_Load(object sender, EventArgs e)
         {
             ComboU();
             dtp_Fechai.Value = DateTime.Now.AddDays(-1);
+<<<<<<< HEAD
             Text = Text + Program.Almacen;
+=======
+            this.Text = this.Text + Program.Almacen;
+>>>>>>> bf1dba918529b9e8fe8f30955f8e6ec0e9182058
             lb_Titulo.Text = lb_Titulo.Text + Program.Almacen;
             ComboAlmacen();
             cmbAlmacen.Text = Program.Almacen;
@@ -141,7 +150,11 @@ namespace Interfaz.Registros
                 obj.Almacen = cmbAlmacen.Text;
                 obj.Show();
             }
+<<<<<<< HEAD
             catch (Exception)
+=======
+            catch (Exception ex)
+>>>>>>> bf1dba918529b9e8fe8f30955f8e6ec0e9182058
             {
             }
         }
@@ -161,7 +174,11 @@ namespace Interfaz.Registros
                 obj.NoReporte = txt_NoReporte.Text.Trim();
                 obj.Show();
             }
+<<<<<<< HEAD
             catch (Exception)
+=======
+            catch (Exception ex)
+>>>>>>> bf1dba918529b9e8fe8f30955f8e6ec0e9182058
             {
             }
         }
@@ -336,7 +353,11 @@ namespace Interfaz.Registros
             }
             catch (Exception ex)
             {
+<<<<<<< HEAD
                 MessageBoxEx.Show(ex.Message);
+=======
+
+>>>>>>> bf1dba918529b9e8fe8f30955f8e6ec0e9182058
             }
         }
 
@@ -388,7 +409,11 @@ namespace Interfaz.Registros
             }
             catch (Exception ex)
             {
+<<<<<<< HEAD
                 MessageBoxEx.Show(ex.Message);
+=======
+
+>>>>>>> bf1dba918529b9e8fe8f30955f8e6ec0e9182058
             }
         }
     }

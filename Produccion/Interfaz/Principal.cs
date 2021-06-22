@@ -157,11 +157,14 @@ namespace Interfaz
                     frmPonche obj = new frmPonche();
                     obj.Show();
                 }
+<<<<<<< HEAD
                 if (form == "frmRecepcionAlambron")
                 {
                     frmRecepcionAlambron obj = new frmRecepcionAlambron();
                     obj.Show();
                 }
+=======
+>>>>>>> bf1dba918529b9e8fe8f30955f8e6ec0e9182058
             }
         }
 
@@ -275,11 +278,14 @@ namespace Interfaz
         {
             inactivo = 0;
         }
+<<<<<<< HEAD
 
         private void btnRecepcionAlambron_Click(object sender, EventArgs e)
         {
             form = "frmRecepcionAlambron";
             AbrirForm(form);
         }
+=======
+>>>>>>> bf1dba918529b9e8fe8f30955f8e6ec0e9182058
     }
 }

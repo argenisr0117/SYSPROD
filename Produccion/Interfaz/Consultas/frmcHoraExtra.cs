@@ -22,7 +22,12 @@ namespace Interfaz.Consultas
         clsEmpleado E = new clsEmpleado();
         clsDepartamento D = new clsDepartamento();
         clsEmpresa Em = new clsEmpresa();
+<<<<<<< HEAD
         
+=======
+        int editar = 0;
+        int Idhora = 0;
+>>>>>>> bf1dba918529b9e8fe8f30955f8e6ec0e9182058
 
         private void ComboEm()
         {

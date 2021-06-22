@@ -30,7 +30,11 @@ namespace Interfaz.Consultas
                 Program.Valor2 = 1;
                 Program.Fechai = dtpdesde.Value;
                 Program.Fechaf = dtphasta.Value;
+<<<<<<< HEAD
                 Close();
+=======
+                this.Close();
+>>>>>>> bf1dba918529b9e8fe8f30955f8e6ec0e9182058
             }
             else return;
          

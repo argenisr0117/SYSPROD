@@ -75,7 +75,11 @@ namespace Interfaz.Registros
                 // int num = (int)Convert.ToInt32(result);
                 // MessageBox.Show(num.ToString());
                 decimal res = decimal.Truncate(Convert.ToDecimal(result));
+<<<<<<< HEAD
                 txtPesoBruto.Text = res.ToString();
+=======
+                this.txtPesoBruto.Text = res.ToString();
+>>>>>>> bf1dba918529b9e8fe8f30955f8e6ec0e9182058
             }
         }
 
