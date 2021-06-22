@@ -17,7 +17,7 @@ namespace Interfaz.Registros
     {
         clsControlAlmacen Ca = new clsControlAlmacen();
         clsOrdenProduccion O = new clsOrdenProduccion();
-        int idsalida=0;
+        int idsalida = 0;
         public frmControlAlm()
         {
             InitializeComponent();
@@ -27,10 +27,9 @@ namespace Interfaz.Registros
         {
             try
             {
-                if(Program.Almacen=="LINEA GALV")
+                if (Program.Almacen == "LINEA GALV")
                 {
                     cb_Uso.DataSource = O.ListadoUsoAlambre(1);
-
                 }
                 else
                 {
@@ -56,7 +55,6 @@ namespace Interfaz.Registros
             {
                 MessageBoxEx.Show(ex.Message);
             }
-
         }
         private void frmControlAlm_Load(object sender, EventArgs e)
         {
@@ -67,7 +65,7 @@ namespace Interfaz.Registros
             ComboAlmacen();
             cmbAlmacen.Text = Program.Almacen;
             LLenarGrid();
-            if(Program.Almacen=="LINEA GALV")
+            if (Program.Almacen == "LINEA GALV")
             {
                 cb_Uso.Text = "PROCESO DE GALVANIZACIÓN";
             }
@@ -97,15 +95,14 @@ namespace Interfaz.Registros
                 //dtgv_Entradas.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 //dtgv_Entradas.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-
             }
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            if(dtp_Fechai.Value.Date<=dtp_Fechaf.Value.Date)
+            if (dtp_Fechai.Value.Date <= dtp_Fechaf.Value.Date)
             {
                 LLenarGrid();
             }
@@ -127,9 +124,8 @@ namespace Interfaz.Registros
                 obj.Almacen = cmbAlmacen.Text;
                 obj.Show();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-
             }
         }
 
@@ -147,7 +143,6 @@ namespace Interfaz.Registros
             }
             catch (Exception)
             {
-
             }
         }
 
@@ -168,7 +163,6 @@ namespace Interfaz.Registros
             }
             catch (Exception)
             {
-
             }
         }
 
@@ -178,9 +172,7 @@ namespace Interfaz.Registros
             {
                 e.Handled = true;
                 txt_Peso.Focus();
-             
             }
-        
         }
 
         private void txt_Peso_KeyPress(object sender, KeyPressEventArgs e)
@@ -193,7 +185,7 @@ namespace Interfaz.Registros
                 int msj = Ca.VerificarBobinaSalida();
                 if (msj == 0)
                 {
-                   for(int x = 0; x < dtgv_Salida.Rows.Count; x++)
+                    for (int x = 0; x < dtgv_Salida.Rows.Count; x++)
                     {
                         if (txt_Rollo.Text == dtgv_Salida.Rows[x].Cells[0].Value.ToString())
                         {
@@ -213,7 +205,6 @@ namespace Interfaz.Registros
                         dtgv_Salida.Rows.Add(txt_Rollo.Text, txt_Peso.Text);
                         CalcularTotal();
                     }
-                    
                 }
                 else if (msj == 1)
                 {
@@ -228,7 +219,6 @@ namespace Interfaz.Registros
                 txt_Rollo.Clear();
                 txt_Rollo.Focus();
             }
-        
         }
 
         private void dtgv_Salida_KeyDown(object sender, KeyEventArgs e)
@@ -256,13 +246,12 @@ namespace Interfaz.Registros
         private void CalcularTotal()
         {
             double total = 0;
-            for(int x = 0; x < dtgv_Salida.Rows.Count; x++)
+            for (int x = 0; x < dtgv_Salida.Rows.Count; x++)
             {
                 total = total + Convert.ToDouble(dtgv_Salida.Rows[x].Cells[1].Value);
-                
             }
             total = total / 100;
-            lb_Total.Text = total.ToString()+" "+"QQS.";
+            lb_Total.Text = total.ToString() + " " + "QQS.";
             lb_Totalc.Text = dtgv_Salida.Rows.Count.ToString();
         }
 
@@ -291,7 +280,7 @@ namespace Interfaz.Registros
                     }
                     if (idsalida > 0)
                     {
-                        for(int x=0; x < dtgv_Salida.Rows.Count; x++)
+                        for (int x = 0; x < dtgv_Salida.Rows.Count; x++)
                         {
                             Ca.Tarjeta = dtgv_Salida.Rows[x].Cells[0].Value.ToString();
                             Ca.Idsalida = idsalida;
@@ -305,22 +294,18 @@ namespace Interfaz.Registros
                         else
                         {
                             MessageBoxEx.Show("Salida registrada.", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                         }
                         Limpiar();
-
                     }
                     else
                     {
                         MessageBoxEx.Show("Ha ocurrido un error.", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-
                 }
                 Program.Editar = 0;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-
             }
         }
         private void Limpiar()
@@ -373,11 +358,9 @@ namespace Interfaz.Registros
                 dtgv_HistorialSalida.DataSource = null;
                 dtgv_HistorialSalida.DataSource = dt;
                 dtgv_HistorialSalida.Columns[0].Visible = false;
-
             }
             catch (Exception ex)
             {
-
             }
         }
 
@@ -391,7 +374,7 @@ namespace Interfaz.Registros
                 idsalida = Convert.ToInt16(dtgv_HistorialSalida.CurrentRow.Cells[0].Value);
                 dt = Ca.ObtenerDetalleSalidaAlmacen();
                 Limpiar();
-                for(int x = 0; x < dt.Rows.Count; x++)
+                for (int x = 0; x < dt.Rows.Count; x++)
                 {
                     dtgv_Salida.Rows.Add(dt.Rows[x][0]);
                     dtgv_Salida.Rows[x].Cells[0].Value = dt.Rows[x][4].ToString();
@@ -403,7 +386,7 @@ namespace Interfaz.Registros
                 CalcularTotal();
                 btn_Registrar.Text = "ACTUALIZAR";
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBoxEx.Show(ex.Message);
             }

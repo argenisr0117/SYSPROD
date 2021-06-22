@@ -64,6 +64,7 @@ namespace Intermedia
         Boolean Mmaqpar;
         Boolean Mmonmaq;
         Boolean Mreghor;
+        Boolean Mrecpalm;
 
         public int Idusuario
         {
@@ -329,6 +330,12 @@ namespace Intermedia
             get { return Mreghor; }
             set { Mreghor = value; }
         }
+        public Boolean Recpalm
+        {
+            get { return Mrecpalm; }
+            set { Mrecpalm = value; }
+        }
+       
         public string RegistrarUsuario()
         {
             string mensaje = "";
@@ -392,6 +399,7 @@ namespace Intermedia
             lst.Add(new clsParametros("@maqpar", Mmaqpar));
             lst.Add(new clsParametros("@monmaq", Mmonmaq));
             lst.Add(new clsParametros("@reghor", Mreghor));
+            lst.Add(new clsParametros("@recepala", Mrecpalm));
             M.EjecutarSP("registrar_act_permisos", ref lst);
             mensaje =Convert.ToInt32(lst[0].Valor);
             return mensaje;

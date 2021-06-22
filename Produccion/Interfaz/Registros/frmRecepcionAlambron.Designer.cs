@@ -34,8 +34,6 @@
             this.tab_recepcion = new System.Windows.Forms.TabPage();
             this.dtgvRecepcion = new System.Windows.Forms.DataGridView();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnEliminarRecepcion = new System.Windows.Forms.Button();
-            this.btnEditarRecepcion = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
@@ -47,12 +45,8 @@
             this.rbFechas = new System.Windows.Forms.RadioButton();
             this.rdPedido = new System.Windows.Forms.RadioButton();
             this.label20 = new System.Windows.Forms.Label();
-            this.btnVisualizar = new System.Windows.Forms.Button();
             this.lbinf = new System.Windows.Forms.Label();
-            this.btnbuscar = new System.Windows.Forms.Button();
-            this.btnGuardarRecepcion = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.cmbChofer = new System.Windows.Forms.ComboBox();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
@@ -69,21 +63,15 @@
             this.label16 = new System.Windows.Forms.Label();
             this.dtgvRollosAlambron = new System.Windows.Forms.DataGridView();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.btnImprimir = new System.Windows.Forms.Button();
-            this.btnEliminarRollo = new System.Windows.Forms.Button();
-            this.btnEditarRollo = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.cmbUnidadMedida = new System.Windows.Forms.ComboBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
             this.cmbFabricante = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.cmbAlmacen = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.btnGuardarRollo = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.cmbCliente = new System.Windows.Forms.ComboBox();
@@ -96,15 +84,11 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.label38 = new System.Windows.Forms.Label();
-            this.btn_InventarioDet = new System.Windows.Forms.Button();
             this.cmbClienteSalida = new System.Windows.Forms.ComboBox();
             this.label37 = new System.Windows.Forms.Label();
-            this.btn_InventarioRes = new System.Windows.Forms.Button();
             this.label25 = new System.Windows.Forms.Label();
-            this.btn_BuscarSalida = new System.Windows.Forms.Button();
             this.dtgv_HistorialSalida = new System.Windows.Forms.DataGridView();
             this.label26 = new System.Windows.Forms.Label();
-            this.btn_VerSalida = new System.Windows.Forms.Button();
             this.label27 = new System.Windows.Forms.Label();
             this.dtp_FechafSalida = new System.Windows.Forms.DateTimePicker();
             this.dtp_FechaiSalida = new System.Windows.Forms.DateTimePicker();
@@ -114,7 +98,6 @@
             this.txt_Peso = new System.Windows.Forms.TextBox();
             this.lb_Totalc = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
-            this.btn_Registrar = new System.Windows.Forms.Button();
             this.lb_Total = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
@@ -132,6 +115,7 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.label24 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.txtPedido3 = new Interfaz.Controles.textbox(this.components);
             this.txtRecepcion = new Interfaz.Controles.textbox(this.components);
             this.txtConduce = new Interfaz.Controles.textbox(this.components);
@@ -145,6 +129,22 @@
             this.txtRecepcion2 = new Interfaz.Controles.textbox(this.components);
             this.txtColada = new Interfaz.Controles.textbox(this.components);
             this.txtRollo = new Interfaz.Controles.textbox(this.components);
+            this.btnEliminarRecepcion = new System.Windows.Forms.Button();
+            this.btnEditarRecepcion = new System.Windows.Forms.Button();
+            this.btnVisualizar = new System.Windows.Forms.Button();
+            this.btnbuscar = new System.Windows.Forms.Button();
+            this.btnGuardarRecepcion = new System.Windows.Forms.Button();
+            this.btnImprimir = new System.Windows.Forms.Button();
+            this.btnEliminarRollo = new System.Windows.Forms.Button();
+            this.btnEditarRollo = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnGuardarRollo = new System.Windows.Forms.Button();
+            this.btn_InventarioDet = new System.Windows.Forms.Button();
+            this.btn_InventarioRes = new System.Windows.Forms.Button();
+            this.btn_BuscarSalida = new System.Windows.Forms.Button();
+            this.btn_VerSalida = new System.Windows.Forms.Button();
+            this.btn_Registrar = new System.Windows.Forms.Button();
+            this.lb_Chofer = new System.Windows.Forms.LinkLabel();
             this.tabControl1.SuspendLayout();
             this.tab_recepcion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvRecepcion)).BeginInit();
@@ -157,7 +157,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgvRollosAlambron)).BeginInit();
             this.panel6.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel8.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -168,6 +167,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_Salida)).BeginInit();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -228,58 +228,16 @@
             this.panel5.Size = new System.Drawing.Size(85, 331);
             this.panel5.TabIndex = 4;
             // 
-            // btnEliminarRecepcion
-            // 
-            this.btnEliminarRecepcion.BackColor = System.Drawing.Color.White;
-            this.btnEliminarRecepcion.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
-            this.btnEliminarRecepcion.FlatAppearance.BorderSize = 2;
-            this.btnEliminarRecepcion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btnEliminarRecepcion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnEliminarRecepcion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarRecepcion.ForeColor = System.Drawing.Color.Black;
-            this.btnEliminarRecepcion.Image = global::Interfaz.Properties.Resources.delete_file_icon;
-            this.btnEliminarRecepcion.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEliminarRecepcion.Location = new System.Drawing.Point(4, 62);
-            this.btnEliminarRecepcion.Name = "btnEliminarRecepcion";
-            this.btnEliminarRecepcion.Size = new System.Drawing.Size(76, 55);
-            this.btnEliminarRecepcion.TabIndex = 167;
-            this.btnEliminarRecepcion.TabStop = false;
-            this.btnEliminarRecepcion.Text = "ELIMINAR";
-            this.btnEliminarRecepcion.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnEliminarRecepcion.UseVisualStyleBackColor = false;
-            this.btnEliminarRecepcion.Click += new System.EventHandler(this.btnEliminarRecepcion_Click);
-            // 
-            // btnEditarRecepcion
-            // 
-            this.btnEditarRecepcion.BackColor = System.Drawing.Color.White;
-            this.btnEditarRecepcion.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
-            this.btnEditarRecepcion.FlatAppearance.BorderSize = 2;
-            this.btnEditarRecepcion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btnEditarRecepcion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnEditarRecepcion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditarRecepcion.ForeColor = System.Drawing.Color.Black;
-            this.btnEditarRecepcion.Image = global::Interfaz.Properties.Resources.business_ordering_pencil_table_2333;
-            this.btnEditarRecepcion.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEditarRecepcion.Location = new System.Drawing.Point(4, 2);
-            this.btnEditarRecepcion.Name = "btnEditarRecepcion";
-            this.btnEditarRecepcion.Size = new System.Drawing.Size(76, 55);
-            this.btnEditarRecepcion.TabIndex = 165;
-            this.btnEditarRecepcion.TabStop = false;
-            this.btnEditarRecepcion.Text = "EDITAR";
-            this.btnEditarRecepcion.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnEditarRecepcion.UseVisualStyleBackColor = false;
-            this.btnEditarRecepcion.Click += new System.EventHandler(this.btnEditarRecepcion_Click);
-            // 
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.lb_Chofer);
             this.panel3.Controls.Add(this.panel9);
             this.panel3.Controls.Add(this.lbinf);
             this.panel3.Controls.Add(this.btnbuscar);
             this.panel3.Controls.Add(this.btnGuardarRecepcion);
             this.panel3.Controls.Add(this.txtRecepcion);
             this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.cmbChofer);
             this.panel3.Controls.Add(this.dtpFecha);
             this.panel3.Controls.Add(this.label5);
@@ -416,28 +374,6 @@
             this.label20.TabIndex = 156;
             this.label20.Text = "PEDIDO:";
             // 
-            // btnVisualizar
-            // 
-            this.btnVisualizar.BackColor = System.Drawing.Color.White;
-            this.btnVisualizar.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
-            this.btnVisualizar.FlatAppearance.BorderSize = 2;
-            this.btnVisualizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btnVisualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnVisualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVisualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVisualizar.ForeColor = System.Drawing.Color.Black;
-            this.btnVisualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnVisualizar.Image")));
-            this.btnVisualizar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnVisualizar.Location = new System.Drawing.Point(107, 178);
-            this.btnVisualizar.Name = "btnVisualizar";
-            this.btnVisualizar.Size = new System.Drawing.Size(88, 54);
-            this.btnVisualizar.TabIndex = 84;
-            this.btnVisualizar.TabStop = false;
-            this.btnVisualizar.Text = "VISUALIZAR";
-            this.btnVisualizar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnVisualizar.UseVisualStyleBackColor = false;
-            this.btnVisualizar.Click += new System.EventHandler(this.btnVisualizar_Click);
-            // 
             // lbinf
             // 
             this.lbinf.AutoSize = true;
@@ -450,46 +386,6 @@
             this.lbinf.Text = "Pedido no existe!";
             this.lbinf.Visible = false;
             // 
-            // btnbuscar
-            // 
-            this.btnbuscar.BackColor = System.Drawing.Color.White;
-            this.btnbuscar.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
-            this.btnbuscar.FlatAppearance.BorderSize = 2;
-            this.btnbuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btnbuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnbuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnbuscar.ForeColor = System.Drawing.Color.Black;
-            this.btnbuscar.Image = global::Interfaz.Properties.Resources.Search_icon;
-            this.btnbuscar.Location = new System.Drawing.Point(267, 60);
-            this.btnbuscar.Name = "btnbuscar";
-            this.btnbuscar.Size = new System.Drawing.Size(37, 23);
-            this.btnbuscar.TabIndex = 169;
-            this.btnbuscar.TabStop = false;
-            this.btnbuscar.UseVisualStyleBackColor = false;
-            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
-            // 
-            // btnGuardarRecepcion
-            // 
-            this.btnGuardarRecepcion.BackColor = System.Drawing.Color.White;
-            this.btnGuardarRecepcion.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
-            this.btnGuardarRecepcion.FlatAppearance.BorderSize = 2;
-            this.btnGuardarRecepcion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btnGuardarRecepcion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnGuardarRecepcion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardarRecepcion.ForeColor = System.Drawing.Color.Black;
-            this.btnGuardarRecepcion.Image = global::Interfaz.Properties.Resources.save_icon;
-            this.btnGuardarRecepcion.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnGuardarRecepcion.Location = new System.Drawing.Point(338, 130);
-            this.btnGuardarRecepcion.Name = "btnGuardarRecepcion";
-            this.btnGuardarRecepcion.Size = new System.Drawing.Size(76, 55);
-            this.btnGuardarRecepcion.TabIndex = 168;
-            this.btnGuardarRecepcion.TabStop = false;
-            this.btnGuardarRecepcion.Text = "GUARDAR";
-            this.btnGuardarRecepcion.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnGuardarRecepcion.UseVisualStyleBackColor = false;
-            this.btnGuardarRecepcion.Click += new System.EventHandler(this.btnGuardarRecepcion_Click);
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -499,16 +395,6 @@
             this.label7.Size = new System.Drawing.Size(79, 13);
             this.label7.TabIndex = 162;
             this.label7.Text = "# RECEPCIÓN:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(20, 170);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 13);
-            this.label6.TabIndex = 161;
-            this.label6.Text = "CHOFER:";
             // 
             // cmbChofer
             // 
@@ -626,6 +512,7 @@
             this.chEliminados.TabIndex = 191;
             this.chEliminados.Text = "Eliminados";
             this.chEliminados.UseVisualStyleBackColor = true;
+            this.chEliminados.Visible = false;
             this.chEliminados.CheckedChanged += new System.EventHandler(this.chEliminados_CheckedChanged);
             // 
             // chImpreso
@@ -710,77 +597,14 @@
             this.panel6.Size = new System.Drawing.Size(85, 298);
             this.panel6.TabIndex = 6;
             // 
-            // btnImprimir
-            // 
-            this.btnImprimir.BackColor = System.Drawing.Color.White;
-            this.btnImprimir.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
-            this.btnImprimir.FlatAppearance.BorderSize = 2;
-            this.btnImprimir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btnImprimir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImprimir.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImprimir.ForeColor = System.Drawing.Color.Black;
-            this.btnImprimir.Image = global::Interfaz.Properties.Resources.print;
-            this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnImprimir.Location = new System.Drawing.Point(5, 63);
-            this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(76, 55);
-            this.btnImprimir.TabIndex = 168;
-            this.btnImprimir.TabStop = false;
-            this.btnImprimir.Text = "IMPRIMIR";
-            this.btnImprimir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnImprimir.UseVisualStyleBackColor = false;
-            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
-            // 
-            // btnEliminarRollo
-            // 
-            this.btnEliminarRollo.BackColor = System.Drawing.Color.White;
-            this.btnEliminarRollo.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
-            this.btnEliminarRollo.FlatAppearance.BorderSize = 2;
-            this.btnEliminarRollo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btnEliminarRollo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnEliminarRollo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarRollo.ForeColor = System.Drawing.Color.Black;
-            this.btnEliminarRollo.Image = global::Interfaz.Properties.Resources.delete_file_icon;
-            this.btnEliminarRollo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEliminarRollo.Location = new System.Drawing.Point(5, 124);
-            this.btnEliminarRollo.Name = "btnEliminarRollo";
-            this.btnEliminarRollo.Size = new System.Drawing.Size(76, 55);
-            this.btnEliminarRollo.TabIndex = 167;
-            this.btnEliminarRollo.TabStop = false;
-            this.btnEliminarRollo.Text = "ELIMINAR";
-            this.btnEliminarRollo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnEliminarRollo.UseVisualStyleBackColor = false;
-            this.btnEliminarRollo.Click += new System.EventHandler(this.btnEliminarRollo_Click);
-            // 
-            // btnEditarRollo
-            // 
-            this.btnEditarRollo.BackColor = System.Drawing.Color.White;
-            this.btnEditarRollo.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
-            this.btnEditarRollo.FlatAppearance.BorderSize = 2;
-            this.btnEditarRollo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btnEditarRollo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnEditarRollo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditarRollo.ForeColor = System.Drawing.Color.Black;
-            this.btnEditarRollo.Image = global::Interfaz.Properties.Resources.business_ordering_pencil_table_2333;
-            this.btnEditarRollo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEditarRollo.Location = new System.Drawing.Point(4, 2);
-            this.btnEditarRollo.Name = "btnEditarRollo";
-            this.btnEditarRollo.Size = new System.Drawing.Size(76, 55);
-            this.btnEditarRollo.TabIndex = 165;
-            this.btnEditarRollo.TabStop = false;
-            this.btnEditarRollo.Text = "EDITAR";
-            this.btnEditarRollo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnEditarRollo.UseVisualStyleBackColor = false;
-            // 
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.linkLabel1);
             this.panel4.Controls.Add(this.cmbUnidadMedida);
             this.panel4.Controls.Add(this.txtPesoKG);
             this.panel4.Controls.Add(this.pictureBox1);
             this.panel4.Controls.Add(this.panel8);
-            this.panel4.Controls.Add(this.label17);
             this.panel4.Controls.Add(this.cmbFabricante);
             this.panel4.Controls.Add(this.txtPeso);
             this.panel4.Controls.Add(this.label15);
@@ -822,15 +646,6 @@
             this.cmbUnidadMedida.TabIndex = 192;
             this.cmbUnidadMedida.SelectedIndexChanged += new System.EventHandler(this.cmbUnidadMedida_SelectedIndexChanged);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(622, 206);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.TabIndex = 190;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Visible = false;
-            // 
             // panel8
             // 
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -853,23 +668,13 @@
             this.label18.TabIndex = 187;
             this.label18.Text = "LEER ROLLO:";
             // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(20, 101);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(72, 13);
-            this.label17.TabIndex = 188;
-            this.label17.Text = "FABRICANTE:";
-            // 
             // cmbFabricante
             // 
             this.cmbFabricante.BackColor = System.Drawing.Color.White;
             this.cmbFabricante.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbFabricante.ForeColor = System.Drawing.Color.Black;
             this.cmbFabricante.FormattingEnabled = true;
-            this.cmbFabricante.Location = new System.Drawing.Point(104, 97);
+            this.cmbFabricante.Location = new System.Drawing.Point(104, 98);
             this.cmbFabricante.Name = "cmbFabricante";
             this.cmbFabricante.Size = new System.Drawing.Size(157, 21);
             this.cmbFabricante.TabIndex = 187;
@@ -915,27 +720,6 @@
             this.label13.Size = new System.Drawing.Size(65, 13);
             this.label13.TabIndex = 181;
             this.label13.Text = "DIAMETRO:";
-            // 
-            // btnGuardarRollo
-            // 
-            this.btnGuardarRollo.BackColor = System.Drawing.Color.White;
-            this.btnGuardarRollo.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
-            this.btnGuardarRollo.FlatAppearance.BorderSize = 2;
-            this.btnGuardarRollo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btnGuardarRollo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnGuardarRollo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardarRollo.ForeColor = System.Drawing.Color.Black;
-            this.btnGuardarRollo.Image = global::Interfaz.Properties.Resources.save_icon;
-            this.btnGuardarRollo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnGuardarRollo.Location = new System.Drawing.Point(622, 138);
-            this.btnGuardarRollo.Name = "btnGuardarRollo";
-            this.btnGuardarRollo.Size = new System.Drawing.Size(76, 55);
-            this.btnGuardarRollo.TabIndex = 179;
-            this.btnGuardarRollo.TabStop = false;
-            this.btnGuardarRollo.Text = "GUARDAR";
-            this.btnGuardarRollo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnGuardarRollo.UseVisualStyleBackColor = false;
-            this.btnGuardarRollo.Click += new System.EventHandler(this.btnGuardarRollo_Click);
             // 
             // label8
             // 
@@ -1078,28 +862,6 @@
             this.label38.TabIndex = 180;
             this.label38.Text = "CLIENTE:";
             // 
-            // btn_InventarioDet
-            // 
-            this.btn_InventarioDet.BackColor = System.Drawing.Color.White;
-            this.btn_InventarioDet.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
-            this.btn_InventarioDet.FlatAppearance.BorderSize = 2;
-            this.btn_InventarioDet.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btn_InventarioDet.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_InventarioDet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_InventarioDet.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_InventarioDet.ForeColor = System.Drawing.Color.Black;
-            this.btn_InventarioDet.Image = ((System.Drawing.Image)(resources.GetObject("btn_InventarioDet.Image")));
-            this.btn_InventarioDet.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_InventarioDet.Location = new System.Drawing.Point(36, 168);
-            this.btn_InventarioDet.Name = "btn_InventarioDet";
-            this.btn_InventarioDet.Size = new System.Drawing.Size(88, 62);
-            this.btn_InventarioDet.TabIndex = 83;
-            this.btn_InventarioDet.TabStop = false;
-            this.btn_InventarioDet.Text = "INV. DETALLADO";
-            this.btn_InventarioDet.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_InventarioDet.UseVisualStyleBackColor = false;
-            this.btn_InventarioDet.Click += new System.EventHandler(this.btn_InventarioDet_Click);
-            // 
             // cmbClienteSalida
             // 
             this.cmbClienteSalida.BackColor = System.Drawing.Color.White;
@@ -1123,28 +885,6 @@
             this.label37.TabIndex = 82;
             this.label37.Text = "REPORTES";
             // 
-            // btn_InventarioRes
-            // 
-            this.btn_InventarioRes.BackColor = System.Drawing.Color.White;
-            this.btn_InventarioRes.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
-            this.btn_InventarioRes.FlatAppearance.BorderSize = 2;
-            this.btn_InventarioRes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btn_InventarioRes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_InventarioRes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_InventarioRes.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_InventarioRes.ForeColor = System.Drawing.Color.Black;
-            this.btn_InventarioRes.Image = ((System.Drawing.Image)(resources.GetObject("btn_InventarioRes.Image")));
-            this.btn_InventarioRes.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_InventarioRes.Location = new System.Drawing.Point(36, 99);
-            this.btn_InventarioRes.Name = "btn_InventarioRes";
-            this.btn_InventarioRes.Size = new System.Drawing.Size(88, 62);
-            this.btn_InventarioRes.TabIndex = 55;
-            this.btn_InventarioRes.TabStop = false;
-            this.btn_InventarioRes.Text = "INV. RESUMIDO";
-            this.btn_InventarioRes.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_InventarioRes.UseVisualStyleBackColor = false;
-            this.btn_InventarioRes.Click += new System.EventHandler(this.btn_InventarioRes_Click);
-            // 
             // label25
             // 
             this.label25.AutoSize = true;
@@ -1154,28 +894,6 @@
             this.label25.Size = new System.Drawing.Size(217, 12);
             this.label25.TabIndex = 91;
             this.label25.Text = "DOBLE CLICK EN SALIDA PARA EDITAR";
-            // 
-            // btn_BuscarSalida
-            // 
-            this.btn_BuscarSalida.BackColor = System.Drawing.Color.White;
-            this.btn_BuscarSalida.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
-            this.btn_BuscarSalida.FlatAppearance.BorderSize = 2;
-            this.btn_BuscarSalida.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btn_BuscarSalida.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_BuscarSalida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_BuscarSalida.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_BuscarSalida.ForeColor = System.Drawing.Color.Black;
-            this.btn_BuscarSalida.Image = ((System.Drawing.Image)(resources.GetObject("btn_BuscarSalida.Image")));
-            this.btn_BuscarSalida.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_BuscarSalida.Location = new System.Drawing.Point(56, 90);
-            this.btn_BuscarSalida.Name = "btn_BuscarSalida";
-            this.btn_BuscarSalida.Size = new System.Drawing.Size(83, 49);
-            this.btn_BuscarSalida.TabIndex = 90;
-            this.btn_BuscarSalida.TabStop = false;
-            this.btn_BuscarSalida.Text = "BUSCAR";
-            this.btn_BuscarSalida.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_BuscarSalida.UseVisualStyleBackColor = false;
-            this.btn_BuscarSalida.Click += new System.EventHandler(this.btn_BuscarSalida_Click);
             // 
             // dtgv_HistorialSalida
             // 
@@ -1203,28 +921,6 @@
             this.label26.Size = new System.Drawing.Size(311, 12);
             this.label26.TabIndex = 88;
             this.label26.Text = "___________________________________________________";
-            // 
-            // btn_VerSalida
-            // 
-            this.btn_VerSalida.BackColor = System.Drawing.Color.White;
-            this.btn_VerSalida.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
-            this.btn_VerSalida.FlatAppearance.BorderSize = 2;
-            this.btn_VerSalida.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btn_VerSalida.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_VerSalida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_VerSalida.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_VerSalida.ForeColor = System.Drawing.Color.Black;
-            this.btn_VerSalida.Image = ((System.Drawing.Image)(resources.GetObject("btn_VerSalida.Image")));
-            this.btn_VerSalida.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_VerSalida.Location = new System.Drawing.Point(174, 90);
-            this.btn_VerSalida.Name = "btn_VerSalida";
-            this.btn_VerSalida.Size = new System.Drawing.Size(83, 49);
-            this.btn_VerSalida.TabIndex = 87;
-            this.btn_VerSalida.TabStop = false;
-            this.btn_VerSalida.Text = "VER SALIDA";
-            this.btn_VerSalida.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_VerSalida.UseVisualStyleBackColor = false;
-            this.btn_VerSalida.Click += new System.EventHandler(this.btn_VerSalida_Click);
             // 
             // label27
             // 
@@ -1337,27 +1033,6 @@
             this.label30.Size = new System.Drawing.Size(51, 13);
             this.label30.TabIndex = 89;
             this.label30.Text = "ROLLOS:";
-            // 
-            // btn_Registrar
-            // 
-            this.btn_Registrar.BackColor = System.Drawing.Color.White;
-            this.btn_Registrar.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
-            this.btn_Registrar.FlatAppearance.BorderSize = 2;
-            this.btn_Registrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btn_Registrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_Registrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Registrar.ForeColor = System.Drawing.Color.Black;
-            this.btn_Registrar.Image = global::Interfaz.Properties.Resources.disquete__2_;
-            this.btn_Registrar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_Registrar.Location = new System.Drawing.Point(219, 360);
-            this.btn_Registrar.Name = "btn_Registrar";
-            this.btn_Registrar.Size = new System.Drawing.Size(88, 61);
-            this.btn_Registrar.TabIndex = 88;
-            this.btn_Registrar.TabStop = false;
-            this.btn_Registrar.Text = "REGISTRAR";
-            this.btn_Registrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_Registrar.UseVisualStyleBackColor = false;
-            this.btn_Registrar.Click += new System.EventHandler(this.btn_Registrar_Click);
             // 
             // lb_Total
             // 
@@ -1531,6 +1206,17 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(21, 102);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(72, 13);
+            this.linkLabel1.TabIndex = 193;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "FABRICANTE:";
+            this.linkLabel1.Click += new System.EventHandler(this.linkLabel1_Click);
+            // 
             // txtPedido3
             // 
             this.txtPedido3.BackColor = System.Drawing.Color.White;
@@ -1671,6 +1357,324 @@
             this.txtRollo.TabIndex = 170;
             this.txtRollo.Validar = true;
             // 
+            // btnEliminarRecepcion
+            // 
+            this.btnEliminarRecepcion.BackColor = System.Drawing.Color.White;
+            this.btnEliminarRecepcion.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
+            this.btnEliminarRecepcion.FlatAppearance.BorderSize = 2;
+            this.btnEliminarRecepcion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnEliminarRecepcion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnEliminarRecepcion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarRecepcion.ForeColor = System.Drawing.Color.Black;
+            this.btnEliminarRecepcion.Image = global::Interfaz.Properties.Resources.delete_file_icon;
+            this.btnEliminarRecepcion.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnEliminarRecepcion.Location = new System.Drawing.Point(4, 62);
+            this.btnEliminarRecepcion.Name = "btnEliminarRecepcion";
+            this.btnEliminarRecepcion.Size = new System.Drawing.Size(76, 55);
+            this.btnEliminarRecepcion.TabIndex = 167;
+            this.btnEliminarRecepcion.TabStop = false;
+            this.btnEliminarRecepcion.Text = "ELIMINAR";
+            this.btnEliminarRecepcion.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEliminarRecepcion.UseVisualStyleBackColor = false;
+            this.btnEliminarRecepcion.Click += new System.EventHandler(this.btnEliminarRecepcion_Click);
+            // 
+            // btnEditarRecepcion
+            // 
+            this.btnEditarRecepcion.BackColor = System.Drawing.Color.White;
+            this.btnEditarRecepcion.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
+            this.btnEditarRecepcion.FlatAppearance.BorderSize = 2;
+            this.btnEditarRecepcion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnEditarRecepcion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnEditarRecepcion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditarRecepcion.ForeColor = System.Drawing.Color.Black;
+            this.btnEditarRecepcion.Image = global::Interfaz.Properties.Resources.business_ordering_pencil_table_2333;
+            this.btnEditarRecepcion.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnEditarRecepcion.Location = new System.Drawing.Point(4, 2);
+            this.btnEditarRecepcion.Name = "btnEditarRecepcion";
+            this.btnEditarRecepcion.Size = new System.Drawing.Size(76, 55);
+            this.btnEditarRecepcion.TabIndex = 165;
+            this.btnEditarRecepcion.TabStop = false;
+            this.btnEditarRecepcion.Text = "EDITAR";
+            this.btnEditarRecepcion.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEditarRecepcion.UseVisualStyleBackColor = false;
+            this.btnEditarRecepcion.Click += new System.EventHandler(this.btnEditarRecepcion_Click);
+            // 
+            // btnVisualizar
+            // 
+            this.btnVisualizar.BackColor = System.Drawing.Color.White;
+            this.btnVisualizar.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
+            this.btnVisualizar.FlatAppearance.BorderSize = 2;
+            this.btnVisualizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnVisualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnVisualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVisualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVisualizar.ForeColor = System.Drawing.Color.Black;
+            this.btnVisualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnVisualizar.Image")));
+            this.btnVisualizar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnVisualizar.Location = new System.Drawing.Point(107, 178);
+            this.btnVisualizar.Name = "btnVisualizar";
+            this.btnVisualizar.Size = new System.Drawing.Size(88, 54);
+            this.btnVisualizar.TabIndex = 84;
+            this.btnVisualizar.TabStop = false;
+            this.btnVisualizar.Text = "VISUALIZAR";
+            this.btnVisualizar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnVisualizar.UseVisualStyleBackColor = false;
+            this.btnVisualizar.Click += new System.EventHandler(this.btnVisualizar_Click);
+            // 
+            // btnbuscar
+            // 
+            this.btnbuscar.BackColor = System.Drawing.Color.White;
+            this.btnbuscar.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
+            this.btnbuscar.FlatAppearance.BorderSize = 2;
+            this.btnbuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnbuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnbuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnbuscar.ForeColor = System.Drawing.Color.Black;
+            this.btnbuscar.Image = global::Interfaz.Properties.Resources.Search_icon;
+            this.btnbuscar.Location = new System.Drawing.Point(267, 60);
+            this.btnbuscar.Name = "btnbuscar";
+            this.btnbuscar.Size = new System.Drawing.Size(37, 23);
+            this.btnbuscar.TabIndex = 169;
+            this.btnbuscar.TabStop = false;
+            this.btnbuscar.UseVisualStyleBackColor = false;
+            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
+            // 
+            // btnGuardarRecepcion
+            // 
+            this.btnGuardarRecepcion.BackColor = System.Drawing.Color.White;
+            this.btnGuardarRecepcion.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
+            this.btnGuardarRecepcion.FlatAppearance.BorderSize = 2;
+            this.btnGuardarRecepcion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnGuardarRecepcion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnGuardarRecepcion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardarRecepcion.ForeColor = System.Drawing.Color.Black;
+            this.btnGuardarRecepcion.Image = global::Interfaz.Properties.Resources.save_icon;
+            this.btnGuardarRecepcion.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnGuardarRecepcion.Location = new System.Drawing.Point(338, 130);
+            this.btnGuardarRecepcion.Name = "btnGuardarRecepcion";
+            this.btnGuardarRecepcion.Size = new System.Drawing.Size(76, 55);
+            this.btnGuardarRecepcion.TabIndex = 168;
+            this.btnGuardarRecepcion.TabStop = false;
+            this.btnGuardarRecepcion.Text = "GUARDAR";
+            this.btnGuardarRecepcion.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnGuardarRecepcion.UseVisualStyleBackColor = false;
+            this.btnGuardarRecepcion.Click += new System.EventHandler(this.btnGuardarRecepcion_Click);
+            // 
+            // btnImprimir
+            // 
+            this.btnImprimir.BackColor = System.Drawing.Color.White;
+            this.btnImprimir.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
+            this.btnImprimir.FlatAppearance.BorderSize = 2;
+            this.btnImprimir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnImprimir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImprimir.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImprimir.ForeColor = System.Drawing.Color.Black;
+            this.btnImprimir.Image = global::Interfaz.Properties.Resources.print;
+            this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnImprimir.Location = new System.Drawing.Point(5, 63);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(76, 55);
+            this.btnImprimir.TabIndex = 168;
+            this.btnImprimir.TabStop = false;
+            this.btnImprimir.Text = "IMPRIMIR";
+            this.btnImprimir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnImprimir.UseVisualStyleBackColor = false;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
+            // 
+            // btnEliminarRollo
+            // 
+            this.btnEliminarRollo.BackColor = System.Drawing.Color.White;
+            this.btnEliminarRollo.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
+            this.btnEliminarRollo.FlatAppearance.BorderSize = 2;
+            this.btnEliminarRollo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnEliminarRollo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnEliminarRollo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarRollo.ForeColor = System.Drawing.Color.Black;
+            this.btnEliminarRollo.Image = global::Interfaz.Properties.Resources.delete_file_icon;
+            this.btnEliminarRollo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnEliminarRollo.Location = new System.Drawing.Point(5, 124);
+            this.btnEliminarRollo.Name = "btnEliminarRollo";
+            this.btnEliminarRollo.Size = new System.Drawing.Size(76, 55);
+            this.btnEliminarRollo.TabIndex = 167;
+            this.btnEliminarRollo.TabStop = false;
+            this.btnEliminarRollo.Text = "ELIMINAR";
+            this.btnEliminarRollo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEliminarRollo.UseVisualStyleBackColor = false;
+            this.btnEliminarRollo.Click += new System.EventHandler(this.btnEliminarRollo_Click);
+            // 
+            // btnEditarRollo
+            // 
+            this.btnEditarRollo.BackColor = System.Drawing.Color.White;
+            this.btnEditarRollo.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
+            this.btnEditarRollo.FlatAppearance.BorderSize = 2;
+            this.btnEditarRollo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnEditarRollo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnEditarRollo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditarRollo.ForeColor = System.Drawing.Color.Black;
+            this.btnEditarRollo.Image = global::Interfaz.Properties.Resources.business_ordering_pencil_table_2333;
+            this.btnEditarRollo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnEditarRollo.Location = new System.Drawing.Point(4, 2);
+            this.btnEditarRollo.Name = "btnEditarRollo";
+            this.btnEditarRollo.Size = new System.Drawing.Size(76, 55);
+            this.btnEditarRollo.TabIndex = 165;
+            this.btnEditarRollo.TabStop = false;
+            this.btnEditarRollo.Text = "EDITAR";
+            this.btnEditarRollo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEditarRollo.UseVisualStyleBackColor = false;
+            this.btnEditarRollo.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(622, 206);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.TabIndex = 190;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
+            // 
+            // btnGuardarRollo
+            // 
+            this.btnGuardarRollo.BackColor = System.Drawing.Color.White;
+            this.btnGuardarRollo.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
+            this.btnGuardarRollo.FlatAppearance.BorderSize = 2;
+            this.btnGuardarRollo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnGuardarRollo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnGuardarRollo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardarRollo.ForeColor = System.Drawing.Color.Black;
+            this.btnGuardarRollo.Image = global::Interfaz.Properties.Resources.save_icon;
+            this.btnGuardarRollo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnGuardarRollo.Location = new System.Drawing.Point(622, 138);
+            this.btnGuardarRollo.Name = "btnGuardarRollo";
+            this.btnGuardarRollo.Size = new System.Drawing.Size(76, 55);
+            this.btnGuardarRollo.TabIndex = 179;
+            this.btnGuardarRollo.TabStop = false;
+            this.btnGuardarRollo.Text = "GUARDAR";
+            this.btnGuardarRollo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnGuardarRollo.UseVisualStyleBackColor = false;
+            this.btnGuardarRollo.Click += new System.EventHandler(this.btnGuardarRollo_Click);
+            // 
+            // btn_InventarioDet
+            // 
+            this.btn_InventarioDet.BackColor = System.Drawing.Color.White;
+            this.btn_InventarioDet.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
+            this.btn_InventarioDet.FlatAppearance.BorderSize = 2;
+            this.btn_InventarioDet.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btn_InventarioDet.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_InventarioDet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_InventarioDet.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_InventarioDet.ForeColor = System.Drawing.Color.Black;
+            this.btn_InventarioDet.Image = ((System.Drawing.Image)(resources.GetObject("btn_InventarioDet.Image")));
+            this.btn_InventarioDet.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_InventarioDet.Location = new System.Drawing.Point(36, 168);
+            this.btn_InventarioDet.Name = "btn_InventarioDet";
+            this.btn_InventarioDet.Size = new System.Drawing.Size(88, 62);
+            this.btn_InventarioDet.TabIndex = 83;
+            this.btn_InventarioDet.TabStop = false;
+            this.btn_InventarioDet.Text = "INV. DETALLADO";
+            this.btn_InventarioDet.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_InventarioDet.UseVisualStyleBackColor = false;
+            this.btn_InventarioDet.Click += new System.EventHandler(this.btn_InventarioDet_Click);
+            // 
+            // btn_InventarioRes
+            // 
+            this.btn_InventarioRes.BackColor = System.Drawing.Color.White;
+            this.btn_InventarioRes.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
+            this.btn_InventarioRes.FlatAppearance.BorderSize = 2;
+            this.btn_InventarioRes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btn_InventarioRes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_InventarioRes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_InventarioRes.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_InventarioRes.ForeColor = System.Drawing.Color.Black;
+            this.btn_InventarioRes.Image = ((System.Drawing.Image)(resources.GetObject("btn_InventarioRes.Image")));
+            this.btn_InventarioRes.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_InventarioRes.Location = new System.Drawing.Point(36, 99);
+            this.btn_InventarioRes.Name = "btn_InventarioRes";
+            this.btn_InventarioRes.Size = new System.Drawing.Size(88, 62);
+            this.btn_InventarioRes.TabIndex = 55;
+            this.btn_InventarioRes.TabStop = false;
+            this.btn_InventarioRes.Text = "INV. RESUMIDO";
+            this.btn_InventarioRes.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_InventarioRes.UseVisualStyleBackColor = false;
+            this.btn_InventarioRes.Click += new System.EventHandler(this.btn_InventarioRes_Click);
+            // 
+            // btn_BuscarSalida
+            // 
+            this.btn_BuscarSalida.BackColor = System.Drawing.Color.White;
+            this.btn_BuscarSalida.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
+            this.btn_BuscarSalida.FlatAppearance.BorderSize = 2;
+            this.btn_BuscarSalida.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btn_BuscarSalida.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_BuscarSalida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_BuscarSalida.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_BuscarSalida.ForeColor = System.Drawing.Color.Black;
+            this.btn_BuscarSalida.Image = ((System.Drawing.Image)(resources.GetObject("btn_BuscarSalida.Image")));
+            this.btn_BuscarSalida.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_BuscarSalida.Location = new System.Drawing.Point(56, 90);
+            this.btn_BuscarSalida.Name = "btn_BuscarSalida";
+            this.btn_BuscarSalida.Size = new System.Drawing.Size(83, 49);
+            this.btn_BuscarSalida.TabIndex = 90;
+            this.btn_BuscarSalida.TabStop = false;
+            this.btn_BuscarSalida.Text = "BUSCAR";
+            this.btn_BuscarSalida.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_BuscarSalida.UseVisualStyleBackColor = false;
+            this.btn_BuscarSalida.Click += new System.EventHandler(this.btn_BuscarSalida_Click);
+            // 
+            // btn_VerSalida
+            // 
+            this.btn_VerSalida.BackColor = System.Drawing.Color.White;
+            this.btn_VerSalida.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
+            this.btn_VerSalida.FlatAppearance.BorderSize = 2;
+            this.btn_VerSalida.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btn_VerSalida.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_VerSalida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_VerSalida.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_VerSalida.ForeColor = System.Drawing.Color.Black;
+            this.btn_VerSalida.Image = ((System.Drawing.Image)(resources.GetObject("btn_VerSalida.Image")));
+            this.btn_VerSalida.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_VerSalida.Location = new System.Drawing.Point(174, 90);
+            this.btn_VerSalida.Name = "btn_VerSalida";
+            this.btn_VerSalida.Size = new System.Drawing.Size(83, 49);
+            this.btn_VerSalida.TabIndex = 87;
+            this.btn_VerSalida.TabStop = false;
+            this.btn_VerSalida.Text = "VER SALIDA";
+            this.btn_VerSalida.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_VerSalida.UseVisualStyleBackColor = false;
+            this.btn_VerSalida.Click += new System.EventHandler(this.btn_VerSalida_Click);
+            // 
+            // btn_Registrar
+            // 
+            this.btn_Registrar.BackColor = System.Drawing.Color.White;
+            this.btn_Registrar.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
+            this.btn_Registrar.FlatAppearance.BorderSize = 2;
+            this.btn_Registrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btn_Registrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_Registrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Registrar.ForeColor = System.Drawing.Color.Black;
+            this.btn_Registrar.Image = global::Interfaz.Properties.Resources.disquete__2_;
+            this.btn_Registrar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_Registrar.Location = new System.Drawing.Point(219, 360);
+            this.btn_Registrar.Name = "btn_Registrar";
+            this.btn_Registrar.Size = new System.Drawing.Size(88, 61);
+            this.btn_Registrar.TabIndex = 88;
+            this.btn_Registrar.TabStop = false;
+            this.btn_Registrar.Text = "REGISTRAR";
+            this.btn_Registrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_Registrar.UseVisualStyleBackColor = false;
+            this.btn_Registrar.Click += new System.EventHandler(this.btn_Registrar_Click);
+            // 
+            // lb_Chofer
+            // 
+            this.lb_Chofer.AutoSize = true;
+            this.lb_Chofer.Location = new System.Drawing.Point(20, 169);
+            this.lb_Chofer.Name = "lb_Chofer";
+            this.lb_Chofer.Size = new System.Drawing.Size(53, 13);
+            this.lb_Chofer.TabIndex = 194;
+            this.lb_Chofer.TabStop = true;
+            this.lb_Chofer.Text = "CHOFER:";
+            this.lb_Chofer.Click += new System.EventHandler(this.lb_Chofer_Click);
+            // 
             // frmRecepcionAlambron
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1703,7 +1707,6 @@
             this.panel6.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -1720,6 +1723,7 @@
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1741,7 +1745,6 @@
         private System.Windows.Forms.Label label3;
         private Controles.textbox txtRecepcion;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cmbChofer;
         private System.Windows.Forms.Button btnGuardarRecepcion;
         private System.Windows.Forms.Panel panel5;
@@ -1772,7 +1775,6 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button btnEliminarRollo;
         private System.Windows.Forms.Button btnEditarRollo;
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.ComboBox cmbFabricante;
         private Controles.textbox txtLeerRollo;
         private System.Windows.Forms.Label label18;
@@ -1841,5 +1843,7 @@
         private System.Windows.Forms.ComboBox cmbUnidadMedida;
         private System.Windows.Forms.TextBox txt_Rollo;
         private System.Windows.Forms.TextBox txt_Peso;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel lb_Chofer;
     }
 }

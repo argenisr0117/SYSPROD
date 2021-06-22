@@ -100,6 +100,7 @@ namespace Interfaz
         public static Boolean maqpar;
         public static Boolean monmaq;
         public static Boolean reghora;
+        public static Boolean recpalm;
 
         public static int Valor3
         {

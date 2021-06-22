@@ -779,10 +779,7 @@ D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\SysProd.exe.manife
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\SysProd.application
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\SysProd.exe
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\SysProd.pdb
-D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\DocumentFormat.OpenXml.dll
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Intermedia.dll
-D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Microsoft.ReportViewer.WinForms.dll
-D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\TempSys.exe
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Datos.dll
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\MccDaq.dll
@@ -792,7 +789,6 @@ D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\TempSys.pdb
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\DocumentFormat.OpenXml.xml
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Datos.pdb
-D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
@@ -812,5 +808,10 @@ D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\inventari
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\inventario_det_alambron.rdlc
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\ticket_galvanizado - Copia.rdlc
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\ticket_alambron.rdlc
-D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.csprojResolveAssemblyReference.cache
 D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\Reportes\salida_inventario_alambron.rdlc
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmFabricante.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.Registros.frmChofer.resources
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.csproj.AssemblyReference.cache
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.csproj.CoreCompileInputs.cache
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\bin\Debug\TempSys.exe.config
+D:\Proyectos Personales\Proceso\Produccion\Interfaz\obj\Debug\Interfaz.csproj.CopyComplete

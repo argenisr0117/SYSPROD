@@ -26,6 +26,7 @@ namespace Interfaz.Registros
         int idRecepcion = 0;
 
         #region MethodsCombos
+
         private void ComboChofer()
         {
             try
@@ -38,7 +39,6 @@ namespace Interfaz.Registros
             {
                 MessageBoxEx.Show(ex.Message);
             }
-
         }
         private void ComboAlmacen()
         {
@@ -52,7 +52,6 @@ namespace Interfaz.Registros
             {
                 MessageBoxEx.Show(ex.Message);
             }
-
         }
         private void ComboCliente()
         {
@@ -66,7 +65,6 @@ namespace Interfaz.Registros
             {
                 MessageBoxEx.Show(ex.Message);
             }
-
         }
         private void ComboCliente2()
         {
@@ -80,7 +78,6 @@ namespace Interfaz.Registros
             {
                 MessageBoxEx.Show(ex.Message);
             }
-
         }
         private void ComboClienteSalida()
         {
@@ -94,7 +91,6 @@ namespace Interfaz.Registros
             {
                 MessageBoxEx.Show(ex.Message);
             }
-
         }
 
         private void ComboFabricante()
@@ -109,7 +105,6 @@ namespace Interfaz.Registros
             {
                 MessageBoxEx.Show(ex.Message);
             }
-
         }
         private void ComboU()
         {
@@ -124,9 +119,11 @@ namespace Interfaz.Registros
                 MessageBoxEx.Show(ex.Message);
             }
         }
-        #endregion
+
+        #endregion MethodsCombos
 
         #region Methods
+
         private void GenerarNumRecepcion()
         {
             try
@@ -138,7 +135,6 @@ namespace Interfaz.Registros
             {
                 MessageBoxEx.Show(ex.Message);
             }
-
         }
 
         private void LlenarGridRecepcion()
@@ -149,7 +145,6 @@ namespace Interfaz.Registros
             dtgvRecepcion.ClearSelection();
             dtgvRecepcion.Columns[0].Visible = false;
             dtgvRecepcion.Columns[3].Visible = false;
-
         }
         private void LlenarGridRollos()
         {
@@ -163,7 +158,6 @@ namespace Interfaz.Registros
             dtgvRollosAlambron.ClearSelection();
             //dtgvRecepcion.Columns[0].Visible = false;
             //dtgvRecepcion.Columns[3].Visible = false;
-
         }
         private void ObtenerUltimaRecepcion()
         {
@@ -172,7 +166,8 @@ namespace Interfaz.Registros
             txtRecepcion2.Text = dt.Rows[0][1].ToString();
             idRecepcion = Convert.ToInt32(dt.Rows[0][0]);
         }
-        #endregion
+
+        #endregion Methods
 
         private void frmRecepcionAlambron_Load(object sender, EventArgs e)
         {
@@ -206,11 +201,8 @@ namespace Interfaz.Registros
             }
             catch (Exception ex)
             {
-
                 MessageBoxEx.Show(ex.Message, "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
-
         }
 
         private void txtLeerRollo_KeyPress(object sender, KeyPressEventArgs e)
@@ -224,7 +216,6 @@ namespace Interfaz.Registros
 
                     switch (cmbFabricante.Text)
                     {
-
                         case "MINMETALS":
                             txtRollo.Text = datos[0].Substring(8, 5);
                             txtColada.Text = datos[0].Substring(0, 8) + "E";
@@ -233,6 +224,7 @@ namespace Interfaz.Registros
                             txtPeso.Text = datos[3];
                             txtLeerRollo.Text = string.Empty;
                             break;
+
                         case "BENXI":
                             txtRollo.Text = datos[7].Substring(1, 3);
                             txtColada.Text = datos[3].Substring(1, 9);
@@ -241,6 +233,7 @@ namespace Interfaz.Registros
                             txtPeso.Text = datos[8].Substring(1, 4);
                             txtLeerRollo.Text = string.Empty;
                             break;
+
                         case "ACINDAR":
                             datos = txtLeerRollo.Text.Split(';');
                             //txtRollo.Text = datos[7].Substring(1, 3);
@@ -250,6 +243,17 @@ namespace Interfaz.Registros
                             txtPeso.Text = datos[0].Substring(10, 4);
                             txtLeerRollo.Text = string.Empty;
                             break;
+
+                        case "KROMAN CELIK":
+                            datos = txtLeerRollo.Text.Split(';');
+                            txtRollo.Text = datos[4];
+                            txtColada.Text = datos[2];
+                            txtSae.Text = datos[1].Substring(3, 4);
+                            txtDiametro.Text = datos[3];
+                            txtPeso.Text = datos[5];
+                            txtLeerRollo.Text = string.Empty;
+                            break;
+
                         default:
                             break;
                     }
@@ -258,7 +262,6 @@ namespace Interfaz.Registros
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
         }
@@ -306,7 +309,6 @@ namespace Interfaz.Registros
                         lbinf.Visible = true;
                     }
                 }
-
             }
             catch (Exception ex)
             {
@@ -318,7 +320,7 @@ namespace Interfaz.Registros
         {
             try
             {
-                if (!string.IsNullOrEmpty(txtPedido.Text) && !string.IsNullOrEmpty(txtConduce.Text) && IdPedido!=0)
+                if (!string.IsNullOrEmpty(txtPedido.Text) && !string.IsNullOrEmpty(txtConduce.Text) && IdPedido != 0)
                 {
                     string Msj = "";
                     R.IdRecepcion = txtRecepcion.Text;
@@ -350,9 +352,7 @@ namespace Interfaz.Registros
                     else
                     {
                         MessageBoxEx.Show("Ha ocurrido un error", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                     }
-
                 }
             }
             catch (Exception ex)
@@ -403,20 +403,17 @@ namespace Interfaz.Registros
                     else
                     {
                         MessageBoxEx.Show("Rollo ya existe", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                     }
                 }
                 else
                 {
                     MessageBoxEx.Show("Número de recepción no existe", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                dt = null; 
+                dt = null;
             }
             catch (Exception ex)
             {
-
                 MessageBoxEx.Show(ex.Message, "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
             }
         }
 
@@ -441,7 +438,6 @@ namespace Interfaz.Registros
                     }
                     dt = null;
                 }
-
             }
             catch (Exception ex)
             {
@@ -463,7 +459,6 @@ namespace Interfaz.Registros
                 obj.Pedido = txtPedido3.Text;
                 obj.Nombre = "recepcion_alambron.rdlc";
                 obj.Valor = 25;
-
             }
             else if (TipoReporte == 2)
             {
@@ -527,7 +522,6 @@ namespace Interfaz.Registros
                         {
                             MessageBoxEx.Show("Eliminado correctamente", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             LlenarGridRollos();
-
                         }
                         else
                         {
@@ -538,9 +532,7 @@ namespace Interfaz.Registros
             }
             catch (Exception ex)
             {
-
                 MessageBoxEx.Show(ex.Message, "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
             }
         }
 
@@ -548,7 +540,7 @@ namespace Interfaz.Registros
         {
             foreach (DataGridViewRow Myrow in dtgvRollosAlambron.Rows)
             {            //Here 2 cell is target value and 1 cell is Volume
-                if (Convert.ToBoolean(Myrow.Cells[6].Value))// Or your condition 
+                if (Convert.ToBoolean(Myrow.Cells[6].Value))// Or your condition
                 {
                     Myrow.DefaultCellStyle.ForeColor = System.Drawing.Color.Green;
                 }
@@ -556,12 +548,10 @@ namespace Interfaz.Registros
                 //{
                 //    Myrow.DefaultCellStyle.ForeColor = System.Drawing.Color.Red;
                 //}
-                //else
+                else
                 {
                     Myrow.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-
                 }
-
             }
         }
 
@@ -590,7 +580,6 @@ namespace Interfaz.Registros
             }
             catch (Exception)
             {
-
             }
         }
 
@@ -609,7 +598,6 @@ namespace Interfaz.Registros
             }
             catch (Exception)
             {
-
             }
         }
 
@@ -625,14 +613,14 @@ namespace Interfaz.Registros
                     obj.Nombre = "ticket_alambron.rdlc";
                     obj._IdRollo = Convert.ToInt32(dtgvRollosAlambron.CurrentRow.Cells[0].Value);
                     obj.ShowDialog();
-
+                    R.Id = Convert.ToInt32(dtgvRollosAlambron.CurrentRow.Cells[0].Value);
+                    R.ActualizarImpresionRolloAlambron();
+                    LlenarGridRollos();
                 }
             }
             catch (Exception ex)
             {
-
                 MessageBoxEx.Show(ex.Message, "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
             }
         }
 
@@ -640,7 +628,6 @@ namespace Interfaz.Registros
         {
             if (dtgvRecepcion.SelectedRows.Count > 0)
             {
-
                 txtRecepcion.ReadOnly = true;
                 Program.Valor3 = 1;
                 txtRecepcion.Text = dtgvRecepcion.CurrentRow.Cells[1].Value.ToString();
@@ -649,7 +636,6 @@ namespace Interfaz.Registros
                 txtConduce.Text = dtgvRecepcion.CurrentRow.Cells[6].Value.ToString();
                 cmbChofer.Text = dtgvRecepcion.CurrentRow.Cells[5].Value.ToString();
                 dtpFecha.Value = Convert.ToDateTime(dtgvRecepcion.CurrentRow.Cells[2].Value);
-
             }
         }
 
@@ -673,7 +659,6 @@ namespace Interfaz.Registros
                     else
                     {
                         MessageBoxEx.Show("No puede eliminar una recepción que ya tiene rollos", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                     }
                     ObtenerUltimaRecepcion();
                 }
@@ -691,7 +676,6 @@ namespace Interfaz.Registros
             {
                 e.Handled = true;
                 txt_Peso.Focus();
-
             }
         }
 
@@ -727,7 +711,6 @@ namespace Interfaz.Registros
                         dtgv_Salida.Rows.Add(txt_Rollo.Text, txt_Peso.Text);
                         CalcularTotal();
                     }
-
                 }
                 else if (msj == 1)
                 {
@@ -750,7 +733,6 @@ namespace Interfaz.Registros
             for (int x = 0; x < dtgv_Salida.Rows.Count; x++)
             {
                 total = total + Convert.ToDouble(dtgv_Salida.Rows[x].Cells[1].Value);
-
             }
             //total = total;
             lb_Total.Text = total.ToString() + " " + "QQS.";
@@ -767,9 +749,11 @@ namespace Interfaz.Registros
                     case "KG":
                         txtPesoKG.Text = txtPeso.Text;
                         break;
+
                     case "LBS":
-                        txtPesoKG.Text =Math.Round((Convert.ToDouble(Peso) / 2.205),2).ToString();
+                        txtPesoKG.Text = Math.Round((Convert.ToDouble(Peso) / 2.205), 2).ToString();
                         break;
+
                     case "TM":
                         txtPesoKG.Text = (Convert.ToDouble(Peso) * 1000).ToString();
                         break;
@@ -780,15 +764,13 @@ namespace Interfaz.Registros
             {
                 txtPesoKG.Text = string.Empty;
             }
-            
         }
 
         private void btn_Registrar_Click(object sender, EventArgs e)
         {
-
             if (Program.Editar == 0)
             {
-                 idSalida = 0;
+                idSalida = 0;
             }
 
             try
@@ -823,22 +805,18 @@ namespace Interfaz.Registros
                         else
                         {
                             MessageBoxEx.Show("Salida registrada.", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                         }
                         Limpiar();
-
                     }
                     else
                     {
                         MessageBoxEx.Show("Ha ocurrido un error.", "Sistema de Producción", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-
                 }
                 Program.Editar = 0;
             }
             catch (Exception ex)
             {
-
             }
         }
         private void Limpiar()
@@ -864,11 +842,9 @@ namespace Interfaz.Registros
                 dtgv_HistorialSalida.DataSource = null;
                 dtgv_HistorialSalida.DataSource = dt;
                 dtgv_HistorialSalida.Columns[0].Visible = false;
-
             }
             catch (Exception ex)
             {
-
             }
         }
 
@@ -886,7 +862,7 @@ namespace Interfaz.Registros
                 obj.Reporte = "SALIDA DE INVENTARIO";
                 obj.Nombre = "salida_inventario_alambron.rdlc";
                 obj.Idalmacen = Convert.ToInt16(cmbAlmacen.SelectedValue);
-                obj.Idcliente= Convert.ToInt16(cmbClienteSalida.SelectedValue);
+                obj.Idcliente = Convert.ToInt16(cmbClienteSalida.SelectedValue);
                 obj.Almacen = cmbAlmacen.Text;
                 obj.Fechai = dtp_FechaiSalida.Value;
                 obj.Fechaf = dtp_FechafSalida.Value;
@@ -949,6 +925,20 @@ namespace Interfaz.Registros
             {
                 MessageBoxEx.Show(ex.Message);
             }
+        }
+
+        private void linkLabel1_Click(object sender, EventArgs e)
+        {
+            frmFabricante obj = new frmFabricante();
+            obj.ShowDialog();
+            ComboFabricante();
+        }
+
+        private void lb_Chofer_Click(object sender, EventArgs e)
+        {
+            frmChofer obj = new frmChofer();
+            obj.ShowDialog();
+            ComboChofer();
         }
     }
 }

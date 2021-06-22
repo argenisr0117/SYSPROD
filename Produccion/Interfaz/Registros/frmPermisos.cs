@@ -91,6 +91,7 @@ namespace Interfaz.Registros
                 U.MaqPar = chbMaqParada.Checked;
                 U.MonMaq = chbMonMaquina.Checked;
                 U.RegHor = chbReghor.Checked;
+                U.Recpalm = chbRecepAlambron.Checked;
                 mensaje = U.RegistrarActPermisos();
                 if (mensaje == 1)
                 {
@@ -162,6 +163,7 @@ namespace Interfaz.Registros
                 chbMaqParada.Checked= Convert.ToBoolean(dt.Rows[0][43]);
                 chbMonMaquina.Checked= Convert.ToBoolean(dt.Rows[0][44]);
                 chbReghor.Checked= Convert.ToBoolean(dt.Rows[0][45]);
+                chbRecepAlambron.Checked= Convert.ToBoolean(dt.Rows[0][46]);
             }
             catch(Exception ex)
             {

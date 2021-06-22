@@ -358,6 +358,12 @@
     <Compile Include="Registros\frmAttControl.Designer.cs">
       <DependentUpon>frmAttControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Registros\frmChofer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\frmChofer.Designer.cs">
+      <DependentUpon>frmChofer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Registros\frmHoraExtra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -387,6 +393,12 @@
     </Compile>
     <Compile Include="Registros\frmPackingList.Designer.cs">
       <DependentUpon>frmPackingList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\frmFabricante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\frmFabricante.Designer.cs">
+      <DependentUpon>frmFabricante.cs</DependentUpon>
     </Compile>
     <Compile Include="Registros\frmPedido.cs">
       <SubType>Form</SubType>
@@ -658,6 +670,9 @@
     <EmbeddedResource Include="Registros\frmAttControl.resx">
       <DependentUpon>frmAttControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Registros\frmChofer.resx">
+      <DependentUpon>frmChofer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Registros\frmHoraExtra.resx">
       <DependentUpon>frmHoraExtra.cs</DependentUpon>
     </EmbeddedResource>
@@ -672,6 +687,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registros\frmPackingList.resx">
       <DependentUpon>frmPackingList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros\frmFabricante.resx">
+      <DependentUpon>frmFabricante.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registros\frmPedido.resx">
       <DependentUpon>frmPedido.cs</DependentUpon>

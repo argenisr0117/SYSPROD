@@ -82,8 +82,9 @@
             this.cbAlmacenLineagalv = new System.Windows.Forms.CheckBox();
             this.chbMonTemp = new System.Windows.Forms.CheckBox();
             this.chbMaqParada = new System.Windows.Forms.CheckBox();
-            this.chbReghor = new System.Windows.Forms.CheckBox();
             this.chbMonMaquina = new System.Windows.Forms.CheckBox();
+            this.chbReghor = new System.Windows.Forms.CheckBox();
+            this.chbRecepAlambron = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -731,18 +732,6 @@
             this.chbMaqParada.Text = "Maq. Parada";
             this.chbMaqParada.UseVisualStyleBackColor = false;
             // 
-            // chbReghor
-            // 
-            this.chbReghor.AutoSize = true;
-            this.chbReghor.BackColor = System.Drawing.Color.White;
-            this.chbReghor.ForeColor = System.Drawing.Color.Black;
-            this.chbReghor.Location = new System.Drawing.Point(299, 228);
-            this.chbReghor.Name = "chbReghor";
-            this.chbReghor.Size = new System.Drawing.Size(104, 17);
-            this.chbReghor.TabIndex = 178;
-            this.chbReghor.Text = "Registro Hora E.";
-            this.chbReghor.UseVisualStyleBackColor = false;
-            // 
             // chbMonMaquina
             // 
             this.chbMonMaquina.AutoSize = true;
@@ -755,11 +744,36 @@
             this.chbMonMaquina.Text = "Monitoreo Maq.";
             this.chbMonMaquina.UseVisualStyleBackColor = false;
             // 
+            // chbReghor
+            // 
+            this.chbReghor.AutoSize = true;
+            this.chbReghor.BackColor = System.Drawing.Color.White;
+            this.chbReghor.ForeColor = System.Drawing.Color.Black;
+            this.chbReghor.Location = new System.Drawing.Point(299, 228);
+            this.chbReghor.Name = "chbReghor";
+            this.chbReghor.Size = new System.Drawing.Size(104, 17);
+            this.chbReghor.TabIndex = 178;
+            this.chbReghor.Text = "Registro Hora E.";
+            this.chbReghor.UseVisualStyleBackColor = false;
+            // 
+            // chbRecepAlambron
+            // 
+            this.chbRecepAlambron.AutoSize = true;
+            this.chbRecepAlambron.BackColor = System.Drawing.Color.White;
+            this.chbRecepAlambron.ForeColor = System.Drawing.Color.Black;
+            this.chbRecepAlambron.Location = new System.Drawing.Point(299, 251);
+            this.chbRecepAlambron.Name = "chbRecepAlambron";
+            this.chbRecepAlambron.Size = new System.Drawing.Size(105, 17);
+            this.chbRecepAlambron.TabIndex = 179;
+            this.chbRecepAlambron.Text = "Recep Alambron";
+            this.chbRecepAlambron.UseVisualStyleBackColor = false;
+            // 
             // frmPermisos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(733, 539);
+            this.Controls.Add(this.chbRecepAlambron);
             this.Controls.Add(this.chbReghor);
             this.Controls.Add(this.chbMonMaquina);
             this.Controls.Add(this.chbMaqParada);
@@ -882,7 +896,8 @@
         private System.Windows.Forms.CheckBox cbAlmacenLineagalv;
         private System.Windows.Forms.CheckBox chbMonTemp;
         private System.Windows.Forms.CheckBox chbMaqParada;
-        private System.Windows.Forms.CheckBox chbReghor;
         private System.Windows.Forms.CheckBox chbMonMaquina;
+        private System.Windows.Forms.CheckBox chbReghor;
+        private System.Windows.Forms.CheckBox chbRecepAlambron;
     }
 }

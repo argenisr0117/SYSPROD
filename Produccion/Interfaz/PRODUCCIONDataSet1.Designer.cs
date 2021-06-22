@@ -19115,6 +19115,10 @@ namespace Interfaz {
             
             private global::System.Data.DataColumn columnFECHA_REG;
             
+            private global::System.Data.DataColumn columnPEDIDO;
+            
+            private global::System.Data.DataColumn columnID_RECEPCION;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public Ticket_AlambronDataTable() {
@@ -19230,6 +19234,22 @@ namespace Interfaz {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PEDIDOColumn {
+                get {
+                    return this.columnPEDIDO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ID_RECEPCIONColumn {
+                get {
+                    return this.columnID_RECEPCION;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -19265,7 +19285,7 @@ namespace Interfaz {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Ticket_AlambronRow AddTicket_AlambronRow(string COLADA, string NUM_ROLLO, string ROLLO, string DIAMETRO, string SAE, string CLIENTE, decimal PESO_KG, decimal PESO_QQS, byte[] BARCODE, System.DateTime FECHA_REG) {
+            public Ticket_AlambronRow AddTicket_AlambronRow(string COLADA, string NUM_ROLLO, string ROLLO, string DIAMETRO, string SAE, string CLIENTE, decimal PESO_KG, decimal PESO_QQS, byte[] BARCODE, System.DateTime FECHA_REG, string PEDIDO, string ID_RECEPCION) {
                 Ticket_AlambronRow rowTicket_AlambronRow = ((Ticket_AlambronRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         COLADA,
@@ -19277,7 +19297,9 @@ namespace Interfaz {
                         PESO_KG,
                         PESO_QQS,
                         BARCODE,
-                        FECHA_REG};
+                        FECHA_REG,
+                        PEDIDO,
+                        ID_RECEPCION};
                 rowTicket_AlambronRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTicket_AlambronRow);
                 return rowTicket_AlambronRow;
@@ -19318,6 +19340,8 @@ namespace Interfaz {
                 this.columnPESO_QQS = base.Columns["PESO_QQS"];
                 this.columnBARCODE = base.Columns["BARCODE"];
                 this.columnFECHA_REG = base.Columns["FECHA_REG"];
+                this.columnPEDIDO = base.Columns["PEDIDO"];
+                this.columnID_RECEPCION = base.Columns["ID_RECEPCION"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -19343,6 +19367,10 @@ namespace Interfaz {
                 base.Columns.Add(this.columnBARCODE);
                 this.columnFECHA_REG = new global::System.Data.DataColumn("FECHA_REG", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFECHA_REG);
+                this.columnPEDIDO = new global::System.Data.DataColumn("PEDIDO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPEDIDO);
+                this.columnID_RECEPCION = new global::System.Data.DataColumn("ID_RECEPCION", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_RECEPCION);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnCOLADA,
                                 this.columnNUM_ROLLO}, true));
@@ -19354,6 +19382,8 @@ namespace Interfaz {
                 this.columnDIAMETRO.MaxLength = 5;
                 this.columnSAE.MaxLength = 7;
                 this.columnCLIENTE.MaxLength = 100;
+                this.columnPEDIDO.MaxLength = 12;
+                this.columnID_RECEPCION.MaxLength = 10;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -28897,6 +28927,38 @@ namespace Interfaz {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string PEDIDO {
+                get {
+                    try {
+                        return ((string)(this[this.tableTicket_Alambron.PEDIDOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PEDIDO\' in table \'Ticket_Alambron\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTicket_Alambron.PEDIDOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ID_RECEPCION {
+                get {
+                    try {
+                        return ((string)(this[this.tableTicket_Alambron.ID_RECEPCIONColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ID_RECEPCION\' in table \'Ticket_Alambron\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTicket_Alambron.ID_RECEPCIONColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsROLLONull() {
                 return this.IsNull(this.tableTicket_Alambron.ROLLOColumn);
             }
@@ -28989,6 +29051,30 @@ namespace Interfaz {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetFECHA_REGNull() {
                 this[this.tableTicket_Alambron.FECHA_REGColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPEDIDONull() {
+                return this.IsNull(this.tableTicket_Alambron.PEDIDOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPEDIDONull() {
+                this[this.tableTicket_Alambron.PEDIDOColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsID_RECEPCIONNull() {
+                return this.IsNull(this.tableTicket_Alambron.ID_RECEPCIONColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetID_RECEPCIONNull() {
+                this[this.tableTicket_Alambron.ID_RECEPCIONColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -42414,6 +42500,8 @@ namespace Interfaz.PRODUCCIONDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("PESO_QQS", "PESO_QQS");
             tableMapping.ColumnMappings.Add("BARCODE", "BARCODE");
             tableMapping.ColumnMappings.Add("FECHA_REG", "FECHA_REG");
+            tableMapping.ColumnMappings.Add("PEDIDO", "PEDIDO");
+            tableMapping.ColumnMappings.Add("ID_RECEPCION", "ID_RECEPCION");
             this._adapter.TableMappings.Add(tableMapping);
         }
         

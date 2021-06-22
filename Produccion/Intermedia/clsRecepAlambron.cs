@@ -11,11 +11,31 @@ namespace Intermedia
 
         #region Chofer
         int _IdChofer;
+        string _Chofer;
+
 
         public int IdChofer
         {
             get { return _IdChofer; }
             set { _IdChofer = value; }
+        }
+
+        public string Chofer
+        {
+            get { return _Chofer; }
+            set { _Chofer = value; }
+        }
+        public string RegistrarActChofer()
+        {
+            string mensaje = "";
+            List<clsParametros> lst = new List<clsParametros>();
+            lst.Add(new clsParametros("@msj", "", SqlDbType.Int, ParameterDirection.Output, 8));
+            lst.Add(new clsParametros("@idchofer", _IdChofer));
+            lst.Add(new clsParametros("@chofer", _Chofer));
+            lst.Add(new clsParametros("@valor", _Valor));
+            M.EjecutarSP("reg_act_chofer", ref lst);
+            mensaje = lst[0].Valor.ToString();
+            return mensaje;
         }
         public DataTable ListadoChofer()
         {
@@ -380,6 +400,15 @@ namespace Intermedia
             return mensaje;
         }
 
+        public void ActualizarImpresionRolloAlambron()
+        {
+            //string mensaje = "";
+            List<clsParametros> lst = new List<clsParametros>();
+            lst.Add(new clsParametros("@Id", _Id));
+            M.EjecutarSP("Actualiza_impresion_rollo_alambron", ref lst);
+            //mensaje = lst[0].Valor.ToString();
+            //return mensaje;
+        }
         public DataTable ListadoRollosAlambron()
         {
             DataTable dt = new DataTable();
@@ -415,6 +444,25 @@ namespace Intermedia
         #endregion
 
         #region Fabricante
+
+        string _Fabricante;
+        public string Fabricante
+        {
+            get { return _Fabricante; }
+            set { _Fabricante = value; }
+        }
+        public string RegistrarActFabricante()
+        {
+            string mensaje = "";
+            List<clsParametros> lst = new List<clsParametros>();
+            lst.Add(new clsParametros("@msj", "", SqlDbType.Int, ParameterDirection.Output, 8));
+            lst.Add(new clsParametros("@idfabricante", _IdFabricante));
+            lst.Add(new clsParametros("@fabricante", _Fabricante));
+            lst.Add(new clsParametros("@valor", _Valor));
+            M.EjecutarSP("reg_act_fabricantes", ref lst);
+            mensaje = lst[0].Valor.ToString();
+            return mensaje;
+        }
         public DataTable ListadoFabricante()
         {
             DataTable dt = new DataTable();

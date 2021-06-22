@@ -73,6 +73,7 @@ namespace Interfaz
             btnTemperatura.Enabled = Program.montemp;
             btnRegHoras.Enabled = Program.reghora;
             btnMaquinasParadas.Enabled = Program.maqpar;
+            btnRecepcionAlambron.Enabled = Program.recpalm;
         }
         private void AbrirForm(string form)
         {

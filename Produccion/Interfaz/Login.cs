@@ -131,6 +131,7 @@ namespace Interfaz
                         Program.maqpar= Convert.ToBoolean(dt.Rows[0][43]);
                         Program.monmaq= Convert.ToBoolean(dt.Rows[0][44]);
                         Program.reghora= Convert.ToBoolean(dt.Rows[0][45]);
+                        Program.recpalm= Convert.ToBoolean(dt.Rows[0][46]);
                         //Program.Usuario = txtUsuario.Text;
                         //Splash obj = new Splash();
                         Principal obj = new Principal();
